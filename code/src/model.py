@@ -106,7 +106,18 @@ class APIModel:
                     if choice.finish_reason == 'length':
                         print(f"[TRUNCATED] finish_reason=length model={self.model} "
                               f"max_tokens={MAX_TOKENS} -- output was cut off")
-                    return choice.message.content
+                    content = choice.message.content
+                    if not content:
+                        # A reasoning model can spend the whole budget thinking and
+                        # come back with content=None (observed on baidu/fp8 at
+                        # max_tokens=2000). Returning it here would surface as a
+                        # TypeError in .replace() several call frames away, so treat
+                        # it as a failed attempt and let the retry loop handle it.
+                        last_error = (f"empty content, finish_reason="
+                                      f"{choice.finish_reason}")
+                        print(f"[EMPTY] {last_error}\n Retrying...{_} Times")
+                        continue
+                    return content
                 except Exception as e:
                     last_error = e
                     print(f"API error: {e}\n Retrying...{_} Times")

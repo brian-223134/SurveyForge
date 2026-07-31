@@ -146,9 +146,14 @@ class outlineWriter():
         subsection_outlines.append([])
 
         if self.args.debug:
-            with open(f"{self.args.saving_path}/3-Merged_Sub_outline_wo_process.txt", "w") as f:
-                f.write(merged_outline + '\n\n')
-        
+            # Upstream wrote `merged_outline` here, but it is not assigned until
+            # process_outlines_points() below -- an UnboundLocalError that only fires
+            # under --debug. The filename says "wo_process", so what belongs here is
+            # the subsection outlines as they stand before that processing. They are
+            # a list of lists, so JSON rather than the original .txt.
+            with open(f"{self.args.saving_path}/3-Merged_Sub_outline_wo_process.json", "w") as f:
+                json.dump(subsection_outlines, f, indent=2)
+
         merged_outline = self.process_outlines_points(section_outline, subsection_outlines)
 
         if self.args.debug:

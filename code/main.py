@@ -146,7 +146,10 @@ def paras_args():
     return args
 
 def main(args):
-    print(args)
+    # Namespace's repr would print api_key in full. run_demo.py keeps the key out
+    # of argv so `ps` cannot see it; without this the run log gives it away anyway.
+    print(argparse.Namespace(**{**vars(args),
+                               'api_key': f'<set, {len(args.api_key)} chars>' if args.api_key else '<empty>'}))
     print("########### Loading database and RAG Index... ###########")
     db_paper = database(db_path = args.db_path, embedding_model = args.embedding_model)
     db_survey = database_survey(db_path = args.db_path, embedding_model = args.embedding_model)

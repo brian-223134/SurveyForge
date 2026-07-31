@@ -78,6 +78,10 @@ def run_experiment(topic, exp_num, base_path):
         sys.executable, "main.py",
         "--topic", topic,
         "--gpu", "0",
+        # Writes the intermediate outline chunks, retrieved titles and RAG doc
+        # dumps alongside the survey. Costs nothing but disk, and without them a
+        # failure in the outline stage leaves nothing to diagnose from.
+        "--debug",
         "--saving_path", save_path,
         "--model", MODEL,
         "--section_num", "7",
