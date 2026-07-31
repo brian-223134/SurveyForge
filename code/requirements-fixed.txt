@@ -36,6 +36,7 @@ tinydb==4.8.0
 tiktoken==0.7.0
 h5py
 jsonlines
+python-dotenv
 
 openai==1.52.0
 anthropic==0.34.2

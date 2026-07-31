@@ -5,6 +5,13 @@ from datetime import datetime
 import time
 import re
 
+from dotenv import load_dotenv
+
+# .env lives at the repo root but these scripts run from code/, so point at it
+# explicitly rather than relying on the working directory. Existing environment
+# variables win -- load_dotenv does not override.
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, ".env"))
+
 # Downloaded assets live outside the repo so git stays clean:
 #   DATA_ROOT/database/            <- InternScience/SurveyForge_database, `database` folder
 #   DATA_ROOT/Final_outline{,_First}/  <- the two zips from the same dataset
@@ -81,8 +88,10 @@ def run_experiment(topic, exp_num, base_path):
         "--survey_outline_path", DATA_ROOT,
         "--db_path", os.path.join(DATA_ROOT, "database"),
         "--embedding_model", os.path.join(DATA_ROOT, "gte-large-en-v1.5"),
-        "--api_key", os.environ.get("OPENROUTER_API_KEY", ""),
-        # NOTE: the "deepseek" branch of APIModel passes this to the OpenAI SDK as
+        # --api_key is deliberately NOT passed: main.py reads OPENROUTER_API_KEY from
+        # the inherited environment. Putting a secret in argv exposes it to every
+        # other user on the machine via `ps`.
+        # NOTE: the "deepseek" branch of APIModel passes this URL to the OpenAI SDK as
         # base_url, so it must NOT include /chat/completions. The other branches do
         # expect a full endpoint path.
         "--api_url", os.environ.get("SURVEYFORGE_API_URL", "https://openrouter.ai/api/v1"),
@@ -176,6 +185,10 @@ def main():
     if not topics:
         with open("topics_demo.txt", "r") as f:
             topics = [line.strip() for line in f if line.strip()]
+
+    # Fail here rather than after the multi-minute database load in main.py.
+    if not os.environ.get("OPENROUTER_API_KEY"):
+        sys.exit("OPENROUTER_API_KEY is not set. Copy .env.example to .env and fill it in.")
 
     print(f"Model: {MODEL}")
     print(f"Output: {base_path}")

@@ -1,6 +1,13 @@
 import os
 import json
 import argparse
+
+from dotenv import load_dotenv
+
+# main.py is also an entry point (run_demo.py spawns it, but it can be run
+# directly), so load the repo-root .env here too. Existing env vars take priority.
+load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, ".env"))
+
 from src.agents.outline_writer import outlineWriter
 from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
@@ -128,8 +135,10 @@ def paras_args():
     parser.add_argument('--outline_reference_num',default=1500, type=int, help='Number of references for outline generation')
     parser.add_argument('--rag_num',default=100, type=int, help='Number of references to use for RAG')
     parser.add_argument('--rag_max_out',default=60, type=int, help='Number of references to use for RAG')
-    parser.add_argument('--api_url',default='https://api.openai.com/v1/chat/completions', type=str, help='url for API request')
-    parser.add_argument('--api_key',default='', type=str, help='API key for the model')
+    parser.add_argument('--api_url',default=os.environ.get('SURVEYFORGE_API_URL', 'https://api.openai.com/v1/chat/completions'), type=str, help='url for API request')
+    # Defaults to the environment (see .env) so the key never appears in argv,
+    # where `ps` would expose it to every other user on the machine.
+    parser.add_argument('--api_key',default=os.environ.get('OPENROUTER_API_KEY', ''), type=str, help='API key for the model')
     parser.add_argument('--db_path',default='./database', type=str, help='Directory of the database.')
     parser.add_argument('--survey_outline_path',default='', type=str, help='Directory of the outline database of survey.')
     parser.add_argument('--embedding_model',default='./gte-large-en-v1.5', type=str, help='Embedding model for retrieval.')
