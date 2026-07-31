@@ -1,3 +1,4 @@
+import os
 import time
 import requests
 import json
@@ -10,6 +11,17 @@ import concurrent.futures
 from openai import OpenAI
 import time
 
+# Output cap per request. This is a truncation guard, not a length control -- the
+# survey length is set by --subsection_len and the number of subsections. Without
+# it the provider default applies silently, which biases length measurements.
+MAX_TOKENS = int(os.environ.get("SURVEYFORGE_MAX_TOKENS", 8192))
+# Concurrent requests to the model API. The original 100 trips most hosted rate
+# limits. Note the writer fans out sections on top of this, so peak concurrency is
+# MAX_SECTION_THREADS * MAX_THREADS -- keep that product in mind when raising either.
+MAX_THREADS = int(os.environ.get("SURVEYFORGE_MAX_THREADS", 8))
+MAX_SECTION_THREADS = int(os.environ.get("SURVEYFORGE_MAX_SECTION_THREADS", 2))
+
+
 class APIModel:
 
     def __init__(self, model, api_key, api_url) -> None:
@@ -19,6 +31,7 @@ class APIModel:
         
     def __req(self, text, temperature, max_try = 10):
         if "deepseek" in self.model:
+            last_error = None
             for _ in range(max_try):
                 try:
                     client = OpenAI(
@@ -26,21 +39,34 @@ class APIModel:
                         base_url=self.__api_url,
                     )
                     completion = client.chat.completions.create(
-                        model=self.model,  # https://help.aliyun.com/zh/model-studio/getting-started/models
+                        model=self.model,  # e.g. deepseek/deepseek-v4-pro on OpenRouter
                         messages=[
                             {'role': 'user', 'content': f'{text}'}
-                            ]
+                            ],
+                        max_tokens=MAX_TOKENS,
                     )
-                    return completion.choices[0].message.content
+                    choice = completion.choices[0]
+                    if choice.finish_reason == 'length':
+                        print(f"[TRUNCATED] finish_reason=length model={self.model} "
+                              f"max_tokens={MAX_TOKENS} -- output was cut off")
+                    return choice.message.content
                 except Exception as e:
-                    print(f"错误信息：{e}\n Retrying...{_} Times")
+                    last_error = e
+                    print(f"API error: {e}\n Retrying...{_} Times")
                     continue
-                    # print("Ref：https://help.aliyun.com/zh/model-studio/developer-reference/error-code")
+            # Falling out of the loop used to return None implicitly, which blew up
+            # far away in .replace() / token counting. Be explicit and loud instead.
+            print(f"[GIVE UP] {max_try} attempts failed, last error: {last_error}")
+            return None
         elif "claude"  not in self.model:
             url = f"{self.__api_url}"
-            pay_load_dict = {"model": f"{self.model}","messages": [{
+            # temperature and max_tokens belong at the top level of the payload; they
+            # were nested inside the message object, where the API ignores them.
+            pay_load_dict = {"model": f"{self.model}",
+                             "temperature": temperature,
+                             "max_tokens": MAX_TOKENS,
+                             "messages": [{
                     "role": "user",
-                    "temperature":temperature,
                     "content": f"{text}"}]}
 
             payload = json.dumps(pay_load_dict)
@@ -72,7 +98,7 @@ class APIModel:
                 client = anthropic.Anthropic(api_key=self.__api_key)
                 message = client.messages.create(
                     model=self.model,
-                    max_tokens=4096, 
+                    max_tokens=MAX_TOKENS,
                     temperature=temperature,
                     messages=[
                         {"role": "user", "content": text}
@@ -94,7 +120,7 @@ class APIModel:
         return response
 
     def batch_chat(self, text_batch, temperature=0):
-        max_threads = 100  # limit max concurrent threads using model API
+        max_threads = MAX_THREADS  # limit max concurrent threads using model API
         res_l = ['No response'] * len(text_batch)
 
         def chat_wrapper(text, temp, res_list, idx):

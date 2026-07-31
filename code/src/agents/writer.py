@@ -5,7 +5,7 @@ import jsonlines
 import numpy as np
 from tqdm import trange,tqdm
 import torch
-from src.model import APIModel, LocalModel
+from src.model import APIModel, LocalModel, MAX_THREADS, MAX_SECTION_THREADS
 import time
 from src.utils import tokenCounter, get_index_filter
 import copy
@@ -121,7 +121,8 @@ class subsectionWriter():
     
                 section_paper_texts[i].append(paper_texts)
 
-        max_section_threads = 100
+        # each worker calls batch_chat, which itself fans out to MAX_THREADS
+        max_section_threads = MAX_SECTION_THREADS
 
         def write_subsection_wrapper(args):
             try:
@@ -176,7 +177,8 @@ class subsectionWriter():
         section_content_even = copy.deepcopy(section_content)
         final_section_content = copy.deepcopy(section_content_even)
 
-        max_section_threads = 100
+        # each worker issues a single request, so this is the real concurrency here
+        max_section_threads = MAX_THREADS
 
         def lce_wrapper(args):
             try:

@@ -29,6 +29,20 @@ class outlineWriter():
         print(f"OutlineWriter Input token usage: {self.input_token_usage}")
         print(f"OutlineWriter Output token usage: {self.output_token_usage}")
 
+    def filter_by_outline(self, survey_infos, folders):
+        """Keep only surveys that have a .md in every one of `folders`."""
+        kept = [r for r in survey_infos
+                if all(os.path.exists(f"{self.args.survey_outline_path}/{folder}/{r['id']}.md")
+                       for folder in folders)]
+        dropped = len(survey_infos) - len(kept)
+        if dropped:
+            print(f"Dropped {dropped}/{len(survey_infos)} surveys with no outline in {folders}")
+        if not kept:
+            raise RuntimeError(
+                f"None of the {len(survey_infos)} retrieved surveys have outlines in {folders} "
+                f"under {self.args.survey_outline_path}. Check --survey_outline_path.")
+        return kept
+
     def draft_outline(self, topic, reference_num = 600, chunk_size = 30000, section_num = 6):
         # Get database
         # Time Filter
@@ -48,6 +62,10 @@ class outlineWriter():
         references_survey_ids = self.db["survey"].get_ids_from_query(topic, num = 20, shuffle = False)
         references_survey_infos = self.db["survey"].get_paper_info_from_ids(references_survey_ids)
 
+        # The heuristic outline corpus does not cover every id in the survey db
+        # (Final_outline 90.7%, Final_outline_First 76.4%), and the reads below have no
+        # fallback. Drop uncovered surveys here so the lists stay aligned downstream.
+        references_survey_infos = self.filter_by_outline(references_survey_infos, ['Final_outline_First'])
 
         references_survey_titles = [r['title'] for r in references_survey_infos]
         references_survey_date = [r['date'].split(" ")[0] for r in references_survey_infos]
@@ -81,6 +99,10 @@ class outlineWriter():
         # merge outline
         references_survey_ids = self.db["survey"].get_ids_from_query(topic, num = 10, shuffle = False)
         references_survey_infos = self.db["survey"].get_paper_info_from_ids(references_survey_ids)
+
+        # both outline levels are read for these ids (below and after merging)
+        references_survey_infos = self.filter_by_outline(references_survey_infos,
+                                                         ['Final_outline_First', 'Final_outline'])
 
         # choose the first 5 survey papers
         references_survey_infos = sorted(references_survey_infos, key=lambda x: x['date'].split(" ")[0], reverse=True)[:5]
@@ -346,7 +368,8 @@ class outlineWriter():
         for i in range(chunk_num):
             chunk_indices = []
             if all_indices:
-                num_to_select = ref_num
+                # the pool shrinks each round and may hold fewer than ref_num left
+                num_to_select = min(ref_num, len(all_indices))
                 selected = random.sample(all_indices, num_to_select)
                 chunk_indices.extend(selected)
                 for idx in selected:
