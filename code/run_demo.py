@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 from datetime import datetime
 import time
 import re
@@ -11,6 +12,15 @@ import re
 DATA_ROOT = os.environ.get(
     "SURVEYFORGE_DATA", "/data2/chanjoong/survey-agent/SurveyForge_data"
 )
+
+MODEL = os.environ.get("SURVEYFORGE_MODEL", "deepseek/deepseek-v4-pro")
+# Repeats per topic. The summary line used to hardcode "/10" while the loop ran once.
+TOTAL_EXPS = int(os.environ.get("SURVEYFORGE_EXPS", 1))
+
+
+def model_slug(model):
+    """Filesystem-safe form of a model id (they contain '/' on OpenRouter)."""
+    return re.sub(r"[^A-Za-z0-9._-]", "_", model)
 
 def create_directory(path):
     if not os.path.exists(path):
@@ -56,11 +66,13 @@ def run_experiment(topic, exp_num, base_path):
     
 
     cmd = [
-        "python", "main.py",
+        # sys.executable, not "python": this box only has python3 on PATH, and a bare
+        # interpreter would miss the venv the dependencies were installed into.
+        sys.executable, "main.py",
         "--topic", topic,
         "--gpu", "0",
         "--saving_path", save_path,
-        "--model", os.environ.get("SURVEYFORGE_MODEL", "deepseek/deepseek-v4-pro"),
+        "--model", MODEL,
         "--section_num", "7",
         "--subsection_len", "500",
         "--rag_num", "100",
@@ -152,13 +164,23 @@ def run_experiment(topic, exp_num, base_path):
 
 def main():
 
-    base_path = "./output/res"
+    # Keep the model in the path so runs with different models do not collide --
+    # run_experiment() silently skips an existing directory and reports success, so a
+    # shared path would make the second model produce nothing and look fine.
+    # <topic>/exp_N is preserved below it, which is the layout SurveyBench expects.
+    base_path = os.path.join("./output/res", model_slug(MODEL))
     create_directory(base_path)
-    
-    # Loading topics
-    with open("topics_demo.txt", "r") as f:
-        topics = [line.strip() for line in f if line.strip()]
-    
+
+    # Topics come from the command line when given, else topics_demo.txt.
+    topics = [t for t in sys.argv[1:] if t.strip()]
+    if not topics:
+        with open("topics_demo.txt", "r") as f:
+            topics = [line.strip() for line in f if line.strip()]
+
+    print(f"Model: {MODEL}")
+    print(f"Output: {base_path}")
+    print(f"Topics: {topics}")
+
 
     start_time = datetime.now()
     print(f"Starting experiments at: {start_time}")
@@ -183,7 +205,7 @@ def main():
         topic_start_time = datetime.now()
         successful_exps = 0
         
-        for exp_num in range(1, 2):  
+        for exp_num in range(1, TOTAL_EXPS + 1):
             success = run_experiment(topic, exp_num, base_path)
             if success:
                 successful_exps += 1
@@ -195,7 +217,7 @@ def main():
         with open(log_file, "a") as f:
             f.write(f"\nTopic Summary: {topic}\n")
             f.write(f"Total Duration: {topic_duration}\n")
-            f.write(f"Successful Experiments: {successful_exps}/10\n")
+            f.write(f"Successful Experiments: {successful_exps}/{TOTAL_EXPS}\n")
             f.write("=" * 50 + "\n")
         
 
