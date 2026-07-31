@@ -22,6 +22,54 @@ MAX_THREADS = int(os.environ.get("SURVEYFORGE_MAX_THREADS", 8))
 MAX_SECTION_THREADS = int(os.environ.get("SURVEYFORGE_MAX_SECTION_THREADS", 2))
 
 
+def _csv_env(name):
+    return [v.strip() for v in os.environ.get(name, "").split(",") if v.strip()]
+
+
+def _openrouter_extra():
+    """OpenRouter-specific request fields, assembled from the environment.
+
+    Pinning the provider matters for reproducibility: OpenRouter routes each
+    request independently across endpoints that serve *different quantizations*
+    of the same weights (deepseek/deepseek-v4-pro is offered as fp4, fp8 and
+    first-party), so an unpinned run mixes them within a single survey.
+    """
+    extra = {}
+
+    providers, quants = _csv_env("SURVEYFORGE_PROVIDER"), _csv_env("SURVEYFORGE_QUANTIZATIONS")
+    if providers or quants:
+        # require_parameters drops endpoints that would silently ignore fields we
+        # send (max_tokens, reasoning) rather than honouring them.
+        provider = {"require_parameters": True}
+        if providers:
+            provider["only"] = providers
+            # Pinning is pointless if a fallback can quietly serve a different
+            # quantization; the retry loop in __req covers transient outages.
+            provider["allow_fallbacks"] = False
+        if quants:
+            provider["quantizations"] = quants
+        extra["provider"] = provider
+
+    effort = os.environ.get("SURVEYFORGE_REASONING_EFFORT", "").strip()
+    exclude = os.environ.get("SURVEYFORGE_REASONING_EXCLUDE", "").strip().lower() in ("1", "true", "yes")
+    if effort or exclude:
+        reasoning = {}
+        if effort:
+            # "none" disables it; otherwise low/medium/high/xhigh
+            reasoning["effort"] = effort
+        if exclude:
+            # keep reasoning out of `content`, where it would break the outline
+            # parser (extract_title_sections_descriptions splits on 'Title: ')
+            reasoning["exclude"] = True
+        extra["reasoning"] = reasoning
+
+    return extra
+
+
+OPENROUTER_EXTRA = _openrouter_extra()
+_SEEN_PROVIDERS = set()
+
+
 class APIModel:
 
     def __init__(self, model, api_key, api_url) -> None:
@@ -44,7 +92,16 @@ class APIModel:
                             {'role': 'user', 'content': f'{text}'}
                             ],
                         max_tokens=MAX_TOKENS,
+                        extra_body=OPENROUTER_EXTRA,
                     )
+                    # OpenRouter reports which endpoint served the request; surface
+                    # each distinct one so a run that silently spanned several
+                    # providers (and quantizations) is visible in the log.
+                    served_by = getattr(completion, 'provider', None)
+                    if served_by and served_by not in _SEEN_PROVIDERS:
+                        _SEEN_PROVIDERS.add(served_by)
+                        print(f"[PROVIDER] served by: {served_by}")
+
                     choice = completion.choices[0]
                     if choice.finish_reason == 'length':
                         print(f"[TRUNCATED] finish_reason=length model={self.model} "
@@ -65,6 +122,7 @@ class APIModel:
             pay_load_dict = {"model": f"{self.model}",
                              "temperature": temperature,
                              "max_tokens": MAX_TOKENS,
+                             **OPENROUTER_EXTRA,
                              "messages": [{
                     "role": "user",
                     "content": f"{text}"}]}
