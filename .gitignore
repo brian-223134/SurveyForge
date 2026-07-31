@@ -1,23 +1,11 @@
 .venv/
-# Leading slash anchors this to the repo root (main.py's --saving_path defaults to
-# ./output/). Unanchored, `output/` matches a directory named output at any depth,
-# which swallowed code/output and made the re-includes below unreachable.
-/output/
 __pycache__/
 *.pyc
 
-# Generated runs. The artifacts are big and mostly noise -- paper_texts.txt alone
-# is 25MB per run, and --debug adds RAG dumps on top -- so the directory is
-# excluded and the finished surveys are added back.
-#
-# A plain `code/output/` cannot be undone from inside: git never descends into an
-# excluded directory, so a later `!` rule would be unreachable. Excluding the
-# contents with `**` and re-including the directories keeps that path open.
-code/output/**
-!code/output/**/
-!code/output/**/*.md
-# per-run timing, token usage and pass/fail -- the provenance for each survey
-!code/output/**/experiment_times.log
+# Leading slash anchors this to the repo root (main.py's --saving_path defaults to
+# ./output/). Unanchored, `output/` matches a directory named output at any depth,
+# which swallowed code/output and made the run rules at the bottom unreachable.
+/output/
 
 # holds the API key; .env.example is the tracked template
 .env
@@ -28,3 +16,19 @@ code/output/**
 !code/requirement.txt
 !code/topics_demo.txt
 !SurveyBench/topics.txt
+
+# ----------------------------------------------------------- generated runs ---
+# Everything a run writes under code/output/ is tracked, so the survey and the
+# intermediate artifacts behind it (outlines, retrieved-doc dumps, citation map,
+# timings) are all reviewable on GitHub.
+#
+# This block must stay LAST. .gitignore is last-match-wins, and the `*.txt` rule
+# above would otherwise re-ignore raw_survey.txt, refined_survey.txt and the
+# outline dumps -- most of what makes a run reviewable.
+!code/output/**
+
+# One exception: a 24MB dump of every retrieved abstract, rewritten each run.
+# The other 27 files of a run come to 3MB combined, so this single file would be
+# 89% of what lands in git -- and it is derived data the pipeline regenerates.
+# Delete this line if you do want it committed.
+code/output/**/paper_texts.txt

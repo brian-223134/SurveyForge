@@ -1,0 +1,41 @@
+# Retrieval-Augmented Generation for Large Language Models: A Comprehensive Survey of Foundations, Architectures, and Emerging Frontiers
+## 1 Introduction
+## 2 Foundations and Taxonomy of Retrieval-Augmented Generation
+### 2.1 Formal Problem Definition and the Generic Retrieval-Augmented Generation Pipeline
+### 2.2 Core Component Anatomy and Design Decisions
+### 2.3 Multi-Dimensional Taxonomy of Retrieval-Generation Paradigms
+### 2.4 Comparative Positioning Among Knowledge Infusion Techniques
+## 3 Retrieval Mechanisms and Knowledge Source Construction
+### 3.1 Retrieval Model Architectures and Training Paradigms
+### 3.2 Indexing and Scalable Retrieval Infrastructures
+### 3.3 Query Processing and Augmentation Strategies
+### 3.4 Knowledge Source Design, Preprocessing, and Maintenance
+## 4 Integration Strategies for Augmented Generation
+### 4.1 Input-Level Context Integration and Prompt Engineering
+### 4.2 Deep Architectural Fusion Mechanisms
+### 4.3 Adaptive and Iterative Retrieval-Generation Interactions
+### 4.4 Robust Evidence Selection and Handling Noisy, Conflicting, or Redundant Content
+## 5 Training and Optimization of Retrieval-Augmented Systems
+### 5.1 End-to-End Joint Training and Differentiable Retrieval
+### 5.2 Fine-Tuning, Instruction Tuning, and Domain Adaptation
+### 5.3 Alignment, Preference Optimization, and Noise Robustness Training
+### 5.4 Efficient Inference and Deployment Optimization
+## 6 Evaluation, Benchmarking, and Trustworthiness Assessment
+### 6.1 Evaluation Dimensions, Metrics, and Attribution
+### 6.2 Benchmark Ecosystems, Evaluation Frameworks, and Datasets
+### 6.3 Factuality, Faithfulness, and Hallucination Detection and Mitigation
+### 6.4 Robustness, Security, and Privacy Evaluation
+## 7 Applications and Domain-Specific Adaptations
+### 7.1 Knowledge-Intensive Question Answering and Fact Verification
+### 7.2 Conversational AI and Dialogue Systems
+### 7.3 Code Generation and Software Engineering
+### 7.4 High‑Stakes and Specialized Domain Applications
+## 8 Open Challenges and Future Research Directions
+### 8.1 Toward a Principled Theoretical Understanding of RAG  
+### 8.2 Advancing Multimodal, Cross‑Modal, and Structured Knowledge Integration  
+### 8.3 Continual Knowledge Updating and Lifelong Learning in RAG  
+### 8.4 Privacy‑Preserving, Secure, and Trustworthy RAG Systems  
+### 8.5 Autonomous Agents, Tool Use, and Compositional Reasoning with RAG  
+### 8.6 Efficiency, Sustainability, and Democratization of RAG  
+## 9 Conclusion
+
