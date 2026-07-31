@@ -1,8 +1,23 @@
 .venv/
-code/output/
-output/
+# Leading slash anchors this to the repo root (main.py's --saving_path defaults to
+# ./output/). Unanchored, `output/` matches a directory named output at any depth,
+# which swallowed code/output and made the re-includes below unreachable.
+/output/
 __pycache__/
 *.pyc
+
+# Generated runs. The artifacts are big and mostly noise -- paper_texts.txt alone
+# is 25MB per run, and --debug adds RAG dumps on top -- so the directory is
+# excluded and the finished surveys are added back.
+#
+# A plain `code/output/` cannot be undone from inside: git never descends into an
+# excluded directory, so a later `!` rule would be unreachable. Excluding the
+# contents with `**` and re-including the directories keeps that path open.
+code/output/**
+!code/output/**/
+!code/output/**/*.md
+# per-run timing, token usage and pass/fail -- the provenance for each survey
+!code/output/**/experiment_times.log
 
 # holds the API key; .env.example is the tracked template
 .env
