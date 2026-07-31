@@ -4,6 +4,14 @@ from datetime import datetime
 import time
 import re
 
+# Downloaded assets live outside the repo so git stays clean:
+#   DATA_ROOT/database/            <- InternScience/SurveyForge_database, `database` folder
+#   DATA_ROOT/Final_outline{,_First}/  <- the two zips from the same dataset
+#   DATA_ROOT/gte-large-en-v1.5/   <- Alibaba-NLP/gte-large-en-v1.5
+DATA_ROOT = os.environ.get(
+    "SURVEYFORGE_DATA", "/data2/chanjoong/survey-agent/SurveyForge_data"
+)
+
 def create_directory(path):
     if not os.path.exists(path):
         os.makedirs(path)
@@ -52,17 +60,20 @@ def run_experiment(topic, exp_num, base_path):
         "--topic", topic,
         "--gpu", "0",
         "--saving_path", save_path,
-        "--model", "gpt-4o-mini",# "claude-3-5-sonnet-20241022"
+        "--model", os.environ.get("SURVEYFORGE_MODEL", "deepseek/deepseek-v4-pro"),
         "--section_num", "7",
         "--subsection_len", "500",
         "--rag_num", "100",
         "--rag_max_out", "60",
         "--outline_reference_num", "1500",
-        "--survey_outline_path", "./",
-        "--db_path", "./database",
-        "--embedding_model", "./gte-large-en-v1.5",
-        "--api_key", "",
-        "--api_url", "https://api.openai.com/v1/chat/completions"
+        "--survey_outline_path", DATA_ROOT,
+        "--db_path", os.path.join(DATA_ROOT, "database"),
+        "--embedding_model", os.path.join(DATA_ROOT, "gte-large-en-v1.5"),
+        "--api_key", os.environ.get("OPENROUTER_API_KEY", ""),
+        # NOTE: the "deepseek" branch of APIModel passes this to the OpenAI SDK as
+        # base_url, so it must NOT include /chat/completions. The other branches do
+        # expect a full endpoint path.
+        "--api_url", os.environ.get("SURVEYFORGE_API_URL", "https://openrouter.ai/api/v1"),
     ]
 
     
