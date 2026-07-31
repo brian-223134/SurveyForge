@@ -1,0 +1,12 @@
+.venv/
+code/output/
+output/
+__pycache__/
+*.pyc
+
+# scratch notes and run logs land as .txt; keep the ones that are real config
+*.txt
+!code/requirements-fixed.txt
+!code/requirement.txt
+!code/topics_demo.txt
+!SurveyBench/topics.txt
