@@ -44,3 +44,6 @@ code/output/**/*.log
 # 89% of what lands in git -- and it is derived data the pipeline regenerates.
 # Delete this line if you do want it committed.
 code/output/**/paper_texts.txt
+
+.DS_Store
+**/.DS_Store
