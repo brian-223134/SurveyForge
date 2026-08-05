@@ -557,7 +557,48 @@ TinyDB 키 == arxivid_to_index_abs.json 의 값 == IndexIDMap 의 stored id
 **0-based** 불변식이라 `append_snapshot.py`를 그대로 옮기면 전부 한 칸씩 어긋나고,
 `IndexIDMap`은 `add()`를 거부하므로 `add_with_ids()`를 써야 한다.
 
-### 7.4 갱신 후 실행
+### 7.4 실제 증분 결과 (2026-08-05 실행)
+
+```
+스냅샷   $SURVEYFORGE_DATA/database_2026-08/     (기존 database/ 는 손대지 않음)
+편수     589,123 + 319,696 = 908,819
+날짜     1991-03-13 .. 2026-08-04
+신형 id  0704 .. 2608   (구형 id 992편은 전부 2007-04 이전)
+```
+
+수집 370,292건에서 기존 DB 중복 50,511건, 제목+저자 재게시 85건(기존과 19 / 신규끼리 66)을
+뺀 값이다. `citation_count`는 319,781편 전부 조회 성공(실패 0편), 그중 59.2%가 피인용 > 0.
+
+지문:
+
+| 파일 | 크기 | md5 |
+|---|---|---|
+| `arxiv_paper_db_with_cc.json` | 1,400,883,616 | `700142dddbd8a70f26a9b02ca5b366ec` |
+| `arxivid_to_index_abs.json` | 21,658,441 | `4c8a884626cd5ae72aa4890f5a4a74d5` |
+| `faiss_paper_title_abs_embeddings_FROM_2012_0101_TO_260804.bin` | 3,729,793,266 | `189d6b42b587c5e6c3b3aecfe2b19445` |
+| `faiss_paper_title_embeddings_FROM_2012_0101_TO_260804.bin` | 3,729,793,266 | `99105a8b24475ea6cd1e814f59f14b64` |
+
+검증(`check_db.py --verify-embeddings 40`): 4개 파일 건수 일치, 키·매핑·두 인덱스가 모두
+1..908819 전단사, **재임베딩 최저 cos 1.000000**(기존 20편 + 신규 20편).
+
+**검색 도달 확인** — 같은 토픽(RAG)으로 아웃라인 검색 풀을 비교하면:
+
+| | 구 DB | 신 DB |
+|---|---|---|
+| 날짜 범위 | 2015-02 .. 2024-09-25 | 2018-08 .. **2026-08-03** |
+| 2024-09-25 이후 | **0편 (0%)** | **980편 (65.5%)** |
+
+#### 알려진 제약
+
+- **2012년 이전 논문 약 4,200편은 인용될 수 없다.** OAI `from`이 수정일 기준이라 옛 논문이
+  딸려 들어왔는데(구형 id 992편 + 2007~2011년 신형 3,218편), 리랭커 시간창이
+  `--paper_date_oldest=2012-01-01`에서 시작하므로 검색은 되어도 인용 후보에서 빠진다.
+  기동 시 경고로 알려 준다. 창을 1991년까지 늘리면 포함되지만 창이 7개에서 18개로 늘어
+  파일럿과의 비교 가능성이 깨지므로, 기본값은 그대로 두었다.
+- **서베이 DB·아웃라인 코퍼스는 여전히 2024-09**다. 최신 논문을 인용하지만 최신 서베이의
+  구조를 학습하지는 않는다.
+
+### 7.5 갱신 후 실행
 
 파일명의 컷오프는 `find_index()`가 글롭으로 찾으므로 코드 수정이 필요 없다.
 **컷오프 환경변수를 함께 올려야 한다** — 안 올리면 §1.4의 게이트가 신규 논문을 전부 막는다.
@@ -565,8 +606,8 @@ TinyDB 키 == arxivid_to_index_abs.json 의 값 == IndexIDMap 의 stored id
 
 ```bash
 --db_path $SURVEYFORGE_DATA/database_2026-08
-SURVEYFORGE_PAPER_ID_CUTOFF=<check_db.py 출력값>
-SURVEYFORGE_PAPER_DATE_NEWEST=<check_db.py 출력값>
+SURVEYFORGE_PAPER_ID_CUTOFF=2608
+SURVEYFORGE_PAPER_DATE_NEWEST=2026-08-31    # 짝수 해 1월 1일은 피할 것 (§1.4)
 ```
 
 ---
