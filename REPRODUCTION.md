@@ -123,6 +123,9 @@ cp .env.example .env
 | `SURVEYFORGE_MAX_THREADS` | `8` | |
 | `SURVEYFORGE_MAX_SECTION_THREADS` | `2` | 최대 동시 요청 = 2 × 8 = **16** |
 | `SURVEYFORGE_DATA` | `/data2/chanjoong/survey-agent/SurveyForge_data` | 1.2의 경로 |
+| `SURVEYFORGE_PAPER_ID_CUTOFF` | `2412` | 아래 참조. DB 최대 id가 `2409`라 현재는 0건 제외 |
+| `SURVEYFORGE_PAPER_DATE_OLDEST` | `2012-01-01` | 〃 |
+| `SURVEYFORGE_PAPER_DATE_NEWEST` | `2024-09-26` | 〃. DB 최대 date가 `2024-09-25`라 현재는 0건 폐기 |
 | `SURVEYFORGE_EXPS` | `1` | 주제당 반복 횟수 |
 
 **provider를 반드시 핀해야 한다.** OpenRouter는 요청마다 독립적으로 라우팅하는데,
@@ -143,6 +146,41 @@ provider별 상한(DeepInfra 16,384 ~ Parasail 1,048,576, 64배 차이)이 그�
 reasoning 오버헤드가 가장 컸고(같은 질문에 3,834자 vs Novita 318자) reasoning이 같은 예산에서
 빠져나가기 때문이다. 서브섹션이 상한에 걸려 잘리면 **길이 측정 자체가 무의미**해진다.
 쓰지 않은 토큰은 과금되지 않으므로 여유는 공짜다.
+
+**논문 컷오프 3개는 DB를 갱신할 때만 의미가 있다.** 원래 이 값들은 코드에 하드코딩돼 있었고
+(`outline_writer.py` / `writer.py`의 `<= '2412'`, `utils.py`의 `time_newest = '2024-09-26'`),
+배포 DB가 `2409` / `2024-09-25`에서 끝나므로 **현재는 셋 다 아무것도 거르지 않는다.**
+기본값을 그대로 두면 이 문서의 실행이 그대로 재현된다.
+
+문제는 DB를 최신화한 뒤다. 게이트가 서 있는 곳은 넷인데 성격이 다르다.
+
+| # | 위치 | 성격 |
+|---|---|---|
+| A | `outline_writer.py` 아웃라인 검색 | `--paper_id_cutoff`로 통제 |
+| B | `writer.py` 본문 검색 (서브섹션 전체를 게이팅) | `--paper_id_cutoff`로 통제 |
+| C | `utils.py` `sort_by_citation_period` 시간창 | `--paper_date_{oldest,newest}`로 통제 |
+| D | `outline_writer.py`의 sub-outline 검색 | **필터가 없다 — DB 전체를 본다** |
+
+D 때문에 비대칭이 생긴다. 컷오프를 올리지 않은 채 DB만 갱신하면 sub-outline은 최신 논문을 보고
+2025~2026 서브섹션을 제안하는데 writer는 A·B에 막혀 그 논문을 꺼내오지 못한다. C는 더 조용해서,
+시간창 밖 논문이 **예외도 로그도 없이** 결과에서 빠진다. 그래서 세 값을 노출하면서 다음을 함께 넣었다.
+
+- 기동 시 설정값과 DB의 실제 id/date 범위를 비교해 **경고**한다 (중단하지는 않는다 — 의도적으로
+  과거 시점을 재현하는 것도 정당한 실험이다).
+- 게이트가 제외한 편수와 시간창이 폐기한 문서 수를 집계해 실행 끝에 총계를 남긴다.
+- 출력은 콘솔과 `<실행 디렉터리>/cutoff_report.log` 양쪽. `run_demo.py`는 자식 프로세스의 stdout을
+  저장하지 않고 토큰 수만 뽑아가므로 파일이 없으면 경고가 사라진다.
+
+DB를 갱신했다면 `SURVEYFORGE_PAPER_ID_CUTOFF`와 `SURVEYFORGE_PAPER_DATE_NEWEST`를 함께 올려야 한다.
+단 `PAPER_DATE_NEWEST`를 **짝수 해 1월 1일로 두지 말 것** — 시간창이 `2012-01-01`부터 2년 단위라
+경계에 정확히 걸리는 날짜가 생긴다.
+
+회귀 검사는 `tests/test_cutoffs.py`에 있다. 교체 이전 구현을 파일 안에 그대로 박아 두고 기본값에서
+출력이 원소 단위로 같은지 비교하므로, 커밋 이후에도 계속 의미가 있다.
+
+```bash
+cd code && ../.venv/bin/python ../tests/test_cutoffs.py
+```
 
 ### 1.5 실행
 
@@ -193,6 +231,9 @@ cd code
 | `--model` / `--api_url` | `.env`에서 | — | |
 | `--api_key` | **넘기지 않음** | `$OPENROUTER_API_KEY` | argv에 비밀을 두면 `ps`로 새어 나간다 |
 | `--db_path` / `--survey_outline_path` / `--embedding_model` | `$SURVEYFORGE_DATA` 하위 | — | |
+| `--paper_id_cutoff` | *(기본값)* | `2412` | 검색 가능한 arXiv id 상한(YYMM). §1.4 참조 |
+| `--paper_date_oldest` | *(기본값)* | `2012-01-01` | 인용 리랭커 시간창의 하한 |
+| `--paper_date_newest` | *(기본값)* | `2024-09-26` | 〃 상한. 밖의 논문은 인용될 수 없다 |
 | `--ckpt` | *(빈 값)* | *(빈 값)* | 로컬 모델용, 미사용 |
 
 `--section_num 7`이 9개 섹션을 만든 것은 오류가 아니다. 병합 프롬프트가
@@ -399,6 +440,8 @@ reasoning은 `content`가 아닌 별도 필드로 오므로 아웃라인 파서(
 | `code/main.py` | `print(args)`의 API 키 마스킹 | 로그에 평문 유출 |
 | `code/src/model.py` | provider·quantization·reasoning 핀 지원, `MAX_TOKENS` 환경변수화, `[PROVIDER]`/`[TRUNCATED]`/`[EMPTY]` 로깅, `content=None` 재시도 가드 | 통제 실험 조건 확보 + reasoning 모델 대응 |
 | `code/src/agents/outline_writer.py` | `filter_by_outline()` 추가, `--debug` 경로의 `UnboundLocalError` 수정 | 아래 |
+| `code/src/utils.py` · `rag.py` · `main.py` · 두 agent | 논문 컷오프 3개 파라미터화 + 폐기 건수 보고 + `get_time_windows` 경계 수정 | 1.4 참조. DB 최신화의 전제 조건 |
+| `tests/test_cutoffs.py` | 컷오프 회귀 테스트 (신규) | 기본값이 교체 이전과 동일함을 고정 |
 | `code/requirements-fixed.txt` | 설치 가능한 의존성 목록 (신규) | 원본이 해석 불가 |
 | `code/tools/md_to_tex.py` | Markdown → LaTeX 변환기 (신규) | `.md` 참고문헌이 제목뿐이라 링크가 없음 |
 | `.env` / `.env.example` / `.gitignore` | 설정 외부화, 실행 산출물 추적 | |
@@ -424,6 +467,21 @@ JSON으로 쓰도록 고쳤다. **`--debug` 없이는 발생하지 않는다.**
 **3. 아웃라인 코퍼스가 서베이 DB id를 전부 덮지 않는다** — `Final_outline` 90.7%,
 `Final_outline_First` 76.4%. 현재는 `filter_by_outline()`이 누락분을 걸러내 안전하지만,
 검색 결과가 전부 누락되는 주제에서는 `RuntimeError`가 난다.
+
+**4. `sort_by_citation_period`가 시간창 밖 문서를 조용히 버린다** — 창이
+`[time_oldest, time_newest]`만 덮는데, 어디에도 속하지 않은 문서는 예외도 로그도 없이
+반환값에서 빠진다. 배포 DB가 `2024-09-25`에서 끝나고 하드코딩된 상한이 `2024-09-26`이라
+**하루 차이로** 현재는 0건이지만, DB를 갱신하는 순간 신규 논문이 전부 여기서 사라진다.
+1.4에서 파라미터화하면서 폐기 건수를 집계·경고하도록 했다.
+
+**5. `get_time_windows`의 경계 off-by-one** — `while current_start < time_newest`라서
+`time_newest`가 창 경계(`time_oldest` + 2년의 배수, 예: `2026-01-01`)에 정확히 걸리면
+그 날짜를 덮는 창이 생성되지 않고 해당 논문이 통째로 폐기된다. `<=`로 고쳤다.
+기본값에서는 창 구성이 완전히 동일해 무해하다 (`tests/test_cutoffs.py`가 이를 고정한다).
+
+**6. 빈 검색 결과가 `ZeroDivisionError`를 낸다** — `ratio = top_k / len(documents)`에
+가드가 없었다. 기본 설정에서는 도달 불가하지만 컷오프를 잘못 주면 도달한다. 빈 입력을
+`([], 0)`으로 처리하고 `_rerank`에서 경고하도록 했다.
 
 ---
 
