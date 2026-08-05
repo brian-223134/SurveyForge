@@ -29,7 +29,7 @@ import pandas as pd
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 'code'))
 
 from langchain_core.documents import Document          # noqa: E402
-from src.utils import (filter_arxivids_by_prefix,      # noqa: E402
+from src.utils import (arxiv_month, filter_arxivids_by_prefix,   # noqa: E402
                        sort_by_citation_period)
 
 DB_MAP = os.path.join(
@@ -162,6 +162,38 @@ def test_filter_arxivids_by_prefix_matches_the_replaced_comprehension():
     for cutoff in ('2412', '1512', '2608'):
         assert (filter_arxivids_by_prefix(ids, cutoff)
                 == [a for a in ids if a.split('.')[0] <= cutoff])
+
+
+def test_arxiv_month_reads_both_id_formats():
+    assert arxiv_month('2608.12345v1') == (2026, 8)
+    assert arxiv_month('0704.0009v1') == (2007, 4)
+    assert arxiv_month('cs/0503039v25') == (2005, 3)
+    assert arxiv_month('quant-ph/0412073v1') == (2004, 12)
+    assert arxiv_month('math.GT/0309136v1') == (2003, 9)
+    # old-style years wrap: 91-99 are the 1990s, 00-07 the 2000s
+    assert arxiv_month('cs/9203001v1') == (1992, 3)
+    assert arxiv_month('nonsense') is None
+
+
+def test_old_style_ids_are_not_dropped_by_a_modern_cutoff():
+    """992 of these arrived with the 2026-08 increment and every one was excluded.
+
+    `'cs/0503039v25'.split('.')[0]` is the whole id, and 'c' sorts above any digit,
+    so the plain string compare rejected all of them -- silently, which is exactly
+    the failure the cutoff machinery is supposed to prevent.
+    """
+    ids = ['2608.00001v1', '2409.00001v1', 'cs/0503039v25',
+           'cs/9203001v1', 'quant-ph/0412073v1']
+    kept = filter_arxivids_by_prefix(ids, '2608')
+    assert kept == ids, 'a 2026 cutoff must keep every pre-2007 paper'
+
+    # and a genuinely old cutoff still excludes the ones published after it
+    assert filter_arxivids_by_prefix(ids, '0501') == ['cs/9203001v1', 'quant-ph/0412073v1']
+
+
+def test_unparseable_ids_are_kept_rather_than_silently_dropped():
+    assert filter_arxivids_by_prefix(['whatever', '2409.00001v1'], '2412') == \
+        ['whatever', '2409.00001v1']
 
 
 def test_filter_arxivids_by_prefix_on_the_real_id_map():

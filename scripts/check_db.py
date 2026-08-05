@@ -20,6 +20,7 @@ import hashlib
 import json
 import os
 import random
+import re
 import sys
 
 import faiss
@@ -153,9 +154,15 @@ def main():
 
     dates = [r['date'] for r in table.values() if r.get('date')]
     print(f'\n코퍼스: {n:,}편, 날짜 {min(dates)} .. {max(dates)}')
-    ids = [r['id'].split('.')[0] for r in table.values()]
-    print(f'        arXiv id 접두사 {min(ids)} .. {max(ids)}')
-    print(f'        실행 시 SURVEYFORGE_PAPER_ID_CUTOFF={max(ids)} '
+    # 컷오프는 YYMM 문자열이라 신형 id에서만 뽑는다. 구형('cs/0503039')을 섞으면
+    # 'quant-ph/0412073v1' 같은 값이 최댓값으로 나와 제안이 무의미해진다.
+    new_pref = sorted(m.group(0) for m in
+                      (re.match(r'^\d{4}(?=\.)', r['id']) for r in table.values()) if m)
+    n_old = n - len(new_pref)
+    print(f'        신형 id 접두사 {new_pref[0]} .. {new_pref[-1]}'
+          + (f'  (구형 id {n_old:,}편은 모두 2007-04 이전이라 어떤 컷오프에도 걸리지 않는다)'
+             if n_old else ''))
+    print(f'        실행 시 SURVEYFORGE_PAPER_ID_CUTOFF={new_pref[-1]} '
           f'/ SURVEYFORGE_PAPER_DATE_NEWEST={max(dates)} 이상으로 둘 것')
 
     if args.fingerprint:

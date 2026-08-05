@@ -1,4 +1,5 @@
 import glob
+import re
 import math
 import os
 from typing import List
@@ -215,14 +216,53 @@ def get_index_filter(arxivid_to_index, results_arxivid):
     return index_filter
 
 
+_NEW_ID = re.compile(r'^(\d{2})(\d{2})\.\d{4,5}')          # 2608.12345v1
+_OLD_ID = re.compile(r'^[a-zA-Z][\w.-]*/(\d{2})(\d{2})\d+')  # cs/0503039v25, quant-ph/0412073v1
+
+
+def arxiv_month(arxivid):
+    """arXiv id -> (year, month). Returns None if the id is in neither known format.
+
+    Two things make a plain string compare on the prefix wrong:
+
+      - Old-style ids ('cs/0503039') carry no dot before the archive name, so
+        `split('.')[0]` yields the whole id and 'c' > '2' sorts every one of them
+        above any YYMM cutoff. They then vanish from retrieval with no signal --
+        992 of them arrived with the 2026-08 increment.
+      - Old-style years wrap: 9107 (1991) through 0703 (2007). Lexically '9203'
+        sorts above '2608', so 1992 papers would be dropped as "too new".
+
+    Returning a real (year, month) makes both cases order correctly.
+    """
+    m = _NEW_ID.match(arxivid)
+    if m:                                    # new style began 0704 and has not wrapped
+        return (2000 + int(m.group(1)), int(m.group(2)))
+    m = _OLD_ID.match(arxivid)
+    if m:
+        yy = int(m.group(1))
+        return (1900 + yy if yy >= 91 else 2000 + yy, int(m.group(2)))
+    return None
+
+
 def filter_arxivids_by_prefix(arxivid_list, id_cutoff):
-    """Ids whose arXiv YYMM prefix is <= id_cutoff, in the order given.
+    """Ids published on or before `id_cutoff` (a YYMM string), in the order given.
 
     Kept pure and separate from the IDSelectorArray it feeds so it can be diffed
     against the expression it replaces -- IDSelectorArray does not expose its contents.
     Order matters: it becomes the selector's argument order.
+
+    Unparseable ids are kept rather than dropped: silently losing papers is the
+    failure this whole mechanism exists to prevent.
     """
-    return [aid for aid in arxivid_list if aid.split('.')[0] <= id_cutoff]
+    cutoff = arxiv_month(f'{id_cutoff}.00000')
+    if cutoff is None:
+        raise ValueError(f'id_cutoff must be a 4-digit YYMM string, got {id_cutoff!r}')
+    kept = []
+    for aid in arxivid_list:
+        month = arxiv_month(aid)
+        if month is None or month <= cutoff:
+            kept.append(aid)
+    return kept
 
 
 def get_index_filter_by_id_prefix(arxivid_to_index, id_cutoff, stage='', saving_path=None):
