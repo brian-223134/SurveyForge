@@ -58,12 +58,22 @@ def load_cache(path):
     return cache
 
 
-def fetch_batch(ids, session, key, max_try=6, max_throttle=200):
+def fetch_batch(ids, session, key, max_try=6, max_throttle=500, throttle_wait=0.5):
     """({base_id: citationCount}, 429를 맞은 횟수). 진짜 실패면 예외를 올린다.
 
-    **429는 재시도 횟수를 소모하지 않는다.** 스로틀은 오류가 아니라 '천천히 하라'는
-    신호인데, 처음에는 이걸 실패로 세는 바람에 연속 6회를 맞고 640배치 중 64배치에서
-    죽었다. 오류 재시도(max_try)와 스로틀 대기(max_throttle)는 별도로 센다.
+    **429는 재시도 횟수를 소모하지 않는다.** 처음에는 이걸 실패로 세는 바람에 연속
+    6회를 맞고 640배치 중 64배치에서 죽었다. 오류 재시도(max_try)와 스로틀
+    대기(max_throttle)는 별도로 센다.
+
+    **429에 길게 물러서지 않는다.** 실측하면 이 엔드포인트의 429는 속도 초과 신호가
+    아니다 (2026-08-05):
+
+        요청 간격 1s / 3s / 6s  ->  429 비율이 모두 50%로 동일
+        Retry-After 헤더        ->  없음 (7초 대기는 순전히 우리 기본값이었다)
+        429 재시도 0.5s / 1s / 2s -> 329 / 229 / 151 id/s
+
+    즉 확률적 거절이라 기다려도 성공률이 오르지 않고, 오래 쉴수록 손해다. 원래는
+    429마다 간격을 1.5배로 늘렸는데 상한 30초까지 래칫되어 수정 전보다 느려졌다.
     """
     headers = {'Content-Type': 'application/json'}
     if key:
@@ -76,8 +86,8 @@ def fetch_batch(ids, session, key, max_try=6, max_throttle=200):
                              headers=headers, json=payload, timeout=120)
             if r.status_code == 429:
                 throttled += 1
-                # 연속으로 맞을수록 더 기다린다. Retry-After가 있으면 그쪽을 따른다.
-                wait = int(r.headers.get('Retry-After', 0)) or min(5 + 2 * throttled, 60)
+                # 서버가 Retry-After를 주면 따르고, 없으면 짧게 재시도한다.
+                wait = int(r.headers.get('Retry-After', 0)) or throttle_wait
                 last = f'HTTP 429 (throttle {throttled})'
                 time.sleep(wait)
                 continue                      # tries를 소모하지 않는다
@@ -108,9 +118,11 @@ def main():
     ap.add_argument('--in', dest='src', required=True, help='harvest 결과 json')
     ap.add_argument('--out', dest='dst', required=True, help='citation_count를 채운 json')
     ap.add_argument('--cache', default='', help='기본값: <out과 같은 디렉터리>/_citations.jsonl')
-    # 키가 있어도 batch 엔드포인트는 1 RPS보다 빡빡하다 — 1.1초로는 429가 났다.
-    # 429마다 Retry-After 7초를 물기 때문에 처음부터 여유를 두는 쪽이 빠르다.
-    ap.add_argument('--delay', type=float, default=2.0, help='배치 사이 대기 초')
+    # 성공한 배치 사이에는 쉴 이유가 없다. 이 엔드포인트의 429는 속도와 무관하게
+    # 50% 안팎으로 나므로 재시도가 곧 페이싱이다 (fetch_batch docstring 참조).
+    ap.add_argument('--delay', type=float, default=0.0, help='성공한 배치 사이 대기 초')
+    ap.add_argument('--throttle-wait', type=float, default=0.5,
+                    help='429를 맞았을 때 재시도까지 대기 초')
     ap.add_argument('--limit', type=int, default=0, help='배치 수 상한 (스모크용)')
     args = ap.parse_args()
 
@@ -134,7 +146,6 @@ def main():
     total_batches = (len(want) + BATCH - 1) // BATCH
     print(f'조회 대상 {len(want):,}건 ({total_batches} 배치)')
 
-    delay = args.delay
     session = requests.Session()
     with open(cache_path, 'a') as cf:
         for n, start in enumerate(range(0, len(want), BATCH), 1):
@@ -142,23 +153,19 @@ def main():
                 print(f'--limit {args.limit} 도달, 중단')
                 break
             chunk = want[start:start + BATCH]
-            got, throttled = fetch_batch(chunk, session, key)
+            got, throttled = fetch_batch(chunk, session, key,
+                                         throttle_wait=args.throttle_wait)
             for pid, cc in got.items():
                 cache[pid] = cc
                 cf.write(json.dumps({'id': pid, 'citation_count': cc}) + '\n')
             cf.flush()
-            # 실제로 허용되는 속도에 맞춰 간격을 스스로 조절한다. 429를 맞고 7초씩
-            # 버리는 것보다 처음부터 천천히 보내는 편이 전체적으로 빠르다.
-            if throttled:
-                delay = min(delay * 1.5, 30.0)
-            else:
-                delay = max(delay * 0.97, args.delay)
             found = sum(1 for v in got.values() if v)
             print(f'  배치 {n}/{total_batches}: {len(chunk)}건, 피인용>0 {found}건, '
                   f'누적 {len(cache):,}'
-                  + (f' [429x{throttled}, 간격 {delay:.1f}s]' if throttled else ''),
+                  + (f' [429x{throttled}]' if throttled else ''),
                   flush=True)
-            time.sleep(delay)
+            if args.delay:
+                time.sleep(args.delay)
 
     missing = 0
     for r in records:
