@@ -9,6 +9,7 @@ __pycache__/
 
 # holds the API key; .env.example is the tracked template
 .env
+.env.bak
 
 # scratch notes and run logs land as .txt; keep the ones that are real config
 *.txt
