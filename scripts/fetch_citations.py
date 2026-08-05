@@ -58,22 +58,29 @@ def load_cache(path):
     return cache
 
 
-def fetch_batch(ids, session, key, max_try=6):
-    """{base_id: citationCount}. 실패한 배치는 예외를 올린다."""
+def fetch_batch(ids, session, key, max_try=6, max_throttle=200):
+    """({base_id: citationCount}, 429를 맞은 횟수). 진짜 실패면 예외를 올린다.
+
+    **429는 재시도 횟수를 소모하지 않는다.** 스로틀은 오류가 아니라 '천천히 하라'는
+    신호인데, 처음에는 이걸 실패로 세는 바람에 연속 6회를 맞고 640배치 중 64배치에서
+    죽었다. 오류 재시도(max_try)와 스로틀 대기(max_throttle)는 별도로 센다.
+    """
     headers = {'Content-Type': 'application/json'}
     if key:
         headers['x-api-key'] = key
     payload = {'ids': [f'ARXIV:{i}' for i in ids]}
-    last = None
-    for attempt in range(max_try):
+    last, tries, throttled = None, 0, 0
+    while tries < max_try and throttled < max_throttle:
         try:
             r = session.post(S2_BATCH, params={'fields': 'citationCount'},
                              headers=headers, json=payload, timeout=120)
             if r.status_code == 429:
-                wait = int(r.headers.get('Retry-After', 5)) + 2
-                print(f'  429 rate limited, {wait}s 대기', flush=True)
+                throttled += 1
+                # 연속으로 맞을수록 더 기다린다. Retry-After가 있으면 그쪽을 따른다.
+                wait = int(r.headers.get('Retry-After', 0)) or min(5 + 2 * throttled, 60)
+                last = f'HTTP 429 (throttle {throttled})'
                 time.sleep(wait)
-                continue
+                continue                      # tries를 소모하지 않는다
             if r.status_code != 200:
                 last = f'HTTP {r.status_code}: {r.text[:200]}'
             else:
@@ -83,14 +90,16 @@ def fetch_batch(ids, session, key, max_try=6):
                     # 넘기지 않는다.
                     raise RuntimeError(
                         f'응답 길이 불일치: 요청 {len(ids)} / 응답 {len(data)}')
-                return {pid: (d or {}).get('citationCount') or 0
-                        for pid, d in zip(ids, data)}
+                return ({pid: (d or {}).get('citationCount') or 0
+                         for pid, d in zip(ids, data)}, throttled)
         except requests.RequestException as e:
             last = repr(e)
-        wait = min(2 ** attempt, 60)
-        print(f'  요청 실패({last}), {wait}s 후 재시도', flush=True)
-        time.sleep(wait)
-    raise RuntimeError(f'S2 요청 {max_try}회 실패: {last}')
+        tries += 1
+        if tries < max_try:
+            wait = min(2 ** tries, 60)
+            print(f'  요청 실패({last}), {wait}s 후 재시도', flush=True)
+            time.sleep(wait)
+    raise RuntimeError(f'S2 요청 실패 (오류 재시도 {tries}, 스로틀 {throttled}): {last}')
 
 
 def main():
@@ -122,8 +131,10 @@ def main():
         print(f'캐시 {len(cache):,}건 발견, 이어서 조회')
 
     want = sorted({base_id(r['id']) for r in records} - set(cache))
-    print(f'조회 대상 {len(want):,}건 ({(len(want) + BATCH - 1) // BATCH} 배치)')
+    total_batches = (len(want) + BATCH - 1) // BATCH
+    print(f'조회 대상 {len(want):,}건 ({total_batches} 배치)')
 
+    delay = args.delay
     session = requests.Session()
     with open(cache_path, 'a') as cf:
         for n, start in enumerate(range(0, len(want), BATCH), 1):
@@ -131,15 +142,23 @@ def main():
                 print(f'--limit {args.limit} 도달, 중단')
                 break
             chunk = want[start:start + BATCH]
-            got = fetch_batch(chunk, session, key)
+            got, throttled = fetch_batch(chunk, session, key)
             for pid, cc in got.items():
                 cache[pid] = cc
                 cf.write(json.dumps({'id': pid, 'citation_count': cc}) + '\n')
             cf.flush()
+            # 실제로 허용되는 속도에 맞춰 간격을 스스로 조절한다. 429를 맞고 7초씩
+            # 버리는 것보다 처음부터 천천히 보내는 편이 전체적으로 빠르다.
+            if throttled:
+                delay = min(delay * 1.5, 30.0)
+            else:
+                delay = max(delay * 0.97, args.delay)
             found = sum(1 for v in got.values() if v)
-            print(f'  배치 {n}: {len(chunk)}건 조회, 피인용>0 {found}건 '
-                  f'(누적 {len(cache):,})', flush=True)
-            time.sleep(args.delay)
+            print(f'  배치 {n}/{total_batches}: {len(chunk)}건, 피인용>0 {found}건, '
+                  f'누적 {len(cache):,}'
+                  + (f' [429x{throttled}, 간격 {delay:.1f}s]' if throttled else ''),
+                  flush=True)
+            time.sleep(delay)
 
     missing = 0
     for r in records:
