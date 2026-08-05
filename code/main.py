@@ -12,7 +12,7 @@ from src.agents.outline_writer import outlineWriter
 from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
 from src.rag import GeneralRAG_langchain
-from src.utils import cutoff_log, find_index
+from src.utils import arxiv_month, cutoff_log, find_index
 from tqdm import tqdm
 import time
 import re
@@ -197,27 +197,38 @@ def report_cutoffs_vs_database(args, rag):
     Warns rather than exits: a cutoff deliberately behind the database is a legitimate
     temporal-holdout setup, and dying here would throw away the two-minute load.
     """
-    prefixes = [i.split('.')[0] for i in rag.id_to_index]
+    ids = list(rag.id_to_index)
     dates = [d.metadata['date'] for d in rag.rag_data['doc_list']]  # ISO, sorts lexicographically
-    db_max_id = max(prefixes)
     db_min_date, db_max_date = min(dates), max(dates)
 
-    cutoff_log(f"[cutoff/db] {len(prefixes)} papers, id prefix {min(prefixes)}..{db_max_id}, "
-               f"dates {db_min_date}..{db_max_date}", args.saving_path)
+    # Report the newest id by publication month, not by string order. A lexical max over
+    # mixed id formats returns things like 'quant-ph/0412073v1' -- a 2004 paper named as
+    # the newest -- and then warns that everything past it is unreachable while the gate
+    # is in fact excluding nothing.
+    months = [(m, i) for i in ids for m in (arxiv_month(i),) if m]
+    db_max_month, db_max_id = max(months)
+    cutoff_month = arxiv_month(f'{args.paper_id_cutoff}.00000')
+    n_excluded = sum(1 for m, _ in months if m > cutoff_month)
+    n_unparsed = len(ids) - len(months)
+
+    cutoff_log(f"[cutoff/db] {len(ids)} papers, newest id {db_max_id} "
+               f"({db_max_month[0]}-{db_max_month[1]:02d}), dates {db_min_date}..{db_max_date}"
+               + (f", {n_unparsed} ids in no known format" if n_unparsed else ""),
+               args.saving_path)
     cutoff_log(f"[cutoff/cfg] --paper_id_cutoff={args.paper_id_cutoff} "
                f"--paper_date_oldest={args.paper_date_oldest} "
                f"--paper_date_newest={args.paper_date_newest}", args.saving_path)
 
-    if len(dates) != len(prefixes):
-        cutoff_log(f"[cutoff/db] WARNING: arxivid_to_index_abs.json has {len(prefixes)} entries "
+    if len(dates) != len(ids):
+        cutoff_log(f"[cutoff/db] WARNING: arxivid_to_index_abs.json has {len(ids)} entries "
                    f"but the paper db has {len(dates)}; the two are out of step.",
                    args.saving_path)
-    if db_max_id > args.paper_id_cutoff:
-        cutoff_log(f"[cutoff/cfg] WARNING: database has papers up to id {db_max_id} but "
-                   f"--paper_id_cutoff is {args.paper_id_cutoff}. Everything newer is "
-                   f"unreachable in both the outline and the writing stage. Set "
-                   f"SURVEYFORGE_PAPER_ID_CUTOFF={db_max_id} to use the whole database.",
-                   args.saving_path)
+    if n_excluded:
+        cutoff_log(f"[cutoff/cfg] WARNING: {n_excluded} papers are newer than "
+                   f"--paper_id_cutoff={args.paper_id_cutoff} and are unreachable in both "
+                   f"the outline and the writing stage. Set SURVEYFORGE_PAPER_ID_CUTOFF="
+                   f"{db_max_month[0] % 100:02d}{db_max_month[1]:02d} to use the whole "
+                   f"database.", args.saving_path)
     if db_max_date > args.paper_date_newest:
         cutoff_log(f"[cutoff/cfg] WARNING: database has papers dated up to {db_max_date} but "
                    f"--paper_date_newest is {args.paper_date_newest}. The citation reranker "
