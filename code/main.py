@@ -12,7 +12,7 @@ from src.agents.outline_writer import outlineWriter
 from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
 from src.rag import GeneralRAG_langchain
-from src.utils import cutoff_log
+from src.utils import cutoff_log, find_index
 from tqdm import tqdm
 import time
 import re
@@ -238,8 +238,10 @@ def main(args):
     db_paper = database(db_path = args.db_path, embedding_model = args.embedding_model)
     db_survey = database_survey(db_path = args.db_path, embedding_model = args.embedding_model)
 
-    abs_index_db_path = f'{args.db_path}/faiss_paper_title_abs_embeddings_FROM_2012_0101_TO_240926.bin'
-    title_index_db_path = f'{args.db_path}/faiss_paper_title_embeddings_FROM_2012_0101_TO_240926.bin'
+    # 파일명에 코퍼스 컷오프가 박혀 있으므로 글롭으로 찾는다 — 스냅샷을 갈아탈 때
+    # --db_path 만 바꾸면 되고, 파일명은 계속 컷오프를 말해 준다.
+    abs_index_db_path = find_index(args.db_path, 'faiss_paper_title_abs_embeddings')
+    title_index_db_path = find_index(args.db_path, 'faiss_paper_title_embeddings')
     doc_db_path = f'{args.db_path}/arxiv_paper_db_with_cc.json'
     arxivid_to_index_path = f'{args.db_path}/arxivid_to_index_abs.json'
     

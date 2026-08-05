@@ -4,7 +4,7 @@ import torch
 from transformers import AutoModel, AutoTokenizer,  AutoModelForSequenceClassification
 from sentence_transformers import SentenceTransformer
 import h5py
-from src.utils import tokenCounter
+from src.utils import tokenCounter, find_index
 import json
 from tqdm import tqdm
 import faiss
@@ -30,9 +30,9 @@ class database():
 
         self.User = Query()
         self.token_counter = tokenCounter()
-        self.title_loaded_index = faiss.read_index(f'{db_path}/faiss_paper_title_embeddings_FROM_2012_0101_TO_240926.bin')
+        self.title_loaded_index = faiss.read_index(find_index(db_path, 'faiss_paper_title_embeddings'))
 
-        self.abs_loaded_index = faiss.read_index(f'{db_path}/faiss_paper_title_abs_embeddings_FROM_2012_0101_TO_240926.bin')
+        self.abs_loaded_index = faiss.read_index(find_index(db_path, 'faiss_paper_title_abs_embeddings'))
         self.id_to_index, self.index_to_id = self.load_index_arxivid(db_path)
 
     def load_index_arxivid(self, db_path):
@@ -95,9 +95,9 @@ class database_survey():
 
         self.User = Query()
         self.token_counter = tokenCounter()
-        self.title_loaded_index = faiss.read_index(f'{db_path}/faiss_survey_title_embeddings_FROM_1501_TO_2409_gte.bin')
+        self.title_loaded_index = faiss.read_index(find_index(db_path, 'faiss_survey_title_embeddings'))
 
-        self.abs_loaded_index = faiss.read_index(f'{db_path}/faiss_survey_title_abs_embeddings_FROM_1501_TO_2409_gte.bin')
+        self.abs_loaded_index = faiss.read_index(find_index(db_path, 'faiss_survey_title_abs_embeddings'))
         self.id_to_index, self.index_to_id = self.load_index_arxivid(db_path)
 
     def load_index_arxivid(self, db_path):

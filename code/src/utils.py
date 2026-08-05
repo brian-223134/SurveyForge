@@ -1,4 +1,6 @@
+import glob
 import math
+import os
 from typing import List
 import tiktoken
 import json
@@ -8,6 +10,25 @@ import faiss
 
 from langchain_core.documents import Document
 from langchain_community.docstore.in_memory import InMemoryDocstore
+
+
+def find_index(db_path, stem):
+    """`<db_path>/<stem>_*.bin` 을 찾는다. 정확히 하나여야 한다.
+
+    인덱스 파일명에는 코퍼스 컷오프가 박혀 있다 (`..._FROM_2012_0101_TO_240926.bin`).
+    경로를 하드코딩하면 DB를 갱신할 때마다 코드를 고쳐야 하고, 그렇다고 파일명을
+    고정해 버리면 이름이 실제 컷오프를 속이게 된다. 글롭으로 찾으면 파일명이 계속
+    컷오프를 말해 주면서 `--db_path` 하나로 스냅샷을 갈아탈 수 있다.
+
+    stem 은 서로의 접두사가 아니다 — `faiss_paper_title_embeddings_*` 는
+    `faiss_paper_title_abs_embeddings_...` 를 잡지 않는다 (`_` 다음이 다르다).
+    """
+    hits = sorted(glob.glob(os.path.join(db_path, f'{stem}_*.bin')))
+    if len(hits) != 1:
+        raise RuntimeError(
+            f'{db_path}/{stem}_*.bin 이 {len(hits)}개다 (정확히 1개여야 한다): '
+            f'{[os.path.basename(h) for h in hits]}')
+    return hits[0]
 
 
 def cutoff_log(message, saving_path=None):
