@@ -57,11 +57,6 @@ PAPER_DB = 'arxiv_paper_db_with_cc.json'
 PAPER_MAP = 'arxivid_to_index_abs.json'
 ABS_STEM = 'faiss_paper_title_abs_embeddings'
 TITLE_STEM = 'faiss_paper_title_embeddings'
-# 서베이 쪽 자산은 이번 증분 대상이 아니다. --db_path 하나로 완전히 전환되도록
-# 새 디렉터리에 그대로 복사한다.
-SURVEY_FILES = ('surveys_arxiv_paper_db.json', 'surveys_arxivid_to_index_abs.json',
-                'faiss_survey_title_abs_embeddings_FROM_1501_TO_2409_gte.bin',
-                'faiss_survey_title_embeddings_FROM_1501_TO_2409_gte.bin')
 
 
 def title_author_key(rec):
@@ -260,11 +255,24 @@ def main():
         json.dump(mapping, f)
     faiss.write_index(abs_idx, out_abs)
     faiss.write_index(title_idx, out_title)
-    for name in SURVEY_FILES:
+    # 우리가 다시 만든 4개를 뺀 나머지를 전부 복사한다. 서베이 자산을 이름으로 나열하면
+    # 파일명이 바뀌었을 때 조용히 빠지고, 그 스냅샷은 실행 시점에야 죽는다.
+    regenerated = {os.path.basename(p) for p in (out_db, out_map, out_abs, out_title)}
+    regenerated |= {os.path.basename(abs_path), os.path.basename(title_path)}
+    copied = []
+    for name in sorted(os.listdir(args.base)):
+        if name in regenerated:
+            continue
         src = os.path.join(args.base, name)
-        if os.path.exists(src):
+        if os.path.isfile(src):
             shutil.copy2(src, os.path.join(args.out, name))
-    print('      서베이 자산은 그대로 복사 (이번 증분 대상 아님)')
+            copied.append(name)
+    print(f'      나머지 자산 {len(copied)}개 복사 (서베이 DB 등): {", ".join(copied)}')
+    missing = ({f for f in os.listdir(args.base) if os.path.isfile(os.path.join(args.base, f))}
+               - set(os.listdir(args.out)) - {os.path.basename(abs_path),
+                                              os.path.basename(title_path)})
+    if missing:
+        raise SystemExit(f'새 스냅샷에 빠진 파일: {sorted(missing)}')
 
     print(f'\n[6/6] 지문 — REPRODUCTION.md 에 기록할 값', flush=True)
     for p in (out_db, out_map, out_abs, out_title):
