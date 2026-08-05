@@ -12,9 +12,11 @@ from src.agents.outline_writer import outlineWriter
 from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
 from src.rag import GeneralRAG_langchain
+from src.utils import cutoff_log
 from tqdm import tqdm
 import time
 import re
+from datetime import datetime
 
 
 def remove_descriptions_subquery(text):
@@ -142,8 +144,90 @@ def paras_args():
     parser.add_argument('--db_path',default='./database', type=str, help='Directory of the database.')
     parser.add_argument('--survey_outline_path',default='', type=str, help='Directory of the outline database of survey.')
     parser.add_argument('--embedding_model',default='./gte-large-en-v1.5', type=str, help='Embedding model for retrieval.')
+    # Which papers the pipeline is allowed to see. The defaults are the values that
+    # were hardcoded in the retrieval path, so omitting all three reproduces the
+    # published behaviour exactly -- and, after a database update, silently hides
+    # everything newer. main() compares them against the database and warns.
+    #
+    # Three knobs rather than one: '2412' (December) and '2024-09-26' (September) are
+    # not the same instant, so no single value reproduces both. They are also not the
+    # same quantity -- arXiv assigns the id's YYMM by announcement month while `date`
+    # is the submission date, so deriving one from the other would drop papers at
+    # every month boundary.
+    parser.add_argument('--paper_id_cutoff',
+                        default=os.environ.get('SURVEYFORGE_PAPER_ID_CUTOFF', '2412'), type=str,
+                        help='Papers whose arXiv id prefix (YYMM) is above this are not '
+                             'retrievable in the outline or the writing stage.')
+    parser.add_argument('--paper_date_oldest',
+                        default=os.environ.get('SURVEYFORGE_PAPER_DATE_OLDEST', '2012-01-01'), type=str,
+                        help='Oldest publication date the citation reranker considers.')
+    parser.add_argument('--paper_date_newest',
+                        default=os.environ.get('SURVEYFORGE_PAPER_DATE_NEWEST', '2024-09-26'), type=str,
+                        help='Newest publication date the citation reranker considers. Retrieved '
+                             'papers outside [oldest, newest] are discarded before ranking and '
+                             'can never be cited.')
     args = parser.parse_args()
+    validate_cutoffs(args)
     return args
+
+
+def validate_cutoffs(args):
+    """Reject malformed cutoffs before the ~2 minute database load, not after."""
+    if not re.fullmatch(r'\d{4}', args.paper_id_cutoff):
+        raise SystemExit(
+            f"--paper_id_cutoff must be a 4-digit YYMM string, got {args.paper_id_cutoff!r}. "
+            "It is compared as a string against the part of the arXiv id before the dot, "
+            "so '2412' works while '2412.0' or '24-12' silently match nothing.")
+    for name in ('paper_date_oldest', 'paper_date_newest'):
+        try:
+            datetime.strptime(getattr(args, name), '%Y-%m-%d')
+        except ValueError:
+            raise SystemExit(f"--{name} must be YYYY-MM-DD, got {getattr(args, name)!r}")
+    if args.paper_date_oldest >= args.paper_date_newest:
+        raise SystemExit(
+            f"--paper_date_oldest ({args.paper_date_oldest}) must be strictly before "
+            f"--paper_date_newest ({args.paper_date_newest}); otherwise get_time_windows() "
+            "returns an empty list, every retrieved paper is discarded, and the run "
+            "produces a survey with no citations and no error.")
+
+def report_cutoffs_vs_database(args, rag):
+    """Compare the configured cutoffs against what is actually in the database.
+
+    Costs no I/O -- id_to_index and doc_list are already resident from the RAG load.
+    Warns rather than exits: a cutoff deliberately behind the database is a legitimate
+    temporal-holdout setup, and dying here would throw away the two-minute load.
+    """
+    prefixes = [i.split('.')[0] for i in rag.id_to_index]
+    dates = [d.metadata['date'] for d in rag.rag_data['doc_list']]  # ISO, sorts lexicographically
+    db_max_id = max(prefixes)
+    db_min_date, db_max_date = min(dates), max(dates)
+
+    cutoff_log(f"[cutoff/db] {len(prefixes)} papers, id prefix {min(prefixes)}..{db_max_id}, "
+               f"dates {db_min_date}..{db_max_date}", args.saving_path)
+    cutoff_log(f"[cutoff/cfg] --paper_id_cutoff={args.paper_id_cutoff} "
+               f"--paper_date_oldest={args.paper_date_oldest} "
+               f"--paper_date_newest={args.paper_date_newest}", args.saving_path)
+
+    if len(dates) != len(prefixes):
+        cutoff_log(f"[cutoff/db] WARNING: arxivid_to_index_abs.json has {len(prefixes)} entries "
+                   f"but the paper db has {len(dates)}; the two are out of step.",
+                   args.saving_path)
+    if db_max_id > args.paper_id_cutoff:
+        cutoff_log(f"[cutoff/cfg] WARNING: database has papers up to id {db_max_id} but "
+                   f"--paper_id_cutoff is {args.paper_id_cutoff}. Everything newer is "
+                   f"unreachable in both the outline and the writing stage. Set "
+                   f"SURVEYFORGE_PAPER_ID_CUTOFF={db_max_id} to use the whole database.",
+                   args.saving_path)
+    if db_max_date > args.paper_date_newest:
+        cutoff_log(f"[cutoff/cfg] WARNING: database has papers dated up to {db_max_date} but "
+                   f"--paper_date_newest is {args.paper_date_newest}. The citation reranker "
+                   f"discards retrieved papers after that date. Set "
+                   f"SURVEYFORGE_PAPER_DATE_NEWEST to {db_max_date} or later.", args.saving_path)
+    if db_min_date < args.paper_date_oldest:
+        cutoff_log(f"[cutoff/cfg] WARNING: database has papers dated back to {db_min_date} but "
+                   f"--paper_date_oldest is {args.paper_date_oldest}; older papers are "
+                   f"discarded by the citation reranker.", args.saving_path)
+
 
 def main(args):
     # Namespace's repr would print api_key in full. run_demo.py keeps the key out
@@ -179,6 +263,9 @@ def main(args):
 
     if not os.path.exists(args.saving_path):
         os.mkdir(args.saving_path)
+
+    report_cutoffs_vs_database(args, rag_abstract4outline)
+
     db = {
         "paper": db_paper, 
         "survey": db_survey,
@@ -197,6 +284,10 @@ def main(args):
 
     raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = \
         write_subsection(args, args.topic, args.model, args.ckpt, outline_with_description, args.subsection_len, args.rag_num, args.rag_max_out, db, args.api_key, args.api_url)
+
+    # rag_suboutline and rag_subsection alias this object, and rag_title4citation never
+    # reaches _rerank, so one accumulator covers every citation-reranked call in the run.
+    rag_abstract4outline.report_window_drops()
 
     with open(f'{args.saving_path}/{args.topic}.md', 'a+') as f:
         f.write(refined_survey_with_references)

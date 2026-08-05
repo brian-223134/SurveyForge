@@ -7,7 +7,7 @@ from tqdm import trange,tqdm
 import torch
 from src.model import APIModel, LocalModel, MAX_THREADS, MAX_SECTION_THREADS
 import time
-from src.utils import tokenCounter, get_index_filter
+from src.utils import tokenCounter, get_index_filter, get_index_filter_by_id_prefix
 import copy
 import json
 from src.database import database
@@ -35,10 +35,9 @@ class subsectionWriter():
 
     def write(self, topic, outline, rag_num = 30, rag_max_out = 60 ,subsection_len = 500, refining = True, reflection=True):
         # HACK: Database subset for outline generation
-        arxivid_list = list(self.db["rag_outline"].id_to_index.keys())
-        arxivid_period = [arxivid for arxivid in arxivid_list if arxivid.split('.')[0] <= '2412']
-        rag_outline_subset_index_filter = get_index_filter(self.db["rag_outline"].id_to_index, 
-                                                           arxivid_period)
+        rag_outline_subset_index_filter = get_index_filter_by_id_prefix(
+            self.db["rag_outline"].id_to_index, self.args.paper_id_cutoff,
+            stage='writer', saving_path=self.args.saving_path)
         rag_outline_subset_ids = self.db["rag_outline"].retrieve_id([topic], 
                                                                     top_k=1500,
                                                                     **rag_outline_subset_index_filter)

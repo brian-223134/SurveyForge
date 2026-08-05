@@ -10,6 +10,20 @@ from langchain_core.documents import Document
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
 
+def cutoff_log(message, saving_path=None):
+    """Print a cutoff/coverage message and, when given a run directory, persist it.
+
+    run_demo.py echoes the child's stdout to the console but only greps token counts
+    out of it (run_demo.py:129,138), so a printed warning does not survive the run.
+    cutoff_report.log lives next to the survey it describes. It is deliberately not
+    time_cost.log -- that file gets one line per RAG call and is scanned for timings.
+    """
+    print(message)
+    if saving_path:
+        with open(f"{saving_path}/cutoff_report.log", "a") as f:
+            f.write(message + "\n")
+
+
 class tokenCounter():
 
     def __init__(self) -> None:
@@ -105,7 +119,12 @@ def get_time_windows(time_oldest, time_newest, period):
     
     # Generate the time windows
     current_start = time_oldest
-    while current_start < time_newest:
+    # `<=`, not `<`: when time_newest lands exactly on a window boundary
+    # (time_oldest + k*period years) the loop used to stop one window short, so papers
+    # dated on that day matched no window and were discarded. Inert at the stock
+    # cutoffs -- after the 2024-01-01 window current_start is 2026-01-01, which is
+    # past 2024-09-26 under either comparison.
+    while current_start <= time_newest:
         current_end = current_start + pd.DateOffset(years=period) - timedelta(days=1)
         if current_end > time_newest:
             current_end = time_newest
@@ -117,20 +136,39 @@ def get_time_windows(time_oldest, time_newest, period):
     
     return time_windows
 
-def sort_by_citation_period(documents, top_k=10, period=2):
-    time_oldest = '2012-01-01'
-    time_newest = '2024-09-26'
+def sort_by_citation_period(documents, top_k=10, period=2,
+                            time_oldest='2012-01-01', time_newest='2024-09-26'):
+    """Citation-rank documents within contiguous `period`-year windows.
+
+    The windows cover exactly [time_oldest, time_newest]; a document whose date falls
+    in none of them is dropped. That is the whole hazard: a time_newest left behind the
+    database makes every newer paper uncitable with no error and no other symptom. So
+    the count of dropped documents is returned rather than discarded.
+
+    The defaults are the values that used to be hardcoded here, so a caller that passes
+    neither keyword behaves exactly as before.
+
+    Returns:
+        (top_docs, n_outside_window)
+    """
     time_windows = get_time_windows(time_oldest, time_newest, period)
     # ratio = top_k/total_doc, for each period, get top_k*period documents
     total_doc = len(documents)
+    if total_doc == 0:
+        # ratio below would raise ZeroDivisionError. Unreachable at the stock retrieval
+        # settings, but a mis-set cutoff makes it reachable.
+        return [], 0
     ratio = top_k / total_doc
+    # Hoisted out of the window loop: it used to re-parse every date once per window.
+    doc_dates = [pd.to_datetime(doc.metadata['date']) for doc in documents]
+    covered = [False] * total_doc
     top_docs = []
     for start, end in time_windows:
         docs_in_period = []
-        for doc in documents:
-            doc_date = pd.to_datetime(doc.metadata['date'])
-            if doc_date >= start and doc_date <= end:
+        for i, doc in enumerate(documents):
+            if doc_dates[i] >= start and doc_dates[i] <= end:
                 docs_in_period.append(doc)
+                covered[i] = True
 
         if len(docs_in_period) == 0:
             continue
@@ -138,17 +176,52 @@ def sort_by_citation_period(documents, top_k=10, period=2):
 
         selected_docs = sort_by_citation(docs_in_period, top_k_period)
         top_docs.extend(selected_docs)
-        
-    return top_docs
-    
+
+    # Actual window membership, not an [oldest, newest] range check: get_time_windows
+    # can stop one window short of time_newest, and a range check would miss that.
+    return top_docs, covered.count(False)
+
 def get_index_filter(arxivid_to_index, results_arxivid):
     # transfer arxivid to index in outline_rag_results
     results_index = [0] * len(results_arxivid)
     for i in range(len(results_arxivid)):
         results_index[i] = arxivid_to_index[results_arxivid[i]]
-        
+
     id_selector = faiss.IDSelectorArray(results_index)
     index_filter = {
         'id_selector': id_selector,
     }
     return index_filter
+
+
+def filter_arxivids_by_prefix(arxivid_list, id_cutoff):
+    """Ids whose arXiv YYMM prefix is <= id_cutoff, in the order given.
+
+    Kept pure and separate from the IDSelectorArray it feeds so it can be diffed
+    against the expression it replaces -- IDSelectorArray does not expose its contents.
+    Order matters: it becomes the selector's argument order.
+    """
+    return [aid for aid in arxivid_list if aid.split('.')[0] <= id_cutoff]
+
+
+def get_index_filter_by_id_prefix(arxivid_to_index, id_cutoff, stage='', saving_path=None):
+    """get_index_filter() restricted to papers at or before `id_cutoff` (YYMM prefix).
+
+    Reports how many papers the cutoff excluded. After a database update with the
+    cutoff left at its default that number is the count of papers made unreachable,
+    and it is otherwise invisible anywhere in the output.
+    """
+    arxivid_list = list(arxivid_to_index.keys())
+    kept = filter_arxivids_by_prefix(arxivid_list, id_cutoff)
+    dropped = len(arxivid_list) - len(kept)
+    msg = (f"[cutoff/{stage}] arXiv id prefix <= {id_cutoff}: "
+           f"{len(kept)}/{len(arxivid_list)} papers retrievable, {dropped} excluded")
+    if dropped:
+        msg += (f". WARNING: those {dropped} papers cannot appear in the survey at any "
+                f"stage; raise SURVEYFORGE_PAPER_ID_CUTOFF if that is not intended")
+    cutoff_log(msg, saving_path)
+    if not kept:
+        raise RuntimeError(
+            f"--paper_id_cutoff={id_cutoff} excludes every paper in the database "
+            f"(ids run to {max(a.split('.')[0] for a in arxivid_list)}); nothing can be retrieved.")
+    return get_index_filter(arxivid_to_index, kept)

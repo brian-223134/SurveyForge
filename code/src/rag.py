@@ -8,7 +8,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.runnables import RunnableLambda
 
 from src.faiss_param import FAISS_param as FAISS
-from .utils import autosurvey_db_json2doc_langchain, postprocess_results_langchain2id, sort_by_citation_period
+from .utils import (autosurvey_db_json2doc_langchain, postprocess_results_langchain2id,
+                    sort_by_citation_period, cutoff_log)
 
 logging.basicConfig()
 logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
@@ -27,6 +28,11 @@ class GeneralRAG_langchain():
         self.args = args
         self.retriever_type = retriever_type
         self.retriever_name = retriever_name
+
+        # How much the citation window threw away over the whole run. _rerank runs once
+        # per subsection query, so it warns on the first drop and only counts after that.
+        self.window_drops = 0
+        self.window_docs = 0
         
         self.index_db_path = index_db_path
         self.doc_db_path = doc_db_path
@@ -123,13 +129,23 @@ class GeneralRAG_langchain():
                 results: list of reranked documents for each query
         """
         # if results list has 2dim (multiquery)
+        if not results[0]:
+            cutoff_log("[cutoff/rerank] WARNING: retrieval returned 0 documents for this "
+                       "query; the subsection will be written with no references.",
+                       self.args.saving_path)
+            return results
         if len(results[0]) < top_k:
             top_k = len(results[0])
-            
+
         if method == 'raw':
             results[0] = results[0][:top_k]
         elif method == 'citation':
-            results[0] = sort_by_citation_period(results[0], top_k)
+            n_in = len(results[0])
+            results[0], n_outside = sort_by_citation_period(
+                results[0], top_k,
+                time_oldest=self.args.paper_date_oldest,
+                time_newest=self.args.paper_date_newest)
+            self._note_window_drops(n_in, n_outside)
         elif method == 'hybrid':
             # TODO: implement hybrid rerank
             results[0] = results[0][:top_k]
@@ -137,6 +153,26 @@ class GeneralRAG_langchain():
             raise NotImplementedError(f"Rerank method {method} is not implemented.")
         
         return results
+
+    def _note_window_drops(self, n_in, n_outside):
+        """Aggregate what the citation window discarded, warning loudly the first time."""
+        self.window_docs += n_in
+        if not n_outside:
+            return
+        if self.window_drops == 0:
+            cutoff_log(
+                f"[cutoff/rerank] WARNING: discarded {n_outside} of {n_in} retrieved papers "
+                f"whose date falls outside the citation windows spanning "
+                f"[{self.args.paper_date_oldest}, {self.args.paper_date_newest}]. Papers "
+                f"outside that span can never be cited, however well they match. Set "
+                f"SURVEYFORGE_PAPER_DATE_NEWEST to cover the database.", self.args.saving_path)
+        self.window_drops += n_outside
+
+    def report_window_drops(self):
+        cutoff_log(f"[cutoff/rerank] total: {self.window_drops}/{self.window_docs} retrieved "
+                   f"documents discarded by the citation window "
+                   f"[{self.args.paper_date_oldest}, {self.args.paper_date_newest}]",
+                   self.args.saving_path)
 
     def _unite(self, results, method='union'):
         """

@@ -6,7 +6,7 @@ import time
 import torch
 from src.model import APIModel, LocalModel
 from src.database import database
-from src.utils import tokenCounter, get_index_filter
+from src.utils import tokenCounter, get_index_filter_by_id_prefix
 from src.prompt import ROUGH_OUTLINE_WITH_SURVEY_PROMPT, MERGING_OUTLINE_WITH_SURVEY_PROMPT, SUBSECTION_OUTLINE_WITH_SURVEY_PROMPT, EDIT_FINAL_OUTLINE_PROMPT_NEW
 import random
 import json
@@ -46,10 +46,9 @@ class outlineWriter():
     def draft_outline(self, topic, reference_num = 600, chunk_size = 30000, section_num = 6):
         # Get database
         # Time Filter
-        arxivid_list = list(self.db["rag_outline"].id_to_index.keys())
-        arxivid_period = [arxivid for arxivid in arxivid_list if arxivid.split('.')[0] <= '2412']
-        rag_outline_subset_index_filter = get_index_filter(self.db["rag_outline"].id_to_index, 
-                                                           arxivid_period)
+        rag_outline_subset_index_filter = get_index_filter_by_id_prefix(
+            self.db["rag_outline"].id_to_index, self.args.paper_id_cutoff,
+            stage='outline', saving_path=self.args.saving_path)
         rag_outline_subset_ids = self.db["rag_outline"].retrieve_id(topic, 
                                                                     top_k=reference_num,
                                                                     **rag_outline_subset_index_filter)
