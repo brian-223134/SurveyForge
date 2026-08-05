@@ -43,6 +43,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -61,6 +62,18 @@ TITLE_STEM = 'faiss_paper_title_embeddings'
 SURVEY_FILES = ('surveys_arxiv_paper_db.json', 'surveys_arxivid_to_index_abs.json',
                 'faiss_survey_title_abs_embeddings_FROM_1501_TO_2409_gte.bin',
                 'faiss_survey_title_embeddings_FROM_1501_TO_2409_gte.bin')
+
+
+def title_author_key(rec):
+    """제목+저자로 만든 동일 논문 판별 키.
+
+    제목만으로는 안 된다 — 기존 DB의 제목 충돌 742건 중 244건은 저자가 다른 별개
+    논문이었다 ('A Duality Based 2-Approximation Algorithm...'처럼). 저자까지 맞아야
+    같은 논문으로 본다.
+    """
+    title = re.sub(r'[^a-z0-9]', '', (rec.get('title') or '').lower())
+    authors = tuple(a.strip().lower() for a in (rec.get('authors') or []))
+    return (title, authors)
 
 
 def find_one(db_path, stem):
@@ -146,6 +159,8 @@ def main():
     ap.add_argument('--batch-size', type=int, default=64)
     ap.add_argument('--device', default='')
     ap.add_argument('--tag', default='', help="파일명 접미사, 예 FROM_2012_0101_TO_260803")
+    ap.add_argument('--keep-title-dups', action='store_true',
+                    help='제목+저자가 같은 논문도 그대로 넣는다 (기본은 제거)')
     ap.add_argument('--check-only', action='store_true', help='쓰지 않고 점검만')
     args = ap.parse_args()
 
@@ -175,6 +190,30 @@ def main():
             seen.add(b)
             dedup.append(r)
     fresh = dedup
+
+    if not args.keep_title_dups:
+        # 같은 논문이 arXiv에 다른 id로 두 번 올라오는 경우가 있다. id 기준 중복 제거로는
+        # 안 잡힌다. 기존 DB에서 실측하면 제목 충돌 742건 중 498건이 저자까지 같았고
+        # (진짜 중복), 244건은 제목만 같은 별개 논문이었다 — 그래서 제목만으로 지우면
+        # 안 되고 저자까지 일치할 때만 지운다.
+        n_before = len(fresh)
+        base_keys = {title_author_key(r) for r in table.values()}
+        kept, seen_fresh, dropped_base, dropped_self = [], set(), 0, 0
+        for r in fresh:
+            k = title_author_key(r)
+            if k in base_keys:
+                # 기존 스냅샷 쪽을 남긴다. base를 얼려 둬야 A/B 대조가 유지된다.
+                dropped_base += 1
+                continue
+            if k in seen_fresh:
+                dropped_self += 1
+                continue
+            seen_fresh.add(k)
+            kept.append(r)
+        fresh = kept
+        if n_before != len(fresh):
+            print(f'      제목+저자 중복 제거: 기존과 겹침 {dropped_base:,}편, '
+                  f'신규끼리 겹침 {dropped_self:,}편 (--keep-title-dups로 끌 수 있다)')
     need = ('id', 'title', 'url', 'date', 'abs', 'cat', 'authors', 'citation_count')
     missing = {f for r in fresh[:1000] for f in need if f not in r}
     if missing:
