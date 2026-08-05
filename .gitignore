@@ -47,3 +47,6 @@ code/output/**/paper_texts.txt
 
 .DS_Store
 **/.DS_Store
+# 평가용 변환 산출물 (scripts/to_surveybench_ref.py). 저자 배포본
+# SurveyBench/generated_surveys_ref/ 와 섞이지 않도록 별도 경로를 쓴다.
+SurveyBench/eval_runs/

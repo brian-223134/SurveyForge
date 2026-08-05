@@ -20,6 +20,13 @@ DATA_ROOT = os.environ.get(
     "SURVEYFORGE_DATA", "/data2/chanjoong/survey-agent/SurveyForge_data"
 )
 
+# Which snapshot under DATA_ROOT to retrieve from. The distributed one stops at
+# 2024-09-25; scripts/update_snapshot.sh writes extended ones beside it as
+# database_<YYYY-MM>/. Switching snapshots also means raising
+# SURVEYFORGE_PAPER_ID_CUTOFF and SURVEYFORGE_PAPER_DATE_NEWEST, or the gates in
+# REPRODUCTION.md 1.4 hide everything the new snapshot added.
+DB_DIR = os.environ.get("SURVEYFORGE_DB_DIR", "database")
+
 MODEL = os.environ.get("SURVEYFORGE_MODEL", "deepseek/deepseek-v4-pro")
 # Repeats per topic. The summary line used to hardcode "/10" while the loop ran once.
 TOTAL_EXPS = int(os.environ.get("SURVEYFORGE_EXPS", 1))
@@ -90,7 +97,7 @@ def run_experiment(topic, exp_num, base_path):
         "--rag_max_out", "60",
         "--outline_reference_num", "1500",
         "--survey_outline_path", DATA_ROOT,
-        "--db_path", os.path.join(DATA_ROOT, "database"),
+        "--db_path", os.path.join(DATA_ROOT, DB_DIR),
         "--embedding_model", os.path.join(DATA_ROOT, "gte-large-en-v1.5"),
         # --api_key is deliberately NOT passed: main.py reads OPENROUTER_API_KEY from
         # the inherited environment. Putting a secret in argv exposes it to every
@@ -180,8 +187,12 @@ def main():
     # Keep the model in the path so runs with different models do not collide --
     # run_experiment() silently skips an existing directory and reports success, so a
     # shared path would make the second model produce nothing and look fine.
+    # The snapshot is in the path for the same reason: same model, different corpus is
+    # a different run. The default snapshot adds no suffix, so existing paths are
+    # unchanged and the pilot output stays where REPRODUCTION.md says it is.
     # <topic>/exp_N is preserved below it, which is the layout SurveyBench expects.
-    base_path = os.path.join("./output/res", model_slug(MODEL))
+    slug = model_slug(MODEL) + ("" if DB_DIR == "database" else f"__{model_slug(DB_DIR)}")
+    base_path = os.path.join("./output/res", slug)
     create_directory(base_path)
 
     # Topics come from the command line when given, else topics_demo.txt.
