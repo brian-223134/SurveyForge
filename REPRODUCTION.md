@@ -485,7 +485,93 @@ JSON으로 쓰도록 고쳤다. **`--debug` 없이는 발생하지 않는다.**
 
 ---
 
-## 7. 아직 하지 않은 것
+## 7. DB 증분 갱신 (`scripts/`)
+
+배포 DB는 2024-09-25에서 끝난다. 사전 구축 스냅샷이라 최신 논문을 인용할 수 없고,
+논문이 내세우는 TRE(2년 단위 시간창으로 최신·정착 문헌을 안배하는 리랭커)도 최신 창이
+비어 있어 사실상 죽어 있다. 아래 4단계로 2026-08까지 늘린다.
+
+**기존 `database/`는 읽기만 한다.** 결과는 `database_2026-08/`에 쓰므로 §4의 파일럿과
+A/B 대조가 계속 가능하다. `scripts/update_snapshot.sh`가 네 단계를 순서대로 돌린다.
+
+| 단계 | 스크립트 | 소요 | 자원 |
+|---|---|---|---|
+| 1 | `harvest_arxiv.py` — OAI-PMH 수집 | ~2시간 | 네트워크 |
+| 2 | `fetch_citations.py` — Semantic Scholar로 `citation_count` | ~20분 | 네트워크 + 키 |
+| 3 | `append_snapshot.py` — 임베딩 + FAISS append | ~90분 | GPU 1장 |
+| 4 | `check_db.py` — 재임베딩 검증 | ~2분 | GPU 1장 |
+
+### 7.1 표기 규약은 실측으로 확정했다 (`check_oai_schema.py`)
+
+증분의 전제는 신규 논문이 기존 논문과 **구별되지 않는** 형태로 들어가는 것이다.
+필드 표기가 어긋나면 에러 없이 코퍼스가 두 층으로 갈라진다.
+
+그런데 **이 DB는 이미 두 층이다.** 제목의 문자 치환 여부로 정확히 갈린다:
+
+| 층 | 편수 | 날짜 범위 |
+|---|---|---|
+| `:` → 공백 치환됨 | 149,036 | 2012-01-01 .. **2024-04-26** |
+| `:` 보존 (raw) | 21,791 | 2024-04-23 .. 2024-09-25 |
+| 양쪽 모두 해당 | **0** | — |
+
+경계 2024-04-26은 AutoSurvey 배포 DB의 컷오프와 같다. 즉 이 코퍼스는 AutoSurvey 계열
+베이스 위에 저자들이 직접 증분한 것이고, **그 증분에서는 치환을 걸지 않았다.**
+따라서 신규 논문은 최신 층, 곧 raw 표기를 따른다.
+
+확정된 규약 (최신 층 25편을 OAI로 재취득해 문자 단위 대조, 7필드 0불일치):
+
+| 필드 | 규약 |
+|---|---|
+| `id` | base + 최신 버전 접미사 (`2407.16160v2`) |
+| `date` | **id에 적힌 버전의 날짜** — v1이 아니다 |
+| `title` | arXiv 형식(유니코드), **치환 없음** |
+| `abs` | arXivRaw (TeX escape 보존) |
+| `url` / `cat` / `authors` | `http://arxiv.org/pdf/{id}` / 첫 categories / 'forenames keyname' |
+
+AutoSurvey의 같은 스크립트를 그대로 가져오면 **제목 치환**과 **v1 날짜** 두 군데가 조용히
+어긋난다. 둘 다 예외를 내지 않는다.
+
+### 7.2 임베딩 규약 — 추측하지 말 것
+
+저장 벡터를 복원해 후보를 하나씩 재인코딩해 맞춰 본 결과다.
+
+```
+faiss_paper_title_abs_* = encode(title + abs)   구분자 없는 단순 연결, cos 1.000000
+faiss_paper_title_*     = encode(title)                              cos 1.000000
+인덱스 = IndexIDMap(IndexFlatIP), 1024-dim, 저장 벡터 L2 정규화됨, prefix 없음
+```
+
+- **구분자를 넣으면 안 된다.** 공백 하나만 끼워도 cos가 0.990으로 떨어진다.
+- **공백 정규화는 무해하다.** 줄바꿈을 공백으로 바꿔도 cos가 최솟값까지 1.000000이다.
+  그래서 수집 단계에서 정규화한다 (참고문헌 출력이 깔끔해진다).
+- **정규화를 빼먹거나 prefix를 붙이면** 예외 없이 검색 품질만 나빠진다.
+  `check_db.py`의 재임베딩 대조가 이를 잡는 **유일한** 관문이다.
+
+### 7.3 id 체계 불변식
+
+```
+TinyDB 키 == arxivid_to_index_abs.json 의 값 == IndexIDMap 의 stored id
+```
+
+셋 다 **1-based**이고 1..N 연속이다. AutoSurvey는 '리스트 위치 == FAISS 행 == 매핑 값'의
+**0-based** 불변식이라 `append_snapshot.py`를 그대로 옮기면 전부 한 칸씩 어긋나고,
+`IndexIDMap`은 `add()`를 거부하므로 `add_with_ids()`를 써야 한다.
+
+### 7.4 갱신 후 실행
+
+파일명의 컷오프는 `find_index()`가 글롭으로 찾으므로 코드 수정이 필요 없다.
+**컷오프 환경변수를 함께 올려야 한다** — 안 올리면 §1.4의 게이트가 신규 논문을 전부 막는다.
+`check_db.py`가 마지막에 넣어야 할 값을 출력한다.
+
+```bash
+--db_path $SURVEYFORGE_DATA/database_2026-08
+SURVEYFORGE_PAPER_ID_CUTOFF=<check_db.py 출력값>
+SURVEYFORGE_PAPER_DATE_NEWEST=<check_db.py 출력값>
+```
+
+---
+
+## 8. 아직 하지 않은 것
 
 - **`SurveyBench/ref_bench/`를 이용한 정량 평가 미실시.** 주제를 벤치마크 토픽으로 고른 이유가
   이것이므로(`ref_bench/Retrieval-Augmented Generation for Large Language Models_bench.json`이 존재),
