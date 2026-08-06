@@ -1,0 +1,46 @@
+Experiment Start Time: 2026-08-05 12:14:12
+==================================================
+
+Topic: Retrieval-Augmented Generation for Large Language Models, Exp 1 [FAILED]
+Start: 2026-08-05 12:14:12
+End: 2026-08-05 12:26:14
+Duration: 0:12:02.326475
+Error: Command '['/data2/chanjoong/survey-agent/SurveyForge/code/../.venv/bin/python', 'main.py', '--topic', 'Retrieval-Augmented Generation for Large Language Models', '--gpu', '0', '--debug', '--saving_path', './output/res/deepseek_deepseek-v4-flash-0731__database_2026-08/Retrieval-Augmented Generation for Large Language Models/exp_1', '--model', 'deepseek/deepseek-v4-flash-0731', '--section_num', '7', '--subsection_len', '500', '--rag_num', '100', '--rag_max_out', '60', '--outline_reference_num', '1500', '--survey_outline_path', '/data2/chanjoong/survey-agent/SurveyForge_data', '--db_path', '/data2/chanjoong/survey-agent/SurveyForge_data/database_2026-08', '--embedding_model', '/data2/chanjoong/survey-agent/SurveyForge_data/gte-large-en-v1.5', '--api_url', 'https://openrouter.ai/api/v1']' returned non-zero exit status 1.
+--------------------------------------------------
+
+Topic Summary: Retrieval-Augmented Generation for Large Language Models
+Total Duration: 0:12:07.328708
+Successful Experiments: 0/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-08-05 12:14:12
+Total End Time: 2026-08-05 12:26:19
+Total Duration: 0:12:07.329041
+Total Topics: 1
+
+Resuming experiments at: 2026-08-06 00:35:14
+==================================================
+
+Topic: Retrieval-Augmented Generation for Large Language Models, Exp 1
+Start: 2026-08-06 00:35:14
+End: 2026-08-06 01:01:44
+Duration: 0:26:29.222870
+OutlineWriter Input token usage: 485517
+OutlineWriter Output token usage: 36150
+SubsectionWriter Input token usage: 1578760
+SubsectionWriter Output token usage: 107204
+--------------------------------------------------
+
+Topic Summary: Retrieval-Augmented Generation for Large Language Models
+Total Duration: 0:26:34.229197
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-08-06 00:35:14
+Total End Time: 2026-08-06 01:01:49
+Total Duration: 0:26:34.229522
+Total Topics: 1

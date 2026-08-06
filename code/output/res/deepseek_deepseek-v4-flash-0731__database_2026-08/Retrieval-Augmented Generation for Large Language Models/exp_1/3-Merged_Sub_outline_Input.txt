@@ -1,0 +1,1054 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Retrieval-Augmented Generation for Large Language Models**.
+
+You have created the following overall outline:
+---
+Title: Retrieval-Augmented Generation for Large Language Models: Architectures, Methodologies, and Future Directions
+
+Section 1: Introduction
+Description 1: This section establishes the foundational context for the survey by examining the inherent limitations of large language models, including their reliance on static parametric knowledge, propensity for hallucination, and challenges in accessing up-to-date or domain-specific information. It formally introduces retrieval-augmented generation as a paradigm that integrates external non-parametric knowledge sources to address these limitations, traces the historical evolution of the paradigm, and provides a comparative analysis against alternative knowledge injection methods. The section also clarifies the scope, terminology, and survey methodology, setting the stage for the comprehensive analysis that follows.
+1. Motivations and Limitations of Large Language Models: Analysis of the primary drivers for augmenting large language models, including the mitigation of hallucinated content, the need for temporal freshness of knowledge, the requirement for specialized domain expertise beyond pre-training corpora, and the challenges of knowledge editing and parametric memory constraints, establishing the foundational problems that retrieval-augmented generation addresses.
+2. Historical Context and Evolution of the Paradigm: A chronological overview of the development from early non-parametric and semi-parametric models and classical information retrieval integrations, through foundational memory-augmented networks and retrieval-based text generation, to the modern modular approaches interfacing with large-scale pre-trained transformers, providing a genealogy of the core concepts.
+3. Comparative Analysis of Knowledge Integration Approaches: A systematic comparison of retrieval-augmented generation with alternative methods for enhancing large language models, including full-model fine-tuning, parameter-efficient fine-tuning, knowledge editing, and long-context window expansion, analyzing the distinct trade-offs in factual accuracy, computational cost, adaptability, and training data requirements.
+4. Definitions and Anatomy of a Retrieval-Augmented Generation System: Formal definitions and notation for a retrieval-augmented generation pipeline, breaking down the core tri-partite architecture into the retrieval component, the augmentation strategy, and the generation component, while also detailing the role of external knowledge bases and query processing steps.
+5. Scope, Survey Methodology, and Distinctions from Prior Work: This defines the boundaries and focus of the survey in light of the rapidly expanding literature. It clarifies the survey's focus on the integrated system and its components, rather than solely on the underlying base models, thereby establishing a distinctive contribution and setting clear expectations.
+
+Section 2: Foundational Architectures and Design Paradigms
+Description 2: This section provides a systematic dissection of the architectural landscape of retrieval-augmented generation systems, categorizing the different workflows that integrate retrieval components with generation models. It contrasts various paradigms based on the flow of information, the timing of the retrieval process, and the structural choices for the external knowledge base, detailing the design decisions that define the system's capabilities and limitations.
+1. Taxonomy of Integration Paradigms: An analysis of the main architectural frameworks used to build retrieval-augmented generation systems, contrasting pre-training-based architectures that co-train retrieval and generation components, pipeline and cascade architectures that treat them as disjoint modules, and unified architectures that internalize retrieval within the generative model's forward pass.
+2. Evolutionary Stages of System Design: A formal categorization of system architectures into single-step retrieve-then-generate designs, advanced pipelines with pre-retrieval and post-retrieval optimization stages, and modular agentic frameworks capable of multi-step planning and tool execution, describing the characteristics of each stage.
+3. Knowledge Base Representation and Indexing Structures: A description of the diverse forms of external knowledge that can be integrated, from unstructured text corpora to structured knowledge graphs, multi-modal databases, and web search interfaces, outlining the preprocessing steps and index structures required to support effective retrieval.
+4. Advancements in Retrieval-Augmented Generation Techniques: An examination of methods that go beyond the standard retrieve-then-read structure to explore multi-hop reasoning chains, iterative feedback loops, and recursive retrieval workflows, with a focus on the intersection of retrieval and complex problem solving.
+
+Section 3: The Retrieval Component: Methods and Advanced Strategies
+Description 3: This section provides a detailed analysis of the retrieval component, the quality of which dictates the upper bound of the final system performance. It systematically reviews query processing strategies, the spectrum of retrieval models, post-retrieval refinement and ranking, and the critical topics of multi-modal retrieval and dynamic adaptive retrieval. The section emphasizes both the quality of the retrieved information and the efficiency of the retrieval process.
+1. Query Transformation, Augmentation, and Reformulation: An examination of methods for bridging the lexical and semantic gap between a user's raw, often ambiguous, query and the structure of the target knowledge corpus, including query rewriting, expansion, decomposition into sub-queries, and the generation of hypothetical pseudo-documents to improve the initial retrieval recall.
+2. Taxonomy of Retrieval Models and Algorithms: A comparative analysis of retrieval techniques for indexing and searching, covering classical sparse lexical matching methods, dense retrieval models based on semantic understanding, hybrid approaches that combine lexical and semantic signals, and structured retrieval as an authoritative source for knowledge systems.
+3. Post-Retrieval Refinement and Re-ranking: An exploration of classic and novel methods to filter, optimize, and order the initial set of retrieved documents before they are passed to the generative model, including cross-encoder relevance re-ranking, large language model-based list-wise evaluators, and redundancy removal strategies, ensuring the final context is maximally useful.
+4. Adaptive and Dynamic Retrieval Mechanisms: A look at strategies where the system determines when retrieval is necessary based on the user's internal knowledge boundaries, using confidence scores, internal state probers, and classification of query difficulty, with the goal of reducing latency and avoiding the negative effects of irrelevant context.
+5. Hardware and System-Level Acceleration for Retrieval: An exploration of the operational challenges of the retrieval stage at scale, including using hardware accelerators, memory-centric architectures, and quantization methods to enable high-throughput, low-latency approximate nearest neighbor search over billion-scale vector databases.
+
+Section 4: Generation Paradigms and Knowledge Integration
+Description 4: This section moves beyond the retrieval stage to analyze in depth the mechanisms by which retrieved information is fused with a language model's internal knowledge during the generation process. It contrasts methods from simple textual prompt concatenation to more complex architectural changes and decoding-time interventions, covering the challenges of context compression and ensuring faithfulness.
+1. Context Integration and Evidential Prompt Engineering: An analysis of how retrieved documents are formatted and integrated into the generation process, including the order of documents and their impact on attention mechanisms, the ‘lost-in-the-middle’ phenomenon, and using structured syntax and citation tags to improve the model's use of the provided evidence.
+2. Fine-tuning and Parameter-Efficient Strategies for Generation: This examines the training objectives to align a parameter-tuning for the generator to improve conditioned generation and faithfulness, covering supervised instruction fine-tuning with retrieved context, preference optimization methods that penalize ignoring evidence, and training frameworks for a fusion module to balance external and parameter.
+3. Training-Free and Decoding-Time Interventions: An in-depth review of methods that decrease model log-probabilities without changing the model weights, including constrained decoding methods based on mutual information, grounded score-based methods that compare probability distributions over retrieved passages, and editing algorithms to ensure the output adheres to the source evidence.
+4. Long-Context Utilization and Context Compression: A exploration of methods designed to manage long context windows, including context summarization and compression techniques to reduce the token input, attention mechanisms designed to focus on critical information, and strategies to adapt long-context models to more effectively process and integrate external evidence, thereby mitigating the issue of attention dilution.
+5. Adaptive Retrieval and Confidence-Gating: A look at "when to retrieve" mechanisms, where a large language model incrementally uses its own internal states to decide if external grounding is required, with the model dynamically deciding if and when to use retrieved information.
+
+Section 5: Training, Alignment, and Optimization of Full Systems
+Description 5: This section provides a holistic view of the system, looking beyond the inference-time behavior to examine the learning signals, training frameworks, and joint optimization algorithms used to tune the full pipeline. It covers the challenges of aligning the retriever and generator components, the use of distillation and synthetic data, and the practical methods for adapting the system to new domains and for continual learning.
+1. Joint End-to-End Optimization of System Components: An exploration of principled methods to update the retrieval and generation components based on a shared training objective, including path-wise and high-level training objectives that propagate the generator loss back to the retriever using policy-gradient, variance reduction, and brute-force risk minimization.
+2. Alignment, Instruction Tuning, and Multi-Task Learning: The use of synthetic data and large-scale datasets in multi-task setups to instruct the combined system on the model's intended behavior, and the employment of direct preference optimization and other alignment techniques to teach the system to be robust against noisy and poorly retrieved contexts and to correctly handle conflicting information.
+3. Distillation and Synthetic Data for System Training: This explains the role of large and potentially cumbersome teacher language models to generate synthetic data for training both the generator and the retrieval component, without requiring changes to the full model. It also focuses on distillation methods to train smaller student retrieval models that achieve high performance with lower inference costs.
+4. Continual and Incremental Learning for Dynamic Environments: A critical analysis of the challenges of data-centric systems and the problem of the retrieval index becoming stale over time, reviewing methods for updating the knowledge store and for adapting the system to handle streaming data and evolving real-world events without a costly full re-training process.
+5. Adaptation and Parameter-Efficient System Modification: An analysis of lightweight methods to adapt a generic system to a custom task or domain, including adapters, Low-Rank Adaptation techniques, and prompt-based methods to adapt to a specialized context as an alternative to full fine-tuning.
+
+Section 6: Evaluation, Benchmarking, and Trustworthiness
+Description 6: This section is dedicated to the complex and multi-faceted task of evaluating retrieval-augmented generation systems. It distinguishes the evaluation of individual components from the holistic system, and describes dedicated benchmarks, metrics, and protocols for the concurrent assessment. The section also addresses critical dimensions of trustworthiness, including robustness to adversarial attacks and system security, which are essential for the safe deployment of these models.
+1. Component-Level and End-to-End Evaluation Metrics: A discussion of robust to ensure that each stage of the pipeline is attributable, with metrics for retrieval recall and precision, as secondary to full-system metrics for generation, and the move to jointly evaluating both steps for faithfulness and its role in the building.
+2. Benchmarking Datasets and Evaluation Frameworks: A survey of standard academic benchmarks for the most common tasks in open-domain question answering, fact verification, and long-form knowledge generation, focusing on how these benchmarks can be designed to introduce realistic challenges, and the use of targeted evaluation frameworks that provide fine-grained diagnosis of system failures.
+3. Faithfulness, Attribution, and Citation Evaluation: The critical analysis of measuring how well the final output is supported by the retrieved evidence, and methods to assess the truthfulness, relevance, and precise citation of the generated answer, including the theory and practice behind manual and large model and automated supervision for the correctness and relevant output.
+4. Robustness and Security Threat Modeling: An exploration of the adversarial vulnerability of the whole system, specifically focusing on the new attack surfaces by the input, such as corpus poisoning with malicious documents, prompt injection to manipulate the model's behavior, and membership inference attacks to detect the inner workings of the system and data integrity.
+5. Efficiency and Cost-Sensitive Performance Analysis: An analysis of the system, and quality vs. resource trade, that looks at wall time, latency, and the computational operational cost of the system, illustrating the cost of the augmentation at a large deployment, and the need to measure the end-to-end usefulness and performance of the overall solution.
+
+Section 7: Applications, Frontiers, and Future Horizons
+Description 7: This section explores the broad landscape of practical applications and domain-specific deployments across knowledge-intensive fields and different modalities, showcasing its use in specialized domains. It then presents the cutting-edge open challenges and future research frontiers that will shape the next generation of systems, focusing on the integration of reasoning, memory, and the move toward more dynamic and adaptive frameworks.
+1. Deployments Across Knowledge-Intensive Domains: An analysis of the systems developed for specialized domains requiring high levels of accuracy and up-to-date information, including but not limited to, medicine, law, finance, and code generation, detailing their bespoke design and the handling of domain-specific vocabulary and data structures.
+2. Expanding Toward Multi-Modal and Structured Knowledge: An overview of retrieval augmented generation extended in the fields of vision, audio, and knowledge graphs, covering the techniques and the representation to navigate the spatial multimodal information that skips temporal and structured knowledge for better grounding.
+3. Agentic, Multi-Agent, and Tool Use Frameworks: A closer look at the architectural shift from single-path pipelines to agent-oriented designs where a system orchestrates various tools and knowledge sources, performs multi-step planning, and uses reasoning to act based on the retrieval of information in more complex, interactive environments.
+4. Long-Horizon Memory and Continual Personalization Systems: An exploration of the move toward systems that do more than a single retrieval semantic, toward a unified model of short and long-term memory, which can store, and update the relevance of a dynamic, contextual information stream, and leading toward highly personalized and reliable models.
+5. Emerging Research Frontiers and Open Challenges: A look into the final challenges that inhabit the future of the domain, including the search for theoretical foundations that can explain and predict the optimal augmentation conditions and exchange with context, and the ongoing dynamic between retrieval-augmented generation, long-context models, and other methods within the field.
+
+Section 8: Conclusion
+Description 8: This final section synthesizes the primary findings and contributions of the survey, summarizing the architectural paradigms, cyber-values of retrieval methods, generation techniques, current applications, and the limitations and challenges that remain. It aims to offer a final perspective on the current state of retrieval-augmented generation and to provide a forward-looking view on the important open problems and future research directions that will shape its evolution within the broader field of large language models.
+1. Summary of Paradigms and Methodologies: A concise recap of the survey's key architectural overviews and the technical evolution of systems, from retrieval and generation components to integrated training and optimization.
+2. Synthesis of Open Challenges and Limitations: A high-level synthesis of the outstanding challenges that remain in the field, including context efficiency, reasoning enhancement, knowledge conflict resolution equilibrium, and system robustness.
+3. Future Directions and Recommendations: A forward-looking summary of promising research avenues, such as deeper theoretical foundations, the design of self-improving and dynamic systems, more holistic evaluation protocols, and the importance of continual and privacy-preserving learning to align the next generation of these models.
+---
+
+You need to enrich the section **Applications, Frontiers, and Future Horizons**, described as: **This section explores the broad landscape of practical applications and domain-specific deployments across knowledge-intensive fields and different modalities, showcasing its use in specialized domains. It then presents the cutting-edge open challenges and future research frontiers that will shape the next generation of systems, focusing on the integration of reasoning, memory, and the move toward more dynamic and adaptive frameworks.
+1. Deployments Across Knowledge-Intensive Domains: An analysis of the systems developed for specialized domains requiring high levels of accuracy and up-to-date information, including but not limited to, medicine, law, finance, and code generation, detailing their bespoke design and the handling of domain-specific vocabulary and data structures.
+2. Expanding Toward Multi-Modal and Structured Knowledge: An overview of retrieval augmented generation extended in the fields of vision, audio, and knowledge graphs, covering the techniques and the representation to navigate the spatial multimodal information that skips temporal and structured knowledge for better grounding.
+3. Agentic, Multi-Agent, and Tool Use Frameworks: A closer look at the architectural shift from single-path pipelines to agent-oriented designs where a system orchestrates various tools and knowledge sources, performs multi-step planning, and uses reasoning to act based on the retrieval of information in more complex, interactive environments.
+4. Long-Horizon Memory and Continual Personalization Systems: An exploration of the move toward systems that do more than a single retrieval semantic, toward a unified model of short and long-term memory, which can store, and update the relevance of a dynamic, contextual information stream, and leading toward highly personalized and reliable models.
+5. Emerging Research Frontiers and Open Challenges: A look into the final challenges that inhabit the future of the domain, including the search for theoretical foundations that can explain and predict the optimal augmentation conditions and exchange with context, and the ongoing dynamic between retrieval-augmented generation, long-context models, and other methods within the field.**
+
+**Main task:**
+Generate a comprehensive framework for **Applications, Frontiers, and Future Horizons** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Retrieval-Generation Synergy Augmented Large Language Models
+
+publish_date: 2023-10-08
+
+paper_content:
+
+Large language models augmented with task-relevant documents have
+demonstrated impressive performance on knowledge-intensive tasks. However,
+regarding how to obtain effective documents, the existing methods are mainly
+divided into two categories. One is to retrieve from an external knowledge
+base, and the other is to utilize large language models to generate documents.
+We propose an iterative retrieval-generation collaborative framework. It is not
+only able to leverage both parametric and non-parametric knowledge, but also
+helps to find the correct reasoning path through retrieval-generation
+interactions, which is very important for tasks that require multi-step
+reasoning. We conduct experiments on four question answering datasets,
+including single-hop QA and multi-hop QA tasks. Empirical results show that our
+method significantly improves the reasoning ability of large language models
+and outperforms previous baselines.
+---
+paper_title: Towards Open-World Retrieval-Augmented Generation on Knowledge Graph: A Multi-Agent Collaboration Framework
+
+publish_date: 2026-01-23
+
+paper_content:
+
+Large Language Models (LLMs) have demonstrated strong capabilities in web search and reasoning. However, their dependence on static training corpora makes them prone to factual errors and knowledge gaps. Retrieval-Augmented Generation (RAG) addresses this limitation by incorporating external knowledge sources, especially structured Knowledge Graphs (KGs), which provide explicit semantics and efficient retrieval. Existing KG-based RAG approaches, however, generally assume that anchor entities are accessible to initiate graph traversal, which limits their robustness in open-world settings where accurate linking between the user query and the KG entity is unreliable. To overcome this limitation, we propose AnchorRAG, a novel multi-agent collaboration framework for open-world RAG without the predefined anchor entities. Specifically, a predictor agent dynamically identifies candidate anchor entities by aligning user query terms with KG nodes and initializes independent retriever agents to conduct parallel multi-hop explorations from each candidate. Then a supervisor agent formulates the iterative retrieval strategy for these retriever agents and synthesizes the resulting knowledge paths to generate the final answer. This multi-agent collaboration framework improves retrieval robustness and mitigates the impact of ambiguous or erroneous anchors. Extensive experiments on four public benchmarks demonstrate that AnchorRAG significantly outperforms existing baselines and establishes new state-of-the-art results on the real-world reasoning tasks.
+---
+paper_title: DuetRAG: Collaborative Retrieval-Augmented Generation
+
+publish_date: 2024-05-12
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) methods augment the input of Large
+Language Models (LLMs) with relevant retrieved passages, reducing factual
+errors in knowledge-intensive tasks. However, contemporary RAG approaches
+suffer from irrelevant knowledge retrieval issues in complex domain questions
+(e.g., HotPot QA) due to the lack of corresponding domain knowledge, leading to
+low-quality generations. To address this issue, we propose a novel
+Collaborative Retrieval-Augmented Generation framework, DuetRAG. Our
+bootstrapping philosophy is to simultaneously integrate the domain fintuning
+and RAG models to improve the knowledge retrieval quality, thereby enhancing
+generation quality. Finally, we demonstrate DuetRAG' s matches with expert
+human researchers on HotPot QA.
+---
+paper_title: Grounding Long-Context Reasoning with Contextual Normalization for Retrieval-Augmented Generation
+
+publish_date: 2025-12-08
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) has become an essential approach for extending the reasoning and knowledge capacity of large language models (LLMs). While prior research has primarily focused on retrieval quality and prompting strategies, the influence of how the retrieved documents are framed, i.e., context format, remains underexplored. We show that seemingly superficial choices, such as delimiters or structural markers in key-value extraction, can induce substantial shifts in accuracy and stability, even when semantic content is identical. To systematically investigate this effect, we design controlled experiments that vary context density, delimiter styles, and positional placement, revealing the underlying factors that govern performance differences. Building on these insights, we introduce Contextual Normalization, a lightweight strategy that adaptively standardizes context representations before generation. Extensive experiments on both controlled and real-world RAG benchmarks across diverse settings demonstrate that the proposed strategy consistently improves robustness to order variation and strengthens long-context utilization. These findings underscore that reliable RAG depends not only on retrieving the right content, but also on how that content is presented, offering both new empirical evidence and a practical technique for better long-context reasoning.
+---
+paper_title: MemOS: A Memory OS for AI System
+
+publish_date: 2025-12-03
+
+paper_content:
+
+Large Language Models (LLMs) have become an essential infrastructure for Artificial General Intelligence (AGI), yet their lack of well-defined memory management systems hinders the development of long-context reasoning, continual personalization, and knowledge consistency.Existing models mainly rely on static parameters and short-lived contextual states, limiting their ability to track user preferences or update knowledge over extended periods.While Retrieval-Augmented Generation (RAG) introduces external knowledge in plain text, it remains a stateless workaround without lifecycle control or integration with persistent representations.Recent work has modeled the training and inference cost of LLMs from a memory hierarchy perspective, showing that introducing an explicit memory layer between parameter memory and external retrieval can substantially reduce these costs by externalizing specific knowledge. Beyond computational efficiency, LLMs face broader challenges arising from how information is distributed over time and context, requiring systems capable of managing heterogeneous knowledge spanning different temporal scales and sources. To address this challenge, we propose MemOS, a memory operating system that treats memory as a manageable system resource. It unifies the representation, scheduling, and evolution of plaintext, activation-based, and parameter-level memories, enabling cost-efficient storage and retrieval. As the basic unit, a MemCube encapsulates both memory content and metadata such as provenance and versioning. MemCubes can be composed, migrated, and fused over time, enabling flexible transitions between memory types and bridging retrieval with parameter-based learning. MemOS establishes a memory-centric system framework that brings controllability, plasticity, and evolvability to LLMs, laying the foundation for continual learning and personalized modeling.
+---
+paper_title: Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report
+
+publish_date: 2024-10-21
+
+paper_content:
+
+This paper presents an experience report on the development of Retrieval Augmented Generation (RAG) systems using PDF documents as the primary data source. The RAG architecture combines generative capabilities of Large Language Models (LLMs) with the precision of information retrieval. This approach has the potential to redefine how we interact with and augment both structured and unstructured knowledge in generative models to enhance transparency, accuracy, and contextuality of responses. The paper details the end-to-end pipeline, from data collection, preprocessing, to retrieval indexing and response generation, highlighting technical challenges and practical solutions. We aim to offer insights to researchers and practitioners developing similar systems using two distinct approaches: OpenAI's Assistant API with GPT Series and Llama's open-source models. The practical implications of this research lie in enhancing the reliability of generative AI systems in various sectors where domain-specific knowledge and real-time information retrieval is important. The Python code used in this work is also available at: https://github.com/GPT-Laboratory/RAG-LLM-Development-Guidebook-from-PDFs.
+---
+paper_title: Long Context Modeling with Ranked Memory-Augmented Retrieval
+
+publish_date: 2026-05-18
+
+paper_content:
+
+Effective long-term memory management is crucial for language models handling extended contexts. We introduce the Enhanced Ranked Memory Augmented Retrieval (ERMAR) framework, which dynamically ranks memory entries based on relevance. Unlike prior models, ERMAR employs a novel relevance scoring mechanism and a pointwise re-ranking model for key-value embeddings, inspired by learning-to-rank techniques in information retrieval. By integrating historical usage patterns and adaptive retrieval, ERMAR achieves state-of-the-art results on standard benchmarks, demonstrating superior scalability and performance in long-context tasks.
+---
+paper_title: Exploring the landscape of large language models  Foundations,
+  techniques, and challenges
+
+publish_date: 2024-04-18
+
+paper_content:
+
+In this review paper, we delve into the realm of Large Language Models
+(LLMs), covering their foundational principles, diverse applications, and
+nuanced training processes. The article sheds light on the mechanics of
+in-context learning and a spectrum of fine-tuning approaches, with a special
+focus on methods that optimize efficiency in parameter usage. Additionally, it
+explores how LLMs can be more closely aligned with human preferences through
+innovative reinforcement learning frameworks and other novel methods that
+incorporate human feedback. The article also examines the emerging technique of
+retrieval augmented generation, integrating external knowledge into LLMs. The
+ethical dimensions of LLM deployment are discussed, underscoring the need for
+mindful and responsible application. Concluding with a perspective on future
+research trajectories, this review offers a succinct yet comprehensive overview
+of the current state and emerging trends in the evolving landscape of LLMs,
+serving as an insightful guide for both researchers and practitioners in
+artificial intelligence.
+---
+paper_title: Dynamic Multi-Agent Orchestration and Retrieval for Multi-Source Question-Answer Systems using Large Language Models
+
+publish_date: 2024-12-23
+
+paper_content:
+
+We propose a methodology that combines several advanced techniques in Large Language Model (LLM) retrieval to support the development of robust, multi-source question-answer systems. This methodology is designed to integrate information from diverse data sources, including unstructured documents (PDFs) and structured databases, through a coordinated multi-agent orchestration and dynamic retrieval approach. Our methodology leverages specialized agents-such as SQL agents, Retrieval-Augmented Generation (RAG) agents, and router agents - that dynamically select the most appropriate retrieval strategy based on the nature of each query. To further improve accuracy and contextual relevance, we employ dynamic prompt engineering, which adapts in real time to query-specific contexts. The methodology's effectiveness is demonstrated within the domain of Contract Management, where complex queries often require seamless interaction between unstructured and structured data. Our results indicate that this approach enhances response accuracy and relevance, offering a versatile and scalable framework for developing question-answer systems that can operate across various domains and data sources.
+---
+paper_title: R^2AG: Incorporating Retrieval Information into Retrieval Augmented Generation
+
+publish_date: 2024-06-19
+
+paper_content:
+
+Retrieval augmented generation (RAG) has been applied in many scenarios to
+augment large language models (LLMs) with external documents provided by
+retrievers. However, a semantic gap exists between LLMs and retrievers due to
+differences in their training objectives and architectures. This misalignment
+forces LLMs to passively accept the documents provided by the retrievers,
+leading to incomprehension in the generation process, where the LLMs are
+burdened with the task of distinguishing these documents using their inherent
+knowledge. This paper proposes R$^2$AG, a novel enhanced RAG framework to fill
+this gap by incorporating Retrieval information into Retrieval Augmented
+Generation. Specifically, R$^2$AG utilizes the nuanced features from the
+retrievers and employs a R$^2$-Former to capture retrieval information. Then, a
+retrieval-aware prompting strategy is designed to integrate retrieval
+information into LLMs' generation. Notably, R$^2$AG suits low-source scenarios
+where LLMs and retrievers are frozen. Extensive experiments across five
+datasets validate the effectiveness, robustness, and efficiency of R$^2$AG. Our
+analysis reveals that retrieval information serves as an anchor to aid LLMs in
+the generation process, thereby filling the semantic gap.
+---
+paper_title: Retrieval Augmented Generation for Domain-specific Question Answering
+
+publish_date: 2024-04-23
+
+paper_content:
+
+Question answering (QA) has become an important application in the advanced
+development of large language models. General pre-trained large language models
+for question-answering are not trained to properly understand the knowledge or
+terminology for a specific domain, such as finance, healthcare, education, and
+customer service for a product. To better cater to domain-specific
+understanding, we build an in-house question-answering system for Adobe
+products. We propose a novel framework to compile a large question-answer
+database and develop the approach for retrieval-aware finetuning of a Large
+Language model. We showcase that fine-tuning the retriever leads to major
+improvements in the final generation. Our overall approach reduces
+hallucinations during generation while keeping in context the latest retrieval
+information for contextual grounding.
+---
+paper_title: MARAG-R1: Beyond Single Retriever via Reinforcement-Learned Multi-Tool Agentic Retrieval
+
+publish_date: 2025-10-31
+
+paper_content:
+
+Large Language Models (LLMs) excel at reasoning and generation but are inherently limited by static pretraining data, resulting in factual inaccuracies and weak adaptability to new information. Retrieval-Augmented Generation (RAG) addresses this issue by grounding LLMs in external knowledge; However, the effectiveness of RAG critically depends on whether the model can adequately access relevant information. Existing RAG systems rely on a single retriever with fixed top-k selection, restricting access to a narrow and static subset of the corpus. As a result, this single-retriever paradigm has become the primary bottleneck for comprehensive external information acquisition, especially in tasks requiring corpus-level reasoning. To overcome this limitation, we propose MARAG-R1, a reinforcement-learned multi-tool RAG framework that enables LLMs to dynamically coordinate multiple retrieval mechanisms for broader and more precise information access. MARAG-R1 equips the model with four retrieval tools -- semantic search, keyword search, filtering, and aggregation -- and learns both how and when to use them through a two-stage training process: supervised fine-tuning followed by reinforcement learning. This design allows the model to interleave reasoning and retrieval, progressively gathering sufficient evidence for corpus-level synthesis. Experiments on GlobalQA, HotpotQA, and 2WikiMultiHopQA demonstrate that MARAG-R1 substantially outperforms strong baselines and achieves new state-of-the-art results in corpus-level reasoning tasks.
+---
+paper_title: Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs in RAG
+
+publish_date: 2024-10-08
+
+paper_content:
+
+Retrieval-augmented generation (RAG) empowers large language models (LLMs) to utilize external knowledge sources. The increasing capacity of LLMs to process longer input sequences opens up avenues for providing more retrieved information, to potentially enhance the quality of generated outputs. It is plausible to assume that a larger retrieval set would contain more relevant information (higher recall), that might result in improved performance. However, our empirical findings demonstrate that for many long-context LLMs, the quality of generated output initially improves first, but then subsequently declines as the number of retrieved passages increases. This paper investigates this phenomenon, identifying the detrimental impact of retrieved "hard negatives" as a key contributor. To mitigate this and enhance the robustness of long-context LLM-based RAG, we propose both training-free and training-based approaches. We first showcase the effectiveness of retrieval reordering as a simple yet powerful training-free optimization. Furthermore, we explore training-based methods, specifically RAG-specific implicit LLM fine-tuning and RAG-oriented fine-tuning with intermediate reasoning, demonstrating their capacity for substantial performance gains. Finally, we conduct a systematic analysis of design choices for these training-based methods, including data distribution, retriever selection, and training context length.
+---
+paper_title: DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation
+
+publish_date: 2026-06-11
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) is widely used to ground large language models in external knowledge sources. However, when applied to heterogeneous corpora and multi-step queries, Naive RAG pipelines often degrade in quality due to flat knowledge representations and the absence of explicit workflows. In this work, we introduce DCD (Domain-Collection-Document), a domain-oriented design to structure knowledge and control query processing in RAG systems without modifying the underlying language model. The proposed approach relies on a hierarchical decomposition of the information space and multi-stage routing based on structured model outputs, enabling progressive restriction of both retrieval and generation scopes. The architecture is complemented by smart chunking, hybrid retrieval, and integrated validation and generation guardrail mechanisms. We describe the DCD architecture and workflow and discuss evaluation results on synthetic evaluation dataset, highlighting their impact on robustness, factual accuracy, and answer relevance in applied RAG scenarios.
+---
+paper_title: Dynamic Retrieval-Augmented Generation
+
+publish_date: 2023-12-14
+
+paper_content:
+
+Current state-of-the-art large language models are effective in generating
+high-quality text and encapsulating a broad spectrum of world knowledge. These
+models, however, often hallucinate and lack locally relevant factual data.
+Retrieval-augmented approaches were introduced to overcome these problems and
+provide more accurate responses. Typically, the retrieved information is simply
+appended to the main request, restricting the context window size of the model.
+We propose a novel approach for the Dynamic Retrieval-Augmented Generation
+(DRAG), based on the entity-augmented generation, which injects compressed
+embeddings of the retrieved entities into the generative model. The proposed
+pipeline was developed for code-generation tasks, yet can be transferred to
+some domains of natural language processing. To train the model, we collect and
+publish a new project-level code generation dataset. We use it for the
+evaluation along with publicly available datasets. Our approach achieves
+several targets: (1) lifting the length limitations of the context window,
+saving on the prompt size; (2) allowing huge expansion of the number of
+retrieval entities available for the context; (3) alleviating the problem of
+misspelling or failing to find relevant entity names. This allows the model to
+beat all baselines (except GPT-3.5) with a strong margin.
+---
+paper_title: Optimization Methods for Personalizing Large Language Models through
+  Retrieval Augmentation
+
+publish_date: 2024-04-09
+
+paper_content:
+
+This paper studies retrieval-augmented approaches for personalizing large
+language models (LLMs), which potentially have a substantial impact on various
+applications and domains. We propose the first attempt to optimize the
+retrieval models that deliver a limited number of personal documents to large
+language models for the purpose of personalized generation. We develop two
+optimization algorithms that solicit feedback from the downstream personalized
+generation tasks for retrieval optimization -- one based on reinforcement
+learning whose reward function is defined using any arbitrary metric for
+personalized generation and another based on knowledge distillation from the
+downstream LLM to the retrieval model. This paper also introduces a pre- and
+post-generation retriever selection model that decides what retriever to choose
+for each LLM input. Extensive experiments on diverse tasks from the language
+model personalization (LaMP) benchmark reveal statistically significant
+improvements in six out of seven datasets.
+---
+paper_title: MemLong: Memory-Augmented Retrieval for Long Text Modeling
+
+publish_date: 2024-08-30
+
+paper_content:
+
+Recent advancements in Large Language Models (LLMs) have yielded remarkable
+success across diverse fields. However, handling long contexts remains a
+significant challenge for LLMs due to the quadratic time and space complexity
+of attention mechanisms and the growing memory consumption of the key-value
+cache during generation. This work introduces MemLong: Memory-Augmented
+Retrieval for Long Text Generation, a method designed to enhance the
+capabilities of long-context language modeling by utilizing an external
+retriever for historical information retrieval. MemLong combines a
+non-differentiable ``ret-mem'' module with a partially trainable decoder-only
+language model and introduces a fine-grained, controllable retrieval attention
+mechanism that leverages semantic-level relevant chunks. Comprehensive
+evaluations on multiple long-context language modeling benchmarks demonstrate
+that MemLong consistently outperforms other state-of-the-art LLMs. More
+importantly, MemLong can extend the context length on a single 3090 GPU from 4k
+up to 80k. Our code is available at https://github.com/Bui1dMySea/MemLong
+---
+paper_title: Active Retrieval Augmented Generation
+
+publish_date: 2023-05-11
+
+paper_content:
+
+Despite the remarkable ability of large language models (LMs) to comprehend
+and generate language, they have a tendency to hallucinate and create factually
+inaccurate output. Augmenting LMs by retrieving information from external
+knowledge resources is one promising solution. Most existing retrieval
+augmented LMs employ a retrieve-and-generate setup that only retrieves
+information once based on the input. This is limiting, however, in more general
+scenarios involving generation of long texts, where continually gathering
+information throughout generation is essential. In this work, we provide a
+generalized view of active retrieval augmented generation, methods that
+actively decide when and what to retrieve across the course of the generation.
+We propose Forward-Looking Active REtrieval augmented generation (FLARE), a
+generic method which iteratively uses a prediction of the upcoming sentence to
+anticipate future content, which is then utilized as a query to retrieve
+relevant documents to regenerate the sentence if it contains low-confidence
+tokens. We test FLARE along with baselines comprehensively over 4 long-form
+knowledge-intensive generation tasks/datasets. FLARE achieves superior or
+competitive performance on all tasks, demonstrating the effectiveness of our
+method. Code and datasets are available at https://github.com/jzbjyb/FLARE.
+---
+paper_title: From RAG to Memory: Non-Parametric Continual Learning for Large Language Models
+
+publish_date: 2025-06-19
+
+paper_content:
+
+Our ability to continuously acquire, organize, and leverage knowledge is a key feature of human intelligence that AI systems must approximate to unlock their full potential. Given the challenges in continual learning with large language models (LLMs), retrieval-augmented generation (RAG) has become the dominant way to introduce new information. However, its reliance on vector retrieval hinders its ability to mimic the dynamic and interconnected nature of human long-term memory. Recent RAG approaches augment vector embeddings with various structures like knowledge graphs to address some of these gaps, namely sense-making and associativity. However, their performance on more basic factual memory tasks drops considerably below standard RAG. We address this unintended deterioration and propose HippoRAG 2, a framework that outperforms standard RAG comprehensively on factual, sense-making, and associative memory tasks. HippoRAG 2 builds upon the Personalized PageRank algorithm used in HippoRAG and enhances it with deeper passage integration and more effective online use of an LLM. This combination pushes this RAG system closer to the effectiveness of human long-term memory, achieving a 7% improvement in associative memory tasks over the state-of-the-art embedding model while also exhibiting superior factual knowledge and sense-making memory capabilities. This work paves the way for non-parametric continual learning for LLMs. Code and data are available at https://github.com/OSU-NLP-Group/HippoRAG.
+---
+paper_title: Enhancing Retrieval-Augmented Large Language Models with Iterative
+  Retrieval-Generation Synergy
+
+publish_date: 2023-05-24
+
+paper_content:
+
+Large language models are powerful text processors and reasoners, but are
+still subject to limitations including outdated knowledge and hallucinations,
+which necessitates connecting them to the world. Retrieval-augmented large
+language models have raised extensive attention for grounding model generation
+on external knowledge. However, retrievers struggle to capture relevance,
+especially for queries with complex information needs. Recent work has proposed
+to improve relevance modeling by having large language models actively involved
+in retrieval, i.e., to improve retrieval with generation. In this paper, we
+show that strong performance can be achieved by a method we call Iter-RetGen,
+which synergizes retrieval and generation in an iterative manner. A model
+output shows what might be needed to finish a task, and thus provides an
+informative context for retrieving more relevant knowledge which in turn helps
+generate a better output in the next iteration. Compared with recent work which
+interleaves retrieval with generation when producing an output, Iter-RetGen
+processes all retrieved knowledge as a whole and largely preserves the
+flexibility in generation without structural constraints. We evaluate
+Iter-RetGen on multi-hop question answering, fact verification, and commonsense
+reasoning, and show that it can flexibly leverage parametric knowledge and
+non-parametric knowledge, and is superior to or competitive with
+state-of-the-art retrieval-augmented baselines while causing fewer overheads of
+retrieval and generation. We can further improve performance via
+generation-augmented retrieval adaptation.
+---
+paper_title: Learning User-Aware Recall: Personalized Retrieval in Long-Term Conversational Memory
+
+publish_date: 2026-07-02
+
+paper_content:
+
+Long-term conversational agents are expected to remember past interactions, but memory is useful only when the right evidence is recalled for the right user. Existing memory-augmented LLM agents have made progress in building compact memory banks, yet retrieval is still often driven by query-centered similarity or fixed ranking rules, leaving user-conditioned relevance underexplored. To address this gap, we propose Profile-guided Personalized Retrieval Optimization (PPRO), a retrieval-centric framework that makes memory retrieval both user-aware and optimizable. PPRO builds episodic and semantic memory banks from dialogue histories and derives a user profile from accumulated memories. The profile serves as an explicit personalized prior in memory ranking, allowing retrieval to account for stable user attributes, preferences, and relationships. PPRO further trains a query rewriter with Group Relative Policy Optimization, using both evidence retrieval quality and downstream answer quality as feedback while keeping the memory banks and answer model fixed. Experiments on LoCoMo and LongMemEval-S show consistent gains over training-free memory systems and training-based baselines. Ablation studies further show that both profile-guided ranking and retrieval-oriented rewriting contribute substantially to performance, highlighting retrieval optimization as a key factor in personalized long-term memory use.
+---
+paper_title: Toolshed: Scale Tool-Equipped Agents with Advanced RAG-Tool Fusion and Tool Knowledge Bases
+
+publish_date: 2024-10-22
+
+paper_content:
+
+Recent advancements in tool-equipped Agents (LLMs) have enabled complex tasks like secure database interactions and multi-agent code development. However, scaling tool capacity beyond agent reasoning or model limits remains a challenge. In this paper, we address these challenges by introducing Toolshed Knowledge Bases, a tool knowledge base (vector database) designed to store enhanced tool representations and optimize tool selection for large-scale tool-equipped Agents. Additionally, we propose Advanced RAG-Tool Fusion, a novel ensemble of tool-applied advanced retrieval-augmented generation (RAG) techniques across the pre-retrieval, intra-retrieval, and post-retrieval phases, without requiring model fine-tuning. During pre-retrieval, tool documents are enhanced with key information and stored in the Toolshed Knowledge Base. Intra-retrieval focuses on query planning and transformation to increase retrieval accuracy. Post-retrieval refines the retrieved tool documents and enables self-reflection. Furthermore, by varying both the total number of tools (tool-M) an Agent has access to and the tool selection threshold (top-k), we address trade-offs between retrieval accuracy, agent performance, and token cost. Our approach achieves 46%, 56%, and 47% absolute improvements on the ToolE single-tool, ToolE multi-tool and Seal-Tools benchmark datasets, respectively (Recall@5).
+---
+paper_title: PersonalAI: A Systematic Comparison of Knowledge Graph Storage and Retrieval Approaches for Personalized LLM agents
+
+publish_date: 2026-04-12
+
+paper_content:
+
+Personalizing language models by effectively incorporating user interaction history remains a central challenge in the development of adaptive AI systems. While large language models (LLMs), combined with Retrieval-Augmented Generation (RAG), have improved factual accuracy, they often lack structured memory and fail to scale in complex, long-term interactions. To address this, we propose a flexible external memory framework based on a knowledge graph that is constructed and updated automatically by the LLM. Building upon the AriGraph architecture, we introduce a novel hybrid graph design that supports both standard edges and two types of hyper-edges, enabling rich and dynamic semantic and temporal representations. Our framework also supports diverse retrieval mechanisms, including A*, WaterCircles traversal, beam search, and hybrid methods, making it adaptable to different datasets and LLM capacities. We evaluate our system on TriviaQA, HotpotQA, DiaASQ benchmarks and demonstrate that different memory and retrieval configurations yield optimal performance depending on the task. Additionally, we extend the DiaASQ benchmark with temporal annotations and internally contradictory statements, showing that our system remains robust and effective in managing temporal dependencies and context-aware reasoning
+---
+paper_title: MR.Rec: Synergizing Memory and Reasoning for Personalized Recommendation Assistant with LLMs
+
+publish_date: 2025-10-16
+
+paper_content:
+
+The application of Large Language Models (LLMs) in recommender systems faces key challenges in delivering deep personalization and intelligent reasoning, especially for interactive scenarios. Current methods are often constrained by limited context windows and single-turn reasoning, hindering their ability to capture dynamic user preferences and proactively reason over recommendation contexts. To address these limitations, we propose MR.Rec, a novel framework that synergizes memory and reasoning for LLM-based recommendations. To achieve personalization, we develop a comprehensive Retrieval-Augmented Generation (RAG) system that efficiently indexes and retrieves relevant external memory to enhance LLM personalization capabilities. Furthermore, to enable the synergy between memory and reasoning, our RAG system goes beyond conventional query-based retrieval by integrating reasoning enhanced memory retrieval. Finally, we design a reinforcement learning framework that trains the LLM to autonomously learn effective strategies for both memory utilization and reasoning refinement. By combining dynamic memory retrieval with adaptive reasoning, this approach ensures more accurate, context-aware, and highly personalized recommendations. Extensive experiments demonstrate that MR.Rec significantly outperforms state-of-the-art baselines across multiple metrics, validating its efficacy in delivering intelligent and personalized recommendations. We will release code and data upon paper notification.
+---
+paper_title: Tuning LLMs by RAG Principles: Towards LLM-native Memory
+
+publish_date: 2025-03-20
+
+paper_content:
+
+Memory, additional information beyond the training of large language models (LLMs), is crucial to various real-world applications, such as personal assistant. The two mainstream solutions to incorporate memory into the generation process are long-context LLMs and retrieval-augmented generation (RAG). In this paper, we first systematically compare these two types of solutions on three renovated/new datasets and show that (1) long-context solutions, although more expensive, shall be easier to capture the big picture and better answer queries which require considering the memory as a whole; and (2) when the queries concern specific information, RAG solutions shall be more competitive especially when the keywords can be explicitly matched. Therefore, we propose a novel method RAG-Tuned-LLM which fine-tunes a relative small (e.g., 7B) LLM using the data generated following the RAG principles, so it can combine the advantages of both solutions. Extensive experiments on three datasets demonstrate that RAG-Tuned-LLM can beat long-context LLMs and RAG methods across a wide range of query types.
+---
+paper_title: Enabling Personalized Long-term Interactions in LLM-based Agents through Persistent Memory and User Profiles
+
+publish_date: 2025-10-09
+
+paper_content:
+
+Large language models (LLMs) increasingly serve as the central control unit of AI agents, yet current approaches remain limited in their ability to deliver personalized interactions. While Retrieval Augmented Generation enhances LLM capabilities by improving context-awareness, it lacks mechanisms to combine contextual information with user-specific data. Although personalization has been studied in fields such as human-computer interaction or cognitive science, existing perspectives largely remain conceptual, with limited focus on technical implementation. To address these gaps, we build on a unified definition of personalization as a conceptual foundation to derive technical requirements for adaptive, user-centered LLM-based agents. Combined with established agentic AI patterns such as multi-agent collaboration or multi-source retrieval, we present a framework that integrates persistent memory, dynamic coordination, self-validation, and evolving user profiles to enable personalized long-term interactions. We evaluate our approach on three public datasets using metrics such as retrieval accuracy, response correctness, or BertScore. We complement these results with a five-day pilot user study providing initial insights into user feedback on perceived personalization. The study provides early indications that guide future work and highlights the potential of integrating persistent memory and user profiles to improve the adaptivity and perceived personalization of LLM-based agents.
+---
+paper_title: Retrieval Feedback Memory Enhancement Large Model Retrieval Generation Method
+
+publish_date: 2025-08-25
+
+paper_content:
+
+Large Language Models (LLMs) have shown remarkable capabilities across diverse tasks, yet they face inherent limitations such as constrained parametric knowledge and high retraining costs. Retrieval-Augmented Generation (RAG) augments the generation process by retrieving externally stored knowledge absent from the models internal parameters. However, RAG methods face challenges such as information loss and redundant retrievals during multi-round queries, accompanying the difficulties in precisely characterizing knowledge gaps for complex tasks. To address these problems, we propose Retrieval Feedback and Memory Retrieval Augmented Generation(RFM-RAG), which transforms the stateless retrieval of previous methods into stateful continuous knowledge management by constructing a dynamic evidence pool. Specifically, our method generates refined queries describing the models knowledge gaps using relational triples from questions and evidence from the dynamic evidence pool; Retrieves critical external knowledge to iteratively update this evidence pool; Employs a R-Feedback Model to evaluate evidence completeness until convergence. Compared to traditional RAG methods, our approach enables persistent storage of retrieved passages and effectively distills key information from passages to construct clearly new queries. Experiments on three public QA benchmarks demonstrate that RFM-RAG outperforms previous methods and improves overall system accuracy.
+---
+paper_title: MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents
+
+publish_date: 2026-04-06
+
+paper_content:
+
+Large Language Model (LLM) agents require persistent memory to maintain personalization, factual continuity, and long-horizon reasoning, yet standard context-window and retrieval-augmented generation (RAG) pipelines degrade over multi-session interactions. We present MemMachine, an open-source memory system that integrates short-term, long-term episodic, and profile memory within a ground-truth-preserving architecture that stores entire conversational episodes and reduces lossy LLM-based extraction. MemMachine uses contextualized retrieval that expands nucleus matches with surrounding context, improving recall when relevant evidence spans multiple dialogue turns. Across benchmarks, MemMachine achieves strong accuracy-efficiency tradeoffs: on LoCoMo it reaches 0.9169 using gpt4.1-mini; on LongMemEvalS (ICLR 2025), a six-dimension ablation yields 93.0 percent accuracy, with retrieval-stage optimizations -- retrieval depth tuning (+4.2 percent), context formatting (+2.0 percent), search prompt design (+1.8 percent), and query bias correction (+1.4 percent) -- outperforming ingestion-stage gains such as sentence chunking (+0.8 percent). GPT-5-mini exceeds GPT-5 by 2.6 percent when paired with optimized prompts, making it the most cost-efficient setup. Compared to Mem0, MemMachine uses roughly 80 percent fewer input tokens under matched conditions. A companion Retrieval Agent adaptively routes queries among direct retrieval, parallel decomposition, or iterative chain-of-query strategies, achieving 93.2 percent on HotpotQA-hard and 92.6 percent on WikiMultiHop under randomized-noise conditions. These results show that preserving episodic ground truth while layering adaptive retrieval yields robust, efficient long-term memory for personalized LLM agents.
+---
+paper_title: RAD-Bench: Evaluating Large Language Models Capabilities in Retrieval Augmented Dialogues
+
+publish_date: 2024-09-19
+
+paper_content:
+
+In real-world applications with Large Language Models (LLMs), external
+retrieval mechanisms - such as Search-Augmented Generation (SAG), tool
+utilization, and Retrieval-Augmented Generation (RAG) - are often employed to
+enhance the quality of augmented generations in dialogues. These approaches
+often come with multi-turn dialogue, where each interaction is enriched by
+relevant information retrieved from external sources. Existing benchmarks
+either assess LLMs' chat abilities in multi-turn dialogues or their use of
+retrieval for augmented responses in single-turn settings. However, there is a
+gap in evaluating LLMs' ability to leverage retrieval for more precise
+responses across multiple turns. To address this limitation, we introduce
+RAD-Bench (Retrieval Augmented Dialogue), a benchmark designed to evaluate
+LLMs' capabilities in multi-turn dialogues following retrievals, essential for
+their deployment in context-rich applications. RAD-Bench evaluates two key
+abilities of LLMs: Retrieval Synthesis and Retrieval Reasoning. These are
+measured using discriminative questions and retrieved contexts, and
+corresponding reference answers, assessing how effectively LLMs integrate and
+reason with context to maintain and enhance conversation quality over multiple
+turns. Our evaluation results on commonly used LLMs reveal that model
+performance deteriorates as additional layers of conditions or constraints are
+applied across conversation turns, even when accurate retrieved contexts are
+provided.
+---
+paper_title: Retrieval Augmented Learning: A Retrial-based Large Language Model Self-Supervised Learning and Autonomous Knowledge Generation
+
+publish_date: 2025-05-02
+
+paper_content:
+
+The lack of domain-specific data in the pre-training of Large Language Models (LLMs) severely limits LLM-based decision systems in specialized applications, while post-training a model in the scenarios requires significant computational resources. In this paper, we present Retrial-Augmented Learning (RAL), a reward-free self-supervised learning framework for LLMs that operates without model training. By developing Retrieval-Augmented Generation (RAG) into a module for organizing intermediate data, we realized a three-stage autonomous knowledge generation of proposing a hypothesis, validating the hypothesis, and generating the knowledge. The method is evaluated in the LLM-PySC2 environment, a representative decision-making platform that combines sufficient complexity with domain-specific knowledge requirements. Experiments demonstrate that the proposed method effectively reduces hallucination by generating and utilizing validated knowledge, and increases decision-making performance at an extremely low cost. Meanwhile, the approach exhibits potential in out-of-distribution(OOD) tasks, robustness, and transferability, making it a cost-friendly but effective solution for decision-making problems and autonomous knowledge generation.
+---
+paper_title: Reliable, Adaptable, and Attributable Language Models with Retrieval
+
+publish_date: 2024-03-05
+
+paper_content:
+
+Parametric language models (LMs), which are trained on vast amounts of web
+data, exhibit remarkable flexibility and capability. However, they still face
+practical challenges such as hallucinations, difficulty in adapting to new data
+distributions, and a lack of verifiability. In this position paper, we advocate
+for retrieval-augmented LMs to replace parametric LMs as the next generation of
+LMs. By incorporating large-scale datastores during inference,
+retrieval-augmented LMs can be more reliable, adaptable, and attributable.
+Despite their potential, retrieval-augmented LMs have yet to be widely adopted
+due to several obstacles: specifically, current retrieval-augmented LMs
+struggle to leverage helpful text beyond knowledge-intensive tasks such as
+question answering, have limited interaction between retrieval and LM
+components, and lack the infrastructure for scaling. To address these, we
+propose a roadmap for developing general-purpose retrieval-augmented LMs. This
+involves a reconsideration of datastores and retrievers, the exploration of
+pipelines with improved retriever-LM interaction, and significant investment in
+infrastructure for efficient training and inference.
+---
+paper_title: Deploying Large Language Models With Retrieval Augmented Generation
+
+publish_date: 2024-11-07
+
+paper_content:
+
+Knowing that the generative capabilities of large language models (LLM) are sometimes hampered by tendencies to hallucinate or create non-factual responses, researchers have increasingly focused on methods to ground generated outputs in factual data. Retrieval Augmented Generation (RAG) has emerged as a key approach for integrating knowledge from data sources outside of the LLM's training set, including proprietary and up-to-date information. While many research papers explore various RAG strategies, their true efficacy is tested in real-world applications with actual data. The journey from conceiving an idea to actualizing it in the real world is a lengthy process. We present insights from the development and field-testing of a pilot project that integrates LLMs with RAG for information retrieval. Additionally, we examine the impacts on the information value chain, encompassing people, processes, and technology. Our aim is to identify the opportunities and challenges of implementing this emerging technology, particularly within the context of behavioral research in the information systems (IS) field. The contributions of this work include the development of best practices and recommendations for adopting this promising technology while ensuring compliance with industry regulations through a proposed AI governance model.
+---
+paper_title: Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation
+
+publish_date: 2025-04-29
+
+paper_content:
+
+Leveraging Large Language Models (LLMs) to harness user-item interaction histories for item generation has emerged as a promising paradigm in generative recommendation. However, the limited context window of LLMs often restricts them to focusing on recent user interactions only, leading to the neglect of long-term interests involved in the longer histories. To address this challenge, we propose a novel Automatic Memory-Retrieval framework (AutoMR), which is capable of storing long-term interests in the memory and extracting relevant information from it for next-item generation within LLMs. Extensive experimental results on two real-world datasets demonstrate the effectiveness of our proposed AutoMR framework in utilizing long-term interests for generative recommendation.
+---
+paper_title: Learning to Rank for Multiple Retrieval-Augmented Models through Iterative Utility Maximization
+
+publish_date: 2025-06-26
+
+paper_content:
+
+This paper investigates the design of a unified search engine to serve multiple retrieval-augmented generation (RAG) agents, each with a distinct task, backbone large language model (LLM), and RAG strategy. We introduce an iterative approach where the search engine generates retrieval results for the RAG agents and gathers feedback on the quality of the retrieved documents during an offline phase. This feedback is then used to iteratively optimize the search engine using an expectation-maximization algorithm, with the goal of maximizing each agent's utility function. Additionally, we adapt this to an online setting, allowing the search engine to refine its behavior based on real-time individual agents feedback to better serve the results for each of them. Experiments on datasets from the Knowledge-Intensive Language Tasks (KILT) benchmark demonstrates that our approach significantly on average outperforms baselines across 18 RAG models. We demonstrate that our method effectively ``personalizes'' the retrieval for each RAG agent based on the collected feedback. Finally, we provide a comprehensive ablation study to explore various aspects of our method.
+---
+paper_title: Understanding the Fundamental Design Decisions of Retrieval-Augmented Generation Systems
+
+publish_date: 2026-05-29
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) has emerged as a critical technique for enhancing large language model (LLM) capabilities. However, practitioners face significant challenges when making RAG deployment decisions. While existing research prioritizes algorithmic innovations, a systematic gap persists in understanding fundamental engineering trade-offs that determine RAG success. We present the first comprehensive study of three universal RAG deployment decisions: whether to deploy RAG, how much information to retrieve, and how to integrate retrieved knowledge effectively. Through systematic experiments across three LLMs and six datasets spanning question answering and code generation tasks, we reveal critical insights: (1) RAG deployment must be highly selective, with variable recall thresholds and failure modes affecting up to 12.6\% of samples even with perfect documents. (2) Optimal retrieval volume exhibits task-dependent behavior QA tasks show universal patterns (5-10 documents optimal) while code generation requires scenario-specific optimization. (3) Knowledge integration effectiveness depends on task and model characteristics, with code generation benefiting significantly from prompting methods while question answering shows minimal improvement. These findings demonstrate that universal RAG strategies prove inadequate. Effective RAG systems require context-aware design decisions based on task characteristics and model capabilities. Our analysis provides evidence-based guidance for practitioners and establishes foundational insights for principled RAG deployment. Our code, data and artifacts are publicly available at https://github.com/ShengmingZ/RAG_Benchmark_Code_QA.
+---
+paper_title: LMAR: Language Model Augmented Retriever for Domain-specific Knowledge Indexing
+
+publish_date: 2025-09-12
+
+paper_content:
+
+Retrieval Augmented Generation (RAG) systems often struggle with domain-specific knowledge due to performance deterioration of pre-trained embeddings and prohibitive computational costs of large language model (LLM)-based retrievers. While fine-tuning data augmentation embedding models offers a promising direction, its effectiveness is limited by the need for high-quality training data and reliable chunking strategies that preserve contextual integrity. We propose LMAR (Language Model Augmented Retriever), a model-agnostic framework that addresses these challenges by combining LLM-guided data synthesis with contrastive embedding adaptation and efficient text clustering. LMAR consists of a two-stage pipeline: (1) Triplet sampling and synthetic data augmentation, where LLMs act as both labeler and validator to ensure high-fidelity supervision throughout the pipeline. Experimental results across multiple domain-specific benchmark datasets demonstrate that LMAR outperforms multiple baseline models, while maintaining moderate hardware requirements and low latency. Its model-agnostic nature further enables seamless integration with emerging RAG architectures and text embedding models, ensuring continual improvements without redesigning the pipeline. These results highlight LMAR as a practical and cost-effective solution for scalable domain-specific adaptation.
+---
+paper_title: Searching for Best Practices in Retrieval-Augmented Generation
+
+publish_date: 2024-07-01
+
+paper_content:
+
+Retrieval-augmented generation (RAG) techniques have proven to be effective
+in integrating up-to-date information, mitigating hallucinations, and enhancing
+response quality, particularly in specialized domains. While many RAG
+approaches have been proposed to enhance large language models through
+query-dependent retrievals, these approaches still suffer from their complex
+implementation and prolonged response times. Typically, a RAG workflow involves
+multiple processing steps, each of which can be executed in various ways. Here,
+we investigate existing RAG approaches and their potential combinations to
+identify optimal RAG practices. Through extensive experiments, we suggest
+several strategies for deploying RAG that balance both performance and
+efficiency. Moreover, we demonstrate that multimodal retrieval techniques can
+significantly enhance question-answering capabilities about visual inputs and
+accelerate the generation of multimodal content using a "retrieval as
+generation" strategy.
+---
+paper_title: ALoFTRAG: Automatic Local Fine Tuning for Retrieval Augmented Generation
+
+publish_date: 2025-01-21
+
+paper_content:
+
+Retrieval Augmented Generation (RAG) systems have been shown to improve the accuracy of Large Language Model (LLM) outputs. However, these models can often achieve low accuracy when applied to new data domains. We introduce the Automatic Local Fine Tuning of Retrieval Augmented Generation models (ALoFTRAG) framework, designed to improve the accuracy of RAG systems on a given domain by training LLMs without manually labeled data or using larger teacher models. By generating and filtering synthetic training data and performing LoRA fine-tuning, ALoFTRAG improves citation and answer accuracy across 20 datasets in 26 languages by, on average, 8.3% and 3.0% respectively. Our results demonstrate that ALoFTRAG offers a practical, cost-effective, and data-secure solution for improving RAG accuracy, making it particularly applicable to sensitive domains such as healthcare and finance.
+---
+paper_title: Comparison of Text-Based and Image-Based Retrieval in Multimodal Retrieval Augmented Generation Large Language Model Systems
+
+publish_date: 2025-11-23
+
+paper_content:
+
+Recent advancements in Retrieval-Augmented Generation (RAG) have enabled Large Language Models (LLMs) to access multimodal knowledge bases containing both text and visual information such as charts, diagrams, and tables in financial documents. However, existing multimodal RAG systems rely on LLM-based summarization to convert images into text during preprocessing, storing only text representations in vector databases, which causes loss of contextual information and visual details critical for downstream retrieval and question answering. To address this limitation, we present a comprehensive comparative analysis of two retrieval approaches for multimodal RAG systems, including text-based chunk retrieval (where images are summarized into text before embedding) and direct multimodal embedding retrieval (where images are stored natively in the vector space). We evaluate all three approaches across 6 LLM models and a two multi-modal embedding models on a newly created financial earnings call benchmark comprising 40 question-answer pairs, each paired with 2 documents (1 image and 1 text chunk). Experimental results demonstrate that direct multimodal embedding retrieval significantly outperforms LLM-summary-based approaches, achieving absolute improvements of 13% in mean average precision (mAP@5) and 11% in normalized discounted cumulative gain. These gains correspond to relative improvements of 32% in mAP@5 and 20% in nDCG@5, providing stronger evidence of their practical impact. We additionally find that direct multimodal retrieval produces more accurate and factually consistent answers as measured by LLM-as-a-judge pairwise comparisons. We demonstrate that LLM summarization introduces information loss during preprocessing, whereas direct multimodal embeddings preserve visual context for retrieval and inference.
+---
+paper_title: ARAG: Agentic Retrieval Augmented Generation for Personalized Recommendation
+
+publish_date: 2025-08-11
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) has shown promise in enhancing recommendation systems by incorporating external context into large language model prompts. However, existing RAG-based approaches often rely on static retrieval heuristics and fail to capture nuanced user preferences in dynamic recommendation scenarios. In this work, we introduce ARAG, an Agentic Retrieval-Augmented Generation framework for Personalized Recommendation, which integrates a multi-agent collaboration mechanism into the RAG pipeline. To better understand the long-term and session behavior of the user, ARAG leverages four specialized LLM-based agents: a User Understanding Agent that summarizes user preferences from long-term and session contexts, a Natural Language Inference (NLI) Agent that evaluates semantic alignment between candidate items retrieved by RAG and inferred intent, a context summary agent that summarizes the findings of NLI agent, and an Item Ranker Agent that generates a ranked list of recommendations based on contextual fit. We evaluate ARAG accross three datasets. Experimental results demonstrate that ARAG significantly outperforms standard RAG and recency-based baselines, achieving up to 42.1% improvement in NDCG@5 and 35.5% in Hit@5. We also, conduct an ablation study to analyse the effect by different components of ARAG. Our findings highlight the effectiveness of integrating agentic reasoning into retrieval-augmented recommendation and provide new directions for LLM-based personalization.
+---
+paper_title: A Comparison of Independent and Joint Fine-tuning Strategies for Retrieval-Augmented Generation
+
+publish_date: 2025-10-17
+
+paper_content:
+
+A Comparison of Independent and Joint Fine-tuning Strategies for Retrieval-Augmented Generation Download PDF Neal Gregory Lawton, Alfy Samuel, Anoop Kumar, Daben Liu Published: 20 Aug 2025, Retrieval augmented generation (RAG) is a popular framework for question answering that is powered by two large language models (LLMs): an embedding model that retrieves context documents from a database that are relevant to a given question, and a generator model that uses the retrieved context to generate an answer to the question. Both the embedding and generator models can be fine-tuned to increase performance of a RAG pipeline on a new task, but multiple fine-tuning strategies exist with different costs and benefits. In this paper, we evaluate and compare several RAG fine-tuning strategies, including independent, joint, and two-phase fine-tuning. In our experiments, we observe that all of these strategies achieve about equal improvement in EM and F1 generation quality metrics, although they have significantly different computational costs. We conclude the optimal fine-tuning strategy to use depends on whether the training dataset includes context labels and whether a grid search over the learning rates for the embedding and generator models is required.
+---
+paper_title: On the Influence of Context Size and Model Choice in Retrieval-Augmented Generation Systems
+
+publish_date: 2025-02-20
+
+paper_content:
+
+Retrieval-augmented generation (RAG) has emerged as an approach to augment large language models (LLMs) by reducing their reliance on static knowledge and improving answer factuality. RAG retrieves relevant context snippets and generates an answer based on them. Despite its increasing industrial adoption, systematic exploration of RAG components is lacking, particularly regarding the ideal size of provided context, and the choice of base LLM and retrieval method. To help guide development of robust RAG systems, we evaluate various context sizes, BM25 and semantic search as retrievers, and eight base LLMs. Moving away from the usual RAG evaluation with short answers, we explore the more challenging long-form question answering in two domains, where a good answer has to utilize the entire context. Our findings indicate that final QA performance improves steadily with up to 15 snippets but stagnates or declines beyond that. Finally, we show that different general-purpose LLMs excel in the biomedical domain than the encyclopedic one, and that open-domain evidence retrieval in large corpora is challenging.
+---
+paper_title: Retrieval Augmented Generation for Domain-specific Question Answering
+
+publish_date: 2024-05-29
+
+paper_content:
+
+Question answering (QA) has become an important application in the advanced
+development of large language models. General pre-trained large language models
+for question-answering are not trained to properly understand the knowledge or
+terminology for a specific domain, such as finance, healthcare, education, and
+customer service for a product. To better cater to domain-specific
+understanding, we build an in-house question-answering system for Adobe
+products. We propose a novel framework to compile a large question-answer
+database and develop the approach for retrieval-aware finetuning of a Large
+Language model. We showcase that fine-tuning the retriever leads to major
+improvements in the final generation. Our overall approach reduces
+hallucinations during generation while keeping in context the latest retrieval
+information for contextual grounding.
+---
+paper_title: Retrieval-Augmented Speech Recognition Approach for Domain Challenges
+
+publish_date: 2025-02-21
+
+paper_content:
+
+Speech recognition systems often face challenges due to domain mismatch, particularly in real-world applications where domain-specific data is unavailable because of data accessibility and confidentiality constraints. Inspired by Retrieval-Augmented Generation (RAG) techniques for large language models (LLMs), this paper introduces a LLM-based retrieval-augmented speech recognition method that incorporates domain-specific textual data at the inference stage to enhance recognition performance. Rather than relying on domain-specific textual data during the training phase, our model is trained to learn how to utilize textual information provided in prompts for LLM decoder to improve speech recognition performance. Benefiting from the advantages of the RAG retrieval mechanism, our approach efficiently accesses locally available domain-specific documents, ensuring a convenient and effective process for solving domain mismatch problems. Experiments conducted on the CSJ database demonstrate that the proposed method significantly improves speech recognition accuracy and achieves state-of-the-art results on the CSJ dataset, even without relying on the full training data.
+---
+paper_title: Enhancing Retrieval-Augmented Generation: A Study of Best Practices
+
+publish_date: 2025-01-13
+
+paper_content:
+
+Retrieval-Augmented Generation (RAG) systems have recently shown remarkable advancements by integrating retrieval mechanisms into language models, enhancing their ability to produce more accurate and contextually relevant responses. However, the influence of various components and configurations within RAG systems remains underexplored. A comprehensive understanding of these elements is essential for tailoring RAG systems to complex retrieval tasks and ensuring optimal performance across diverse applications. In this paper, we develop several advanced RAG system designs that incorporate query expansion, various novel retrieval strategies, and a novel Contrastive In-Context Learning RAG. Our study systematically investigates key factors, including language model size, prompt design, document chunk size, knowledge base size, retrieval stride, query expansion techniques, Contrastive In-Context Learning knowledge bases, multilingual knowledge bases, and Focus Mode retrieving relevant context at sentence-level. Through extensive experimentation, we provide a detailed analysis of how these factors influence response quality. Our findings offer actionable insights for developing RAG systems, striking a balance between contextual richness and retrieval-generation efficiency, thereby paving the way for more adaptable and high-performing RAG frameworks in diverse real-world scenarios. Our code and implementation details are publicly available.
+---
+paper_title: Assessing "Implicit" Retrieval Robustness of Large Language Models
+
+publish_date: 2024-06-26
+
+paper_content:
+
+Retrieval-augmented generation has gained popularity as a framework to
+enhance large language models with external knowledge. However, its
+effectiveness hinges on the retrieval robustness of the model. If the model
+lacks retrieval robustness, its performance is constrained by the accuracy of
+the retriever, resulting in significant compromises when the retrieved context
+is irrelevant. In this paper, we evaluate the "implicit" retrieval robustness
+of various large language models, instructing them to directly output the final
+answer without explicitly judging the relevance of the retrieved context. Our
+findings reveal that fine-tuning on a mix of gold and distracting context
+significantly enhances the model's robustness to retrieval inaccuracies, while
+still maintaining its ability to extract correct answers when retrieval is
+accurate. This suggests that large language models can implicitly handle
+relevant or irrelevant retrieved context by learning solely from the
+supervision of the final answer in an end-to-end manner. Introducing an
+additional process for explicit relevance judgment can be unnecessary and
+disrupts the end-to-end approach.
+---
+paper_title: A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces
+
+publish_date: 2026-02-03
+
+paper_content:
+
+Frontier language models have demonstrated strong reasoning and long-horizon tool-use capabilities. However, existing RAG systems fail to leverage these capabilities. They still rely on two paradigms: (1) designing an algorithm that retrieves passages in a single shot and concatenates them into the model's input, or (2) predefining a workflow and prompting the model to execute it step-by-step. Neither paradigm allows the model to participate in retrieval decisions, preventing efficient scaling with model improvements. In this paper, we introduce A-RAG, an Agentic RAG framework that exposes hierarchical retrieval interfaces directly to the model. A-RAG provides three retrieval tools: keyword search, semantic search, and chunk read, enabling the agent to adaptively search and retrieve information across multiple granularities. Experiments on multiple open-domain QA benchmarks show that A-RAG consistently outperforms existing approaches with comparable or lower retrieved tokens, demonstrating that A-RAG effectively leverages model capabilities and dynamically adapts to different RAG tasks. We further systematically study how A-RAG scales with model size and test-time compute. We will release our code and evaluation suite to facilitate future research. Code and evaluation suite are available at https://github.com/Ayanami0730/arag.
+---
+paper_title: Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach
+
+publish_date: 2024-07-23
+
+paper_content:
+
+Retrieval Augmented Generation (RAG) has been a powerful tool for Large
+Language Models (LLMs) to efficiently process overly lengthy contexts. However,
+recent LLMs like Gemini-1.5 and GPT-4 show exceptional capabilities to
+understand long contexts directly. We conduct a comprehensive comparison
+between RAG and long-context (LC) LLMs, aiming to leverage the strengths of
+both. We benchmark RAG and LC across various public datasets using three latest
+LLMs. Results reveal that when resourced sufficiently, LC consistently
+outperforms RAG in terms of average performance. However, RAG's significantly
+lower cost remains a distinct advantage. Based on this observation, we propose
+Self-Route, a simple yet effective method that routes queries to RAG or LC
+based on model self-reflection. Self-Route significantly reduces the
+computation cost while maintaining a comparable performance to LC. Our findings
+provide a guideline for long-context applications of LLMs using RAG and LC.
+---
+paper_title: Development and Testing of Retrieval Augmented Generation in Large
+  Language Models -- A Case Study Report
+
+publish_date: 2024-01-29
+
+paper_content:
+
+Purpose: Large Language Models (LLMs) hold significant promise for medical
+applications. Retrieval Augmented Generation (RAG) emerges as a promising
+approach for customizing domain knowledge in LLMs. This case study presents the
+development and evaluation of an LLM-RAG pipeline tailored for healthcare,
+focusing specifically on preoperative medicine.
+  Methods: We developed an LLM-RAG model using 35 preoperative guidelines and
+tested it against human-generated responses, with a total of 1260 responses
+evaluated. The RAG process involved converting clinical documents into text
+using Python-based frameworks like LangChain and Llamaindex, and processing
+these texts into chunks for embedding and retrieval. Vector storage techniques
+and selected embedding models to optimize data retrieval, using Pinecone for
+vector storage with a dimensionality of 1536 and cosine similarity for loss
+metrics. Human-generated answers, provided by junior doctors, were used as a
+comparison.
+  Results: The LLM-RAG model generated answers within an average of 15-20
+seconds, significantly faster than the 10 minutes typically required by humans.
+Among the basic LLMs, GPT4.0 exhibited the best accuracy of 80.1%. This
+accuracy was further increased to 91.4% when the model was enhanced with RAG.
+Compared to the human-generated instructions, which had an accuracy of 86.3%,
+the performance of the GPT4.0 RAG model demonstrated non-inferiority (p=0.610).
+  Conclusions: In this case study, we demonstrated a LLM-RAG model for
+healthcare implementation. The pipeline shows the advantages of grounded
+knowledge, upgradability, and scalability as important aspects of healthcare
+LLM deployment.
+---
+paper_title: E2E-AFG: An End-to-End Model with Adaptive Filtering for Retrieval-Augmented Generation
+
+publish_date: 2025-05-08
+
+paper_content:
+
+Retrieval-augmented generation methods often neglect the quality of content retrieved from external knowledge bases, resulting in irrelevant information or potential misinformation that negatively affects the generation results of large language models. In this paper, we propose an end-to-end model with adaptive filtering for retrieval-augmented generation (E2E-AFG), which integrates answer existence judgment and text generation into a single end-to-end framework. This enables the model to focus more effectively on relevant content while reducing the influence of irrelevant information and generating accurate answers. We evaluate E2E-AFG on six representative knowledge-intensive language datasets, and the results show that it consistently outperforms baseline models across all tasks, demonstrating the effectiveness and robustness of the proposed approach.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Retrieval-Augmented Generation for Large Language Models.
+   ---
+   ---
+paper_title: Large Language Models for Information Retrieval: A Survey
+
+publish_date: 2024-09-04
+
+paper_abstract:
+
+As a primary means of information acquisition, information retrieval (IR)
+systems, such as search engines, have integrated themselves into our daily
+lives. These systems also serve as components of dialogue, question-answering,
+and recommender systems. The trajectory of IR has evolved dynamically from its
+origins in term-based methods to its integration with advanced neural models.
+While the neural models excel at capturing complex contextual signals and
+semantic nuances, thereby reshaping the IR landscape, they still face
+challenges such as data scarcity, interpretability, and the generation of
+contextually plausible yet potentially inaccurate responses. This evolution
+requires a combination of both traditional methods (such as term-based sparse
+retrieval methods with rapid response) and modern neural architectures (such as
+language models with powerful language understanding capacity). Meanwhile, the
+emergence of large language models (LLMs), typified by ChatGPT and GPT-4, has
+revolutionized natural language processing due to their remarkable language
+understanding, generation, generalization, and reasoning abilities.
+Consequently, recent research has sought to leverage LLMs to improve IR
+systems. Given the rapid evolution of this research trajectory, it is necessary
+to consolidate existing methodologies and provide nuanced insights through a
+comprehensive overview. In this survey, we delve into the confluence of LLMs
+and IR systems, including crucial aspects such as query rewriters, retrievers,
+rerankers, and readers. Additionally, we explore promising directions, such as
+search agents, within this expanding field.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 BACKGROUND
+2.1 Information Retrieval
+2.2 Large Language Models
+
+3 QUERY REWRITER
+3.1 Rewriting Scenarios
+3.2 Formats of Rewritten Queries
+3.3 Approaches
+3.4 Limitations
+
+4 RETRIEVER
+4.1 Leveraging LLMs to Generate Search Data
+4.2 Leveraging LLMs as Retrievers' Backbone
+4.3 Limitations
+
+5 RERANKER
+5.1 Utilizing LLMs as Supervised Rerankers
+5.2 Utilizing LLMs as Unsupervised Rerankers
+5.3 Utilizing LLMs for Training Data Augmentation
+5.4 Limitations
+
+6 READER
+6.1 Passive Reader
+6.2 Active Reader
+6.3 Compressor
+6.4 Analysis
+6.5 Applications
+6.6 Limitations
+
+7 SEARCH AGENT
+7.1 Static Agent
+7.2 Dynamic Agent
+7.3 Limitations
+
+8 FUTURE DIRECTION
+8.1 Query Rewriter
+8.2 Retriever
+8.3 Reranker
+8.4 Reader
+8.5 Search Agent
+8.6 Evaluation
+8.7 Bias
+
+9 CONCLUSION
+---
+paper_title: A Survey on Retrieval-Augmented Text Generation for Large Language Models
+
+publish_date: 2024-08-23
+
+paper_abstract:
+
+Retrieval-Augmented Generation (RAG) merges retrieval methods with deep
+learning advancements to address the static limitations of large language
+models (LLMs) by enabling the dynamic integration of up-to-date external
+information. This methodology, focusing primarily on the text domain, provides
+a cost-effective solution to the generation of plausible but possibly incorrect
+responses by LLMs, thereby enhancing the accuracy and reliability of their
+outputs through the use of real-world data. As RAG grows in complexity and
+incorporates multiple concepts that can influence its performance, this paper
+organizes the RAG paradigm into four categories: pre-retrieval, retrieval,
+post-retrieval, and generation, offering a detailed perspective from the
+retrieval viewpoint. It outlines RAG's evolution and discusses the field's
+progression through the analysis of significant studies. Additionally, the
+paper introduces evaluation methods for RAG, addressing the challenges faced
+and proposing future research directions. By offering an organized framework
+and categorization, the study aims to consolidate existing research on RAG,
+clarify its technological underpinnings, and highlight its potential to broaden
+the adaptability and applications of LLMs.
+
+paper_outline:
+
+1 Introduction  
+2 RAG Framework  
+2.1 Basic RAG Workflow  
+2.2 RAG Paradigm  
+3 Pre-Retrieval  
+3.1 Indexing  
+3.2 Query Manipulation  
+3.3 Data Modification  
+4 Retrieval  
+4.1 Search & Ranking  
+4.2 Retrieval Strategy  
+5 Post-Retrieval  
+5.1 Re-Ranking  
+5.2 Filtering  
+6 Generation  
+6.1 Enhancing  
+6.2 Customization  
+7 Evaluation in RAG  
+7.1 Retrieval-based Aspect  
+7.2 Generation-based Aspect  
+8 Comparisons of RAG  
+8.1 The Comprehensive Summary of RAG  
+8.2 Retriever and Generator  
+9 Challenges and Future Directions  
+9.1 Retrieval Quality  
+9.2 System Efficiency  
+9.3 Multimodal RAG  
+10 Conclusions
+---
+paper_title: Graph Retrieval-Augmented Generation: A Survey
+
+publish_date: 2024-08-15
+
+paper_abstract:
+
+Recently, Retrieval-Augmented Generation (RAG) has achieved remarkable
+success in addressing the challenges of Large Language Models (LLMs) without
+necessitating retraining. By referencing an external knowledge base, RAG
+refines LLM outputs, effectively mitigating issues such as ``hallucination'',
+lack of domain-specific knowledge, and outdated information. However, the
+complex structure of relationships among different entities in databases
+presents challenges for RAG systems. In response, GraphRAG leverages structural
+information across entities to enable more precise and comprehensive retrieval,
+capturing relational knowledge and facilitating more accurate, context-aware
+responses. Given the novelty and potential of GraphRAG, a systematic review of
+current technologies is imperative. This paper provides the first comprehensive
+overview of GraphRAG methodologies. We formalize the GraphRAG workflow,
+encompassing Graph-Based Indexing, Graph-Guided Retrieval, and Graph-Enhanced
+Generation. We then outline the core technologies and training methods at each
+stage. Additionally, we examine downstream tasks, application domains,
+evaluation methodologies, and industrial use cases of GraphRAG. Finally, we
+explore future research directions to inspire further inquiries and advance
+progress in the field.
+
+paper_outline:
+
+1 Introduction  
+2 Comparison with Related Techniques and Surveys  
+2.1 RAG  
+2.2 LLMs on Graphs  
+2.3 KBQA  
+3 Preliminaries  
+3.1 Text-Attributed Graphs  
+3.2 Graph Neural Networks  
+3.3 Language Models  
+4 Overview of GraphRAG  
+5 Graph-Based Indexing  
+5.1 Graph Data  
+5.2 Indexing  
+6 Graph-Guided Retrieval  
+6.1 Retriever  
+6.2 Retrieval Paradigm  
+6.3 Retrieval Granularity  
+6.4 Retrieval Enhancement  
+7 Graph-Enhanced Generation  
+7.1 Generators  
+7.2 Graph Formats  
+7.3 Generation Enhancement  
+8 Training  
+8.1 Training Strategies of Retriever  
+8.2 Training of Generator  
+8.3 Joint Training  
+9 Applications and Evaluation  
+9.1 Downstream Tasks  
+9.2 Application Domains  
+9.3 Benchmarks and Metrics  
+9.4 GraphRAG in Industry  
+10 Future Prospects  
+10.1 Dynamic and Adaptive Graphs  
+10.2 Multi-Modality Information Integration  
+10.3 Scalable and Efficient Retrieval Mechanisms  
+10.4 Combination with Graph Foundation Model  
+10.5 Lossless Compression of Retrieved Context  
+10.6 Standard Benchmarks  
+10.7 Broader Applications  
+11 Conclusion
+---
+paper_title: Retrieval-Augmented Generation for Natural Language Processing: A Survey
+
+publish_date: 2024-07-19
+
+paper_abstract:
+
+Large language models (LLMs) have demonstrated great success in various
+fields, benefiting from their huge amount of parameters that store knowledge.
+However, LLMs still suffer from several key issues, such as hallucination
+problems, knowledge update issues, and lacking domain-specific expertise. The
+appearance of retrieval-augmented generation (RAG), which leverages an external
+knowledge database to augment LLMs, makes up those drawbacks of LLMs. This
+paper reviews all significant techniques of RAG, especially in the retriever
+and the retrieval fusions. Besides, tutorial codes are provided for
+implementing the representative techniques in RAG. This paper further discusses
+the RAG training, including RAG with/without datastore update. Then, we
+introduce the application of RAG in representative natural language processing
+tasks and industrial scenarios. Finally, this paper discusses the future
+directions and challenges of RAG for promoting its development.
+
+paper_outline:
+
+1 INTRODUCTION  
+2 OVERVIEW OF RETRIEVAL-AUGMENTED GENERATION  
+3 RETRIEVER  
+4 RETRIEVAL FUSIONS  
+5 GENERATORS  
+6 RAG TRAINING  
+7 TASKS  
+8 APPLICATIONS  
+9 DISCUSSION AND FUTURE DIRECTION  
+10 CONCLUSION
+---
+paper_title: Evaluation of Retrieval-Augmented Generation: A Survey
+
+publish_date: 2024-07-03
+
+paper_abstract:
+
+Retrieval-Augmented Generation (RAG) has recently gained traction in natural
+language processing. Numerous studies and real-world applications are
+leveraging its ability to enhance generative models through external
+information retrieval. Evaluating these RAG systems, however, poses unique
+challenges due to their hybrid structure and reliance on dynamic knowledge
+sources. To better understand these challenges, we conduct A Unified Evaluation
+Process of RAG (Auepora) and aim to provide a comprehensive overview of the
+evaluation and benchmarks of RAG systems. Specifically, we examine and compare
+several quantifiable metrics of the Retrieval and Generation components, such
+as relevance, accuracy, and faithfulness, within the current RAG benchmarks,
+encompassing the possible output and ground truth pairs. We then analyze the
+various datasets and metrics, discuss the limitations of current benchmarks,
+and suggest potential directions to advance the field of RAG benchmarks.
+
+paper_outline:
+
+1 Introduction  
+2 Challenges in Evaluating RAG Systems  
+3 A Unified Evaluation Process of RAG  
+4 Discussion  
+5 Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Retrieval-Augmented Generation for Large Language Models**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Applications, Frontiers, and Future Horizons**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Retrieval-Augmented Generation for Large Language Models** and **Applications, Frontiers, and Future Horizons**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Applications, Frontiers, and Future Horizons** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Applications, Frontiers, and Future Horizons**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Applications, Frontiers, and Future Horizons**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

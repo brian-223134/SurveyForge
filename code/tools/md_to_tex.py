@@ -34,10 +34,29 @@ import re
 import subprocess
 import sys
 
-DEFAULT_DB = os.path.join(
-    os.environ.get("SURVEYFORGE_DATA", "/data2/chanjoong/survey-agent/SurveyForge_data"),
-    "database", "arxiv_paper_db_with_cc.json",
-)
+DATA_ROOT = os.environ.get("SURVEYFORGE_DATA",
+                           "/data2/chanjoong/survey-agent/SurveyForge_data")
+DEFAULT_DB = os.path.join(DATA_ROOT, "database", "arxiv_paper_db_with_cc.json")
+
+
+def db_for_run(run_dir):
+    """산출물 경로에서 그 실행이 쓴 스냅샷을 되짚는다.
+
+    run_demo.py 는 출력 경로에 스냅샷을 넣는다 —
+    `output/res/<model>__<db_dir>/<topic>/exp_N`. 기본 스냅샷이면 접미사가 없다.
+    이걸 안 보고 배포본을 물리면 최신 논문의 제목·저자가 전부 빠진 참고문헌이
+    나오므로, 경로가 알려 줄 수 있는 것은 경로에서 읽는다.
+    """
+    try:
+        slug = os.path.basename(os.path.dirname(os.path.dirname(
+            os.path.abspath(run_dir.rstrip("/")))))
+    except (OSError, ValueError):
+        return DEFAULT_DB
+    if "__" not in slug:
+        return DEFAULT_DB
+    candidate = os.path.join(DATA_ROOT, slug.rsplit("__", 1)[1],
+                             "arxiv_paper_db_with_cc.json")
+    return candidate if os.path.exists(candidate) else DEFAULT_DB
 
 # The full paper database is ~880MB of JSON and takes about a minute to parse,
 # but a survey only cites ~100 papers. Extract those into a small cache next to
@@ -57,7 +76,10 @@ UNICODE_MAP = {
     "\u201c": "``",
     "\u201d": "''",
     "\u00d7": r"$\times$",
+    "\u2192": r"$\rightarrow$",
+    "\u00b2": r"$^{2}$",
     "\u2074": r"$^{4}$",
+    "\u0131": r"\i{}",        # dotless i -- arrives in Turkish author names
     "\u2026": r"\ldots{}",
     "\u00a0": "~",
 }
@@ -205,7 +227,13 @@ def load_metadata(ids, db_path, cache_path):
             if not wanted:
                 break
     if wanted:
-        print(f"  WARNING: {len(wanted)} ids absent from the database", file=sys.stderr)
+        # 거의 항상 스냅샷을 잘못 짚은 것이다. 신 스냅샷으로 만든 산출물에 배포본을
+        # 물리면 최신 논문 전부가 여기 걸리고, 참고문헌이 제목·저자 없는 껍데기가 된다.
+        print(f"  WARNING: {len(wanted)}/{len(ids)} ids absent from {db_path}",
+              file=sys.stderr)
+        print("  these become bare arXiv links with no title or authors. If the run "
+              "used a different snapshot, pass --db <그 스냅샷>/arxiv_paper_db_with_cc.json",
+              file=sys.stderr)
 
     with open(cache_path, "w") as f:
         json.dump(cached, f, indent=1)
@@ -405,7 +433,9 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("target", help="run directory, or the survey .md itself")
     ap.add_argument("-o", "--out-dir", help="default: alongside the input")
-    ap.add_argument("--db", default=DEFAULT_DB, help="arxiv_paper_db_with_cc.json")
+    ap.add_argument("--db", default=None,
+                    help="arxiv_paper_db_with_cc.json. 기본값은 산출물 경로에 박힌 "
+                         "스냅샷에서 되짚고, 없으면 배포본")
     ap.add_argument("--max-authors", type=int, default=6,
                     help="authors listed before 'et al.' (default: 6)")
     ap.add_argument("--compile", action="store_true",
@@ -428,7 +458,11 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
 
     print(f"converting {os.path.basename(md_path)}")
-    tex, bib, n = convert(md_path, json_path, out_dir, args.db, args.max_authors)
+    db_path = args.db or db_for_run(os.path.dirname(os.path.abspath(md_path)))
+    if db_path != DEFAULT_DB:
+        print(f"  snapshot: {os.path.basename(os.path.dirname(db_path))} "
+              f"(산출물 경로에서 되짚음)")
+    tex, bib, n = convert(md_path, json_path, out_dir, db_path, args.max_authors)
     print(f"  wrote {tex}")
     if n:
         print(f"  wrote {bib}  ({n} references)")

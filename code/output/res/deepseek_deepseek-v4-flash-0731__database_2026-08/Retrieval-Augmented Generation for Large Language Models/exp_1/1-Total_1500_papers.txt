@@ -1,0 +1,3146 @@
+Re2G  Retrieve, Rerank, Generate
+
+Multi-Task Retrieval-Augmented Text Generation with Relevance Sampling
+
+Shall We Pretrain Autoregressive Language Models with Retrieval  A
+  Comprehensive Study
+
+Learnings from Data Integration for Augmented Language Models
+
+Inference with Reference  Lossless Acceleration of Large Language Models
+
+PaSS  Parallel Speculative Sampling
+
+Don't forget private retrieval  distributed private similarity search
+  for large language models
+
+ATLANTIC  Structure-Aware Retrieval-Augmented Language Model for
+  Interdisciplinary Science
+
+Retrieval Augmented Generation of Symbolic Music with LLMs
+
+On Retrieval Augmentation and the Limitations of Language Model Training
+
+Sequencing Matters  A Generate-Retrieve-Generate Model for Building
+  Conversational Agents
+
+ARES  An Automated Evaluation Framework for Retrieval-Augmented
+  Generation Systems
+
+Suffix Retrieval-Augmented Language Modeling
+
+Benchmarking Large Language Model Capabilities for Conditional
+  Generation
+
+Learning to Rank in Generative Retrieval
+
+Long-range Language Modeling with Self-retrieval
+
+GRM  Generative Relevance Modeling Using Relevance-Aware Sample
+  Estimation for Document Retrieval
+
+Large Language Models are Strong Zero-Shot Retriever
+
+Generative Relevance Feedback with Large Language Models
+
+LaMP  When Large Language Models Meet Personalization
+
+BRENT  Bidirectional Retrieval Enhanced Norwegian Transformer
+
+Is ChatGPT Good at Search  Investigating Large Language Models as
+  Re-Ranking Agents
+
+Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval
+
+Pan More Gold from the Sand  Refining Open-domain Dialogue Training with
+  Noisy Self-Retrieval Generation
+
+Relational Memory Augmented Language Models
+
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+
+Early Stage LM Integration Using Local and Global Log-Linear Combination
+
+CorpusBrain  Pre-train a Generative Retrieval Model for
+  Knowledge-Intensive Language Tasks
+
+Query2doc  Query Expansion with Large Language Models
+
+UDAPDR  Unsupervised Domain Adaptation via LLM Prompting and
+  Distillation of Rerankers
+
+InPars  Data Augmentation for Information Retrieval using Large Language
+  Models
+
+A Survey on Retrieval-Augmented Text Generation
+
+PoisonedRAG  Knowledge Poisoning Attacks to Retrieval-Augmented
+  Generation of Large Language Models
+
+Retrieval-Augmented Thought Process as Sequential Decision Making
+
+Quantitative knowledge retrieval from large language models
+
+Prompt Perturbation in Retrieval-Augmented Generation based Large
+  Language Models
+
+Large Language Model Augmented Exercise Retrieval for Personalized
+  Language Learning
+
+Guiding LLMs The Right Way  Fast, Non-Invasive Constrained Generation
+
+MEMORYLLM  Towards Self-Updatable Large Language Models
+
+Enhancing Retrieval Processes for Language Generation with Augmented
+  Queries
+
+C-RAG  Certified Generation Risks for Retrieval-Augmented Language
+  Models
+
+Enhancing Textbook Question Answering Task with Large Language Models
+  and Retrieval Augmented Generation
+
+List-aware Reranking-Truncation Joint Model for Search and
+  Retrieval-augmented Generation
+
+Retrieval Augmented End-to-End Spoken Dialog Models
+
+Continual Learning for Large Language Models  A Survey
+
+CorpusLM  Towards a Unified Language Model on Corpus for
+  Knowledge-Intensive Tasks
+
+Query expansion with artificially generated texts
+
+Generative and Pseudo-Relevant Feedback for Sparse, Dense and Learned
+  Sparse Retrieval
+
+Synergistic Interplay between Search and Large Language Models for
+  Information Retrieval
+
+Active Retrieval Augmented Generation
+
+Retrieval Augmented Chest X-Ray Report Generation using OpenAI GPT
+  models
+
+Query Expansion by Prompting Large Language Models
+
+Lift Yourself Up  Retrieval-augmented Text Generation with Self Memory
+
+Generating Synthetic Documents for Cross-Encoder Re-Rankers  A
+  Comparative Study of ChatGPT and Human Experts
+
+Why So Gullible  Enhancing the Robustness of Retrieval-Augmented Models
+  against Counterfactual Noise
+
+CRUD-RAG  A Comprehensive Chinese Benchmark for Retrieval-Augmented
+  Generation of Large Language Models
+
+Development and Testing of Retrieval Augmented Generation in Large
+  Language Models -- A Case Study Report
+
+Corrective Retrieval Augmented Generation
+
+MultiHop-RAG  Benchmarking Retrieval-Augmented Generation for Multi-Hop
+  Queries
+
+Enhancing Large Language Model Performance To Answer Questions and
+  Extract Information More Accurately
+
+The Power of Noise  Redefining Retrieval for RAG Systems
+
+Accelerating Retrieval-Augmented Language Model Serving with Speculation
+
+Integrating Large Language Models into Recommendation via Mutual
+  Augmentation and Adaptive Aggregation
+
+UniMS-RAG  A Unified Multi-source Retrieval-Augmented Generation for
+  Personalized Dialogue Systems
+
+It's About Time  Incorporating Temporality in Retrieval Augmented
+  Language Models
+
+Prompt-RAG  Pioneering Vector Embedding-Free Retrieval-Augmented
+  Generation in Niche Domains, Exemplified by Korean Medicine
+
+Benchmarking Large Language Models in Retrieval-Augmented Generation
+
+REALM  Retrieval-Augmented Language Model Pre-Training
+
+InspectorRAGet  An Introspection Platform for RAG Evaluation
+
+Reinforcement Retrieval Leveraging Fine-grained Feedback for Fact
+  Checking News Claims with Black-Box LLM
+
+Telco-RAG  Navigating the Challenges of Retrieval-Augmented Language
+  Models for Telecommunications
+
+From Matching to Generation  A Survey on Generative Information
+  Retrieval
+
+Retrieval Augmented Generation for Domain-specific Question Answering
+
+Planning Ahead in Generative Retrieval  Guiding Autoregressive
+  Generation through Simultaneous Decoding
+
+A Survey on Efficient Inference for Large Language Models
+
+Typos that Broke the RAG's Back  Genetic Attack on RAG Pipeline by
+  Simulating Documents in the Wild via Low-level Perturbations
+
+Evaluating Retrieval Quality in Retrieval-Augmented Generation
+
+ChatRetriever  Adapting Large Language Models for Generalized and Robust
+  Conversational Dense Retrieval
+
+Unlocking Multi-View Insights in Knowledge-Dense Retrieval-Augmented
+  Generation
+
+RAGCache  Efficient Knowledge Caching for Retrieval-Augmented Generation
+
+Exploring the landscape of large language models  Foundations,
+  techniques, and challenges
+
+Consolidating Ranking and Relevance Predictions of Large Language Models
+  through Post-Processing
+
+MemLLM  Finetuning LLMs to Use An Explicit Read-Write Memory
+
+A Survey on Retrieval-Augmented Text Generation for Large Language
+  Models
+
+More Room for Language  Investigating the Effect of Retrieval on
+  Language Models
+
+How faithful are RAG models  Quantifying the tug-of-war between RAG and
+  LLMs' internal prior
+
+Generation-Augmented Query Expansion For Code Retrieval
+
+When Not to Trust Language Models  Investigating Effectiveness of
+  Parametric and Non-Parametric Memories
+
+Can Retriever-Augmented Language Models Reason  The Blame Game Between
+  the Retriever and the Language Model
+
+AugTriever  Unsupervised Dense Retrieval by Scalable Data Augmentation
+
+Training Language Models with Memory Augmentation
+
+RankGen  Improving Text Generation with Large Ranking Models
+
+Improving language models by retrieving from trillions of tokens
+
+Re-Imagen  Retrieval-Augmented Text-to-Image Generator
+
+Generate rather than Retrieve  Large Language Models are Strong Context
+  Generators
+
+Large Language Models for Information Retrieval  A Survey
+
+Learning Evaluation Models from Large Language Models for Sequence
+  Generation
+
+Hybrid Retrieval-Augmented Generation for Real-time Composition
+  Assistance
+
+SimplyRetrieve  A Private and Lightweight Retrieval-Centric Generative
+  AI Tool
+
+RecycleGPT  An Autoregressive Language Model with Recyclable Module
+
+Retrieval Augmented Generation and Representative Vector Summarization
+  for large unstructured textual data in Medical Education
+
+Retrieval Augmented Generation using Engineering Design Knowledge
+
+Prompt Generate Train (PGT)  Few-shot Domain Adaption of Retrieval
+  Augmented Generation Models for Open Book Question-Answering
+
+Improving Retrieval-Augmented Large Language Models via Data Importance
+  Learning
+
+On-The-Fly Information Retrieval Augmentation for Language Models
+
+REPLUG  Retrieval-Augmented Black-Box Language Models
+
+Pre-computed memory or on-the-fly encoding  A hybrid approach to
+  retrieval augmentation makes the most of your compute
+
+On the Generalization Ability of Retrieval-Enhanced Transformers
+
+Atlas  Few-shot Learning with Retrieval Augmented Language Models
+
+Retrieval-Augmented Multimodal Language Modeling
+
+RetGen  A Joint framework for Retrieval and Grounded Text Generation
+  Modeling
+
+Unsupervised Document Expansion for Information Retrieval with
+  Stochastic Text Generation
+
+The Curse of Recursion  Training on Generated Data Makes Models Forget
+
+Augmentation-Adapted Retriever Improves Generalization of Language
+  Models as Generic Plug-In
+
+Generating Images with Multimodal Language Models
+
+Surface-Based Retrieval Reduces Perplexity of Retrieval-Augmented
+  Language Models
+
+Enhancing Retrieval-Augmented Large Language Models with Iterative
+  Retrieval-Generation Synergy
+
+KNN-LM Does Not Improve Open-ended Text Generation
+
+Query Rewriting for Retrieval-Augmented Large Language Models
+
+Improving Language Models via Plug-and-Play Retrieval Feedback
+
+How Does Generative Retrieval Scale to Millions of Passages 
+
+The Web Can Be Your Oyster for Improving Large Language Models
+
+ReGen  Zero-Shot Text Classification via Training Data Generation with
+  Progressive Dense Retrieval
+
+Large Language Models are Built-in Autoregressive Search Engines
+
+Dynamic Retrieval-Augmented Generation
+
+Look Before You Leap  A Universal Emergent Decomposition of Retrieval
+  Tasks in Language Models
+
+Fine-Tuning or Retrieval  Comparing Knowledge Injection in LLMs
+
+Context Tuning for Retrieval Augmented Generation
+
+RAGGED  Towards Informed Design of Retrieval Augmented Generation
+  Systems
+
+Investigating the performance of Retrieval-Augmented Generation and
+  fine-tuning for the development of AI-driven knowledge-based systems
+
+Beyond Memorization  The Challenge of Random Memory Access in Language
+  Models
+
+RA-ISF  Learning to Answer and Understand from Retrieval Augmentation
+  via Iterative Self-Feedback
+
+CoRAL  Collaborative Retrieval-Augmented Large Language Models Improve
+  Long-tail Recommendation
+
+PipeRAG  Fast Retrieval-Augmented Generation via Algorithm-System
+  Co-design
+
+RAT  Retrieval Augmented Thoughts Elicit Context-Aware Reasoning in
+  Long-Horizon Generation
+
+Federated Recommendation via Hybrid Retrieval Augmented Generation
+
+Reliable, Adaptable, and Attributable Language Models with Retrieval
+
+LLM-Oriented Retrieval Tuner
+
+Towards Comprehensive Vietnamese Retrieval-Augmented Generation and
+  Large Language Models
+
+Fine Tuning vs. Retrieval Augmented Generation for Less Popular
+  Knowledge
+
+RAGged Edges  The Double-Edged Sword of Retrieval-Augmented Chatbots
+
+REST  Retrieval-Based Speculative Decoding
+
+LLatrieval  LLM-Verified Retrieval for Verifiable Generation
+
+From Classification to Generation  Insights into Crosslingual Retrieval
+  Augmented ICL
+
+Establishing Performance Baselines in Fine-Tuning, Retrieval-Augmented
+  Generation and Soft-Prompting for Non-Specialist LLM Users
+
+Trends in Integration of Knowledge and Large Language Models  A Survey
+  and Taxonomy of Methods, Benchmarks, and Applications
+
+Evaluating the Effectiveness of Retrieval-Augmented Large Language
+  Models in Scientific Document Reasoning
+
+Enhancing LLM Intelligence with ARM-RAG  Auxiliary Rationale Memory for
+  Retrieval Augmented Generation
+
+The Effect of Scaling, Retrieval Augmentation and Form on the Factual
+  Consistency of Language Models
+
+LLMRec  Large Language Models with Graph Augmentation for Recommendation
+
+A Hybrid Retrieval-Generation Neural Conversation Model
+
+InPars-v2  Large Language Models as Efficient Dataset Generators for
+  Information Retrieval
+
+Augmenting Language Models with Long-Term Memory
+
+RETA-LLM  A Retrieval-Augmented Large Language Model Toolkit
+
+LLM-Blender  Ensembling Large Language Models with Pairwise Ranking and
+  Generative Fusion
+
+Large Language Model Augmented Narrative Driven Recommendations
+
+Reimagining Retrieval Augmented Language Models for Answering Queries
+
+Generation-Augmented Retrieval for Open-domain Question Answering
+
+Integrating Summarization and Retrieval for Enhanced Personalization via
+  Large Language Models
+
+LlamaRec  Two-Stage Recommendation using Large Language Models for
+  Ranking
+
+Retrieval-based Knowledge Transfer  An Effective Approach for Extreme
+  Large Language Model Compression
+
+TCRA-LLM  Token Compression Retrieval Augmented Large Language Model for
+  Inference Cost Reduction
+
+Optimizing Retrieval-augmented Reader Models via Token Elimination
+
+Understanding Retrieval Augmentation for Long-Form Question Answering
+
+Self-RAG  Learning to Retrieve, Generate, and Critique through
+  Self-Reflection
+
+RegaVAE  A Retrieval-Augmented Gaussian Mixture Variational Auto-Encoder
+  for Language Modeling
+
+Retrieval-Generation Alignment for End-to-End Task-Oriented Dialogue
+  System
+
+Fine-Tuning LLaMA for Multi-Stage Text Retrieval
+
+InstructRetro  Instruction Tuning post Retrieval-Augmented Pretraining
+
+Retrieve Anything To Augment Large Language Models
+
+Augmented Embeddings for Custom Retrievals
+
+Retrieval-Generation Synergy Augmented Large Language Models
+
+Self-Knowledge Guided Retrieval Augmentation for Large Language Models
+
+RECOMP  Improving Retrieval-Augmented LMs with Compression and Selective
+  Augmentation
+
+Amortizing intractable inference in large language models
+
+Enhancing Financial Sentiment Analysis via Retrieval Augmented Large
+  Language Models
+
+Retrieval-augmented Generation to Improve Math Question-Answering 
+  Trade-offs Between Groundedness and Human Preference
+
+Retrieval meets Long Context Large Language Models
+
+Making Retrieval-Augmented Language Models Robust to Irrelevant Context
+
+RA-DIT  Retrieval-Augmented Dual Instruction Tuning
+
+BTR  Binary Token Representations for Efficient Retrieval Augmented
+  Language Models
+
+An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP
+  Tasks
+
+You can't pick your neighbors, or can you  When and how to rely on
+  retrieval in the $k$NN-LM
+
+QUILL  Query Intent with Large Language Models using Retrieval
+  Augmentation and Multi-stage Distillation
+
+Hindsight  Posterior-guided training of retrievers for improved
+  open-ended generation
+
+Advancing TTP Analysis  Harnessing the Power of Encoder-Only and
+  Decoder-Only Language Models with Retrieval Augmented Generation
+
+Making Large Language Models A Better Foundation For Dense Retrieval
+
+Lookahead  An Inference Acceleration Framework for Large Language Model
+  with Lossless Generation Accuracy
+
+NoMIRACL  Knowing When You Don't Know for Robust Multilingual
+  Retrieval-Augmented Generation
+
+UniGen  A Unified Generative Framework for Retrieval and Question
+  Answering with Large Language Models
+
+Retrieval-Augmented Generation for Large Language Models  A Survey
+
+RIGHT  Retrieval-augmented Generation for Mainstream Hashtag
+  Recommendation
+
+Unsupervised Cross-Task Generalization via Retrieval Augmentation
+
+Making Large Language Models Interactive  A Pioneer Study on Supporting
+  Complex Information-Seeking Tasks with Implicit Constraints
+
+Learning Comment Generation by Leveraging User-Generated Data
+
+Retrieval Enhanced Model for Commonsense Generation
+
+Retrieval-Augmented Transformer-XL for Close-Domain Dialog Generation
+
+MEMORY-VQ  Compression for Tractable Internet-Scale Memory
+
+Modeling Uncertainty and Using Post-fusion as Fallback Improves
+  Retrieval Augmented Generation with LLMs
+
+RaLLe  A Framework for Developing and Evaluating Retrieval-Augmented
+  Large Language Models
+
+Differentiable Retrieval Augmentation via Generative Language Modeling
+  for E-commerce Query Intent Classification
+
+Pre-training with Large Language Model-based Document Expansion for
+  Dense Passage Retrieval
+
+Enhancing Performance on Seen and Unseen Dialogue Scenarios using
+  Retrieval-Augmented End-to-End Task-Oriented System
+
+Towards a Robust Retrieval-Based Summarization System
+
+Generate then Retrieve  Conversational Response Retrieval Using LLMs as
+  Answer and Query Generators
+
+Are Large Language Models Good at Utility Judgments 
+
+Make Large Language Model a Better Ranker
+
+Scaling Laws For Dense Retrieval
+
+Re2LLM  Reflective Reinforcement Large Language Model for Session-based
+  Recommendation
+
+Improving Retrieval for RAG based Question Answering Models on Financial
+  Documents
+
+Blended RAG  Improving RAG (Retriever-Augmented Generation) Accuracy
+  with Semantic Search and Hybrid Query-Based Retrievers
+
+LLM2LLM  Boosting LLMs with Novel Iterative Data Enhancement
+
+Adaptive-RAG  Learning to Adapt Retrieval-Augmented Large Language
+  Models through Question Complexity
+
+Context Quality Matters in Training Fusion-in-Decoder for Extractive
+  Open-Domain Question Answering
+
+Loops On Retrieval Augmented Generation (LoRAG)
+
+JORA  JAX Tensor-Parallel LoRA Library for Retrieval Augmented
+  Fine-Tuning
+
+Skeleton-to-Response  Dialogue Generation Guided by Retrieval Memory
+
+Retrieval-Enhanced Adversarial Training for Neural Response Generation
+
+Introducing Super RAGs in Mistral 8x7B-v1
+
+Reducing hallucination in structured outputs via Retrieval-Augmented
+  Generation
+
+Generative Information Retrieval Evaluation
+
+Groundedness in Retrieval-augmented Long-form Generation  An Empirical
+  Study
+
+Superposition Prompting  Improving and Accelerating Retrieval-Augmented
+  Generation
+
+Not All Contexts Are Equal  Teaching LLMs Credibility-aware Generation
+
+Optimization Methods for Personalizing Large Language Models through
+  Retrieval Augmentation
+
+LLM-Augmented Retrieval  Enhancing Retrieval Models Through Language
+  Models and Doc-Level Embedding
+
+Dwell in the Beginning  How Language Models Embed Long Documents for
+  Dense Retrieval
+
+A Comparison of Methods for Evaluating Generative IR
+
+CONFLARE  CONFormal LArge language model REtrieval
+
+Retrieving Examples from Memory for Retrieval Augmented Neural Machine
+  Translation  A Systematic Comparison
+
+Improving Retrieval Augmented Open-Domain Question-Answering with
+  Vectorized Contexts
+
+ARAGOG  Advanced RAG Output Grading
+
+Distilling the Knowledge of Large-scale Generative Models into Retrieval
+  Models for Efficient Open-domain Conversation
+
+Mass-Editing Memory in a Transformer
+
+Retrieval Augmentation for T5 Re-ranker using External Sources
+
+MuRAG  Multimodal Retrieval-Augmented Generator for Open Question
+  Answering over Images and Text
+
+Recitation-Augmented Language Models
+
+Simple linear attention language models balance the recall-throughput
+  tradeoff
+
+Unsupervised Information Refinement Training of Large Language Models
+  for Retrieval-Augmented Generation
+
+Follow My Instruction and Spill the Beans  Scalable Data Extraction from
+  Retrieval-Augmented Generation Systems
+
+Retrieval is Accurate Generation
+
+REAR  A Relevance-Aware Retrieval-Augmented Framework for Open-Domain
+  Question Answering
+
+A Fine-tuning Enhanced RAG System with Quantized Influence Measure as AI
+  Judge
+
+Can Large Language Models Recall Reference Location Like Humans 
+
+Retrieval Augmented Generation Systems  Automatic Dataset Creation,
+  Evaluation and Boolean Agent Setup
+
+Self-Retrieval  Building an Information Retrieval System with One Large
+  Language Model
+
+The Good and The Bad  Exploring Privacy Issues in Retrieval-Augmented
+  Generation (RAG)
+
+Causal Graph Discovery with Retrieval-Augmented Generation based Large
+  Language Models
+
+Assessing generalization capability of text ranking models in Polish
+
+MORE  Multi-mOdal REtrieval Augmented Generative Commonsense Reasoning
+
+ARL2  Aligning Retrievers for Black-box Large Language Models via
+  Self-guided Adaptive Relevance Labeling
+
+Retrieval Helps or Hurts  A Deeper Dive into the Efficacy of Retrieval
+  Augmentation to Language Models
+
+Retrieval-Augmented Data Augmentation for Low-Resource Domain Tasks
+
+Benchmarking Retrieval-Augmented Generation for Medicine
+
+Mafin  Enhancing Black-Box Embeddings with Model Augmented Fine-Tuning
+
+Unveiling the Magic  Investigating Attention Distillation in
+  Retrieval-augmented Generation
+
+Metacognitive Retrieval-Augmented Large Language Models
+
+BlendFilter  Advancing Retrieval-Augmented Large Language Models via
+  Query Generation Blending and Knowledge Filtering
+
+Persona-DB  Efficient Large Language Model Personalization for Response
+  Prediction with Collaborative Data Refinement
+
+Retrieval-Augmented Generation  Is Dense Passage Retrieval Retrieving 
+
+Retrieve Only When It Needs  Adaptive Retrieval Augmentation for
+  Hallucination Mitigation in Large Language Models
+
+LLM-Rec  Personalized Recommendation via Prompting Large Language Models
+
+RRAML  Reinforced Retrieval Augmented Machine Learning
+
+Generator-Retriever-Generator Approach for Open-Domain Question
+  Answering
+
+Investigating the Factual Knowledge Boundary of Large Language Models
+  with Retrieval Augmentation
+
+Soft Prompt Tuning for Augmenting Dense Retrieval with Large Language
+  Models
+
+Retrieval Augmentation for Deep Neural Networks
+
+Unsupervised Large Language Model Alignment for Information Retrieval
+  via Contrastive Feedback
+
+Attention Sorting Combats Recency Bias In Long Context Language Models
+
+RAGAS  Automated Evaluation of Retrieval Augmented Generation
+
+Bridging the Preference Gap between Retrievers and LLMs
+
+MuGI  Enhancing Information Retrieval through Multi-Text Generation
+  Integration with Large Language Models
+
+Seven Failure Points When Engineering a Retrieval Augmented Generation
+  System
+
+Reinforcement Learning for Optimizing RAG for Domain Chatbots
+
+Rewriting the Code  A Simple Method for Large Language Model Augmented
+  Code Search
+
+Improving Natural Language Understanding with Computation-Efficient
+  Retrieval Representation Fusion
+
+Characterizing Attribution and Fluency Tradeoffs for Retrieval-Augmented
+  Large Language Models
+
+Augmenting Zero-Shot Dense Retrievers with Plug-in Mixture-of-Memories
+
+On-the-fly Text Retrieval for End-to-End ASR Adaptation
+
+Retrieving Multimodal Information for Augmented Generation  A Survey
+
+The Importance of Generation Order in Language Modeling
+
+Retrieve and Refine  Improved Sequence Generation Models For Dialogue
+
+From RAG to RICHES: Retrieval Interlaced with Sequence Generation
+
+IM-RAG: Multi-Round Retrieval-Augmented Generation Through Learning Inner Monologues
+
+SURf: Teaching Large Vision-Language Models to Selectively Utilize Retrieved Information
+
+RAG and RAU: A Survey on Retrieval-Augmented Language Model in Natural Language Processing
+
+Token-wise Influential Training Data Retrieval for Large Language Models
+
+Optimizing Query Generation for Enhanced Document Retrieval in RAG
+
+Retrieval Augmented Generation in Prompt-based Text-to-Speech Synthesis with Context-Aware Contrastive Language-Audio Pretraining
+
+ERAGent: Enhancing Retrieval-Augmented Language Models with Improved Accuracy, Efficiency, and Personalization
+
+On the Role of Long-tail Knowledge in Retrieval Augmented Large Language Models
+
+DuetRAG: Collaborative Retrieval-Augmented Generation
+
+ULLME: A Unified Framework for Large Language Model Embeddings with Generation-Augmented Learning
+
+MaFeRw: Query Rewriting with Multi-Aspect Feedbacks for Retrieval-Augmented Large Language Models
+
+Promptriever: Instruction-Trained Retrievers Can Be Prompted Like Language Models
+
+Question-Based Retrieval using Atomic Units for Enterprise RAG
+
+Learning to Explore and Select for Coverage-Conditioned Retrieval-Augmented Generation
+
+Think-on-Graph 2.0: Deep and Interpretable Large Language Model Reasoning with Knowledge Graph-guided Retrieval
+
+Relation Extraction with Fine-Tuned Large Language Models in Retrieval Augmented Generation Frameworks
+
+Augmenting Query and Passage for Retrieval-Augmented Generation using LLMs for Open-Domain Question Answering
+
+Evaluating Quality of Answers for Retrieval-Augmented Generation: A Strong LLM Is All You Need
+
+RichRAG: Crafting Rich Responses for Multi-faceted Queries in Retrieval-Augmented Generation
+
+MemLong: Memory-Augmented Retrieval for Long Text Modeling
+
+GRAG: Graph Retrieval-Augmented Generation
+
+Task-level Distributionally Robust Optimization for Large Language Model-based Dense Retrieval
+
+FACTS About Building Retrieval Augmented Generation-based Chatbots
+
+Empowering Large Language Models to Set up a Knowledge Retrieval Indexer via Self-Learning
+
+Enhancing Long-Term Memory using Hierarchical Aggregate Tree for Retrieval Augmented Generation
+
+Retrieval Augmented Generation (RAG) and Beyond: A Comprehensive Survey on How to Make your LLMs use External Data More Wisely
+
+From Matching to Generation: A Survey on Generative Information Retrieval
+
+Reminding Multimodal Large Language Models of Object-aware Knowledge with Retrieved Tags
+
+Retrieval-Augmented Generation Meets Data-Driven Tabula Rasa Approach for Temporal Knowledge Graph Forecasting
+
+Retrieval-Augmented Generation for Natural Language Processing: A Survey
+
+RankRAG: Unifying Context Ranking with Retrieval-Augmented Generation in LLMs
+
+Two-layer retrieval augmented generation framework for low-resource medical question-answering: proof of concept using Reddit data
+
+VERA: Validation and Enhancement for Retrieval Augmented systems
+
+Automated Evaluation of Retrieval-Augmented Language Models with Task-Specific Exam Generation
+
+Retrieval-Augmented Generation for Generative Artificial Intelligence in Medicine
+
+SynthesizRR: Generating Diverse Datasets with Retrieval Augmentation
+
+Retrieval Meets Reasoning: Dynamic In-Context Editing for Long-Text Understanding
+
+Training Task Experts through Retrieval Based Distillation
+
+Agentic Retrieval-Augmented Generation for Time Series Analysis
+
+Similarity is Not All You Need: Endowing Retrieval Augmented Generation with Multi Layered Thoughts
+
+W-RAG: Weakly Supervised Dense Retrieval in RAG for Open-domain Question Answering
+
+Evaluating the Adversarial Robustness of Retrieval-Based In-Context Learning for Large Language Models
+
+Retrieval Augmented Correction of Named Entity Speech Recognition Errors
+
+Comparing Retrieval-Augmentation and Parameter-Efficient Fine-Tuning for Privacy-Preserving Personalization of Large Language Models
+
+RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval
+
+Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models
+
+MeMemo: On-device Retrieval Augmentation for Private and Personalized Text Generation
+
+Implementing Streaming algorithm and k-means clusters to RAG
+
+xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token
+
+TrojanRAG: Retrieval-Augmented Generation Can Be Backdoor Driver in Large Language Models
+
+StackRAG Agent: Improving Developer Answers with Retrieval-Augmented Generation
+
+P-RAG: Progressive Retrieval Augmented Generation For Planning on Embodied Everyday Task
+
+MLLM Is a Strong Reranker: Advancing Multimodal Retrieval-augmented Generation via Knowledge-enhanced Reranking and Noise-injected Training
+
+KnowPO: Knowledge-aware Preference Optimization for Controllable Knowledge Selection in Retrieval-Augmented Language Models
+
+RAVEN: Multitask Retrieval Augmented Vision-Language Learning
+
+Tool Calling: Enhancing Medication Consultation via Retrieval-Augmented Large Language Models
+
+Trustworthiness in Retrieval-Augmented Generation Systems: A Survey
+
+R^2AG: Incorporating Retrieval Information into Retrieval Augmented Generation
+
+Multi-Head RAG: Solving Multi-Aspect Problems with LLMs
+
+RAG Foundry: A Framework for Enhancing LLMs for Retrieval Augmented Generation
+
+AutoRAG-HP: Automatic Online Hyper-Parameter Tuning for Retrieval-Augmented Generation
+
+An Empirical Study of Retrieval Augmented Generation with Chain-of-Thought
+
+BadRAG: Identifying Vulnerabilities in Retrieval Augmented Generation of Large Language Models
+
+TelecomRAG: Taming Telecom Standards with Retrieval Augmented Generation and LLMs
+
+WeQA: A Benchmark for Retrieval Augmented Generation in Wind Energy Domain
+
+Language Modeling with Editable External Knowledge
+
+The 2nd FutureDial Challenge: Dialog Systems with Retrieval Augmented Generation (FutureDial-RAG)
+
+$\text{Memory}^3$: Language Modeling with Explicit Memory
+
+RAG Does Not Work for Enterprises
+
+PromptReps: Prompting Large Language Models to Generate Dense and Sparse Representations for Zero-Shot Document Retrieval
+
+R-Eval: A Unified Toolkit for Evaluating Domain Knowledge of Retrieval Augmented Large Language Models
+
+Control Token with Dense Passage Retrieval
+
+OneGen: Efficient One-Pass Unified Generation and Retrieval for LLMs
+
+Exploring Advanced Large Language Models with LLMsuite
+
+Mindful-RAG: A Study of Points of Failure in Retrieval Augmented Generation
+
+GEM-RAG: Graphical Eigen Memories For Retrieval Augmented Generation
+
+A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models
+
+Robust Implementation of Retrieval-Augmented Generation on Edge-based Computing-in-Memory Architectures
+
+InstructRAG: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales
+
+Retrieval Augmented Generation-Based Incident Resolution Recommendation System for IT Support
+
+NinjaLLM: Fast, Scalable and Cost-effective RAG using Amazon SageMaker and AWS Trainium and Inferentia2
+
+An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation
+
+A Knowledge-Centric Benchmarking Framework and Empirical Study for Retrieval-Augmented Generation
+
+Vortex under Ripplet: An Empirical Study of RAG-enabled Applications
+
+Adversarial Databases Improve Success in Retrieval-based Large Language Models
+
+UniRAG: Universal Retrieval Augmentation for Multi-Modal Large Language Models
+
+Pandora's Box or Aladdin's Lamp: A Comprehensive Analysis Revealing the Role of RAG Noise in Large Language Models
+
+Beyond Benchmarks: Evaluating Embedding Model Similarity for Retrieval Augmented Generation Systems
+
+VERA: Validation and Evaluation of Retrieval-Augmented Systems
+
+DomainRAG: A Chinese Benchmark for Evaluating Domain-specific Retrieval-Augmented Generation
+
+A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models
+
+NV-Embed: Improved Techniques for Training LLMs as Generalist Embedding Models
+
+R4: Reinforced Retriever-Reorder-Responder for Retrieval-Augmented Large Language Models
+
+Cocktail: A Comprehensive Information Retrieval Benchmark with LLM-Generated Documents Integration
+
+Mitigating the Privacy Issues in Retrieval-Augmented Generation (RAG) via Pure Synthetic Data
+
+Large Language Models as Foundations for Next-Gen Dense Retrieval: A Comprehensive Empirical Assessment
+
+Analysis of Plan-based Retrieval for Grounded Text Generation
+
+The Geometry of Queries: Query-Based Innovations in Retrieval-Augmented Generation
+
+Enhancing Retrieval-Augmented LMs with a Two-stage Consistency Learning Compressor
+
+Report on the 1st Workshop on Large Language Model for Evaluation in Information Retrieval (LLM4Eval 2024) at SIGIR 2024
+
+A Statistical Framework for Data-dependent Retrieval-Augmented Models
+
+Don't Forget to Connect! Improving RAG with Graph-based Reranking
+
+FS-RAG: A Frame Semantics Based Approach for Improved Factual Accuracy in Large Language Models
+
+Video Enriched Retrieval Augmented Generation Using Aligned Video Captions
+
+Weak-to-Strong Search: Align Large Language Models via Searching over Small Language Models
+
+Retrieve-Plan-Generation: An Iterative Planning and Answering Framework for Knowledge-Intensive LLM Generation
+
+A + B: A General Generator-Reader Framework for Optimizing LLMs to Unleash Synergy Potential
+
+One Token Can Help! Learning Scalable and Pluggable Virtual Tokens for Retrieval-Augmented Large Language Models
+
+Understand What LLM Needs: Dual Preference Alignment for Retrieval-Augmented Generation
+
+Improving Zero-shot LLM Re-Ranker with Risk Minimization
+
+Retrieval-augmented code completion for local projects using large language models
+
+Enhancing E-commerce Product Title Translation with Retrieval-Augmented Generation and Large Language Models
+
+Investigating Context-Faithfulness in Large Language Models: The Roles of Memory Strength and Evidence Style
+
+Recall Them All: Retrieval-Augmented Language Models for Long Object List Extraction from Long Documents
+
+Generative Language Models with Retrieval Augmented Generation for Automated Short Answer Scoring
+
+Retrieval-Augmented Language Model for Extreme Multi-Label Knowledge Graph Link Prediction
+
+Retrieval Augmented Generation or Long-Context LLMs? A Comprehensive Study and Hybrid Approach
+
+Towards Retrieval Augmented Generation over Large Video Libraries
+
+From Artificial Needles to Real Haystacks: Improving Retrieval Capabilities in LLMs by Finetuning on Synthetic Data
+
+Unveil the Duality of Retrieval-Augmented Generation: Theoretical Analysis and Practical Solution
+
+Keyword-driven Retrieval-Augmented Large Language Models for Cold-start User Recommendations
+
+Improving Retrieval Augmented Language Model with Self-Reasoning
+
+Toward Conversational Agents with Context and Time Sensitive Long-term Memory
+
+CodeRAG-Bench: Can Retrieval Augment Code Generation?
+
+Adaptive Contrastive Decoding in Retrieval-Augmented Generation for Handling Noisy Contexts
+
+Redefining Information Retrieval of Structured Database via Large Language Models
+
+Unraveling and Mitigating Retriever Inconsistencies in Retrieval-Augmented Large Language Models
+
+Bayesian inference to improve quality of Retrieval Augmented Generation
+
+MLLM Is a Strong Reranker: Advancing Multimodal Retrieval-augmented Generation via Knowledge-enhanced Reranking and Noise-injected Training
+
+Inference acceleration for large language models using "stairs" assisted greedy generation
+
+UDA: A Benchmark Suite for Retrieval Augmented Generation in Real-world Document Analysis
+
+RAD-Bench: Evaluating Large Language Models Capabilities in Retrieval Augmented Dialogues
+
+Retrieval Augmented Instruction Tuning for Open NER with Large Language Models
+
+RAEE: A Robust Retrieval-Augmented Early Exiting Framework for Efficient Inference
+
+Exploring Retrieval Augmented Generation in Arabic
+
+Scaling Retrieval-Based Language Models with a Trillion-Token Datastore
+
+Entropy-Based Decoding for Retrieval-Augmented Large Language Models
+
+Familiarity-aware Evidence Compression for Retrieval Augmented Generation
+
+Assessing "Implicit" Retrieval Robustness of Large Language Models
+
+Evaluation of Retrieval-Augmented Generation: A Survey
+
+RE-RAG: Improving Open-Domain QA Performance and Interpretability with Relevance Estimator in Retrieval-Augmented Generation
+
+From RAGs to rich parameters: Probing how language models utilize external knowledge over parametric information for factual queries
+
+DSLR: Document Refinement with Sentence-Level Re-ranking and Reconstruction to Enhance Retrieval-Augmented Generation
+
+Accelerating Inference of Retrieval-Augmented Generation via Sparse Context Selection
+
+BiomedRAG: A Retrieval Augmented Large Language Model for Biomedicine
+
+Lighter And Better: Towards Flexible Context Adaptation For Retrieval Augmented Generation
+
+Controlling Risk of Retrieval-augmented Generation: A Counterfactual Prompting Framework
+
+Empowering Large Language Models for Textual Data Augmentation
+
+Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling
+
+Seeing Is Believing: Black-Box Membership Inference Attacks Against Retrieval Augmented Generation
+
+When Linear Attention Meets Autoregressive Decoding: Towards More Effective and Efficient Linearized Large Language Models
+
+Preference-Guided Refactored Tuning for Retrieval Augmented Code Generation
+
+DynaMo: Accelerating Language Model Inference with Dynamic Multi-Token Sampling
+
+Enhancing Noise Robustness of Retrieval-Augmented Language Models with Adaptive Adversarial Training
+
+Telco-RAG: Navigating the Challenges of Retrieval-Augmented Language Models for Telecommunications
+
+Bailicai: A Domain-Optimized Retrieval-Augmented Generation Framework for Medical Applications
+
+Leveraging Fine-Tuned Retrieval-Augmented Generation with Long-Context Support: For 3GPP Standards
+
+Phantom: General Trigger Attacks on Retrieval Augmented Language Generation
+
+Data Augmentation for Text-based Person Retrieval Using Large Language Models
+
+SMART-RAG: Selection using Determinantal Matrices for Augmented Retrieval
+
+WeKnow-RAG: An Adaptive Approach for Retrieval-Augmented Generation Integrating Web Search and Knowledge Graphs
+
+Meta-prompting Optimized Retrieval-augmented Generation
+
+Synthetic Test Collections for Retrieval Evaluation
+
+Optimizing example selection for retrieval-augmented machine translation with translation memories
+
+Unified Text-to-Image Generation and Retrieval
+
+Synthetic Query Generation using Large Language Models for Virtual Assistants
+
+Contextual Compression in Retrieval-Augmented Generation for Large Language Models: A Survey
+
+From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models
+
+HIRO: Hierarchical Information Retrieval Optimization
+
+Enhancing Tool Retrieval with Iterative Feedback from Large Language Models
+
+Needle in the Haystack for Memory Based Large Language Models
+
+Meta Knowledge for Retrieval Augmented Large Language Models
+
+Towards a Search Engine for Machines: Unified Ranking for Multiple Retrieval-Augmented Large Language Models
+
+A Workbench for Autograding Retrieve/Generate Systems
+
+MemoRAG: Moving towards Next-Gen RAG Via Memory-Inspired Knowledge Discovery
+
+When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively
+
+Clustered Retrieved Augmented Generation (CRAG)
+
+Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting
+
+Generate-then-Ground in Retrieval-Augmented Generation for Multi-hop Question Answering
+
+Better RAG using Relevant Information Gain
+
+Exploring RAG-based Vulnerability Augmentation with LLMs
+
+Stochastic RAG: End-to-End Retrieval-Augmented Generation through Expected Utility Maximization
+
+Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering
+
+DR-RAG: Applying Dynamic Document Relevance to Retrieval-Augmented Generation for Question-Answering
+
+Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Generation
+
+Free to play: UN Trade and Development's experience with developing its own open-source Retrieval Augmented Generation Large Language Model application
+
+Adaptive Retrieval-Augmented Generation for Conversational Systems
+
+Understanding Retrieval-Augmented Task Adaptation for Vision-Language Models
+
+Improving Retrieval-Augmented Generation in Medicine with Iterative Follow-up Questions
+
+ERATTA: Extreme RAG for Table To Answers with Large Language Models
+
+BERGEN: A Benchmarking Library for Retrieval-Augmented Generation
+
+Intermediate Distillation: Data-Efficient Distillation from Black-Box LLMs for Information Retrieval
+
+Enhancing Code Translation in Language Models with Few-Shot Learning via Retrieval-Augmented Generation
+
+Augmenting Textual Generation via Topology Aware Retrieval
+
+Ad Auctions for LLMs via Retrieval Augmented Generation
+
+The Impact of Quantization on Retrieval-Augmented Generation: An Analysis of Small LLMs
+
+In Defense of RAG in the Era of Long-Context Language Models
+
+Wiping out the limitations of Large Language Models -- A Taxonomy for Retrieval Augmented Generation
+
+Context-augmented Retrieval: A Novel Framework for Fast Information Retrieval based Response Generation using Large Language Model
+
+FlashRAG: A Modular Toolkit for Efficient Retrieval-Augmented Generation Research
+
+LA-RAG:Enhancing LLM-based ASR Accuracy with Retrieval-Augmented Generation
+
+ATM: Adversarial Tuning Multi-agent System Makes a Robust Retrieval-Augmented Generator
+
+Reverse Image Retrieval Cues Parametric Memory in Multimodal LLMs
+
+FlashBack:Efficient Retrieval-Augmented Language Modeling for Long Context Inference
+
+Learning to Plan for Retrieval-Augmented Large Language Models from Knowledge Graphs
+
+Ground Every Sentence: Improving Retrieval-Augmented LLMs with Interleaved Reference-Claim Generation
+
+A Simple Architecture for Enterprise Large Language Model Applications based on Role based security and Clearance Levels using Retrieval-Augmented Generation or Mixture of Experts
+
+IRSC: A Zero-shot Evaluation Benchmark for Information Retrieval through Semantic Comprehension in Retrieval-Augmented Generation Scenarios
+
+Retrieval-Enhanced Machine Learning: Synthesis and Opportunities
+
+RAGLAB: A Modular and Research-Oriented Unified Framework for Retrieval-Augmented Generation
+
+A Method for Parsing and Vectorization of Semi-structured Data used in Retrieval Augmented Generation
+
+Improving Retrieval-Augmented Code Comment Generation by Retrieving for Generation
+
+Retrieval-augmented generation in multilingual settings
+
+Evaluating the Retrieval Component in LLM-Based Question Answering Systems
+
+Searching for Best Practices in Retrieval-Augmented Generation
+
+"Glue pizza and eat rocks" -- Exploiting Vulnerabilities in Retrieval-Augmented Generative Models
+
+Think-then-Act: A Dual-Angle Evaluated Retrieval-Augmented Generation
+
+GRAMMAR: Grounded and Modular Methodology for Assessment of Closed-Domain Retrieval-Augmented Language Model
+
+RE-Adapt: Reverse Engineered Adaptation of Large Language Models
+
+A Comparative Study of DSL Code Generation: Fine-Tuning vs. Optimized Retrieval Augmentation
+
+PersonaRAG: Enhancing Retrieval-Augmented Generation Systems with User-Centric Agents
+
+Retrieval Augmented Generation for Domain-specific Question Answering
+
+M-RAG: Reinforcing Large Language Model Performance through Retrieval-Augmented Generation with Multiple Partitions
+
+QAEA-DR: A Unified Text Augmentation Framework for Dense Retrieval
+
+CtrlA: Adaptive Retrieval-Augmented Generation via Probe-Guided Control
+
+Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation
+
+Leveraging Large Language Models for Software Model Completion: Results from Industrial and Public Datasets
+
+Pistis-RAG: A Scalable Cascading Framework Towards Trustworthy Retrieval-Augmented Generation
+
+EfficientRAG: Efficient Retriever for Multi-Hop Question Answering
+
+Scaling the Vocabulary of Non-autoregressive Models for Efficient Generative Retrieval
+
+Graph Retrieval-Augmented Generation: A Survey
+
+PlanRAG: A Plan-then-Retrieval Augmented Generation for Generative Large Language Models as Decision Makers
+
+GPT vs RETRO: Exploring the Intersection of Retrieval and Parameter-Efficient Fine-Tuning
+
+A Tale of Trust and Accuracy: Base vs. Instruct LLMs in RAG Systems
+
+Refiner: Restructure Retrieval Content Efficiently to Advance Question-Answering Capabilities
+
+SFR-RAG: Towards Contextually Faithful LLMs
+
+RAGBench: Explainable Benchmark for Retrieval-Augmented Generation Systems
+
+Crafting Personalized Agents through Retrieval-Augmented Generation on Editable Memory Graphs
+
+BSharedRAG: Backbone Shared Retrieval-Augmented Generation for the E-commerce Domain
+
+Boosting the Capabilities of Compact Models in Low-Data Contexts with Large Language Models and Retrieval-Augmented Generation
+
+Quantifying reliance on external information over parametric knowledge during Retrieval Augmented Generation (RAG) using mechanistic analysis
+
+Can We Further Elicit Reasoning in LLMs? Critic-Guided Planning with Retrieval-Augmentation for Solving Challenging Tasks
+
+Open-RAG: Enhanced Retrieval-Augmented Reasoning with Open-Source Large Language Models
+
+Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models
+
+Better Call SAUL: Fluent and Consistent Language Model Editing with Generation Regularization
+
+UncertaintyRAG: Span-Level Uncertainty Enhanced Long-Context Modeling for Retrieval-Augmented Generation
+
+Domain-Specific Retrieval-Augmented Generation Using Vector Stores, Knowledge Graphs, and Tensor Factorization
+
+How Much Can RAG Help the Reasoning of LLM?
+
+Data-Efficient Massive Tool Retrieval: A Reinforcement Learning Approach for Query-Tool Alignment with Language Models
+
+Reward-RAG: Enhancing RAG with Reward Driven Supervision
+
+Metadata-based Data Exploration with Retrieval-Augmented Generation for Large Language Models
+
+PEAR: Position-Embedding-Agnostic Attention Re-weighting Enhances Retrieval-Augmented Generation with Zero Inference Overhead
+
+Deciphering the Interplay of Parametric and Non-parametric Memory in Retrieval-augmented Language Models
+
+Retrieving, Rethinking and Revising: The Chain-of-Verification Can Improve Retrieval Augmented Generation
+
+Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs in RAG
+
+Less is More: Making Smaller Language Models Competent Subgraph Retrievers for Multi-hop KGQA
+
+TurboRAG: Accelerating Retrieval-Augmented Generation with Precomputed KV Caches for Chunked Text
+
+Rewriting Conversational Utterances with Instructed Large Language Models
+
+oRetrieval Augmented Generation for 10 Large Language Models and its Generalizability in Assessing Medical Fitness
+
+ACER: Automatic Language Model Context Extension via Retrieval
+
+Toward General Instruction-Following Alignment for Retrieval-Augmented Generation
+
+COrAL: Order-Agnostic Language Modeling for Efficient Iterative Refinement
+
+RoRA-VLM: Robust Retrieval-Augmented Vision Language Models
+
+On the Capacity of Citation Generation by Large Language Models
+
+Retrieval Augmented Spelling Correction for E-Commerce Applications
+
+CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity
+
+Optimizing and Evaluating Enterprise Retrieval-Augmented Generation (RAG): A Content Design Perspective
+
+A Comprehensive Survey of Retrieval-Augmented Generation (RAG): Evolution, Current Landscape and Future Directions
+
+Enhancing Long Context Performance in LLMs Through Inner Loop Query Mechanism
+
+REFINE on Scarce Data: Retrieval Enhancement through Fine-Tuning via Model Fusion of Embedding Models
+
+A Survey on Data Synthesis and Augmentation for Large Language Models
+
+Optimizing Retrieval-Augmented Generation with Elasticsearch for Enhanced Question-Answering Systems
+
+Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models
+
+Toward Robust RALMs: Revealing the Impact of Imperfect Retrieval on Retrieval-Augmented Language Models
+
+Unveiling and Consulting Core Experts in Retrieval-Augmented MoE-based LLMs
+
+ConTReGen: Context-driven Tree-structured Retrieval for Open-domain Long-form Text Generation
+
+RAC: Efficient LLM Factuality Correction with Retrieval Augmentation
+
+Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report
+
+Trustworthy Alignment of Retrieval-Augmented Large Language Models via Reinforcement Learning
+
+Leveraging the Domain Adaptation of Retrieval Augmented Generation Models for Question Answering and Reducing Hallucination
+
+LongGenBench: Long-context Generation Benchmark
+
+LLMRefine: Pinpointing and Refining Large Language Models via Fine-Grained Actionable Feedback
+
+AutoRAG: Automated Framework for optimization of Retrieval Augmented Generation Pipeline
+
+HijackRAG: Hijacking Attacks against Retrieval-Augmented Large Language Models
+
+CORAL: Benchmarking Multi-turn Conversational Retrieval-Augmentation Generation
+
+Grounding by Trying: LLMs with Reinforcement Learning-Enhanced Retrieval
+
+JudgeRank: Leveraging Large Language Models for Reasoning-Intensive Reranking
+
+Building A Coding Assistant via the Retrieval-Augmented Language Model
+
+LLM-Ref: Enhancing Reference Handling in Technical Writing with Large Language Models
+
+RAGViz: Diagnose and Visualize Retrieval-Augmented Generation
+
+TeleOracle: Fine-Tuned Retrieval-Augmented Generation with Long-Context Support for Network
+
+Pearl: Personalizing Large Language Model Writing Assistants with Generation-Calibrated Retrievers
+
+R^3AG: First Workshop on Refined and Reliable Retrieval Augmented Generation
+
+PersianRAG: A Retrieval-Augmented Generation System for Persian Language
+
+Long Context RAG Performance of Large Language Models
+
+Data Fusion of Synthetic Query Variants With Generative Large Language Models
+
+Fine-Grained Guidance for Retrievers: Leveraging LLMs' Feedback in Retrieval-Augmented Generation
+
+AssistRAG: Boosting the Potential of Large Language Models with an Intelligent Information Assistant
+
+Toward Optimal Search and Retrieval for RAG
+
+Towards Optimizing a Retrieval Augmented Generation using Large Language Model on Academic Data
+
+QCG-Rerank: Chunks Graph Rerank with Query Expansion in Retrieval-Augmented LLMs for Tourism Domain
+
+Comprehensive and Practical Evaluation of Retrieval-Augmented Generation Systems for Medical Question Answering
+
+Invar-RAG: Invariant LLM-aligned Retrieval for Better Generation
+
+Deploying Large Language Models With Retrieval Augmented Generation
+
+Reference Trustable Decoding: A Training-Free Augmentation Paradigm for Large Language Models
+
+Towards Knowledge Checking in Retrieval-augmented Generation: A Representation Perspective
+
+mR$^2$AG: Multimodal Retrieval-Reflection-Augmented Generation for Knowledge-Based VQA
+
+Assessing the Answerability of Queries in Retrieval-Augmented Code Generation
+
+ScalingNote: Scaling up Retrievers with Large Language Models for Real-World Dense Retrieval
+
+Multi-Reranker: Maximizing performance of retrieval-augmented generation in the FinanceRAG challenge
+
+ICLERB: In-Context Learning Embedding and Reranker Benchmark
+
+Auto-RAG: Autonomous Retrieval-Augmented Generation for Large Language Models
+
+Know Your RAG: Dataset Taxonomy and Generation Strategies for Evaluating RAG Systems
+
+Leveraging Retrieval-Augmented Generation for Persian University Knowledge Retrieval
+
+Improving Tool Retrieval by Leveraging Large Language Models for Query Generation
+
+HEAL: Hierarchical Embedding Alignment Loss for Improved Retrieval and Representation Learning
+
+A Collaborative Multi-Agent Approach to Retrieval-Augmented Generation Across Diverse Data
+
+Inference Scaling for Bridging Retrieval and Augmented Generation
+
+Let your LLM generate a few tokens and you will reduce the need for retrieval
+
+Towards Understanding Systems Trade-offs in Retrieval-Augmented Generation Model Inference
+
+RetroLLM: Empowering Large Language Models to Retrieve Fine-grained Evidence within Generation
+
+RAG Playground: A Framework for Systematic Evaluation of Retrieval Strategies and Prompt Engineering in RAG Systems
+
+RAG-Star: Enhancing Deliberative Reasoning with Retrieval Augmented Verification and Refinement
+
+C-FedRAG: A Confidential Federated Retrieval-Augmented Generation System
+
+PA-RAG: RAG Alignment via Multi-Perspective Preference Optimization
+
+CORD: Balancing COnsistency and Rank Distillation for Robust Retrieval-Augmented Generation
+
+Adapting to Non-Stationary Environments: Multi-Armed Bandit Enhanced Retrieval-Augmented Generation on Knowledge Graphs
+
+OG-RAG: Ontology-Grounded Retrieval-Augmented Generation For Large Language Models
+
+Accelerating Retrieval-Augmented Generation
+
+A MapReduce Approach to Effectively Utilize Long Context Information in Retrieval Augmented Language Models
+
+Context-DPO: Aligning Language Models for Context-Faithfulness
+
+TimeRAG: BOOSTING LLM Time Series Forecasting via Retrieval-Augmented Generation
+
+SyNeg: LLM-Driven Synthetic Hard-Negatives for Dense Retrieval
+
+From MTEB to MTOB: Retrieval-Augmented Classification for Descriptive Grammars
+
+Zero-Indexing Internet Search Augmented Generation for Large Language Models
+
+Retrieval-Augmented Generation for Mobile Edge Computing via Large Language Model
+
+MAIN-RAG: Multi-Agent Filtering Retrieval-Augmented Generation
+
+Chunk-Distilled Language Modeling
+
+RAG-Instruct: Boosting LLMs with Diverse Retrieval-Augmented Instructions
+
+MBA-RAG: a Bandit Approach for Adaptive Retrieval-Augmented Generation through Question Complexity
+
+Speech Retrieval-Augmented Generation without Automatic Speech Recognition
+
+Context Awareness Gate For Retrieval Augmented Generation
+
+MTRAG: A Multi-Turn Conversational Benchmark for Evaluating Retrieval-Augmented Generation Systems
+
+RAG-Check: Evaluating Multimodal Retrieval Augmented Generation Performance
+
+QuIM-RAG: Advancing Retrieval-Augmented Generation with Inverted Question Matching for Enhanced QA Performance
+
+Re-ranking the Context for Multimodal Retrieval Augmented Generation
+
+Advancing Retrieval-Augmented Generation for Persian: Development of Language Models, Comprehensive Benchmarks, and Best Practices for Optimization
+
+A General Retrieval-Augmented Generation Framework for Multimodal Case-Based Reasoning Applications
+
+Research on the Online Update Method for Retrieval-Augmented Generation (RAG) Model with Incremental Learning
+
+Enhancing Retrieval-Augmented Generation: A Study of Best Practices
+
+Unsupervised Query Routing for Retrieval Augmented Generation
+
+GEC-RAG: Improving Generative Error Correction via Retrieval-Augmented Generation for Automatic Speech Recognition Systems
+
+ALoFTRAG: Automatic Local Fine Tuning for Retrieval Augmented Generation
+
+FRAG: A Flexible Modular Framework for Retrieval-Augmented Generation based on Knowledge Graphs
+
+Parallel Key-Value Cache Fusion for Position Invariant RAG
+
+Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization
+
+An Empirical Study of Retrieval-Augmented Code Generation: Challenges and Opportunities
+
+A RAG-Based Institutional Assistant
+
+Chat3GPP: An Open-Source Retrieval-Augmented Generation Framework for 3GPP Documents
+
+SimRAG: Self-Improving Retrieval-Augmented Generation for Adapting Large Language Models to Specialized Domains
+
+MiniRAG: Towards Extremely Simple Retrieval-Augmented Generation
+
+Parametric Retrieval Augmented Generation
+
+Long$^2$RAG: Evaluating Long-Context & Long-Form Retrieval-Augmented Generation with Key Point Recall
+
+PISCO: Pretty Simple Compression for Retrieval-Augmented Generation
+
+Provence: efficient and robust context pruning for retrieval-augmented generation
+
+RbFT: Robust Fine-tuning for Retrieval-Augmented Generation against Retrieval Defects
+
+Text Data Augmentation for Large Language Models: A Comprehensive Survey of Methods, Challenges, and Opportunities
+
+Time-Reversal Provides Unsupervised Feedback to LLMs
+
+Plan*RAG: Efficient Test-Time Planning for Retrieval Augmented Generation
+
+Conversation AI Dialog for Medicare powered by Finetuning and Retrieval Augmented Generation
+
+Scalable In-Context Learning on Tabular Data via Retrieval-Augmented Large Language Models
+
+Beyond Autoregression: Fast LLMs via Self-Distillation Through Time
+
+MARAGE: Transferable Multi-Model Adversarial Attack for Retrieval-Augmented Generation Data Extraction
+
+KBLaM: Knowledge Base augmented Language Model
+
+Evaluating Self-Generated Documents for Enhancing Retrieval-Augmented Generation with Large Language Models
+
+Efficient Knowledge Feeding to Language Models: A Novel Integrated Encoder-Decoder Architecture
+
+Optimizing Knowledge Integration in Retrieval-Augmented Generation with Self-Selection
+
+Knowledge Graph-Guided Retrieval Augmented Generation
+
+Towards Trustworthy Retrieval Augmented Generation for Large Language Models: A Survey
+
+RALLRec: Improving Retrieval Augmented Large Language Model Recommendation with Representation Learning
+
+ParetoRAG: Leveraging Sentence-Context Attention for Robust and Efficient Retrieval-Augmented Generation
+
+RaSeRec: Retrieval-Augmented Sequential Recommendation
+
+EACO-RAG: Towards Distributed Tiered LLM Deployment using Edge-Assisted and Collaborative RAG with Adaptive Knowledge Update
+
+MAGNET: Augmenting Generative Decoders with Representation Learning and Infilling Capabilities
+
+FunnelRAG: A Coarse-to-Fine Progressive Retrieval Paradigm for RAG
+
+RoseRAG: Robust Retrieval-augmented Generation with Small-scale LLMs via Margin-aware Preference Optimization
+
+Streamlining the Collaborative Chain of Models into A Single Forward Pass in Generation-Based Tasks
+
+CacheFocus: Dynamic Cache Re-Positioning for Efficient Retrieval-Augmented Generation
+
+Knowledge Graph-Driven Retrieval-Augmented Generation: Integrating Deepseek-R1 with Weaviate for Advanced Chatbot Applications
+
+Does RAG Really Perform Bad For Long-Context Processing?
+
+Reinforced Information Retrieval
+
+OmniEval: An Omnidirectional and Automatic RAG Evaluation Benchmark in Financial Domain
+
+Cognitive-Aligned Document Selection for Retrieval-augmented Generation
+
+Emulating Retrieval Augmented Generation via Prompt Engineering for Enhanced Long Context Comprehension in LLMs
+
+Are Large Language Models In-Context Graph Learners?
+
+Collaborative Retrieval for Large Language Model-based Conversational Recommender Systems
+
+WavRAG: Audio-Integrated Retrieval Augmented Generation for Spoken Dialogue Models
+
+On the Influence of Context Size and Model Choice in Retrieval-Augmented Generation Systems
+
+Is Relevance Propagated from Retriever to Generator in RAG?
+
+Chain-of-Rank: Enhancing Large Language Models for Domain-Specific RAG in Edge Device
+
+Retrieval-Augmented Speech Recognition Approach for Domain Challenges
+
+Scaling Sparse and Dense Retrieval in Decoder-Only LLMs
+
+SafeRAG: Benchmarking Security in Retrieval-Augmented Generation of Large Language Model
+
+Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation
+
+R$^3$Mem: Bridging Memory Retention and Retrieval via Reversible Compression
+
+Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks
+
+RankCoT: Refining Knowledge for Retrieval-Augmented Generation through Ranking Chain-of-Thoughts
+
+LevelRAG: Enhancing Retrieval-Augmented Generation with Multi-hop Logic Planning over Rewriting Augmented Searchers
+
+Judge as A Judge: Improving the Evaluation of Retrieval-Augmented Generation through the Judge-Consistency of Large Language Models
+
+Probing-RAG: Self-Probing to Guide Language Models in Selective Document Retrieval
+
+Cross-Format Retrieval-Augmented Generation in XR with LLMs for Context-Aware Maintenance Assistance
+
+From Retrieval to Generation: Comparing Different Approaches
+
+LexRAG: Benchmarking Retrieval-Augmented Generation in Multi-Turn Legal Consultation Conversation
+
+Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers
+
+Generative Representational Instruction Tuning
+
+Inference Scaling for Long-Context Retrieval Augmented Generation
+
+VisRAG: Vision-based Retrieval-augmented Generation on Multi-modality Documents
+
+Simple Is Effective: The Roles of Graphs and Large Language Models in Knowledge-Graph-Based Retrieval-Augmented Generation
+
+RefreshKV: Updating Small KV Cache During Long-form Generation
+
+Post-training an LLM for RAG? Train on Self-Generated Demonstrations
+
+RAPID: Efficient Retrieval-Augmented Long Text Generation with Writing Planning and Information Discovery
+
+WeightedKV: Attention Scores Weighted Key-Value Cache Merging for Large Language Models
+
+RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards
+
+Optimizing Retrieval-Augmented Generation of Medical Content for Spaced Repetition Learning
+
+LaRA: Benchmarking Retrieval-Augmented Generation and Long-Context LLMs -- No Silver Bullet for LC or RAG Routing
+
+RASD: Retrieval-Augmented Speculative Decoding
+
+Retrieval Augmented Generation with Multi-Modal LLM Framework for Wireless Environments
+
+OpenRAG: Optimizing RAG End-to-End via In-Context Retrieval Learning
+
+Leveraging Retrieval Augmented Generative LLMs For Automated Metadata Description Generation to Enhance Data Catalogs
+
+Auto-GDA: Automatic Domain Adaptation for Efficient Grounding Verification in Retrieval-Augmented Generation
+
+To Retrieve or Not to Retrieve? Uncertainty Detection for Dynamic Retrieval Augmented Generation
+
+MES-RAG: Bringing Multi-modal, Entity-Storage, and Secure Enhancements to RAG
+
+Optimizing Retrieval Strategies for Financial Question Answering Documents in Retrieval-Augmented Generation Systems
+
+When LLMs Meet API Documentation: Can Retrieval Augmentation Aid Code Generation Just as It Helps Developers?
+
+Applications of Large Language Model Reasoning in Feature Generation
+
+Tuning LLMs by RAG Principles: Towards LLM-native Memory
+
+Towards Lighter and Robust Evaluation for Retrieval Augmented Generation
+
+RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving
+
+Investigating Retrieval-Augmented Generation in Quranic Studies: A Study of 13 Open-Source Large Language Models
+
+Retrieval Augmented Generation and Understanding in Vision: A Survey and New Outlook
+
+Chameleon: a Heterogeneous and Disaggregated Accelerator System for Retrieval-Augmented Language Models
+
+CAFe: Unifying Representation and Generation with Contrastive-Autoregressive Finetuning
+
+Retro-li: Small-Scale Retrieval Augmented Generation Supporting Noisy Similarity Searches and Domain Shift Generalization
+
+RALLRec+: Retrieval Augmented Large Language Model Recommendation with Reasoning
+
+What to Retrieve for Effective Retrieval-Augmented Code Generation? An Empirical Study and Beyond
+
+Systematic Knowledge Injection into Large Language Models via Diverse Augmentation for Domain-Specific RAG
+
+Tricking Retrievers with Influential Tokens: An Efficient Black-Box Corpus Poisoning Attack
+
+RAP: Retrieval-Augmented Personalization for Multimodal Large Language Models
+
+Retrieval Backward Attention without Additional Training: Enhance Embeddings of Large Language Models via Repetition
+
+ToolGen: Unified Tool Retrieval and Calling via Generation
+
+MIRAGE-Bench: Automatic Multilingual Benchmark Arena for Retrieval-Augmented Generation Systems
+
+DAT: Dynamic Alpha Tuning for Hybrid Retrieval in Retrieval-Augmented Generation
+
+FeRG-LLM : Feature Engineering by Reason Generation Large Language Models
+
+Insight-RAG: Enhancing LLMs with Insight-Driven Augmentation
+
+LLM-VPRF: Large Language Model Based Vector Pseudo Relevance Feedback
+
+CoRAG: Collaborative Retrieval-Augmented Generation
+
+Adapting Large Language Models for Multi-Domain Retrieval-Augmented-Generation
+
+HyperRAG: Enhancing Quality-Efficiency Tradeoffs in Retrieval-Augmented Generation with Reranker KV-Cache Reuse
+
+QE-RAG: A Robust Retrieval-Augmented Generation Benchmark for Query Entry Errors
+
+PrefRAG: Preference-Driven Multi-Source Retrieval Augmented Generation
+
+Collab-RAG: Boosting Retrieval-Augmented Generation for Complex Question Answering via White-Box and Black-Box LLM Collaboration
+
+Retrieval Augmented Generation with Collaborative Filtering for Personalized Text Generation
+
+Large Language Model Can Be a Foundation for Hidden Rationale-Based Retrieval
+
+Relevance Isn't All You Need: Scaling RAG Systems With Inference-Time Compute Via Multi-Criteria Reranking
+
+ConceptFormer: Towards Efficient Use of Knowledge-Graph Embeddings in Large Language Models
+
+Plan-and-Refine: Diverse and Comprehensive Retrieval-Augmented Generation
+
+A System for Comprehensive Assessment of RAG Frameworks
+
+PCA-RAG: Principal Component Analysis for Efficient Retrieval-Augmented Generation
+
+DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning
+
+A Survey of Multimodal Retrieval-Augmented Generation
+
+Hyper-RAG: Combating LLM Hallucinations using Hypergraph-Driven Retrieval-Augmented Generation
+
+UltraRAG: A Modular and Automated Toolkit for Adaptive Retrieval-Augmented Generation
+
+Knowledge Graph-extended Retrieval Augmented Generation for Question Answering
+
+ExpertRAG: Efficient RAG with Mixture of Experts -- Optimizing Context Retrieval for Adaptive LLM Responses
+
+RAKG:Document-level Retrieval Augmented Knowledge Graph Construction
+
+Constrained Auto-Regressive Decoding Constrains Generative Retrieval
+
+HeteRAG: A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations
+
+ReZero: Enhancing LLM search ability by trying one-more-time
+
+Efficient Distributed Retrieval-Augmented Generation for Enhancing Language Model Performance
+
+Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs
+
+CDF-RAG: Causal Dynamic Feedback for Adaptive Retrieval-Augmented Generation
+
+InstructRAG: Leveraging Retrieval-Augmented Generation on Instruction Graphs for LLM-Based Task Planning
+
+RAG Without the Lag: Interactive Debugging for Retrieval-Augmented Generation Pipelines
+
+The Other Side of the Coin: Exploring Fairness in Retrieval-Augmented Generation
+
+Unanswerability Evaluation for Retrieval Augmented Generation
+
+MRAMG-Bench: A Comprehensive Benchmark for Advancing Multimodal Retrieval-Augmented Multimodal Generation
+
+MMKB-RAG: A Multi-Modal Knowledge-Based Retrieval-Augmented Generation Framework
+
+Retrieval Augmented Generation Evaluation in the Era of Large Language Models: A Comprehensive Survey
+
+POLYRAG: Integrating Polyviews into Retrieval-Augmented Generation for Medical Applications
+
+RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU
+
+ChunkRAG: Novel LLM-Chunk Filtering Method for RAG Systems
+
+Sufficient Context: A New Lens on Retrieval Augmented Generation Systems
+
+Synergizing RAG and Reasoning: A Systematic Review
+
+SCRAG: Social Computing-Based Retrieval Augmented Generation for Community Response Forecasting in Social Media Environments
+
+MIRAGE: A Metric-Intensive Benchmark for Retrieval-Augmented Generation Evaluation
+
+RAG LLMs are Not Safer: A Safety Analysis of Retrieval-Augmented Generation for Large Language Models
+
+Leveraging Decoder Architectures for Learned Sparse Retrieval
+
+LightRAG: Simple and Fast Retrieval-Augmented Generation
+
+Oreo: A Plug-in Context Reconstructor to Enhance Retrieval-Augmented Generation
+
+Context-Guided Dynamic Retrieval for Improving Generation Quality in RAG Models
+
+Reconstructing Context: Evaluating Advanced Chunking Strategies for Retrieval-Augmented Generation
+
+Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation
+
+Distributed Retrieval-Augmented Generation
+
+Retrieval Augmented Learning: A Retrial-based Large Language Model Self-Supervised Learning and Autonomous Knowledge Generation
+
+KG-Retriever: Efficient Knowledge Indexing for Retrieval-Augmented Large Language Models
+
+Dynamic Parametric Retrieval Augmented Generation for Test-time Knowledge Enhancement
+
+CCSK:Cognitive Convection of Self-Knowledge Based Retrieval Augmentation for Large Language Models
+
+Direct Retrieval-augmented Optimization: Synergizing Knowledge Selection and Language Models
+
+RAG-MCP: Mitigating Prompt Bloat in LLM Tool Selection via Retrieval-Augmented Generation
+
+LLM-Independent Adaptive RAG: Let the Question Speak for Itself
+
+Retrieval Augmented Generation Evaluation for Health Documents
+
+E2E-AFG: An End-to-End Model with Adaptive Filtering for Retrieval-Augmented Generation
+
+Faster, Cheaper, Better: Multi-Objective Hyperparameter Optimization for LLM and RAG Systems
+
+POISONCRAFT: Practical Poisoning of Retrieval-Augmented Generation for Large Language Models
+
+Enhancing Cache-Augmented Generation (CAG) with Adaptive Contextual Compression for Scalable Knowledge Integration
+
+Optimizing Retrieval-Augmented Generation: Analysis of Hyperparameter Impact on Performance and Efficiency
+
+Personalizing Large Language Models using Retrieval Augmented Generation and Knowledge Graph
+
+DynamicRAG: Leveraging Outputs of Large Language Model as Feedback for Dynamic Reranking in Retrieval-Augmented Generation
+
+mmRAG: A Modular Benchmark for Retrieval-Augmented Generation over Text, Tables, and Knowledge Graphs
+
+RARE: Retrieval-Augmented Reasoning Modeling
+
+DioR: Adaptive Cognitive Detection and Contextual Retrieval Optimization for Dynamic Retrieval-Augmented Generation
+
+ELITE: Embedding-Less retrieval with Iterative Text Exploration
+
+Unveiling Knowledge Utilization Mechanisms in LLM-based Retrieval-Augmented Generation
+
+Large Language Model as Universal Retriever in Industrial-Scale Recommender System
+
+ReaRAG: Knowledge-guided Reasoning Enhances Factuality of Large Reasoning Models with Iterative Retrieval Augmented Generation
+
+SubGCache: Accelerating Graph-based RAG with Subgraph-level KV Cache
+
+Know3-RAG: A Knowledge-aware RAG Framework with Adaptive Retrieval, Generation, and Filtering
+
+Optimizing Retrieval Augmented Generation for Object Constraint Language
+
+Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding
+
+EcoSafeRAG: Efficient Security through Context Analysis in Retrieval-Augmented Generation
+
+RAR: Setting Knowledge Tripwires for Retrieval Augmented Rejection
+
+Studying the Role of Input-Neighbor Overlap in Retrieval-Augmented Language Models Training Efficiency
+
+Enhancing Large Language Models (LLMs) for Telecommunications using Knowledge Graphs and Retrieval-Augmented Generation
+
+MacRAG: Compress, Slice, and Scale-up for Multi-Scale Adaptive Context RAG
+
+Single LLM, Multiple Roles: A Unified Retrieval-Augmented Generation Framework Using Role-Specific Token Optimization
+
+Listen to the Context: Towards Faithful Large Language Models for Retrieval Augmented Generation on Climate Questions
+
+C-3PO: Compact Plug-and-Play Proxy Optimization to Achieve Human-like Retrieval-Augmented Generation
+
+Retrieval-Augmented Perception: High-Resolution Image Perception Meets Visual RAG
+
+Cosmos: A CXL-Based Full In-Memory System for Approximate Nearest Neighbor Search
+
+R1-Searcher++: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning
+
+TrustRAG: Enhancing Robustness and Trustworthiness in Retrieval-Augmented Generation
+
+Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs
+
+Do Retrieval-Augmented Language Models Adapt to Varying User Needs?
+
+CReSt: A Comprehensive Benchmark for Retrieval-Augmented Generation with Complex Reasoning over Structured Documents
+
+Optimizing Retrieval-Augmented Generation for Electrical Engineering: A Case Study on ABB Circuit Breakers
+
+Resolving Conflicting Evidence in Automated Fact-Checking: A Study on Retrieval-Augmented LLMs
+
+Accelerating Adaptive Retrieval Augmented Generation via Instruction-Driven Representation Reduction of Retrieval Overlaps
+
+Retrieval Augmented Generation-based Large Language Models for Bridging Transportation Cybersecurity Legal Knowledge Gaps
+
+GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis
+
+Retrieval Models Aren't Tool-Savvy: Benchmarking Tool Retrieval for Large Language Models
+
+MoC: Mixtures of Text Chunking Learners for Retrieval-Augmented Generation System
+
+CPA-RAG:Covert Poisoning Attacks on Retrieval-Augmented Generation in Large Language Models
+
+KnowTrace: Bootstrapping Iterative Retrieval-Augmented Generation with Structured Knowledge Tracing
+
+Less Context, Same Performance: A RAG Framework for Resource-Efficient LLM-Based Clinical NLP
+
+Knowledge Graph Retrieval-Augmented Generation for LLM-based Recommendation
+
+Walk&Retrieve: Simple Yet Effective Zero-shot Retrieval-Augmented Generation via Knowledge Graph Walks
+
+Evaluating the Retrieval Robustness of Large Language Models
+
+MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models
+
+SimGRAG: Leveraging Similar Subgraphs for Knowledge Graphs Driven Retrieval-Augmented Generation
+
+VideoRAG: Retrieval-Augmented Generation over Video Corpus
+
+DReSD: Dense Retrieval for Speculative Decoding
+
+ExpandR: Teaching Dense Retrievers Beyond Queries with LLM Guidance
+
+On the Vulnerability of Applying Retrieval-Augmented Generation within Knowledge-Intensive Application Domains
+
+M+: Extending MemoryLLM with Scalable Long-Term Memory
+
+Agent-UniRAG: A Trainable Open-Source LLM Agent Framework for Unified Retrieval-Augmented Generation Systems
+
+Retrieval Augmented Generation based Large Language Models for Causality Mining
+
+Astute RAG: Overcoming Imperfect Retrieval Augmentation and Knowledge Conflicts for Large Language Models
+
+Personalized Graph-Based Retrieval for Large Language Models
+
+Rethinking Hybrid Retrieval: When Small Embeddings and LLM Re-ranking Beat Bigger Models
+
+Retrieval-Augmented Generation: A Comprehensive Survey of Architectures, Enhancements, and Robustness Frontiers
+
+Adversarial Threat Vectors and Risk Mitigation for Retrieval-Augmented Generation Systems
+
+Retrieval-Augmented Generation Systems for Intellectual Property via Synthetic Multi-Angle Fine-tuning
+
+RARE: Retrieval-Augmented Reasoning Enhancement for Large Language Models
+
+Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation
+
+HASH-RAG: Bridging Deep Hashing with Retriever for Efficient, Fine Retrieval and Augmented Generation
+
+GPR: Empowering Generation with Graph-Pretrained Retriever
+
+KARE-RAG: Knowledge-Aware Refinement and Enhancement for RAG
+
+DRAMA: Diverse Augmentation from Large Language Models to Smaller Dense Retrievers
+
+ROGRAG: A Robustly Optimized GraphRAG Framework
+
+Magic Mushroom: A Customizable Benchmark for Fine-grained Analysis of Retrieval Noise Erosion in RAG Systems
+
+GEM: Empowering LLM for both Embedding Generation and Language Understanding
+
+Pseudo Relevance Feedback is Enough to Close the Gap Between Small and Large Dense Retrieval Models
+
+LLMs Can Also Do Well! Breaking Barriers in Semantic Role Labeling via Large Language Models
+
+Large Language Models are Good Relational Learners
+
+On the Merits of LLM-Based Corpus Enrichment
+
+Retrieval-augmented Large Language Models for Financial Time Series Forecasting
+
+Optimizing RAG Pipelines for Arabic: A Systematic Analysis of Core Components
+
+Dynamic and Parametric Retrieval-Augmented Generation
+
+Eliciting In-context Retrieval and Reasoning for Long-context Large Language Models
+
+DeepRAG: Thinking to Retrieve Step by Step for Large Language Models
+
+Exploring Training and Inference Scaling Laws in Generative Retrieval
+
+Retrieval-Augmented Generation as Noisy In-Context Learning: A Unified Theory and Risk Bounds
+
+Why Uncertainty Estimation Methods Fall Short in RAG: An Axiomatic Analysis
+
+Exp4Fuse: A Rank Fusion Framework for Enhanced Sparse Retrieval using Large Language Model-based Query Expansion
+
+FedRAG: A Framework for Fine-Tuning Retrieval-Augmented Generation Systems
+
+Reasoning RAG via System 1 or System 2: A Survey on Reasoning Agentic Retrieval-Augmented Generation for Industry Challenges
+
+CIIR@LiveRAG 2025: Optimizing Multi-Agent Retrieval Augmented Generation through Self-Training
+
+Bias Amplification in RAG: Poisoning Knowledge Retrieval to Steer LLMs
+
+Retrieval-Augmented Code Review Comment Generation
+
+Context-Augmented Code Generation Using Programming Knowledge Graphs
+
+Foundations of Large Language Models
+
+AR-RAG: Autoregressive Retrieval Augmentation for Image Generation
+
+Maximally-Informative Retrieval for State Space Model Generation
+
+XGraphRAG: Interactive Visual Analysis for Graph-based Retrieval-Augmented Generation
+
+Lightweight Relevance Grader in RAG
+
+TopClustRAG at SIGIR 2025 LiveRAG Challenge
+
+RePCS: Diagnosing Data Memorization in LLM-Powered Retrieval-Augmented Generation
+
+From RAG to Memory: Non-Parametric Continual Learning for Large Language Models
+
+PR-Attack: Coordinated Prompt-RAG Attacks on Retrieval-Augmented Generation in Large Language Models via Bilevel Optimization
+
+Enhancing Document-Level Question Answering via Multi-Hop Retrieval-Augmented Generation with LLaMA 3
+
+SGIC: A Self-Guided Iterative Calibration Framework for RAG
+
+GeAR: Graph-enhanced Agent for Retrieval-augmented Generation
+
+RAPID: Long-Context Inference with Retrieval-Augmented Speculative Decoding
+
+SEAL: Scaling to Emphasize Attention for Long-Context Retrieval
+
+Harnessing the Power of Reinforcement Learning for Language-Model-Based Information Retriever via Query-Document Co-Augmentation
+
+Language Model Re-rankers are Fooled by Lexical Similarities
+
+Retrieval-Confused Generation is a Good Defender for Privacy Violation Attack of Large Language Models
+
+Learning to Rank for Multiple Retrieval-Augmented Models through Iterative Utility Maximization
+
+Leveraging LLM-Assisted Query Understanding for Live Retrieval-Augmented Generation
+
+Assessing RAG and HyDE on 1B vs. 4B-Parameter Gemma LLMs for Personal Assistants Integretion
+
+UiS-IAI@LiveRAG: Retrieval-Augmented Information Nugget-Based Generation of Responses
+
+Weak-to-Strong GraphRAG: Aligning Weak Retrievers with Large Language Models for Graph-based Retrieval Augmented Generation
+
+Evaluating Hybrid Retrieval Augmented Generation using Dynamic Test Sets: LiveRAG Challenge
+
+LLM-Assisted Question-Answering on Technical Documents Using Structured Data-Aware Retrieval Augmented Generation
+
+Parenting: Optimizing Knowledge Selection of Retrieval-Augmented Language Models with Parameter Decoupling and Tailored Tuning
+
+Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation
+
+FlexRAG: A Flexible and Comprehensive Framework for Retrieval-Augmented Generation
+
+Question Decomposition for Retrieval-Augmented Generation
+
+Guaranteed Generation from Large Language Models
+
+EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora
+
+KinyaColBERT: A Lexically Grounded Retrieval Model for Low-Resource Retrieval-Augmented Generation
+
+Source Attribution in Retrieval-Augmented Generation
+
+FaithfulRAG: Fact-Level Conflict Modeling for Context-Faithful Retrieval-Augmented Generation
+
+Enhancing Test-Time Scaling of Large Language Models with Hierarchical Retrieval-Augmented MCTS
+
+SARA: Selective and Adaptive Retrieval-augmented Generation with Context Compression
+
+KERAG_R: Knowledge-Enhanced Retrieval-Augmented Generation for Recommendation
+
+Investigating the Robustness of Retrieval-Augmented Generation at the Query Level
+
+Diffusion Augmented Retrieval: A Training-Free Approach to Interactive Text-to-Image Retrieval
+
+Good/Evil Reputation Judgment of Celebrities by LLMs via Retrieval Augmented Generation
+
+UniConv: Unifying Retrieval and Response Generation for Large Language Models in Conversations
+
+Evaluation of Attribution Bias in Generator-Aware Retrieval-Augmented Large Language Models
+
+MixLoRA-DSI: Dynamically Expandable Mixture-of-LoRA Experts for Rehearsal-Free Generative Retrieval over Dynamic Corpora
+
+Enhancing Retrieval Augmented Generation with Hierarchical Text Segmentation Chunking
+
+Accelerating Automatic Program Repair with Dual Retrieval-Augmented Fine-Tuning and Patch Generation on Large Language Models
+
+Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs
+
+Advancing Retrieval-Augmented Generation for Structured Enterprise and Internal Data
+
+Multi-task retriever fine-tuning for domain-specific and efficient RAG
+
+HoH: A Dynamic Benchmark for Evaluating the Impact of Outdated Information on Retrieval-Augmented Generation
+
+MEMERAG: A Multilingual End-to-End Meta-Evaluation Benchmark for Retrieval Augmented Generation
+
+A Library of LLM Intrinsics for Retrieval-Augmented Generation
+
+Dynamic Context Tuning for Retrieval-Augmented Generation: Enhancing Multi-Turn Planning and Tool Adaptation
+
+Resona: Improving Context Copying in Linear Recurrence Models with Retrieval
+
+A Query-Aware Multi-Path Knowledge Graph Fusion Approach for Enhancing Retrieval-Augmented Generation in Large Language Models
+
+Millions of $\text{GeAR}$-s: Extending GraphRAG to Millions of Documents
+
+RMIT-ADM+S at the SIGIR 2025 LiveRAG Challenge
+
+A Deep Dive into Retrieval-Augmented Generation for Code Completion: Experience on WeChat
+
+A Systematic Review of Key Retrieval-Augmented Generation (RAG) Systems: Progress, Gaps, and Future Directions
+
+Doubling Your Data in Minutes: Ultra-fast Tabular Data Generation via LLM-Induced Dependency Graphs
+
+Towards More Robust Retrieval-Augmented Generation: Evaluating RAG Under Adversarial Poisoning Attacks
+
+Fast or Better? Balancing Accuracy and Cost in Retrieval-Augmented Generation with Flexible User Control
+
+RAG in the Wild: On the (In)effectiveness of LLMs with Mixture-of-Knowledge Retrieval Augmentation
+
+Structured Relevance Assessment for Robust Retrieval-Augmented Language Models
+
+IterKey: Iterative Keyword Generation with LLMs for Enhanced Retrieval Augmented Generation
+
+KeyKnowledgeRAG (K^2RAG): An Enhanced RAG method for improved LLM question-answering capabilities
+
+PRGB Benchmark: A Robust Placeholder-Assisted Algorithm for Benchmarking Retrieval-Augmented Generation
+
+Provably Secure Retrieval-Augmented Generation
+
+Token-Level Precise Attack on RAG: Searching for the Best Alternatives to Mislead Generation
+
+Are We on the Right Way for Assessing Document Retrieval-Augmented Generation?
+
+Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning
+
+From Sufficiency to Reflection: Reinforcement-Guided Thinking Quality in Retrieval-Augmented Reasoning for LLMs
+
+PAIRS: Parametric-Verified Adaptive Information Retrieval and Selection for Efficient RAG
+
+Benchmarking Retrieval-Augmented Generation in Multi-Modal Contexts
+
+Can Language Models Critique Themselves? Investigating Self-Feedback for Retrieval Augmented Generation at BioASQ 2025
+
+OmniBench-RAG: A Multi-Domain Evaluation Platform for Retrieval-Augmented Generation Tools
+
+RAGTrace: Understanding and Refining Retrieval-Generation Dynamics in Retrieval-Augmented Generation
+
+Retrieval Augmented Large Language Model System for Comprehensive Drug Contraindications
+
+MultiRAG: A Knowledge-guided Framework for Mitigating Hallucination in Multi-source Retrieval Augmented Generation
+
+PrLM: Learning Explicit Reasoning for Personalized RAG via Contrastive Reward Optimization
+
+ARAG: Agentic Retrieval Augmented Generation for Personalized Recommendation
+
+RAGtifier: Evaluating RAG Generation Approaches of State-of-the-Art RAG Systems for the SIGIR LiveRAG Competition
+
+REX-RAG: Reasoning Exploration with Policy Correction in Retrieval-Augmented Generation
+
+Optimizing Retrieval-Augmented Generation (RAG) for Colloquial Cantonese: A LoRA-Based Systematic Review
+
+Multimodal RAG Enhanced Visual Description
+
+From Ranking to Selection: A Simple but Efficient Dynamic Passage Selector for Retrieval Augmented Generation
+
+Transforming Questions and Documents for Semantically Aligned Retrieval-Augmented Generation
+
+RTTC: Reward-Guided Collaborative Test-Time Compute
+
+Retrieval-augmented reasoning with lean language models
+
+LoRA-Augmented Generation (LAG) for Knowledge-Intensive Language Tasks
+
+Understanding the Impact of Confidence in Retrieval Augmented Generation: A Case Study in the Medical Domain
+
+Unleashing the Power of LLMs in Dense Retrieval with Query Likelihood Modeling
+
+RAG-Boost: Retrieval-Augmented Generation Enhanced LLM-based Speech Recognition
+
+Benchmarking Vector, Graph and Hybrid Retrieval Augmented Generation (RAG) Pipelines for Open Radio Access Networks (ORAN)
+
+Test-time Corpus Feedback: From Retrieval to RAG
+
+Retrieval Capabilities of Large Language Models Scale with Pretraining FLOPs
+
+Evaluating Retrieval-Augmented Generation Strategies for Large Language Models in Travel Mode Choice Prediction
+
+How Do LLM-Generated Texts Impact Term-Based Retrieval Models?
+
+Retrieval Feedback Memory Enhancement Large Model Retrieval Generation Method
+
+mRAG: Elucidating the Design Space of Multi-modal Retrieval-Augmented Generation
+
+Context-Adaptive Synthesis and Compression for Enhanced Retrieval-Augmented Generation in Complex Domains
+
+Enhancing Document VQA Models via Retrieval-Augmented Generation
+
+Retrieval-Augmented Machine Translation with Unstructured Knowledge
+
+Evaluating Knowledge Graph Based Retrieval Augmented Generation Methods under Knowledge Incompleteness
+
+OCR Hinders RAG: Evaluating the Cascading Impact of OCR on Retrieval-Augmented Generation
+
+AlzheimerRAG: Multimodal Retrieval Augmented Generation for Clinical Use Cases using PubMed articles
+
+MODE: Mixture of Document Experts for RAG
+
+Street-Level Geolocalization Using Multimodal Large Language Models and Retrieval-Augmented Generation
+
+How Does Knowledge Selection Help Retrieval Augmented Generation?
+
+Federated Retrieval-Augmented Generation: A Systematic Mapping Study
+
+ReCode: Improving LLM-based Code Repair with Fine-Grained Retrieval-Augmented Generation
+
+RAGuard: A Novel Approach for in-context Safe Retrieval Augmented Generation for LLMs
+
+MobileRAG: Enhancing Mobile Agent with Retrieval-Augmented Generation
+
+SelfAug: Mitigating Catastrophic Forgetting in Retrieval-Augmented Generation via Distribution Self-Alignment
+
+VaccineRAG: Boosting Multimodal Large Language Models' Immunity to Harmful RAG Samples
+
+KERAG: Knowledge-Enhanced Retrieval-Augmented Generation for Advanced Question Answering
+
+Fishing for Answers: Exploring One-shot vs. Iterative Retrieval Strategies for Retrieval Augmented Generation
+
+RADIANT: Retrieval AugmenteD entIty-context AligNmenT -- Introducing RAG-ability and Entity-Context Divergence
+
+Efficient Dynamic Clustering-Based Document Compression for Retrieval-Augmented-Generation
+
+Guided Decoding and Its Critical Role in Retrieval-Augmented Generation
+
+Domain-Aware RAG: MoL-Enhanced RL for Efficient Training and Scalable Retrieval
+
+A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges
+
+Benchmarking Information Retrieval Models on Complex Retrieval Tasks
+
+CoT-RAG: Integrating Chain of Thought and Retrieval-Augmented Generation to Enhance Reasoning in Large Language Models
+
+HIRAG: Hierarchical-Thought Instruction-Tuning Retrieval-Augmented Generation
+
+All for law and law for all: Adaptive RAG Pipeline for Legal Research
+
+Towards Adaptive Memory-Based Optimization for Enhanced Retrieval-Augmented Generation
+
+LMAR: Language Model Augmented Retriever for Domain-specific Knowledge Indexing
+
+HANRAG: Heuristic Accurate Noise-resistant Retrieval-Augmented Generation for Multi-hop Question Answering
+
+A Survey on Retrieval And Structuring Augmented Generation with Large Language Models
+
+RealRAG: Retrieval-augmented Realistic Image Generation via Self-reflective Contrastive Learning
+
+InfoGain-RAG: Boosting Retrieval-Augmented Generation via Document Information Gain-based Reranking and Filtering
+
+KBM: Delineating Knowledge Boundary for Adaptive Retrieval in Large Language Models
+
+ImpRAG: Retrieval-Augmented Generation with Implicit Queries
+
+Query Optimization for Parametric Knowledge Refinement in Retrieval-Augmented Large Language Models
+
+Evaluating the Effectiveness and Scalability of LLM-Based Data Augmentation for Retrieval
+
+GRIL: Knowledge Graph Retrieval-Integrated Learning with Large Language Models
+
+AttnComp: Attention-Guided Adaptive Context Compression for Retrieval-Augmented Generation
+
+RAG+: Enhancing Retrieval-Augmented Generation with Application-Aware Reasoning
+
+Enhancing RAG Efficiency with Adaptive Context Compression
+
+Causal-Counterfactual RAG: The Integration of Causal-Counterfactual Reasoning into RAG
+
+SKILL-RAG: Self-Knowledge Induced Learning and Filtering for Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation with Hierarchical Knowledge
+
+Conflict-Aware Soft Prompting for Retrieval-Augmented Generation
+
+Online-Optimized RAG for Tool Use and Function Calling
+
+HetaRAG: Hybrid Deep Retrieval-Augmented Generation across Heterogeneous Data Stores
+
+ReGeS: Reciprocal Retrieval-Generation Synergy for Conversational Recommender Systems
+
+A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models
+
+Cross-modal RAG: Sub-dimensional Text-to-Image Retrieval-Augmented Generation
+
+SEARA: An Automated Approach for Obtaining Optimal Retrievers
+
+READER: Retrieval-Assisted Drafter for Efficient LLM Inference
+
+Retrieval-Constrained Decoding Reveals Underestimated Parametric Knowledge in Language Models
+
+ConfRAG: Confidence-Guided Retrieval-Augmenting Generation
+
+Beyond Static Retrieval: Opportunities and Pitfalls of Iterative Retrieval in GraphRAG
+
+Retrieval-Augmented Generation for Electrocardiogram-Language Models
+
+Data Quality Challenges in Retrieval-Augmented Generation
+
+Fine-tuning with RAG for Improving LLM Learning of New Skills
+
+Study on LLMs for Promptagator-Style Dense Retriever Training
+
+A Comprehensive Review on Harnessing Large Language Models to Overcome Recommender System Challenges
+
+Knowledge-Graph Based RAG System Evaluation Framework
+
+On the Diminishing Returns of Complex Robust RAG Training in the Era of Powerful LLMs
+
+RAG over Tables: Hierarchical Memory Index, Multi-Stage Retrieval, and Benchmarking
+
+DACL-RAG: Data Augmentation Strategy with Curriculum Learning for Retrieval-Augmented Generation
+
+SSFO: Self-Supervised Faithfulness Optimization for Retrieval-Augmented Generation
+
+Equipping Retrieval-Augmented Large Language Models with Document Structure Awareness
+
+LaB-RAG: Label Boosted Retrieval Augmented Generation for Radiology Report Generation
+
+DecEx-RAG: Boosting Agentic Retrieval-Augmented Generation with Decision and Execution Optimization via Process Supervision
+
+MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search
+
+Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation
+
+Utility-Focused LLM Annotation for Retrieval and Retrieval-Augmented Generation
+
+SelfRACG: Enabling LLMs to Self-Express and Retrieve for Code Generation
+
+Distilling a Small Utility-Based Passage Selector to Enhance Retrieval-Augmented Generation
+
+HiChunk: Evaluating and Enhancing Retrieval-Augmented Generation with Hierarchical Chunking
+
+RPO: Retrieval Preference Optimization for Robust Retrieval-Augmented Generation
+
+Chain-of-Retrieval Augmented Generation
+
+When Retrieval Succeeds and Fails: Rethinking Retrieval-Augmented Generation for LLMs
+
+Retrieval is Not Enough: Enhancing RAG Reasoning through Test-Time Critique and Optimization
+
+SkewRoute: Training-Free LLM Routing for Knowledge Graph Retrieval-Augmented Generation via Score Skewness of Retrieved Context
+
+REFRAG: Rethinking RAG based Decoding
+
+Taming a Retrieval Framework to Read Images in Humanlike Manner for Augmenting Generation of MLLMs
+
+Steering Over-refusals Towards Safety in Retrieval Augmented Generation
+
+Retrieval-Augmented Generation with Estimation of Source Reliability
+
+A Longitudinal Study on Different Annotator Feedback Loops in Complex RAG Tasks
+
+Reliable Decision Making via Calibration Oriented Retrieval Augmented Generation
+
+Large Scale Retrieval for the LinkedIn Feed using Causal Language Models
+
+Less is More: Denoising Knowledge Graphs For Retrieval Augmented Generation
+
+Harmonizing Diverse Models: A Layer-wise Merging Strategy for Consistent Generation
+
+METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation
+
+RAGRouter: Learning to Route Queries to Multiple Retrieval-Augmented Language Models
+
+Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive Retrieval Depth
+
+The 3rd Place Solution of CCIR CUP 2025: A Framework for Retrieval-Augmented Generation in Multi-Turn Legal Conversation
+
+A Comparison of Independent and Joint Fine-tuning Strategies for Retrieval-Augmented Generation
+
+Can Knowledge-Graph-based Retrieval Augmented Generation Really Retrieve What You Need?
+
+Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation
+
+Retrieval-in-the-Chain: Bootstrapping Large Language Models for Generative Retrieval
+
+CausalRAG: Integrating Causal Graphs into Retrieval-Augmented Generation
+
+Influence Guided Context Selection for Effective Retrieval-Augmented Generation
+
+HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement
+
+R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning
+
+Redefining Retrieval Evaluation in the Era of LLMs
+
+Knowing You Don't Know: Learning When to Continue Search in Multi-round RAG through Self-Practicing
+
+Language Ranker: A Lightweight Ranking framework for LLM Decoding
+
+FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation
+
+Backward-Friendly Optimization: Training Large Language Models with Approximate Gradients under Memory Constraints
+
+Windsock is Dancing: Adaptive Multimodal Retrieval-Augmented Generation
+
+RaCoT: Plug-and-Play Contrastive Example Generation Mechanism for Enhanced LLM Reasoning Reliability
+
+Tagging-Augmented Generation: Assisting Language Models in Finding Intricate Knowledge In Long Contexts
+
+Leveraging Approximate Caching for Faster Retrieval-Augmented Generation
+
+RARE: Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems
+
+Metadata-Driven Retrieval-Augmented Generation for Financial Question Answering
+
+ClueAnchor: Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation
+
+CogPlanner: Unveiling the Potential of Agentic Multimodal Retrieval Augmented Generation with Planning
+
+Adapting Large Language Models to Emerging Cybersecurity using Retrieval Augmented Generation
+
+MARAG-R1: Beyond Single Retriever via Reinforcement-Learned Multi-Tool Agentic Retrieval
+
+Efficient Test-Time Retrieval Augmented Generation
+
+When, What, and How: Rethinking Retrieval-Enhanced Speculative Decoding
+
+RAGSmith: A Framework for Finding the Optimal Composition of Retrieval-Augmented Generation Methods Across Datasets
+
+Towards Global Retrieval Augmented Generation: A Benchmark for Corpus-Level Reasoning
+
+Beyond Single Pass, Looping Through Time: KG-IRAG with Iterative Knowledge Retrieval
+
+s3: You Don't Need That Much Data to Train a Search Agent via RL
+
+Cache Mechanism for Agent RAG Systems
+
+LGM: Enhancing Large Language Models with Conceptual Meta-Relations and Iterative Retrieval
+
+ASVRI-Legal: Fine-Tuning LLMs with Retrieval Augmented Generation for Enhanced Legal Regulation
+
+Abductive Inference in Retrieval-Augmented Language Models: Generating and Validating Missing Premises
+
+LiveSearchBench: An Automatically Constructed Benchmark for Retrieval and Reasoning over Dynamic Knowledge
+
+Reusing Pre-Training Data at Test Time is a Compute Multiplier
+
+CSPLADE: Learned Sparse Retrieval with Causal Language Models
+
+EncouRAGe: Evaluating RAG Local, Fast, and Reliable
+
+Separate the Wheat from the Chaff: Winnowing Down Divergent Views in Retrieval Augmented Generation
+
+DMA: Online RAG Alignment with Human Feedback
+
+LinearRAG: Linear Graph Retrieval Augmented Generation on Large-scale Corpora
+
+CoEdge-RAG: Optimizing Hierarchical Scheduling for Retrieval-Augmented LLMs in Collaborative Edge Computing
+
+SR-KI: Scalable and Real-Time Knowledge Integration into LLMs via Supervised Attention
+
+BEE-RAG: Balanced Entropy Engineering for Retrieval-Augmented Generation
+
+TERAG: Token-Efficient Graph-Based Retrieval-Augmented Generation
+
+Secure Retrieval-Augmented Generation against Poisoning Attacks
+
+Rethinking Retrieval-Augmented Generation for Medicine: A Large-Scale, Systematic Expert Evaluation and Practical Insights
+
+Enhancing Speech-to-Speech Dialogue Modeling with End-to-End Retrieval-Augmented Generation
+
+FB-RAG: Improving RAG with Forward and Backward Lookup
+
+LLM Optimization Unlocks Real-Time Pairwise Reranking
+
+Think Before You Retrieve: Learning Test-Time Adaptive Search with Small Language Models
+
+Privacy-Preserving Retrieval-Augmented Generation with Differential Privacy
+
+Joint-GCG: Unified Gradient-Based Poisoning Attacks on Retrieval-Augmented Generation Systems
+
+AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache
+
+Retrieval-Augmented Generation in Medicine: A Scoping Review of Technical Implementations, Clinical Applications, and Ethical Considerations
+
+Modeling Uncertainty Trends for Timely Retrieval in Dynamic RAG
+
+Language Drift in Multilingual Retrieval-Augmented Generation: Characterization and Decoding-Time Mitigation
+
+TruthfulRAG: Resolving Factual-level Conflicts in Retrieval-Augmented Generation with Knowledge Graphs
+
+TAdaRAG: Task Adaptive Retrieval-Augmented Generation via On-the-Fly Knowledge Graph Construction
+
+PathRAG: Pruning Graph-based Retrieval Augmented Generation with Relational Paths
+
+Aligning Extraction and Generation for Robust Retrieval-Augmented Generation
+
+You Don't Need Pre-built Graphs for RAG: Retrieval Augmented Generation with Adaptive Reasoning Structures
+
+On Powerful Ways to Generate: Autoregression, Diffusion, and Beyond
+
+ACoRN: Noise-Robust Abstractive Compression in Retrieval-Augmented Language Models
+
+Retrieval-Augmented Generation in Industry: An Interview Study on Use Cases, Requirements, Challenges, and Evaluation
+
+WebRec: Enhancing LLM-based Recommendations with Attention-guided RAG from Web
+
+Cluster-based Adaptive Retrieval: Dynamic Context Selection for RAG Applications
+
+ReFactX: Scalable Reasoning with Reliable Facts via Constrained Generation
+
+Retrieval Augmented Generation based context discovery for ASR
+
+SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction
+
+Comparison of Text-Based and Image-Based Retrieval in Multimodal Retrieval Augmented Generation Large Language Model Systems
+
+$A^3$: Attention-Aware Accurate KV Cache Fusion for Fast Large Language Model Serving
+
+Rethinking Retrieval: From Traditional Retrieval Augmented Generation to Agentic and Non-Vector Reasoning Systems in the Financial Domain for Large Language Models
+
+TS-RAG: Retrieval-Augmented Generation based Time Series Foundation Models are Stronger Zero-Shot Forecaster
+
+5G Network Automation Using Local Large Language Models and Retrieval-Augmented Generation
+
+More Documents, Same Length: Isolating the Challenge of Multiple Documents in RAG
+
+Telco-oRAG: Optimizing Retrieval-augmented Generation for Telecom Queries via Hybrid Retrieval and Neural Routing
+
+Finetune-RAG: Fine-Tuning Language Models to Resist Hallucination in Retrieval-Augmented Generation
+
+BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents
+
+LLMs are Biased Evaluators But Not Biased for Retrieval Augmented Generation
+
+MUST-RAG: MUSical Text Question Answering with Retrieval Augmented Generation
+
+Grounding Long-Context Reasoning with Contextual Normalization for Retrieval-Augmented Generation
+
+RAG-IT: Retrieval-Augmented Instruction Tuning for Automated Financial Analysis -- A Case Study for the Semiconductor Sector
+
+Noise-Robust Abstractive Compression in Retrieval-Augmented Language Models
+
+SEAL: Speech Embedding Alignment Learning for Speech Large Language Model with Retrieval-Augmented Generation
+
+RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning
+
+Pointwise Mutual Information as a Performance Gauge for Retrieval-Augmented Generation
+
+GFM-RAG: Graph Foundation Model for Retrieval Augmented Generation
+
+MedBioRAG: Semantic Search and Retrieval-Augmented Generation with Large Language Models for Medical and Biological QA
+
+Mixture-of-RAG: Integrating Text and Tables with Large Language Models
+
+Cog-RAG: Cognitive-Inspired Dual-Hypergraph with Theme Alignment Retrieval-Augmented Generation
+
+Dynamic Context Selection for Retrieval-Augmented Generation: Mitigating Distractors and Positional Bias
+
+Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution
+
+Cooperative Retrieval-Augmented Generation for Question Answering: Mutual Information Exchange and Ranking by Contrasting Layers
+
+Making Large Language Models Efficient Dense Retrievers
+
+FlippedRAG: Black-Box Opinion Manipulation Adversarial Attacks to Retrieval-Augmented Generation Models
+
+Thinking Forward and Backward: Multi-Objective Reinforcement Learning for Retrieval-Augmented Reasoning
+
+Bidirectional RAG: Safe Self-Improving Retrieval-Augmented Generation Through Multi-Stage Validation
+
+An Analysis of Hyper-Parameter Optimization Methods for Retrieval Augmented Generation
+
+Retrieval Augmented Question Answering: When Should LLMs Admit Ignorance?
+
+RAGPart & RAGMask: Retrieval-Stage Defenses Against Corpus Poisoning in Retrieval-Augmented Generation
+
+Multi-hop Reasoning via Early Knowledge Alignment
+
+Improving LLM-Assisted Secure Code Generation through Retrieval-Augmented-Generation and Multi-Tool Feedback
+
+Enhancing Retrieval-Augmented Generation with Topic-Enriched Embeddings: A Hybrid Approach Integrating Traditional NLP Techniques
+
+Tackling the Inherent Difficulty of Noise Filtering in RAG
+
+A Dynamic Retrieval-Augmented Generation System with Selective Memory and Remembrance
+
+After Retrieval, Before Generation: Enhancing the Trustworthiness of Large Language Models in Retrieval-Augmented Generation
+
+LAG: Logic-Augmented Generation from a Cartesian Perspective
+
+LFD: Layer Fused Decoding to Exploit External Knowledge in Retrieval-Augmented Generation
+
+Enhancing Retrieval-Augmented Generation with Two-Stage Retrieval: FlashRank Reranking and Query Expansion
+
+Decide Then Retrieve: A Training-Free Framework with Uncertainty-Guided Triggering and Dual-Path Retrieval
+
+Practical Poisoning Attacks against Retrieval-Augmented Generation
+
+Enhancing Admission Inquiry Responses with Fine-Tuned Models and Retrieval-Augmented Generation
+
+T-Retriever: Tree-based Hierarchical Retrieval Augmented Generation for Textual Graphs
+
+OptiSet: Unified Optimizing Set Selection and Ranking for Retrieval-Augmented Generation
+
+LLM2IR: simple unsupervised contrastive learning makes long-context LLM great retriever
+
+Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems
+
+Adversarial Yet Cooperative: Multi-Perspective Reasoning in Retrieved-Augmented Language Models
+
+Controlled Retrieval-augmented Context Evaluation for Long-form RAG
+
+L-RAG: Balancing Context and Retrieval with Entropy-Based Lazy Loading
+
+Seeing through the Conflict: Transparent Knowledge Conflict Handling in Retrieval-Augmented Generation
+
+BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation
+
+Stronger Baselines for Retrieval-Augmented Generation with Long-Context Language Models
+
+Align-GRAG: Anchor and Rationale Guided Dual Alignment for Graph Retrieval-Augmented Generation
+
+RAG-R1: Incentivizing the Search and Reasoning Capabilities of LLMs through Multi-query Parallelism
+
+Parallel Context-of-Experts Decoding for Retrieval Augmented Generation
+
+RAGShaper: Eliciting Sophisticated Agentic RAG Skills via Automated Data Synthesis
+
+Investigating Retrieval-Augmented Generation Systems on Unanswerable, Uncheatable, Realistic, Multi-hop Queries
+
+Classifying and Addressing the Diversity of Errors in Retrieval-Augmented Generation Systems
+
+T$^2$-RAGBench: Text-and-Table Benchmark for Evaluating Retrieval-Augmented Generation
+
+SD-RAG: A Prompt-Injection-Resilient Framework for Selective Disclosure in Retrieval-Augmented Generation
+
+Unlocking the Potentials of Retrieval-Augmented Generation for Diffusion Language Models
+
+VectorLiteRAG: Latency-Aware and Fine-Grained Resource Partitioning for Efficient RAG
+
+Enhancing Retrieval Augmentation via Adversarial Collaboration
+
+LIR$^3$AG: A Lightweight Rerank Reasoning Strategy Framework for Retrieval-Augmented Generation
+
+Utilizing Metadata for Better Retrieval-Augmented Generation
+
+From Prefix Cache to Fusion RAG Cache: Accelerating LLM Inference in Retrieval-Augmented Generation
+
+Graph-based Approaches and Functionalities in Retrieval-Augmented Generation: A Comprehensive Survey
+
+Predicting Retrieval Utility and Answer Quality in Retrieval-Augmented Generation
+
+Evaluating the Effect of Retrieval Augmentation on Social Biases
+
+Towards Open-World Retrieval-Augmented Generation on Knowledge Graph: A Multi-Agent Collaboration Framework
+
+Zero-RAG: Towards Retrieval-Augmented Generation with Zero Redundant Knowledge
+
+Understanding Parametric Knowledge Injection in Retrieval-Augmented Generation
+
+OpenDecoder: Open Large Language Model Decoding to Incorporate Document Quality in RAG
+
+DF-RAG: Query-Aware Diversity for Retrieval-Augmented Generation
+
+Less is More for RAG: Information Gain Pruning for Generator-Aligned Reranking and Evidence Selection
+
+Exploring Fine-Tuning for In-Context Retrieval and Efficient KV-Caching in Long-Context Language Models
+
+LLM-Specific Utility: A New Perspective for Retrieval-Augmented Generation
+
+RAS: Retrieval-And-Structuring for Knowledge-Intensive LLM Generation
+
+Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning
+
+Scalable Power Sampling: Unlocking Efficient, Training-Free Reasoning for LLMs via Distribution Sharpening
+
+Training a Utility-based Retriever Through Shared Context Attribution for Retrieval-Augmented Language Models
+
+DiffuGR: Generative Document Retrieval with Diffusion Language Models
+
+CiMRAG: CiM-Aware Domain-Adaptive and Noise-Resilient Retrieval-Augmented Generation for Edge-Based LLMs
+
+A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces
+
+Use Graph When It Needs: Efficiently and Adaptively Integrating Retrieval-Augmented Generation with Graphs
+
+Reinforcement Fine-Tuning for History-Aware Dense Retriever in RAG
+
+RAGTurk: Best Practices for Retrieval Augmented Generation in Turkish
+
+Rethinking the Reranker: Boundary-Aware Evidence Selection for Robust Retrieval-Augmented Generation
+
+Less Finetuning, Better Retrieval: Rethinking LLM Adaptation for Biomedical Retrievers via Synthetic Data and Model Merging
+
+ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation
+
+CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning
+
+ImageRAG: Dynamic Image Retrieval for Reference-Guided Image Generation
+
+MIXRAG : Mixture-of-Experts Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering
+
+Adaptive Retrieval helps Reasoning in LLMs -- but mostly if it's not used
+
+Progressive Searching for Retrieval in RAG
+
+IGMiRAG: Intuition-Guided Retrieval-Augmented Generation with Adaptive Mining of In-Depth Memory
+
+DA-RAG: Dynamic Attributed Community Search for Retrieval-Augmented Generation
+
+Attributing Response to Context: A Jensen-Shannon Divergence Driven Mechanistic Study of Context Attribution in Retrieval-Augmented Generation
+
+MRAG: Benchmarking Retrieval-Augmented Generation for Bio-medicine
+
+How Much Reasoning Do Retrieval-Augmented Models Add beyond LLMs? A Benchmarking Framework for Multi-Hop Inference over Hybrid Knowledge
+
+Pursuing Best Industrial Practices for Retrieval-Augmented Generation in the Medical Domain
+
+AttentionRetriever: Attention Layers are Secretly Long Document Retrievers
+
+ReFilter: Improving Robustness of Retrieval-Augmented Generation via Gated Filter
+
+Training Dense Retrievers with Multiple Positive Passages
+
+LLM-Confidence Reranker: A Training-Free Approach for Enhancing Retrieval-Augmented Generation Systems
+
+Benchmarking Retrieval-Augmented Generation for Chemistry
+
+ReliabilityRAG: Effective and Provably Robust Defense for RAG-based Web-Search
+
+AudioRAG+: Feedback-driven Retrieval-augmented Audio Generation with Large Audio Language Models
+
+RPDR: A Round-trip Prediction-Based Data Augmentation Framework for Long-Tail Question Answering
+
+Beyond Pipelines: A Fundamental Study on the Rise of Generative-Retrieval Architectures in Web Research
+
+Enhancing Large Language Models (LLMs) for Telecom using Dynamic Knowledge Graphs and Explainable Retrieval-Augmented Generation
+
+Structure-Augmented Reasoning Generation
+
+Revela: Dense Retriever Learning via Language Modeling
+
+When to use Graphs in RAG: A Comprehensive Analysis for Graph Retrieval-Augmented Generation
+
+CREM: Compression-Driven Representation Enhancement for Multimodal Retrieval and Comprehension
+
+Beyond RAG vs. Long-Context: Learning Distraction-Aware Retrieval for Efficient Knowledge Grounding
+
+Revisiting RAG Retrievers: An Information Theoretic Benchmark
+
+Comparative Analysis of Neural Retriever-Reranker Pipelines for Retrieval-Augmented Generation over Knowledge Graphs in E-commerce Applications
+
+MTRAG-UN: A Benchmark for Open Challenges in Multi-Turn RAG Conversations
+
+MLP Memory: A Retriever-Pretrained Memory for Large Language Models
+
+Reasoning by Exploration: A Unified Approach to Retrieval and Generation over Graphs
+
+LightMem: Lightweight and Efficient Memory-Augmented Generation
+
+GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation
+
+Scaling Retrieval Augmented Generation with RAG Fusion: Lessons from an Industry Deployment
+
+RAG vs. GraphRAG: A Systematic Evaluation and Key Insights
+
+OSCAR: Online Soft Compression And Reranking
+
+Retrieval or Representation? Reassessing Benchmark Gaps in Multilingual and Visually Rich RAG
+
+Coordinated Semantic Alignment and Evidence Constraints for Retrieval-Augmented Generation with Large Language Models
+
+Ensembling Language Models with Sequential Monte Carlo
+
+A Component-Based Survey of Interactions between Large Language Models and Multi-Armed Bandits
+
+Towards Robust Retrieval-Augmented Generation Based on Knowledge Graph: A Comparative Analysis
+
+Aligning Large Language Models with Searcher Preferences
+
+AILS-NTUA at SemEval-2026 Task 8: Evaluating Multi-Turn RAG Conversations
+
+CARROT: A Learned Cost-Constrained Retrieval Optimization System for RAG
+
+Seq vs Seq: An Open Suite of Paired Encoders and Decoders
+
+Markovian Generation Chains in Large Language Models
+
+Can Small Language Models Use What They Retrieve? An Empirical Study of Retrieval Utilization Across Model Scale
+
+Retrieval-augmented Decoding for Improving Truthfulness in Open-ended Generation
+
+RESCUE: Retrieval Augmented Secure Code Generation
+
+Retrieval-Feedback-Driven Distillation and Preference Alignment for Efficient LLM-based Query Expansion
+
+AGRAG: Advanced Graph-based Retrieval-Augmented Generation for LLMs
+
+From Slides to Chatbots: Enhancing Large Language Models with University Course Materials
+
+Rule-Based Explanations for Retrieval-Augmented LLM Systems
+
+Retrieval-Augmented LLM Agents: Learning to Learn from Experience
+
+Enhancing Legal LLMs through Metadata-Enriched RAG Pipelines and Direct Preference Optimization
+
+URAG: A Benchmark for Uncertainty Quantification in Retrieval-Augmented Large Language Models
+
+An experimental study of KV cache reuse strategies in chunk-level caching systems
+
+Rethinking Retrieval-Augmentation as Synthesis: A Query-Aware Context Merging Approach
+
+BubbleRAG: Evidence-Driven Retrieval-Augmented Generation for Black-Box Knowledge Graphs
+
+Rethinking Soft Compression in Retrieval-Augmented Generation: A Query-Conditioned Selector Perspective
+
+Towards Secure Retrieval-Augmented Generation: A Comprehensive Review of Threats, Defenses and Benchmarks
+
+PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving
+
+Evaluation of Large Language Models via Coupled Token Generation
+
+When More Retrieval Hurts: Retrieval-Augmented Code Review Generation
+
+Fast and Faithful: Real-Time Verification for Long-Document Retrieval-Augmented Generation Systems
+
+Evaluating Chunking Strategies For Retrieval-Augmented Generation in Oil and Gas Enterprise Documents
+
+Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation
+
+PIDP-Attack: Combining Prompt Injection with Database Poisoning Attacks on Retrieval-Augmented Generation Systems
+
+Training the Knowledge Base through Evidence Distillation and Write-Back Enrichment
+
+Defending Against Knowledge Poisoning Attacks During Retrieval-Augmented Generation
+
+ReCALL: Recalibrating Capability Degradation for MLLM-based Composed Image Retrieval
+
+UltRAG: a Universal Simple Scalable Recipe for Knowledge Graph RAG
+
+Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG
+
+To Memorize or to Retrieve: Scaling Laws for RAG-Considerate Pretraining
+
+Provable Benefits of In-Tool Learning for Large Language Models
+
+Adaptive Guidance for Retrieval-Augmented Masked Diffusion Models
+
+Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation
+
+Gaussian mixture models as a proxy for interacting language models
+
+Scaling DPPs for RAG: Density Meets Diversity
+
+Contradictions in Context: Challenges for Retrieval-Augmented Generation in Healthcare
+
+Retrieval Augmented Time Series Forecasting
+
+Mitigating Hallucination on Hallucination in RAG via Ensemble Voting
+
+MARS: Enabling Autoregressive Models Multi-Token Generation
+
+RefineRAG: Word-Level Poisoning Attacks via Retriever-Guided Text Refinement
+
+Efficient Federated Search for Retrieval-Augmented Generation using Lightweight Routing
+
+Search-R3: Unifying Reasoning and Embedding in Large Language Models
+
+Beyond Relevance: Utility-Centric Retrieval in the LLM Era
+
+PersonalAI: A Systematic Comparison of Knowledge Graph Storage and Retrieval Approaches for Personalized LLM agents
+
+Retrieval Augmented Conversational Recommendation with Reinforcement Learning
+
+CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning
+
+AtlasKV: Augmenting LLMs with Billion-Scale Knowledge Graphs in 20GB VRAM
+
+Retrievals Can Be Detrimental: Unveiling the Backdoor Vulnerability of Retrieval-Augmented Diffusion Models
+
+Generation-Augmented Generation: A Plug-and-Play Framework for Private Knowledge Injection in Large Language Models
+
+Transforming External Knowledge into Triplets for Enhanced Retrieval in RAG of LLMs
+
+Retrieval as a Decision: Training-Free Adaptive Gating for Efficient RAG
+
+Beyond Black-Box Interventions: Latent Probing for Faithful Retrieval-Augmented Generation
+
+Guaranteeing Knowledge Integration with Joint Decoding for Retrieval-Augmented Generation
+
+How Retrieved Context Shapes Internal Representations in RAG
+
+Feedback Adaptation for Retrieval-Augmented Generation
+
+Stateful Evidence-Driven Retrieval-Augmented Generation with Iterative Reasoning
+
+A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation
+
+RACER: Retrieval-Augmented Contextual Rapid Speculative Decoding
+
+Enhancing Large Language Models with Retrieval Augmented Generation for Software Testing and Inspection Automation
+
+Disco-RAG: Discourse-Aware Retrieval-Augmented Generation
+
+Rethinking the Necessity of Adaptive Retrieval-Augmented Generation through the Lens of Adaptive Listwise Ranking
+
+Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model
+
+Align Documents to Questions: Question-Oriented Document Rewriting for Retrieval-Augmented Generation
+
+Is Agentic RAG worth it? An experimental comparison of RAG approaches
+
+Evaluating Multi-Hop Reasoning in RAG Systems: A Comparison of LLM-Based Retriever Evaluation Strategies
+
+ArbGraph: Conflict-Aware Evidence Arbitration for Reliable Long-Form Retrieval-Augmented Generation
+
+Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation
+
+ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios
+
+MASS-RAG: Multi-Agent Synthesis Retrieval-Augmented Generation
+
+Improving End-to-End Training of Retrieval-Augmented Generation Models via Joint Stochastic Approximation
+
+ItemRAG: Item-Based Retrieval-Augmented Generation for LLM-Based Recommendation
+
+OThink-SRR1: Search, Refine and Reasoning with Reinforced Learning for Large Language Models
+
+A Reproducibility Study of Metacognitive Retrieval-Augmented Generation
+
+HaS: Accelerating RAG through Homology-Aware Speculative Retrieval
+
+KGiRAG: An Iterative GraphRAG Approach for Responding Sensemaking Queries
+
+Rethinking Retrieval-Augmented Generation as a Cooperative Decision-Making Problem
+
+Lightweight Retrieval-Augmented Generation and Large Language Model-Based Modeling for Scalable Patient-Trial Matching
+
+Bridging the Long-Tail Gap: Robust Retrieval-Augmented Relation Completion via Multi-Stage Paraphrase Infusion
+
+BERAG: Bayesian Ensemble Retrieval-Augmented Generation for Knowledge-based Visual Question Answering
+
+ZeroGR: A Generalizable and Scalable Framework for Zero-Shot Generative Retrieval
+
+Structure Guided Retrieval-Augmented Generation for Factual Queries
+
+R$^3$AG: Retriever Routing for Retrieval-Augmented Generation
+
+In-depth Analysis of Graph-based RAG in a Unified Framework
+
+Quantifying and Improving the Robustness of Retrieval-Augmented Language Models Against Spurious Features in Grounding Data
+
+Reducing Redundancy in Retrieval-Augmented Generation through Chunk Filtering
+
+From Ambiguity to Accuracy: The Transformative Effect of Coreference Resolution on Retrieval-Augmented Generation systems
+
+Less LLM, More Documents: Searching for Improved RAG
+
+LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation
+
+LIT-RAGBench: Benchmarking Generator Capabilities of Large Language Models in Retrieval-Augmented Generation
+
+Generative AI-Based Virtual Assistant using Retrieval-Augmented Generation: An evaluation study for bachelor projects
+
+Budget-Constrained Online Retrieval-Augmented Generation: The Chunk-as-a-Service Model
+
+PRAG: End-to-End Privacy-Preserving Retrieval-Augmented Generation
+
+Retrieval-Augmented Reasoning for Chartered Accountancy
+
+H-RAG at SemEval-2026 Task 8: Hierarchical Parent-Child Retrieval for Multi-Turn RAG Conversations
+
+Verbal-R3: Verbal Reranker as the Missing Bridge between Retrieval and Reasoning
+
+FT-RAG: A Fine-grained Retrieval-Augmented Generation Framework for Complex Table Reasoning
+
+Experiments with Large Language Models on Retrieval-Augmented Generation for Closed-Source Simulation Software
+
+Latent Abstraction for Retrieval-Augmented Generation
+
+Towards Dependable Retrieval-Augmented Generation Using Factual Confidence Prediction
+
+The Cost of Context: Mitigating Textual Bias in Multimodal Retrieval-Augmented Generation
+
+LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG
+
+Retrieval Heads are Dynamic
+
+Retrieval from Within: An Intrinsic Capability of Attention-Based Models
+
+RAG-HAR: Retrieval Augmented Generation-based Human Activity Recognition
+
+DARE: Diffusion Language Model Activation Reuse for Efficient Inference
+
+CDS4RAG: Cyclic Dual-Sequential Hyperparameter Optimization for RAG
+
+Generating Leakage-Free Benchmarks for Robust RAG Evaluation
+
+ArchRAG: Attributed Community-based Hierarchical Retrieval-Augmented Generation
+
+Don't Retrieve, Generate: Prompting LLMs for Synthetic Training Data in Dense Retrieval
+
+Differentially Private Synthetic Text Generation for Retrieval-Augmented Generation (RAG)
+
+GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression
+
+Automated Reformulation of Robust Optimization via Memory-Augmented Large Language Models
+
+Derivation Prompting: A Logic-Based Method for Improving Retrieval-Augmented Generation
+
+Why Retrieval-Augmented Generation Fails: A Graph Perspective
+
+Deepchecks: Evaluating Retrieval-Augmented Generation (RAG)
+
+Not All RAGs Are Created Equal: A Component-Wise Empirical Study for Software Engineering Tasks
+
+"Someone Hid It": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval
+
+Fairness-Aware Retrieval Optimization for Retrieval-Augmented Generation
+
+DebiasRAG: A Tuning-Free Path to Fair Generation in Large Language Models through Retrieval-Augmented Generation
+
+PriHA: A RAG-Enhanced LLM Framework for Primary Healthcare Assistant in Hong Kong
+
+TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval
+
+Long Context Modeling with Ranked Memory-Augmented Retrieval
+
+QuCo-RAG: Quantifying Uncertainty from the Pre-training Corpus for Dynamic Retrieval-Augmented Generation
+
+Predictive Prefetching for Retrieval-Augmented Generation
+
+Improving Retrieval-Augmented Generation without Taxonomy-based Error Categorization
+
+BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation
+
+Retrieval-Augmented Code Generation: A Survey with Focus on Repository-Level Approaches
+
+MeMo: Memory as a Model
+
+Memory Grafting: Scaling Language Model Pre-training via Offline Conditional Memory
+
+RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented Generation Systems
+
+LFRAG: Layout-oriented Fine-grained Retrieval-Augmented Generation on Multimodal Document Understanding
+
+Structure-Aware RAG: Structured Retrieval Augmented Generation from Noisy Data for Conversational Agents
+
+FreeRet: MLLMs as Training-Free Retrievers
+
+APEX-Searcher: Refining Credit Assignment with Subgoaling for Agentic Retrieval-Augmented Generation
+
+In-Context Optimization for Retrieval-Augmented Generation: A Gradient-Descent Perspective
+
+Lost in the Evidence? Reproducing Document Position and Context Size Effects in RAG
+
+FD-RAG: Federated Dual-System Retrieval-Augmented Generation
+
+A Systematic Evaluation of Retrieval-Augmented Generation and Language Models for Space Operations
+
+RAGe: A Retrieval-Augmented Generation Evaluation Framework
+
+Less Is More: Elevating RAG via Performance-Driven Context Compression
+
+Bridge-RAG: An Abstract Bridge Tree Based Retrieval Augmented Generation Algorithm
+
+Micro-Macro Retrieval: Reducing Long-Form Hallucination in Large Language Models
+
+SERC: LDPC-Inspired Semantic Error Correction for Retrieval-Augmented Generation
+
+RAISE: RAG Design as an Architecture Search Problem
+
+Understanding the Fundamental Design Decisions of Retrieval-Augmented Generation Systems
+
+MeMo: Towards Language Models with Associative Memory Mechanisms
+
+Empirical Characterization of Inference-Time Elicited Probability Transformations in Large Language Models
+
+On the impact of retrieved content representations in RAG Pipelines
+
+MoG: Mixture of Experts for Graph-based Retrieval-Augmented Generation
+
+Grounded Decoding: Retrieval-Anchored Probability Fusion for Faithful RAG
+
+MemGraphRAG: Memory-based Multi-Agent System for Graph Retrieval-Augmented Generation
+
+Chunking Methods on Retrieval-Augmented Generation - Effectiveness Evaluation Against Computational Cost and Limitations
+
+Efficient RAG with Intent-Aware Retrieval and Semantics-Preserving Chunking
+
+Lighting the Way for BRIGHT: Reproducible Baselines with Anserini, Pyserini, and RankLLM
+
+Privacy-Aware Decoding: Mitigating Privacy Leakage of Large Language Models in Retrieval-Augmented Generation
+
+Inference Cost Attacks for Retrieval-Augmented Large Language Models
+
+Uncovering Competing Poisoning Attacks in Retrieval-Augmented Generation
+
+When Retrieval Doesn't Help: A Large-Scale Study of Biomedical RAG
+
+LazyAttention: Efficient Retrieval-Augmented Generation with Deferred Positional Encoding
+
+Agent-Orchestrated Adaptive RAG: A Comparative Study on Structured and Multi-Hop Retrieval
+
+QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving
+
+Self-Augmenting Retrieval for Diffusion Language Models
+
+Harmonia: End-to-End RAG Serving Optimization
+
+dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
+
+Securing Retrieval-Augmented Generation: A Taxonomy of Attacks, Defenses, and Future Directions
+
+Evaluating RAG Reliability under Clean, Misleading, and Mixed Retrieval
+
+K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling
+
+DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation
+
+Influence Factors on RAG Poisoning
+
+Knowledge Graph Enhanced Memory-Augmented Retrieval for Long Context Modeling
+
+Combining Retrieval-Augmented Text Generation with LLMs for Reading Content Recommendations
+
+Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift
+
+Beyond Chunks and Graphs: Retrieval-Augmented Generation through Triplet-Driven Thinking
+
+SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges
+
+MODE-RAG: Manifold Outlier Diagnosis and Energy-based Retrieval-Augmented Generation Evaluation
+
+MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference
+
+Beyond Relevance: On the Relationship Between Retrieval and RAG Information Coverage
+
+Skill-RAG: Failure-State-Aware Retrieval Augmentation via Hidden-State Probing and Skill Routing
+
+Posterior Refinement: Fast Language Generation via Any-Order Flow Maps
+
+LLM Program Optimization via Retrieval Augmented Search
+
+Security and Privacy in Retrieval-Augmented Generation: Architectures, Threats, Defenses, and Future Directions for Building Trustworthy Systems
+
+KARLA: Knowledge-base Augmented Retrieval for Language Models
+
+A Systems-Level Analysis of Sensitivity, Robustness, and Stability in Retrieval-Augmented Generation
+
+How Do LLMs Cite? A Mechanistic Interpretation of Attribution in Retrieval-Augmented Generation
+
+5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG via LLM-Based Reranking and Faithfulness Control
+
+AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering
+
+XRAG: eXamining the Core -- Benchmarking Foundational Components in Advanced Retrieval-Augmented Generation
+
+Metadata, Structure, or Strategy? A Decomposition of RAG Context Enrichment
+
+Little Brains, Big Feats: Exploring Compact Language Models
+
+Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs
+
+Rethinking On-policy Optimization for Query Augmentation
+
+PRA-RAG: Provably Robust Aggregation in Retrieval-Augmented Generation against Retrieval Corruption
+
+Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts
+
+Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering
+
+ParamMute: Suppressing Knowledge-Critical FFNs for Faithful Retrieval-Augmented Generation
+
+The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise
+
+FedMosaic: Federated Retrieval-Augmented Generation via Parametric Adapters
+
+SVD-RAG: Efficient Tree-Organized Retrieval-Augmented Generation via Singular Value Decomposition
+
+Eval-Pair Matrix: Answer-Paired Meta-Evaluation of LLM Judges for Grounded RAG
+
+NGM-RAG: Neural Graph Matching based Retrieval-Augmented Generation
+
+How Temperature Shapes Ideological Discourse in Retrieval-Augmented Generation?
+
+Predict the Retrieval! Test time adaptation for Retrieval Augmented Generation
+
+HG-RAG: Hierarchy-Guided Retrieval-Augmented Generation for Structured Knowledge Graphs
+
+When Machine Unlearning Meets Retrieval-Augmented Generation (RAG): Keep Secret or Forget Knowledge?
+
+DisarmRAG: Stealthy Retriever-Centric Poisoning to Disable Self-Correction in Retrieval-Augmented Generation (Extended Version)
+
+RIMS: Preference Optimization via Smoothed Multi-pair Aggregation for Small-Scale LLM Retrieval-Augmented Generation
+
+A Survey on Knowledge-Oriented Retrieval-Augmented Generation
+
+Testing Retrieval-Augmented Generation Systems with Chunk Coverage
+
+Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation (long version)
+
+TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framework
+
+Decoupled Attention Fusion: Accelerating RAG with Efficient KV Cache Reuse
+
+Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models
+
+Retrieval-Augmented Large Language Models as Components of Cognitive Computing architecture for Regulatory Knowledge Management
+
+The Effect of Text Chunk Size on Retrieval-Augmented Generation Performance
+
+RAGuard: A Layered Defense Framework for Retrieval-Augmented Generation Systems Against Data Poisoning
+
+LLM2Vec-Gen: Generative Embeddings from Large Language Models
+
+BM25 Wins at Scale: A Scaling Study of Retrieval-Augmented Generation Paradigms
+
+LLM-Based Generative Retrieval for Snapchat Content Recommendation
+
+Bridging the Question-Answer Gap in Retrieval-Augmented Generation: Hypothetical Prompt Embeddings
+
+The Case Against Generation for Retrieval: Discriminative Language Models as Effective Retrievers
+
+Optimization and Constraint Modeling using LLMs with a Retrieval Augmented Generation Process
+
+RAG-TESTER: Automated End-to-End Testing of Retrieval-Augmented Large Language Models
+
+Select-And-Extract: A Lightweight Plugin for Retrieval-Augmented Generation
+
+RING: Retrieval-Internalized Generation for Continual Large-Scale Knowledge Injection
+

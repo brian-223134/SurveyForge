@@ -1,0 +1,161 @@
+Retrieval-Augmented Generation for Large Language Models: A Survey
+A Comprehensive Survey of Retrieval-Augmented Generation (RAG): Evolution, Current Landscape and Future Directions
+When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories
+Retrieval-Augmented Generation: A Comprehensive Survey of Architectures, Enhancements, and Robustness Frontiers
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+Active Retrieval Augmented Generation
+Reliable, Adaptable, and Attributable Language Models with Retrieval
+Evaluation of Retrieval-Augmented Generation: A Survey
+Skeleton-to-Response Dialogue Generation Guided by Retrieval Memory
+A Survey on Retrieval-Augmented Text Generation
+Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG
+Auto-RAG: Autonomous Retrieval-Augmented Generation for Large Language Models
+Continual Learning for Large Language Models: A Survey
+Coordinated Semantic Alignment and Evidence Constraints for Retrieval-Augmented Generation with Large Language Models
+Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs in RAG
+Not All Contexts Are Equal: An Experimental Study of the Effects of Context Compression for LLMs
+Parametric Retrieval Augmented Generation
+Large Language Models for Information Retrieval: A Survey
+Retrieval-Augmented Generation for Large Language Models A Survey
+The Power of Noise
+Understanding the Fundamental Design Decisions of Retrieval-Augmented Generation Systems
+A Systematic Review of Key Retrieval-Augmented Generation Systems: Progress, Gaps, and Future Directions
+Dynamic Parametric Retrieval Augmented Generation for Test-time Knowledge Enhancement
+Enhancing Retrieval-Augmented Generation: A Study of Best Practices
+TurboRAG: Accelerating Retrieval-Augmented Generation with Precomputed KV Caches for Chunked Text
+Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks
+A Survey of Graph Retrieval-Augmented Generation for Customized Large Language Models
+PathRAG: Pruning Graph-based Retrieval Augmented Generation with Relational Paths
+CausalRAG: Integrating Causal Graphs into Retrieval-Augmented Generation
+EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora
+FunnelRAG: A Coarse-to-Fine Progressive Retrieval Paradigm for RAG
+VisRAG: Vision-based Retrieval-augmented Generation on Multi-modality Documents
+A Collaborative Multi-Agent Approach to Retrieval-Augmented Generation Across Diverse Data
+Understanding Parametric Knowledge Retrieval in Retrieval-Augmented Generation
+You Don't Need Pre-built Graphs for RAG: Retrieval Augmented Generation with Adaptive Reasoning Structures
+A Collaborative Multi-Agent Approach, to Retrieval-Augmented Generation Across Diverse Data
+TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framework
+Transforming External Knowledge into Triplets for Enhanced Retrieval in RAG of LLMs
+RbFT: Robust Fine-tuning for Retrieval-Augmented Generation against Retrieval Defects
+Probing-RAG: Self-Probing to Guide Language Models in Selective Document Retrieval
+Multi-hop Reasoning via Early Knowledge Alignment
+BookRAG: A Hierarchical Structure-aware Index-based Approach for Retrieval-Augmented Generation on Complex Documents
+KG-Retriever: Efficient Knowledge Indexing for Retrieval-Augmented Large Language Models
+FRAG: A Flexible Modular Framework for Retrieval-Augmented Generation based on Knowledge Graphs
+Deploying Large Language Models With Retrieval Augmented Generation
+R3-RAG: Learning Step-by-Step Reasoning and Retrieval for LLMs via Reinforcement Learning
+Efficient Federated Search for Retrieval-Augmented Generation using Lightweight Routing
+AutoRAG
+RbFT
+A Survey on RAG Meeting LLMs: Towards Retrieval-Augmented Large Language Models
+Auto-RAG
+A Survey of Retrieval-Augmented Generation (RAG): Evolution, Current Landscape and Future Directions
+A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges
+To Memorize or to Retrieve: Scaling Laws for RAG-Considerate Pretraining
+The Power of Noise: Redefining Retrieval for RAG Systems
+Towards Understanding Systems and knowledge for the Aggregation of Cam Ayde Models
+LightRAG: Simple, Fast, and Reliable Retrieval-Augmented Generation
+CodaRAG: Connecting the Dots with Associativity Inspired by Complementary Learning
+XRAG: eXamining the Core -- Benchmarking Foundational Components in Advanced Retrieval-Augmented Generation
+A Survey on Retrieval-Augmented Text Generation for Large Language Models
+Reconstructing Context: Evaluating Advanced Chunking Strategies for Retrieval-Augmented Generation
+The Power of Noise  Redefining Retrieval for RAG Systems
+Adaptative-RAG  Learning to Adapt Retrieval-Augmented Large Language  Models through Question Complexity
+MBA-RAG: a Bandit Approach for Adaptive Retrieval-Augmented Generation through Question Complexity
+Skill-RAG: Failure-State-Aware Retrieval Augmentation via Hidden-State Probing and Skill Routing
+s3: You Don't Need That Much Data to Train a Search Agent via RL
+Knowing You Don't Know: Learning When and What to Continue Search in Multi-round RAG through Self-Practicing
+A-RAG: Scaling Agentic Retrieval-Augmented Generation via Hierarchical Retrieval Interfaces
+Astute RAG: Overcoming Imperfect Retrieval Augmentation and Knowledge Conflicts for Large Language Models
+
+RETA-LLM: A Retrieval-Augmented Large Language Model Toolkit
+Bridging the Preference Gap between Retrievers and LLMs
+UniConv: Unifying Retrieval and Response Generation for Large Language Models in Conversations
+CDS4RAG: Cyclic Dual-Sequential Hyperparameter Optimization for RAG
+Understanding Parametric Knowledge Injection in Retrieval-Augmented Generation
+Synergizing RAG and Reasoning: A Systematic Review
+In-depth Analysis of Graph-based RAG in a Unified Framework
+ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios
+Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation
+RAGAS: Automated Evaluation of Retrieval Augmented Generation
+GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation
+Knowing You Don’t Know: Learning When to Continue Search in Multi-round RAG through Self-Practicing
+RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation
+ProphetKV: User-Query-Driven Selective Recomputation for Efficient KV Cache Reuse in Retrieval-Augmented Generation
+GAM-RAG
+Towards Deep Reasoning with Agentic RAG: A Survey of RAG-Reasoning Systems in LLMs
+Dynamic and Parametric Retrieval-Augmented Generation
+Towards Knowledge Checking in Retrieval-augmented Generation: A Representation Perspective
+After Retrieval, Before Generation: Enhancing the Trustworthiness of Large Language Models in Retrieval-Augmented Generation
+Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy
+Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection
+R1-Searcher++: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning
+DeepRAG: Thinking to Retrieve Step by Step for Large Language Models
+TeaRAG: We Are Not Ready for Token-Efficient Agentic Retrieval-Augmented Generation
+Deciphering the Interplay of Parametric and Non-parametric Memory in Retrieval-augmented Language Models
+A Comprehensive Survey of Retrieval-Augmented Generation
+A Survey of Retrieval-Augmented Text Generation for Large Language Models
+A Systematic Review of Key Retrieval-Augmented Generation (RAG) Systems: Progress, Gaps, and Future Directions
+RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving
+Knowledge Graph-extended Retrieval Augmented Generation for Question Answering
+Towards Reasoning Agentic RAG for Industry Challenges
+MAIN-RAG: Multi-Agent Filtering Retrieval-Augmented Generation
+MBA-RAG: a Bandit Approach for Adaptive Retrieval-Augmented Generation
+SelfAug: Mitigating Catastrophic Forgetting with Self-Alignment
+Agentic Retrieval-Augmented Generation for LLM-based Question Answering: A Survey of Agentic RAG
+Seeing through the Conflict: Transparent Knowledge Conflict Handling in Retrieval-Augmented Generation
+Reasoning RAG via System 1 or System 2
+Controlled Retrieval-augmented Context Evaluation for Long-form RAG
+Benchmarking Large Language Models in Retrieval-Augmented Generation
+CoFE-RAG: A Comprehensive Full-chain Evaluation Framework for Retrieval-Augmented Generation with Enhanced Data Diversity
+Towards Understanding Systems Trade-offs in Retrieval-Augmented Generation Model Inference
+RAGAS Automated Evaluation of Retrieval Augmented Generation
+\exists d \in \mathcal{D}: d \vDash s
+Retrieval-Augmented Generation for Large Language Models  A Survey
+Retrieval Augmented Generation and Understanding in Vision: A Survey and New Outlook
+Retrieval-Augmented Generation with Hierarchical Knowledge
+RAG vs. GraphRAG: A Systematic Evaluation and Key Insights
+Knowledge Graph-Guided Retrieval Augmented Generation
+MMKB-RAG: A Multi-Modal Knowledge-Based Retrieval-Augmented Generation Framework
+Towards Trustworthy Retrieval Augmented Generation for Large Language Models: A Survey
+On the Influence of Context Size and Model Choice in Retrieval-Augmented Generation Systems
+GFM-RAG: Graph Foundation Model for Retrieval Augmented Generation
+Corrective Retrieval Augmented Generation
+Knowledge Graph-extended Retrieval Augmented Generation
+RAG-MCP: Mitigating Prompt Bloat in LLM Tool Selection via Retrieval-Augmented Generation
+Seven Failure Points When Engineering a Retrieval Augmented Generation System
+VisRAG
+LightRAG
+A Survey of Graph RAG
+PathRAG
+CorpusBrain
+EraRAG
+MemOS
+Enhancing RAG with Iterative Retrieval-Generation Synergy
+XLM
+MemOS: A Collaborative Multi-Agent Approach
+GeAR: Graph-enhanced Agent for Retrieval-augmented Generation
+AGRAG: Advanced Graph-based Retrieval-Augmented Generation for LLMs
+WavRAG: Audio-Integrated Retrieval Augmented Generation for Spoken Dialogue Models
+Crafting Personalized Agents through Retrieval-Augmented Generation on Editable Memory Graphs
+A Survey on Knowledge-Oriented Retrieval-Augmented Generation
+ARAG: Agentic Retrieval-Augmented Generation for Personalized Recommendation
+SelfAug: Mitigating Catastrophic Forgetting in Retrieval-Augmented Generation via Self-Distribution Alignment
+Use Graph When It Needs: Efficiently and Adaptively Integrating Retrieval-Augmented Generation with Graphs
+Classifying and Addressing the Diversity of Errors in Retrieval-Augmented Generation Systems
+MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries
+ParamMute: Suppressing Knowledge-Critical FFNs for Faithful Retrieval-Augmented Generation
+FaithfulRAG: Fact-Level Conflict Modeling for Context-Faithful Retrieval-Augmented Generation
+TruthfulRAG: Resolving Factual-level Conflicts in Retrieval-Augmented Generation with Knowledge Graphs
+Knowing You Don't Know: Learning When to Continue Search in Multi-round RAG through Self-Practicing
+Reasoning RAG via System 1 or System 2: A Survey on Reasoning Agentic Retrieval-Augmented Generation for Industry Challenges
+2.1 Taxonomy of Integration Paradigms
+2.3 Evolutionary System Workflows, and Adaptive Methodologies
+Open-RAG: Enhanced Retrieval-Augmented Reasoning with Open-Source Large Language Models
+LightRAG: Simple and Fast Retrieval-Augmented Generation
+5.1 Joint End-to-End Optimization of Retriever-Generator Pipelines
+6.4 Robustness and Security Threat Modeling
+5.4 Continual and Dynamic Learning for Evolving Knowledge Environments
+From RAG to Memory: Non-Parametric Continual Learning for Large Language Models
+Investigating the Failure Points When Engineering a Retrieval Augmented Generation System
+Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report
