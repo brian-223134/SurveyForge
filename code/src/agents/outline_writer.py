@@ -9,6 +9,7 @@ from src.database import database
 from src.utils import tokenCounter, get_index_filter_by_id_prefix
 from src.prompt import ROUGH_OUTLINE_WITH_SURVEY_PROMPT, MERGING_OUTLINE_WITH_SURVEY_PROMPT, SUBSECTION_OUTLINE_WITH_SURVEY_PROMPT, EDIT_FINAL_OUTLINE_PROMPT_NEW
 import random
+import re
 import json
 
 class outlineWriter():
@@ -328,14 +329,41 @@ class outlineWriter():
         for i in range(100):
             if f'Subsection {i+1}' in outline:
                 subsections.append(outline.split(f'Subsection {i+1}: ')[1].split('\n')[0])
+                tail = self._description_tail(outline, i + 1)
+                if tail is None:
+                    # 설명을 못 찾았어도 리스트 길이는 맞춰 둔다. 호출부가 서브섹션과
+                    # 설명을 인덱스로 짝지으므로 건너뛰면 이후가 전부 밀린다.
+                    subdescriptions.append([] if "1." in outline else '')
+                    continue
                 if "1." not in outline:
-                    subdescriptions.append(outline.split(f'Description {i+1}: ')[1].split('\n')[0])
+                    subdescriptions.append(tail.split('\n')[0])
                 else:
-                    tmp_context = outline.split(f'Description {i+1}: ')[1]
+                    tmp_context = tail
                     if f'Subsection {i+1+1}' in outline:
                         tmp_context = tmp_context.split(f'Subsection {i+1+1}: ')[0]
                     subdescriptions.append([item.strip() for item in tmp_context.split("\n") if item])
         return subsections, subdescriptions
+
+    @staticmethod
+    def _description_tail(outline, n):
+        """`Subsection n` 에 딸린 설명 이후의 텍스트. 못 찾으면 None.
+
+        원래는 `Description {n}: ` 만 찾고 없으면 IndexError 로 죽었다. 모델이 첫
+        항목에만 번호를 붙이고 이후는 `Description:` 으로 쓰는 경우가 있다 —
+        deepseek-v4-flash-0731 이 7개 섹션 중 하나에서 그렇게 내놓아 아웃라인
+        단계에서 실행 전체가 죽었다 (2026-08-05).
+
+        번호가 붙은 형태를 먼저 그대로 찾으므로, 규격을 지킨 출력에서는 동작이
+        이전과 완전히 같다.
+        """
+        marker = f'Description {n}: '
+        if marker in outline:
+            return outline.split(marker)[1]
+        # 번호 없는 형태: 해당 서브섹션 구간 안에서만 찾는다. 밖에서 찾으면 다른
+        # 서브섹션의 설명을 가져온다.
+        seg = outline.split(f'Subsection {n}: ')[1]
+        m = re.search(r'Description\s*:\s*', seg)
+        return seg[m.end():] if m else None
     
     def chunking(self, papers, titles, dates, chunk_size = 14000):
         paper_chunks, title_chunks, date_chunks = [], [], []
