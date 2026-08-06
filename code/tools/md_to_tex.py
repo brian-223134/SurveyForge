@@ -78,10 +78,26 @@ UNICODE_MAP = {
     "\u00d7": r"$\times$",
     "\u2192": r"$\rightarrow$",
     "\u00b2": r"$^{2}$",
+    "\u00b3": r"$^{3}$",
     "\u2074": r"$^{4}$",
     "\u0131": r"\i{}",        # dotless i -- arrives in Turkish author names
+    "\u0142": r"\l{}",        # l with stroke -- Polish author names
+    "\u0141": r"\L{}",
     "\u2026": r"\ldots{}",
     "\u00a0": "~",
+    # Characters that look like ASCII punctuation but are not, so they slip
+    # past review and then stop pdflatex dead. The minus sign is the common one:
+    # models write it for a range ("scales to -3") where a hyphen was meant.
+    "\u2010": "-",             # hyphen (the real U+2010, not U+002D)
+    "\u2212": "$-$",           # minus sign
+    "\u2032": r"$'$",          # prime
+    "\u201a": ",",             # single low quote
+    "\u201e": ",,",            # double low quote
+    "\u2039": r"$<$",
+    "\u203a": r"$>$",
+    "\u00ad": "",              # soft hyphen -- invisible, drop it
+    "\u200b": "",              # zero-width space
+    "\ufeff": "",              # BOM
 }
 
 # Accented letters are not enumerable in advance -- they arrive with author names
@@ -112,6 +128,36 @@ def deaccent(text):
 def clean_title(title):
     """Database titles carry hard line wraps ('Adaptive-RAG\\n  Learning to')."""
     return re.sub(r"\s+", " ", title).strip()
+
+
+# src.utils.arxiv_month does the same parse, but importing it would pull in
+# faiss, langchain and pandas for six lines of regex -- this converter should
+# run anywhere the .md and .json are.
+_NEW_ID = re.compile(r"^(\d{2})(\d{2})\.\d{4,5}")
+_OLD_ID = re.compile(r"^[a-zA-Z][\w.-]*/(\d{2})(\d{2})\d+")
+
+
+def citation_year(aid, rec):
+    """The year a reader would cite: when v1 was announced.
+
+    The database's `date` is the date of the *version named in the id*, which is
+    deliberate -- it matches the base corpus and is what check_oai_schema.py
+    verifies against. But it is the wrong number for a bibliography: a paper
+    posted 2024-04 and revised 2025-03 is cited as 2024, not 2025. Taken from
+    `date`, this misdated 36% of the 3DGS bibliography and 26% of Multi-Agent's.
+
+    The arXiv id's YYMM is the v1 announcement month and never changes, so read
+    the year from there, falling back to `date` only for an unparseable id.
+    """
+    m = _NEW_ID.match(aid or "")
+    if m:
+        return str(2000 + int(m.group(1)))
+    m = _OLD_ID.match(aid or "")
+    if m:
+        yy = int(m.group(1))
+        return str(1900 + yy if yy >= 91 else 2000 + yy)
+    return ((rec or {}).get("date") or "")[:4]
+
 
 # Order matters: the backslash has to be consumed first or it would be applied
 # again to the replacements produced for the other characters.
@@ -268,7 +314,7 @@ def build_bibliography(order, refmap, meta, max_authors):
             if authors:
                 parts.append(authors + ".")
             parts.append(r"\newblock \emph{%s}." % escape(clean_title(rec.get("title", aid))))
-            year = (rec.get("date") or "")[:4]
+            year = citation_year(aid, rec)
             tail = "arXiv:%s" % escape(aid)
             if year:
                 tail += ", %s" % year
@@ -311,9 +357,9 @@ def build_bibtex(order, refmap, meta):
             if authors:
                 out.append("  author        = {%s},"
                            % " and ".join(bib_escape(a) for a in authors))
-            date = rec.get("date") or ""
-            if date[:4]:
-                out.append("  year          = {%s}," % date[:4])
+            year = citation_year(aid, rec)
+            if year:
+                out.append("  year          = {%s}," % year)
             if rec.get("cat"):
                 out.append("  primaryClass  = {%s}," % rec["cat"])
         out.append("  eprint        = {%s}," % aid)
@@ -475,9 +521,14 @@ def main():
         # page numbers if the ToC changed pagination.
         print("  compiling (3 pdflatex passes)...")
         for i in range(1, 4):
+            # errors="replace": pdflatex echoes source bytes into its log, and a
+            # font-encoding warning can carry a byte that is not valid UTF-8.
+            # Without this the decode raises and the traceback buries the actual
+            # LaTeX error we were trying to report.
             r = subprocess.run(
                 ["pdflatex", "-interaction=nonstopmode", os.path.basename(tex)],
-                cwd=out_dir, capture_output=True, text=True)
+                cwd=out_dir, capture_output=True, text=True,
+                encoding="utf-8", errors="replace")
             if r.returncode != 0:
                 errs = [l for l in r.stdout.splitlines()
                         if l.startswith("!") or l.startswith("l.")]

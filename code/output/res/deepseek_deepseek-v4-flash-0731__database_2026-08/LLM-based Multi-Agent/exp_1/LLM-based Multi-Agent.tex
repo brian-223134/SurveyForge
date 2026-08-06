@@ -293,7 +293,7 @@ Looking toward future work and the following subsection, three promising directi
 
 The quantitative evaluation of LLM-based multi-agent systems has undergone a fundamental shift from single-agent capability assessment toward task-specific benchmarks that explicitly capture the structural and dynamical properties of collective intelligence. This evolution reflects a growing recognition that the value proposition of multi-agent systems---division of cognitive labor, expertise specialization, and emergent coordination---cannot be adequately measured through traditional single-turn, single-model evaluation protocols. As such, the benchmark landscape has diversified across domains including software engineering, mathematical reasoning, scientific discovery, embodied decision-making, and multimodal interaction, with each domain imposing distinct coordination requirements and evaluation criteria.
 
-Domain-specific benchmark suites constitute the empirical backbone of multi-agent evaluation. In software engineering, benchmarks such as SWE-bench provide realistic, repository-scale coding challenges that demand task decomposition, cross-file understanding, and iterative verification---properties that naturally stress test multi-agent workflows. Similarly, mathematical reasoning benchmarks (e.g., GSM8K, AIME) serve as controlled environments for studying solution diversity and aggregation strategies, while embodied and planning benchmarks expose the temporal and real-time constraints of agent coordination \cite{arxiv:2503.01935v1}. Notably, the comparative analysis in \cite{arxiv:2512.08296v3} demonstrates that multi-agent performance is fundamentally architecture-dependent: across 260 configurations spanning six benchmarks and five canonical architectures, the relative performance gain of multi-agent systems compared to a single-agent baseline ranged from +80.8\% on decomposable financial reasoning tasks to −70.0\% on sequential planning tasks, revealing that collaborative advantage is contingent on task decomposability and architectural fit. This empirical finding underscores a critical methodological principle: benchmarks must be instantiated with structured task dimensionality that permits the independent scaling of task difficulty, coordination complexity, and inter-agent dependencies to accurately estimate capability boundaries.
+Domain-specific benchmark suites constitute the empirical backbone of multi-agent evaluation. In software engineering, benchmarks such as SWE-bench provide realistic, repository-scale coding challenges that demand task decomposition, cross-file understanding, and iterative verification---properties that naturally stress test multi-agent workflows. Similarly, mathematical reasoning benchmarks (e.g., GSM8K, AIME) serve as controlled environments for studying solution diversity and aggregation strategies, while embodied and planning benchmarks expose the temporal and real-time constraints of agent coordination \cite{arxiv:2503.01935v1}. Notably, the comparative analysis in \cite{arxiv:2512.08296v3} demonstrates that multi-agent performance is fundamentally architecture-dependent: across 260 configurations spanning six benchmarks and five canonical architectures, the relative performance gain of multi-agent systems compared to a single-agent baseline ranged from +80.8\% on decomposable financial reasoning tasks to $-$70.0\% on sequential planning tasks, revealing that collaborative advantage is contingent on task decomposability and architectural fit. This empirical finding underscores a critical methodological principle: benchmarks must be instantiated with structured task dimensionality that permits the independent scaling of task difficulty, coordination complexity, and inter-agent dependencies to accurately estimate capability boundaries.
 
 An equally pressing issue is benchmark design methodology itself. Static benchmarks suffer from saturation, distributional narrowness, and vulnerability to data contamination---problems exacerbated in multi-agent settings where the interaction space expands combinatorially. Dynamic benchmark generation, particularly through LLM-in-the-loop pipelines with verifiable ground truth, has emerged as a promising direction for continuous benchmark evolution. In addition, the role of heterogeneity in multi-agent evaluation has been highlighted by \cite{arxiv:2505.16997v1}, which introduced a comprehensive testbed spanning 5 domains, 21 tasks, and 5 agentic functions, and evaluated 27 LLMs through over 1.7 million assessments. Their work demonstrates that heterogeneous configurations can yield up to 47\% performance improvement on the AIME dataset over homogeneous settings, pointing to the importance of structural interactions between different capabilities in benchmarks that are sensitive to heterogeneous collective compositions. Moreover, the design space of such benchmarks must account for both collaboration, where success is achieved through information sharing and delegation, and competition, where adversarial incentive structures alter agent interaction trajectories; benchmarks that conflate these modes risk invalid conclusions about system competence \cite{arxiv:2503.01935v1}.
 
@@ -389,7 +389,7 @@ The mechanisms of error propagation in multi-agent systems exhibit two contrasti
 
 The structural topology of the system plays a determining role in these propagation dynamics, operating as the same interplay between \emph{functional graphs} and \emph{trust boundaries} highlighted in the security analysis. Decentralized architectures without centralized verification tend to propagate errors more readily than those with centralized coordination, as demonstrated through controlled scalability studies (Towards a Science of Scaling Agent Systems; Understanding Agent Scaling in LLM-Based Multi-Agent Systems via Diversity). Compounding this, specific attack vectors exploit iterative delegation cycles---undetectable at the single-agent level---to convert the computational graph into a cascade-amplifying loop (Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents). In memory-shared architectures, the persistent and globally accessible nature of the memory surface (already identified as a core attack surface in the preceding subsection) intensifies the risk: poisoning a single memory object propagates corrupted context across all subsequent agent reasoning steps, with single-step attack success rates empirically reaching 84.30\% (A-MemGuard: A Proactive Defense Framework for LLM-Based Agent Memory; Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents).
 
-A critical challenge in mitigating cascades is distributed fault attribution---the inability to locate the responsible agent within a multi-step execution trace---which constitutes the key obstacle to correction. Recent advances in multi-agent reinforcement learning address this through turn-level credit assignment and agent-specific advantage estimation, enabling groups to identify the source of deviation and learn transferable robustness against perturbation (MARSHAL: Incentivizing Multi-Agent Reasoning via Self-Play with Strategic LLMs; M³RL Mind-aware Multi-agent Management Reinforcement Learning; A Survey of Frontiers in LLM Reasoning: Inference Scaling, Learning to Reason, and Agentic Systems).
+A critical challenge in mitigating cascades is distributed fault attribution---the inability to locate the responsible agent within a multi-step execution trace---which constitutes the key obstacle to correction. Recent advances in multi-agent reinforcement learning address this through turn-level credit assignment and agent-specific advantage estimation, enabling groups to identify the source of deviation and learn transferable robustness against perturbation (MARSHAL: Incentivizing Multi-Agent Reasoning via Self-Play with Strategic LLMs; M$^{3}$RL Mind-aware Multi-agent Management Reinforcement Learning; A Survey of Frontiers in LLM Reasoning: Inference Scaling, Learning to Reason, and Agentic Systems).
 
 Building upon these diagnostic capabilities, defense frameworks aim to intervene directly in propagation pathways. At the interface level, isolation and trust boundaries separate user inputs, tools, inter-agent messages, and system-level prompts, mitigating prompt-injection and memory-poisoning campaigns (Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents). At the reasoning level, the A-MemGuard framework exemplifies consensus-based validation: agents independently retrieve and cross-check memories, requiring alignment before any action, achieving 95\%+ reduction in attack success against memory poisoning at minimal utility cost by distilling detected failures into retained lessons (A-MemGuard: A Proactive Defense Framework for LLM-Based Agent Memory). At the topology level---consistently with the security principle of reducing overlap between functional and trust graphs---introducing redundancy and diversity into the agent pool breaks percolation channels: heterogeneous configurations (diverse models or prompts) provide substantially higher resilience than homogeneous scaling, consistent with information-theoretic bounds showing that multi-agent error amplification is limited by the number of independent information channels (\(K^*\)) rather than the raw agent count (Information).
 
@@ -409,7 +409,7 @@ Beyond normative alignment, structural governance must contend with the dynamics
 
 Two concurrent approaches to advance these goals involve general detection and theoretical integration. The first should be detection of whether an agent subverts the group's objectives: recent methods use ``agent critics''---cross-validated models that, for example, identify questionable reasoning in other language models---which have been extended to detect misalignment at the system level rather than the agent level \cite{arxiv:2502.14847v2,arxiv:2511.09710v3}. The second is the use of formal ``logic and architectural guard-rails'' to ensure that an agent's declared values are consistent with its actions across contexts [Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents. Notably, both these approaches observe that alignment defense is a system property that depends on social parameters---e.g., number of agents, communication density, and reward to the environment. If these parameters are tuned to adversarial regimes, the effect of alignment modifications (observations that, e.g., fine-tuning a single base model for values of each agent in a network does not necessarily alter group behavior under certain conditions) can be canceled entirely.
 
-In summary, value governance in LLM multi-agent systems is fundamentally tied to the topology of social influence. Research is moving in the direction of incorporating methods from evolutionary multi-objective optimization, social choice theory, and agent-based control. Future work will entail (i) deriving a measure for reliability under sociolinguistic pressure to decouple an agent's declared values from its actual utility function, (ii) making system-level misalignment detectable via reflection on parameter adaptation, and (iii) achieving internationalization and preservation of power asymmetry in independent algorithmic governance. Achieving high‐level alignment, therefore, is not a matter of tuning individual models---it is an emergent problem that must be tackled with governance regimes and social structures that are both the target and the tool in.
+In summary, value governance in LLM multi-agent systems is fundamentally tied to the topology of social influence. Research is moving in the direction of incorporating methods from evolutionary multi-objective optimization, social choice theory, and agent-based control. Future work will entail (i) deriving a measure for reliability under sociolinguistic pressure to decouple an agent's declared values from its actual utility function, (ii) making system-level misalignment detectable via reflection on parameter adaptation, and (iii) achieving internationalization and preservation of power asymmetry in independent algorithmic governance. Achieving high-level alignment, therefore, is not a matter of tuning individual models---it is an emergent problem that must be tackled with governance regimes and social structures that are both the target and the tool in.
 
 
 \subsection{Explainability, Accountability, and Human Oversight}
@@ -451,7 +451,7 @@ The deployment landscape of LLM-based multi-agent systems has matured from proof
 
 However, the translation of these benefits to embodied and interaction-rich domains---robotics, multi-robot systems, and real-time decision-making---reveals domain-specific constraints that fundamentally alter the design calculus. Systems integrating LLMs into multi-robot systems inherit the challenges of latency, hallucination, and limited mathematical reasoning, while also contending with real-time perception-action loops and sparse feedback that render coordination overhead prohibitive \cite{arxiv:2502.03814v5,arxiv:2502.14743v2}. Deployments inspired by swarm intelligence, such as ant colony foraging and bird flocking, have shown that LLM-driven prompt-based behaviors can substitute hard-coded programs to induce emergent self-organization \cite{arxiv:2503.03800v1}. However, these successes are bounded by the environment's ability to provide unambiguous, unmediated feedback---a stark contrast to purely text-based domains where the cost of iterative agent negotiation is comparatively minor. The decision-making frameworks developed for warehouse automation, logistics, and transportation systems highlight a parallel tension; whereas classical multi-agent coordination in these domains has traditionally relied on reinforcement learning or hierarchical control, LLM-integrated approaches introduce a structured negotiation layer that incorporates reasoning and commonsense knowledge, at the expense of higher inference costs and unpredictable runtime behavior \cite{arxiv:2503.13415v1}.
 
-Beyond task-specific considerations, cross-domain deployments expose a systemic "effectiveness gap" between architectural promise and empirical outcome. Controlled scaling studies conducted across 260 configurations spanning 6 benchmarks, 5 canonical architectures, and 3 model families report relative performance changes from a +80.8\% gain on decomposable financial reasoning tasks to a −70.0\% regression on sequential planning tasks when adding centralized communication or verification \cite{arxiv:2512.08296v3}. This demonstrates that architecture-task alignment is the dominant predictor of collaborative value, not the number of deployed agents. Moreover, coordinated failures propagate in ways that single-agent ecosystems do not mask; fault-injection studies using 15 fault types confirm that the nature of failure is architecture-influenced, with linear pipelines suffering catastrophic collapse while closed-loop and iterative topologies neutralize over 40\% of such faults \cite{arxiv:2602.19843v1}. These findings reveal that stronger foundation models do not uniformly improve robustness, and system-level reliability emerges as a critical design requirement \cite{arxiv:2602.19843v1}.
+Beyond task-specific considerations, cross-domain deployments expose a systemic "effectiveness gap" between architectural promise and empirical outcome. Controlled scaling studies conducted across 260 configurations spanning 6 benchmarks, 5 canonical architectures, and 3 model families report relative performance changes from a +80.8\% gain on decomposable financial reasoning tasks to a $-$70.0\% regression on sequential planning tasks when adding centralized communication or verification \cite{arxiv:2512.08296v3}. This demonstrates that architecture-task alignment is the dominant predictor of collaborative value, not the number of deployed agents. Moreover, coordinated failures propagate in ways that single-agent ecosystems do not mask; fault-injection studies using 15 fault types confirm that the nature of failure is architecture-influenced, with linear pipelines suffering catastrophic collapse while closed-loop and iterative topologies neutralize over 40\% of such faults \cite{arxiv:2602.19843v1}. These findings reveal that stronger foundation models do not uniformly improve robustness, and system-level reliability emerges as a critical design requirement \cite{arxiv:2602.19843v1}.
 
 The deployment landscape is equally marked by a degree of pragmatism between distributed flexibility and computational economy. Adaptive routing implementations such as MasRouter integrate collaboration-mode selection, role allocation, and model selection through a cascaded controller, which achieved accuracy gains of 1.8\% to 8.2\% while reducing overhead by 17.21\% to 28.17\% via customized routing \cite{arxiv:2502.11133v1}. Similarly, query-dependent sampling of an "agentic supernet"---a probabilistic distribution over system architectures---enables dynamic allocation of inference resources, requiring only 6--45\% of the inference cost typically demanded by hand-crafted or fixed multi-agent configurable settings while outperforming them by up to 11.82\% \cite{arxiv:2502.04180v2}. Equally important, cascading between single-agent and multi-agent systems can improve accuracy by 1.1--12\% while reducing deployment costs by up to 20\% \cite{arxiv:2505.18286v1}. These results collectively underscore that production-grade systems optimize, at least as much as agent design, an orchestration mechanism that matches resources to task difficulty and capability profiles.
 
@@ -589,7 +589,7 @@ Mert Cemri, Melissa Z. Pan, Shuyi Yang, Lakshya A. Agrawal, Bhavya Chopra, Risha
 \bibitem{arxiv:2506.06843v3}
 HaoYang Shang, Xuan Liu, Zi Liang, Jie Zhang, Haibo Hu, Song Guo.
 \newblock \emph{United Minds or Isolated Agents? Exploring Coordination of LLMs under Cognitive Load Theory}.
-\newblock arXiv:2506.06843v3, 2026.
+\newblock arXiv:2506.06843v3, 2025.
 \newblock \url{https://arxiv.org/abs/2506.06843v3}
 
 \bibitem{arxiv:2505.19591v2}
@@ -619,7 +619,7 @@ Mingyan Gao, Yanzi Li, Banruo Liu, Yifan Yu, Phillip Wang, Ching-Yu Lin \emph{et
 \bibitem{arxiv:2512.08296v3}
 Yubin Kim, Ken Gu, Chanwoo Park, Chunjong Park, Samuel Schmidgall, A. Ali Heydari \emph{et al.}.
 \newblock \emph{Towards a Science of Scaling Agent Systems}.
-\newblock arXiv:2512.08296v3, 2026.
+\newblock arXiv:2512.08296v3, 2025.
 \newblock \url{https://arxiv.org/abs/2512.08296v3}
 
 \bibitem{arxiv:2501.06322v1}
@@ -637,7 +637,7 @@ Taicheng Guo, Xiuying Chen, Yaqi Wang, Ruidi Chang, Shichao Pei, Nitesh V. Chawl
 \bibitem{arxiv:2412.17481v2}
 Shuaihang Chen, Yuanxing Liu, Wei Han, Weinan Zhang, Ting Liu.
 \newblock \emph{A Survey on LLM-based Multi-Agent System: Recent Advances and New Frontiers in Application}.
-\newblock arXiv:2412.17481v2, 2025.
+\newblock arXiv:2412.17481v2, 2024.
 \newblock \url{https://arxiv.org/abs/2412.17481v2}
 
 \bibitem{arxiv:2503.23037v3}
@@ -673,19 +673,19 @@ Yuheng Cheng, Ceyao Zhang, Zhengwen Zhang, Xiangrui Meng, Sirui Hong, Wenhao Li 
 \bibitem{arxiv:2506.01839v3}
 Jennifer Haase, Sebastian Pokutta.
 \newblock \emph{Beyond Static Responses: Multi-Agent LLM Systems as a New Paradigm for Social Science Research}.
-\newblock arXiv:2506.01839v3, 2026.
+\newblock arXiv:2506.01839v3, 2025.
 \newblock \url{https://arxiv.org/abs/2506.01839v3}
 
 \bibitem{arxiv:2506.12508v6}
 Wentao Zhang, Liang Zeng, Yuzhen Xiao, Yongcong Li, Ce Cui, Yilei Zhao \emph{et al.}.
 \newblock \emph{AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent(TEA) Protocol}.
-\newblock arXiv:2506.12508v6, 2026.
+\newblock arXiv:2506.12508v6, 2025.
 \newblock \url{https://arxiv.org/abs/2506.12508v6}
 
 \bibitem{arxiv:2502.02533v2}
 Han Zhou, Xingchen Wan, Ruoxi Sun, Hamid Palangi, Shariq Iqbal, Ivan Vuli\'{c} \emph{et al.}.
 \newblock \emph{Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies}.
-\newblock arXiv:2502.02533v2, 2026.
+\newblock arXiv:2502.02533v2, 2025.
 \newblock \url{https://arxiv.org/abs/2502.02533v2}
 
 \bibitem{arxiv:2502.11133v1}
@@ -709,13 +709,13 @@ Hongxin Zhang, Weihua Du, Jiaming Shan, Qinhong Zhou, Yilun Du, Joshua B. Tenenb
 \bibitem{arxiv:2506.05364v2}
 Anjana Sarkar, Soumyendu Sarkar.
 \newblock \emph{Survey of LLM Agent Communication with MCP: A Software Design Pattern Centric Review}.
-\newblock arXiv:2506.05364v2, 2026.
+\newblock arXiv:2506.05364v2, 2025.
 \newblock \url{https://arxiv.org/abs/2506.05364v2}
 
 \bibitem{arxiv:2507.10644v4}
 Tatiana Petrova, Boris Bliznioukov, Aleksandr Puzikov, Radu State.
 \newblock \emph{From Multi-Agent Systems and the Semantic Web to Agentic AI: A Unified Narrative of the Web of Agents}.
-\newblock arXiv:2507.10644v4, 2026.
+\newblock arXiv:2507.10644v4, 2025.
 \newblock \url{https://arxiv.org/abs/2507.10644v4}
 
 \bibitem{arxiv:2602.03695v2}
@@ -757,13 +757,13 @@ Xu Shen, Yixin Liu, Yiwei Dai, Yili Wang, Rui Miao, Yue Tan \emph{et al.}.
 \bibitem{arxiv:2510.07799v2}
 Eric Hanchen Jiang, Mengting Li, Guancheng Wan, Sophia Yin, Yuchen Wu, Xiao Liang \emph{et al.}.
 \newblock \emph{Dynamic Generation of Multi-LLM Agents Communication Topologies with Graph Diffusion Models}.
-\newblock arXiv:2510.07799v2, 2026.
+\newblock arXiv:2510.07799v2, 2025.
 \newblock \url{https://arxiv.org/abs/2510.07799v2}
 
 \bibitem{arxiv:2506.02546v2}
 Pengfei He, Zhenwei Dai, Xianfeng Tang, Yue Xing, Hui Liu, Jingying Zeng \emph{et al.}.
 \newblock \emph{To trust or not to trust: Attention-based Trust Management for LLM Multi-Agent Systems}.
-\newblock arXiv:2506.02546v2, 2026.
+\newblock arXiv:2506.02546v2, 2025.
 \newblock \url{https://arxiv.org/abs/2506.02546v2}
 
 \bibitem{arxiv:2502.14847v2}
@@ -823,7 +823,7 @@ Guibin Zhang, Luyang Niu, Junfeng Fang, Kun Wang, Lei Bai, Xiang Wang.
 \bibitem{arxiv:2505.16988v2}
 Rui Ye, Keduan Huang, Qimin Wu, Yuzhu Cai, Tian Jin, Xianghe Pang \emph{et al.}.
 \newblock \emph{MASLab: A Unified and Comprehensive Codebase for LLM-based Multi-Agent Systems}.
-\newblock arXiv:2505.16988v2, 2026.
+\newblock arXiv:2505.16988v2, 2025.
 \newblock \url{https://arxiv.org/abs/2505.16988v2}
 
 \bibitem{arxiv:2601.00481v1}
@@ -865,13 +865,13 @@ Guibin Zhang, Haiyang Yu, Kaiming Yang, Bingli Wu, Fei Huang, Yongbin Li \emph{e
 \bibitem{arxiv:2410.08115v2}
 Weize Chen, Jiarui Yuan, Chen Qian, Cheng Yang, Zhiyuan Liu, Maosong Sun.
 \newblock \emph{Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System}.
-\newblock arXiv:2410.08115v2, 2025.
+\newblock arXiv:2410.08115v2, 2024.
 \newblock \url{https://arxiv.org/abs/2410.08115v2}
 
 \bibitem{arxiv:2310.20151v2}
 Huaben Chen, Wenkang Ji, Lufeng Xu, Shiyu Zhao.
 \newblock \emph{Multi-Agent Consensus Seeking via Large Language Models}.
-\newblock arXiv:2310.20151v2, 2025.
+\newblock arXiv:2310.20151v2, 2023.
 \newblock \url{https://arxiv.org/abs/2310.20151v2}
 
 \bibitem{arxiv:2406.04692v1}
@@ -901,7 +901,7 @@ Cristian Jimenez-Romero, Alper Yegenoglu, Christian Blum.
 \bibitem{arxiv:2512.04388v5}
 Stefan Nielsen, Edoardo Cetin, Peter Schwendeman, Qi Sun, Jinglue Xu, Yujin Tang.
 \newblock \emph{Learning to Orchestrate Agents in Natural Language with the Conductor}.
-\newblock arXiv:2512.04388v5, 2026.
+\newblock arXiv:2512.04388v5, 2025.
 \newblock \url{https://arxiv.org/abs/2512.04388v5}
 
 \bibitem{arxiv:2502.12110v11}
@@ -919,13 +919,13 @@ Wei Zhu, Zhiwen Tang, Kun Yue.
 \bibitem{arxiv:2410.06153v3}
 Yu Shang, Yu Li, Keyu Zhao, Likai Ma, Jiahe Liu, Fengli Xu \emph{et al.}.
 \newblock \emph{AgentSquare: Automatic LLM Agent Search in Modular Design Space}.
-\newblock arXiv:2410.06153v3, 2025.
+\newblock arXiv:2410.06153v3, 2024.
 \newblock \url{https://arxiv.org/abs/2410.06153v3}
 
 \bibitem{arxiv:2410.02189v2}
 Ao Li, Yuexiang Xie, Songze Li, Fugee Tsung, Bolin Ding, Yaliang Li.
 \newblock \emph{Agent-Oriented Planning in Multi-Agent Systems}.
-\newblock arXiv:2410.02189v2, 2025.
+\newblock arXiv:2410.02189v2, 2024.
 \newblock \url{https://arxiv.org/abs/2410.02189v2}
 
 \bibitem{arxiv:2503.09501v3}
@@ -935,7 +935,7 @@ Ziyu Wan, Yunxiang Li, Xiaoyu Wen, Yan Song, Hanjing Wang, Linyi Yang \emph{et a
 \newblock \url{https://arxiv.org/abs/2503.09501v3}
 
 \bibitem{arxiv:2603.00142v1}
-Adam Kostka, Jarosław A. Chudziak.
+Adam Kostka, Jaros\l{}aw A. Chudziak.
 \newblock \emph{Evaluating Theory of Mind and Internal Beliefs in LLM-Based Multi-Agent Systems}.
 \newblock arXiv:2603.00142v1, 2026.
 \newblock \url{https://arxiv.org/abs/2603.00142v1}
@@ -985,7 +985,7 @@ Xiaoxiao Li.
 \bibitem{arxiv:2503.16416v2}
 Asaf Yehudai, Lilach Eden, Alan Li, Guy Uziel, Yilun Zhao, Roy Bar-Haim \emph{et al.}.
 \newblock \emph{Survey on Evaluation of LLM-based Agents}.
-\newblock arXiv:2503.16416v2, 2026.
+\newblock arXiv:2503.16416v2, 2025.
 \newblock \url{https://arxiv.org/abs/2503.16416v2}
 
 \bibitem{arxiv:1307.4477v1}
@@ -997,13 +997,13 @@ Wojciech Jamroga, Artur M\c{e}ski, Maciej Szreter.
 \bibitem{arxiv:2511.09149v5}
 Zhuoyun Du, Runze Wang, Huiyu Bai, Zouying Cao, Xiaoyong Zhu, Yu Cheng \emph{et al.}.
 \newblock \emph{Enabling Agents to Communicate Entirely in Latent Space}.
-\newblock arXiv:2511.09149v5, 2026.
+\newblock arXiv:2511.09149v5, 2025.
 \newblock \url{https://arxiv.org/abs/2511.09149v5}
 
 \bibitem{arxiv:2502.14321v3}
 Bingyu Yan, Zhibo Zhou, Litian Zhang, Lian Zhang, Ziyi Zhou, Dezhuang Miao \emph{et al.}.
 \newblock \emph{Beyond Self-Talk: A Communication-Centric Survey of LLM-Based Multi-Agent Systems}.
-\newblock arXiv:2502.14321v3, 2026.
+\newblock arXiv:2502.14321v3, 2025.
 \newblock \url{https://arxiv.org/abs/2502.14321v3}
 
 \bibitem{arxiv:2412.05449v1}
@@ -1027,7 +1027,7 @@ Laura Ferrarotti, Gian Maria Campedelli, Roberto Dess\`{i}, Andrea Baronchelli, 
 \bibitem{arxiv:2510.05174v4}
 Christoph Riedl.
 \newblock \emph{Emergent Coordination in Multi-Agent Language Models}.
-\newblock arXiv:2510.05174v4, 2026.
+\newblock arXiv:2510.05174v4, 2025.
 \newblock \url{https://arxiv.org/abs/2510.05174v4}
 
 \bibitem{arxiv:2602.19843v1}
@@ -1039,7 +1039,7 @@ Jin Jia, Zhiling Deng, Zhuangbin Chen, Yingqi Wang, Zibin Zheng.
 \bibitem{arxiv:2510.00685v2}
 Nurbek Tastan, Samuel Horvath, Karthik Nandakumar.
 \newblock \emph{Stochastic Self-Organization in Multi-Agent Systems}.
-\newblock arXiv:2510.00685v2, 2026.
+\newblock arXiv:2510.00685v2, 2025.
 \newblock \url{https://arxiv.org/abs/2510.00685v2}
 
 \bibitem{arxiv:1904.08315v1}
@@ -1081,7 +1081,7 @@ Emanuele La Malfa, Gabriele La Malfa, Samuele Marro, Jie M. Zhang, Elizabeth Bla
 \bibitem{arxiv:2410.06101v2}
 Hao Ma, Tianyi Hu, Zhiqiang Pu, Boyin Liu, Xiaolin Ai, Yanyan Liang \emph{et al.}.
 \newblock \emph{Coevolving with the Other You: Fine-Tuning LLM with Sequential Cooperative Multi-Agent Reinforcement Learning}.
-\newblock arXiv:2410.06101v2, 2025.
+\newblock arXiv:2410.06101v2, 2024.
 \newblock \url{https://arxiv.org/abs/2410.06101v2}
 
 \bibitem{arxiv:2510.23595v3}
@@ -1093,13 +1093,13 @@ Yixing Chen, Yiding Wang, Siqi Zhu, Haofei Yu, Tao Feng, Muhan Zhang \emph{et al
 \bibitem{arxiv:2510.11062v5}
 Yujie Zhao, Lanxiang Hu, Yang Wang, Minmin Hou, Hao Zhang, Ke Ding \emph{et al.}.
 \newblock \emph{Stronger-MAS: Multi-Agent Reinforcement Learning for Collaborative LLMs}.
-\newblock arXiv:2510.11062v5, 2026.
+\newblock arXiv:2510.11062v5, 2025.
 \newblock \url{https://arxiv.org/abs/2510.11062v5}
 
 \bibitem{arxiv:2410.11163v2}
 Shangbin Feng, Zifeng Wang, Yike Wang, Sayna Ebrahimi, Hamid Palangi, Lesly Miculicich \emph{et al.}.
 \newblock \emph{Model Swarms: Collaborative Search to Adapt LLM Experts via Swarm Intelligence}.
-\newblock arXiv:2410.11163v2, 2025.
+\newblock arXiv:2410.11163v2, 2024.
 \newblock \url{https://arxiv.org/abs/2410.11163v2}
 
 \bibitem{arxiv:2603.07670v1}
@@ -1111,7 +1111,7 @@ Pengfei Du.
 \bibitem{arxiv:2404.09982v3}
 Hang Gao, Yongfeng Zhang.
 \newblock \emph{INMS: Memory Sharing for Large Language Model based Agents}.
-\newblock arXiv:2404.09982v3, 2026.
+\newblock arXiv:2404.09982v3, 2024.
 \newblock \url{https://arxiv.org/abs/2404.09982v3}
 
 \bibitem{arxiv:2505.15182v2}
@@ -1165,7 +1165,7 @@ Sara Maalal, Malika Addou.
 \bibitem{arxiv:2506.01245v3}
 Pengfei He, Yue Xing, Juanhui Li, Shen Dong, Zhenwei Dai, Xianfeng Tang \emph{et al.}.
 \newblock \emph{Comprehensive Vulnerability Analysis is Necessary for Trustworthy LLM-MAS}.
-\newblock arXiv:2506.01245v3, 2026.
+\newblock arXiv:2506.01245v3, 2025.
 \newblock \url{https://arxiv.org/abs/2506.01245v3}
 
 \bibitem{arxiv:2505.19234v2}
@@ -1177,17 +1177,17 @@ Jialong Zhou, Lichao Wang, Xiao Yang.
 \bibitem{arxiv:2508.11915v2}
 Punya Syon Pandey, Yongjin Yang, Jiarui Liu, Zhijing Jin.
 \newblock \emph{CORE: Measuring Multi-Agent LLM Interaction Quality under Game-Theoretic Pressures}.
-\newblock arXiv:2508.11915v2, 2026.
+\newblock arXiv:2508.11915v2, 2025.
 \newblock \url{https://arxiv.org/abs/2508.11915v2}
 
 \bibitem{arxiv:2410.03768v2}
 Yohan Mathew, Ollie Matthews, Robert McCarthy, Joan Velja, Christian Schroeder de Witt, Dylan Cope \emph{et al.}.
 \newblock \emph{Hidden in Plain Text: Emergence \& Mitigation of Steganographic Collusion in LLMs}.
-\newblock arXiv:2410.03768v2, 2025.
+\newblock arXiv:2410.03768v2, 2024.
 \newblock \url{https://arxiv.org/abs/2410.03768v2}
 
 \bibitem{arxiv:2508.05294v4}
-Sahar Salimpour, Lei Fu, Kajetan Rachwał, Pascal Bertrand, Kevin O'Sullivan, Robert Jakob \emph{et al.}.
+Sahar Salimpour, Lei Fu, Kajetan Rachwa\l{}, Pascal Bertrand, Kevin O'Sullivan, Robert Jakob \emph{et al.}.
 \newblock \emph{Towards Embodied Agentic AI: Review and Classification of LLM- and VLM-Driven Robot Autonomy and Interaction}.
 \newblock arXiv:2508.05294v4, 2025.
 \newblock \url{https://arxiv.org/abs/2508.05294v4}
@@ -1195,7 +1195,7 @@ Sahar Salimpour, Lei Fu, Kajetan Rachwał, Pascal Bertrand, Kevin O'Sullivan, Ro
 \bibitem{arxiv:2511.09710v3}
 Sarath Shekkizhar, Romain Cosentino, Adam Earle, Silvio Savarese.
 \newblock \emph{Echoing: Identity Failures when LLM Agents Talk to Each Other}.
-\newblock arXiv:2511.09710v3, 2026.
+\newblock arXiv:2511.09710v3, 2025.
 \newblock \url{https://arxiv.org/abs/2511.09710v3}
 
 \bibitem{arxiv:2503.09648v1}
@@ -1249,7 +1249,7 @@ Xueyu Hu, Tao Xiong, Biao Yi, Zishu Wei, Ruixuan Xiao, Yurun Chen \emph{et al.}.
 \bibitem{arxiv:2509.23586v2}
 Yuan-An Xiao, Pengfei Gao, Chao Peng, Yingfei Xiong.
 \newblock \emph{Reducing Cost of LLM Agents with Trajectory Reduction}.
-\newblock arXiv:2509.23586v2, 2026.
+\newblock arXiv:2509.23586v2, 2025.
 \newblock \url{https://arxiv.org/abs/2509.23586v2}
 
 \bibitem{arxiv:2509.18970v2}
@@ -1267,7 +1267,7 @@ Sunil Prakash.
 \bibitem{arxiv:2505.23847v5}
 Ronny Ko, Jiseong Jeong, Shuyuan Zheng, Chuan Xiao, Tae-Wan Kim, Makoto Onizuka \emph{et al.}.
 \newblock \emph{Seven Security Challenges in Cross-domain Multi-agent LLM Systems}.
-\newblock arXiv:2505.23847v5, 2026.
+\newblock arXiv:2505.23847v5, 2025.
 \newblock \url{https://arxiv.org/abs/2505.23847v5}
 
 \bibitem{arxiv:2502.08586v1}
@@ -1297,7 +1297,7 @@ Kai Chen, Xinfeng Li, Tianpei Yang, Hewei Wang, Wei Dong, Yang Gao.
 \bibitem{arxiv:2502.03814v5}
 Peihan Li, Zijian An, Shams Abrar, Lifeng Zhou.
 \newblock \emph{Large Language Models for Multi-Robot Systems: A Survey}.
-\newblock arXiv:2502.03814v5, 2026.
+\newblock arXiv:2502.03814v5, 2025.
 \newblock \url{https://arxiv.org/abs/2502.03814v5}
 
 \bibitem{arxiv:2502.14743v2}
@@ -1321,13 +1321,13 @@ Wenjun Peng, Xinyu Wang, Qi Wu.
 \bibitem{arxiv:2505.00753v5}
 Henry Peng Zou, Wei-Chieh Huang, Yaozu Wu, Jizhou Guo, Yankai Chen, Chunyu Miao \emph{et al.}.
 \newblock \emph{LLM-Based Human-Agent Collaboration and Interaction Systems: A Survey}.
-\newblock arXiv:2505.00753v5, 2026.
+\newblock arXiv:2505.00753v5, 2025.
 \newblock \url{https://arxiv.org/abs/2505.00753v5}
 
 \bibitem{arxiv:2505.17767v2}
 Weiwen Liu, Jiarui Qin, Xu Huang, Xingshan Zeng, Yunjia Xi, Jianghao Lin \emph{et al.}.
 \newblock \emph{Position: The Real Barrier to LLM Agent Usability is Agentic ROI}.
-\newblock arXiv:2505.17767v2, 2026.
+\newblock arXiv:2505.17767v2, 2025.
 \newblock \url{https://arxiv.org/abs/2505.17767v2}
 
 \bibitem{arxiv:2604.03870v1}
@@ -1339,7 +1339,7 @@ Wenhui Zhu, Xuanzhao Dong, Xiwen Chen, Rui Cai, Peijie Qiu, Zhipeng Wang \emph{e
 \bibitem{arxiv:2412.14470v2}
 Zhexin Zhang, Shiyao Cui, Yida Lu, Jingzhuo Zhou, Junxiao Yang, Hongning Wang \emph{et al.}.
 \newblock \emph{Agent-SafetyBench: Evaluating the Safety of LLM Agents}.
-\newblock arXiv:2412.14470v2, 2025.
+\newblock arXiv:2412.14470v2, 2024.
 \newblock \url{https://arxiv.org/abs/2412.14470v2}
 
 \bibitem{arxiv:2411.09523v1}
@@ -1375,7 +1375,7 @@ Michael Winikoff.
 \bibitem{arxiv:2503.13553v2}
 Philipp D. Siedler, Ian Gemp.
 \newblock \emph{LLM-Mediated Guidance of MARL Systems}.
-\newblock arXiv:2503.13553v2, 2026.
+\newblock arXiv:2503.13553v2, 2025.
 \newblock \url{https://arxiv.org/abs/2503.13553v2}
 
 \bibitem{arxiv:2307.06187v1}
@@ -1387,7 +1387,7 @@ Nathalia Nascimento, Paulo Alencar, Donald Cowan.
 \bibitem{arxiv:2505.11556v4}
 Yuxuan Li, Aoi Naito, Hirokazu Shirado.
 \newblock \emph{Systematic Failures in Collective Reasoning under Distributed Information in Multi-Agent LLMs}.
-\newblock arXiv:2505.11556v4, 2026.
+\newblock arXiv:2505.11556v4, 2025.
 \newblock \url{https://arxiv.org/abs/2505.11556v4}
 
 \bibitem{arxiv:2508.17692v1}
@@ -1417,13 +1417,13 @@ Zhiqiang Xie, Hao Kang, Ying Sheng, Tushar Krishna, Kayvon Fatahalian, Christos 
 \bibitem{arxiv:2502.10978v2}
 Antoine Dolant, Praveen Kumar.
 \newblock \emph{Agentic LLM Framework for Adaptive Decision Discourse}.
-\newblock arXiv:2502.10978v2, 2026.
+\newblock arXiv:2502.10978v2, 2025.
 \newblock \url{https://arxiv.org/abs/2502.10978v2}
 
 \bibitem{arxiv:2412.06681v2}
 Tianming Liu, Jirong Yang, Yafeng Yin.
 \newblock \emph{Toward LLM-Agent-Based Modeling of Transportation Systems: A Conceptual Framework}.
-\newblock arXiv:2412.06681v2, 2025.
+\newblock arXiv:2412.06681v2, 2024.
 \newblock \url{https://arxiv.org/abs/2412.06681v2}
 
 \bibitem{arxiv:2503.03686v1}
@@ -1441,7 +1441,7 @@ Krishna Ronanki.
 \bibitem{arxiv:2506.02718v2}
 Guanzhong Chen, Shaoxiong Yang, Chao Li, Wei Liu, Jian Luan, Zenglin Xu.
 \newblock \emph{End-to-End Optimization of LLM-Driven Multi-Agent Search Systems via Heterogeneous-Group-Based Reinforcement Learning}.
-\newblock arXiv:2506.02718v2, 2026.
+\newblock arXiv:2506.02718v2, 2025.
 \newblock \url{https://arxiv.org/abs/2506.02718v2}
 
 \bibitem{arxiv:1311.5108v1}
