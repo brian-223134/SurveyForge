@@ -315,10 +315,17 @@ class outlineWriter():
         for i in range(100):
             if f'Section {i+1}' in outline:
                 sections.append(outline.split(f'Section {i+1}: ')[1].split('\n')[0])
+                # 서브섹션 파서와 같은 문제가 여기에도 있다 — 모델이 번호를 빼고
+                # 'Description:' 으로 쓰면 IndexError 로 죽었다 (3D Gaussian Splatting
+                # 에서 Section 7 하나가 그랬다, 2026-08-06).
+                tail = self._description_tail(outline, i + 1, unit='Section')
+                if tail is None:
+                    descriptions.append([] if "1." in outline else '')
+                    continue
                 if f"1."  not in outline:
-                    descriptions.append(outline.split(f'Description {i+1}: ')[1].split('\n')[0])
+                    descriptions.append(tail.split('\n')[0])
                 else:
-                    tmp_context = outline.split(f'Description {i+1}: ')[1]
+                    tmp_context = tail
                     if f'Section {i+1+1}' in outline:
                         tmp_context = tmp_context.split(f'Section {i+1+1}: ')[0]
                     descriptions.append([item.strip() for item in tmp_context.split("\n") if item])
@@ -345,8 +352,8 @@ class outlineWriter():
         return subsections, subdescriptions
 
     @staticmethod
-    def _description_tail(outline, n):
-        """`Subsection n` 에 딸린 설명 이후의 텍스트. 못 찾으면 None.
+    def _description_tail(outline, n, unit='Subsection'):
+        """`<unit> n` 에 딸린 설명 이후의 텍스트. 못 찾으면 None.
 
         원래는 `Description {n}: ` 만 찾고 없으면 IndexError 로 죽었다. 모델이 첫
         항목에만 번호를 붙이고 이후는 `Description:` 으로 쓰는 경우가 있다 —
@@ -359,11 +366,13 @@ class outlineWriter():
         marker = f'Description {n}: '
         if marker in outline:
             return outline.split(marker)[1]
-        # 번호 없는 형태: 해당 서브섹션 구간 안에서만 찾는다. 밖에서 찾으면 다른
-        # 서브섹션의 설명을 가져온다.
-        seg = outline.split(f'Subsection {n}: ')[1]
-        m = re.search(r'Description\s*:\s*', seg)
-        return seg[m.end():] if m else None
+        # 번호 없는 형태: 해당 구간 안에서만 찾는다. 밖에서 찾으면 다른 절의 설명을
+        # 가져온다.
+        parts = outline.split(f'{unit} {n}: ')
+        if len(parts) < 2:
+            return None
+        m = re.search(r'Description\s*:\s*', parts[1])
+        return parts[1][m.end():] if m else None
     
     def chunking(self, papers, titles, dates, chunk_size = 14000):
         paper_chunks, title_chunks, date_chunks = [], [], []
