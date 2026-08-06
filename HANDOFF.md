@@ -8,6 +8,31 @@
 
 ---
 
+## 이 문서를 읽었다면 먼저 이것부터
+
+백그라운드 작업이 돌고 있을 수 있습니다. 컨텍스트가 끊긴 뒤에는 **무엇이 돌고 있는지부터**
+확인하세요 — 로그는 `eval_out/`에 있고 git 추적 대상이 아닙니다.
+
+```bash
+cd /data2/chanjoong/survey-agent/SurveyForge
+ps -ef | grep -E "[m]ain.py --topic|[r]un_demo|eval_out/.*[.]sh" | awk '{print $2, $9, $10, $11}'
+tail -3 eval_out/*.log 2>/dev/null
+ls eval_out/eval_*.md 2>/dev/null          # 완료된 회귀 검사
+git log --oneline -5 ; git status --short
+```
+
+**2026-08-06 02:30 기준으로 돌고 있던 것** (끝났으면 무시하세요):
+
+| 작업 | 스크립트 | 로그 | 산출 |
+|---|---|---|---|
+| 신 DB × 3DGS 생성 | (`redo_3dgs.sh`) | `eval_out/redo_3dgs.log` | `code/output/res/..._2026-08/3D Gaussian Splatting/exp_1/` |
+| 그 뒤 구 DB × 3DGS + 비교 | `eval_out/redo_3dgs_old.sh` | `eval_out/redo_3dgs_old.log` | `eval_out/eval_3D_Gaussian_Splatting.md` |
+
+`eval_out/eval_3D_Gaussian_Splatting.md`가 생겼으면 전부 끝난 것입니다.
+없는데 프로세스도 없으면 실패한 것이니 로그를 보세요.
+
+---
+
 ## 현재 상태
 
 **파이프라인 end-to-end 동작 확인 + 논문 DB 2026-08까지 최신화 완료.**
