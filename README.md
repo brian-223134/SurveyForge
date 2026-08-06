@@ -104,6 +104,16 @@ SurveyForge/
   논문은 분자·분모 양쪽에서 빠지는데, 신 DB 인용 128편 중 **100편이 그 이후**라 분모가
   125 → 28로 바뀌었습니다. 해석은 §3.5에 있습니다 — 인간 서베이와 나란히 놓아야 읽힙니다.
 
+**PDF로 컴파일해 둔 것** (`.tex`·`.bib`도 같은 자리에 있습니다. 만드는 법은 §7):
+
+| 서베이 | DB | 쪽수 | 참고문헌 |
+|---|---|---:|---:|
+| RAG (파일럿, `v4-pro`) | 배포본 | 43 | 101 |
+| RAG | 배포본 | 60 | 131 |
+| RAG | 최신화본 | 51 | 128 |
+| LLM-based Multi-Agent | 최신화본 | 57 | 151 |
+| 3D Gaussian Splatting | 최신화본 | 54 | 147 |
+
 ### 원본 대비 코드 변경
 
 | 파일 | 내용 | 왜 |
@@ -114,7 +124,7 @@ SurveyForge/
 | `code/src/utils.py` · `rag.py` · 두 agent | 컷오프 파라미터화, 폐기 건수 집계, arXiv id 날짜 파싱, 인덱스 글롭 탐색 | §4 |
 | `code/src/agents/outline_writer.py` | `filter_by_outline()` 추가, `--debug` `UnboundLocalError` 수정, 번호 없는 `Description:` 허용 | 아래 |
 | `code/requirements-fixed.txt` | 설치 가능한 의존성 (신규) | 원본이 해석 불가 |
-| `code/tools/md_to_tex.py` | Markdown → LaTeX 변환기 (신규) | `.md` 참고문헌에 링크가 없음 |
+| `code/tools/md_to_tex.py` | Markdown → LaTeX 변환기 (신규). 실행 경로에서 스냅샷 되짚기, 인용 연도를 arXiv id에서 |  `.md` 참고문헌에 링크가 없음 / `date`는 개정 연도라 인용 연도로 틀림 |
 
 발견한 업스트림 버그는 [`REPRODUCTION.md`](REPRODUCTION.md) §6에 6건 정리돼 있습니다.
 그중 셋은 **예외를 내지 않고 조용히 틀리는** 종류입니다 — 시간창 밖 문서 폐기,
@@ -391,6 +401,28 @@ SURVEYFORGE_PAPER_DATE_NEWEST=2026-08-31 \
 
 `PAPER_DATE_NEWEST`를 **짝수 해 1월 1일로 두지 마세요** — 시간창이 2012-01-01부터 2년 단위라
 경계에 정확히 걸리는 날짜가 생깁니다.
+
+### 결과물을 PDF로
+
+파이프라인이 내놓는 `.md`의 참고문헌은 **제목만** 있습니다. arXiv id는 옆의 `.json`에,
+저자·URL·날짜는 논문 DB에만 있어서, 셋을 조인해야 쓸 만한 문헌 목록이 나옵니다.
+
+```bash
+.venv/bin/python code/tools/md_to_tex.py "<run_dir>" --compile
+```
+
+`<run_dir>`은 `.md`와 `.json`이 있는 `.../<topic>/exp_1` 입니다. `.tex`·`.bib`·`.pdf`가
+같은 자리에 나옵니다. `--compile`을 빼면 변환만 하고, Overleaf에 올릴 거라면 그걸로 충분합니다.
+
+- **스냅샷은 실행 경로에서 되짚습니다.** 최신화본으로 만든 서베이에 배포본 DB를 물리면
+  최신 논문의 제목·저자가 통째로 빠지므로, 경로의 `__database_2026-08` 접미사를 읽습니다.
+- **인용 연도는 `date`가 아니라 arXiv id에서 읽습니다.** DB의 `date`는 *id가 가리키는
+  버전*의 날짜라(§3.2) 개정본이면 개정 연도가 들어갑니다 — 3DGS 참고문헌의 36%가
+  이렇게 틀려 있었습니다. id의 YYMM은 v1 공개월이라 바뀌지 않습니다.
+- 인용 번호는 `.md`의 것을 그대로 씁니다. `thebibliography`를 인라인으로 넣는 이유가
+  이것으로, BibTeX 스타일을 쓰면 재정렬되면서 원본 실행과의 대조가 깨집니다.
+- 매핑 안 된 유니코드가 남으면 경고합니다. 그대로 두면 pdflatex이 멈추니
+  `UNICODE_MAP`에 추가하거나 xelatex으로 컴파일하세요.
 
 ---
 
