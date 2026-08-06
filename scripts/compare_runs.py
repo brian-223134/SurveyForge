@@ -81,6 +81,35 @@ def integrity(run_dir):
     return marks
 
 
+def coverage_parts(topic, ref_path):
+    """(matched, 분모, 기준일 이후로 평가에서 빠진 수). test.py 와 같은 규칙으로 센다.
+
+    coverage 비율만 보면 안 되기 때문에 분해한다. test.py 는 벤치마크 기준일보다 새
+    논문을 **분자와 분모 양쪽에서** 뺀다. 그래서 최신 논문을 많이 인용할수록 분모가
+    작아지고, 정전 문헌을 실제로 더 적게 맞혀도 비율은 오른다 — 2026-08 스냅샷에서
+    실제로 그랬다 (matched 38 -> 18 인데 coverage 는 0.304 -> 0.643).
+    """
+    sys.path.insert(0, BENCH)
+    from test import parse_arxiv_date                      # noqa: E402
+
+    def dated(keys):
+        out = {}
+        for k in keys:
+            kk = re.sub(r'v\d+$', '', k)
+            d, s = parse_arxiv_date(kk)
+            if d:
+                out[kk] = (d, s)
+        return out
+
+    with open(os.path.join(BENCH, 'ref_bench', f'{topic}_bench.json')) as f:
+        bench = dated(json.load(f))
+    with open(ref_path) as f:
+        target = dated(json.load(f))
+    lbd, lbs = max(bench.values(), key=lambda x: (x[0], x[1]))
+    valid = {k for k, (d, s) in target.items() if d < lbd or (d == lbd and s < lbs)}
+    return len(valid & set(bench)), len(valid), len(target) - len(valid), lbd
+
+
 def run_coverage(topic, out_root, exp=1):
     topics_file = os.path.join(out_root, '_topic.txt')
     os.makedirs(out_root, exist_ok=True)
@@ -134,8 +163,12 @@ def main():
                         '--topic', args.topic, '--out-root', out_root],
                        check=True, capture_output=True)
         cov, raw = run_coverage(args.topic, out_root)
+        ref_json = os.path.join(out_root, args.topic, 'exp_1', 'ref.json')
+        matched, denom, ignored, bench_cut = coverage_parts(args.topic, ref_json)
 
-        rows.append({'label': label, 'path': path, 'refs': len(ids),
+        rows.append({'matched': matched, 'denom': denom, 'ignored': ignored,
+                     'bench_cut': bench_cut,
+                     'label': label, 'path': path, 'refs': len(ids),
                      'dated': len(known), 'recent': recent,
                      'recent_pct': 100 * recent / len(known) if known else 0,
                      'newest': max(known) if known else '-',
@@ -146,27 +179,35 @@ def main():
     lines = [f'# 회귀 검사 — {args.topic}', '',
              f'인용 날짜 기준 DB: `{os.path.basename(os.path.dirname(args.db))}`  '
              f'/ 최신 판정 기준: {BASE_CUTOFF} 이후', '',
-             '| 실행 | 참고문헌 | coverage | 최신 인용 | 최신 비율 | 최신 인용일 | 단어 | 섹션/서브 | 무결성 |',
-             '|---|---:|---:|---:|---:|---|---:|---:|---|']
+             '| 실행 | 참고문헌 | **matched** | 분모 | coverage | 평가 제외 | 최신 인용 | 최신 비율 | 단어 | 섹션/서브 | 무결성 |',
+             '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
     for r in rows:
         s = r['stats'] or {}
         ig = r['integrity']
         ok = 'OK' if not any(ig.values()) else ', '.join(f'{k}{v}' for k, v in ig.items() if v)
         cov = f"{r['coverage']:.3f}" if r['coverage'] is not None else '실패'
         lines.append(
-            f"| {r['label']} | {r['refs']} | {cov} | {r['recent']}/{r['dated']} | "
-            f"{r['recent_pct']:.1f}% | {r['newest']} | {s.get('words', '-')} | "
-            f"{s.get('sections', '-')}/{s.get('subsections', '-')} | {ok} |")
+            f"| {r['label']} | {r['refs']} | **{r['matched']}** | {r['denom']} | {cov} | "
+            f"{r['ignored']} | {r['recent']}/{r['dated']} | {r['recent_pct']:.1f}% | "
+            f"{s.get('words', '-')} | {s.get('sections', '-')}/{s.get('subsections', '-')} | {ok} |")
 
     if len(rows) == 2:
         a, b = rows
         if a['coverage'] is not None and b['coverage'] is not None:
-            d = b['coverage'] - a['coverage']
-            lines += ['', f"**coverage 변화: {a['coverage']:.3f} -> {b['coverage']:.3f} "
-                          f"({d:+.3f})** — 음수면 후보가 늘면서 정전 문헌이 밀려난 것"
-                          f"(희석), 양수면 개선.",
-                      '', f"**최신성: {a['recent_pct']:.1f}% -> {b['recent_pct']:.1f}%** — "
-                          f"벤치마크는 이 축을 보지 못하므로 coverage와 별도로 읽을 것."]
+            lines += ['',
+                f"**정전 문헌 적중: {a['matched']} -> {b['matched']}편** "
+                f"(벤치마크 참고문헌 기준). 이게 희석 여부를 보는 값이다.",
+                '',
+                f"**coverage 비율: {a['coverage']:.3f} -> {b['coverage']:.3f} "
+                f"({b['coverage'] - a['coverage']:+.3f})** — "
+                f"**비율만 보면 안 된다.** 분모가 {a['denom']} -> {b['denom']} 로 바뀌었다. "
+                f"벤치마크 기준일({a['bench_cut'].strftime('%Y-%m')})보다 새 논문은 분자·분모 "
+                f"양쪽에서 빠지므로, 최신 논문을 많이 인용할수록 분모가 작아져 "
+                f"실제로 덜 맞혀도 비율이 오른다.",
+                '',
+                f"**최신성: {a['recent_pct']:.1f}% -> {b['recent_pct']:.1f}%** "
+                f"(평가에서 무시된 인용 {a['ignored']} -> {b['ignored']}편). "
+                f"벤치마크는 이 축을 보지 못한다."]
 
     lines += ['', '---', '', '원본 출력:', '']
     for r in rows:
