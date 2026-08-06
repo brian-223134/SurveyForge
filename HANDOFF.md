@@ -21,15 +21,18 @@ ls eval_out/eval_*.md 2>/dev/null          # 완료된 회귀 검사
 git log --oneline -5 ; git status --short
 ```
 
-**2026-08-06 02:30 기준으로 돌고 있던 것** (끝났으면 무시하세요):
+**2026-08-06 02:40 기준으로 돌고 있던 것** (끝났으면 무시하세요):
 
 | 작업 | 스크립트 | 로그 | 산출 |
 |---|---|---|---|
-| 신 DB × 3DGS 생성 | (`redo_3dgs.sh`) | `eval_out/redo_3dgs.log` | `code/output/res/..._2026-08/3D Gaussian Splatting/exp_1/` |
-| 그 뒤 구 DB × 3DGS + 비교 | `eval_out/redo_3dgs_old.sh` | `eval_out/redo_3dgs_old.log` | `eval_out/eval_3D_Gaussian_Splatting.md` |
+| 구 DB × 3DGS 생성 → 신 DB × 3DGS 재실행 → 비교 | `eval_out/finish_3dgs.sh` | `eval_out/finish_3dgs.log` | `eval_out/eval_3D_Gaussian_Splatting.md` |
 
-`eval_out/eval_3D_Gaussian_Splatting.md`가 생겼으면 전부 끝난 것입니다.
+`eval_out/eval_3D_Gaussian_Splatting.md`에 `구 DB (flash)` 행이 있으면 전부 끝난 것입니다.
+(행 없이 표만 있으면 생성이 실패한 채 비교만 돌아간 것입니다.)
 없는데 프로세스도 없으면 실패한 것이니 로그를 보세요.
+
+3DGS는 두 번 엎어졌습니다 — 아웃라인 파서 `IndexError` 한 번, OpenRouter 429 한 번.
+둘 다 고쳤지만(`5dd5e72`, `b158d4a`, `55afd94`) 재실행할 일이 있으면 §함정 모음을 먼저 보세요.
 
 ---
 
@@ -306,6 +309,18 @@ cd code && ../.venv/bin/python ../tests/test_cutoffs.py     # 10개, 네트워�
 - **Semantic Scholar의 429는 속도 초과가 아닙니다.** 요청 간격 1s/3s/6s에서 429 비율이 모두
   50%로 동일하고 `Retry-After` 헤더도 없습니다. 확률적 거절이라 **길게 물러서면 손해**입니다
   (0.5s 재시도 329 id/s vs 2s 재시도 151 id/s).
+- **OpenRouter의 429는 반대입니다 — 물러서야 합니다.** S2와 헷갈리지 마세요. Parasail
+  공유 풀(`limit_source: upstream_provider_shared_pool`)은 진짜 혼잡이라 즉시 재시도하면
+  워커 16개(`MAX_THREADS 8` × `MAX_SECTION_THREADS 2`)가 몇 초 만에 재시도 예산을 다 태웁니다.
+  3DGS 신 DB 편이 이렇게 죽었습니다. 지금은 지터 백오프 + 실패분 **순차** 재시도가 들어가
+  있습니다(`SURVEYFORGE_RETRY_BASE` / `_BATCH_RETRY_COOLDOWN`). 그래도 계속 429면 시간을
+  두고 다시 돌리세요 — `SURVEYFORGE_MAX_THREADS`를 낮추는 것도 방법입니다.
+  provider 폴백은 켜지 마세요, 양자화가 섞여 재현성이 깨집니다.
+- **감시 스크립트에서 `pgrep -f "<대상 명령>"`을 쓰지 마세요.** 그 문자열이 감시자 자신의
+  명령줄에도 들어 있어서 **자기 자신을 매치하고 영원히 기다립니다.** 실제로 3DGS 대기 루프가
+  이렇게 교착됐습니다. PID로 기다리거나(`kill -0 $PID`) 대괄호 트릭(`finish_3dgs[.]sh`)을
+  쓰세요. PID를 `pgrep | head -1`로 잡는 것도 위험합니다 — 순간적으로 뜬 다른 프로세스를
+  잡을 수 있으니, 띄운 쪽에서 `$!`로 받으세요.
 - **OAI-PMH의 `from`은 수정일 기준입니다.** 메타데이터만 갱신된 옛 논문이 딸려 옵니다
   (1991년 논문까지). `--exclude-db`로 기존 것을 걸러야 합니다.
 - **`code/requirement.txt`는 그대로 설치되지 않습니다** (`numpy==1.23.5` 핀이 faiss와 충돌).
