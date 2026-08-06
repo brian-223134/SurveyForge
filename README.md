@@ -42,6 +42,39 @@ Moreover, to achieve a comprehensive evaluation, we construct **SurveyBench**, w
 cd code && python run_demo.py
 ```
 
+## 💰 편당 비용 (이 저장소 실측)
+
+같은 토픽(`Retrieval-Augmented Generation for Large Language Models`), 같은 파라미터
+(`--section_num 7 --subsection_len 500 --rag_num 100 --rag_max_out 60
+--outline_reference_num 1500`)로 잰 값이다. 모두 OpenRouter 실청구 기준.
+
+| 실행 | 모델 | provider | reasoning | 논문 DB | 입력 / 출력 토큰 | **비용** |
+|---|---|---|---|---|---|---:|
+| 파일럿 (2026-07-31) | `deepseek-v4-pro` | `streamlake/fp8` | 기본값 (ON) | `database` 589,123편 | 2,241,756 / 127,848 | **$1.998** |
+| 구 DB (2026-08-05) | `deepseek-v4-flash-0731` | `parasail/fp8` | **OFF** | `database` 589,123편 | 2,406,633 / 158,181 | **$0.381** |
+| 신 DB (2026-08-05) | `deepseek-v4-flash-0731` | `parasail/fp8` | **OFF** | `database_2026-08` 908,819편 | *(측정 중)* | *(측정 중)* |
+
+단가: `v4-pro` fp8 $0.67/$1.34 per M, `v4-flash-0731` fp8 $0.140/$0.280 per M.
+
+**비용의 90%가 입력 토큰이다.** 서브섹션마다 검색한 논문 초록을 프롬프트에 넣기 때문이며,
+줄이려면 `rag_max_out` / `outline_reference_num` 을 낮춰야 한다. 출력을 줄여 봐야 거의 안 준다.
+
+**reasoning 을 끄는 것이 5배 차이의 일부다.** 파일럿은 토큰 카운터에 잡히지 않는 reasoning
+토큰이 총액의 16%($0.325)였다 — 정가 환산 $1.673 대 실청구 $1.998. `deepseek` 계열은
+기본이 ON이므로 `SURVEYFORGE_REASONING_EFFORT=none` 으로 명시해야 하고, 껐는지는
+응답의 `reasoning_tokens` 로 확인한다. 나머지 차이는 단가(1/4.8)에서 온다.
+
+**모델을 바꾸면 분량도 바뀌므로 토큰 수를 그대로 옮기면 안 된다.** flash 는 같은
+`subsection_len 500` 에서 29,977단어(34서브섹션)를 썼고 pro 는 18,210단어(30서브섹션)였다.
+그래도 총액은 flash 가 1/5.2다.
+
+DB 를 키워도 **비용은 거의 안 변한다** — 프롬프트에 들어가는 논문 수는 `rag_max_out` 이
+정하지 코퍼스 크기가 정하지 않는다. 늘어나는 건 검색 시간이다 (FAISS `IDSelectorArray`
+선형 스캔이 58.9만편 97초 → 90.9만편 244초).
+
+증분 DB 구축 자체의 비용은 [`REPRODUCTION.md`](REPRODUCTION.md) §7 참조 (arXiv OAI-PMH와
+Semantic Scholar 는 무료, GPU 약 2시간).
+
 ## 🕵️‍♂️How to evaluate the quality of the survey paper?
 
 We offer **SurveyBench**, a benchmark for **academic research** and **evaluating the quality of AI-generated surveys.**
