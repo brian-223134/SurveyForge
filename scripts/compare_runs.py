@@ -4,9 +4,15 @@ SurveyBench coverage 하나만으로는 부족하다. 벤치마크의 기준일�
 2023-10 ~ 2024-07이라 **2024-08 이후 인용은 분자에서도 분모에서도 빠진다** —
 증분이 가져온 최신 논문은 이 지표에 아예 보이지 않는다. 그래서 세 가지를 같이 낸다.
 
-  coverage  기존 정전(canonical) 문헌을 여전히 잘 집어내는가 (희석 여부)
-  최신성    인용 중 스냅샷 컷오프 이후 비율 (증분이 출력까지 닿았는가)
-  분량·무결성  같은 조건에서 산출물이 망가지지 않았는가
+  matched / 분모 / 정확도  정전(canonical) 문헌 선택 능력
+  최신성                   인용 중 스냅샷 컷오프 이후 비율 (증분이 출력까지 닿았는가)
+  분량·무결성              같은 조건에서 산출물이 망가지지 않았는가
+
+**coverage 비율도 matched 도 단독으로는 못 읽는다.** 최신 논문을 많이 인용하면 분모가
+작아지므로 비율은 오르고 matched 는 준다. 2026-08 스냅샷에서 실제로 둘 다 일어났다
+(0.304 -> 0.643 이면서 38 -> 18). 판정 가능한 인용 안에서의 **정확도**를 인간 서베이와
+나란히 놓아야 읽힌다 — 그 축에서는 30.4% -> 64.3% 로 인간(54.2%)을 넘었고, 희석이
+아니라 배분 변화였다. 그래서 `--human` 으로 인간 기준선을 함께 넣을 수 있다.
 
 사용법:
     python scripts/compare_runs.py \
@@ -136,6 +142,9 @@ def main():
         os.environ.get('SURVEYFORGE_DATA', '/data2/chanjoong/survey-agent/SurveyForge_data'),
         'database_2026-08', 'arxiv_paper_db_with_cc.json'),
         help='인용 날짜 조회용 DB (증분본이어야 최신 논문 날짜를 안다)')
+    ap.add_argument('--human', default='',
+                    help='인간 서베이 ref json (SurveyBench/human_written_ref/<제목>.json). '
+                         '기준선으로 표에 함께 싣는다')
     ap.add_argument('--out', default='eval_summary.md')
     args = ap.parse_args()
 
