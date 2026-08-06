@@ -77,6 +77,10 @@ _SEEN_PROVIDERS = set()
 # otherwise retry together too.
 _RETRY_BASE = float(os.environ.get("SURVEYFORGE_RETRY_BASE", 4.0))
 _RETRY_CAP = float(os.environ.get("SURVEYFORGE_RETRY_CAP", 60.0))
+# Second line of defence, at the batch level: retry whatever the per-request
+# loop gave up on, serially and after a longer pause.
+_BATCH_RETRY_ROUNDS = int(os.environ.get("SURVEYFORGE_BATCH_RETRY_ROUNDS", 3))
+_BATCH_RETRY_COOLDOWN = float(os.environ.get("SURVEYFORGE_BATCH_RETRY_COOLDOWN", 60.0))
 
 
 def _retry_wait(attempt, max_try):
@@ -200,8 +204,25 @@ class APIModel:
                 return None
     
     def chat(self, text, temperature=1):
-        response = self.__req(text, temperature=temperature, max_try=5)
-        return response
+        # Callers use the result directly (.replace(), token counting), so None
+        # surfaces as an unrelated TypeError/AttributeError frames away from the
+        # API error that caused it. Give the request the same cooldown-and-retry
+        # the batch path gets -- this path serves the late, expensive stages
+        # (outline merge, LCE refinement), where losing the run costs the most --
+        # then fail with a message that names the real cause.
+        for round_no in range(_BATCH_RETRY_ROUNDS):
+            response = self.__req(text, temperature=temperature, max_try=5)
+            if response is not None:
+                return response
+            if round_no == _BATCH_RETRY_ROUNDS - 1:
+                break
+            wait = _BATCH_RETRY_COOLDOWN * (round_no + 1)
+            print(f"[CHAT RETRY] request failed; waiting {wait:.0f}s "
+                  f"(round {round_no + 1}/{_BATCH_RETRY_ROUNDS})")
+            time.sleep(wait)
+        raise RuntimeError(
+            f"chat: request failed after {_BATCH_RETRY_ROUNDS} rounds of retries. "
+            f"See the [GIVE UP] lines above for the underlying API error.")
 
     def __chat(self, text, temperature, res_l, idx):
         
@@ -230,6 +251,34 @@ class APIModel:
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing remaining"):
                 future.result()
 
+        # A slot that is still None means __req exhausted its retries. Left in
+        # place it poisons the caller far downstream -- the 3DGS run died ten
+        # minutes in with "TypeError: expected string or buffer" from tiktoken,
+        # with nothing pointing back at the 429 that actually caused it.
+        #
+        # Retry the failed slots serially. The failure mode we keep hitting is a
+        # shared-pool rate limit, so the useful move is to stop competing with
+        # ourselves: one request at a time, after a cooldown. Then fail loudly
+        # rather than returning a list with holes in it.
+        for round_no in range(_BATCH_RETRY_ROUNDS):
+            missing = [i for i, r in enumerate(res_l) if r is None]
+            if not missing:
+                break
+            wait = _BATCH_RETRY_COOLDOWN * (round_no + 1)
+            print(f"[BATCH RETRY] {len(missing)}/{len(res_l)} requests failed; "
+                  f"waiting {wait:.0f}s then retrying them one at a time "
+                  f"(round {round_no + 1}/{_BATCH_RETRY_ROUNDS})")
+            time.sleep(wait)
+            for i in missing:
+                self.__chat(text_batch[i], temperature, res_l, i)
+
+        missing = [i for i, r in enumerate(res_l) if r is None]
+        if missing:
+            raise RuntimeError(
+                f"batch_chat: {len(missing)}/{len(res_l)} requests still failed "
+                f"after {_BATCH_RETRY_ROUNDS} serial retry rounds (indices "
+                f"{missing[:10]}{'...' if len(missing) > 10 else ''}). See the "
+                f"[GIVE UP] lines above for the underlying API error.")
         return res_l
 
 class LocalModel:
