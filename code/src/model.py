@@ -69,6 +69,23 @@ def _openrouter_extra():
 OPENROUTER_EXTRA = _openrouter_extra()
 _SEEN_PROVIDERS = set()
 
+# Retries used to fire back-to-back. Against an upstream 429 that is the worst
+# possible response: MAX_THREADS * MAX_SECTION_THREADS workers each burn their
+# whole budget within seconds of the limit appearing, so a rate limit that would
+# have cleared in half a minute takes the run down instead. Back off with jitter
+# -- jitter matters because the workers hit the limit together and would
+# otherwise retry together too.
+_RETRY_BASE = float(os.environ.get("SURVEYFORGE_RETRY_BASE", 4.0))
+_RETRY_CAP = float(os.environ.get("SURVEYFORGE_RETRY_CAP", 60.0))
+
+
+def _retry_wait(attempt, max_try):
+    """Seconds to wait before the next attempt; 0 when this was the last one."""
+    if attempt >= max_try - 1:
+        return 0.0
+    import random
+    return min(_RETRY_CAP, _RETRY_BASE * (2 ** attempt)) * (0.5 + random.random())
+
 
 class APIModel:
 
@@ -116,11 +133,15 @@ class APIModel:
                         last_error = (f"empty content, finish_reason="
                                       f"{choice.finish_reason}")
                         print(f"[EMPTY] {last_error}\n Retrying...{_} Times")
+                        time.sleep(_retry_wait(_, max_try))
                         continue
                     return content
                 except Exception as e:
                     last_error = e
-                    print(f"API error: {e}\n Retrying...{_} Times")
+                    wait = _retry_wait(_, max_try)
+                    print(f"API error: {e}\n Retrying...{_} Times "
+                          f"(waiting {wait:.1f}s)")
+                    time.sleep(wait)
                     continue
             # Falling out of the loop used to return None implicitly, which blew up
             # far away in .replace() / token counting. Be explicit and loud instead.
