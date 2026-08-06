@@ -1,0 +1,645 @@
+Architectural Foundations and System Design
+['This section dissects the structural building blocks and design patterns that enable collections of large language models to function as coordinated systems. It covers the anatomy of individual agents, the communication substrates that link them, and the orchestration frameworks that manage their activities, with careful attention to scalability, efficiency, and adaptivity.', '1. Internal anatomy of the individual agent: Analysis of planning and reasoning mechanisms, memory structures, and tools, and how these components are instantiated for heterogeneous roles and specialization.', '2. Communication protocols and interaction interfaces: Examination of natural language dialogue, structured intermediate representations including standardization efforts, and emerging latent space communication.', '3. Orchestration frameworks and coordination topologies: Analysis of the overall system design patterns used to coordinate large language model-based agents, including centralized, hierarchical, and decentralized frameworks, and contrast between static workflows and dynamic adaptation mechanisms.', '4. Memory and knowledge management across the collective: Exploration of memory design at the system level, contrasting individual and shared memory, and considering information routing mechanisms and consistency preservation in distributed settings.', '5. Resource allocation and efficiency: Investigation into the computational and economic costs of running multiple large language model agents, including scheduling, budgeting, and mechanisms for optimizing performance within resource-constrained or budget-limited environments.']
+
+Practical Considerations for Agentic LLM Systems
+
+Beyond Natural Language  LLMs Leveraging Alternative Formats for
+  Enhanced Reasoning and Communication
+
+On the Design and Analysis of LLM-Based Algorithms
+
+LLM-Based Multi-Agent Systems for Code Generation: A Multi-Vocal Literature Review
+
+Learning to Orchestrate Agents in Natural Language with the Conductor
+
+Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM
+  Agents
+
+Synergizing Logical Reasoning, Knowledge Management and Collaboration in Multi-Agent LLM System
+
+LLMArena  Assessing Capabilities of Large Language Models in Dynamic
+  Multi-Agent Environments
+
+Grounding Natural Language for Multi-agent Decision-Making with Multi-agentic LLMs
+
+MemEngine: A Unified and Modular Library for Developing Advanced Memory of LLM-based Agents
+
+Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems
+
+Memory in the LLM Era: Modular Architectures and Strategies in a Unified Framework
+
+A-MEM: Agentic Memory for LLM Agents
+
+X-MAS: Towards Building Multi-Agent Systems with Heterogeneous LLMs
+
+Parallelized Planning-Acting for Efficient LLM-based Multi-Agent Systems in Minecraft
+
+Rethinking Memory in LLM based Agents: Representations, Operations, and Emerging Topics
+
+Scaling LLM-Driven Multi-Agent Systems: Design Principles and Architectural Scalability Analysis
+
+Know the Ropes: A Heuristic Strategy for LLM-based Multi-Agent System Design
+
+Position: Towards a Responsible LLM-empowered Multi-Agent Systems
+
+Controlling Performance and Budget of a Centralized Multi-agent LLM System with Reinforcement Learning
+
+Memory as Metabolism: A Design for Companion Knowledge Systems
+
+MASFactory: A Graph-centric Framework for Orchestrating LLM-Based Multi-Agent Systems with Vibe Graphing
+
+LLM Multi-Agent Systems  Challenges and Open Problems
+
+Modeling Response Consistency in Multi-Agent LLM Systems: A Comparative Analysis of Shared and Separate Context Approaches
+
+Memory for Autonomous LLM Agents:Mechanisms, Evaluation, and Emerging Frontiers
+
+Multi-Agent Coordination Adaptation via Structure-Guided Orchestration
+
+Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces
+
+SpeechAgents  Human-Communication Simulation with Multi-Modal
+  Multi-Agent Systems
+
+Topological Structure Learning Should Be A Research Priority for LLM-Based Multi-Agent Systems
+
+Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System
+
+LLM Agent Communication Protocol (LACP) Requires Urgent Standardization: A Telecom-Inspired Protocol is Necessary
+
+HyLaT: Efficient Multi-Agent Communication via Hybrid Latent-Text Protocol
+
+Beyond the Strongest LLM: Multi-Turn Multi-Agent Orchestration vs. Single LLMs on Benchmarks
+
+AMAS: Adaptively Determining Communication Topology for LLM-based Multi-Agent System
+
+Reducing Cost of LLM Agents with Trajectory Reduction
+
+LLM-Powered AI Agent Systems and Their Applications in Industry
+
+Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets
+
+Controlling Large Language Model-based Agents for Large-Scale
+  Decision-Making  An Actor-Critic Approach
+
+Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control
+
+AgentRM: An OS-Inspired Resource Manager for LLM Agent Systems
+
+Evaluating Theory of Mind and Internal Beliefs in LLM-Based Multi-Agent Systems
+
+Scaling Behavior of Single LLM-Driven Multi-Agent Systems
+
+Toward Personalized LLM-Powered Agents: Foundations, Evaluation, and Future Directions
+
+Self-Resource Allocation in Multi-Agent LLM Systems
+
+LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Integration of Multi Active/Passive Core-Agents
+
+MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents
+
+Turn Every Application into an Agent: Towards Efficient Human-Agent-Computer Interaction with API-First LLM-Based Agents
+
+Toward Formalizing LLM-Based Agent Designs through Structural Context Modeling and Semantic Dynamics Analysis
+
+Toward Efficient Agents: Memory, Tool learning, and Planning
+
+Building LLM Agents by Incorporating Insights from Computer Systems
+
+Collaboration, Communication, and Collective Decision-Making
+['This section investigates the dynamic interaction mechanisms among agents for coordination, negotiation, and shared decision-making. It moves beyond static architecture to analyze the behavioral and procedural frameworks through which ideas are exchanged, refined, and amalgamated into system outputs, including debate, consensus-building, and adversarial engagements under uncertainty.', '1. Deliberation, debate, and consensus mechanisms: In-depth exploration of how agents exchange arguments, critique proposals, and iteratively refine outputs through structured debate and collaborative reasoning, including strategies for managing conflicting information while avoiding premature convergence and groupthink.', '2. Cooperation, competition, and negotiation dynamics: Frameworks for understanding adversarial, benign, and mixed-incentive scenarios including market-based mechanisms and strategic behavior, and how agent goals and system-level rewards shape emergent interaction patterns.', '3. Task decomposition and role allocation: Analysis of strategies for dividing complex problems into constituent sub-tasks, assigning roles to specialized capabilities, and generating task graphs that specify the logical and temporal dependencies into workflows.', "4. Strategic reasoning and theory of mind in collective settings: Investigation into how agents model and predict the goals and knowledge states of other agents, including reasoning about other entities' beliefs and likely future actions.", '5. Interactive planning and decision-making under uncertainty: Examination of dynamic planning, hierarchical task networks, and adaptive workflow routing that ensures coherent coordinated behavior.']
+
+TMGBench: A Systematic Game Benchmark for Evaluating Strategic Reasoning Abilities of LLMs
+
+The Deliberative Illusion: Diagnosing Factual Attrition and Stance Homogenization in Multi-Agent LLM Deliberation
+
+Simulating Human Strategic Behavior  Comparing Single and Multi-agent
+  LLMs
+
+Adaptive Theory of Mind for LLM-based Multi-Agent Coordination
+
+Strategic Bargaining in Multi-Buyer Markets: Reinforcement Learning from Verifiable Rewards for LLM Negotiations
+
+L-MAD: A Systematic Evaluation of Multi-Agent Debate Structures in Legal Reasoning
+
+From Assumptions to Actions: Turning LLM Reasoning into Uncertainty-Aware Planning for Embodied Agents
+
+Exploration of LLM Multi-Agent Application Implementation Based on LangGraph+CrewAI
+
+Talk Isn't Always Cheap: Understanding Failure Modes in Multi-Agent Debate
+
+TDAG: A Multi-Agent Framework based on Dynamic Task Decomposition and Agent Generation
+
+The End of Reward Engineering: How LLMs Are Redefining Multi-Agent Coordination
+
+Simulating Cooperative Prosocial Behavior with Multi-Agent LLMs: Evidence and Mechanisms for AI Agents to Inform Policy Decisions
+
+Rethinking the Value of Multi-Agent Workflow: A Strong Single Agent Baseline
+
+An Electoral Approach to Diversify LLM-based Multi-Agent Collective Decision-Making
+
+Human Values Matter: Investigating How Misalignment Shapes Collective Behaviors in LLM Agent Communities
+
+Modular Task Decomposition and Dynamic Collaboration in Multi-Agent Systems Driven by Large Language Models
+
+AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions
+
+Sequential Consensus for Multi-Agent LLM Debates: A Wald-SPRT compute governor with calibration-based failure detection
+
+I Want to Break Free! Persuasion and Anti-Social Behavior of LLMs in Multi-Agent Settings with Social Hierarchy
+
+An approach for systematic decomposition of complex llm tasks
+
+CONSCIENTIA: Can LLM Agents Learn to Strategize? Emergent Deception and Trust in a Multi-Agent NYC Simulation
+
+LLM-based Multi-Agent Reinforcement Learning: Current and Future Directions
+
+Heterogeneous Swarms: Jointly Optimizing Model Roles and Weights for Multi-LLM Systems
+
+Multi-Agent Collaborative Intelligence: Dual-Dial Control for Reliable LLM Reasoning
+
+How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning
+
+Grounding Natural Language for Multi-agent Decision-Making with Multi-agentic LLMs
+
+ALYMPICS  LLM Agents Meet Game Theory -- Exploring Strategic
+  Decision-Making with AI Agents
+
+Game-Theoretic Lens on LLM-based Multi-Agent Systems
+
+Agentic LLM Framework for Adaptive Decision Discourse
+
+SPIN-Bench: How Well Do LLMs Plan Strategically and Reason Socially?
+
+Will Systems of LLM Agents Cooperate: An Investigation into a Social Dilemma
+
+When and Why Does Multi-Agent Debate Fail and Does It Really Underperform?
+
+Towards Cognitive Synergy in LLM-Based Multi-Agent Systems: Integrating Theory of Mind and Critical Evaluation
+
+Triadic Werewolf: A Jester Role for Multi-Hop Theory of Mind in LLMs
+
+Efficient Leave-one-out Approximation in LLM Multi-agent Debate Based on Introspection
+
+CHAL: Council of Hierarchical Agentic Language
+
+Flow: Modularized Agentic Workflow Automation
+
+SMART-LLM  Smart Multi-Agent Robot Task Planning using Large Language
+  Models
+
+Agent-Oriented Planning in Multi-Agent Systems
+
+Coordination as an Architectural Layer for LLM-Based Multi-Agent Systems
+
+The Value of Variance: Mitigating Debate Collapse in Multi-Agent Systems via Uncertainty-Driven Policy Optimization
+
+Is Lying an Emergent Behaviour in LLMs? Evidence from Gaslighting AI agents in a Sustainability Game
+
+The Subtle Art of Defection: Understanding Uncooperative Behaviors in LLM based Multi-Agent Systems
+
+Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems
+
+Talk Structurally, Act Hierarchically: A Collaborative Framework for LLM Multi-Agent Systems
+
+Integrating LLM in Agent-Based Social Simulation: Opportunities and Challenges
+
+ELHPlan: Efficient Long-Horizon Task Planning for Multi-Agent Collaboration
+
+Solving a Million-Step LLM Task with Zero Errors
+
+Opponent Shaping in LLM Agents
+
+Game-theoretic LLM: Agent Workflow for Negotiation Games
+
+Learning, Evolution, and Continuous Adaptation in Multi-Agent Systems
+['This section examines the mechanisms through which systems improve over time, spanning offline training, online learning, self-improvement, and evolutionary techniques. It addresses the distinct challenges of credit assignment, non-stationary dynamics, and moving beyond static design.', '1. Training and fine-tuning methodologies: Coverage of multi-agent reinforcement learning paradigms, post-training for specialized roles, and agent alignment strategies, including distributed policy optimization.', '2. Self-improvement and reflection: Exploration of frameworks for agents to correct errors, refine strategies, accumulate skills, and reuse procedural and episodic knowledge through feedback.', '3. Automated design and meta-learning: Methods for automatically discovering effective agent configurations, task-specific coordination structures, and efficient workflows across systems.', '4. Continual and lifelong learning: Mechanisms to support the lifecycle of a system—adapting to new tasks without catastrophic forgetting, emerging new capabilities, and maintaining long-term memory.']
+
+Scaling Teams or Scaling Time? Memory Enabled Lifelong Learning in LLM Multi-Agent Systems
+
+Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization
+
+Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System
+
+Memento: Fine-tuning LLM Agents without Fine-tuning LLMs
+
+Recursive Introspection: Teaching Language Model Agents How to Self-Improve
+
+Memory in the LLM Era: Modular Architectures and Strategies in a Unified Framework
+
+Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents
+
+Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training
+
+LEED: A Highly Efficient and Scalable LLM-Empowered Expert Demonstrations Framework for Multi-Agent Reinforcement Learning
+
+LLM-based Multi-Agent Systems: Techniques and Business Perspectives
+
+Toward Adaptable Multi-Agent Reinforcement Learning: An Assumption-Aware Review
+
+Contemporary Agent Technology: LLM-Driven Advancements vs Classic Multi-Agent Systems
+
+MLC-Agent: Cognitive Model based on Memory-Learning Collaboration in LLM Empowered Agent Simulation Environment
+
+Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM
+  Agents
+
+Position: Episodic Memory is the Missing Piece for Long-Term LLM Agents
+
+LLM-Powered AI Agent Systems and Their Applications in Industry
+
+LLM-Based Agentic Systems for Software Engineering: Challenges and Opportunities
+
+Self-Adaptive Large Language Model (LLM)-Based Multiagent Systems
+
+Lifelong Learning Metrics
+
+Strategist: Learning Strategic Skills by LLMs via Bi-Level Tree Search
+
+No Time Like the Present: Agentic Test-Time Training for LLM Agents
+
+Self-Consolidation for Self-Evolving Agents
+
+Learn Like Humans: Use Meta-cognitive Reflection for Efficient Self-Improvement
+
+Towards AGI A Pragmatic Approach Towards Self Evolving Agent
+
+Rosetta Memory: Adaptive Memory for Cross-LLM Agents
+
+SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision
+
+AdMem: Advanced Memory for Task-solving Agents
+
+LLM-based Multi-Agent Reinforcement Learning: Current and Future Directions
+
+LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Integration of Multi Active/Passive Core-Agents
+
+Enabling Personalized Long-term Interactions in LLM-based Agents through Persistent Memory and User Profiles
+
+Learning Decentralized LLM Collaboration with Multi-Agent Actor Critic
+
+If an LLM Were a Character, Would It Know Its Own Story? Evaluating Lifelong Learning in LLMs
+
+Reinforcement Learning from Reflective Feedback (RLRF)  Aligning and
+  Improving LLMs via Fine-Grained Self-Reflection
+
+AgentSwift: Efficient LLM Agent Design via Value-guided Hierarchical Search
+
+Learning to Configure Agentic AI Systems
+
+MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution
+
+Bridging the Capability Gap: Joint Alignment Tuning for Harmonizing LLM-based Multi-Agent Systems
+
+MAR:Multi-Agent Reflexion Improves Reasoning Abilities in LLMs
+
+MIRROR: Multi-agent Intra- and Inter-Reflection for Optimized Reasoning in Tool Learning
+
+Inefficiencies of Meta Agents for Agent Design
+
+AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution
+
+Efficient Distributed Framework for Collaborative Multi-Agent
+  Reinforcement Learning
+
+Coevolving with the Other You: Fine-Tuning LLM with Sequential Cooperative Multi-Agent Reinforcement Learning
+
+How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior
+
+SkillMAS: Skill Co-Evolution with LLM-based Multi-Agent System
+
+Evolve as a Team: Collaborative Self-Evolution for LLM-based Multi-Agent Systems
+
+AutoRefine: From Trajectories to Reusable Expertise for Continual LLM Agent Refinement
+
+MASCA: LLM based-Multi Agents System for Credit Assessment
+
+Learning to Deliberate: Meta-policy Collaboration for Agentic LLMs with Multi-agent Reinforcement Learning
+
+System Design for an Integrated Lifelong Reinforcement Learning Agent
+  for Real-Time Strategy Games
+
+Evaluation, Benchmarks, and Analytical Methodologies
+['This section addresses the critical challenge of measuring the capabilities and limitations of large language model-based multi-agent systems. It covers the current landscape of benchmarks and metrics, distinct from single-agent evaluation, and methodologies for nuanced, multi-level assessment that captures both performance and emergent behavioral phenomena.', '1. Quantitative benchmarks for task-specific evaluation: Review of task-oriented and systematic benchmark suites for multi-agent collaboration in domains such as software engineering, mathematics, science, and embodied decision-making, including metrics for success rate, efficiency, and cost.', '2. Interaction-centric performance metrics: Evaluation of the quality of collaborative processes, assessing reasoning quality, coherence, communication efficiency, and robustness, with separate treatment from final task success metrics.', '3. Analytical evaluation of emergent behaviors: Methodological approaches for examining unanticipated behaviors and social dynamics in agent societies, including coordination patterns, leadership emergence, information cascades, and the identification of mechanisms of collective intelligence.', '4. Standardization and reproducibility: Challenges related to obtaining comparable results across studies, including controlling for model versions, prompting strategies, and computational budgets, in order to enable fair scientific comparison.', '5. Efficiency and resource-aware evaluation: Metrics and frameworks for assessing economic viability, token consumption, latency, and the Pareto trade-off between quality and cost.']
+
+Eta Given Delta: Defining LLM Tool Efficiency With Marginal Tool Utility
+
+Can Agents Spontaneously Form a Society? Introducing a Novel Architecture for Generative Multi-Agents to Elicit Social Emergence
+
+ProtocolBench: Which LLM MultiAgent Protocol to Choose?
+
+LLM-Based Agent Society Investigation  Collaboration and Confrontation
+  in Avalon Gameplay
+
+BattleAgentBench: A Benchmark for Evaluating Cooperation and Competition Capabilities of Language Models in Multi-Agent Systems
+
+Continuous Benchmark Generation for Evaluating Enterprise-scale LLM Agents
+
+Spontaneous Emergence of Agent Individuality through Social Interactions in LLM-Based Communities
+
+MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents
+
+MACC: Multi-Agent Collaborative Competition for Scientific Exploration
+
+LLM-Based Multi-Agent System for Simulating and Analyzing Marketing and Consumer Behavior
+
+Shall We Talk  Exploring Spontaneous Collaborations of Competing LLM
+  Agents
+
+How Many Tasks Are Enough for Agent Benchmark Decisions? A Replay Analysis of Public LLM Agent Benchmarks
+
+BAMAS: Structuring Budget-Aware Multi-Agent Systems
+
+Talk Structurally, Act Hierarchically: A Collaborative Framework for LLM Multi-Agent Systems
+
+COMMA: A Communicative Multimodal Multi-Agent Benchmark
+
+Agents that Matter: Optimizing Multi-Agent LLMs via Removal-Based Attribution
+
+LLM-Augmented Agent-Based Modelling for Social Simulations: Challenges and Opportunities
+
+AEMA: Verifiable Evaluation Framework for Trustworthy and Controlled Agentic LLM Systems
+
+The Subtle Art of Defection: Understanding Uncooperative Behaviors in LLM based Multi-Agent Systems
+
+AgentGroupChat-V2: Divide-and-Conquer Is What LLM-Based Multi-Agent System Need
+
+Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents
+
+Agent Laboratory: Using LLM Agents as Research Assistants
+
+Literature Review Of Multi-Agent Debate For Problem-Solving
+
+Exploring Large Language Model based Intelligent Agents  Definitions,
+  Methods, and Prospects
+
+MASLab: A Unified and Comprehensive Codebase for LLM-based Multi-Agent Systems
+
+Automating Computational Reproducibility in Social Science: Comparing Prompt-Based and Agent-Based Approaches
+
+Human Values Matter: Investigating How Misalignment Shapes Collective Behaviors in LLM Agent Communities
+
+REALM-Bench: A Benchmark for Evaluating Multi-Agent Systems on Real-world, Dynamic Planning and Scheduling Tasks
+
+Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM
+  Agents
+
+LLM-Based Agentic Systems for Software Engineering: Challenges and Opportunities
+
+Shachi: A Modular, Controllable Framework for LLM-Based Agent-Based Modeling of Emergent Collective Behavior
+
+Reliable and Developer-Aligned Evaluation of Agents for Software Engineering
+
+InnovatorBench: Evaluating Agents' Ability to Conduct Innovative LLM Research
+
+Interaction Theater: A case of LLM Agents Interacting at Scale
+
+An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring
+
+GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems
+
+Automating Benchmark Design
+
+Language Model Teams as Distributed Systems
+
+T1-Bench: Benchmarking Multi-Scenario Agents in Real-World Domains
+
+Benchmark Test-Time Scaling of General LLM Agents
+
+Assessing and Enhancing the Robustness of LLM-based Multi-Agent Systems Through Chaos Engineering
+
+On the Dynamics of Multi-Agent LLM Communities Driven by Value Diversity
+
+Benchmarking Emergent Coordination in Large-Scale LLM Populations: An Evaluation Framework on the MoltBook Archive
+
+Self-Resource Allocation in Multi-Agent LLM Systems
+
+Beyond Frameworks: Unpacking Collaboration Strategies in Multi-Agent Systems
+
+Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations
+
+Understanding Multi-Agent LLM Frameworks: A Unified Benchmark and Experimental Analysis
+
+EpidemIQs: Prompt-to-Paper LLM Agents for Epidemic Modeling and Analysis
+
+AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+Towards a Science of Collective AI: LLM-based Multi-Agent Systems Need a Transition from Blind Trial-and-Error to Rigorous Science
+
+Security, Safety, Alignment, and Ethical Considerations
+['This section scrutinizes the vulnerabilities, risks, and ethical considerations that become critical when multiple independent agents interact in integrated systems. It analyzes threats unique to or amplified by interconnection, including adversarial attacks, emergent composition failures, and the imperative to maintain human control and value alignment in decentralized environments. The section also considers governance of autonomy and accountability.', '1. Threat landscape and adversarial attacks: Detailed analysis of multi-agent-specific attack surfaces, including adversarial injection through communication channels, system topology-based attacks, manipulation of shared memory and knowledge bases, and multi-agent backdoors that compromise whole-system integrity.', '2. Cascading failures and propagation: Investigation of failure mechanisms arising from agent-to-agent interactions, including error amplification, systemic hallucination, context drift, and the structural conditions that either contain or escalate failures.', '3. Alignment and value governance: challenges to maintaining alignment in the collective generation level, including emergent misalignment and conflicting objectives, and the design of control frameworks for ethical and safe operation of societies.', '4. Trust, accountability, and interpretability: mechanisms for understanding and attributing decisions across components, enabling human oversight and intervention, and building user confidence.', '5. Privacy and data protection: strategies for preserving data privacy, confidentiality, and segregation when multiple entities exchange information and coordinate on tasks.']
+
+When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime
+
+TAMAS: Benchmarking Adversarial Risks in Multi-Agent LLM Systems
+
+Searching for Privacy Risks in LLM Agents via Simulation
+
+Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based
+  Agents
+
+Privacy in Action: Towards Realistic Privacy Mitigation and Evaluation for LLM-Powered Agents
+
+The Dark Side of LLMs: Agent-based Attack Vectors for System-level Compromise
+
+Who's the Mole? Modeling and Detecting Intention-Hiding Malicious Agents in LLM-Based Multi-Agent Systems
+
+Facilitating Trustworthy Human-Agent Collaboration in LLM-based Multi-Agent System oriented Software Engineering
+
+Open Challenges in Multi-Agent Security: Towards Secure Systems of Interacting AI Agents
+
+Security awareness in LLM agents: the NDAI zone case
+
+Collaborate, Deliberate, Evaluate: How LLM Alignment Affects Coordinated Multi-Agent Outcomes
+
+Because we have LLMs, we Can and Should Pursue Agentic Interpretability
+
+Designing for Accountable Agents: a Viewpoint
+
+Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security
+
+VeriLA: A Human-Centered Evaluation Framework for Interpretable Verification of LLM Agent Failures
+
+Protecting Privacy through Distributed Computation in Multi-agent
+  Decision Making
+
+Before Agents Speak: Pre-hoc Failure Risk Inference in Multi-Agent Systems
+
+Comprehensive Vulnerability Analysis is Necessary for Trustworthy LLM-MAS
+
+Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions
+
+Social Catalysts, Not Moral Agents: The Illusion of Alignment in LLM Societies
+
+An Empirical Study of Bugs in Modern LLM Agent Frameworks
+
+Interpreting Agentic Systems: Beyond Model Explanations to System-Level Accountability
+
+Security Risks of Agentic Vehicles: A Systematic Analysis of Cognitive and Cross-Layer Threats
+
+Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents
+
+BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks
+
+A three-Level Framework for LLM-Enhanced eXplainable AI: From technical explanations to natural language
+
+Multi-Value Alignment in Normative Multi-Agent System  An Evolutionary
+  Optimisation Approach
+
+Position: A Three-Layer Probabilistic Assume-Guarantee Architecture Is Structurally Required for Safe LLM Agent Deployment
+
+Aegis: Taxonomy and Optimizations for Overcoming Agent-Environment Failures in LLM Agents
+
+MAGPIE: A dataset for Multi-AGent contextual PrIvacy Evaluation
+
+Hallucination Cascade: Analyzing Error Propagation in Multi-Agent LLM Systems
+
+AgentCrypt: Advancing Privacy and (Secure) Computation in AI Agent Collaboration
+
+Privacy-Engineered Value Decomposition Networks for Cooperative
+  Multi-Agent Reinforcement Learning
+
+Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+
+Rethinking the Reliability of Multi-agent System: A Perspective from Byzantine Fault Tolerance
+
+Seven Security Challenges in Cross-domain Multi-agent LLM Systems
+
+AgenTracer: Who Is Inducing Failure in the LLM Agentic Systems?
+
+Scaling Behavior of Single LLM-Driven Multi-Agent Systems
+
+CASPIAN: Online Detection and Attribution of Cascade Attacks in LLM Multi-Agent Systems via Cross-Channel Causal Monitoring
+
+Bosses, Kings, and the Commons: Cooperation Under Power Asymmetry in LLM Societies
+
+Human Values in Multiagent Systems
+
+Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation
+
+Ethical Reasoning over Moral Alignment  A Case and Framework for
+  In-Context Ethical Policies in LLMs
+
+A Self-Healing Framework for Reliable LLM-Based Autonomous Agents
+
+From Monoliths to Swarms: A Study of Attack Surface Evolution in the Transition to Multi-Agent Web Systems
+
+MAGPIE: A benchmark for Multi-AGent contextual PrIvacy Evaluation
+
+Multi-Value Alignment for LLMs via Value Decorrelation and Extrapolation
+
+Privacy-Enhancing Paradigms within Federated Multi-Agent Systems
+
+Socially-Weighted Alignment: A Game-Theoretic Framework for Multi-Agent LLM Systems
+
+Multi-User Large Language Model Agents
+
+Applications, Societal Implications, and Future Directions
+['This section reviews the practical deployment and societal impact of these systems, synthesizing current challenges and future research agenda. It examines applications in diverse scenarios, before discussing the effect of large-scale agent frameworks on human society, and concludes with a roadmap of open challenges and emerging trends.', '1. Domain applications and case studies: Consolidated analysis of multi-domain applications including software engineering, scientific discovery, embodied systems, simulation of social phenomena, video games, and the associated domain-specific considerations.', '2. Simulation of human and social dynamics: Applications to computational social science for modeling of social systems, emergence of behavior, and other complex social phenomena.', '3. Human-agent collaboration and interfaces: The state of human-teaming, and the factors that be necessary for large-scale deployment with oversight.', '4. Current bottlenecks and grand challenges: A synthesis of the most pressing challenges to scalability, generalization, robustness, and usability, and the next critical steps for the field in order to advance from research prototypes to reliable systems.', '5. Emerging frontiers and long-term research agenda: Forward-looking directions for continued progress.', '6. Societal and ethical considerations: Broad discussion of societal implications, including agency, accountability with responsibility, economic and societal impact.']
+
+From ChatGPT to DeepSeek: Can LLMs Simulate Humanity?
+
+Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations
+
+A Technical Taxonomy of LLM Agent Communication Protocols
+
+Contemporary Agent Technology: LLM-Driven Advancements vs Classic Multi-Agent Systems
+
+Multi-Agent Systems: From Classical Paradigms to Large Foundation Model-Enabled Futures
+
+LLM-Based Social Simulations Require a Boundary
+
+Topology-Aware LLM-Driven Social Simulation: A Unified Framework for Efficient and Realistic Agent Dynamics
+
+Can Lessons From Human Teams Be Applied to Multi-Agent Systems? The Role of Structure, Diversity, and Interaction Dynamics
+
+Exploring Large Language Model based Intelligent Agents  Definitions,
+  Methods, and Prospects
+
+Practical Considerations for Agentic LLM Systems
+
+Why Do Multi-Agent LLM Systems Fail?
+
+The $\textit{Silicon Society}$ Cookbook: Design Space of LLM-based Social Simulations
+
+LLM-based Multi-Agent Reinforcement Learning: Current and Future Directions
+
+Sense and Sensitivity: Evaluating the simulation of social dynamics via Large Language Models
+
+Pluggable Social Artificial Intelligence for Enabling Human-Agent
+  Teaming
+
+Agents in the Wild: Where Research Meets Deployment
+
+Comprehensive Vulnerability Analysis is Necessary for Trustworthy LLM-MAS
+
+Reasoning Capacity in Multi-Agent Systems  Limitations, Challenges and
+  Human-Centered Solutions
+
+Understanding Multi-Agent LLM Frameworks: A Unified Benchmark and Experimental Analysis
+
+Position: Towards a Responsible LLM-empowered Multi-Agent Systems
+
+Towards Simulating Social Influence Dynamics with LLM-based Multi-agents
+
+AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society
+
+Agents that Matter: Optimizing Multi-Agent LLMs via Removal-Based Attribution
+
+LMAgent: A Large-scale Multimodal Agents Society for Multi-user Simulation
+
+Advancing Human-Machine Teaming: Concepts, Challenges, and Applications
+
+Large Language Model-based Human-Agent Collaboration for Complex Task
+  Solving
+
+Leveraging LLM-based agents for social science research: insights from citation network simulations
+
+Risk Analysis Techniques for Governed LLM-based Multi-Agent Systems
+
+MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents
+
+Scaling Behavior of Single LLM-Driven Multi-Agent Systems
+
+Optimizing Collaboration of LLM based Agents for Finite Element Analysis
+
+HAS-Bench: Evaluating LLM-Based Human-Agent Systems under Configurable Human Participation
+
+Stop Reducing Responsibility in LLM-Powered Multi-Agent Systems to Local Alignment
+
+Should LLM Agents Decide in Social Simulations? Comparing Finite-State and LLM-Based Decision Policies
+
+Navigating Complexity  Orchestrated Problem Solving with Multi-Agent
+  LLMs
+
+CollabSim: A CSCW-Grounded Methodology for Investigating Collaborative Competence of LLM Agents through Controlled Multi-Agent Experiments
+
+Modeling Social Dynamics with an LLM-Enabled Agent Based Network-Dynamic (LAND) Model
+
+MASEval: Extending Multi-Agent Evaluation from Models to Systems
+
+LLM-Powered AI Agent Systems and Their Applications in Industry
+
+Facilitating Trustworthy Human-Agent Collaboration in LLM-based Multi-Agent System oriented Software Engineering
+
+How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning
+
+Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM
+  Agents
+
+Designing LLM-based Multi-Agent Systems for Software Engineering Tasks: Quality Attributes, Design Patterns and Rationale
+
+Can LLM Agents Solve Collaborative Tasks? A Study on Urgency-Aware Planning and Coordination
+
+Multi-Agent Teams Hold Experts Back
+
+Inherent and emergent liability issues in LLM-based agentic systems: a principal-agent perspective
+
+Game-Theoretic Lens on LLM-based Multi-Agent Systems
+
+How can we assess human-agent interactions? Case studies in software agent design
+
+Methods for Exploring Simulation Models
+
+MegaAgent: A Practical Framework for Autonomous Cooperation in Large-Scale LLM Agent Systems
+

@@ -1,0 +1,975 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **3D Gaussian Splatting**.
+
+You have created the following overall outline:
+---
+Title: 3D Gaussian Splatting: A Comprehensive Survey of Representations, Optimization, and Emerging Applications
+
+Section 1: Introduction
+Description 1: This section establishes the foundational context for 3D Gaussian Splatting, situating it within the broader historical evolution of three-dimensional scene representation and novel view synthesis. It traces the progression from classical geometry-based techniques and point-based rendering to implicit neural radiance fields, culminating in the development of explicit, differentiable point-based radiance representations. The section clarifies the core motivations, defines the primary technical innovations, highlights key advantages and limitations, and provides a clear roadmap of the survey's taxonomic structure and scope.
+1. Historical evolution of three-dimensional scene representations: A chronological review of the progression from explicit meshes and point clouds, through implicit coordinate-based neural fields, to the explicit point-based radiance representation that distinguishes 3D Gaussian Splatting, emphasizing the performance bottlenecks and quality constraints that motivated its development.
+2. Core mathematical formulation and technical basis: A comprehensive introduction to the parametric Gaussian primitives, including the representation of positions, covariance matrices, opacities, and spherical harmonic color components, along with the mechanics of the differentiable tile-based rasterization algorithm that enables high-speed novel view rendering.
+3. Critical comparison with alternative scene representation paradigms: A detailed analysis of the trade-offs between Gaussian Splatting and neural radiance fields, plus other explicit representations such as voxel grids, meshes, and point clouds, focusing on metrics such as rendering speed, training time, memory footprint, geometric fidelity, and editability.
+4. Scope, taxonomy, and survey roadmap: A definition of the survey's boundaries, the introduction of the taxonomic organization used to classify the extensive body of related literature, and an outline of the key research directions and application domains that will be systematically discussed in the subsequent sections.
+
+Section 2: Foundations, Rendering Pipelines, and Core Algorithmic Enhancements
+Description: This section gives a comprehensive treatment of the fundamental algorithmic machinery that underlies 3D Gaussian Splatting. It covers the complete processing pipeline from initialization and image rendering to adaptive tuning and refinement of primitives, while also addressing the numerical and practical hurdles of ensuring consistent training stability. Furthermore, it provides a detailed overview of crucial technical improvements that have been designed to increase the mathematical accuracy and computational efficiency of the core optimization loop.
+1. Initialization strategies, including structure-from-motion point cloud seeding and newer learned or diffusion-based methods for the creation of high-quality initial primitive distributions that improve the stability of subsequent optimization.
+2. Adaptive density control mechanisms used during the optimization loop, such as strategies for splitting, cloning, pruning, and opacity resetting, and their evolution into more principled and gradient-driven criteria for accurate capture of detailed geometry.
+3. Optimization routines, looking at the design and purpose of primary loss functions, including photometric loss, and the integration of various regularization constraints, such as depth, consistency, and normal priors, to improve the reconstruction stability and quality in varying scenarios.
+4. Addressing anti-aliasing and multi-scale consistency, including works focused on Mip filters, frequency-domain regularization, scale-adaptive methods, and the development of more robust primitive geometries, such as two-dimensional surfels that better align to underlying thin surfaces and boundaries.
+5. Training acceleration and system-level co-design: covering techniques for algorithmic optimization of the forward and backward traversal, alternate parameterizations, and dedicated hardware-aware numerical methods to achieve significant throughput enhancements during the training and rendering stages.
+
+Section 3: Methods for Geometric Accuracy, Surface Reconstruction, and Handling Degraded Inputs
+Description: This section focuses on enhancing the geometric fidelity of 3D Gaussian Splatting, moving beyond just novel view synthesis toward high-quality surface reconstruction, especially in challenging scenarios. It outlines various methodologies aimed at improving the reliability and robustness of the underlying visual representation, including those that address illumination, occlusion, and data corruption. The emphasis is on strategies that lift the output of Gaussian splatting beyond a series of flat floating points to consistently represent an aligned and robust physical surface.
+1. Surface-driven and geometric regularization strategies, including the incorporation of signed distance function alignment, depth priors, normal smoothness, cross-view constraints, and planar assumptions, to eliminate floaters, reinforce topology and improve physical three-dimensional shape without affecting renderings.
+2. Variants of primitive kernels and their impacts on geometry: parametrics with two-dimensional surfels or disk kernels, planar approximations, and other extended kernels that support direct representation of solid surfaces and strongly reduce the overshoot effect.
+3. Robust methods for reconstruction from sparse views, unposed captures, and data, that rely on learning-based priors, generative regularization, multi-modal information, and custom initialization strategies to reduce convergence to degenerate local optima and improve quality with limited observational data.
+4. Robustness to visual landscape, scene artifacts, and degraded acquisition conditions, including photometric inconsistencies, motion blur, or low-lighting settings, along with methodology for decoupling static geometry from transient occluders or other dynamic contents in the scene.
+5. Methodologies to leverage geometric constraints to enforce fine-scale normal, depth, and surface alignment directly during optimization, including modeling schemes that use high-level assumptions and external sensor data.
+
+Section 4: Compression, Scalability, and Hardware-Aware Deployment
+Description: This section covers engineering and system-level aspects of using 3D Gaussian Splatting in more practical scenarios where memory, bandwidth, and computational resources are limited. It covers the algorithmic strategies to compress the model data and render efficiently, in addition to architectural modifications designed for broad scalability, cloud deployment, and edge or mobile device real-time rendering. The section also explores hierarchical, adaptive, and structured variants that enable efficient rendering without a significant loss of perceptual reconstruction quality.
+1. Compression and efficient storage strategies, including model pruning, vector quantization, entropy-based coding, and learned attribute prediction, with the goal of significantly reducing disk and memory footprints for use in resource-restricted edge-device contexts and streaming.
+2. Structured and hierarchical scene frameworks, including anchor-based methods, level-of-detail hierarchies, superpoint aggregation, spatial partitioning, and a distributed or block-based strategy that increases scalability and permits efficient rendering over city-sized, object-density, or unbounded environments.
+3. Algorithm and system-level hardware optimization for both central processing unit and graphics processing unit, including specialized kernels, memory offloading, batch processing, and pipelines optimized for the latest hardware architectures and asynchronous processing to push execution demands of edge and, embedded devices.
+4. Advanced optimization strategies, such as density-based variance reduction and Metropolis-Hastings sampling, are integrated, targeting a better allocation of computation to high-value scene regions and making training or processing more memory and time efficient.
+
+Section 5: Dynamic Scenes, Temporal Modeling, and Physics-Based Interaction
+Description: This section transitions the survey from static scene representation to methods capable of handling dynamic content, deformation, and the interaction of scene components over time. It examines frameworks that combine a spatial Gaussian representation with temporal fields, motion decomposition, and playback-specific physical constraints. The section further includes methods to fuse the Gaussian structure with physics engines and to create dynamically renderable human/object models for seamless reconstruction, creation, simulation, and animation.
+1. Deformation and velocity field-based dynamic rendering, that uses a temporal velocity or deformation network to warp a canonical static Gaussian to a time step, enabling high-quality reconstruction for a combination of monocular and multi-camera constrained settings.
+2. Direct four-dimensional Gaussian frameworks are based on temporal basis and extend the primitive space into a time-varied geometry, including static-dynamic decomposition, space-time anchors, and other structures designed for precise handling of long-term and complex motion patterns.
+3. Human body, face, and articulated-object reconstructions, which combine the power of Gaussian representation with skeletal models and deformation components to reconstruct dynamic human and multi-part objects from casual capture, and the ability to realistically render the rest with controls for expression and pose.
+4. Physical simulation and material dynamics, as one of many methods to add physical plausibility to Gaussian-based scenes, using constraints from physics engines, material assignment, and contact-aware contact negotiation, which contributes to robotics simulation and virtual interaction experiences.
+5. Scene generation and completion from text or image-based priors using generative models, conditioning diffusion, or a score distillation approach and generative models that provide correlated and physically consistent novel three-dimensional output from the learned Gaussian latent space.
+
+Section 6: Scene Understanding, Editing, and Multi-Modal Interactions
+Description: This section expands the role of 3D Gaussian Splatting from a tool for novel image synthesis to one used in understanding and interacting with the complex semantic and physical properties of a scene. The section is dedicated to methods for extending a simple point-based representation with semantic awareness and physical properties. It targets the goals of enhanced scene editability, segmentation, field queries, and feature distillation, as well as tasks that use 3D Gaussian reconstruction for downstream decision-making in spatial intelligence systems.
+1. Semantic understanding and open-vocabulary segmentation, linking concepts to extractable features from geometric or appearance information or distilling large vision- language models into the Gaussians for natural-language-driven queries and segmentation in both static and dynamic scenes.
+2. Interactive and user-directed editing: appearance, geometry, and scene-level manipulation. This includes leveraging spatial and semantic priors to drive object-level or scene-level manipulation, such as insertion, deletion, re-lighting, and stylization while maintaining spatial, photometric, and physical consistency.
+3. Robust and generalizable object removal, inpainting, and scene completion from Gaussian and using text or diffusion priors to fill the gaps and recreate or restore the scene to a valid state after region modification.
+4. Multi-modal and extended perception with non-visual sensor data, including thermal infrared, multi-spectral, depth, event, or LiDAR per Gaussian primitives for downstream tasks, opening possibilities to align visual ground truth with quantitative physical measurements where Gaussian fields are extended to support non-Lambertian, volumetric, or common x-ray, low-light. 
+5. Long-range understanding for autonomy and robotics: this includes object detection, localization, mapping, and navigation. It integrates continuous map reconstruction in a real-time feedback loop, which improvesSLAM performance, active pose prediction, or controls policies for decision-making.
+
+Section 7: Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions
+Description: This section revisits the fundamental trade-offs of building 3D computer models and rendering them to photorealistic images, through photometric and physical realism. Work described here transforms Gaussian splatting from an appearance-based method into an accurate inverse rendering method designed to recover intrinsic physics, shape, material, and lighting from multi-view images, and to support under these constraints physical reliability and real-time capture of full-light transport phenomena.
+1. Intrinsic decomposition and material estimation, such as physically based rendering shaders, bi-directional reflectance functions, surface reflection models, specular and normals estimation, and their decomposition into visible material maps, underlying lighting, and local and global environment. The Gaussian parameters align with the physical variables.
+2. Relighting and novel view synthesis, input changes to environmental conditions, where the model is fit using an inverse rendering framework that provides the ability to change the light in the scene more naturally, or add new lighting without retraining GN scene.
+3. Real-time ray tracing and global illumination rendering extensions, including physically-based shading strategies, full-wavefront solvers, reflection and transparency path, and to be used with rasterization to create impressive final frames with bounce lighting, and higher-order effects without a need for a full path-tracing framework.
+4. The integration of physical simulation priors with and Gaussians for (physically-based) dynamic deformation across the model and adaptation toward operations such as stylization, temporal editing, and topological modification without breaking the realism of the output.
+5. Advanced robustness, security, and reliability issues for privacy and security in digital content: ongoing considerations of watermarking, steganographic encoding for the 3D model ownership, and robustness and adversarial vulnerabilities for the previous pass, including defense advice. This includes detection, obstruction, robust train protocols, and evaluation metrics for quality and stability.
+
+Section 8: Conclusion
+Description: This final section summarizes the current landscape of 3D Gaussian Splatting research, reflecting on the transition from a burst of focused engineering experiments into a robust and increasingly mature three-dimensional representation technology. It consolidates the critical challenges and threats that remain problematic throughout the field and presents a clear source of future research directions.
+1. A concise summary of the core scientific and technological contributions that have been synthesized in this survey, beginning with its onset up to the state-of-the-art, and a summary of the landscape of applications.
+2. Discussion of the key unresolved research challenges, including the lack of reliable theoretical frameworks, rigorous benchmarking, formal uncertainty quantification, robust
+
+3. Novel research paths that expand 3D Gaussians from a pure rendering-centric approach and integrate with large-scale, multi-modal systems, gaping facing continuous scene and digital twin creation, and using it as part of a more complete data understanding pipeline.
+3. The broader impact and ethical considerations, including privacy, data security, and generative and thus, for spotlight comprehensiveness and reproducibility of three-dimensional results, calling for a transparent and responsible progression of the discussion.
+---
+
+You need to enrich the section **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions**, described as: **This section revisits the fundamental trade-offs of building 3D computer models and rendering them to photorealistic images, through photometric and physical realism. Work described here transforms Gaussian splatting from an appearance-based method into an accurate inverse rendering method designed to recover intrinsic physics, shape, material, and lighting from multi-view images, and to support under these constraints physical reliability and real-time capture of full-light transport phenomena.
+1. Intrinsic decomposition and material estimation, such as physically based rendering shaders, bi-directional reflectance functions, surface reflection models, specular and normals estimation, and their decomposition into visible material maps, underlying lighting, and local and global environment. The Gaussian parameters align with the physical variables.
+2. Relighting and novel view synthesis, input changes to environmental conditions, where the model is fit using an inverse rendering framework that provides the ability to change the light in the scene more naturally, or add new lighting without retraining GN scene.
+3. Real-time ray tracing and global illumination rendering extensions, including physically-based shading strategies, full-wavefront solvers, reflection and transparency path, and to be used with rasterization to create impressive final frames with bounce lighting, and higher-order effects without a need for a full path-tracing framework.
+4. The integration of physical simulation priors with and Gaussians for (physically-based) dynamic deformation across the model and adaptation toward operations such as stylization, temporal editing, and topological modification without breaking the realism of the output.
+5. Advanced robustness, security, and reliability issues for privacy and security in digital content: ongoing considerations of watermarking, steganographic encoding for the 3D model ownership, and robustness and adversarial vulnerabilities for the previous pass, including defense advice. This includes detection, obstruction, robust train protocols, and evaluation metrics for quality and stability.**
+
+**Main task:**
+Generate a comprehensive framework for **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting
+
+publish_date: 2026-07-13
+
+paper_content:
+
+Dynamic scene reconstruction remains challenging due to the heterogeneous and spatially varying nature of real-world motion. Although recent 3D Gaussian Splatting methods have introduced diverse deformation formulations for dynamic novel view synthesis, each method typically relies on a single deformation model within its representation, which limits robustness across diverse dynamic scenarios. In this work, we study a fundamental problem-multi-deformation modeling for dynamic 3D Gaussian representations-under two distinct integration constraints that differ in when and how multiple deformation experts interact during training. From a Mixture-of-Experts (MoE) perspective, we view multi-deformation modeling as the problem of combining multiple specialized deformation models within a unified 3D representation. We first introduce Mixture of Deformation Experts (MoDE), which integrates multiple deformation experts directly into the deformable Gaussian Splatting pipeline through joint optimization. In MoDE, experts operate on a shared canonical Gaussian representation, enabling multi-deformation modeling without introducing additional training stages or modifying the original optimization schedule. In contrast, we further present Mixture of Experts for Dynamic Gaussian Splatting (MoE-GS) under a different integration constraint, where deformation experts are optimized independently and combined through a separate routing stage. As a result, expert interaction occurs over non-canonical Gaussian representations after individual optimization. Together, these two approaches provide alternative strategies for multi-deformation modeling, clarifying how integration constraints shape the design and behavior of deformation experts in dynamic 3D Gaussian representations. Our code is available at: https://github.com/cvsp-lab/MoE-GS-studio.
+---
+paper_title: Gaussian in the Dark: Real-Time View Synthesis From Inconsistent Dark Images Using Gaussian Splatting
+
+publish_date: 2024-08-20
+
+paper_content:
+
+3D Gaussian Splatting has recently emerged as a powerful representation that
+can synthesize remarkable novel views using consistent multi-view images as
+input. However, we notice that images captured in dark environments where the
+scenes are not fully illuminated can exhibit considerable brightness variations
+and multi-view inconsistency, which poses great challenges to 3D Gaussian
+Splatting and severely degrades its performance. To tackle this problem, we
+propose Gaussian-DK. Observing that inconsistencies are mainly caused by camera
+imaging, we represent a consistent radiance field of the physical world using a
+set of anisotropic 3D Gaussians, and design a camera response module to
+compensate for multi-view inconsistencies. We also introduce a step-based
+gradient scaling strategy to constrain Gaussians near the camera, which turn
+out to be floaters, from splitting and cloning. Experiments on our proposed
+benchmark dataset demonstrate that Gaussian-DK produces high-quality renderings
+without ghosting and floater artifacts and significantly outperforms existing
+methods. Furthermore, we can also synthesize light-up images by controlling
+exposure levels that clearly show details in shadow areas.
+---
+paper_title: Gaussian Splatting Under Attack: Investigating Adversarial Noise in 3D Objects
+
+publish_date: 2024-12-03
+
+paper_content:
+
+3D Gaussian Splatting has advanced radiance field reconstruction, enabling high-quality view synthesis and fast rendering in 3D modeling. While adversarial attacks on object detection models are well-studied for 2D images, their impact on 3D models remains underexplored. This work introduces the Masked Iterative Fast Gradient Sign Method (M-IFGSM), designed to generate adversarial noise targeting the CLIP vision-language model. M-IFGSM specifically alters the object of interest by focusing perturbations on masked regions, degrading the performance of CLIP's zero-shot object detection capability when applied to 3D models. Using eight objects from the Common Objects 3D (CO3D) dataset, we demonstrate that our method effectively reduces the accuracy and confidence of the model, with adversarial noise being nearly imperceptible to human observers. The top-1 accuracy in original model renders drops from 95.4\% to 12.5\% for train images and from 91.2\% to 35.4\% for test images, with confidence levels reflecting this shift from true classification to misclassification, underscoring the risks of adversarial attacks on 3D models in applications such as autonomous driving, robotics, and surveillance. The significance of this research lies in its potential to expose vulnerabilities in modern 3D vision models, including radiance fields, prompting the development of more robust defenses and security measures in critical real-world applications.
+---
+paper_title: RDSplat: Robust Watermarking for 3D Gaussian Splatting Against 2D and 3D Diffusion Editing
+
+publish_date: 2026-04-09
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) has become a leading representation for high-fidelity 3D assets, yet protecting these assets via digital watermarking remains an open challenge. Existing 3DGS watermarking methods are robust only to classical distortions and fail under diffusion editing, which operates at both the 2D image level and the 3D scene level, covertly erasing embedded watermarks while preserving visual plausibility. We present RDSplat, the first 3DGS watermarking framework designed to withstand both 2D and 3D diffusion editing. Our key observation is that diffusion models act as low-pass filters that preserve low-frequency structures while regenerating high-frequency details. RDSplat exploits this by embedding 100-bit watermarks exclusively into low-frequency Gaussian primitives identified through Frequency-Aware Primitive Selection (FAPS), which combines the Mip score and directional balance score, while freezing all other primitives. Training efficiency is achieved through a surrogate strategy that replaces costly diffusion forward passes with Gaussian blur augmentation. A dedicated decoder, GeoMark, built on ViT-S/16 with spatially periodic secret embedding, jointly resists diffusion editing and the geometric transformations inherent to novel-view rendering. Extensive experiments on four benchmarks under seven 2D diffusion attacks and iterative 3D editing demonstrate strong classical robustness (bit accuracy 0.811) and competitive diffusion robustness (bit accuracy 0.701) at 100-bit capacity, while completing fine-tuning in 3 to 7 minutes on a single RTX 4090 GPU.
+---
+paper_title: BitC-3DGS: High-Capacity 3D Gaussian Splatting Watermarking via Bit Compression
+
+publish_date: 2026-05-28
+
+paper_content:
+
+High-capacity watermarking is necessary for 3D Gaussian Splatting (3DGS) assets to embed rich information (e.g., ownership, provenance, and authentication codes), enabling reliable identification and integrity verification in large-scale 3D asset pipelines. Existing bit-to-token watermarking methods based on a pre-trained text encoder are limited to 77-bit messages due to CLIP's fixed 77-token context length, as tokens beyond this limit are unsupported by learned positional embeddings. To address this limitation, we introduce BitC-3DGS, a bit-compression framework that encodes multiple message bits per token. It employs a bit-compressed tokenization scheme that encodes multiple bits within the same chunk into a single semantic token. To enable recovery of the compressed information, it further introduces a dual-branch architecture for joint chunk decompression and bit decoding, along with a hard-message sampling strategy to improve combinatorial coverage during decoder training. Extensive experiments on the Blender and LLFF datasets demonstrate the effectiveness of BitC-3DGS for high-capacity watermarking, achieving high message recovery accuracy and rendering fidelity. For example, it supports 128-bit message capacity with recovery accuracy comparable to that of 64-bit messages in recent state-of-the-art methods.
+---
+paper_title: MarkSplatter: Generalizable Watermarking for 3D Gaussian Splatting Model via Splatter Image Structure
+
+publish_date: 2025-08-31
+
+paper_content:
+
+The growing popularity of 3D Gaussian Splatting (3DGS) has intensified the need for effective copyright protection. Current 3DGS watermarking methods rely on computationally expensive fine-tuning procedures for each predefined message. We propose the first generalizable watermarking framework that enables efficient protection of Splatter Image-based 3DGS models through a single forward pass. We introduce GaussianBridge that transforms unstructured 3D Gaussians into Splatter Image format, enabling direct neural processing for arbitrary message embedding. To ensure imperceptibility, we design a Gaussian-Uncertainty-Perceptual heatmap prediction strategy for preserving visual quality. For robust message recovery, we develop a dense segmentation-based extraction mechanism that maintains reliable extraction even when watermarked objects occupy minimal regions in rendered views. Project page: https://kevinhuangxf.github.io/marksplatter.
+---
+paper_title: GaussianMarker: Uncertainty-Aware Copyright Protection of 3D Gaussian Splatting
+
+publish_date: 2024-10-31
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) has become a crucial method for acquiring 3D assets. To protect the copyright of these assets, digital watermarking techniques can be applied to embed ownership information discreetly within 3DGS models. However, existing watermarking methods for meshes, point clouds, and implicit radiance fields cannot be directly applied to 3DGS models, as 3DGS models use explicit 3D Gaussians with distinct structures and do not rely on neural networks. Naively embedding the watermark on a pre-trained 3DGS can cause obvious distortion in rendered images. In our work, we propose an uncertainty-based method that constrains the perturbation of model parameters to achieve invisible watermarking for 3DGS. At the message decoding stage, the copyright messages can be reliably extracted from both 3D Gaussians and 2D rendered images even under various forms of 3D and 2D distortions. We conduct extensive experiments on the Blender, LLFF and MipNeRF-360 datasets to validate the effectiveness of our proposed method, demonstrating state-of-the-art performance on both message decoding accuracy and view synthesis quality.
+---
+paper_title: PRTGS: Precomputed Radiance Transfer of Gaussian Splats for Real-Time High-Quality Relighting
+
+publish_date: 2024-08-07
+
+paper_content:
+
+We proposed Precomputed RadianceTransfer of GaussianSplats (PRTGS), a
+real-time high-quality relighting method for Gaussian splats in low-frequency
+lighting environments that captures soft shadows and interreflections by
+precomputing 3D Gaussian splats' radiance transfer. Existing studies have
+demonstrated that 3D Gaussian splatting (3DGS) outperforms neural fields'
+efficiency for dynamic lighting scenarios. However, the current relighting
+method based on 3DGS still struggles to compute high-quality shadow and
+indirect illumination in real time for dynamic light, leading to unrealistic
+rendering results. We solve this problem by precomputing the expensive
+transport simulations required for complex transfer functions like shadowing,
+the resulting transfer functions are represented as dense sets of vectors or
+matrices for every Gaussian splat. We introduce distinct precomputing methods
+tailored for training and rendering stages, along with unique ray tracing and
+indirect lighting precomputation techniques for 3D Gaussian splats to
+accelerate training speed and compute accurate indirect lighting related to
+environment light. Experimental analyses demonstrate that our approach achieves
+state-of-the-art visual quality while maintaining competitive training times
+and allows high-quality real-time (30+ fps) relighting for dynamic light and
+relatively complex scenes at 1080p resolution.
+---
+paper_title: Stochastic Ray Tracing for the Reconstruction of 3D Gaussian Splatting
+
+publish_date: 2026-03-26
+
+paper_content:
+
+Ray-tracing-based 3D Gaussian splatting (3DGS) methods overcome the limitations of rasterization -- rigid pinhole camera assumptions, inaccurate shadows, and lack of native reflection or refraction -- but remain slower due to the cost of sorting all intersecting Gaussians along every ray. Moreover, existing ray-tracing methods still rely on rasterization-style approximations such as shadow mapping for relightable scenes, undermining the generality that ray tracing promises. We present a differentiable, sorting-free stochastic formulation for ray-traced 3DGS -- the first framework that uses stochastic ray tracing to both reconstruct and render standard and relightable 3DGS scenes. At its core is an unbiased Monte Carlo estimator for pixel-color gradients that evaluates only a small sampled subset of Gaussians per ray, bypassing the need for sorting. For standard 3DGS, our method matches the reconstruction quality and speed of rasterization-based 3DGS while substantially outperforming sorting-based ray tracing. For relightable 3DGS, the same stochastic estimator drives per-Gaussian shading with fully ray-traced shadow rays, delivering notably higher reconstruction fidelity than prior work.
+---
+paper_title: SecureGS: Boosting the Security and Fidelity of 3D Gaussian Splatting Steganography
+
+publish_date: 2025-03-08
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) has emerged as a premier method for 3D representation due to its real-time rendering and high-quality outputs, underscoring the critical need to protect the privacy of 3D assets. Traditional NeRF steganography methods fail to address the explicit nature of 3DGS since its point cloud files are publicly accessible. Existing GS steganography solutions mitigate some issues but still struggle with reduced rendering fidelity, increased computational demands, and security flaws, especially in the security of the geometric structure of the visualized point cloud. To address these demands, we propose a SecureGS, a secure and efficient 3DGS steganography framework inspired by Scaffold-GS's anchor point design and neural decoding. SecureGS uses a hybrid decoupled Gaussian encryption mechanism to embed offsets, scales, rotations, and RGB attributes of the hidden 3D Gaussian points in anchor point features, retrievable only by authorized users through privacy-preserving neural networks. To further enhance security, we propose a density region-aware anchor growing and pruning strategy that adaptively locates optimal hiding regions without exposing hidden information. Extensive experiments show that SecureGS significantly surpasses existing GS steganography methods in rendering fidelity, speed, and security.
+---
+paper_title: Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review
+
+publish_date: 2024-05-06
+
+paper_content:
+
+Image-based 3D reconstruction is a challenging task that involves inferring
+the 3D shape of an object or scene from a set of input images. Learning-based
+methods have gained attention for their ability to directly estimate 3D shapes.
+This review paper focuses on state-of-the-art techniques for 3D reconstruction,
+including the generation of novel, unseen views. An overview of recent
+developments in the Gaussian Splatting method is provided, covering input
+types, model structures, output representations, and training strategies.
+Unresolved challenges and future directions are also discussed. Given the rapid
+progress in this domain and the numerous opportunities for enhancing 3D
+reconstruction methods, a comprehensive examination of algorithms appears
+essential. Consequently, this study offers a thorough overview of the latest
+advancements in Gaussian Splatting.
+---
+paper_title: MaterialRefGS: Reflective Gaussian Splatting with Multi-view Consistent Material Inference
+
+publish_date: 2025-10-19
+
+paper_content:
+
+Modeling reflections from 2D images is essential for photorealistic rendering and novel view synthesis. Recent approaches enhance Gaussian primitives with reflection-related material attributes to enable physically based rendering (PBR) with Gaussian Splatting. However, the material inference often lacks sufficient constraints, especially under limited environment modeling, resulting in illumination aliasing and reduced generalization. In this work, we revisit the problem from a multi-view perspective and show that multi-view consistent material inference with more physically-based environment modeling is key to learning accurate reflections with Gaussian Splatting. To this end, we enforce 2D Gaussians to produce multi-view consistent material maps during deferred shading. We also track photometric variations across views to identify highly reflective regions, which serve as strong priors for reflection strength terms. To handle indirect illumination caused by inter-object occlusions, we further introduce an environment modeling strategy through ray tracing with 2DGS, enabling photorealistic rendering of indirect radiance. Experiments on widely used benchmarks show that our method faithfully recovers both illumination and geometry, achieving state-of-the-art rendering quality in novel views synthesis.
+---
+paper_title: Volumetrically Consistent 3D Gaussian Rasterization
+
+publish_date: 2025-05-21
+
+paper_content:
+
+Recently, 3D Gaussian Splatting (3DGS) has enabled photorealistic view synthesis at high inference speeds. However, its splatting-based rendering model makes several approximations to the rendering equation, reducing physical accuracy. We show that the core approximations in splatting are unnecessary, even within a rasterizer; We instead volumetrically integrate 3D Gaussians directly to compute the transmittance across them analytically. We use this analytic transmittance to derive more physically-accurate alpha values than 3DGS, which can directly be used within their framework. The result is a method that more closely follows the volume rendering equation (similar to ray-tracing) while enjoying the speed benefits of rasterization. Our method represents opaque surfaces with higher accuracy and fewer points than 3DGS. This enables it to outperform 3DGS for view synthesis (measured in SSIM and LPIPS). Being volumetrically consistent also enables our method to work out of the box for tomography. We match the state-of-the-art 3DGS-based tomography method with fewer points. Our code is publicly available at: https://github.com/chinmay0301ucsd/Vol3DGS
+---
+paper_title: Augmented Radiance Field: A General Framework for Enhanced Gaussian Splatting
+
+publish_date: 2026-02-23
+
+paper_content:
+
+Due to the real-time rendering performance, 3D Gaussian Splatting (3DGS) has emerged as the leading method for radiance field reconstruction. However, its reliance on spherical harmonics for color encoding inherently limits its ability to separate diffuse and specular components, making it challenging to accurately represent complex reflections. To address this, we propose a novel enhanced Gaussian kernel that explicitly models specular effects through view-dependent opacity. Meanwhile, we introduce an error-driven compensation strategy to improve rendering quality in existing 3DGS scenes. Our method begins with 2D Gaussian initialization and then adaptively inserts and optimizes enhanced Gaussian kernels, ultimately producing an augmented radiance field. Experiments demonstrate that our method not only surpasses state-of-the-art NeRF methods in rendering performance but also achieves greater parameter efficiency. Project page at: https://xiaoxinyyx.github.io/augs.
+---
+paper_title: All That Glitters Is Not Gold: Key-Secured 3D Secrets within 3D Gaussian Splatting
+
+publish_date: 2025-03-10
+
+paper_content:
+
+Recent advances in 3D Gaussian Splatting (3DGS) have revolutionized scene reconstruction, opening new possibilities for 3D steganography by hiding 3D secrets within 3D covers. The key challenge in steganography is ensuring imperceptibility while maintaining high-fidelity reconstruction. However, existing methods often suffer from detectability risks and utilize only suboptimal 3DGS features, limiting their full potential. We propose a novel end-to-end key-secured 3D steganography framework (KeySS) that jointly optimizes a 3DGS model and a key-secured decoder for secret reconstruction. Our approach reveals that Gaussian features contribute unequally to secret hiding. The framework incorporates a key-controllable mechanism enabling multi-secret hiding and unauthorized access prevention, while systematically exploring optimal feature update to balance fidelity and security. To rigorously evaluate steganographic imperceptibility beyond conventional 2D metrics, we introduce 3D-Sinkhorn distance analysis, which quantifies distributional differences between original and steganographic Gaussian parameters in the representation space. Extensive experiments demonstrate that our method achieves state-of-the-art performance in both cover and secret reconstruction while maintaining high security levels, advancing the field of 3D steganography. Code is available at https://github.com/RY-Paper/KeySS
+---
+paper_title: 3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction
+
+publish_date: 2026-03-26
+
+paper_content:
+
+Rendering 3D surfaces has been revolutionized within the modeling of radiance fields through either 3DGS or NeRF. Although 3DGS has shown advantages over NeRF in terms of rendering quality or speed, there is still room for improvement in recovering high fidelity surfaces through 3DGS. To resolve this issue, we propose a self-constrained prior to constrain the learning of 3D Gaussians, aiming for more accurate depth rendering. Our self-constrained prior is derived from a TSDF grid that is obtained by fusing the depth maps rendered with current 3D Gaussians. The prior measures a distance field around the estimated surface, offering a band centered at the surface for imposing more specific constraints on 3D Gaussians, such as removing Gaussians outside the band, moving Gaussians closer to the surface, and encouraging larger or smaller opacity in a geometry-aware manner. More importantly, our prior can be regularly updated by the most recent depth images which are usually more accurate and complete. In addition, the prior can also progressively narrow the band to tighten the imposed constraints. We justify our idea and report our superiority over the state-of-the-art methods in evaluations on widely used benchmarks.
+---
+paper_title: 3D-GSW: 3D Gaussian Splatting Watermark for Protecting Copyrights in Radiance Fields
+
+publish_date: 2024-09-20
+
+paper_content:
+
+Recently, 3D Gaussian splatting has been getting a lot of attention as an
+innovative method for representing 3D space due to rapid rendering and image
+quality. However, copyright protection for the 3D Gaussian splatting has not
+yet been introduced. In this paper, we present a novel watermarking method for
+3D Gaussian splatting. The proposed method embeds a binary message into 3D
+Gaussians by fine-tuning the pre-trained 3D Gaussian splatting model. To
+achieve this, we present Frequency-Guided Densification (FGD) that utilizes
+Discrete Fourier Transform to find patches with high-frequencies and split 3D
+Gaussians based on 3D Gaussian Contribution Vector. It is each 3D Gaussian
+contribution to rendered pixel colors, improving both rendering quality and bit
+accuracy. Furthermore, we modify an adaptive gradient mask to enhance rendering
+quality. Our experiments show that our method can embed a watermark in 3D
+Gaussians imperceptibly with increased capacity and robustness against attacks.
+Our method reduces optimization cost and achieves state-of-the-art performance
+compared to other methods.
+---
+paper_title: Splats in Splats: Robust and Effective 3D Steganography towards Gaussian Splatting
+
+publish_date: 2025-11-24
+
+paper_content:
+
+3D Gaussian splatting (3DGS) has demonstrated impressive 3D reconstruction performance with explicit scene representations. Given the widespread application of 3DGS in 3D reconstruction and generation tasks, there is an urgent need to protect the copyright of 3DGS assets. However, existing copyright protection techniques for 3DGS overlook the usability of 3D assets, posing challenges for practical deployment. Here we describe splats in splats, the first 3DGS steganography framework that embeds 3D content in 3DGS itself without modifying any attributes. To achieve this, we take a deep insight into spherical harmonics (SH) and devise an importance-graded SH coefficient encryption strategy to embed the hidden SH coefficients. Furthermore, we employ a convolutional autoencoder to establish a mapping between the original Gaussian primitives' opacity and the hidden Gaussian primitives' opacity. Extensive experiments indicate that our method significantly outperforms existing 3D steganography techniques, with 5.31% higher scene fidelity and 3x faster rendering speed, while ensuring security, robustness, and user experience.
+---
+paper_title: GaussianUpdate: Continual 3D Gaussian Splatting Update for Changing Environments
+
+publish_date: 2025-08-12
+
+paper_content:
+
+Novel view synthesis with neural models has advanced rapidly in recent years, yet adapting these models to scene changes remains an open problem. Existing methods are either labor-intensive, requiring extensive model retraining, or fail to capture detailed types of changes over time. In this paper, we present GaussianUpdate, a novel approach that combines 3D Gaussian representation with continual learning to address these challenges. Our method effectively updates the Gaussian radiance fields with current data while preserving information from past scenes. Unlike existing methods, GaussianUpdate explicitly models different types of changes through a novel multi-stage update strategy. Additionally, we introduce a visibility-aware continual learning approach with generative replay, enabling self-aware updating without the need to store images. The experiments on the benchmark dataset demonstrate our method achieves superior and real-time rendering with the capability of visualizing changes over different times
+---
+paper_title: Photometric Stereo using Gaussian Splatting and inverse rendering
+
+publish_date: 2025-07-09
+
+paper_content:
+
+Recent state-of-the-art algorithms in photometric stereo rely on neural networks and operate either through prior learning or inverse rendering optimization. Here, we revisit the problem of calibrated photometric stereo by leveraging recent advances in 3D inverse rendering using the Gaussian Splatting formalism. This allows us to parameterize the 3D scene to be reconstructed and optimize it in a more interpretable manner. Our approach incorporates a simplified model for light representation and demonstrates the potential of the Gaussian Splatting rendering engine for the photometric stereo problem.
+---
+paper_title: Reflective Gaussian Splatting
+
+publish_date: 2025-02-03
+
+paper_content:
+
+Novel view synthesis has experienced significant advancements owing to increasingly capable NeRF- and 3DGS-based methods. However, reflective object reconstruction remains challenging, lacking a proper solution to achieve real-time, high-quality rendering while accommodating inter-reflection. To fill this gap, we introduce a Reflective Gaussian splatting (Ref-Gaussian) framework characterized with two components: (I) Physically based deferred rendering that empowers the rendering equation with pixel-level material properties via formulating split-sum approximation; (II) Gaussian-grounded inter-reflection that realizes the desired inter-reflection function within a Gaussian splatting paradigm for the first time. To enhance geometry modeling, we further introduce material-aware normal propagation and an initial per-Gaussian shading stage, along with 2D Gaussian primitives. Extensive experiments on standard datasets demonstrate that Ref-Gaussian surpasses existing approaches in terms of quantitative metrics, visual quality, and compute efficiency. Further, we show that our method serves as a unified solution for both reflective and non-reflective scenes, going beyond the previous alternatives focusing on only reflective scenes. Also, we illustrate that Ref-Gaussian supports more applications such as relighting and editing.
+---
+paper_title: 3D Gaussian Splatting with Deferred Reflection
+
+publish_date: 2024-06-04
+
+paper_content:
+
+The advent of neural and Gaussian-based radiance field methods have achieved
+great success in the field of novel view synthesis. However, specular
+reflection remains non-trivial, as the high frequency radiance field is
+notoriously difficult to fit stably and accurately. We present a deferred
+shading method to effectively render specular reflection with Gaussian
+splatting. The key challenge comes from the environment map reflection model,
+which requires accurate surface normal while simultaneously bottlenecks normal
+estimation with discontinuous gradients. We leverage the per-pixel reflection
+gradients generated by deferred shading to bridge the optimization process of
+neighboring Gaussians, allowing nearly correct normal estimations to gradually
+propagate and eventually spread over all reflective objects. Our method
+significantly outperforms state-of-the-art techniques and concurrent work in
+synthesizing high-quality specular reflection effects, demonstrating a
+consistent improvement of peak signal-to-noise ratio (PSNR) for both synthetic
+and real-world scenes, while running at a frame rate almost identical to
+vanilla Gaussian splatting.
+---
+paper_title: Textured Gaussians for Enhanced 3D Scene Appearance Modeling
+
+publish_date: 2025-05-29
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) has recently emerged as a state-of-the-art 3D reconstruction and rendering technique due to its high-quality results and fast training and rendering time. However, pixels covered by the same Gaussian are always shaded in the same color up to a Gaussian falloff scaling factor. Furthermore, the finest geometric detail any individual Gaussian can represent is a simple ellipsoid. These properties of 3DGS greatly limit the expressivity of individual Gaussian primitives. To address these issues, we draw inspiration from texture and alpha mapping in traditional graphics and integrate it with 3DGS. Specifically, we propose a new generalized Gaussian appearance representation that augments each Gaussian with alpha~(A), RGB, or RGBA texture maps to model spatially varying color and opacity across the extent of each Gaussian. As such, each Gaussian can represent a richer set of texture patterns and geometric structures, instead of just a single color and ellipsoid as in naive Gaussian Splatting. Surprisingly, we found that the expressivity of Gaussians can be greatly improved by using alpha-only texture maps, and further augmenting Gaussians with RGB texture maps achieves the highest expressivity. We validate our method on a wide variety of standard benchmark datasets and our own custom captures at both the object and scene levels. We demonstrate image quality improvements over existing methods while using a similar or lower number of Gaussians.
+---
+paper_title: AdvSplat: Adversarial Attacks on Feed-Forward Gaussian Splatting Models
+
+publish_date: 2026-03-24
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) is increasingly recognized as a powerful paradigm for real-time, high-fidelity 3D reconstruction. However, its per-scene optimization pipeline limits scalability and generalization, and prevents efficient inference. Recently emerged feed-forward 3DGS models address these limitations by enabling fast reconstruction from a few input views after large-scale pretraining, without scene-specific optimization. Despite their advantages and strong potential for commercial deployment, the use of neural networks as the backbone also amplifies the risk of adversarial manipulation. In this paper, we introduce AdvSplat, the first systematic study of adversarial attacks on feed-forward 3DGS. We first employ white-box attacks to reveal fundamental vulnerabilities of this model family. We then develop two improved, practically relevant, query-efficient black-box algorithms that optimize pixel-space perturbations via a frequency-domain parameterization: one based on gradient estimation and the other gradient-free, without requiring any access to model internals. Extensive experiments across multiple datasets demonstrate that AdvSplat can significantly disrupt reconstruction results by injecting imperceptible perturbations into the input images. Our findings surface an overlooked yet urgent problem in this domain, and we hope to draw the community's attention to this emerging security and robustness challenge.
+---
+paper_title: SplatPainter: Interactive Authoring of 3D Gaussians from 2D Edits via Test-Time Training
+
+publish_date: 2026-06-24
+
+paper_content:
+
+The rise of 3D Gaussian Splatting has revolutionized photorealistic 3D asset creation, yet a critical gap remains for their interactive refinement and editing. Existing approaches based on diffusion or optimization are ill-suited for this task, as they are often prohibitively slow, destructive to the original asset's identity, or lack the precision for fine-grained control. To address this, we introduce SplatPainter, a state-aware feedforward model that enables continuous editing of 3D Gaussian assets from user-provided 2D view(s). Our method directly predicts updates to the attributes of a compact, feature-rich Gaussian representation and leverages Test-Time Training to create a state-aware, iterative workflow. The versatility of our approach allows a single architecture to perform diverse tasks, including high-fidelity local detail refinement, local paint-over, and consistent global recoloring, all at interactive speeds, paving the way for fluid and intuitive 3D content authoring.
+---
+paper_title: Enhancement of 3D Gaussian Splatting using Raw Mesh for Photorealistic Recreation of Architectures
+
+publish_date: 2024-07-22
+
+paper_content:
+
+The photorealistic reconstruction and rendering of architectural scenes have
+extensive applications in industries such as film, games, and transportation.
+It also plays an important role in urban planning, architectural design, and
+the city's promotion, especially in protecting historical and cultural relics.
+The 3D Gaussian Splatting, due to better performance over NeRF, has become a
+mainstream technology in 3D reconstruction. Its only input is a set of images
+but it relies heavily on geometric parameters computed by the SfM process. At
+the same time, there is an existing abundance of raw 3D models, that could
+inform the structural perception of certain buildings but cannot be applied. In
+this paper, we propose a straightforward method to harness these raw 3D models
+to guide 3D Gaussians in capturing the basic shape of the building and improve
+the visual quality of textures and details when photos are captured
+non-systematically. This exploration opens up new possibilities for improving
+the effectiveness of 3D reconstruction techniques in the field of architectural
+design.
+---
+paper_title: PTIR-GS: Path-Traced Inverse Rendering with Global Illumination in 3D Gaussian Fields
+
+publish_date: 2026-07-01
+
+paper_content:
+
+Ray tracing enables 3D Gaussian fields to serve as a representation for physically based light transport. Faithful inverse rendering requires forward rendering and backward optimization to be defined within a consistent light-transport pipeline. Existing inverse rendering methods estimate G-buffers via splatting and optimize materials in screen space, tying the recovered properties to a rasterization-based pipeline. This pipeline mismatch, together with simplified rendering equations that neglect indirect illumination, often leads to inconsistent shading, visible artifacts, and inaccurate material-lighting estimation under path-traced rendering. Therefore, we propose a splatting-free path-traced inverse rendering framework for 3D Gaussian fields, where forward light transport and backward gradient propagation are defined within a unified ray-tracing pipeline. Our key idea is to define a path-space equivalent interaction model for overlapping Gaussian primitives, under which Monte-Carlo-based path tracing is unbiased for the induced light-transport integral, while pathwise gradients are replayed over the same ray-traced interactions rather than splatting-derived screen-space buffers. The framework optimizes materials and a compact Spherical-Gaussian environment under the full rendering equation with ray-traced visibility and multi-bounce light transport. Extensive experiments demonstrate competitive material inversion and improved path-traced rendering quality, producing more plausible shadows, reflections, and relighting results under global illumination.
+---
+paper_title: CompMarkGS: Robust Watermarking for Compressed 3D Gaussian Splatting
+
+publish_date: 2025-09-29
+
+paper_content:
+
+As 3D Gaussian Splatting (3DGS) is increasingly adopted in various academic and commercial applications due to its high-quality and real-time rendering capabilities, the need for copyright protection is growing. At the same time, its large model size requires efficient compression for storage and transmission. However, compression techniques, especially quantization-based methods, degrade the integrity of existing 3DGS watermarking methods, thus creating the need for a novel methodology that is robust against compression. To ensure reliable watermark detection under compression, we propose a compression-tolerant 3DGS watermarking method that preserves watermark integrity and rendering quality. Our approach utilizes an anchor-based 3DGS, embedding the watermark into anchor attributes, particularly the anchor feature, to enhance security and rendering quality. We also propose a quantization distortion layer that injects quantization noise during training, preserving the watermark after quantization-based compression. Moreover, we employ a frequency-aware anchor growing strategy that enhances rendering quality by effectively identifying Gaussians in high-frequency regions, and an HSV loss to mitigate color artifacts for further rendering quality improvement. Extensive experiments demonstrate that our proposed method preserves the watermark even under compression and maintains high rendering quality.
+---
+paper_title: HybridSplat: Fast Reflection-baked Gaussian Tracing using Hybrid Splatting
+
+publish_date: 2026-03-25
+
+paper_content:
+
+Rendering complex reflection of real-world scenes using 3D Gaussian splatting has been a quite promising solution for photorealistic novel view synthesis, but still faces bottlenecks especially in rendering speed and memory storage. This paper proposes a new Hybrid Splatting(HybridSplat) mechanism for Gaussian primitives. Our key idea is a new reflection-baked Gaussian tracing, which bakes the view-dependent reflection within each Gaussian primitive while rendering the reflection using tile-based Gaussian splatting. Then we integrate the reflective Gaussian primitives with base Gaussian primitives using a unified hybrid splatting framework for high-fidelity scene reconstruction. Moreover, we further introduce a pipeline-level acceleration for the hybrid splatting, and reflection-sensitive Gaussian pruning to reduce the model size, thus achieving much faster rendering speed and lower memory storage while preserving the reflection rendering quality. By extensive evaluation, our HybridSplat accelerates about 7x rendering speed across complex reflective scenes from Ref-NeRF, NeRF-Casting with 4x fewer Gaussian primitives than similar ray-tracing based Gaussian splatting baselines, serving as a new state-of-the-art method especially for complex reflective scenes.
+---
+paper_title: GS-Marker: Generalizable and Robust Watermarking for 3D Gaussian Splatting
+
+publish_date: 2025-03-24
+
+paper_content:
+
+In the Generative AI era, safeguarding 3D models has become increasingly urgent. While invisible watermarking is well-established for 2D images with encoder-decoder frameworks, generalizable and robust solutions for 3D remain elusive. The main difficulty arises from the renderer between the 3D encoder and 2D decoder, which disrupts direct gradient flow and complicates training. Existing 3D methods typically rely on per-scene iterative optimization, resulting in time inefficiency and limited generalization. In this work, we propose a single-pass watermarking approach for 3D Gaussian Splatting (3DGS), a well-known yet underexplored representation for watermarking. We identify two major challenges: (1) ensuring effective training generalized across diverse 3D models, and (2) reliably extracting watermarks from free-view renderings, even under distortions. Our framework, named GS-Marker, incorporates a 3D encoder to embed messages, distortion layers to enhance resilience against various distortions, and a 2D decoder to extract watermarks from renderings. A key innovation is the Adaptive Marker Control mechanism that adaptively perturbs the initially optimized 3DGS, escaping local minima and improving both training stability and convergence. Extensive experiments show that GS-Marker outperforms per-scene training approaches in terms of decoding accuracy and model fidelity, while also significantly reducing computation time.
+---
+paper_title: 3D Gaussian Splat Vulnerabilities
+
+publish_date: 2025-05-30
+
+paper_content:
+
+With 3D Gaussian Splatting (3DGS) being increasingly used in safety-critical applications, how can an adversary manipulate the scene to cause harm? We introduce CLOAK, the first attack that leverages view-dependent Gaussian appearances - colors and textures that change with viewing angle - to embed adversarial content visible only from specific viewpoints. We further demonstrate DAGGER, a targeted adversarial attack directly perturbing 3D Gaussians without access to underlying training data, deceiving multi-stage object detectors e.g., Faster R-CNN, through established methods such as projected gradient descent. These attacks highlight underexplored vulnerabilities in 3DGS, introducing a new potential threat to robotic learning for autonomous navigation and other safety-critical 3DGS applications.
+---
+paper_title: Relightable Gaussian Splatting for Virtual Production Using Image-Based Illumination
+
+publish_date: 2026-05-09
+
+paper_content:
+
+Virtual production (VP) use LED walls to provide both background imagery and image-based lighting. While this enables on-set compositing, it couples lighting to background and scene appearance, limiting flexibility for downstream editing. In addition, inverse rendering conventionally relies on physically-based rendering to estimates 3D geometry and lighting, using environment maps. However, these maps are typically low-resolution and assume far-field lighting. In VP, with near-field and high-resolution image-based lighting, this can lead to inaccuracies and introduce complexities when editing. Addressing this, we propose a VP-specific framework for 3D reconstruction and relighting using Gaussian Splatting. This uses the known background imagery to condition the relighting process. This avoids relying on environment maps and reduces compositing to a background-image editing task. To realize our framework, we introduce a process (and associated dataset) that captures real VP scenes under varying background content and illumination conditions. This data is used to decompose a 3D scene into fixed appearance and variable lighting components. The variable lighting process simulates light transport by parameterizing each primitive with a UV coordinate, intensity value and resolution modifier. Using mipmaps, these directly sample the background texture in image space - implicitly capturing reflections and refractions without physically-based rendering. Combined with the fixed appearance component, this allows us to render relit scenes using a Gaussian Splatting rasterizer. Compared to baselines, our approach achieves higher-quality 3D reconstruction and controllable relighting. The method is efficient (<3 GB RAM, <5 GB VRAM, <2 hours training, ~35 FPS) and supports rendering useful arbitrary output variables including depth, lighting intensity, lighting color, and unlit renders.
+---
+paper_title: Feature Splatting for Better Novel View Synthesis with Low Overlap
+
+publish_date: 2024-05-24
+
+paper_content:
+
+3D Gaussian Splatting has emerged as a very promising scene representation,
+achieving state-of-the-art quality in novel view synthesis significantly faster
+than competing alternatives. However, its use of spherical harmonics to
+represent scene colors limits the expressivity of 3D Gaussians and, as a
+consequence, the capability of the representation to generalize as we move away
+from the training views. In this paper, we propose to encode the color
+information of 3D Gaussians into per-Gaussian feature vectors, which we denote
+as Feature Splatting (FeatSplat). To synthesize a novel view, Gaussians are
+first "splatted" into the image plane, then the corresponding feature vectors
+are alpha-blended, and finally the blended vector is decoded by a small MLP to
+render the RGB pixel values. To further inform the model, we concatenate a
+camera embedding to the blended feature vector, to condition the decoding also
+on the viewpoint information. Our experiments show that these novel model for
+encoding the radiance considerably improves novel view synthesis for low
+overlap views that are distant from the training views. Finally, we also show
+the capacity and convenience of our feature vector representation,
+demonstrating its capability not only to generate RGB values for novel views,
+but also their per-pixel semantic labels. We will release the code upon
+acceptance.
+  Keywords: Gaussian Splatting, Novel View Synthesis, Feature Splatting
+---
+paper_title: OMG: Opacity Matters in Material Modeling with Gaussian Splatting
+
+publish_date: 2025-03-03
+
+paper_content:
+
+Decomposing geometry, materials and lighting from a set of images, namely inverse rendering, has been a long-standing problem in computer vision and graphics. Recent advances in neural rendering enable photo-realistic and plausible inverse rendering results. The emergence of 3D Gaussian Splatting has boosted it to the next level by showing real-time rendering potentials. An intuitive finding is that the models used for inverse rendering do not take into account the dependency of opacity w.r.t. material properties, namely cross section, as suggested by optics. Therefore, we develop a novel approach that adds this dependency to the modeling itself. Inspired by radiative transfer, we augment the opacity term by introducing a neural network that takes as input material properties to provide modeling of cross section and a physically correct activation function. The gradients for material properties are therefore not only from color but also from opacity, facilitating a constraint for their optimization. Therefore, the proposed method incorporates more accurate physical properties compared to previous works. We implement our method into 3 different baselines that use Gaussian Splatting for inverse rendering and achieve significant improvements universally in terms of novel view synthesis and material modeling.
+---
+paper_title: GeoSplatting: Towards Geometry Guided Gaussian Splatting for Physically-based Inverse Rendering
+
+publish_date: 2025-07-11
+
+paper_content:
+
+Recent 3D Gaussian Splatting (3DGS) representations have demonstrated remarkable performance in novel view synthesis; further, material-lighting disentanglement on 3DGS warrants relighting capabilities and its adaptability to broader applications. While the general approach to the latter operation lies in integrating differentiable physically-based rendering (PBR) techniques to jointly recover BRDF materials and environment lighting, achieving a precise disentanglement remains an inherently difficult task due to the challenge of accurately modeling light transport. Existing approaches typically approximate Gaussian points' normals, which constitute an implicit geometric constraint. However, they usually suffer from inaccuracies in normal estimation that subsequently degrade light transport, resulting in noisy material decomposition and flawed relighting results. To address this, we propose GeoSplatting, a novel approach that augments 3DGS with explicit geometry guidance for precise light transport modeling. By differentiably constructing a surface-grounded 3DGS from an optimizable mesh, our approach leverages well-defined mesh normals and the opaque mesh surface, and additionally facilitates the use of mesh-based ray tracing techniques for efficient, occlusion-aware light transport calculations. This enhancement ensures precise material decomposition while preserving the efficiency and high-quality rendering capabilities of 3DGS. Comprehensive evaluations across diverse datasets demonstrate the effectiveness of GeoSplatting, highlighting its superior efficiency and state-of-the-art inverse rendering performance. The project page can be found at https://pku-vcl-geometry.github.io/GeoSplatting/.
+---
+paper_title: 3D Gaussian Splatting Driven Multi-View Robust Physical Adversarial Camouflage Generation
+
+publish_date: 2025-08-13
+
+paper_content:
+
+Physical adversarial attack methods expose the vulnerabilities of deep neural networks and pose a significant threat to safety-critical scenarios such as autonomous driving. Camouflage-based physical attack is a more promising approach compared to the patch-based attack, offering stronger adversarial effectiveness in complex physical environments. However, most prior work relies on mesh priors of the target object and virtual environments constructed by simulators, which are time-consuming to obtain and inevitably differ from the real world. Moreover, due to the limitations of the backgrounds in training images, previous methods often fail to produce multi-view robust adversarial camouflage and tend to fall into sub-optimal solutions. Due to these reasons, prior work lacks adversarial effectiveness and robustness across diverse viewpoints and physical environments. We propose a physical attack framework based on 3D Gaussian Splatting (3DGS), named PGA, which provides rapid and precise reconstruction with few images, along with photo-realistic rendering capabilities. Our framework further enhances cross-view robustness and adversarial effectiveness by preventing mutual and self-occlusion among Gaussians and employing a min-max optimization approach that adjusts the imaging background of each viewpoint, helping the algorithm filter out non-robust adversarial features. Extensive experiments validate the effectiveness and superiority of PGA. Our code is available at:https://github.com/TRLou/PGA.
+---
+paper_title: AdLift: Lifting Adversarial Perturbations to Safeguard 3D Gaussian Splatting Assets Against Instruction-Driven Editing
+
+publish_date: 2025-12-08
+
+paper_content:
+
+Recent studies have extended diffusion-based instruction-driven 2D image editing pipelines to 3D Gaussian Splatting (3DGS), enabling faithful manipulation of 3DGS assets and greatly advancing 3DGS content creation. However, it also exposes these assets to serious risks of unauthorized editing and malicious tampering. Although imperceptible adversarial perturbations against diffusion models have proven effective for protecting 2D images, applying them to 3DGS encounters two major challenges: view-generalizable protection and balancing invisibility with protection capability. In this work, we propose the first editing safeguard for 3DGS, termed AdLift, which prevents instruction-driven editing across arbitrary views and dimensions by lifting strictly bounded 2D adversarial perturbations into 3D Gaussian-represented safeguard. To ensure both adversarial perturbations effectiveness and invisibility, these safeguard Gaussians are progressively optimized across training views using a tailored Lifted PGD, which first conducts gradient truncation during back-propagation from the editing model at the rendered image and applies projected gradients to strictly constrain the image-level perturbation. Then, the resulting perturbation is backpropagated to the safeguard Gaussian parameters via an image-to-Gaussian fitting operation. We alternate between gradient truncation and image-to-Gaussian fitting, yielding consistent adversarial-based protection performance across different viewpoints and generalizes to novel views. Empirically, qualitative and quantitative results demonstrate that AdLift effectively protects against state-of-the-art instruction-driven 2D image and 3DGS editing.
+---
+paper_title: ReCoGS: Real-time ReColoring for Gaussian Splatting scenes
+
+publish_date: 2025-11-23
+
+paper_content:
+
+Gaussian Splatting has emerged as a leading method for novel view synthesis, offering superior training efficiency and real-time inference compared to NeRF approaches, while still delivering high-quality reconstructions. Beyond view synthesis, this 3D representation has also been explored for editing tasks. Many existing methods leverage 2D diffusion models to generate multi-view datasets for training, but they often suffer from limitations such as view inconsistencies, lack of fine-grained control, and high computational demand. In this work, we focus specifically on the editing task of recoloring. We introduce a user-friendly pipeline that enables precise selection and recoloring of regions within a pre-trained Gaussian Splatting scene. To demonstrate the real-time performance of our method, we also present an interactive tool that allows users to experiment with the pipeline in practice. Code is available at https://github.com/loryruta/recogs.
+---
+paper_title: Large Material Gaussian Model for Relightable 3D Generation
+
+publish_date: 2025-09-26
+
+paper_content:
+
+The increasing demand for 3D assets across various industries necessitates efficient and automated methods for 3D content creation. Leveraging 3D Gaussian Splatting, recent large reconstruction models (LRMs) have demonstrated the ability to efficiently achieve high-quality 3D rendering by integrating multiview diffusion for generation and scalable transformers for reconstruction. However, existing models fail to produce the material properties of assets, which is crucial for realistic rendering in diverse lighting environments. In this paper, we introduce the Large Material Gaussian Model (MGM), a novel framework designed to generate high-quality 3D content with Physically Based Rendering (PBR) materials, ie, albedo, roughness, and metallic properties, rather than merely producing RGB textures with uncontrolled light baking. Specifically, we first fine-tune a new multiview material diffusion model conditioned on input depth and normal maps. Utilizing the generated multiview PBR images, we explore a Gaussian material representation that not only aligns with 2D Gaussian Splatting but also models each channel of the PBR materials. The reconstructed point clouds can then be rendered to acquire PBR attributes, enabling dynamic relighting by applying various ambient light maps. Extensive experiments demonstrate that the materials produced by our method not only exhibit greater visual appeal compared to baseline methods but also enhance material modeling, thereby enabling practical downstream rendering applications.
+---
+paper_title: MeshGS: Adaptive Mesh-Aligned Gaussian Splatting for High-Quality Rendering
+
+publish_date: 2024-10-11
+
+paper_content:
+
+Recently, 3D Gaussian splatting has gained attention for its capability to generate high-fidelity rendering results. At the same time, most applications such as games, animation, and AR/VR use mesh-based representations to represent and render 3D scenes. We propose a novel approach that integrates mesh representation with 3D Gaussian splats to perform high-quality rendering of reconstructed real-world scenes. In particular, we introduce a distance-based Gaussian splatting technique to align the Gaussian splats with the mesh surface and remove redundant Gaussian splats that do not contribute to the rendering. We consider the distance between each Gaussian splat and the mesh surface to distinguish between tightly-bound and loosely-bound Gaussian splats. The tightly-bound splats are flattened and aligned well with the mesh geometry. The loosely-bound Gaussian splats are used to account for the artifacts in reconstructed 3D meshes in terms of rendering. We present a training strategy of binding Gaussian splats to the mesh geometry, and take into account both types of splats. In this context, we introduce several regularization techniques aimed at precisely aligning tightly-bound Gaussian splats with the mesh surface during the training process. We validate the effectiveness of our method on large and unbounded scene from mip-NeRF 360 and Deep Blending datasets. Our method surpasses recent mesh-based neural rendering techniques by achieving a 2dB higher PSNR, and outperforms mesh-based Gaussian splatting methods by 1.3 dB PSNR, particularly on the outdoor mip-NeRF 360 dataset, demonstrating better rendering quality. We provide analyses for each type of Gaussian splat and achieve a reduction in the number of Gaussian splats by 30% compared to the original 3D Gaussian splatting.
+---
+paper_title: GuardMarkGS: Unified Ownership Tracing and Edit Deterrence for 3D Gaussian Splatting
+
+publish_date: 2026-05-13
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) is becoming a practical representation for novel view synthesis, but its growing adoption, together with rapid advances in instruction-driven 3DGS editing, also exposes a dual copyright risk: once a 3DGS-based asset is released, it can be used without permission and manipulated through 3D editing. Existing protection methods address only one side of this problem. Watermarking can trace ownership after unauthorized use, but it cannot prevent malicious editing. Adversarial edit-deterrence methods can disrupt editing, but they do not provide evidence of ownership. To the best of our knowledge, we present the first unified protection framework for 3DGS that jointly optimizes ownership tracing and unauthorized editing deterrence. Our framework combines a scene-wide watermarking objective over all Gaussians with an adversarial objective for edit deterrence. The adversarial branch combines latent-anchor separation, denoising-trajectory diversion, and cross-attention diversion to divert the editing trajectory, while an update-saliency-motivated Gaussian selection strategy assigns stronger adversarial updates to mask-selected Gaussians, improving the balance among watermark recovery, edit deterrence, and rendering fidelity. Experiments on scenes from Mip-NeRF 360 and Instruct-NeRF2NeRF demonstrate that the proposed framework achieves a favorable balance among bit accuracy, edit deterrence, and rendering quality. These results suggest that practical copyright protection of 3DGS-based assets can be more effectively addressed by integrating ownership tracing and unauthorized editing deterrence into a single optimization framework.
+---
+paper_title: GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
+
+publish_date: 2024-06-26
+
+paper_content:
+
+The 3D Gaussian Splatting technique has significantly advanced the
+construction of radiance fields from multi-view images, enabling real-time
+rendering. While point-based rasterization effectively reduces computational
+demands for rendering, it often struggles to accurately reconstruct the
+geometry of the target object, especially under strong lighting. To address
+this challenge, we introduce a novel approach that combines octree-based
+implicit surface representations with Gaussian splatting. Our method consists
+of four stages. Initially, it reconstructs a signed distance field (SDF) and a
+radiance field through volume rendering, encoding them in a low-resolution
+octree. The initial SDF represents the coarse geometry of the target object.
+Subsequently, it introduces 3D Gaussians as additional degrees of freedom,
+which are guided by the SDF. In the third stage, the optimized Gaussians
+further improve the accuracy of the SDF, allowing it to recover finer geometric
+details compared to the initial SDF obtained in the first stage. Finally, it
+adopts the refined SDF to further optimize the 3D Gaussians via splatting,
+eliminating those that contribute little to visual appearance. Experimental
+results show that our method, which leverages the distribution of 3D Gaussians
+with SDFs, reconstructs more accurate geometry, particularly in images with
+specular highlights caused by strong lighting.
+---
+paper_title: GauStudio  A Modular Framework for 3D Gaussian Splatting and Beyond
+
+publish_date: 2024-03-28
+
+paper_content:
+
+We present GauStudio, a novel modular framework for modeling 3D Gaussian
+Splatting (3DGS) to provide standardized, plug-and-play components for users to
+easily customize and implement a 3DGS pipeline. Supported by our framework, we
+propose a hybrid Gaussian representation with foreground and skyball background
+models. Experiments demonstrate this representation reduces artifacts in
+unbounded outdoor scenes and improves novel view synthesis. Finally, we propose
+Gaussian Splatting Surface Reconstruction (GauS), a novel render-then-fuse
+approach for high-fidelity mesh reconstruction from 3DGS inputs without
+fine-tuning. Overall, our GauStudio framework, hybrid representation, and GauS
+approach enhance 3DGS modeling and rendering capabilities, enabling
+higher-quality novel view synthesis and surface reconstruction.
+---
+paper_title: WATER-GS: Toward Copyright Protection for 3D Gaussian Splatting via Universal Watermarking
+
+publish_date: 2024-12-07
+
+paper_content:
+
+3D Gaussian Splatting (3DGS) has emerged as a pivotal technique for 3D scene representation, providing rapid rendering speeds and high fidelity. As 3DGS gains prominence, safeguarding its intellectual property becomes increasingly crucial since 3DGS could be used to imitate unauthorized scene creations and raise copyright issues. Existing watermarking methods for implicit NeRFs cannot be directly applied to 3DGS due to its explicit representation and real-time rendering process, leaving watermarking for 3DGS largely unexplored. In response, we propose WATER-GS, a novel method designed to protect 3DGS copyrights through a universal watermarking strategy. First, we introduce a pre-trained watermark decoder, treating raw 3DGS generative modules as potential watermark encoders to ensure imperceptibility. Additionally, we implement novel 3D distortion layers to enhance the robustness of the embedded watermark against common real-world distortions of point cloud data. Comprehensive experiments and ablation studies demonstrate that WATER-GS effectively embeds imperceptible and robust watermarks into 3DGS without compromising rendering efficiency and quality. Our experiments indicate that the 3D distortion layers can yield up to a 20% improvement in accuracy rate. Notably, our method is adaptable to different 3DGS variants, including 3DGS compression frameworks and 2D Gaussian splatting.
+---
+paper_title: SVG-IR: Spatially-Varying Gaussian Splatting for Inverse Rendering
+
+publish_date: 2025-04-09
+
+paper_content:
+
+Reconstructing 3D assets from images, known as inverse rendering (IR), remains a challenging task due to its ill-posed nature. 3D Gaussian Splatting (3DGS) has demonstrated impressive capabilities for novel view synthesis (NVS) tasks. Methods apply it to relighting by separating radiance into BRDF parameters and lighting, yet produce inferior relighting quality with artifacts and unnatural indirect illumination due to the limited capability of each Gaussian, which has constant material parameters and normal, alongside the absence of physical constraints for indirect lighting. In this paper, we present a novel framework called Spatially-vayring Gaussian Inverse Rendering (SVG-IR), aimed at enhancing both NVS and relighting quality. To this end, we propose a new representation-Spatially-varying Gaussian (SVG)-that allows per-Gaussian spatially varying parameters. This enhanced representation is complemented by a SVG splatting scheme akin to vertex/fragment shading in traditional graphics pipelines. Furthermore, we integrate a physically-based indirect lighting model, enabling more realistic relighting. The proposed SVG-IR framework significantly improves rendering quality, outperforming state-of-the-art NeRF-based methods by 2.5 dB in peak signal-to-noise ratio (PSNR) and surpassing existing Gaussian-based techniques by 3.5 dB in relighting tasks, all while maintaining a real-time rendering speed.
+---
+paper_title: Ref-GS: Directional Factorization for 2D Gaussian Splatting
+
+publish_date: 2025-04-13
+
+paper_content:
+
+In this paper, we introduce Ref-GS, a novel approach for directional light factorization in 2D Gaussian splatting, which enables photorealistic view-dependent appearance rendering and precise geometry recovery. Ref-GS builds upon the deferred rendering of Gaussian splatting and applies directional encoding to the deferred-rendered surface, effectively reducing the ambiguity between orientation and viewing angle. Next, we introduce a spherical Mip-grid to capture varying levels of surface roughness, enabling roughness-aware Gaussian shading. Additionally, we propose a simple yet efficient geometry-lighting factorization that connects geometry and lighting via the vector outer product, significantly reducing renderer overhead when integrating volumetric attributes. Our method achieves superior photorealistic rendering for a range of open-world scenes while also accurately recovering geometry.
+---
+paper_title: Hardware-Rasterized Ray-Based Gaussian Splatting
+
+publish_date: 2025-06-17
+
+paper_content:
+
+We present a novel, hardware rasterized rendering approach for ray-based 3D Gaussian Splatting (RayGS), obtaining both fast and high-quality results for novel view synthesis. Our work contains a mathematically rigorous and geometrically intuitive derivation about how to efficiently estimate all relevant quantities for rendering RayGS models, structured with respect to standard hardware rasterization shaders. Our solution is the first enabling rendering RayGS models at sufficiently high frame rates to support quality-sensitive applications like Virtual and Mixed Reality. Our second contribution enables alias-free rendering for RayGS, by addressing MIP-related issues arising when rendering diverging scales during training and testing. We demonstrate significant performance gains, across different benchmark scenes, while retaining state-of-the-art appearance quality of RayGS.
+---
+paper_title: PIG: Physically-based Multi-Material Interaction with 3D Gaussians
+
+publish_date: 2025-06-09
+
+paper_content:
+
+3D Gaussian Splatting has achieved remarkable success in reconstructing both static and dynamic 3D scenes. However, in a scene represented by 3D Gaussian primitives, interactions between objects suffer from inaccurate 3D segmentation, imprecise deformation among different materials, and severe rendering artifacts. To address these challenges, we introduce PIG: Physically-Based Multi-Material Interaction with 3D Gaussians, a novel approach that combines 3D object segmentation with the simulation of interacting objects in high precision. Firstly, our method facilitates fast and accurate mapping from 2D pixels to 3D Gaussians, enabling precise 3D object-level segmentation. Secondly, we assign unique physical properties to correspondingly segmented objects within the scene for multi-material coupled interactions. Finally, we have successfully embedded constraint scales into deformation gradients, specifically clamping the scaling and rotation properties of the Gaussian primitives to eliminate artifacts and achieve geometric fidelity and visual consistency. Experimental results demonstrate that our method not only outperforms the state-of-the-art (SOTA) in terms of visual quality, but also opens up new directions and pipelines for the field of physically realistic scene generation.
+---
+paper_title: DR-GS: Physically-Based Deformable and Relightable 2D Gaussians
+
+publish_date: 2026-06-28
+
+paper_content:
+
+Gaussian splatting (GS) has garnered significant attention in VR/AR and digital content creation due to its explicit parameterization and efficient rendering capabilities. However, existing GS-based methods for deformable objects face two key limitations: (i) illumination is erroneously baked into textures, causing physically inconsistent responses under dynamic deformations and lighting changes; (ii) snapshot-based reconstruction restricts post-reconstruction material editing. To address these challenges, we propose Deformable and Relightable GS (DR-GS), a unified Gaussian framework that integrates physically-based inverse rendering, relighting, and deformation-aware manipulation. Through explicitly disentangling geometry, illumination, and material representations, DR-GS overcomes the limitations of static snapshots, resolving unrealistic appearance under varying conditions while enabling post-reconstruction parameter editing. Extensive experiments show that DR-GS achieves leading visual quality across static reconstruction, dynamic deformation, and relighting, reliably preserving reflections and specular highlights on glossy surfaces. It further establishes a fully decoupled geometry-illumination-material pipeline, enabling high-quality 3D asset creation and comprehensive post-editing.
+---
+paper_title: Gaussians-to-Life: Text-Driven Animation of 3D Gaussian Splatting Scenes
+
+publish_date: 2025-03-07
+
+paper_content:
+
+State-of-the-art novel view synthesis methods achieve impressive results for multi-view captures of static 3D scenes. However, the reconstructed scenes still lack "liveliness," a key component for creating engaging 3D experiences. Recently, novel video diffusion models generate realistic videos with complex motion and enable animations of 2D images, however they cannot naively be used to animate 3D scenes as they lack multi-view consistency. To breathe life into the static world, we propose Gaussians2Life, a method for animating parts of high-quality 3D scenes in a Gaussian Splatting representation. Our key idea is to leverage powerful video diffusion models as the generative component of our model and to combine these with a robust technique to lift 2D videos into meaningful 3D motion. We find that, in contrast to prior work, this enables realistic animations of complex, pre-existing 3D scenes and further enables the animation of a large variety of object classes, while related work is mostly focused on prior-based character animation, or single 3D objects. Our model enables the creation of consistent, immersive 3D experiences for arbitrary scenes.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to 3D Gaussian Splatting.
+   ---
+   ---
+paper_title: 3D Gaussian Splatting: Survey, Technologies, Challenges, and Opportunities
+
+publish_date: 2024-07-24
+
+paper_abstract:
+
+3D Gaussian Splatting (3DGS) has emerged as a prominent technique with the
+potential to become a mainstream method for 3D representations. It can
+effectively transform multi-view images into explicit 3D Gaussian
+representations through efficient training, and achieve real-time rendering of
+novel views. This survey aims to analyze existing 3DGS-related works from
+multiple intersecting perspectives, including related tasks, technologies,
+challenges, and opportunities. The primary objective is to provide newcomers
+with a rapid understanding of the field and to assist researchers in
+methodically organizing existing technologies and challenges. Specifically, we
+delve into the optimization, application, and extension of 3DGS, categorizing
+them based on their focuses or motivations. Additionally, we summarize and
+classify nine types of technical modules and corresponding improvements
+identified in existing works. Based on these analyses, we further examine the
+common challenges and technologies across various tasks, proposing potential
+research opportunities.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 PRELIMINARIES  
+2.1 Neural Implicit Field  
+2.2 Point-based Rendering  
+2.3 3D Gaussian Splatting  
+
+3 OPTIMIZATION OF 3D GAUSSIAN SPLATTING  
+3.1 Efficiency  
+3.2 Photorealism  
+3.3 Generalization and Sparse Views  
+
+4 APPLICATIONS OF 3D GAUSSIAN SPLATTING  
+4.1 Human Reconstruction  
+4.2 Artificial Intelligence-Generated Content (AIGC)  
+4.3 Autonomous Driving  
+
+5 EXTENSIONS OF 3D GAUSSIAN SPLATTING  
+5.1 Dynamic 3D Gaussian Splatting  
+5.2 Surface Representation  
+5.3 Editable 3D Gaussian Splatting  
+5.4 Semantic Understanding  
+5.5 Physics Simulation  
+
+6 TECHNICAL CLASSIFICATION  
+6.1 Initialization  
+6.2 Attribute Expansion  
+6.3 Splatting  
+6.4 Regularization  
+6.5 Training Strategy  
+6.6 Adaptive Control  
+6.7 Post-Processing  
+6.8 Integration with Other Representations  
+6.9 Guidance by Additional Prior  
+
+7 INTERRELATIONSHIPS AND CHALLENGES  
+7.1 Suboptimal Data Challenges  
+7.2 Generalization Challenges  
+7.3 Physics Challenges  
+7.4 Realness and Efficiency Challenges  
+
+8 OPPORTUNITIES  
+8.1 Suboptimal Training Data  
+8.2 Generalization  
+8.3 Physics Problems  
+8.4 Realness and Efficiency  
+8.5 Application  
+8.6 Technical Improvements  
+
+9 CONCLUSION
+---
+paper_title: A Survey on 3D Gaussian Splatting
+
+publish_date: 2024-07-22
+
+paper_abstract:
+
+3D Gaussian splatting (GS) has recently emerged as a transformative technique
+in the realm of explicit radiance field and computer graphics. This innovative
+approach, characterized by the utilization of millions of learnable 3D
+Gaussians, represents a significant departure from mainstream neural radiance
+field approaches, which predominantly use implicit, coordinate-based models to
+map spatial coordinates to pixel values. 3D GS, with its explicit scene
+representation and differentiable rendering algorithm, not only promises
+real-time rendering capability but also introduces unprecedented levels of
+editability. This positions 3D GS as a potential game-changer for the next
+generation of 3D reconstruction and representation. In the present paper, we
+provide the first systematic overview of the recent developments and critical
+contributions in the domain of 3D GS. We begin with a detailed exploration of
+the underlying principles and the driving forces behind the emergence of 3D GS,
+laying the groundwork for understanding its significance. A focal point of our
+discussion is the practical applicability of 3D GS. By enabling unprecedented
+rendering speed, 3D GS opens up a plethora of applications, ranging from
+virtual reality to interactive media and beyond. This is complemented by a
+comparative analysis of leading 3D GS models, evaluated across various
+benchmark tasks to highlight their performance and practical utility. The
+survey concludes by identifying current challenges and suggesting potential
+avenues for future research in this domain. Through this survey, we aim to
+provide a valuable resource for both newcomers and seasoned researchers,
+fostering further exploration and advancement in applicable and explicit
+radiance field representation.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 BACKGROUND  
+2.1 Problem Formulation  
+2.2 Context and Terminology  
+
+3 3D GAUSSIAN SPLATTING: PRINCIPLES  
+3.1 Rendering with Learned 3D Gaussians  
+3.2 Optimization of 3D Gaussian Splatting  
+
+4 3D GAUSSIAN SPLATTING: DIRECTIONS  
+4.1 Data-efficient 3D GS  
+4.2 Memory-efficient 3D GS  
+4.3 Photorealistic 3D GS  
+4.4 Improved Optimization Algorithms  
+4.5 3D Gaussian with More Properties  
+4.6 3D GS with Structured Information  
+
+5 APPLICATION AREAS AND TASKS  
+5.1 Simultaneous Localization and Mapping (SLAM)  
+5.2 Dynamic Scene Reconstruction  
+5.3 AI-Generated Content (AIGC)  
+5.4 Autonomous Driving  
+5.5 Endoscopic Scene Reconstruction  
+5.6 Large-scale Scene Reconstruction  
+
+6 PERFORMANCE COMPARISON  
+6.1 Performance Benchmarking: Localization  
+6.2 Performance Benchmarking: Static Scenes  
+6.3 Performance Benchmarking: Dynamic Scenes  
+6.4 Performance Benchmarking: Driving Scenes  
+6.5 Performance Benchmarking: Human Avatar  
+6.6 Performance Benchmarking: Surgical Scenes  
+
+7 FUTURE RESEARCH DIRECTIONS  
+
+8 CONCLUSIONS
+---
+paper_title: 3D Gaussian as a New Era: A Survey
+
+publish_date: 2024-07-10
+
+paper_abstract:
+
+3D Gaussian Splatting (3D-GS) has emerged as a significant advancement in the
+field of Computer Graphics, offering explicit scene representation and novel
+view synthesis without the reliance on neural networks, such as Neural Radiance
+Fields (NeRF). This technique has found diverse applications in areas such as
+robotics, urban mapping, autonomous navigation, and virtual reality/augmented
+reality, just name a few. Given the growing popularity and expanding research
+in 3D Gaussian Splatting, this paper presents a comprehensive survey of
+relevant papers from the past year. We organize the survey into taxonomies
+based on characteristics and applications, providing an introduction to the
+theoretical underpinnings of 3D Gaussian Splatting. Our goal through this
+survey is to acquaint new researchers with 3D Gaussian Splatting, serve as a
+valuable reference for seminal works in the field, and inspire future research
+directions, as discussed in our concluding section.
+
+paper_outline:
+
+INTRODUCTION
+BACKGROUND
+REPRESENTATION
+3.1 Efficiencies
+3.2 Photo realism
+3.3 Costs
+3.4 Physics
+RECONSTRUCTION
+4.1 Static Reconstruction
+4.2 Dynamic Reconstruction
+MANIPULATION
+5.1 3D Manipulation
+5.2 4D Manipulation
+GENERATION
+6.1 Object-level 3D Generation
+6.2 Scene-level 3D Generation
+6.3 4D Generation
+PERCEPTION
+7.1 Detection
+7.2 Segmentation
+7.3 Tracking
+7.4 Simultaneous Localization and Mapping
+VIRTUAL HUMANS
+8.1 Human Bodies
+8.2 Human Heads
+DISCUSSIONS AND FUTURE WORK
+---
+paper_title: Advances in 3D Neural Stylization: A Survey
+
+publish_date: 2024-06-18
+
+paper_abstract:
+
+Modern artificial intelligence offers a novel and transformative approach to
+creating digital art across diverse styles and modalities like images, videos
+and 3D data, unleashing the power of creativity and revolutionizing the way
+that we perceive and interact with visual content. This paper reports on recent
+advances in stylized 3D asset creation and manipulation with the expressive
+power of neural networks. We establish a taxonomy for neural stylization,
+considering crucial design choices such as scene representation, guidance data,
+optimization strategies, and output styles. Building on such taxonomy, our
+survey first revisits the background of neural stylization on 2D images, and
+then presents in-depth discussions on recent neural stylization methods for 3D
+data, accompanied by a mini-benchmark evaluating selected neural field
+stylization methods. Based on the insights gained from the survey, we highlight
+the practical significance, open challenges, future research, and potential
+impacts of neural stylization, which facilitates researchers and practitioners
+to navigate the rapidly evolving landscape of 3D content creation using modern
+artificial intelligence.
+
+paper_outline:
+
+1 Introduction
+1.1 Definition and Terminologies
+1.2 Related Surveys
+
+2 Background
+2.1 Neural Style Transfer
+2.2 3D Content Generation
+
+3 3D Neural Stylization
+3.1 Taxonomy
+3.2 Mesh-based Stylization
+3.3 Neural Field-based Stylization
+3.4 Volume Stylization
+3.5 Point Cloud Stylization
+3.6 Implicit Shape Editing
+3.7 Practical Guidelines
+
+4 Datasets and Evaluation
+4.1 Datasets
+4.2 Criteria and Metrics
+4.3 Mini-benchmark of 3D Artistic Stylization
+
+5 Applications
+5.1 3D Asset Design
+5.2 3D Avatar Stylization
+5.3 Non-photo realistic Rendering
+5.4 Physically Based Rendering
+5.5 Industrial Production
+
+6 Open Challenges and Future Works
+Generalization
+Controllability
+Efficiency
+3D Consistency
+Evaluation
+
+7 Conclusion
+---
+paper_title: Revisiting 3D Cartesian Scatterplots with a Novel Plotting Framework and a Survey
+
+publish_date: 2024-06-10
+
+paper_abstract:
+
+3D scatter plots are a powerful visualisation method by being able to
+represent 3 dimensions spatially. It can also enable the representation of
+additional dimensions, such as by using a colour map. An important issue with
+the current state of plotting software is the limited use of physical
+properties from the real world such as shadows to improve the effectiveness of
+the plots. A popular example is with the use of isometric axes in combination
+with same-sized points, which is equivalent to removing one whole dimension
+(depth perception). In static snapshot images, as found in digital and hard
+prints, as well with discrete data, additional cues such as movement are not
+present to mitigate for the loss of spatial information.
+  In this paper we present a novel plotting framework that features a wide
+range of techniques to improve the information transfer from 3D scatterplots
+for multi-dimensional data. We evaluate the resulting plots by surveying 57
+participants from an academic institution to get important insights on what
+makes 3D scatterplots effective in communicating data of more than two
+dimensions.
+
+paper_outline:
+
+1 INTRODUCTION  
+2 RELATED WORK  
+2.1 Research  
+2.2 Software  
+3 A NOVEL PLOTTING FRAMEWORK  
+3.1 Multiple-dimensions  
+3.2 Example use case  
+3.3 Features  
+3.4 Software dependencies  
+3.5 System architecture  
+4 SURVEY  
+4.1 Question sampling  
+4.2 Infrastructure  
+4.3 Participants  
+4.4 Results  
+4.5 Result normalisation  
+5 DISCUSSION  
+5.1 Key survey insights  
+5.2 Limitations  
+5.3 Ethics  
+5.4 Future work  
+6 CONCLUSIONS
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **3D Gaussian Splatting**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **3D Gaussian Splatting** and **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

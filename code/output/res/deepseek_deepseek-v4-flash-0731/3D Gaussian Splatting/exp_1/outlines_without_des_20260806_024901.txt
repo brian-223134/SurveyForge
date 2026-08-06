@@ -1,0 +1,40 @@
+# 3D Gaussian Splatting: A Comprehensive Survey of Representations, Methodologies, and Emerging Frontiers
+## 1 Introduction
+## 2 Foundations and Mathematical Framework
+### 2.1 Mathematical Formulation of Gaussian Primitives
+### 2.2 The Tile-Based Differentiable Rasterization Pipeline
+### 2.3 Optimization, Loss Functions, and Adaptive Density Control
+### 2.4 Comparative Analysis with Alternative Scene Representations
+### 2.5 Practical Implementation and Rendering Libraries
+## 3 Core Optimization, Refinement, and Robustness
+### 3.1 Enhanced Fidelity and Anti-Aliasing
+### 3.2 Geometric Refinement and Surface Extraction
+### 3.3 Robustness to Sparse and Degraded Input Data
+### 3.4 Handling "In-the-Wild" and Unconstrained Photo Collections
+### 3.5 Integration with External Sensors and Multi-Modal Depth Priors
+## 4 Efficiency, Compression, and Scalability
+### 4.1 Hardware-Accelerated Rendering and Rasterization Optimization
+### 4.2 Model Compression, Pruning, and Storage Reduction
+### 4.3 Level-of-Detail and Hierarchical Structures for Large-Scale Scenes
+### 4.4 Accelerated Training and Distributed Optimization
+## 5 Geometric and Physically-Based Rendering
+### 5.1 Decomposed Scene Representation for Inverse Rendering
+### 5.2 Surface and Normal Extraction from Gaussian Representations
+### 5.3 Advanced Appearance Modeling for Specular and High-Frequency Effects
+### 5.4 Relighting and Global Illumination in Gaussian Splatting
+### 5.5 Challenges and Opportunities in Material-Specific Appearance
+## 6 Generative Modeling and Content Creation
+### 6.1 Score Distillation-based Generation from Text and Images  
+### 6.2 Feed-Forward and Large Reconstruction Models  
+### 6.3 Generative Models with 3D Gaussians as Intermediate Representation  
+### 6.4 Scene Editing, Stylization, and Manipulation with Generative Priors  
+### 6.5 Controllable Asset Generation for Virtual Humans and Avatars  
+### 6.6 Scene-Level Compositional and 360-Degree Content Creation  
+## 7 Applications and Scene Understanding
+### 7.1 Simultaneous Localization and Mapping (SLAM) and Dense Scene Reconstruction
+### 7.2 Robotics, Autonomous Navigation, and Physical Simulation
+### 7.3 Language-Embedded and Semantic Scene Understanding
+### 7.4 VR/AR, Interactive Editing, and Real-Time Visualization
+### 7.5 Specialised Domains and Scientific Imaging (Autonomous Driving, Medical, and Tomography)
+## 8 Conclusion and Future Research Directions
+

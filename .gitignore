@@ -39,6 +39,7 @@ code/output/**/*.fdb_latexmk
 code/output/**/*.log
 !code/output/**/time_cost.log
 !code/output/**/experiment_times.log
+!code/output/**/cutoff_report.log
 
 # One exception: a 24MB dump of every retrieved abstract, rewritten each run.
 # The other 27 files of a run come to 3MB combined, so this single file would be
@@ -52,5 +53,9 @@ code/output/**/paper_texts.txt
 # SurveyBench/generated_surveys_ref/ 와 섞이지 않도록 별도 경로를 쓴다.
 SurveyBench/eval_runs/
 
-# 회귀 검사 실행 산출물 (PID가 박힌 워처 스크립트, 로그, 요약)
-eval_out/
+# 회귀 검사 실행 산출물 (PID가 박힌 워처 스크립트, 수십 MB짜리 실행 로그)
+# `eval_out/` 이 아니라 `eval_out/*` 여야 한다 -- 디렉터리 자체를 제외하면 git 이
+# 안으로 들어가지 않아서 아래 예외가 도달하지 못한다.
+eval_out/*
+# 비교 리포트는 남긴다 -- README §3.5 가 링크하고, 셋 다 합쳐 5KB다.
+!eval_out/eval_*.md

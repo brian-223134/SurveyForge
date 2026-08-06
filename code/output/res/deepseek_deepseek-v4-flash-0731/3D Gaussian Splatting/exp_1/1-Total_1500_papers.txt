@@ -1,0 +1,3454 @@
+Rendering along the Hilbert Curve
+
+Aug-NeRF  Training Stronger Neural Radiance Fields with Triple-Level
+  Physically-Grounded Augmentations
+
+Neural Parameterization for Dynamic Human Head Editing
+
+Learning Texture Manifolds with the Periodic Spatial GAN
+
+Robust Registration of Gaussian Mixtures for Colour Transfer
+
+An error estimate of Gaussian Recursive Filter in 3Dvar problem
+
+UVA  Towards Unified Volumetric Avatar for View Synthesis, Pose
+  rendering, Geometry and Texture Editing
+
+Control3Diff  Learning Controllable 3D Diffusion Models from Single-view
+  Images
+
+Importance Sampling BRDF Derivatives
+
+Delving into Discrete Normalizing Flows on SO(3) Manifold for
+  Probabilistic Rotation Modeling
+
+3D GANs and Latent Space  A comprehensive survey
+
+Clutter Detection and Removal in 3D Scenes with View-Consistent
+  Inpainting
+
+DITTO-NeRF  Diffusion-based Iterative Text To Omni-directional 3D Model
+
+Generative Novel View Synthesis with 3D-Aware Diffusion Models
+
+Asservissement visuel 3D direct dans le domaine spectral
+
+Interpolations of Smoke and Liquid Simulations
+
+Extending Scatterplots to Scalar Fields
+
+HUGS  Human Gaussian Splats
+
+CG3D  Compositional Generation for Text-to-3D via Gaussian Splatting
+
+Gaussian Shell Maps for Efficient 3D Human Generation
+
+GaussianShader  3D Gaussian Splatting with Shading Functions for
+  Reflective Surfaces
+
+LightGaussian  Unbounded 3D Gaussian Compression with 15x Reduction and
+  200+ FPS
+
+Image Inpainting via Tractable Steering of Diffusion Models
+
+HumanGaussian  Text-Driven 3D Human Generation with Gaussian Splatting
+
+Surf-D  Generating High-Quality Surfaces of Arbitrary Topologies Using
+  Diffusion Models
+
+Diffusion 3D Features (Diff3F)  Decorating Untextured Shapes with
+  Distilled Semantic Features
+
+ConTex-Human  Free-View Rendering of Human from a Single Image with
+  Texture-Consistent Synthesis
+
+Point'n Move  Interactive Scene Object Manipulation on Gaussian
+  Splatting Radiance Fields
+
+Human Gaussian Splatting  Real-time Rendering of Animatable Avatars
+
+GeoScaler  Geometry and Rendering-Aware Downsampling of 3D Mesh Textures
+
+Multi-Scale 3D Gaussian Splatting for Anti-Aliased Rendering
+
+GART  Gaussian Articulated Template Models
+
+Animatable Gaussians  Learning Pose-dependent Gaussian Maps for
+  High-fidelity Human Avatar Modeling
+
+Relightable 3D Gaussian  Real-time Point Cloud Relighting with BRDF
+  Decomposition and Ray Tracing
+
+GaussianEditor  Editing 3D Gaussians Delicately with Text Instructions
+
+Direct2.5  Diverse Text-to-3D Generation via Multi-view 2.5D Diffusion
+
+SiTH  Single-view Textured Human Reconstruction with Image-Conditioned
+  Diffusion
+
+Mip-Splatting  Alias-free 3D Gaussian Splatting
+
+HAVE-FUN  Human Avatar Reconstruction from Few-Shot Unconstrained Images
+
+Neural 3D Strokes  Creating Stylized 3D Scenes with Vectorized 3D
+  Strokes
+
+Animatable 3D Gaussian  Fast and High-Quality Reconstruction of Multiple
+  Human Avatars
+
+EucliDreamer  Fast and High-Quality Texturing for 3D Models with Stable
+  Diffusion Depth
+
+Efficient Encoding of Graphics Primitives with Simplex-based Structures
+
+GS-IR  3D Gaussian Splatting for Inverse Rendering
+
+Differentiable and accelerated spherical harmonic and Wigner transforms
+
+Neural Style Transfer for Computer Games
+
+GaussianEditor  Swift and Controllable 3D Editing with Gaussian
+  Splatting
+
+Posterior Distillation Sampling
+
+Compact 3D Gaussian Representation for Radiance Field
+
+WildFusion  Learning 3D-Aware Latent Diffusion Models in View Space
+
+Animatable 3D Gaussians for High-fidelity Synthesis of Human Motions
+
+Depth-Regularized Optimization for 3D Gaussian Splatting in Few-Shot
+  Images
+
+LucidDreamer  Domain-free Generation of 3D Gaussian Splatting Scenes
+
+Boosting3D  High-Fidelity Image-to-3D by Boosting 2D Diffusion Prior to
+  3D Prior with Progressive Learning
+
+3D Face Style Transfer with a Hybrid Solution of NeRF and Mesh
+  Rasterization
+
+SuGaR  Surface-Aligned Gaussian Splatting for Efficient 3D Mesh
+  Reconstruction and High-Quality Mesh Rendering
+
+An Efficient 3D Gaussian Representation for Monocular Multi-view Dynamic
+  Scenes
+
+Text-Guided Texturing by Synchronized Multi-View Diffusion
+
+PhysGaussian  Physics-Integrated 3D Gaussians for Generative Dynamics
+
+GS-SLAM  Dense Visual SLAM with 3D Gaussian Splatting
+
+Pyramid Diffusion for Fine 3D Large Scene Generation
+
+Gaussian Interpolation Flows
+
+Discrete approximations of Gaussian smoothing and Gaussian derivatives
+
+GaussianDiffusion  3D Gaussian Splatting for Denoising Diffusion
+  Probabilistic Models with Structured Noise
+
+SplatArmor  Articulated Gaussian splatting for animatable humans from
+  monocular RGB videos
+
+Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis
+
+Adaptive Shells for Efficient Neural Radiance Field Rendering
+
+3D Paintbrush  Local Stylization of 3D Shapes with Cascaded Score
+  Distillation
+
+Texture Synthesis with Spatial Generative Adversarial Networks
+
+Guidefill  GPU Accelerated, Artist Guided Geometric Inpainting for 3D
+  Conversion
+
+3D Shape Generation and Completion through Point-Voxel Diffusion
+
+PhySG  Inverse Rendering with Spherical Gaussians for Physics-based
+  Material Editing and Relighting
+
+NeRF-VAE  A Geometry Aware 3D Scene Generative Model
+
+Removing Mixture of Gaussian and Impulse Noise by Patch-Based Weighted
+  Means
+
+A Novel Method for Vectorization
+
+3D zigzag for multislicing, multiband and video processing
+
+3DFill Reference-guided Image Inpainting by Self-supervised 3D Image
+  Alignment
+
+Scalable multi-class sampling via filtered sliced optimal transport
+
+Dense 3-D Mapping with Spatial Correlation via Gaussian Filtering
+
+Enhanced Direct Delta Mush
+
+PVA  Pixel-aligned Volumetric Avatars
+
+Discrete Laplace Operator Estimation for Dynamic 3D Reconstruction
+
+360-Degree Textures of People in Clothing from a Single Image
+
+StyleBlit  Fast Example-Based Stylization with Local Guidance
+
+Representing a Partially Observed Non-Rigid 3D Human Using Eigen-Texture
+  and Eigen-Deformation
+
+Fast and Accurate Point Cloud Registration using Trees of Gaussian
+  Mixtures
+
+Points2Pix  3D Point-Cloud to Image Translation using conditional
+  Generative Adversarial Networks
+
+Soft Rasterizer  Differentiable Rendering for Unsupervised Single-View
+  Mesh Reconstruction
+
+One-2-3-45  Any Single Image to 3D Mesh in 45 Seconds without Per-Shape
+  Optimization
+
+DiffComplete  Diffusion-based Generative 3D Shape Completion
+
+BPM  Blended Piecewise Moebius Maps
+
+Blended-NeRF  Zero-Shot Object Generation and Blending in Existing
+  Neural Radiance Fields
+
+Fast non-iterative algorithm for 3D point-cloud holography
+
+NILUT  Conditional Neural Implicit 3D Lookup Tables for Image
+  Enhancement
+
+Diffusion with Forward Models  Solving Stochastic Inverse Problems
+  Without Direct Supervision
+
+Learning a Diffusion Prior for NeRFs
+
+LumiGAN  Unconditional Generation of Relightable 3D Human Faces
+
+Patch-based 3D Natural Scene Generation from a Single Example
+
+TextMesh  Generation of Realistic 3D Meshes From Text Prompts
+
+Farm3D  Learning Articulated 3D Animals by Distilling 2D Diffusion
+
+Tetra-NeRF  Representing Neural Radiance Fields Using Tetrahedra
+
+Reference-guided Controllable Inpainting of Neural Radiance Fields
+
+UPGPT  Universal Diffusion Model for Person Image Generation, Editing
+  and Pose Transfer
+
+MoDA  Modeling Deformable 3D Objects from Casual Videos
+
+Splatting-based Synthesis for Video Frame Interpolation
+
+Neural Implicit Mapping via Nested Neighborhoods
+
+ManifoldPlus  A Robust and Scalable Watertight Manifold Surface
+  Generation Method for Triangle Soups
+
+Non-Uniform Gaussian Blur of Hexagonal Bins in Cartesian Coordinates
+
+Many-to-many Splatting for Efficient Video Frame Interpolation
+
+AUV-Net  Learning Aligned UV Maps for Texture Transfer and Synthesis
+
+A simple algorithm for uniform sampling on the surface of a hypersphere
+
+Polynomial mapped bases  theory and applications
+
+Software Rasterization of 2 Billion Points in Real Time
+
+Inferring Implicit 3D Representations from Human Figures on Pictorial
+  Maps
+
+Controllable 3D Generative Adversarial Face Model via Disentangling
+  Shape and Appearance
+
+ManiFlow  Implicitly Representing Manifolds with Normalizing Flows
+
+A simple MATLAB program to compute differentiation matrices for
+  arbitrary meshes via Lagrangian interpolation
+
+The Vector Heat Method
+
+Area-preserving parameterizations for spherical ellipses
+
+Spherical harmonics entropy for optimal 3D modeling
+
+MeshDiffusion  Score-based Generative 3D Mesh Modeling
+
+SDF-3DGAN  A 3D Object Generative Method Based on Implicit Signed
+  Distance Function
+
+PointPatchMix  Point Cloud Mixing with Patch Scoring
+
+Normal-guided Garment UV Prediction for Human Re-texturing
+
+Just Flip  Flipped Observation Generation and Optimization for Neural
+  Radiance Fields to Cover Unobserved View
+
+Online Neural Path Guiding with Normalized Anisotropic Spherical
+  Gaussians
+
+NeRFlame  FLAME-based conditioning of NeRF for 3D face rendering
+
+Sketching with Spherical Designs for Noisy Data Fitting on Spheres
+
+SePaint  Semantic Map Inpainting via Multinomial Diffusion
+
+A Laplace-inspired Distribution on SO(3) for Probabilistic Rotation
+  Estimation
+
+GO-Surf  Neural Feature Grid Optimization for Fast, High-Fidelity RGB-D
+  Surface Reconstruction
+
+Parallel Compositing of Volumetric Depth Images for Interactive
+  Visualization of Distributed Volumes at High Frame Rates
+
+Neural Neural Textures Make Sim2Real Consistent
+
+Total Generalized Variation for Piecewise Constant Functions on
+  Triangular Meshes with Applications in Imaging
+
+Sparse Kernel Gaussian Processes through Iterative Charted Refinement
+  (ICR)
+
+EpiGRAF  Rethinking training of 3D GANs
+
+Texture Generation Using A Graph Generative Adversarial Network And
+  Differentiable Rendering
+
+Research on Shape Mapping of 3D Mesh Models based on Hidden Markov
+  Random Field and EM Algorithm
+
+Robust Node Generation for Meshfree Discretizations on Irregular Domains
+  and Surfaces
+
+Creating Simplified 3D Models with High Quality Textures
+
+Continuous Occupancy Mapping in Dynamic Environments Using Particles
+
+A new stereo formulation not using pixel and disparity models
+
+Differentiable Surface Rendering via Non-Differentiable Sampling
+
+SP-GAN  Sphere-Guided 3D Shape Generation and Manipulation
+
+IM-3D  Iterative Multiview Diffusion and Reconstruction for High-Quality
+  3D Generation
+
+Learning Continuous 3D Words for Text-to-Image Generation
+
+GALA3D  Towards Text-to-3D Complex Scene Generation via Layout-guided
+  Generative Gaussian Splatting
+
+3D Gaussian as a New Vision Era  A Survey
+
+ImplicitDeepfake  Plausible Face-Swapping through Implicit Deepfake
+  Generation using NeRF and Gaussian Splatting
+
+GS-CLIP  Gaussian Splatting for Contrastive Language-Image-3D
+  Pretraining from Real-World Data
+
+HeadStudio  Text to Animatable Head Avatars with 3D Gaussian Splatting
+
+Collaborative Control for Geometry-Conditioned PBR Image Generation
+
+LGM  Large Multi-View Gaussian Model for High-Resolution 3D Content
+  Creation
+
+Mesh-based Gaussian Splatting for Real-time Large-scale Deformation
+
+Noise Map Guidance  Inversion with Spatial Context for Real Image
+  Editing
+
+Rig3DGS  Creating Controllable Portraits from Casual Monocular Videos
+
+Projected Generative Diffusion Models for Constraint Satisfaction
+
+Denoising Diffusion via Image-Based Rendering
+
+4D Gaussian Splatting  Towards Efficient Novel View Synthesis for
+  Dynamic Scenes
+
+SGS-SLAM  Semantic Gaussian Splatting For Neural Dense SLAM
+
+Guidance with Spherical Gaussian Constraint for Conditional Diffusion
+
+ConRF  Zero-shot Stylization of 3D Scenes with Conditioned Radiation
+  Fields
+
+GaMeS  Mesh-Based Adapting and Modification of Gaussian Splatting
+
+Geometry Transfer for Stylizing Radiance Fields
+
+360-GS  Layout-guided Panoramic Gaussian Splatting For Indoor Roaming
+
+On the Error Analysis of 3D Gaussian Splatting and an Optimal Projection
+  Strategy
+
+StopThePop  Sorted Gaussian Splatting for View-Consistent Real-time
+  Rendering
+
+Layered Fields for Natural Tessellations on Surfaces
+
+OSTeC  One-Shot Texture Completion
+
+Interpolating Points on a Non-Uniform Grid using a Mixture of Gaussians
+
+Human 3D keypoints via spatial uncertainty modeling
+
+Learning Compositional Radiance Fields of Dynamic Human Heads
+
+DECOR-GAN  3D Shape Detailization by Conditional Refinement
+
+Shape Animation with Combined Captured and Simulated Dynamics
+
+FaceDet3D  Facial Expressions with 3D Geometric Detail Prediction
+
+Depth Completion using Piecewise Planar Model
+
+DiffusionNet  Discretization Agnostic Learning on Surfaces
+
+Texture Mixing by Interpolating Deep Statistics via Gaussian Models
+
+PSDF Fusion  Probabilistic Signed Distance Function for On-the-fly 3D
+  Data Fusion and Scene Reconstruction
+
+BlendFields  Few-Shot Example-Driven Facial Modeling
+
+A new version of the adaptive fast Gauss transform for discrete and
+  continuous sources
+
+HuManiFlow  Ancestor-Conditioned Normalising Flows on SO(3) Manifolds
+  for Human Pose and Shape Distribution Estimation
+
+Relightify  Relightable 3D Faces from a Single Image via Diffusion
+  Models
+
+Text-guided High-definition Consistency Texture Model
+
+Stochastic Texture Filtering
+
+Large-scale and Efficient Texture Mapping Algorithm via Loopy Belief
+  Propagation
+
+Guided Image Synthesis via Initial Image Editing in Diffusion Model
+
+Single-Shot Implicit Morphable Faces with Consistent Texture
+  Parameterization
+
+TUVF  Learning Generalizable Texture UV Radiance Fields
+
+Shap-E  Generating Conditional 3D Implicit Functions
+
+DiffFacto  Controllable Part-Based 3D Point Cloud Generation with Cross
+  Diffusion
+
+Generating Texture for 3D Human Avatar from a Single Image using
+  Sampling and Refinement Networks
+
+Modeling 3D Surface Manifolds with a Locally Conditioned Atlas
+
+Enhancing Real-World Adversarial Patches through 3D Modeling of Complex
+  Target Scenes
+
+Generative Models as Distributions of Functions
+
+On the Minimax Spherical Designs
+
+Histograms of Gaussian normal distribution for feature matching in
+  clutter scenes
+
+Interactive 3D Modeling with a Generative Adversarial Network
+
+BlockFusion  Expandable 3D Scene Generation using Latent Tri-plane
+  Extrapolation
+
+VR-GS  A Physical Dynamics-Aware Interactive Gaussian Splatting System
+  in Virtual Reality
+
+Democratizing the Creation of Animatable Facial Avatars
+
+Endo-4DGS  Endoscopic Monocular Scene Reconstruction with 4D Gaussian
+  Splatting
+
+Diffutoon  High-Resolution Editable Toon Shading via Diffusion Models
+
+Continuous-Multiple Image Outpainting in One-Step via Positional Query
+  and A Diffusion-based Approach
+
+Gaussian Splashing  Dynamic Fluid Synthesis with Gaussian Splatting
+
+A High-Performance SurfaceNets Discrete Isocontouring Algorithm
+
+LIV-GaussMap  LiDAR-Inertial-Visual Fusion for Real-time 3D Radiance
+  Field Map Rendering
+
+TIFu  Tri-directional Implicit Function for High-Fidelity 3D Character
+  Reconstruction
+
+GauU-Scene  A Scene Reconstruction Benchmark on Large Scale 3D
+  Reconstruction Dataset Using Gaussian Splatting
+
+EndoGaussians  Single View Dynamic Gaussian Splatting for Deformable
+  Endoscopic Tissues Reconstruction
+
+GALA  Generating Animatable Layered Assets from a Single Scan
+
+PSAvatar  A Point-based Morphable Shape Model for Real-Time Head Avatar
+  Animation with 3D Gaussian Splatting
+
+EndoGaussian  Real-time Gaussian Splatting for Dynamic Endoscopic Scene
+  Reconstruction
+
+Template-Free Single-View 3D Human Digitalization with Diffusion-Guided
+  LRM
+
+Spherical Density-Equalizing Map for Genus-0 Closed Surfaces
+
+EndoGS  Deformable Endoscopic Tissues Reconstruction with Gaussian
+  Splatting
+
+UltrAvatar  A Realistic Animatable 3D Avatar Diffusion Model with
+  Authenticity Guided Textures
+
+Synthesizing Moving People with 3D Control
+
+Sat2Scene  3D Urban Scene Generation from Satellite Images with
+  Diffusion
+
+GaussianBody  Clothed Human Reconstruction via 3d Gaussian Splatting
+
+Consistent3D  Towards Consistent High-Fidelity Text-to-3D Generation
+  with Deterministic Sampling Prior
+
+Compose and Conquer  Diffusion-Based 3D Depth Aware Composable Image
+  Synthesis
+
+3D Human Pose Analysis via Diffusion Synthesis
+
+Large-Vocabulary 3D Diffusion Model with Transformer
+
+Operator-free Equilibrium on the Sphere
+
+Probabilistic Triangulation for Uncalibrated Multi-View 3D Human Pose
+  Estimation
+
+DeformToon3D  Deformable 3D Toonification from Neural Radiance Fields
+
+Text2Control3D  Controllable 3D Avatar Generation in Neural Radiance
+  Fields using Geometry-Guided Text-to-Image Diffusion Model
+
+Diffusion on the Probability Simplex
+
+SMPLitex  A Generative Model and Dataset for 3D Human Texture Estimation
+  from Single Image
+
+S2RF  Semantically Stylized Radiance Fields
+
+MaPa  Text-driven Photorealistic Material Painting for 3D Shapes
+
+Interactive3D  Create What You Want by Interactive 3D Generation
+
+DIG3D  Marrying Gaussian Splatting with Deformable Transformer for
+  Single Image 3D Reconstruction
+
+GaussianTalker  Real-Time High-Fidelity Talking Head Synthesis with
+  Audio-Driven 3D Gaussian Splatting
+
+OMEGAS  Object Mesh Extraction from Large Scenes Guided by Gaussian
+  Segmentation
+
+TalkingGaussian  Structure-Persistent 3D Talking Head Synthesis via
+  Gaussian Splatting
+
+CoARF  Controllable 3D Artistic Style Transfer for Radiance Fields
+
+3DFlowRenderer  One-shot Face Re-enactment via Dense 3D Facial Flow
+  Estimation
+
+UVMap-ID  A Controllable and Personalized UV Map Generative Model
+
+Guess The Unseen  Dynamic 3D Scene Reconstruction from Partial 2D
+  Glimpses
+
+GeoDiffuser  Geometry-Based Image Editing with Diffusion Models
+
+CLIP-GS  CLIP-Informed Gaussian Splatting for Real-time and
+  View-consistent 3D Semantic Understanding
+
+GaussianTalker  Speaker-specific Talking Head Synthesis via 3D Gaussian
+  Splatting
+
+FaceFolds  Meshed Radiance Manifolds for Efficient Volumetric Rendering
+  of Dynamic Faces
+
+GScream  Learning 3D Geometry and Feature Consistent Gaussian Splatting
+  for Object Removal
+
+DMesh  A Differentiable Representation for General Meshes
+
+Contrastive Gaussian Clustering  Weakly Supervised 3D Scene Segmentation
+
+EfficientGS  Streamlining Gaussian Splatting for Large-Scale
+  High-Resolution Scene Representation
+
+Does Gaussian Splatting need SFM Initialization 
+
+Dynamic Gaussians Mesh  Consistent Mesh Reconstruction from Monocular
+  Videos
+
+InFusion  Inpainting 3D Gaussians via Learning Depth Completion from
+  Diffusion Prior
+
+DeblurGS  Gaussian Splatting for Camera Motion Blur
+
+Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive
+  Displays
+
+Gaussian Opacity Fields  Efficient and Compact Surface Reconstruction in
+  Unbounded Scenes
+
+RefFusion  Reference Adapted Diffusion Models for 3D Scene Inpainting
+
+StyleCity  Large-Scale 3D Urban Scenes Stylization with Vision-and-Text
+  Reference via Progressive Optimization
+
+Gaussian Splatting Decoder for 3D-aware Generative Adversarial Networks
+
+AbsGS  Recovering Fine Details for 3D Gaussian Splatting
+
+SRGS  Super-Resolution 3D Gaussian Splatting
+
+EucliDreamer  Fast and High-Quality Texturing for 3D Models with
+  Depth-Conditioned Stable Diffusion
+
+Removing Objects From Neural Radiance Fields
+
+PaletteNeRF  Palette-based Appearance Editing of Neural Radiance Fields
+
+Speed up the inference of diffusion models via shortcut MCMC sampling
+
+DIST  Rendering Deep Implicit Signed Distance Function with
+  Differentiable Sphere Tracing
+
+An Optimal Algorithm for Computing the Spherical Depth of Points in the
+  Plane
+
+VoGE  A Differentiable Volume Renderer using Gaussian Ellipsoids for
+  Analysis-by-Synthesis
+
+Differentiable Point-Based Radiance Fields for Efficient View Synthesis
+
+3DILG  Irregular Latent Grids for 3D Generative Modeling
+
+Spotlights  Probing Shapes from Spherical Viewpoints
+
+StylizedNeRF  Consistent 3D Scene Stylization as Stylized NeRF via 2D-3D
+  Mutual Learning
+
+Diffuse Map Guiding Unsupervised Generative Adversarial Network for
+  SVBRDF Estimation
+
+ReLU Fields  The Little Non-linearity That Could
+
+AvatarMe++  Facial Shape and BRDF Inference with Photorealistic
+  Rendering-Aware GANs
+
+Plenoxels  Radiance Fields without Neural Networks
+
+Gaussian map predictions for 3D surface feature localisation and
+  counting
+
+Text2Mesh  Text-Driven Neural Stylization for Meshes
+
+StyleMesh  Style Transfer for Indoor 3D Scene Reconstructions
+
+Generating Diverse 3D Reconstructions from a Single Occluded Face Image
+
+A Closest Point Proposal for MCMC-based Probabilistic Surface
+  Registration
+
+Spatio-thermal depth correction of RGB-D sensors based on Gaussian
+  Processes in real-time
+
+PointMixup  Augmentation for Point Clouds
+
+Modeling Caricature Expressions by 3D Blendshape and Dynamic Texture
+
+Dynamic Object Removal and Spatio-Temporal RGB-D Inpainting via
+  Geometry-Aware Adversarial Learning
+
+TexMesh  Reconstructing Detailed Human Texture and Geometry from RGB-D
+  Video
+
+Exemplar-Based 3D Portrait Stylization
+
+Normal-Driven Spherical Shape Analogies
+
+Jittering Samples using a kd-Tree Stratification
+
+PeeledHuman  Robust Shape Representation for Textured 3D Human Body
+  Reconstruction
+
+SPSG  Self-Supervised Photometric Scene Generation from RGB-D Scans
+
+Learning Indoor Inverse Rendering with 3D Spatially-Varying Lighting
+
+Finite Element Representations of Gaussian Processes  Balancing
+  Numerical and Statistical Accuracy
+
+SLIDE  Single Image 3D Photography with Soft Layering and Depth-aware
+  Inpainting
+
+Fourier PlenOctrees for Dynamic Radiance Field Rendering in Real-time
+
+Sparse image reconstruction on the sphere  implications of a new
+  sampling theorem
+
+GET3D  A Generative Model of High Quality 3D Textured Shapes Learned
+  from Images
+
+Iterative Poisson Surface Reconstruction (iPSR) for Unoriented Points
+
+Taming the Power of Diffusion Models for High-Quality Virtual Try-On
+  with Appearance Flow
+
+Bijective Density-Equalizing Quasiconformal Map for Multiply-Connected
+  Open Surfaces
+
+GeodesicPSIM  Predicting the Quality of Static Mesh with Texture Map via
+  Geodesic Patch Similarity
+
+3D Gaussian Splatting for Real-Time Radiance Field Rendering
+
+Generative Approach for Probabilistic Human Mesh Recovery using
+  Diffusion Models
+
+NeRFs  The Search for the Best 3D Representation
+
+Differentiable Blocks World  Qualitative 3D Decomposition by Rendering
+  Primitives
+
+Efficient 3D Articulated Human Generation with Layered Surface Volumes
+
+Metropolis Sampling for Constrained Diffusion Models
+
+Neural Point-based Volumetric Avatar  Surface-guided Neural Points for
+  Efficient and Photorealistic Volumetric Head Avatar
+
+Articulated 3D Head Avatar Generation using Text-to-Image Diffusion
+  Models
+
+PanoDiffusion  360-degree Panorama Outpainting via Diffusion
+
+MVDiffusion  Enabling Holistic Multi-view Image Generation with
+  Correspondence-Aware Diffusion
+
+Interpolation of Point Distributions for Digital Stippling
+
+Improving Inversion and Generation Diversity in StyleGAN using a
+  Gaussianized Latent Space
+
+Data-Driven Space-Filling Curves
+
+Nonlinear Spectral Geometry Processing via the TV Transform
+
+The Mixture Graph-A Data Structure for Compressing, Rendering, and
+  Querying Segmentation Histograms
+
+Efficient 2D Simulation on Moving 3D Surfaces
+
+Fast GPU 3D Diffeomorphic Image Registration
+
+Pulsar  Efficient Sphere-based Neural Rendering
+
+Weakly-Supervised Photo-realistic Texture Generation for 3D Face
+  Reconstruction
+
+SKIing on Simplices  Kernel Interpolation on the Permutohedral Lattice
+  for Scalable Gaussian Processes
+
+Deep Medial Fields
+
+Shape As Points  A Differentiable Poisson Solver
+
+SHAD3S  A model to Sketch, Shade and Shadow
+
+Fast and Scalable Earth Texture Synthesis using Spatially Assembled
+  Generative Adversarial Neural Networks
+
+Efficient texture mapping via a non-iterative global texture alignment
+
+Towards Realistic 3D Embedding via View Alignment
+
+Simplicial Complex based Point Correspondence between Images warped onto
+  Manifolds
+
+RGB Point Cloud Manipulation with Triangular Structures for Artistic
+  Image Recoloring
+
+Learning a Neural 3D Texture Space from 2D Exemplars
+
+Spectral-GANs for High-Resolution 3D Point-cloud Generation
+
+Hamiltonian Dynamics for Real-World Shape Interpolation
+
+3D Photography using Context-aware Layered Depth Inpainting
+
+Leveraging 2D Data to Learn Textured 3D Mesh Generation
+
+Learning Formation of Physically-Based Face Attributes
+
+A Gaussian Mixture MRF for Model-Based Iterative Reconstruction with
+  Applications to Low-Dose X-ray CT
+
+Fast and High-Quality Bilateral Filtering Using Gauss-Chebyshev
+  Approximation
+
+Unsupervised Watertight Mesh Generation for Physics Simulation
+  Applications Using Growing Neural Gas on Noisy Free-Form Object Models
+
+Direct interactive visualization of locally refined spline volumes for
+  scalar and vector fields
+
+A programme to determine the exact interior of any connected digital
+  picture
+
+3DShape2VecSet  A 3D Shape Representation for Neural Fields and
+  Generative Diffusion Models
+
+Light-Weight Pointcloud Representation with Sparse Gaussian Process
+
+BallGAN  3D-aware Image Synthesis with a Spherical Background
+
+GPatt  Fast Multidimensional Pattern Extrapolation with Gaussian
+  Processes
+
+The Minecraft Kernel  Modelling correlated Gaussian Processes in the
+  Fourier domain
+
+Mixture of Volumetric Primitives for Efficient Neural Rendering
+
+Diffusion Probabilistic Models for 3D Point Cloud Generation
+
+NeuTex  Neural Texture Mapping for Volumetric Neural Rendering
+
+Combining 3D Morphable Models  A Large scale Face-and-Head Model
+
+Rodin  A Generative Model for Sculpting 3D Digital Avatars Using
+  Diffusion
+
+RGBD2  Generative Scene Synthesis via Incremental View Inpainting using
+  RGBD Diffusion Models
+
+NeRDi  Single-View NeRF Synthesis with Language-Guided Diffusion as
+  General Image Priors
+
+DiffRF  Rendering-Guided 3D Radiance Field Diffusion
+
+A Tractable Probability Distribution with Applications in
+  Three-Dimensional Statistics
+
+SparseFusion  Distilling View-conditioned Diffusion for 3D
+  Reconstruction
+
+Score Jacobian Chaining  Lifting Pretrained 2D Diffusion Models for 3D
+  Generation
+
+$PC^2$  Projection-Conditioned Point Cloud Diffusion for Single-Image 3D
+  Reconstruction
+
+3D-aware Conditional Image Synthesis
+
+Blue-Noise Dithered QMC Hierarchical Russian Roulette
+
+Arbitrary Point Cloud Upsampling with Spherical Mixture of Gaussians
+
+A diffusion-driven Characteristic Mapping method for particle management
+
+Visual Analysis of Large Multivariate Scattered Data using Clustering
+  and Probabilistic Summaries
+
+SMPLpix  Neural Avatars from 3D Human Models
+
+Resolution analysis of inverting the generalized Radon transform from
+  discrete data in $\mathbb R^3$
+
+Rendering Point Clouds with Compute Shaders
+
+Geometric Sample Reweighting for Monte Carlo Integration
+
+Learning to Predict 3D Objects with an Interpolation-based
+  Differentiable Renderer
+
+Just-in-Time Reconstruction  Inpainting Sparse Maps using Single View
+  Depth Predictors as Priors
+
+DiffPose  Multi-hypothesis Human Pose Estimation using Diffusion models
+
+DATID-3D  Diversity-Preserved Domain Adaptation Using Text-to-Image
+  Diffusion for 3D Generative Model
+
+3inGAN  Learning a 3D Generative Model from Images of a Self-similar
+  Scene
+
+Neural Poisson  Indicator Functions for Neural Fields
+
+3DDesigner  Towards Photorealistic 3D Object Generation and Editing with
+  Text-guided Diffusion Models
+
+Diffusion-SDF  Conditional Generative Modeling of Signed Distance
+  Functions
+
+TetraDiffusion  Tetrahedral Diffusion Models for 3D Shape Generation
+
+PermutoSDF  Fast Multi-View Reconstruction with Implicit Surfaces using
+  Permutohedral Lattices
+
+Exact-NeRF  An Exploration of a Precise Volumetric Parameterization for
+  Neural Radiance Fields
+
+SPIn-NeRF  Multiview Segmentation and Perceptual Inpainting with Neural
+  Radiance Fields
+
+Next3D  Generative Neural Texture Rasterization for 3D-Aware Head
+  Avatars
+
+RenderDiffusion  Image Diffusion for 3D Reconstruction, Inpainting and
+  Generation
+
+AligNeRF  High-Fidelity Neural Radiance Fields via Alignment-Aware
+  Training
+
+PointInverter  Point Cloud Reconstruction and Editing via a Generative
+  Model with Shape Priors
+
+Straight Skeletons with Additive and Multiplicative Weights and Their
+  Application to the Algorithmic Generation of Roofs and Terrains
+
+A Mathematical Definition of Particle Methods
+
+Perspective picture from Visual Sphere  a new approach to image
+  rasterization
+
+Volumetric density-equalizing reference map with applications
+
+Gaussian Curvature Filter on 3D Meshes
+
+Adversarial Texture Optimization from RGB-D Scans
+
+VoLux-GAN  A Generative Model for 3D Face Synthesis with HDRI Relighting
+
+POCO  Point Convolution for Surface Reconstruction
+
+Surface-Aligned Neural Radiance Fields for Controllable 3D Human
+  Synthesis
+
+Towards Uniform Point Distribution in Feature-preserving Point Cloud
+  Filtering
+
+SurfGen  Adversarial 3D Shape Synthesis with Explicit Surface
+  Discriminators
+
+StyleAvatar3D  Leveraging Image-Text Diffusion Models for High-Fidelity
+  3D Avatar Generation
+
+One-Line-of-Code Data Mollification Improves Optimization of
+  Likelihood-based Generative Models
+
+HiFA  High-fidelity Text-to-3D Generation with Advanced Diffusion
+  Guidance
+
+NeuManifold  Neural Watertight Manifold Reconstruction with Efficient
+  and High-Quality Rendering Support
+
+Sin3DM  Learning a Diffusion Model from a Single 3D Textured Shape
+
+InNeRF360  Text-Guided 3D-Consistent Object Inpainting on 360-degree
+  Neural Radiance Fields
+
+T1  Scaling Diffusion Probabilistic Fields to High-Resolution on Unified
+  Visual Modalities
+
+Kernel Interpolation with Sparse Grids
+
+Towards Understanding the Dynamics of Gaussian-Stein Variational
+  Gradient Descent
+
+Guided Motion Diffusion for Controllable Human Motion Synthesis
+
+Chupa  Carving 3D Clothed Humans from Skinned Shape Priors using 2D
+  Diffusion Probabilistic Models
+
+LDM3D  Latent Diffusion Model for 3D
+
+Towards Robust Probabilistic Modeling on SO(3) via Rotation Laplace
+  Distribution
+
+Differentiable Surface Splatting for Point-based Geometry Processing
+
+LatentEditor  Text Driven Local Editing of 3D Scenes
+
+Single Mesh Diffusion Models with Field Latents for Texture Generation
+
+Text2Immersion  Generative Immersive Scene with 3D Gaussians
+
+3DGS-Avatar  Animatable Avatars via Deformable 3D Gaussian Splatting
+
+Mosaic-SDF for 3D Generative Models
+
+Triplane Meets Gaussian Splatting  Fast and Generalizable Single-View 3D
+  Reconstruction with Transformers
+
+PI3D  Efficient Text-to-3D Generation with Pseudo-Image Diffusion
+
+iComMa  Inverting 3D Gaussian Splatting for Camera Pose Estimation via
+  Comparing and Matching
+
+UniDream  Unifying Diffusion Priors for Relightable Text-to-3D
+  Generation
+
+A Local Appearance Model for Volumetric Capture of Diverse Hairstyle
+
+Joint2Human  High-quality 3D Human Generation via Compact Spherical
+  Embedding of 3D Joints
+
+Efficient-NeRF2NeRF  Streamlining Text-Driven 3D Editing with Multiview
+  Correspondence-Enhanced Diffusion Models
+
+DrivingGaussian  Composite Gaussian Splatting for Surrounding Dynamic
+  Autonomous Driving Scenes
+
+COLMAP-Free 3D Gaussian Splatting
+
+Fast Training of Diffusion Transformer with Extreme Masking for 3D Point
+  Clouds Generation
+
+CAD  Photorealistic 3D Generation via Adversarial Distillation
+
+Learning Naturally Aggregated Appearance for Efficient 3D Editing
+
+Nuvo  Neural UV Mapping for Unruly 3D Representations
+
+Gaussian Splatting SLAM
+
+EpiDiff  Enhancing Multi-View Synthesis via Localized
+  Epipolar-Constrained Diffusion
+
+ASH  Animatable Gaussian Splats for Efficient and Photoreal Human
+  Rendering
+
+R2Human  Real-Time 3D Human Appearance Rendering from a Single Image
+
+CoGS  Controllable Gaussian Splatting
+
+DPoser  Diffusion Model as Robust 3D Human Pose Prior
+
+GIR  3D Gaussian Inverse Rendering for Relightable Scene Factorization
+
+3D Copy-Paste  Physically Plausible Object Insertion for Monocular 3D
+  Detection
+
+MVDD  Multi-View Depth Diffusion Models
+
+Learn to Optimize Denoising Scores for 3D Generation  A Unified and
+  Improved Diffusion Prior on NeRF and 3D Gaussian Splatting
+
+NeuSD  Surface Completion with Multi-View Text-to-Image Diffusion
+
+EAGLES  Efficient Accelerated 3D Gaussians with Lightweight EncodingS
+
+NeRFiller  Completing Scenes via Generative 3D Inpainting
+
+PrimDiffusion  Volumetric Primitives Diffusion for 3D Human Generation
+
+MonoGaussianAvatar  Monocular Gaussian Point-based Head Avatar
+
+FitDiff  Robust monocular 3D facial shape and reflectance estimation
+  using Diffusion Models
+
+TeMO  Towards Text-Driven 3D Stylization for Multi-Object Meshes
+
+Text-to-3D Generation with Bidirectional Diffusion using both 2D and 3D
+  priors
+
+Towards 4D Human Video Stylization
+
+Inpaint3D  3D Scene Content Generation using 2D Inpainting Diffusion
+
+Relightable Gaussian Codec Avatars
+
+XCube ($\mathcal{X}^3$)  Large-Scale 3D Generative Modeling using Sparse
+  Voxel Hierarchies
+
+HiFi4G  High-Fidelity Human Performance Rendering via Compact Gaussian
+  Splatting
+
+Gaussian-Flow  4D Reconstruction with Dynamic 3D Gaussian Particle
+
+Gaussian-SLAM  Photo-realistic Dense SLAM with Gaussian Splatting
+
+Feature 3DGS  Supercharging 3D Gaussian Splatting to Enable Distilled
+  Feature Fields
+
+Gaussian3Diff  3D Gaussian Diffusion for 3D Full Head Synthesis and
+  Editing
+
+GauHuman  Articulated Gaussian Splatting from Monocular Human Videos
+
+HeadGaS  Real-Time Animatable Head Avatars via 3D Gaussian Splatting
+
+Gaussian Head Avatar  Ultra High-fidelity Head Avatar via Dynamic
+  Gaussians
+
+GPS-Gaussian  Generalizable Pixel-wise 3D Gaussian Splatting for
+  Real-time Human Novel View Synthesis
+
+MANUS  Markerless Grasp Capture using Articulated 3D Gaussians
+
+BerfScene  Bev-conditioned Equivariant Radiance Fields for Infinite 3D
+  Scene Generation
+
+Re-Nerfing  Improving Novel Views Synthesis through Novel Views
+  Synthesis
+
+GaussianAvatar  Towards Realistic Human Avatar Modeling from a Single
+  Video via Animatable 3D Gaussians
+
+SplaTAM  Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM
+
+Mathematical Supplement for the $\texttt{gsplat}$ Library
+
+GaussianAvatars  Photorealistic Head Avatars with Rigged 3D Gaussians
+
+SC-GS  Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes
+
+GaussianHead  High-fidelity Head Avatars with Learnable Gaussian
+  Derivation
+
+Generative Rendering  Controllable 4D-Guided Video Generation with 2D
+  Diffusion Models
+
+FlashAvatar  High-fidelity Head Avatar with Efficient Gaussian Embedding
+
+Volumetric Rendering with Baked Quadrature Fields
+
+Neural Parametric Gaussians for Monocular Non-Rigid Object
+  Reconstruction
+
+Diffusion Handles  Enabling 3D Edits for Diffusion Models by Lifting
+  Activations to 3D
+
+Consistent Mesh Diffusion
+
+Recursive Camera Painting  A Method for Real-Time Painterly Renderings
+  of 3D Scenes
+
+DISTWAR  Fast Differentiable Rendering on Raster-based Rendering
+  Pipelines
+
+3DiFACE  Diffusion-based Speech-driven 3D Facial Animation and Editing
+
+Segment Any 3D Gaussians
+
+Gaussian Grouping  Segment and Edit Anything in 3D Scenes
+
+FSGS  Real-Time Few-shot View Synthesis using Gaussian Splatting
+
+NeuSG  Neural Implicit Surface Reconstruction with 3D Gaussian Splatting
+  Guidance
+
+Text-Guided 3D Face Synthesis -- From Generation to Editing
+
+Adaptive area-preserving parameterization of open and closed anatomical
+  surfaces
+
+Neural BRDFs  Representation and Operations
+
+Generative Occupancy Fields for 3D Surface-Aware Image Synthesis
+
+Dynamic multi-object Gaussian process models  A framework for
+  data-driven functional modelling of human joints
+
+Gap Processing for Adaptive Maximal Poisson-Disk Sampling
+
+Procedural Wang Tile Algorithm for Stochastic Wall Patterns
+
+Approximate Program Smoothing Using Mean-Variance Statistics, with
+  Application to Procedural Shader Bandlimiting
+
+Iterated geometric harmonics for data imputation and reconstruction of
+  missing data
+
+Touch-GS  Visual-Tactile Supervised 3D Gaussian Splatting
+
+GaussianGrasper  3D Language Gaussian Splatting for Open-vocabulary
+  Robotic Grasping
+
+Make-Your-3D  Fast and Consistent Subject-Driven 3D Content Generation
+
+Reconstruction and Simulation of Elastic Objects with Spring-Mass 3D
+  Gaussians
+
+Relaxing Accurate Initialization Constraint for 3D Gaussian Splatting
+
+Hyper-3DG  Text-to-3D Gaussian Generation via Hypergraph
+
+A New Split Algorithm for 3D Gaussian Splatting
+
+Sculpt3D  Multi-View Consistent Text-to-3D Generation with Sparse 3D
+  Prior
+
+Envision3D  One Image to 3D with Anchor Views Interpolation
+
+FastMAC  Stochastic Spectral Sampling of Correspondence Graph
+
+GaussCtrl  Multi-View Consistent Text-Driven 3D Gaussian Splatting
+  Editing
+
+GaussianImage  1000 FPS Image Representation and Compression by 2D
+  Gaussian Splatting
+
+Gaussian Splatting in Style
+
+NoiseDiffusion  Correcting Noise for Image Interpolation with Diffusion
+  Models beyond Spherical Linear Interpolation
+
+ManiGaussian  Dynamic Gaussian Splatting for Multi-task Robotic
+  Manipulation
+
+PNeSM  Arbitrary 3D Scene Stylization via Prompt-Based Neural Style
+  Mapping
+
+StyleGaussian  Instant 3D Style Transfer with Gaussian Splatting
+
+SemGauss-SLAM  Dense Semantic Gaussian Splatting SLAM
+
+GPU-Accelerated Vecchia Approximations of Gaussian Processes for
+  Geospatial Data using Batched Matrix Computations
+
+3D Uncertain Implicit Surface Mapping using GMM and GP
+
+DNGaussian  Optimizing Sparse-View 3D Gaussian Radiance Fields with
+  Global-Local Depth Normalization
+
+FreGS  3D Gaussian Splatting with Progressive Frequency Regularization
+
+V3D  Video Diffusion Models are Effective 3D Generators
+
+3D-aware Image Generation and Editing with Multi-modal Conditions
+
+S-DyRF  Reference-Based Stylized Radiance Fields for Dynamic Scenes
+
+DiffuMatting  Synthesizing Arbitrary Objects with Matting-level
+  Annotation
+
+GSEdit  Efficient Text-Guided Editing of 3D Objects via Gaussian
+  Splatting
+
+SplattingAvatar  Realistic Real-Time Human Avatars with Mesh-Embedded
+  Gaussian Splatting
+
+StereoDiffusion  Training-Free Stereo Image Generation Using Latent
+  Diffusion Models
+
+BAGS  Blur Agnostic Gaussian Splatting through Multi-Scale Kernel
+  Modeling
+
+Radiative Gaussian Splatting for Efficient X-ray Novel View Synthesis
+
+Online Photon Guiding with 3D Gaussians for Caustics Rendering
+
+Splat-Nav  Safe Real-Time Robot Navigation in Gaussian Splatting Maps
+
+3DTopia  Large Text-to-3D Generation Model with Hybrid Diffusion Priors
+
+DragTex  Generative Point-Based Texture Editing on 3D Mesh
+
+3DGStream  On-the-Fly Training of 3D Gaussians for Efficient Streaming
+  of Photo-Realistic Free-Viewpoint Videos
+
+Drivable 3D Gaussian Avatars
+
+One-2-3-45++  Fast Single Image to 3D Objects with Consistent Multi-View
+  Generation and 3D Diffusion
+
+3DStyle-Diffusion  Pursuing Fine-grained Text-driven 3D Stylization with
+  2D Diffusion Models
+
+Animating NeRFs from Texture Space  A Framework for Pose-Dependent
+  Rendering of Human Performances
+
+Exploring the Capability of Text-to-Image Diffusion Models with
+  Structural Edge Guidance for Multi-Spectral Satellite Image Inpainting
+
+SPHEAR  Spherical Head Registration for Complete Statistical 3D Modeling
+
+PDF  Point Diffusion Implicit Function for Large-scale Scene Neural
+  Representation
+
+Gaussian Mixture Solvers for Diffusion Models
+
+GPU Accelerated Particle Visualization with Splotch
+
+Style Transfer by Relaxed Optimal Transport and Self-Similarity
+
+SurfaceBrush  From Virtual Reality Drawings to Manifold Surfaces
+
+3D Dynamic Point Cloud Inpainting via Temporal Consistency on Graphs
+
+Learning Continuous Mesh Representation with Spherical Implicit Surface
+
+Modiff  Action-Conditioned 3D Motion Generation with Denoising Diffusion
+  Probabilistic Models
+
+3DAvatarGAN  Bridging Domains for Personalized Editable Avatars
+
+Diffusion Probabilistic Models for Scene-Scale 3D Categorical Data
+
+Generating Images with 3D Annotations Using Diffusion Models
+
+Viewset Diffusion  (0-)Image-Conditioned 3D Generative Models from 2D
+  Data
+
+RePaint-NeRF  NeRF Editting via Semantic Masks and Diffusion Models
+
+Real-Time Rendering of Glinty Appearances using Distributed Binomial
+  Laws on Anisotropic Grids
+
+IFaceUV  Intuitive Motion Facial Image Generation by Identity
+  Preservation via UV map
+
+ARTIC3D  Learning Robust Articulated 3D Shapes from Noisy Web Image
+  Collections
+
+BeyondPixels  A Comprehensive Review of the Evolution of Neural Radiance
+  Fields
+
+PolyDiffuse  Polygonal Shape Reconstruction via Guided Set Diffusion
+  Models
+
+DiffInDScene  Diffusion-based High-Quality 3D Indoor Scene Generation
+
+Implicit reconstructions of thin leaf surfaces from large, noisy point
+  clouds
+
+SeamlessNeRF  Stitching Part NeRFs with Gradient Propagation
+
+Dynamic Gaussian Splatting from Markerless Motion Capture can
+  Reconstruct Infants Movements
+
+Video Frame Interpolation with Many-to-many Splatting and Spatial
+  Selective Refinement
+
+Reconstructive Latent-Space Neural Radiance Fields for Efficient 3D
+  Scene Representations
+
+FLARE  Fast Learning of Animatable and Relightable Mesh Avatars
+
+DreamCraft3D  Hierarchical 3D Generation with Bootstrapped Diffusion
+  Prior
+
+SkelFMM  A Simplified Fast Multipole Method Based on Recursive
+  Skeletonization
+
+iNVS  Repurposing Diffusion Inpainters for Novel View Synthesis
+
+Filter-adapted spatiotemporal sampling for real-time rendering
+
+Ghost on the Shell  An Expressive Representation of General 3D Shapes
+
+Zero123++  a Single Image to Consistent Multi-view Diffusion Base Model
+
+Wonder3D  Single Image to 3D using Cross-Domain Diffusion
+
+MAS  Multi-view Ancestral Sampling for 3D motion generation using 2D
+  diffusion
+
+TexFusion  Synthesizing 3D Textures with Text-Guided Image Diffusion
+  Models
+
+Conditional Generative Modeling for Images, 3D Animations, and Video
+
+DELIFFAS  Deformable Light Fields for Fast Avatar Synthesis
+
+Real-time Photorealistic Dynamic Scene Representation and Rendering with
+  4D Gaussian Splatting
+
+Discrete approximations of the affine Gaussian derivative model for
+  visual receptive fields
+
+Fast Resampling of 3D Point Clouds via Graphs
+
+Representing Data by a Mixture of Activated Simplices
+
+PaintHuman  Towards High-fidelity Text-to-3D Human Texturing via
+  Denoised Score Distillation
+
+GaussianDreamer  Fast Generation from Text to 3D Gaussians by Bridging
+  2D and 3D Diffusion Models
+
+4D Gaussian Splatting for Real-Time Dynamic Scene Rendering
+
+Real-Time Neural BRDF with Spherically Distributed Primitives
+
+Dynamic Appearance Particle Neural Radiance Field
+
+State of the Art on Diffusion Models for Visual Computing
+
+High-Fidelity 3D Head Avatars Reconstruction through Spatially-Varying
+  Expression Conditioned Neural Radiance Field
+
+Parameterization-driven Neural Implicit Surfaces Editing
+
+Latent Consistency Models  Synthesizing High-Resolution Images with
+  Few-Step Inference
+
+Consistent-1-to-3  Consistent Image to 3D View Synthesis via
+  Geometry-aware Diffusion Models
+
+Efficient-3DiM  Learning a Generalizable Single-image Novel-view
+  Synthesizer in One Day
+
+MUNCH  Modelling Unique 'N Controllable Heads
+
+Posterior Sampling Based on Gradient Flows of the MMD with Negative
+  Distance Kernel
+
+GETAvatar  Generative Textured Meshes for Animatable Human Avatars
+
+ED-NeRF  Efficient Text-Guided Editing of 3D Scene with Latent Space
+  NeRF
+
+SweetDreamer  Aligning Geometric Priors in 2D Diffusion for Consistent
+  Text-to-3D
+
+HumanNorm  Learning Normal Diffusion Model for High-quality and
+  Realistic 3D Human Generation
+
+Consistent Mesh Colors for Multi-View Reconstructed 3D Scenes
+
+Scale factor point spread function matching  Beyond aliasing in image
+  resampling
+
+Direct Fitting of Gaussian Mixture Models
+
+A Non-linear Differential CNN-Rendering Module for 3D Data Enhancement
+
+Computational Parquetry  Fabricated Style Transfer with Wood Pixels
+
+Soft Rasterizer  A Differentiable Renderer for Image-based 3D Reasoning
+
+On a fast bilateral filtering formulation using functional
+  rearrangements
+
+Fast and Accurate Bilateral Filtering using Gauss-Polynomial
+  Decomposition
+
+Deep Generative Models on 3D Representations  A Survey
+
+Boosting Point Clouds Rendering via Radiance Mapping
+
+Diffusion Motion  Generate Text-Guided 3D Human Motion by Diffusion
+  Model
+
+Boomerang  Local sampling on image manifolds using diffusion models
+
+TANGO  Text-driven Photorealistic and Robust 3D Stylization via Lighting
+  Decomposition
+
+Equispaced Fourier representations for efficient Gaussian process
+  regression from a billion data points
+
+Interpolated SelectionConv for Spherical Images and Surfaces
+
+ARAH  Animatable Volume Rendering of Articulated Human SDFs
+
+Variable resolution Poisson-disk sampling for meshing discrete fracture
+  networks
+
+Path Guiding Using Spatio-Directional Mixture Models
+
+Extracting Triangular 3D Models, Materials, and Lighting From Images
+
+DIVeR  Real-time and Accurate Neural Radiance Fields with Deterministic
+  Integration for Volume Rendering
+
+Fast View Frustum Culling of Spatial Object by Analytical Bounding Bin
+
+RGB-D Image Inpainting Using Generative Adversarial Network with a Late
+  Fusion Approach
+
+Differentiable Stereopsis  Meshes from multiple views using
+  differentiable rendering
+
+Topologically Consistent Multi-View Face Inference Using Volumetric
+  Sampling
+
+ASH  A Modern Framework for Parallel Spatial Hashing in 3D Perception
+
+Inpaint4DNeRF  Promptable Spatio-Temporal NeRF Inpainting with
+  Generative Diffusion Models
+
+6D-Diff  A Keypoint Diffusion Framework for 6D Object Pose Estimation
+
+DreamGaussian4D  Generative 4D Gaussian Splatting
+
+Representing and Modeling Inconsistent, Impossible, and Incoherent
+  Shapes and Scenes with 2D Non-Conservative Vector Fields mapped on
+  2-Complexes
+
+DiffusionGAN3D  Boosting Text-guided 3D Generation and Domain Adaptation
+  by Combining 3D GANs and Diffusion Priors
+
+Spacetime Gaussian Feature Splatting for Real-Time Dynamic View
+  Synthesis
+
+LangSplat  3D Language Gaussian Splatting
+
+2D-Guided 3D Gaussian Segmentation
+
+HarmonyView  Harmonizing Consistency and Diversity in One-Image-to-3D
+
+Sparse-view CT Reconstruction with 3D Gaussian Volumetric Representation
+
+Human101  Training 100+FPS Human Gaussians in 100s from 1 View
+
+Deformable 3D Gaussian Splatting for Animatable Human Avatars
+
+Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance
+  Generation
+
+Controllable 3D Face Generation with Conditional Style Code Diffusion
+
+Paint3D  Paint Anything 3D with Lighting-Less Texture Diffusion Models
+
+Align Your Gaussians  Text-to-4D with Dynamic 3D Gaussians and Composed
+  Diffusion Models
+
+Gaussian Splatting with NeRF-based Color and Opacity
+
+Repaint123  Fast and High-quality One Image to 3D Generation with
+  Progressive Controllable 2D Repainting
+
+Ternary-type Opacity and Hybrid Odometry for RGB-only NeRF-SLAM
+
+Splatter Image  Ultra-Fast Single-View 3D Reconstruction
+
+SpecNeRF  Gaussian Directional Encoding for Specular Reflections
+
+DiffPortrait3D  Controllable Diffusion for Zero-Shot Portrait View
+  Synthesis
+
+SWAGS  Sampling Windows Adaptively for Dynamic 3D Gaussian Splatting
+
+Compact 3D Scene Representation via Self-Organizing Gaussian Grids
+
+Scene-Conditional 3D Object Stylization and Composition
+
+pixelSplat  3D Gaussian Splats from Image Pairs for Scalable
+  Generalizable 3D Reconstruction
+
+Towards Accurate Guided Diffusion Sampling through Symplectic Adjoint
+  Method
+
+MixRT  Mixed Neural Representations For Real-Time NeRF Rendering
+
+HAAR  Text-Conditioned Generative Model of 3D Strand-based Human
+  Hairstyles
+
+GAvatar  Animatable 3D Gaussian Avatars with Implicit Mesh Learning
+
+GauFRe  Gaussian Deformation Fields for Real-time Dynamic Novel View
+  Synthesis
+
+PolyDiff  Generating 3D Polygonal Meshes with Diffusion Models
+
+Paint-it  Text-to-Texture Synthesis via Deep Convolutional Texture Map
+  Optimization and Physically-Based Rendering
+
+SinMPI  Novel View Synthesis from a Single Image with Expanded
+  Multiplane Images
+
+Multi-Fidelity High-Order Gaussian Processes for Physical Simulation
+
+On Covering a Solid Sphere with Concentric Spheres in ${\mathbb Z}^3$
+
+Gaussian Process Models with Parallelization and GPU acceleration
+
+Procedural 3D Terrain Generation using Generative Adversarial Networks
+
+High-Fidelity 3D Digital Human Head Creation from RGB-D Selfies
+
+LSMAT Least Squares Medial Axis Transform
+
+Temporally-smooth Antialiasing and Lens Distortion with Rasterization
+  Map
+
+Splotch  porting and optimizing for the Xeon Phi
+
+Human Motion Prediction via Spatio-Temporal Inpainting
+
+Generating an equidistributed net on a unit n-sphere using random
+  rotations
+
+General Automatic Human Shape and Motion Capture Using Volumetric
+  Contour Cues
+
+Continuous 3D Label Stereo Matching using Local Expansion Moves
+
+Gaussian Process Morphable Models
+
+Efficient Fourier representations of families of Gaussian processes
+
+Image scaling by de la Vallée-Poussin filtered interpolation
+
+Towards Fine-grained 3D Face Dense Registration  An Optimal Dividing and
+  Diffusing Method
+
+PC$^2$-PU  Patch Correlation and Point Correlation for Effective Point
+  Cloud Upsampling
+
+Messing Up 3D Virtual Environments  Transferable Adversarial 3D Objects
+
+AdaInt  Learning Adaptive Intervals for 3D Lookup Tables on Real-time
+  Image Enhancement
+
+Galerkin--Chebyshev approximation of Gaussian random fields on compact
+  Riemannian manifolds
+
+Wasserstein Style Transfer
+
+Texture Fields  Learning Texture Representations in Function Space
+
+Coordinate-based Texture Inpainting for Pose-Guided Image Generation
+
+Fast Gaussian Process Occupancy Maps
+
+FilterReg  Robust and Efficient Probabilistic Point-Set Registration
+  using Gaussian Filter and Twist Parameterization
+
+Softmax Splatting for Video Frame Interpolation
+
+Gaussianization Flows
+
+Region adaptive graph fourier transform for 3d point clouds
+
+Spherical Parameterization Balancing Angle and Area Distortions
+
+SPLATNet  Sparse Lattice Networks for Point Cloud Processing
+
+Fast flow-based algorithm for creating density-equalizing map
+  projections
+
+A Closed-form Solution to Photorealistic Image Stylization
+
+Fast Automatic Bayesian Cubature Using Lattice Sampling
+
+From 2D to 3D Geodesic-based Garment Matching
+
+LMap  Shape-Preserving Local Mappings for Biomedical Visualization
+
+GaussiGAN  Controllable Image Synthesis with 3D Gaussians from Unposed
+  Silhouettes
+
+Patch-Based Image Restoration using Expectation Propagation
+
+Z2P  Instant Visualization of Point Clouds
+
+Learning to Stylize Novel Views
+
+Recursive-NeRF  An Efficient and Dynamically Growing NeRF
+
+Triangulated Surface Denoising using High Order Regularization with
+  Dynamic Weights
+
+Shape Inpainting using 3D Generative Adversarial Network and Recurrent
+  Convolutional Networks
+
+Branching Gaussian Processes with Applications to Spatiotemporal
+  Reconstruction of 3D Trees
+
+Learning Quadrangulated Patches For 3D Shape Processing
+
+Flexible Techniques for Differentiable Rendering with 3D Gaussians
+
+HoloFusion  Towards Photo-realistic 3D Generative Modeling
+
+Unaligned 2D to 3D Translation with Conditional Vector-Quantized Code
+  Diffusion using Transformers
+
+Sparse3D  Distilling Multiview-Consistent Diffusion for Object
+  Reconstruction from Sparse Views
+
+Distribution-Aligned Diffusion for Human Mesh Recovery
+
+EfficientDreamer  High-Fidelity and Robust 3D Creation via
+  Orthogonal-view Diffusion Prior
+
+ARF-Plus  Controlling Perceptual Factors in Artistic Radiance Fields for
+  3D Scene Stylization
+
+Blending-NeRF  Text-Driven Localized Editing in Neural Radiance Fields
+
+Differentiable Shadow Mapping for Efficient Inverse Graphics
+
+Texture Generation on 3D Meshes with Point-UV Diffusion
+
+Dynamic 3D Gaussians  Tracking by Persistent Dynamic View Synthesis
+
+HumanLiff  Layer-wise 3D Human Generation with Diffusion Model
+
+Guide3D  Create 3D Avatars from Text and Image Guidance
+
+Generating $N$-point spherical configurations with low mesh ratios using
+  spherical area coordinates
+
+Fitting Segmentation Networks on Varying Image Resolutions using
+  Splatting
+
+ARF  Artistic Radiance Fields
+
+Learning Joint Surface Atlases
+
+NeRF-In  Free-Form NeRF Inpainting with RGB-D Priors
+
+Gaussian Fourier Pyramid for Local Laplacian Filter
+
+Orthonormal Convolutions for the Rotation Based Iterative
+  Gaussianization
+
+Cubic Stylization
+
+Needlets Liberated
+
+On Locality of Harmonic Generalized Barycentric Coordinates and Their
+  Application to Solution of the Poisson Equation
+
+Approximate Differentiable Rendering with Algebraic Surfaces
+
+MPIB  An MPI-Based Bokeh Rendering Framework for Realistic Partial
+  Occlusion Effects
+
+DiffuStereo  High Quality Human Reconstruction via Diffusion-based
+  Stereo Using Sparse Cameras
+
+DiffHuman  Probabilistic Photorealistic 3D Reconstruction of Humans
+
+3DGSR  Implicit Surface Reconstruction with 3D Gaussian Splatting
+
+InstantSplat  Unbounded Sparse-view Pose-free Gaussian Splatting in 40
+  Seconds
+
+Snap-it, Tap-it, Splat-it  Tactile-Informed 3D Gaussian Splatting for
+  Reconstructing Challenging Surfaces
+
+HGS-Mapping  Online Dense Mapping Using Hybrid Gaussian Representation
+  in Urban Scenes
+
+SGD  Street View Synthesis with Gaussian Splatting and Diffusion Prior
+
+HO-Gaussian  Hybrid Optimization of 3D Gaussian Splatting for Urban
+  Scenes
+
+Diff-Reg v1  Diffusion Matching Model for Registration Problem
+
+ShapeFusion  A 3D diffusion model for localized shape editing
+
+GaussianCube  Structuring Gaussian Splatting using Optimal Transport for
+  3D Generative Modeling
+
+GauStudio  A Modular Framework for 3D Gaussian Splatting and Beyond
+
+SA-GS  Scale-Adaptive Gaussian Splatting for Training-Free Anti-Aliasing
+
+TOGS  Gaussian Splatting with Temporal Opacity Offset for Real-Time 4D
+  DSA Rendering
+
+CoherentGS  Sparse Novel View Synthesis with Coherent 3D Gaussians
+
+Lift3D  Zero-Shot Lifting of Any 2D Vision Model to 3D
+
+Gamba  Marry Gaussian Splatting with Mamba for single view 3D
+  reconstruction
+
+SplatFace  Gaussian Splat Face Reconstruction Leveraging an Optimizable
+  Surface
+
+Modeling uncertainty for Gaussian Splatting
+
+NeuSDFusion  A Spatial-Aware Generative Model for 3D Shape Completion,
+  Reconstruction, and Generation
+
+Octree-GS  Towards Consistent Real-time Rendering with LOD-Structured 3D
+  Gaussians
+
+2D Gaussian Splatting for Geometrically Accurate Radiance Fields
+
+DN-Splatter  Depth and Normal Priors for Gaussian Splatting and Meshing
+
+GenesisTex  Adapting Image Denoising Diffusion to Texture Space
+
+Makeup Prior Models for 3D Facial Makeup Estimation and Applications
+
+AniArtAvatar  Animatable 3D Art Avatar from a Single Image
+
+Dr.Hair  Reconstructing Scalp-Connected Hair Strands without
+  Pre-training via Differentiable Rendering of Line Segments
+
+DreamPolisher  Towards High-Quality Text-to-3D Generation via Geometric
+  Diffusion
+
+AnimateMe  4D Facial Expressions via Diffusion Models
+
+GSDF  3DGS Meets SDF for Improved Rendering and Reconstruction
+
+Make-It-Vivid  Dressing Your Animatable Biped Cartoon Characters from
+  Text
+
+latentSplat  Autoencoding Variational Gaussians for Fast Generalizable
+  3D Reconstruction
+
+Frankenstein  Generating Semantic-Compositional 3D Scenes in One
+  Tri-Plane
+
+CG-SLAM  Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D
+  Gaussian Field
+
+Gaussian in the Wild  3D Gaussian Splatting for Unconstrained Image
+  Collections
+
+Semantic Gaussians  Open-Vocabulary Scene Understanding with 3D Gaussian
+  Splatting
+
+An Optimization Framework to Enforce Multi-View Consistency for
+  Texturing 3D Meshes Using Pre-Trained Text-to-Image Models
+
+Pixel-GS  Density Control with Pixel-aware Gradient for 3D Gaussian
+  Splatting
+
+LeGO  Leveraging a Surface Deformation Network for Animatable Stylized
+  Face Generation with One Example
+
+EndoGSLAM  Real-Time Dense Reconstruction and Tracking in Endoscopic
+  Surgeries using Gaussian Splatting
+
+TexRO  Generating Delicate Textures of 3D Models by Recursive
+  Optimization
+
+STAG4D  Spatial-Temporal Anchored Generative 4D Gaussians
+
+MVSplat  Efficient 3D Gaussian Splatting from Sparse Multi-View Images
+
+GRM  Large Gaussian Reconstruction Model for Efficient 3D Reconstruction
+  and Generation
+
+Gaussian Frosting  Editable Complex Radiance Fields with Real-Time
+  Rendering
+
+HAC  Hash-grid Assisted Context for 3D Gaussian Splatting Compression
+
+SyncTweedies  A General Generative Framework Based on Synchronized
+  Diffusions
+
+Isotropic Gaussian Splatting for Real-Time Radiance Field Rendering
+
+Mini-Splatting  Representing Scenes with a Constrained Number of
+  Gaussians
+
+RadSplat  Radiance Field-Informed Gaussian Splatting for Robust
+  Real-Time Rendering with 900+ FPS
+
+ZigMa  A DiT-style Zigzag Mamba Diffusion Model
+
+Gaussian Splatting on the Move  Blur and Rolling Shutter Compensation
+  for Natural Camera Motion
+
+Beyond Skeletons  Integrative Latent Mapping for Coherent 4D Sequence
+  Generation
+
+GVGEN  Text-to-3D Generation with Volumetric Representation
+
+TexDreamer  Towards Zero-Shot High-Fidelity 3D Human Texture Generation
+
+Parallel Gaussian process with kernel approximation in CUDA
+
+HUGS  Holistic Urban 3D Scene Understanding via Gaussian Splatting
+
+High-Fidelity SLAM Using Gaussian Splatting with Rendering-Guided
+  Densification and Regularized Optimization
+
+GaussianFlow  Splatting Gaussian Dynamics for 4D Content Creation
+
+VFusion3D  Learning Scalable 3D Generative Models from Video Diffusion
+  Models
+
+Generic 3D Diffusion Adapter Using Controlled Multi-View Editing
+
+LN3Diff  Scalable Latent Neural Fields Diffusion for Speedy 3D
+  Generation
+
+GeoWizard  Unleashing the Diffusion Priors for 3D Geometry Estimation
+  from a Single Image
+
+VideoMV  Consistent Multi-View Generation Based on Large Video
+  Generative Model
+
+SV3D  Novel Multi-view Synthesis and 3D Generation from a Single Image
+  using Latent Video Diffusion
+
+Reinforcement Learning with Generalizable Gaussian Splatting
+
+View-Consistent 3D Editing with Gaussian Splatting
+
+BAD-Gaussians  Bundle Adjusted Deblur Gaussian Splatting
+
+NEDS-SLAM  A Novel Neural Explicit Dense Semantic SLAM Framework using
+  3D Gaussian Splatting
+
+GaussNav  Gaussian Splatting for Visual Navigation
+
+UV Gaussians  Joint Learning of Mesh Deformation and Gaussian Textures
+  for Human Avatar Modeling
+
+3DGS-Calib  3D Gaussian Splatting for Multimodal SpatioTemporal
+  Calibration
+
+Diffusion Models are Geometry Critics  Single Image 3D Editing Using
+  Pre-Trained Diffusion Priors
+
+Fed3DGS  Scalable 3D Gaussian Splatting with Federated Learning
+
+Bridging 3D Gaussian and Mesh for Freeview Video Rendering
+
+Motion-aware 3D Gaussian Splatting for Efficient Dynamic Scene
+  Reconstruction
+
+BAGS  Building Animatable Gaussian Splatting from a Monocular Video with
+  Diffusion Priors
+
+3DGS-ReLoc  3D Gaussian Splatting for Map Representation and Visual
+  ReLocalization
+
+Creating Seamless 3D Maps Using Radiance Fields
+
+GeoGaussian  Geometry-aware Gaussian Splatting for Scene Rendering
+
+BrightDreamer  Generic 3D Gaussian Generative Framework for Fast
+  Text-to-3D Synthesis
+
+Compact 3D Gaussian Splatting For Dense Visual SLAM
+
+Recent Advances in 3D Gaussian Splatting
+
+Analytic-Splatting  Anti-Aliased 3D Gaussian Splatting via Analytic
+  Integration
+
+Photorealistic Style Transfer with Screened Poisson Equation
+
+Learning quadrangulated patches for 3D shape parameterization and
+  completion
+
+Density-equalizing maps for simply-connected open surfaces
+
+Configurable 3D Scene Synthesis and 2D Image Rendering with Per-Pixel
+  Ground Truth using Stochastic Grammars
+
+3DSNet  Unsupervised Shape-to-Shape 3D Style Transfer
+
+StyleUV  Diverse and High-fidelity UV Map Generative Model
+
+Building 3D Morphable Models from a Single Scan
+
+Assembling a Pipeline for 3D Face Interpolation
+
+PIINET  A 360-degree Panoramic Image Inpainting Network Using a Cube Map
+
+Faithful Euclidean Distance Field from Log-Gaussian Process Implicit
+  Surfaces
+
+Mapped Convolutions
+
+Analytical Derivatives for Differentiable Renderer  3D Pose Estimation
+  by Silhouette Consistency
+
+Gaussian Cooling and O (n^3) Algorithms for Volume and Gaussian Volume
+
+Texturing and Deforming Meshes with Casual Images
+
+Point Cloud Colorization Based on Densely Annotated 3D Shape Dataset
+
+Towards Uniform Online Spherical Tessellations
+
+Possibilities of Recursive GPU Mapping for Discrete Orthogonal Simplices
+
+Fast and Accurate Surface Normal Integration on Non-Rectangular Domains
+
+DreamScape  3D Scene Creation via Gaussian Splatting joint Correlation
+  Modeling
+
+EGGS  Edge Guided Gaussian Splatting for Radiance Fields
+
+LoopGaussian  Creating 3D Cinemagraph with Multi-view Images via
+  Eulerian Motion Field
+
+OccGaussian  3D Gaussian Splatting for Occluded Human Rendering
+
+GoMAvatar  Efficient Animatable Human Modeling from Monocular Video
+  Using Gaussians-on-Mesh
+
+RealmDreamer  Text-Driven 3D Scene Generation with Inpainting and Depth
+  Diffusion
+
+InstantMesh  Efficient 3D Mesh Generation from a Single Image with
+  Sparse-view Large Reconstruction Models
+
+Gaussian-LIC  Photo-realistic LiDAR-Inertial-Camera SLAM with 3D
+  Gaussian Splatting
+
+DreamScene360  Unconstrained Text-to-3D Scene Generation with Panoramic
+  Gaussian Splatting
+
+UDiFF  Generating Conditional Unsigned Distance Fields with Optimal
+  Wavelet Diffusion
+
+SplatPose & Detect  Pose-Agnostic 3D Anomaly Detection
+
+Magic-Boost  Boost 3D Generation with Mutli-View Conditioned Diffusion
+
+3D Geometry-aware Deformable Gaussian Splatting for Dynamic View
+  Synthesis
+
+Gaussian Pancakes  Geometrically-Regularized 3D Gaussian Splatting for
+  Realistic Endoscopic Reconstruction
+
+Revising Densification in Gaussian Splatting
+
+Hash3D  Training-free Acceleration for 3D Generation
+
+3DMambaIPF  A State Space Model for Iterative Point Cloud Filtering via
+  Differentiable Rendering
+
+Stylizing Sparse-View 3D Scenes with Hierarchical Neural Representation
+
+StylizedGS  Controllable Stylization for 3D Gaussian Splatting
+
+GauU-Scene V2  Assessing the Reliability of Image-Based Metrics with
+  Expansive Lidar Image Dataset Using 3DGS and NeRF
+
+Z-Splat  Z-Axis Gaussian Splatting for Camera-Sonar Fusion
+
+Robust Gaussian Splatting
+
+3D Facial Expressions through Analysis-by-Neural-Synthesis
+
+InstructHumans  Editing Animated 3D Human Textures with Instructions
+
+MM-Gaussian  3D Gaussian-based Multi-modal Fusion for Localization and
+  Reconstruction in Unbounded Scenes
+
+Per-Gaussian Embedding-Based Deformation for Deformable 3D Gaussian
+  Splatting
+
+DreamScene  3D Gaussian-based Text-to-3D Scene Generation via Formation
+  Pattern Sampling
+
+PointInfinity  Resolution-Invariant Point Diffusion Models
+
+OmniGS  Omnidirectional Gaussian Splatting for Fast Radiance Field
+  Reconstruction using Omnidirectional Images
+
+GaSpCT  Gaussian Splatting for Novel CT Projection View Synthesis
+
+MatAtlas  Text-driven Consistent Geometry Texturing and Material
+  Assignment
+
+GenN2N  Generative NeRF2NeRF Translation
+
+3DStyleGLIP  Part-Tailored Text-Guided 3D Neural Stylization
+
+TCLC-GS  Tightly Coupled LiDAR-Camera Gaussian Splatting for Surrounding
+  Autonomous Driving Scenes
+
+Enhancing Diffusion-based Point Cloud Generation with Smoothness
+  Constraint
+
+GeneAvatar  Generic Expression-Aware Volumetric Head Avatar Editing from
+  a Single Image
+
+Diffusion$^2$  Dynamic 3D Content Generation via Score Composition of
+  Orthogonal Diffusion Models
+
+Sketch3D  Style-Consistent Guidance for Sketch-to-3D Generation
+
+Surface Reconstruction from Gaussian Splatting via Novel Stereo Views
+
+Feature Splatting  Language-Driven Physics-Based Scene Synthesis and
+  Editing
+
+Mirror-3DGS  Incorporating Mirror Reflections into 3D Gaussian Splatting
+
+CityGaussian  Real-time High-quality Large-Scale Scene Rendering with
+  Gaussians
+
+Few-shot point cloud reconstruction and denoising via learned Guassian
+  splats renderings and fine-tuned diffusion features
+
+HAHA  Highly Articulated Gaussian Human Avatars with Textured Mesh Prior
+
+MM3DGS SLAM  Multi-modal 3D Gaussian Splatting for SLAM Using Vision,
+  Depth, and Inertial Measurements
+
+A GMM based algorithm to generate point-cloud and its application to
+  neuroimaging
+
+3DStyleNet  Creating 3D Shapes with Geometric and Texture Style
+  Variations
+
+An Adaptive Data Representation for Robust Point-Set Registration and
+  Merging
+
+Nonlocal Patches based Gaussian Mixture Model for Image Inpainting
+
+Sparse Representation of Gaussian Molecular Surface
+
+Physics-informed semantic inpainting  Application to geostatistical
+  modeling
+
+Multi-Frequency-Aware Patch Adversarial Learning for Neural Point Cloud
+  Rendering
+
+Novel View Synthesis with Diffusion Models
+
+Sparkle Vision  Seeing the World through Random Specular Microfacets
+
+VastGaussian  Vast 3D Gaussians for Large Scene Reconstruction
+
+GVA  Reconstructing Vivid 3D Gaussian Avatars from Monocular Videos
+
+Spec-Gaussian  Anisotropic View-Dependent Appearance for 3D Gaussian
+  Splatting
+
+GaussianPro  3D Gaussian Splatting with Progressive Propagation
+
+MVD$^2$  Efficient Multiview 3D Reconstruction for Multiview Diffusion
+
+Identifying Unnecessary 3D Gaussians using Clustering for Fast Rendering
+  of 3D Gaussian Splatting
+
+Flexible Physical Camouflage Generation Based on a Differential Approach
+
+SealD-NeRF  Interactive Pixel-Level Editing for Dynamic Scenes by Neural
+  Radiance Fields
+
+How NeRFs and 3D Gaussian Splatting are Reshaping SLAM  a Survey
+
+GaussianHair  Hair Modeling and Rendering with Light-aware Gaussians
+
+HD-Fusion  Detailed Text-to-3D Generation Leveraging Multiple Noise
+  Estimation
+
+RGB-D-Fusion  Image Conditioned Depth Diffusion of Humanoid Subjects
+
+Quasi-Monte Carlo Algorithms (not only) for Graphics Software
+
+Dynamic PlenOctree for Adaptive Sampling Refinement in Explicit NeRF
+
+Seal-3D  Interactive Pixel-Level Editing for Neural Radiance Fields
+
+Generative Modelling of BRDF Textures from Flash Images
+
+Automatic Generation of Interpolants for Lattice Samplings  Part I --
+  Theory and Analysis
+
+An Investigation of Feature-based Nonrigid Image Registration using
+  Gaussian Process
+
+Consistent123  One Image to Highly Consistent 3D Asset Using Case-Aware
+  Diffusion Priors
+
+TextField3D  Towards Enhancing Open-Vocabulary 3D Generation with Noisy
+  Text Fields
+
+DreamGaussian  Generative Gaussian Splatting for Efficient 3D Content
+  Creation
+
+Text-to-3D using Gaussian Splatting
+
+Directional Texture Editing for 3D Models
+
+Diffusion-based Holistic Texture Rectification and Synthesis
+
+Tiled Multiplane Images for Practical 3D Photography
+
+MM-NeRF  Multimodal-Guided 3D Multi-Style Transfer of Neural Radiance
+  Field
+
+MP-MVS  Multi-Scale Windows PatchMatch and Planar Prior Multi-View
+  Stereo
+
+Deformable 3D Gaussians for High-Fidelity Monocular Dynamic Scene
+  Reconstruction
+
+Neural Stochastic Screened Poisson Reconstruction
+
+Quasi-Monte Carlo for 3D Sliced Wasserstein
+
+GenLayNeRF  Generalizable Layered Representations with 3D Model
+  Alignment for Multi-Human View Synthesis
+
+TwinTex  Geometry-aware Texture Generation for Abstracted 3D
+  Architectural Models
+
+Light Field Diffusion for Single-View Novel View Synthesis
+
+Locally Stylized Neural Radiance Fields
+
+Retinex-guided Channel-grouping based Patch Swap for Arbitrary Style
+  Transfer
+
+Learning based 2D Irregular Shape Packing
+
+360$^\circ$ Reconstruction From a Single Image Using Space Carved
+  Outpainting
+
+Efficient Multi-view Performance Capture of Fine-Scale Surface Detail
+
+Efficient Parallel Algorithms for Inpainting-Based Representations of 4K
+  Images -- Part II  Spatial and Tonal Data Optimization
+
+SD-MVS  Segmentation-Driven Deformation Multi-View Stereo with Spherical
+  Refinement and EM optimization
+
+Gaussian Shadow Casting for Neural Characters
+
+TRIPS  Trilinear Point Splatting for Real-Time Radiance Field Rendering
+
+CoSSegGaussians  Compact and Swift Scene Segmenting 3D Gaussians with
+  Dual Feature Fusion
+
+Reverse Projection  Real-Time Local Space Texture Mapping
+
+FPRF  Feed-Forward Photorealistic Style Transfer of Large-Scale 3D
+  Neural Radiance Fields
+
+Morphable Diffusion  3D-Consistent Diffusion for Single-image Avatar
+  Creation
+
+AGG  Amortized Generative 3D Gaussians for Single Image to 3D
+
+D3PRefiner  A Diffusion-based Denoise Method for 3D Human Pose
+  Refinement
+
+A Survey on 3D Gaussian Splatting
+
+Particle-Wise Higher-Order SPH Field Approximation for DVR
+
+Characterizing Satellite Geometry via Accelerated 3D Gaussian Splatting
+
+PEGASUS  Physically Enhanced Gaussian Splatting Simulation System for
+  6DOF Object Pose Dataset Generation
+
+FMGS  Foundation Model Embedded 3D Gaussian Splatting for Holistic 3D
+  Scene Understanding
+
+SIGNeRF  Scene Integrated Generation for Neural Radiance Fields
+
+Street Gaussians for Modeling Dynamic Urban Scenes
+
+En3D  An Enhanced Generative Model for Sculpting 3D Humans from 2D
+  Synthetic Data
+
+Deblurring 3D Gaussian Splatting
+
+GD^2-NeRF  Generative Detail Compensation via GAN and Diffusion for
+  One-shot Generalizable Neural Radiance Fields
+
+Poisson Vector Graphics (PVG) and Its Closed-Form Solver
+
+Reversible Harmonic Maps between Discrete Surfaces
+
+Score-based Diffusion Models in Function Space
+
+3D-aware Blending with Generative NeRFs
+
+3D Colored Shape Reconstruction from a Single RGB Image through
+  Diffusion
+
+TEXTure  Text-Guided Texturing of 3D Shapes
+
+Get3DHuman  Lifting StyleGAN-Human into a 3D Generative Model using
+  Pixel-aligned Reconstruction Priors
+
+On the numerical approximation of Blaschke-Santaló diagrams using
+  Centroidal Voronoi Tessellations
+
+Instant Neural Radiance Fields Stylization
+
+4D Facial Expression Diffusion Model
+
+HoloDiffusion  Training a 3D Diffusion Model using 2D Images
+
+Diffusion Models for Memory-efficient Processing of 3D Medical Images
+
+GP-PCS  One-shot Feature-Preserving Point Cloud Simplification with
+  Gaussian Processes on Riemannian Manifolds
+
+PAniC-3D  Stylized Single-view 3D Reconstruction from Portraits of Anime
+  Characters
+
+GAPSLAM  Blending Gaussian Approximation and Particle Filters for
+  Real-Time Non-Gaussian SLAM
+
+DiffuScene  Denoising Diffusion Models for Generative Indoor Scene
+  Synthesis
+
+Make-It-3D  High-Fidelity 3D Creation from A Single Image with Diffusion
+  Prior
+
+NeuFace  Realistic 3D Neural Face Rendering from Multi-view Images
+
+Fantasia3D  Disentangling Geometry and Appearance for High-quality
+  Text-to-3D Content Creation
+
+TEGLO  High Fidelity Canonical Texture Mapping from Single-View Images
+
+DiffMesh  A Motion-aware Diffusion-like Framework for Human Mesh
+  Recovery from Videos
+
+Transforming Radiance Field with Lipschitz Network for Photorealistic 3D
+  Scene Stylization
+
+Efficient Meshy Neural Fields for Animatable Human Avatars
+
+Instruct-NeRF2NeRF  Editing 3D Scenes with Instructions
+
+SALAD  Part-Level Latent Diffusion for 3D Shape Generation and
+  Manipulation
+
+Vox-E  Text-guided Voxel Editing of 3D Objects
+
+3D-CLFusion  Fast Text-to-3D Rendering with Contrastive Latent Diffusion
+
+Real-time volumetric rendering of dynamic humans
+
+Diffusion-Based 3D Human Pose Estimation with Multi-Hypothesis
+  Aggregation
+
+Text2Tex  Text-driven Texture Synthesis via Diffusion Models
+
+Zero-1-to-3  Zero-shot One Image to 3D Object
+
+StyleRF  Zero-shot 3D Style Transfer of Neural Radiance Fields
+
+3DQD  Generalized Deep 3D Shape Prior via Part-Discretized Diffusion
+  Process
+
+Conformal Generative Modeling on Triangulated Surfaces
+
+Diffusion-HPC  Synthetic Data Generation for Human Mesh Recovery in
+  Challenging Domains
+
+NeRFMeshing  Distilling Neural Radiance Fields into
+  Geometrically-Accurate 3D Meshes
+
+DINAR  Diffusion Inpainting of Neural Textures for One-Shot Human
+  Avatars
+
+NLUT  Neural-based 3D Lookup Tables for Video Photorealistic Style
+  Transfer
+
+UV Volumes for Real-time Rendering of Editable Free-view Human
+  Performance
+
+Probabilistic Registration for Gaussian Process 3D shape modelling in
+  the presence of extensive missing data
+
+WarpingGAN  Warping Multiple Uniform Priors for Adversarial 3D Point
+  Cloud Generation
+
+Bringing Linearly Transformed Cosines to Anisotropic GGX
+
+Fine Detailed Texture Learning for 3D Meshes with Generative Models
+
+AdaSplats  Adaptive Splatting of Point Clouds for Accurate 3D Modeling
+  and Real-time High-Fidelity LiDAR Simulation
+
+Unified Shape and SVBRDF Recovery using Differentiable Monte Carlo
+  Rendering
+
+Few-Shot Human Motion Transfer by Personalized Geometry and Texture
+  Modeling
+
+PlenOctrees for Real-time Rendering of Neural Radiance Fields
+
+High Quality Facial Surface and Texture Synthesis via Generative
+  Adversarial Networks
+
+Image-based remapping of spatially-varying material appearance
+
+Spoke-Darts for High-Dimensional Blue-Noise Sampling
+
+Robust Multi-view Registration of Point Sets with Laplacian Mixture
+  Model
+
+3DFaceFill  An Analysis-By-Synthesis Approach to Face Completion
+
+The Spherical Cap Discrepancy of HEALPix Points
+
+Texture Generation Using Dual-Domain Feature Flow with Multi-View
+  Hallucinations
+
+Similarity Equivariant Linear Transformation of Joint Orientation-Scale
+  Space Representations
+
+A Method for Random Packing of Spheres with Application to Bonding
+  Modeling in Powder Bed 3D Printing Process
+
+Building 3D Generative Models from Minimal Data
+
+Geometric Correspondence Fields  Learned Differentiable Rendering for 3D
+  Pose Refinement in the Wild
+
+Least squares surface reconstruction on arbitrary domains
+
+Real-time Dense Reconstruction of Tissue Surface from Stereo Optical
+  Video
+
+Accelerating 3D Deep Learning with PyTorch3D
+
+Exploiting Structure for Fast Kernel Learning
+
+3DFaceGAN  Adversarial Nets for 3D Face Representation, Generation, and
+  Translation
+
+3D Point Cloud Denoising using Graph Laplacian Regularization of a Low
+  Dimensional Manifold Model
+
+Low Rank Matrix Approximation for Geometry Filtering
+
+DUGMA  Dynamic Uncertainty-Based Gaussian Mixture Alignment
+
+Synthesizing Coupled 3D Face Modalities by Trunk-Branch Generative
+  Adversarial Networks
+
+Gaussian Process Landmarking on Manifolds
+
+Dimension-independent Markov chain Monte Carlo on the sphere
+
+HVTR  Hybrid Volumetric-Textural Rendering for Human Avatars
+
+Scalar Spatiotemporal Blue Noise Masks
+
+Solving Inverse Problems with NerfGANs
+
+GRAM  Generative Radiance Manifolds for 3D-Aware Image Generation
+
+PRTGS: Precomputed Radiance Transfer of Gaussian Splats for Real-Time High-Quality Relighting
+
+MVSGaussian: Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo
+
+Cinematic Gaussians: Real-Time HDR Radiance Fields with Depth of Field
+
+Mani-GS: Gaussian Splatting Manipulation with Triangular Mesh
+
+EvGGS: A Collaborative Learning Framework for Event-based Generalizable Gaussian Splatting
+
+A Pixel Is Worth More Than One 3D Gaussians in Single-View 3D Reconstruction
+
+MIGS: Multi-Identity Gaussian Splatting via Tensor Decomposition
+
+Gaussian Time Machine: A Real-Time Rendering Methodology for Time-Variant Appearances
+
+PointDreamer: Zero-shot 3D Textured Mesh Reconstruction from Colored Point Cloud by 2D Inpainting
+
+Efficient and Scalable Point Cloud Generation with Sparse Point-Voxel Diffusion Models
+
+RecGS: Removing Water Caustic with Recurrent Gaussian Splatting
+
+Real-time Level-of-Detail Strand-based Hair Rendering
+
+ExactDreamer: High-Fidelity Text-to-3D Content Creation via Exact Score Matching
+
+AdR-Gaussian: Accelerating Gaussian Splatting with Adaptive Radius
+
+ShapeSplat: A Large-scale Dataset of Gaussian Splats and Their Self-Supervised Pretraining
+
+Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review
+
+Marginalizing and Conditioning Gaussians onto Linear Approximations of Smooth Manifolds with Applications in Robotics
+
+DreamMapping: High-Fidelity Text-to-3D Generation via Variational Distribution Mapping
+
+SAFER-Splat: A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps
+
+MVGamba: Unify 3D Content Generation as State Space Sequence Modeling
+
+PFGS: High Fidelity Point Cloud Rendering via Feature Splatting
+
+MGS-SLAM: Monocular Sparse Tracking and Gaussian Mapping with Depth Smooth Regularization
+
+MGSO: Monocular Real-time Photometric SLAM with Efficient 3D Gaussian Splatting
+
+3D Gaussian Ray Tracing: Fast Tracing of Particle Scenes
+
+Reducing the Memory Footprint of 3D Gaussian Splatting
+
+3DEgo: 3D Editing on the Go!
+
+Large Point-to-Gaussian Model for Image-to-3D Generation
+
+FAGhead: Fully Animate Gaussian Head from Monocular Videos
+
+ART3D: 3D Gaussian Splatting for Text-Guided Artistic Scenes Generation
+
+GaussianStego: A Generalizable Stenography Pipeline for Generative 3D Gaussians Splatting
+
+Gaussian Splatting with Localized Points Management
+
+Fast LiDAR Upsampling using Conditional Diffusion Models
+
+GenMM: Geometrically and Temporally Consistent Multimodal Data Generation for Video and LiDAR
+
+G3DST: Generalizing 3D Style Transfer with Neural Radiance Fields across Scenes and Styles
+
+IE-NeRF: Inpainting Enhanced Neural Radiance Fields in the Wild
+
+NeRF-Insert: 3D Local Editing with Multimodal Control Signals
+
+OpenGaussian: Towards Point-Level 3D Gaussian-based Open Vocabulary Understanding
+
+3D Gaussian Splatting: Survey, Technologies, Challenges, and Opportunities
+
+GS-ID: Illumination Decomposition on Gaussian Splatting via Diffusion Prior and Parametric Light Source Optimization
+
+Realistic Surgical Image Dataset Generation Based On 3D Gaussian Splatting
+
+Gradient-Driven 3D Segmentation and Affordance Transfer in Gaussian Splatting Using 2D Masks
+
+Spectral-GS: Taming 3D Gaussian Splatting with Spectral Entropy
+
+SpikeGS: 3D Gaussian Splatting from Spike Streams with High-Speed Camera Motion
+
+Consistency^2: Consistent and Fast 3D Painting with Latent Consistency Models
+
+Object-centric Reconstruction and Tracking of Dynamic Unknown Objects using 3D Gaussian Splatting
+
+Animate3D: Animating Any 3D Model with Multi-view Video Diffusion
+
+WaterSplatting: Fast Underwater 3D Scene Reconstruction Using Gaussian Splatting
+
+AV-GS: Learning Material and Geometry Aware Priors for Novel View Acoustic Synthesis
+
+Textured-GS: Gaussian Splatting with Spatially Defined Color and Opacity
+
+SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting
+
+SyncNoise: Geometrically Consistent Noise Prediction for Text-based 3D Scene Editing
+
+High-quality Surface Reconstruction using Gaussian Surfels
+
+F-3DGS: Factorized Coordinates and Representations for 3D Gaussian Splatting
+
+DHGS: Decoupled Hybrid Gaussian Splatting for Driving Scene
+
+HDRSplat: Gaussian Splatting for High Dynamic Range 3D Scene Reconstruction from Raw Images
+
+GGS: Generalizable Gaussian Splatting for Lane Switching in Autonomous Driving
+
+Self-augmented Gaussian Splatting with Structure-aware Masks for Sparse-view 3D Reconstruction
+
+GS-Hider: Hiding Messages into 3D Gaussian Splatting
+
+Linear combinations of latents in diffusion models: interpolation and beyond
+
+MVPGS: Excavating Multi-view Priors for Gaussian Splatting from Sparse Input Views
+
+GaussianCity: Generative Gaussian Splatting for Unbounded 3D City Generation
+
+VDG: Vision-Only Dynamic Gaussian for Driving Simulation
+
+PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting
+
+GigaGS: Scaling up Planar-Based 3D Gaussians for Large Scene Surface Reconstruction
+
+A Construct-Optimize Approach to Sparse View Synthesis without Camera Pose
+
+GEVO: Memory-Efficient Monocular Visual Odometry Using Gaussians
+
+Don't Splat your Gaussians: Volumetric Ray-Traced Primitives for Modeling and Rendering Scattering and Emissive Media
+
+EaDeblur-GS: Event assisted 3D Deblur Reconstruction with Gaussian Splatting
+
+MotionGS : Compact Gaussian Splatting SLAM by Motion Filter
+
+GGHead: Fast and Generalizable 3D Gaussian Heads
+
+DiffCSG: Differentiable CSG via Rasterization
+
+LoopSparseGS: Loop Based Sparse-View Friendly Gaussian Splatting
+
+Modeling Ambient Scene Dynamics for Free-view Synthesis
+
+RTGS: Enabling Real-Time Gaussian Splatting on Mobile Devices Using Efficiency-Guided Pruning and Foveated Rendering
+
+GLDiTalker: Speech-Driven 3D Facial Animation with Graph Latent Diffusion Transformer
+
+ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation
+
+Filtering After Shading With Stochastic Texture Filtering
+
+GaussianForest: Hierarchical-Hybrid 3D Gaussian Splatting for Compressed Scene Modeling
+
+Robo-GS: A Physics Consistent Spatial-Temporal Model for Robotic Arm with Hybrid Representation
+
+3D-HGS: 3D Half-Gaussian Splatting
+
+Event3DGS: Event-Based 3D Gaussian Splatting for High-Speed Robot Egomotion
+
+$\textit{S}^3$Gaussian: Self-Supervised Street Gaussians for Autonomous Driving
+
+A Review of 3D Reconstruction Techniques for Deformable Tissues in Robotic Surgery
+
+Connecting Consistency Distillation to Score Distillation for Text-to-3D Generation
+
+Click-Gaussian: Interactive Segmentation to Any 3D Gaussians
+
+SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction
+
+GLC-SLAM: Gaussian Splatting SLAM with Efficient Loop Closure
+
+HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting
+
+VGG-Tex: A Vivid Geometry-Guided Facial Texture Estimation Model for High Fidelity Monocular 3D Face Reconstruction
+
+GeoGen: Geometry-Aware Generative Modeling via Signed Distance Functions
+
+RTG-SLAM: Real-time 3D Reconstruction at Scale using Gaussian Splatting
+
+Learning to Discretize Denoising Diffusion ODEs
+
+Human 3Diffusion: Realistic Avatar Creation via Explicit 3D Consistent Diffusion Models
+
+S4D: Streaming 4D Real-World Reconstruction with Gaussians and 3D Control Points
+
+Image color consistency in datasets: the Smooth-TPS3D method
+
+6DGS: 6D Pose Estimation from a Single Image and a 3D Gaussian Splatting Model
+
+Wild-GS: Real-Time Novel View Synthesis from Unconstrained Photo Collections
+
+DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Refocusing,Defocus Rendering and Blur Removal
+
+Message-Passing Monte Carlo: Generating low-discrepancy point sets via Graph Neural Networks
+
+DiffTF++: 3D-aware Diffusion Transformer for Large-Vocabulary 3D Generation
+
+Sampling 3D Gaussian Scenes in Seconds with Latent Diffusion Models
+
+HDRGS: High Dynamic Range Gaussian Splatting
+
+Robust 3D Gaussian Splatting for Novel View Synthesis in Presence of Distractors
+
+Projecting Radiance Fields to Mesh Surfaces
+
+Ouroboros3D: Image-to-3D Generation via 3D-aware Recursive Diffusion
+
+MVIP-NeRF: Multi-view 3D Inpainting on NeRF Scenes via Diffusion Prior
+
+iHuman: Instant Animatable Digital Humans From Monocular Videos
+
+DECOLLAGE: 3D Detailization by Controllable, Localized, and Learned Geometry Enhancement
+
+GaussianVTON: 3D Human Virtual Try-ON via Multi-Stage Gaussian Splatting Editing with Image Prompting
+
+Cascaded Light Propagation Volumes using Spherical Radial Basis Functions
+
+SlingBAG: Sliding ball adaptive growth algorithm with differentiable radiation enables super-efficient iterative 3D photoacoustic image reconstruction
+
+E2GS: Event Enhanced Gaussian Splatting
+
+SpectralGaussians: Semantic, spectral 3D Gaussian splatting for multi-spectral scene representation, visualization and analysis
+
+PSHuman: Photorealistic Single-view Human Reconstruction using Cross-Scale Diffusion
+
+LayGA: Layered Gaussian Avatars for Animatable Clothing Transfer
+
+RetinaGS: Scalable Training for Dense Scene Rendering with Billion-Scale 3D Gaussians
+
+3D Gaussian Splatting with Deferred Reflection
+
+GS-ROR: 3D Gaussian Splatting for Reflective Object Relighting via SDF Priors
+
+Taming 3DGS: High-Quality Radiance Fields with Limited Resources
+
+SuperGaussian: Repurposing Video Models for 3D Super Resolution
+
+Improving Diffusion-based Data Augmentation with Inversion Spherical Interpolation
+
+GaussianDreamerPro: Text to Manipulable 3D Gaussians with Highly Enhanced Quality
+
+CHASE: 3D-Consistent Human Avatars with Sparse Inputs via Gaussian Splatting and Contrastive Learning
+
+Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
+
+Vid3D: Synthesis of Dynamic 3D Scenes using 2D Video Diffusion
+
+ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model
+
+Expressive Whole-Body 3D Gaussian Avatar
+
+Trimming the Fat: Efficient Compression of 3D Gaussian Splats through Pruning
+
+AtomGS: Atomizing Gaussian Splatting for High-Fidelity Radiance Field
+
+Sources of Uncertainty in 3D Scene Reconstruction
+
+Uncertainty-guided Optimal Transport in Depth Supervised Sparse-View 3D Gaussian
+
+Subsurface Scattering for 3D Gaussian Splatting
+
+PGSR: Planar-based Gaussian Splatting for Efficient and High-Fidelity Surface Reconstruction
+
+3D-GP-LMVIC: Learning-based Multi-View Image Coding with 3D Gaussian Geometric Priors
+
+Adversarial Generation of Hierarchical Gaussians for 3D Generative Model
+
+DENSER: 3D Gaussians Splatting for Scene Reconstruction of Dynamic Urban Environments
+
+Geometry Image Diffusion: Fast and Data-Efficient Text-to-3D with Image-Based Surface Representation
+
+CAT3D: Create Anything in 3D with Multi-View Diffusion Models
+
+CoR-GS: Sparse-View 3D Gaussian Splatting via Co-Regularization
+
+Frequency-based View Selection in Gaussian Splatting Reconstruction
+
+RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis
+
+DGE: Direct Gaussian 3D Editing by Consistent Multi-view Editing
+
+Flatten Anything: Unsupervised Neural Surface Parameterization
+
+GaussReg: Fast 3D Registration with Gaussian Splatting
+
+A Constrained Least-Squares Ghost Sample Points (CLS-GSP) Method for Differential Operators on Point Clouds
+
+Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models
+
+LGS: A Light-weight 4D Gaussian Splatting for Efficient Surgical Scene Reconstruction
+
+gsplat: An Open-Source Library for Gaussian Splatting
+
+InstantStyleGaussian: Efficient Art Style Transfer with 3D Gaussian Splatting
+
+ICE-G: Image Conditional Editing of 3D Gaussian Splats
+
+Diffree: Text-Guided Shape Free Object Inpainting with Diffusion Model
+
+ConTEXTure: Consistent Multiview Images to Texture
+
+TexGen: Text-Guided 3D Texture Generation with Multi-view Sampling and Resampling
+
+RoomTex: Texturing Compositional Indoor Scenes via Iterative Inpainting
+
+LI-GS: Gaussian Splatting with LiDAR Incorporated for Accurate Large-Scale Reconstruction
+
+TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations
+
+Towards Real-Time Gaussian Splatting: Accelerating 3DGS through Photometric SLAM
+
+EASI-Tex: Edge-Aware Mesh Texturing from Single Image
+
+Diffusion-based Generative Image Outpainting for Recovery of FOV-Truncated CT Images
+
+Anisotropic Gauss Reconstruction for Unoriented Point Clouds
+
+CanonicalFusion: Generating Drivable 3D Human Avatars from Multiple Images
+
+Human-VDM: Learning Single-Image 3D Human Gaussian Splatting from Video Diffusion Models
+
+LumiGauss: High-Fidelity Outdoor Relighting with 2D Gaussian Splatting
+
+3DitScene: Editing Any Scene via Language-guided Disentangled Gaussian Splatting
+
+D-MiSo: Editing Dynamic 3D Scenes using Multi-Gaussians Soup
+
+EvaGaussians: Event Stream Assisted Gaussian Splatting from Blurry Images
+
+MGFs: Masked Gaussian Fields for Meshing Building based on Multi-View Images
+
+LP-3DGS: Learning to Prune 3D Gaussian Splatting
+
+Unified Smooth Vector Graphics: Modeling Gradient Meshes and Curve-based Approaches Jointly as Poisson Problem
+
+DDGS-CT: Direction-Disentangled Gaussian Splatting for Realistic Volume Rendering
+
+OMEGAS: Object Mesh Extraction from Large Scenes Guided by Gaussian Segmentation
+
+SwinGS: Sliding Window Gaussian Splatting for Volumetric Video Streaming with Arbitrary Length
+
+Gaussian Representation for Deformable Image Registration
+
+Optimizing 3D Gaussian Splatting for Sparse Viewpoint Scene Reconstruction
+
+InsertDiffusion: Identity Preserving Visualization of Objects through a Training-Free Diffusion Architecture
+
+3D Gaussian Splatting for Large-scale Surface Reconstruction from Aerial Images
+
+Volumetric Surfaces: Representing Fuzzy Geometries with Multiple Meshes
+
+Differential Walk on Spheres
+
+Occupancy-Based Dual Contouring
+
+Fast expansion into harmonics on the ball
+
+Unified Gaussian Primitives for Scene Representation and Rendering
+
+FreeSplat: Generalizable 3D Gaussian Splatting Towards Free-View Synthesis of Indoor Scenes
+
+Surfel-based Gaussian Inverse Rendering for Fast and Relightable Dynamic Human Reconstruction from Monocular Video
+
+A Simple Approach to Differentiable Rendering of SDFs
+
+Drone-assisted Road Gaussian Splatting with Cross-view Uncertainty
+
+Topo4D: Topology-Preserving Gaussian Splatting for High-Fidelity 4D Head Capture
+
+MoDGS: Dynamic Gaussian Splatting from Causually-captured Monocular Videos
+
+Photorealistic Object Insertion with Diffusion-Guided Inverse Rendering
+
+I3DGS: Improve 3D Gaussian Splatting from Multiple Dimensions
+
+OG-Mapping: Octree-based Structured 3D Gaussians for Online Dense Mapping
+
+SafeguardGS: 3D Gaussian Primitive Pruning While Avoiding Catastrophic Scene Destruction
+
+GSplatLoc: Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization
+
+SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction
+
+Direct3D: Scalable Image-to-3D Generation via 3D Latent Diffusion Transformer
+
+3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt
+
+Dynamic 3D Gaussian Fields for Urban Areas
+
+GaussianHeads: End-to-End Learning of Drivable Gaussian Head Avatars from Coarse-to-fine Representations
+
+DRAGON: Drone and Ground Gaussian Splatting for 3D Building Reconstruction
+
+GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction
+
+Go-SLAM: Grounded Object Segmentation and Localization with Gaussian Splatting SLAM
+
+3D Reconstruction with Fast Dipole Sums
+
+GS-Net: Generalizable Plug-and-Play 3D Gaussian Splatting Module
+
+Sp2360: Sparse-view 360 Scene Reconstruction using Cascaded 2D Diffusion Priors
+
+Enhancing Temporal Consistency in Video Editing by Reconstructing Videos with 3D Gaussian Splatting
+
+HFGS: 4D Gaussian Splatting with Emphasis on Spatial and Temporal High-Frequency Components for Endoscopic Scene Reconstruction
+
+GaussianPU: A Hybrid 2D-3D Upsampling Framework for Enhancing Color Point Clouds via 3D Gaussian Splatting
+
+Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields
+
+Atlas Gaussians Diffusion for 3D Generation with Infinite Number of Points
+
+NeRFDeformer: NeRF Transformation from a Single View via 3D Scene Flows
+
+WonderWorld: Interactive 3D Scene Generation from a Single Image
+
+DisC-GS: Discontinuity-aware Gaussian Splatting
+
+GS-PT: Exploiting 3D Gaussian Splatting for Comprehensive Point Cloud Understanding via Self-supervised Learning
+
+Preserving Identity with Variational Score for General-purpose 3D Editing
+
+MesonGS: Post-training Compression of 3D Gaussians via Efficient Attribute Transformation
+
+PRTGaussian: Efficient Relighting Using 3D Gaussians with Precomputed Radiance Transfer
+
+MIMO: Controllable Character Video Synthesis with Spatial Decomposed Modeling
+
+Integrating Meshes and 3D Gaussians for Indoor Scene Reconstruction with SAM Mask Guidance
+
+Gaussian Head & Shoulders: High Fidelity Neural Upper Body Avatars with Anchor Gaussian Guided Texture Warping
+
+OccFusion: Rendering Occluded Humans with Generative Diffusion Priors
+
+GeoLRM: Geometry-Aware Large Reconstruction Model for High-Quality 3D Gaussian Generation
+
+Infinite Texture: Text-guided High Resolution Diffusion Texture Synthesis
+
+An Object is Worth 64x64 Pixels: Generating 3D Object via Image Diffusion
+
+Bootstrap 3D Reconstructed Scenes from 3D Gaussian Splatting
+
+GSTalker: Real-time Audio-Driven Talking Face Generation via Deformable Gaussian Splatting
+
+TAMBRIDGE: Bridging Frame-Centered Tracking and 3D Gaussian Splatting for Enhanced SLAM
+
+UDGS-SLAM : UniDepth Assisted Gaussian Splatting for Monocular SLAM
+
+Memorize What Matters: Emergent Scene Decomposition from Multitraverse
+
+Lightweight Predictive 3D Gaussian Splats
+
+Free-SurGS: SfM-Free 3D Gaussian Splatting for Surgical Scene Reconstruction
+
+Expressive Gaussian Human Avatars from Monocular RGB Video
+
+DC-Gaussian: Improving 3D Gaussian Splatting for Reflective Dash Cam Videos
+
+NGM-SLAM: Gaussian Splatting SLAM with Radiance Field Submap
+
+Diffusion4D: Fast Spatial-temporal Consistent 4D Generation via Video Diffusion Models
+
+GaussianSR: 3D Gaussian Super-Resolution with 2D Diffusion Priors
+
+Deformable 3D Shape Diffusion Model
+
+Gaussian-Informed Continuum for Physical Property Identification and Simulation
+
+GGAvatar: Geometric Adjustment of Gaussian Head Avatar
+
+VividDreamer: Towards High-Fidelity and Efficient Text-to-3D Generation
+
+Neural Gaffer: Relighting Any Object via Diffusion
+
+Reference-based Controllable Scene Stylization with Gaussian Splatting
+
+Survey on Fundamental Deep Learning 3D Reconstruction Techniques
+
+DeRainGS: Gaussian Splatting for Enhanced Scene Reconstruction in Rainy Environments
+
+GS-Planner: A Gaussian-Splatting-based Planning Framework for Active High-Fidelity Reconstruction
+
+Object Gaussian for Monocular 6D Pose Estimation from Sparse Views
+
+GOI: Find 3D Gaussians of Interest with an Optimizable Open-vocabulary Semantic-space Hyperplane
+
+Dual3D: Efficient and Consistent Text-to-3D Generation with Dual-mode Multi-view Latent Diffusion
+
+GASP: Gaussian Splatting for Physic-Based Simulations
+
+Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting
+
+PLA4D: Pixel-Level Alignments for Text-to-4D Gaussian Splatting
+
+Semantics-Controlled Gaussian Splatting for Outdoor Scene Reconstruction and Rendering in Virtual Reality
+
+Drantal-NeRF: Diffusion-Based Restoration for Anti-aliasing Neural Radiance Field
+
+Plenoptic PNG: Real-Time Neural Radiance Fields in 150 KB
+
+Enhancement of 3D Gaussian Splatting using Raw Mesh for Photorealistic Recreation of Architectures
+
+HOTS3D: Hyper-Spherical Optimal Transport for Semantic Alignment of Text-to-3D Generation
+
+BiGS: Bidirectional Gaussian Primitives for Relightable 3D Gaussian Splatting
+
+Splat-SLAM: Globally Optimized RGB-only SLAM with 3D Gaussians
+
+A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets
+
+ScalingGaussian: Enhancing 3D Content Creation with Generative Gaussian Splatting
+
+GradeADreamer: Enhanced Text-to-3D Generation Using Gaussian Splatting and Multi-View Diffusion
+
+FastLGS: Speeding up Language Embedded Gaussians with Feature Grid Mapping
+
+LoopSplat: Loop Closure by Registering 3D Gaussian Splats
+
+CSGO: Content-Style Composition in Text-to-Image Generation
+
+MeGA: Hybrid Mesh-Gaussian Head Avatar for High-Fidelity Rendering and Head Editing
+
+SimEndoGS: Efficient Data-driven Scene Simulation using Robotic Surgery Videos via Physics-embedded 3D Gaussians
+
+Controllable and Gradual Facial Blemishes Retouching via Physics-Based Modelling
+
+GaRField++: Reinforced Gaussian Radiance Fields for Large-Scale 3D Scene Reconstruction
+
+SpikeGS: Learning 3D Gaussian Fields from Continuous Spike Stream
+
+Sync4D: Video Guided Controllable Dynamics for Physics-Based 4D Generation
+
+DynaSurfGS: Dynamic Surface Reconstruction with Planar-based Gaussian Splatting
+
+TalkingGaussian: Structure-Persistent 3D Talking Head Synthesis via Gaussian Splatting
+
+Query-based Semantic Gaussian Field for Scene Representation in Reinforcement Learning
+
+SplatSim: Zero-Shot Sim2Real Transfer of RGB Manipulation Policies Using Gaussian Splatting
+
+DC3DO: Diffusion Classifier for 3D Objects
+
+DreamMesh: Jointly Manipulating and Texturing Triangle Meshes for Text-to-3D Generation
+
+WildGaussians: 3D Gaussian Splatting in the Wild
+
+Deform3DGS: Flexible Deformation for Fast Surgical Scene Reconstruction with Gaussian Splatting
+
+RoGS: Large Scale Road Surface Reconstruction based on 2D Gaussian Splatting
+
+Learning Part-aware 3D Representations by Fusing 2D Gaussians and Superquadrics
+
+ConsistDreamer: 3D-Consistent 2D Diffusion for High-Fidelity Scene Editing
+
+HR Human: Modeling Human Avatars with Triangular Mesh and High-Resolution Textures from Videos
+
+TrAME: Trajectory-Anchored Multi-View Editing for Text-Guided 3D Gaussian Splatting Manipulation
+
+GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction
+
+TetSphere Splatting: Representing High-Quality Geometry with Lagrangian Volumetric Meshes
+
+A Grid-Free Fluid Solver based on Gaussian Spatial Representation
+
+MirrorGaussian: Reflecting 3D Gaussians for Reconstructing Mirror Reflections
+
+3DGS.zip: A survey on 3D Gaussian Splatting Compression Methods
+
+EdgeGaussians -- 3D Edge Mapping via Gaussian Splatting
+
+LiDAR-3DGS: LiDAR Reinforced 3D Gaussian Splatting for Multimodal Radiance Field Rendering
+
+GaussianSR: High Fidelity 2D Gaussian Splatting for Arbitrary-Scale Image Super-Resolution
+
+FlashSplat: 2D to 3D Gaussian Splatting Segmentation Solved Optimally
+
+Elite-EvGS: Learning Event-based 3D Gaussian Splatting by Distilling Event-to-Video Priors
+
+DiffPop: Plausibility-Guided Object Placement Diffusion for Image Composition
+
+Fast and Globally Consistent Normal Orientation based on the Winding Number Normal Consistency
+
+Tetrahedron Splatting for 3D Generation
+
+ThermalGaussian: Thermal 3D Gaussian Splatting
+
+NPGA: Neural Parametric Gaussian Avatars
+
+SpikeGS: Reconstruct 3D scene via fast-moving bio-inspired sensors
+
+Improving Physics-Augmented Continuum Neural Radiance Field-Based Geometry-Agnostic System Identification with Lagrangian Particle Optimization
+
+ClotheDreamer: Text-Guided Garment Generation with 3D Gaussians
+
+HoloGS: Instant Depth-based 3D Gaussian Splatting with Microsoft HoloLens 2
+
+DoGaussian: Distributed-Oriented Gaussian Splatting for Large-Scale 3D Reconstruction Via Gaussian Consensus
+
+3D Gaussian Blendshapes for Head Avatar Animation
+
+FAGStyle: Feature Augmentation on Geodesic Surface for Zero-shot Text-guided Diffusion Image Style Transfer
+
+Implicit Gaussian Splatting with Efficient Multi-Level Tri-Plane Representation
+
+GaussianPrediction: Dynamic 3D Gaussian Prediction for Motion Extrapolation and Free View Synthesis
+
+Fisheye-GS: Lightweight and Extensible Gaussian Splatting Module for Fisheye Cameras
+
+RaDe-GS: Rasterizing Depth in Gaussian Splatting
+
+UV-free Texture Generation with Denoising and Geodesic Heat Diffusions
+
+Atlas3D: Physically Constrained Self-Supporting Text-to-3D for Simulation and Fabrication
+
+Instant Facial Gaussians Translator for Relightable and Interactable Facial Rendering
+
+HumanSplat: Generalizable Single-Image Human Gaussian Splatting with Structure Priors
+
+Fourier123: One Image to High-Quality 3D Object Generation with Hybrid Fourier Score Distillation
+
+REPARO: Compositional 3D Assets Generation with Differentiable 3D Layout Alignment
+
+Visual SLAM with 3D Gaussian Primitives and Depth Priors Enabling Novel View Synthesis
+
+Vista3D: Unravel the 3D Darkside of a Single Image
+
+Normalizing Basis Functions: Approximate Stationary Models for Large Spatial Data
+
+SG-GS: Photo-realistic Animatable Human Avatars with Semantically-Guided Gaussian Splatting
+
+Splatfacto-W: A Nerfstudio Implementation of Gaussian Splatting for Unconstrained Photo Collections
+
+Dynamic 2D Gaussians: Geometrically accurate radiance fields for dynamic objects
+
+GarmentDreamer: 3DGS Guided Garment Synthesis with Diverse Geometry and Texture Details
+
+Era3D: High-Resolution Multiview Diffusion using Efficient Row-wise Attention
+
+GDGS: Gradient Domain Gaussian Splatting for Sparse Representation of Radiance Fields
+
+Any360D: Towards 360 Depth Anything with Unlabeled 360 Data and Möbius Spatial Augmentation
+
+EgoGaussian: Dynamic Scene Understanding from Egocentric Video with 3D Gaussian Splatting
+
+SceneDreamer360: Text-Driven 3D-Consistent Scene Generation with Panoramic Gaussian Splatting
+
+An Adaptive Screen-Space Meshing Approach for Normal Integration
+
+Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat
+
+$\text{Di}^2\text{Pose}$: Discrete Diffusion Model for Occluded 3D Human Pose Estimation
+
+StyleSplat: 3D Object Style Transfer with Gaussian Splatting
+
+Neural Poisson Solver: A Universal and Continuous Framework for Natural Signal Blending
+
+3D-GSW: 3D Gaussian Splatting Watermark for Protecting Copyrights in Radiance Fields
+
+Learning Mixtures of Gaussians Using Diffusion Models
+
+VDB-GPDF: Online Gaussian Process Distance Field with VDB Structure
+
+Text-to-Image Rectified Flow as Plug-and-Play Priors
+
+Mipmap-GS: Let Gaussians Deform with Scale-specific Mipmap for Anti-aliasing Rendering
+
+2DGH: 2D Gaussian-Hermite Splatting for High-quality Rendering and Better Geometry Reconstruction
+
+SkyDiffusion: Street-to-Satellite Image Synthesis with Diffusion Models and BEV Paradigm
+
+GS-Phong: Meta-Learned 3D Gaussians for Relightable Novel View Synthesis
+
+GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction
+
+DEGAS: Detailed Expressions on Full-Body Gaussian Avatars
+
+SAGS: Structure-Aware 3D Gaussian Splatting
+
+MVG-Splatting: Multi-View Guided Gaussian Splatting with Adaptive Quantile-Based Geometric Consistency Densification
+
+Unique3D: High-Quality and Efficient 3D Mesh Generation from a Single Image
+
+Dynamic NeRF: A Review
+
+SIn-NeRF2NeRF: Editing 3D Scenes with Instructions through Segmentation and Inpainting
+
+Localized Gaussian Splatting Editing with Contextual Awareness
+
+3D Gaussian Parametric Head Model
+
+Dreamer XL: Towards High-Resolution Text-to-3D Generation via Trajectory Score Matching
+
+Low Latency Point Cloud Rendering with Learned Splatting
+
+CRiM-GS: Continuous Rigid Motion-Aware Gaussian Splatting from Motion Blur Images
+
+Ev-GS: Event-based Gaussian splatting for Efficient and Accurate Radiance Field Rendering
+
+Reflecting Reality: Enabling Diffusion Models to Produce Faithful Mirror Reflections
+
+Vidu4D: Single Generated Video to High-Fidelity 4D Reconstruction with Dynamic Gaussian Surfels
+
+EndoSparse: Real-Time Sparse View Synthesis of Endoscopic Scenes using Gaussian Splatting
+
+Style-NeRF2NeRF: 3D Style Transfer From Style-Aligned Multi-View Images
+
+Mean-field Chaos Diffusion Models
+
+Spectrally Pruned Gaussian Fields with Neural Compensation
+
+MaPa: Text-driven Photorealistic Material Painting for 3D Shapes
+
+Point Resampling and Ray Transformation Aid to Editable NeRF Models
+
+N-Dimensional Gaussians for Fitting of High Dimensional Functions
+
+Free-DyGS: Camera-Pose-Free Scene Reconstruction based on Gaussian Splatting for Dynamic Surgical Videos
+
+Gaussian Garments: Reconstructing Simulation-Ready Clothing with Photorealistic Appearance from Multi-View Video
+
+Lighting Every Darkness with 3DGS: Fast Training and Real-Time Rendering for HDR View Synthesis
+
+Embracing Radiance Field Rendering in 6G: Over-the-Air Training and Inference with 3D Contents
+
+TexPainter: Generative Mesh Texturing with Multi-view Consistency
+
+DIRECT-3D: Learning Direct Text-to-3D Generation on Massive Noisy 3D Data
+
+Robust Dual Gaussian Splatting for Immersive Human-centric Volumetric Videos
+
+TIGER: Text-Instructed 3D Gaussian Retrieval and Coherent Editing
+
+GSLoc: Efficient Camera Pose Refinement via 3D Gaussian Splatting
+
+L4GM: Large 4D Gaussian Reconstruction Model
+
+Physically Embodied Gaussian Splatting: A Realtime Correctable World Model for Robotics
+
+Towards Realistic Example-based Modeling via 3D Gaussian Stitching
+
+Gaussian Splatting LK
+
+Self-Evolving Depth-Supervised 3D Gaussian Splatting from Rendered Stereo Pairs
+
+Correspondence-Guided SfM-Free 3D Gaussian Splatting for NVS
+
+Splatter a Video: Video Gaussian Representation for Versatile Processing
+
+IG-SLAM: Instant Gaussian SLAM
+
+TexSliders: Diffusion-Based Texture Editing in CLIP Space
+
+Image-GS: Content-Adaptive Image Representation via 2D Gaussians
+
+Feature Splatting for Better Novel View Synthesis with Low Overlap
+
+G-Style: Stylized Gaussian Splatting
+
+SatSplatYOLO: 3D Gaussian Splatting-based Virtual Object Detection Ensembles for Satellite Feature Recognition
+
+LAGA: Layered 3D Avatar Generation and Customization via Gaussian Splatting
+
+GraspSplats: Efficient Manipulation with 3D Feature Splatting
+
+NerfBaselines: Consistent and Reproducible Evaluation of Novel View Synthesis Methods
+
+TranSplat: Generalizable 3D Gaussian Splatting from Sparse Multi-View Images with Transformers
+
+FSH: 3D Representation via Fibonacci Spherical Harmonics
+
+PhysPart: Physically Plausible Part Completion for Interactable Objects
+
+Score Distillation via Reparametrized DDIM
+
+Generative Object Insertion in Gaussian Splatting with a Multi-View Diffusion Model
+
+Gaussian Control with Hierarchical Semantic Graphs in 3D Human Recovery
+
+R$^2$-Gaussian: Rectifying Radiative Gaussian Splatting for Tomographic Reconstruction
+
+BEINGS: Bayesian Embodied Image-goal Navigation with Gaussian Splatting
+
+Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion
+
+Gaussian Splatting to Real World Flight Navigation Transfer with Liquid Networks
+
+GSDeformer: Direct Cage-based Deformation for 3D Gaussian Splatting
+
+Self-Calibrating 4D Novel View Synthesis from Monocular Videos Using Gaussian Splatting
+
+FastScene: Text-Driven Fast 3D Indoor Scene Generation via Panoramic Gaussian Splatting
+
+Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image
+
+WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections
+
+3D-VirtFusion: Synthetic 3D Data Augmentation through Generative Diffusion Models and Controllable Editing
+
+InfoGaussian: Structure-Aware Dynamic Gaussians through Lightweight Information Shaping
+
+MoSca: Dynamic Gaussian Fusion from Casual Videos via 4D Motion Scaffolds
+
+Single Image, Any Face: Generalisable 3D Face Generation
+
+GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
+
+LapisGS: Layered Progressive 3D Gaussian Splatting for Adaptive Streaming
+
+Graph Laplacian-based Bayesian Multi-fidelity Modeling
+
+NeuroGauss4D-PCI: 4D Neural Fields and Gaussian Deformation Fields for Point Cloud Interpolation
+
+OneTo3D: One Image to Re-editable Dynamic 3D Model and Video Generation
+
+Shape Conditioned Human Motion Generation with Diffusion Model
+
+HeadGAP: Few-shot 3D Head Avatar via Generalizable Gaussian Priors
+
+3iGS: Factorised Tensorial Illumination for 3D Gaussian Splatting
+
+CSS: Overcoming Pose and Scene Challenges in Crowd-Sourced 3D Gaussian Splatting
+
+Dense Point Clouds Matter: Dust-GS for Scene Reconstruction from Sparse Viewpoints
+
+PRoGS: Progressive Rendering of Gaussian Splats
+
+Diffusing Winding Gradients (DWG): A Parallel and Scalable Method for 3D Reconstruction from Unoriented Point Clouds
+
+Dynamic Gaussian Marbles for Novel View Synthesis of Casual Monocular Videos
+
+SpaRP: Fast 3D Object Reconstruction and Pose Estimation from Sparse Views
+
+A Survey on 3D Human Avatar Modeling -- From Reconstruction to Generation
+
+Hi-SLAM: Scaling-up Semantics in SLAM with a Hierarchically Categorical Gaussian Splatting
+
+Bootstrap3D: Improving 3D Content Creation with Synthetic Data
+
+DreamWaltz-G: Expressive 3D Gaussian Avatars from Skeleton-Guided 2D Diffusion
+
+Jump Restore Light Transport
+
+From Chaos to Clarity: 3DGS in the Dark
+
+VCR-GauS: View Consistent Depth-Normal Regularizer for Gaussian Surface Reconstruction
+
+Direct Learning of Mesh and Appearance via 3D Gaussian Splatting
+
+A Benchmark for Gaussian Splatting Compression and Quality Assessment Study
+
+Human Hair Reconstruction with Strand-Aligned 3D Gaussians
+
+RefGaussian: Disentangling Reflections from 3D Gaussian Splatting for Realistic Rendering
+
+A General Framework to Boost 3D GS Initialization for Text-to-3D Generation by Lexical Richness
+
+Gaussian Déjà-vu: Creating Controllable 3D Gaussian Head-Avatars with Enhanced Generalization and Personalization Abilities
+
+PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting
+
+MVDiff: Scalable and Flexible Multi-View Diffusion for 3D Object Reconstruction from Single-View
+
+Single-View 3D Reconstruction via SO(2)-Equivariant Gaussian Sculpting Networks
+
+Phys3DGS: Physically-based 3D Gaussian Splatting for Inverse Rendering
+
+NegGS: Negative Gaussian Splatting
+
+SplatLoc: 3D Gaussian Splatting-based Visual Localization for Augmented Reality
+
+Bilateral Guided Radiance Field Processing
+
+FLoD: Integrating Flexible Level of Detail into 3D Gaussian Splatting for Customizable Rendering
+
+LM-Gaussian: Boost Sparse-view 3D Gaussian Splatting with Large Model Priors
+
+$E^{3}$Gen: Efficient, Expressive and Editable Avatars Generation
+
+Gaussian Eigen Models for Human Heads
+
+Mixed Diffusion for 3D Indoor Scene Synthesis
+
+3D Gaussian Editing with A Single Image
+
+VortSDF: 3D Modeling with Centroidal Voronoi Tesselation on Signed Distance Field
+
+GaussianOcc: Fully Self-supervised and Efficient 3D Occupancy Estimation with Gaussian Splatting
+
+A Diffusion Approach to Radiance Field Relighting using Multi-Illumination Synthesis
+
+Generalizable Human Gaussians for Sparse View Synthesis
+
+FlashGS: Efficient 3D Gaussian Splatting for Large-scale and High-resolution Rendering
+
+A Refined 3D Gaussian Representation for High-Quality Dynamic Scene Reconstruction
+
+DragGaussian: Enabling Drag-style Manipulation on 3D Gaussian Representation
+
+3D StreetUnveiler with Semantic-Aware 2DGS
+
+Registering Neural 4D Gaussians for Endoscopic Surgery
+
+SA-GS: Semantic-Aware Gaussian Splatting for Large Scene Reconstruction with Geometry Constrain
+
+On Scaling Up 3D Gaussian Splatting Training
+
+Lightplane: Highly-Scalable Components for Neural 3D Fields
+
+Segment Any 4D Gaussians
+
+GST: Precise 3D Human Body from a Single Image with Gaussian Splatting Transformers
+
+Effective Rank Analysis and Regularization for Enhanced 3D Gaussian Splatting
+
+Robust Biharmonic Skinning Using Geometric Fields
+
+Scaling up Probabilistic PDE Simulators with Structured Volumetric Information
+
+GSFusion: Online RGB-D Mapping Where Gaussian Splatting Meets TSDF Fusion
+
+Thermal3D-GS: Physics-induced 3D Gaussians for Thermal Infrared Novel-view Synthesis
+
+Trim 3D Gaussian Splatting for Accurate Geometry Representation
+
+Interactive Rendering of Relightable and Animatable Gaussian Avatars
+
+GS-LRM: Large Reconstruction Model for 3D Gaussian Splatting
+
+GaussianBeV: 3D Gaussian Representation meets Perception Models for BeV Segmentation
+
+ContextGS: Compact 3D Gaussian Splatting with Anchor Level Context Model
+
+Instant 3D Human Avatar Generation using Image Diffusion Models
+
+DrivingForward: Feed-forward 3D Gaussian Splatting for Driving Scene Reconstruction from Flexible Surround-view Input
+
+FlowDreamer: exploring high fidelity text-to-3D generation via rectified flow
+
+LT3SD: Latent Trees for 3D Scene Diffusion
+
+Human-Aware 3D Scene Generation with Spatially-constrained Diffusion Models
+
+Gaussian in the Dark: Real-Time View Synthesis From Inconsistent Dark Images Using Gaussian Splatting
+
+V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians
+
+Variational Inference via Smoothed Particle Hydrodynamics
+
+Depth Estimation Based on 3D Gaussian Splatting Siamese Defocus
+
+DiffSurf: A Transformer-based Diffusion Model for Generating and Reconstructing 3D Surfaces in Pose
+
+Cycle3D: High-quality and Consistent Image-to-3D Generation via Generation-Reconstruction Cycle
+
+Reconstructing and Simulating Dynamic 3D Objects with Mesh-adsorbed Gaussian Splatting
+
+MagicMan: Generative Novel View Synthesis of Humans with 3D-Aware Diffusion and Iterative Refinement
+
+VCD-Texture: Variance Alignment based 3D-2D Co-Denoising for Text-Guided Texturing
+
+Generalizable Human Gaussians from Single-View Image
+
+AutoSplat: Constrained Gaussian Splatting for Autonomous Driving Scene Reconstruction
+
+DreamLCM: Towards High-Quality Text-to-3D Generation via Latent Consistency Model
+
+Splatt3R: Zero-shot Gaussian Splatting from Uncalibrated Image Pairs
+
+Enhanced 3D Urban Scene Reconstruction and Point Cloud Densification using Gaussian Splatting and Google Earth Imagery
+
+Consistent Point Orientation for Manifold Surfaces via Boundary Integration
+
+Transferable 3D Adversarial Shape Completion using Diffusion Models
+
+RT-GS2: Real-Time Generalizable Semantic Segmentation for 3D Gaussian Representations of Radiance Fields
+
+MOSS: Motion-based 3D Clothed Human Synthesis from Monocular Video
+
+Progressive Radiance Distillation for Inverse Rendering with Gaussian Splatting
+
+MicroDreamer: Zero-shot 3D Generation in $\sim$20 Seconds by Score-based Iterative Reconstruction
+
+GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
+
+Director3D: Real-world Camera Trajectory and 3D Scene Generation from Text
+
+MVGaussian: High-Fidelity text-to-3D Content Generation with Multi-View Guidance and Surface Densification
+
+MotionDreamer: Zero-Shot 3D Mesh Animation from Video Diffusion Models
+
+From NeRFs to Gaussian Splats, and Back
+
+SpecGaussian with Latent Features: A High-quality Modeling of the View-dependent Appearance for 3D Gaussian Splatting
+
+VEGS: View Extrapolation of Urban Scenes in 3D Gaussian Splatting using Learned Priors
+

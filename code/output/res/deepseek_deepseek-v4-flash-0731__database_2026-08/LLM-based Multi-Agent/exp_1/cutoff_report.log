@@ -1,0 +1,6 @@
+[cutoff/db] 908819 papers, newest id 2608.04010v1 (2026-08), dates 1991-03-13..2026-08-04
+[cutoff/cfg] --paper_id_cutoff=2608 --paper_date_oldest=2012-01-01 --paper_date_newest=2026-08-31
+[cutoff/cfg] WARNING: database has papers dated back to 1991-03-13 but --paper_date_oldest is 2012-01-01; older papers are discarded by the citation reranker.
+[cutoff/outline] arXiv id prefix <= 2608: 908819/908819 papers retrievable, 0 excluded
+[cutoff/writer] arXiv id prefix <= 2608: 908819/908819 papers retrievable, 0 excluded
+[cutoff/rerank] total: 0/6974 retrieved documents discarded by the citation window [2012-01-01, 2026-08-31]

@@ -22,3 +22,75 @@ Total Start Time: 2026-08-05 12:26:19
 Total End Time: 2026-08-05 12:40:51
 Total Duration: 0:14:31.146212
 Total Topics: 1
+
+Resuming experiments at: 2026-08-06 01:45:37
+==================================================
+
+Topic: LLM-based Multi-Agent, Exp 1
+Start: 2026-08-06 01:45:37
+End: 2026-08-06 02:09:27
+Duration: 0:23:49.620441
+OutlineWriter Input token usage: 452851
+OutlineWriter Output token usage: 24514
+SubsectionWriter Input token usage: 1319024
+SubsectionWriter Output token usage: 89951
+--------------------------------------------------
+
+Topic Summary: LLM-based Multi-Agent
+Total Duration: 0:23:54.627065
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-08-06 01:45:37
+Total End Time: 2026-08-06 02:09:32
+Total Duration: 0:23:54.627392
+Total Topics: 1
+
+Resuming experiments at: 2026-08-06 02:18:03
+==================================================
+
+Topic: 3D Gaussian Splatting, Exp 1 [FAILED]
+Start: 2026-08-06 02:18:03
+End: 2026-08-06 02:23:41
+Duration: 0:05:38.396933
+Error: Command '['/data2/chanjoong/survey-agent/SurveyForge/code/../.venv/bin/python', 'main.py', '--topic', '3D Gaussian Splatting', '--gpu', '0', '--debug', '--saving_path', './output/res/deepseek_deepseek-v4-flash-0731/3D Gaussian Splatting/exp_1', '--model', 'deepseek/deepseek-v4-flash-0731', '--section_num', '7', '--subsection_len', '500', '--rag_num', '100', '--rag_max_out', '60', '--outline_reference_num', '1500', '--survey_outline_path', '/data2/chanjoong/survey-agent/SurveyForge_data', '--db_path', '/data2/chanjoong/survey-agent/SurveyForge_data/database', '--embedding_model', '/data2/chanjoong/survey-agent/SurveyForge_data/gte-large-en-v1.5', '--api_url', 'https://openrouter.ai/api/v1']' returned non-zero exit status 1.
+--------------------------------------------------
+
+Topic Summary: 3D Gaussian Splatting
+Total Duration: 0:05:43.399835
+Successful Experiments: 0/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-08-06 02:18:03
+Total End Time: 2026-08-06 02:23:46
+Total Duration: 0:05:43.400131
+Total Topics: 1
+
+Resuming experiments at: 2026-08-06 02:36:51
+==================================================
+
+Topic: 3D Gaussian Splatting, Exp 1
+Start: 2026-08-06 02:36:51
+End: 2026-08-06 03:05:37
+Duration: 0:28:45.899219
+OutlineWriter Input token usage: 495396
+OutlineWriter Output token usage: 29278
+SubsectionWriter Input token usage: 1731113
+SubsectionWriter Output token usage: 108300
+--------------------------------------------------
+
+Topic Summary: 3D Gaussian Splatting
+Total Duration: 0:28:50.904658
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-08-06 02:36:51
+Total End Time: 2026-08-06 03:05:42
+Total Duration: 0:28:50.904876
+Total Topics: 1

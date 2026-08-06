@@ -1,0 +1,43 @@
+# 3D Gaussian Splatting: A Comprehensive Survey of Representations, Optimization, and Emerging Applications
+## 1 Introduction
+## 2 Foundations, Rendering Pipelines, and Core Algorithmic Enhancements
+### 2.1 Initialization Strategies and Primitive Seeding
+### 2.2 Adaptive Density Control and Principled Primitive Refinement
+### 2.3 Loss Design, Geometric Regularization, and Training Stability
+### 2.4 Anti-Aliasing, Multi-Scale Consistency, and Primitive Geometry Extensions
+### 2.5 Performance, Memory Efficiency, and System-Level Co-Design
+## 3 Methods for Geometric Accuracy, Surface Reconstruction, and Handling Degraded Inputs
+### 3.1 Surface-Driven Regularization and Geometric Prior Integration
+### 3.2 Surface-Adapted Primitive Kernels and Novel Basis Functions
+### 3.3 Robust Reconstruction from Sparse, Unposed, and Degraded Inputs
+### 3.4 Handling Photometric Inconsistencies, Transient Occlusions, and Dynamic Degradations
+### 3.5 Physical Surface Constraining, Sensor-Aware Fusion, and Fine-Scale Detail Preservation
+## 4 Compression, Scalability, and Hardware-Aware Deployment
+### 4.1 Model Compression and Storage Optimization
+### 4.2 Hierarchical, Structured, and Adaptive Scene Frameworks for Large-Scale Rendering
+### 4.3 System-Level Hardware Co-Design and Real-Time Optimization
+### 4.4 Large-Scale GPU Memory Management and High-Performance Training Scalability
+### 4.5 Temporal and Streaming Compression for Dynamic, Time-Varying, and Interactive-Experiences
+## 5 Dynamic Scenes, Temporal Modeling, and Physics-Based Interaction
+### 5.1 Deformation Field-Based Dynamic Gaussian Splatting
+### 5.2 Direct 4D Gaussian Frameworks and Temporal Primitives
+###
+### 5.3 Animatable Humans, Articulated Objects, and Digital Avatars
+###
+### 5.4 Physics-Integrated Simulation and Neural Dynamics
+### 5.5 Generative Modeling, Editing, and Completion of Dynamic Scenes
+###
+### 5.6 Advanced Efficiency, Temporal Scalability, and 4D Content Representation
+## 6 Scene Understanding, Editing, and Multi-Modal Interactions
+### 6.1 Semantic Abstraction and Open-Vocabulary Scene Understanding
+### 6.2 Interactive Scene Construction and Multi-Modal Mapping for Robotics
+### 6.3 Localized Scene Manipulation & Geometry-Aware Image Editing
+### 6.4 Robust and Generalizable Scene Generation and Completion
+### 6.5 Physical and Photometric Editing with Material Studio & Visual Composition
+## 7 Physical Realism, Inverse Rendering, and Advanced Reliability of Reconstructions
+### 7.1 Physically-Based Inverse Rendering and Material Estimation
+### 7.2 Relighting and Advanced Light Transport Modeling
+### 7.3 Physically Plausible Dynamics and Deformation
+### 7.4 Robustness, Security, and Adversarial Reliability
+## 8 Conclusion
+

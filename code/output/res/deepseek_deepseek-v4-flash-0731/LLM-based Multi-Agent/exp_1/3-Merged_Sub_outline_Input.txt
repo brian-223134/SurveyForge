@@ -1,0 +1,1578 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **LLM-based Multi-Agent**.
+
+You have created the following overall outline:
+---
+Title: Large Language Model based Multi-Agent Systems: Architectures, Collective Intelligence, and Emerging Frontiers
+
+Section 1: Introduction
+Description 1: This section establishes the foundational context for the survey by tracing the evolution of intelligent systems from classical multi-agent frameworks to the contemporary paradigm of large language model based multi-agent systems. It articulates the unique capabilities that large language models bring to agent design, defines the scope and core terminology of the field, and positions this survey relative to existing literature.
+1. Historical Evolution from Classical to Language-Driven Agents: Traces the progression from rule-based and reinforcement learning driven multi-agent systems to large language model powered agents, highlighting the paradigm shift from predefined state-action spaces and explicit coordination protocols to flexible, natural language mediated, and knowledge-rich interactions enabled by pretrained language models.
+2. Motivation and Unique Capabilities: Examines the rationale for adopting multiple large language model agents instead of a monolithic single model, focusing on how collaboration overcomes limitations such as finite context windows, individual hallucinations or biases, and lack of specialized knowledge through workflow division and the use of their inherent reasoning, planning, and in-context learning capabilities.
+3. Distinguishing System Properties: Delineates the core defining features of large language model based multi-agent systems, separating them from both a single agent and a simple ensemble of models, including the presence of distinct specified roles for agents, communication and various types of interaction, and the capability for emergent collective behavior that surpasses any single component's abilities.
+4. Scope and Survey Positioning: Outlines the scientific scope, the organizing structure of the survey, and the main strands of existing research, situating the work in relation to prior surveys that tend to focus on a single aspect—like memory or evaluation—rather than providing a comprehensive and unified framework that links, architecture, dynamics, applications, and societal challenges.
+
+Section 2: Architectural Design of Agents and Multi-Agent Systems
+Description 2: This section provides a systematic treatment of the architectural and design choices for constructing individual agents and orchestrating them into multi-agent systems. It deconstructs the internal cognitive modules of a single agent, analyzes the different system-level topological configurations, and evaluates the critical design decisions that shape communication, scalability, and system resilience.
+1. Profiling, Persona, and Task Specialization: Explores the methods for defining an agent's role and identity through natural language profiling, including the assignment of distinct professional roles, personality traits, or specific functions, and examines both static and dynamic approaches to role composition that facilitate the division of complex tasks into subtasks handled by specialized agents.
+2. Agent Memory Architectures and Knowledge Management: Discusses the core mechanisms for memory construction in individual agents and the system as a whole, spanning short-term working memory for immediate context, long-term episodic and semantic memory modules with storage and retrieval, and the formation of shared memory repositories that collectively track the group's learned knowledge and environmental state.
+3. System Organization and Coordination Topologies: Explores the primary multi-agent structural arrangements, including centralized, decentralized, hierarchical, and flat configurations, detailing the flow of control and data, and analyzing the inherent trade-offs among these designs regarding system scalability, fault tolerance, and the overhead required for coordinating the constituent agents.
+4. Hybrid, Modular, and Design-Space Trade-offs: Examines the main system-level design patterns to compose agents in a flexible way, including hybrid approaches and platform-based compositions of "registries" that dynamically mix human users and heterogeneous artificial intelligence systems, and analyzes the fundamental trade-offs between system performance, latency, communication cost, and the robustness of the agent network.
+
+Section 3: Communication, Interaction, and Coordination Mechanisms
+Description 3: This section focuses on the "social" layer of multi-agent systems, detailing the protocols, structures, and strategies that govern the exchange of information, the coordination of actions, and the resolution of conflicting objectives. This section goes into depth on the different communicative paradigms of cooperation, debate, and negotiation, evolving the central role of natural language in generating collective intelligence.
+1. Communication Protocols and Languages: Analyzes the design of agent messaging systems, spanning open-ended natural dialogue and structured data formats, and investigates more sophisticated information-sharing practices such as sharing a "belief state" in a mathematical embedding to convey unspoken inference, and evaluates how these methods affect the fidelity, efficiency, and expressiveness of the interactions.
+2. Debate, Negotiation, and Consensus-Building: Details common social interaction paradigms, including structured multi-round debate, counter-argument, and recursive reasoning for improved self-consistency, and the use of voting, hierarchical review, or mediation strategies for conflict management and the consolidation of distributed knowledge into a single final output.
+3. Structural and Dynamic Organizational Strategies: Distinguishes between static team configurations based on pre-defined role assignment, and organizational structures where the agents can self-organize their communication hierarchy, choose their collaborators dynamically, or appear to be assigned to their task based on changing requirements during execution.
+4. The Dynamics of Group Deliberation and its Emergence: Explores the pattern of coordination and group reasoning, where the exchange of adversarial arguments, the iterative refinement of plans, and the sharing of high-level sub-goals among agents implement the philosophy of a "society of mind," illustrating how collaboration between different modules enables reasoning to be a novel, emergent property of the system.
+
+Section 4: Collective Planning, Reasoning, and Learning in Multi-Agent Systems
+Description 4: This section examines the cognitive processes and learning paradigms that allow a team of agents to deliberate on, break down, and execute complex tasks, and the self-improving mechanisms that enable a collective to learn from its environment and each other. It moves beyond static reasoning, focusing on high-level orchestration and the long-horizon adaptation of group behavior.
+1. Task Decomposition and Resource Allocation: Discusses methods for transforming high-level goals into structured sequences of sub-tasks, including hierarchical task decomposition and allocation to different agents based on their specialization, and explores graph-based, dynamic, and adaptive planning strategies for the distribution of cognitive labor.
+2. Shared Reasoning and Strategic Inter-Operation: Examines how multiple agents participate in more sophisticated reasoning, such as by combining information from any source in a debate-and-verification chain, or engaging in a principled process of generating a tree of intermediate solutions, and discusses emerging strategic behaviors that arise due to partially-aligned goals among agents.
+3. Collaborative Learning and Feedback-driven Improvement: Covers mechanisms for system learning from the outcome of tasks through natural language feedback and self-evaluation, and contrasting these with the reinforcement learning based paradigms that fine-tune policy through environmental reward signals or use language model planners as controllers to orchestrate multi-round strategies.
+4. Self-Evolution and Long-Term Adaptability: Introduces the role of explicit and structured processes for the system to generate its own new tools, form and refine internal policies from past experiences, and update organizational rules, which leads to the formation of collective long-term memory and evolving team dynamics rather than a static system.
+
+Section 5: Emergent Behaviors and Group Dynamics
+Description 5: This section investigates the complex and often unpredictable patterns of behavior that emerge from the collective interaction of multiple autonomous agents, which are not explicitly programmed by the system designer. It systematically analyzes these emergent group dynamics, the social roles taken by agents, and the macro-level patterns of collaboration and competition and their consequences.
+1. Formation of Societal Structures and Norms: Investigates the emergence of spontaneous phenomena like agent leadership, role specialization, and the formation of implicit social contracts or norms within a group, demonstrating how a decentralized collective self-organizes to a structure that was not present in initial conditions.
+2. Collaborative and Competitive Dynamics in Teams: Analyzes the interaction motifs in cooperative, adversarial, and mixed-incentive environments, including patterns of cooperation, mutualism, information sharing, circular debate, and conflict where agents with slightly different tasks or incentives unintentionally create a functional balance in the group output.
+3. Modeling and Simulating Human-like Social Phenomena: Describes the role of multi-agent systems for computational social science to recreate complex social environments, with individual agents representing citizens, departments of an organization, or economic agents, providing a tool to probe macro outcomes like the diffusion of opinions, financial market evolution, and urban dynamics.
+4. The Conditions and the Limits of Collective Intelligence: Discusses the qualitative regimes where the interaction of a team of agents gives a super-linear increase in task capacity, but also defines the origin of emergent systemic degradation due to herding, echo-chambers, or escalating and "toxic" cascading of the logical errors of each individual.
+
+Section 6: Evaluation Frameworks and Benchmark Design
+Description 6: This section synthesizes the various methodologies, benchmarks, and metrics used to evaluate the performance of multi-agent systems, capturing the added challenge of quantifying emergent group behavior beyond the quality of the final output. It reviews both task-oriented performance criteria and frameworks designed to assess the quality of the internal dynamics of agent societies.
+1. Benchmark Suites and Testbeds for Multi-Agent Systems: Discusses the development of task-specific and domain-specific benchmark environments that stress particular capabilities, such as games, interactive dialogue, software engineering, and general complex problem solving, and notes the dynamic environment and feedback-oriented design to allow emergent behavior.
+2. Performance Metrics and Collaboration Reward Design: Elaborates on the quantitative measures for a multi-agent system's performance, moving beyond a simple success ratio to evaluate efficiency, token cost, latency, and the specific analysis of inter-agent communication overhead and resource utilization.
+3. Safety, Robustness and Failure Mode Analysis: Analyzes evaluation paradigms that focus on exposing system-level and emergent failure mechanisms, including adversarial attacks, cascading errors, the sensitivity of the group to hallucinated input from a single faulty agent, and the evaluation of systemic misalignment from the intended goal.
+4. Human-AI and Group-Believability Evaluation: Covers methods for assessing the system's emergent behavior via user studies and targeted protocols to measure whether the process, not just the product, is coherent, whether the agent interaction passes the Turing test with an evaluator, and whether the system's interactions can be trusted by a human supervisor.
+
+Section 6: Applications, Security, and Alignment of Multi-Agent Systems
+Description 6: This section provides a broad overview of the diverse applications of multi-agent systems across real-world domains while critically analyzing the novel security, privacy, and safety challenges inherent to their collective and compositional nature. The content urges including the tangible uses in simulation, software, science, and embodiment, coupled with a deep dive into the vulnerabilities from interacting agents.
+1. Paradigmatic Applications and Domain Deployment: Surveying the impact of agent systems across domains, including their use for automating complex software engineering workflows (design, code, and testing), algorithmic scientific discovery, the creation of immersive game worlds and role-play simulation, and their use for policy analysis through social simulation.
+2. Attack Vector and Collusion in Multi-Agent Villages: Discusses the new attack surface created by the architecture that consists of a set of agents, including indirect prompt injections, data contamination of the shared memory, and the spread of a single agent's manipulation or devolution in a cascading, epidemic, or "jailbreaking" pattern.
+3. Alignment, Safety, and Fail-safe Mechanisms: Tackles the challenge of human value alignment in a system with a distributed set of objectives, the potential for an agent's behavior to be unsafe when in pursuit of its pre-programmed role, and the design of robust verification ("verifier-in-the-loop") and moderation methods to constrain the system to a "safe envelope" of operations.
+4. Challenges in Collaboration and Mitigating Hallucination Cascades: Examines the systemic error of collective hallucination and misinformation across agents, the problem of "false consensus" where a group reaches an overconfident and wrong conclusion, and strategies for diverse news grounding, and inter-agent verification to reduce the propagation of erroneous information.
+
+Section 7: Challenges, Limitations, and Open Research Frontiers
+Description 7: This section synthesizes the state of the field, articulating the persistent technical, theoretical, and societal challenges that are limiting the broader adoption and continuous scalability of large language model-based multi-agent systems. It distills the open problems into a set of research axes that will guide the next generation of work in this domain.
+1. Theoretical Underpinnings and System Verification: Highlights the lack of a principled mathematical and formal framework that can model the macro-behavior of a system, the emergent dynamics and potential convergence, and the ability to deadlock, thereby allowing for formal guarantees of stability, of a multi-agent system.
+2. Scalability, Efficiency, and the Population Challenge: Addresses the specific constraints on system scale, including the exploding computational and financial cost when more than a few participants take part, and argues for an urgent need for new methods for sparse communication, model compression, and algorithmic caching to deploy teams of thousands or even millions.
+3. Continuous Evolution and the Static Systems Dilemma: Diminishes the gap between static agents defined at construction time and the promise of an organic system that can change its internal architecture, reproduce and update itself based on the task, and adapt to non-stationary environments. This includes end-to-end training and persistent development.
+4. Governance, Accountability, and Interoperability: Explores the layered issue of managing a human-agent organization, including the need for standardized communication and discovery protocols for agents to seamlessly operate across different platforms, and for parsing errors to not be trusted in *decision provenance*.
+5. The Design of Fundamental Principles of Collective Intelligence: Recognizes the lack of consensus on the design principles that govern what kinds of tasks require massive participation, and the role of heterogeneous models, new cooperation mechanisms inspired by social and ecological systems, and the move toward an "agent ecosystem" that includes a broader set of failure models, and multi-agent modalities.
+
+Section 8: Conclusion
+Description 8: This conclusion synthesizes the main argument of the survey—that the field of large language model based multi-agent systems is not merely a technical increment on single-agent systems, but a proposed framework with emergent properties and makes a forward-looking summary of the main open challenges.
+1. Summary of State-of-the-Art: Recapitulates the evolution of the multi-agent paradigm from individual agent, to the orchestration of a team, and re-iterates the main findings on the design space: from architecture to communication and to emergent dynamics, the field is developing a complex and multi-faceted picture.
+2. The Continuum of Collective Intelligence: Proposes a roadmap for the future to develop a principled and formalized "science" of multi-agent systems, recognizing the importance of interdisciplinarity for advancing the field, and the need for frameworks and institutions to manage the life-cycle of increasingly autonomous and capable agent collectives.
+3. Charting the Road Ahead: The final section discusses the move from static to self-organizing, multi-generational and increasingly autonomous large language model systems, and the importance of safety and ethics, placing the future of multi-agent systems in the wider project of human-machine collective intelligence, rather than as only a way to improve the performance of a basis on the benchmark.
+---
+
+You need to enrich the section **Challenges, Limitations, and Open Research Frontiers**, described as: **This section synthesizes the state of the field, articulating the persistent technical, theoretical, and societal challenges that are limiting the broader adoption and continuous scalability of large language model-based multi-agent systems. It distills the open problems into a set of research axes that will guide the next generation of work in this domain.
+1. Theoretical Underpinnings and System Verification: Highlights the lack of a principled mathematical and formal framework that can model the macro-behavior of a system, the emergent dynamics and potential convergence, and the ability to deadlock, thereby allowing for formal guarantees of stability, of a multi-agent system.
+2. Scalability, Efficiency, and the Population Challenge: Addresses the specific constraints on system scale, including the exploding computational and financial cost when more than a few participants take part, and argues for an urgent need for new methods for sparse communication, model compression, and algorithmic caching to deploy teams of thousands or even millions.
+3. Continuous Evolution and the Static Systems Dilemma: Diminishes the gap between static agents defined at construction time and the promise of an organic system that can change its internal architecture, reproduce and update itself based on the task, and adapt to non-stationary environments. This includes end-to-end training and persistent development.
+4. Governance, Accountability, and Interoperability: Explores the layered issue of managing a human-agent organization, including the need for standardized communication and discovery protocols for agents to seamlessly operate across different platforms, and for parsing errors to not be trusted in *decision provenance*.
+5. The Design of Fundamental Principles of Collective Intelligence: Recognizes the lack of consensus on the design principles that govern what kinds of tasks require massive participation, and the role of heterogeneous models, new cooperation mechanisms inspired by social and ecological systems, and the move toward an "agent ecosystem" that includes a broader set of failure models, and multi-agent modalities.**
+
+**Main task:**
+Generate a comprehensive framework for **Challenges, Limitations, and Open Research Frontiers** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: On the Necessary Memory to Compute the Plurality in Multi-Agent Systems
+
+publish_date: 2019-01-19
+
+paper_content:
+
+We consider the Relative-Majority Problem (also known as Plurality), in
+which, given a multi-agent system where each agent is initially provided an
+input value out of a set of $k$ possible ones, each agent is required to
+eventually compute the input value with the highest frequency in the initial
+configuration. We consider the problem in the general Population Protocols
+model in which, given an underlying undirected connected graph whose nodes
+represent the agents, edges are selected by a globally fair scheduler.
+  The state complexity that is required for solving the Plurality Problem
+(i.e., the minimum number of memory states that each agent needs to have in
+order to solve the problem), has been a long-standing open problem. The best
+protocol so far for the general multi-valued case requires polynomial memory:
+Salehkaleybar et al. (2015) devised a protocol that solves the problem by
+employing $O(k 2^k)$ states per agent, and they conjectured their upper bound
+to be optimal. On the other hand, under the strong assumption that agents
+initially agree on a total ordering of the initial input values, Gasieniec et
+al. (2017), provided an elegant logarithmic-memory plurality protocol.
+  In this work, we refute Salehkaleybar et al.'s conjecture, by providing a
+plurality protocol which employs $O(k^{11})$ states per agent. Central to our
+result is an ordering protocol which allows to leverage on the plurality
+protocol by Gasieniec et al., of independent interest. We also provide a
+$\Omega(k^2)$-state lower bound on the necessary memory to solve the problem,
+proving that the Plurality Problem cannot be solved within the mere memory
+necessary to encode the output.
+---
+paper_title: Social Deliberation vs. Social Contracts in Self-Governing Voluntary
+  Organisations
+
+publish_date: 2024-03-24
+
+paper_content:
+
+Self-organising multi-agent systems regulate their components' behaviour
+voluntarily, according to a set of socially-constructed, mutually-agreed, and
+mutable social arrangements. In some systems, these arrangements may be applied
+with a frequency, at a scale and within implicit cost constraints such that
+performance becomes a pressing issue. This paper introduces the
+\textit{Megabike Scenario}, which consists of a negotiated agreement on a
+relatively 'large' set of conventional rules, 'frequent' 'democratic'
+decision-making according to those rules, and a resource-bounded imperative to
+reach 'correct' decisions. A formalism is defined for effective rule
+representation and processing in the scenario, and is evaluated against five
+interleaved socio-functional requirements. System performance is also evaluated
+empirically through simulation. We conclude that to self-organise their social
+arrangements, agents need some awareness of their own limitations and the value
+of compromise.
+---
+paper_title: LLM-Augmented Agent-Based Modelling for Social Simulations: Challenges and Opportunities
+
+publish_date: 2024-05-08
+
+paper_content:
+
+As large language models (LLMs) continue to make significant strides, their
+better integration into agent-based simulations offers a transformational
+potential for understanding complex social systems. However, such integration
+is not trivial and poses numerous challenges. Based on this observation, in
+this paper, we explore architectures and methods to systematically develop
+LLM-augmented social simulations and discuss potential research directions in
+this field. We conclude that integrating LLMs with agent-based simulations
+offers a powerful toolset for researchers and scientists, allowing for more
+nuanced, realistic, and comprehensive models of complex systems and human
+behaviours.
+---
+paper_title: Developing Multi-Agent Systems with Degrees of Neuro-Symbolic
+  Integration [A Position Paper]
+
+publish_date: 2023-05-19
+
+paper_content:
+
+In this short position paper we highlight our ongoing work on verifiable
+heterogeneous multi-agent systems and, in particular, the complex (and often
+non-functional) issues that impact the choice of structure within each agent.
+---
+paper_title: The Impact of Strategies and Information in Model Checking for
+  Multi-Agent Systems
+
+publish_date: 2023-10-03
+
+paper_content:
+
+System correctness is one of the most crucial and challenging objectives in
+software and hardware systems. With the increasing evolution of connected and
+distributed systems, ensuring their correctness requires the use of formal
+verification for multi-agent systems. In this paper, we present a summary of
+certain results on model checking for multi-agent systems that derive from the
+selection of strategies and information for agents. Additionally, we discuss
+some open directions for future research.
+---
+paper_title: Governance of Autonomous Agents on the Web  Challenges and Opportunities
+
+publish_date: 2022-02-05
+
+paper_content:
+
+The study of autonomous agents has a long tradition in the Multiagent Systems
+and the Semantic Web communities, with applications ranging from automating
+business processes to personal assistants. More recently, the Web of Things
+(WoT), which is an extension of the Internet of Things (IoT) with metadata
+expressed in Web standards, and its community provide further motivation for
+pushing the autonomous agents research agenda forward. Although representing
+and reasoning about norms, policies and preferences is crucial to ensuring that
+autonomous agents act in a manner that satisfies stakeholder requirements,
+normative concepts, policies and preferences have yet to be considered as
+first-class abstractions in Web-based multiagent systems. Towards this end,
+this paper motivates the need for alignment and joint research across the
+Multiagent Systems, Semantic Web, and WoT communities, introduces a conceptual
+framework for governance of autonomous agents on the Web, and identifies
+several research challenges and opportunities.
+---
+paper_title: ReDel: A Toolkit for LLM-Powered Recursive Multi-Agent Systems
+
+publish_date: 2024-08-05
+
+paper_content:
+
+Recently, there has been increasing interest in using Large Language Models
+(LLMs) to construct complex multi-agent systems to perform tasks such as
+compiling literature reviews, drafting consumer reports, and planning
+vacations. Many tools and libraries exist for helping create such systems,
+however none support recursive multi-agent systems -- where the models
+themselves flexibly decide when to delegate tasks and how to organize their
+delegation structure. In this work, we introduce ReDel: a toolkit for recursive
+multi-agent systems that supports custom tool-use, delegation schemes,
+event-based logging, and interactive replay in an easy-to-use web interface. We
+show that, using ReDel, we are able to achieve significant performance gains on
+agentic benchmarks and easily identify potential areas of improvements through
+the visualization and debugging tools. Our code, documentation, and PyPI
+package are open-source and free to use under the MIT license.
+---
+paper_title: Large Language Models as Minecraft Agents
+
+publish_date: 2024-02-13
+
+paper_content:
+
+In this work we examine the use of Large Language Models (LLMs) in the
+challenging setting of acting as a Minecraft agent. We apply and evaluate LLMs
+in the builder and architect settings, introduce clarification questions and
+examining the challenges and opportunities for improvement. In addition, we
+present a platform for online interaction with the agents and an evaluation
+against previous works.
+---
+paper_title: LLM-POET: Evolving Complex Environments using Large Language Models
+
+publish_date: 2024-06-07
+
+paper_content:
+
+Creating systems capable of generating virtually infinite variations of
+complex and novel behaviour without predetermined goals or limits is a major
+challenge in the field of AI. This challenge has been addressed through the
+development of several open-ended algorithms that can continuously generate new
+and diverse behaviours, such as the POET and Enhanced-POET algorithms for
+co-evolving environments and agent behaviour. One of the challenges with
+existing methods however, is that they struggle to continuously generate
+complex environments. In this work, we propose LLM-POET, a modification of the
+POET algorithm where the environment is both created and mutated using a Large
+Language Model (LLM). By fine-tuning a LLM with text representations of
+Evolution Gym environments and captions that describe the environment, we were
+able to generate complex and diverse environments using natural language. We
+found that not only could the LLM produce a diverse range of environments, but
+compared to the CPPNs used in Enhanced-POET for environment generation, the LLM
+allowed for a 34% increase in the performance gain of co-evolution. This
+increased performance suggests that the agents were able to learn a more
+diverse set of skills by training on more complex environments.
+---
+paper_title: LLM experiments with simulation: Large Language Model Multi-Agent System for Simulation Model Parametrization in Digital Twins
+
+publish_date: 2024-07-22
+
+paper_content:
+
+This paper presents a novel design of a multi-agent system framework that
+applies large language models (LLMs) to automate the parametrization of
+simulation models in digital twins. This framework features specialized LLM
+agents tasked with observing, reasoning, decision-making, and summarizing,
+enabling them to dynamically interact with digital twin simulations to explore
+parametrization possibilities and determine feasible parameter settings to
+achieve an objective. The proposed approach enhances the usability of
+simulation model by infusing it with knowledge heuristics from LLM and enables
+autonomous search for feasible parametrization to solve a user task.
+Furthermore, the system has the potential to increase user-friendliness and
+reduce the cognitive load on human users by assisting in complex
+decision-making processes. The effectiveness and functionality of the system
+are demonstrated through a case study, and the visualized demos and codes are
+available at a GitHub Repository:
+https://github.com/YuchenXia/LLMDrivenSimulation
+---
+paper_title: Rethinking the Bounds of LLM Reasoning  Are Multi-Agent Discussions the
+  Key 
+
+publish_date: 2024-02-28
+
+paper_content:
+
+Recent progress in LLMs discussion suggests that multi-agent discussion
+improves the reasoning abilities of LLMs. In this work, we reevaluate this
+claim through systematic experiments, where we propose a novel group discussion
+framework to enrich the set of discussion mechanisms. Interestingly, our
+results show that a single-agent LLM with strong prompts can achieve almost the
+same performance as the best existing discussion approach on a wide range of
+reasoning tasks and backbone LLMs. We observe that the multi-agent discussion
+performs better than a single agent only when there is no demonstration in the
+prompt. Further study reveals the common interaction mechanisms of LLMs during
+the discussion.
+---
+paper_title: Towards an Adaptive and Normative Multi-Agent System Metamodel and
+  Language  Existing Approaches and Research Opportunities
+
+publish_date: 2021-11-25
+
+paper_content:
+
+Several Multi-Agent System (MAS) metamodels and languages have been proposed
+in the literature to support the development of agent-based applications. MAS
+metamodels are used to capture a collection of concepts the relevant entities
+and relationships in the MAS domain, which include entities such as agent,
+message, role, action and plan, and relationships that represent, for example,
+that a role is responsible for one or more tasks. In addition, to models, MAS
+modeling languages have also been used to support the development of MASs in a
+wide variety of domains, including social networking, robotics, security and
+smart city environments. However, there is a lack of support in these models
+and languages for abstractions involving norms and adaptations as well as their
+interactions. This paper presents a survey of some existing metamodels and
+languages and compares their expressiveness using abstractions related to
+agents, norms and adaptation. The comparison serves as a basis for the
+definition of a new MAS metamodeling.
+---
+paper_title: The Standard Problem
+
+publish_date: 2023-04-17
+
+paper_content:
+
+Objective: This paper proposes a framework to support the scientific research
+of standards so that they can be better measured, evaluated, and designed.
+Methods: Beginning with the notion of common models, the framework describes
+the general standard problem - the seeming impossibility of creating a
+singular, persistent and definitive standard which is not subject to change
+over time in an open system. Results: The standard problem arises from
+uncertainty driven by variations in operating context, standard quality,
+differences in implementation, and drift over time. As a result, fitting work
+using conformance services is needed to repair these gaps between a standard
+and what is required for real-world use. To guide standards design and repair,
+a framework for measuring performance in context is suggested, based on signal
+detection theory and technomarkers. Based on the type of common model in
+operation, different conformance strategies are identified: (a) Universal
+conformance (all agents access the same standard); (b) Mediated conformance (an
+interoperability layer supports heterogeneous agents) and (c) Localized
+conformance (autonomous adaptive agents manage their own needs). Conformance
+methods include incremental design, modular design, adaptors, and creating
+interactive and adaptive agents. Discussion: Machine learning should have a
+major role in adaptive fitting. Research to guide the choice and design of
+conformance services may focus on the stability and homogeneity of shared
+tasks, and whether common models are shared ahead of time or adjusted at task
+time. Conclusion: This analysis conceptually decouples interoperability and
+standardization. While standards facilitate interoperability, interoperability
+is achievable without standardization.
+---
+paper_title: Modularity and Openness in Modeling Multi-Agent Systems
+
+publish_date: 2013-07-17
+
+paper_content:
+
+We revisit the formalism of modular interpreted systems (MIS) which
+encourages modular and open modeling of synchronous multi-agent systems. The
+original formulation of MIS did not live entirely up to its promise. In this
+paper, we propose how to improve modularity and openness of MIS by changing the
+structure of interference functions. These relatively small changes allow for
+surprisingly high flexibility when modeling actual multi-agent systems. We
+demonstrate this on two well-known examples, namely the trains, tunnel and
+controller, and the dining cryptographers.
+  Perhaps more importantly, we propose how the notions of multi-agency and
+openness, crucial for multi-agent systems, can be precisely defined based on
+their MIS representations.
+---
+paper_title: Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM
+  Agents
+
+publish_date: 2023-06-05
+
+paper_content:
+
+In this paper, we present a novel framework for enhancing the capabilities of
+large language models (LLMs) by leveraging the power of multi-agent systems.
+Our framework introduces a collaborative environment where multiple intelligent
+agent components, each with distinctive attributes and roles, work together to
+handle complex tasks more efficiently and effectively. We demonstrate the
+practicality and versatility of our framework through case studies in
+artificial general intelligence (AGI), specifically focusing on the Auto-GPT
+and BabyAGI models. We also examine the "Gorilla" model, which integrates
+external APIs into the LLM. Our framework addresses limitations and challenges
+such as looping issues, security risks, scalability, system evaluation, and
+ethical considerations. By modeling various domains such as courtroom
+simulations and software development scenarios, we showcase the potential
+applications and benefits of our proposed multi-agent system. Our framework
+provides an avenue for advancing the capabilities and performance of LLMs
+through collaboration and knowledge exchange among intelligent agents.
+---
+paper_title: Exploring Collaboration Mechanisms for LLM Agents  A Social Psychology
+  View
+
+publish_date: 2023-10-03
+
+paper_content:
+
+As Natural Language Processing (NLP) systems are increasingly employed in
+intricate social environments, a pressing query emerges: Can these NLP systems
+mirror human-esque collaborative intelligence, in a multi-agent society
+consisting of multiple large language models (LLMs)? This paper probes the
+collaboration mechanisms among contemporary NLP systems by melding practical
+experiments with theoretical insights. We fabricate four unique `societies'
+comprised of LLM agents, where each agent is characterized by a specific
+`trait' (easy-going or overconfident) and engages in collaboration with a
+distinct `thinking pattern' (debate or reflection). Through evaluating these
+multi-agent societies on three benchmark datasets, we discern that certain
+collaborative strategies not only outshine previous top-tier approaches, but
+also optimize efficiency (using fewer API tokens). Moreover, our results
+further illustrate that LLM agents manifest human-like social behaviors, such
+as conformity and consensus reaching, mirroring foundational social psychology
+theories. In conclusion, we integrate insights from social psychology to
+contextualize the collaboration of LLM agents, inspiring further investigations
+into the collaboration mechanism for LLMs. We commit to sharing our code and
+datasets\footnote{\url{https://github.com/zjunlp/MachineSoM}.}, hoping to
+catalyze further research in this promising avenue.
+---
+paper_title: Practical Model Reductions for Verification of Multi-Agent Systems
+
+publish_date: 2023-07-19
+
+paper_content:
+
+Formal verification of intelligent agents is often computationally infeasible
+due to state-space explosion. We present a tool for reducing the impact of the
+explosion by means of state abstraction that is (a) easy to use and understand
+by non-experts, and (b) agent-based in the sense that it operates on a modular
+representation of the system, rather than on its huge explicit state model.
+---
+paper_title: Impossibility of Collective Intelligence
+
+publish_date: 2022-06-05
+
+paper_content:
+
+Democratization of AI involves training and deploying machine learning models
+across heterogeneous and potentially massive environments. Diversity of data
+opens up a number of possibilities to advance AI systems, but also introduces
+pressing concerns such as privacy, security, and equity that require special
+attention. This work shows that it is theoretically impossible to design a
+rational learning algorithm that has the ability to successfully learn across
+heterogeneous environments, which we decoratively call collective intelligence
+(CI). By representing learning algorithms as choice correspondences over a
+hypothesis space, we are able to axiomatize them with essential properties.
+Unfortunately, the only feasible algorithm compatible with all of the axioms is
+the standard empirical risk minimization (ERM) which learns arbitrarily from a
+single environment. Our impossibility result reveals informational
+incomparability between environments as one of the foremost obstacles for
+researchers who design novel algorithms that learn from multiple environments,
+which sheds light on prerequisites for success in critical areas of machine
+learning such as out-of-distribution generalization, federated learning,
+algorithmic fairness, and multi-modal learning.
+---
+paper_title: LLM as OS, Agents as Apps  Envisioning AIOS, Agents and the AIOS-Agent
+  Ecosystem
+
+publish_date: 2023-12-06
+
+paper_content:
+
+This paper envisions a revolutionary AIOS-Agent ecosystem, where Large
+Language Model (LLM) serves as the (Artificial) Intelligent Operating System
+(IOS, or AIOS)--an operating system "with soul". Upon this foundation, a
+diverse range of LLM-based AI Agent Applications (Agents, or AAPs) are
+developed, enriching the AIOS-Agent ecosystem and signaling a paradigm shift
+from the traditional OS-APP ecosystem. We envision that LLM's impact will not
+be limited to the AI application level, instead, it will in turn revolutionize
+the design and implementation of computer system, architecture, software, and
+programming language, featured by several main concepts: LLM as OS
+(system-level), Agents as Applications (application-level), Natural Language as
+Programming Interface (user-level), and Tools as Devices/Libraries
+(hardware/middleware-level). We begin by introducing the architecture of
+traditional OS. Then we formalize a conceptual framework for AIOS through "LLM
+as OS (LLMOS)", drawing analogies between AIOS and traditional OS: LLM is
+likened to OS kernel, context window to memory, external storage to file
+system, hardware tools to peripheral devices, software tools to programming
+libraries, and user prompts to user commands. Subsequently, we introduce the
+new AIOS-Agent Ecosystem, where users can easily program Agent Applications
+(AAPs) using natural language, democratizing the development of software, which
+is different from the traditional OS-APP ecosystem. Following this, we explore
+the diverse scope of Agent Applications. We delve into both single-agent and
+multi-agent systems, as well as human-agent interaction. Lastly, drawing on the
+insights from traditional OS-APP ecosystem, we propose a roadmap for the
+evolution of the AIOS-Agent ecosystem. This roadmap is designed to guide the
+future research and development, suggesting systematic progresses of AIOS and
+its Agent applications.
+---
+paper_title: AgentLite  A Lightweight Library for Building and Advancing
+  Task-Oriented LLM Agent System
+
+publish_date: 2024-02-23
+
+paper_content:
+
+The booming success of LLMs initiates rapid development in LLM agents. Though
+the foundation of an LLM agent is the generative model, it is critical to
+devise the optimal reasoning strategies and agent architectures. Accordingly,
+LLM agent research advances from the simple chain-of-thought prompting to more
+complex ReAct and Reflection reasoning strategy; agent architecture also
+evolves from single agent generation to multi-agent conversation, as well as
+multi-LLM multi-agent group chat. However, with the existing intricate
+frameworks and libraries, creating and evaluating new reasoning strategies and
+agent architectures has become a complex challenge, which hinders research
+investigation into LLM agents. Thus, we open-source a new AI agent library,
+AgentLite, which simplifies this process by offering a lightweight,
+user-friendly platform for innovating LLM agent reasoning, architectures, and
+applications with ease. AgentLite is a task-oriented framework designed to
+enhance the ability of agents to break down tasks and facilitate the
+development of multi-agent systems. Furthermore, we introduce multiple
+practical applications developed with AgentLite to demonstrate its convenience
+and flexibility. Get started now at:
+\url{https://github.com/SalesforceAIResearch/AgentLite}.
+---
+paper_title: Towards Efficient Multi-Agent Learning Systems
+
+publish_date: 2023-05-22
+
+paper_content:
+
+Multi-Agent Reinforcement Learning (MARL) is an increasingly important
+research field that can model and control multiple large-scale autonomous
+systems. Despite its achievements, existing multi-agent learning methods
+typically involve expensive computations in terms of training time and power
+arising from large observation-action space and a huge number of training
+steps. Therefore, a key challenge is understanding and characterizing the
+computationally intensive functions in several popular classes of MARL
+algorithms during their training phases. Our preliminary experiments reveal new
+insights into the key modules of MARL algorithms that limit the adoption of
+MARL in real-world systems. We explore neighbor sampling strategy to improve
+cache locality and observe performance improvement ranging from 26.66% (3
+agents) to 27.39% (12 agents) during the computationally intensive mini-batch
+sampling phase. Additionally, we demonstrate that improving the locality leads
+to an end-to-end training time reduction of 10.2% (for 12 agents) compared to
+existing multi-agent algorithms without significant degradation in the mean
+reward.
+---
+paper_title: LLM-Based Multi-Agent Systems for Software Engineering  Vision and the
+  Road Ahead
+
+publish_date: 2024-04-07
+
+paper_content:
+
+Integrating Large Language Models(LLMs) into autonomous agents marks a
+significant shift in the research landscape by offering cognitive abilities
+competitive to human planning and reasoning. This paper envisions the evolution
+of LLM-based Multi-Agent (LMA) systems in addressing complex and multi-faceted
+software engineering challenges. LMA systems introduce numerous benefits,
+including enhanced robustness through collaborative cross-examination,
+autonomous problem-solving, and scalable solutions to complex software
+projects. By examining the role of LMA systems in future software engineering
+practices, this vision paper highlights the potential applications and emerging
+challenges. We further point to specific opportunities for research and
+conclude with a research agenda with a set of research questions to guide
+future research directions.
+---
+paper_title: On the Design and Analysis of LLM-Based Algorithms
+
+publish_date: 2024-07-20
+
+paper_content:
+
+We initiate a formal investigation into the design and analysis of LLM-based
+algorithms, i.e. algorithms that contain one or multiple calls of large
+language models (LLMs) as sub-routines and critically rely on the capabilities
+of LLMs. While LLM-based algorithms, ranging from basic LLM calls with prompt
+engineering to complicated LLM-powered agent systems and compound AI systems,
+have achieved remarkable empirical success, the design and optimization of them
+have mostly relied on heuristics and trial-and-errors, which is largely due to
+a lack of formal and analytical study for these algorithms. To fill this gap,
+we start by identifying the computational-graph representation of LLM-based
+algorithms, the design principle of task decomposition, and some key
+abstractions, which then facilitate our formal analysis for the accuracy and
+efficiency of LLM-based algorithms, despite the black-box nature of LLMs. We
+further consider parallel decomposition for a case study, providing extensive
+analytical and empirical study for four concrete examples of this pattern. Our
+proposed framework holds promise for advancing LLM-based algorithms, by
+revealing the reasons behind curious empirical phenomena, guiding the choices
+of hyperparameters, predicting the empirical performance of algorithms, and
+inspiring new algorithm design. To promote further study of LLM-based
+algorithms, we release our source code at
+https://github.com/modelscope/agentscope/tree/main/examples/paper_llm_based_algorithm.
+---
+paper_title: Phantom -- A RL-driven multi-agent framework to model complex systems
+
+publish_date: 2022-10-12
+
+paper_content:
+
+Agent based modelling (ABM) is a computational approach to modelling complex
+systems by specifying the behaviour of autonomous decision-making components or
+agents in the system and allowing the system dynamics to emerge from their
+interactions. Recent advances in the field of Multi-agent reinforcement
+learning (MARL) have made it feasible to study the equilibrium of complex
+environments where multiple agents learn simultaneously. However, most ABM
+frameworks are not RL-native, in that they do not offer concepts and interfaces
+that are compatible with the use of MARL to learn agent behaviours. In this
+paper, we introduce a new open-source framework, Phantom, to bridge the gap
+between ABM and MARL. Phantom is an RL-driven framework for agent-based
+modelling of complex multi-agent systems including, but not limited to economic
+systems and markets. The framework aims to provide the tools to simplify the
+ABM specification in a MARL-compatible way - including features to encode
+dynamic partial observability, agent utility functions, heterogeneity in agent
+preferences or types, and constraints on the order in which agents can act
+(e.g. Stackelberg games, or more complex turn-taking environments). In this
+paper, we present these features, their design rationale and present two new
+environments leveraging the framework.
+---
+paper_title: AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+publish_date: 2024-01-24
+
+paper_content:
+
+Evaluating large language models (LLMs) as general-purpose agents is
+essential for understanding their capabilities and facilitating their
+integration into practical applications. However, the evaluation process
+presents substantial challenges. A primary obstacle is the benchmarking of
+agent performance across diverse scenarios within a unified framework,
+especially in maintaining partially-observable environments and ensuring
+multi-round interactions. Moreover, current evaluation frameworks mostly focus
+on the final success rate, revealing few insights during the process and
+failing to provide a deep understanding of the model abilities. To address
+these challenges, we introduce AgentBoard, a pioneering comprehensive benchmark
+and accompanied open-source evaluation framework tailored to analytical
+evaluation of LLM agents. AgentBoard offers a fine-grained progress rate metric
+that captures incremental advancements as well as a comprehensive evaluation
+toolkit that features easy assessment of agents for multi-faceted analysis
+through interactive visualization. This not only sheds light on the
+capabilities and limitations of LLM agents but also propels the
+interpretability of their performance to the forefront. Ultimately, AgentBoard
+serves as a significant step towards demystifying agent behaviors and
+accelerating the development of stronger LLM agents.
+---
+paper_title: Formalizing Multi-Agent Systems Using Action Descriptions in Single
+  Agent Perspective
+
+publish_date: 2016-11-19
+
+paper_content:
+
+Logic-based representations of multi-agent systems have been extensively
+studied. In this work, we focus on the action language BC to formalize global
+views of MAS domains. Methodologically, we start representing the behaviour of
+each agent by an action description from a single agent perspective. Then, it
+goes through two stages that guide the modeler in composing the global view by
+first designating multi-agent aspects of the domain via potential conflicts and
+later resolving these conflicts according to the expected behaviour of the
+overall system. Considering that representing single agent descriptions is
+relatively simpler than representing multi-agent description directly, the
+formalization developed here is valuable from a knowledge representation
+perspective.
+---
+paper_title: Scaling Large-Language-Model-based Multi-Agent Collaboration
+
+publish_date: 2024-06-11
+
+paper_content:
+
+Pioneering advancements in large language model-powered agents have
+underscored the design pattern of multi-agent collaboration, demonstrating that
+collective intelligence can surpass the capabilities of each individual.
+Inspired by the neural scaling law, which posits that increasing neurons leads
+to emergent abilities, this study investigates whether a similar principle
+applies to increasing agents in multi-agent collaboration. Technically, we
+propose multi-agent collaboration networks (MacNet), which utilize directed
+acyclic graphs to organize agents and streamline their interactive reasoning
+via topological ordering, with solutions derived from their dialogues.
+Extensive experiments show that MacNet consistently outperforms baseline
+models, enabling effective agent collaboration across various network
+topologies and supporting cooperation among more than a thousand agents.
+Notably, we observed a small-world collaboration phenomenon, where topologies
+resembling small-world properties achieved superior performance. Additionally,
+we identified a collaborative scaling law, indicating that normalized solution
+quality follows a logistic growth pattern as scaling agents, with collaborative
+emergence occurring much earlier than previously observed instances of neural
+emergence. The code and data will be available at
+https://github.com/OpenBMB/ChatDev.
+---
+paper_title: MALib  A Parallel Framework for Population-based Multi-agent
+  Reinforcement Learning
+
+publish_date: 2021-06-05
+
+paper_content:
+
+Population-based multi-agent reinforcement learning (PB-MARL) refers to the
+series of methods nested with reinforcement learning (RL) algorithms, which
+produces a self-generated sequence of tasks arising from the coupled population
+dynamics. By leveraging auto-curricula to induce a population of distinct
+emergent strategies, PB-MARL has achieved impressive success in tackling
+multi-agent tasks. Despite remarkable prior arts of distributed RL frameworks,
+PB-MARL poses new challenges for parallelizing the training frameworks due to
+the additional complexity of multiple nested workloads between sampling,
+training and evaluation involved with heterogeneous policy interactions. To
+solve these problems, we present MALib, a scalable and efficient computing
+framework for PB-MARL. Our framework is comprised of three key components: (1)
+a centralized task dispatching model, which supports the self-generated tasks
+and scalable training with heterogeneous policy combinations; (2) a programming
+architecture named Actor-Evaluator-Learner, which achieves high parallelism for
+both training and sampling, and meets the evaluation requirement of
+auto-curriculum learning; (3) a higher-level abstraction of MARL training
+paradigms, which enables efficient code reuse and flexible deployments on
+different distributed computing paradigms. Experiments on a series of complex
+tasks such as multi-agent Atari Games show that MALib achieves throughput
+higher than 40K FPS on a single machine with $32$ CPU cores; 5x speedup than
+RLlib and at least 3x speedup than OpenSpiel in multi-agent training tasks.
+MALib is publicly available at https://github.com/sjtu-marl/malib.
+---
+paper_title: AgentGym: Evolving Large Language Model-based Agents across Diverse Environments
+
+publish_date: 2024-06-06
+
+paper_content:
+
+Building generalist agents that can handle diverse tasks and evolve
+themselves across different environments is a long-term goal in the AI
+community. Large language models (LLMs) are considered a promising foundation
+to build such agents due to their generalized capabilities. Current approaches
+either have LLM-based agents imitate expert-provided trajectories step-by-step,
+requiring human supervision, which is hard to scale and limits environmental
+exploration; or they let agents explore and learn in isolated environments,
+resulting in specialist agents with limited generalization. In this paper, we
+take the first step towards building generally-capable LLM-based agents with
+self-evolution ability. We identify a trinity of ingredients: 1) diverse
+environments for agent exploration and learning, 2) a trajectory set to equip
+agents with basic capabilities and prior knowledge, and 3) an effective and
+scalable evolution method. We propose AgentGym, a new framework featuring a
+variety of environments and tasks for broad, real-time, uni-format, and
+concurrent agent exploration. AgentGym also includes a database with expanded
+instructions, a benchmark suite, and high-quality trajectories across
+environments. Next, we propose a novel method, AgentEvol, to investigate the
+potential of agent self-evolution beyond previously seen data across tasks and
+environments. Experimental results show that the evolved agents can achieve
+results comparable to SOTA models. We release the AgentGym suite, including the
+platform, dataset, benchmark, checkpoints, and algorithm implementations. The
+AgentGym suite is available on https://github.com/WooooDyy/AgentGym.
+---
+paper_title: Organizing a Society of Language Models: Structures and Mechanisms for Enhanced Collective Intelligence
+
+publish_date: 2024-05-06
+
+paper_content:
+
+Recent developments in Large Language Models (LLMs) have significantly
+expanded their applications across various domains. However, the effectiveness
+of LLMs is often constrained when operating individually in complex
+environments. This paper introduces a transformative approach by organizing
+LLMs into community-based structures, aimed at enhancing their collective
+intelligence and problem-solving capabilities. We investigate different
+organizational models-hierarchical, flat, dynamic, and federated-each
+presenting unique benefits and challenges for collaborative AI systems. Within
+these structured communities, LLMs are designed to specialize in distinct
+cognitive tasks, employ advanced interaction mechanisms such as direct
+communication, voting systems, and market-based approaches, and dynamically
+adjust their governance structures to meet changing demands. The implementation
+of such communities holds substantial promise for improve problem-solving
+capabilities in AI, prompting an in-depth examination of their ethical
+considerations, management strategies, and scalability potential. This position
+paper seeks to lay the groundwork for future research, advocating a paradigm
+shift from isolated to synergistic operational frameworks in AI research and
+application.
+---
+paper_title: Balancing Autonomy and Alignment  A Multi-Dimensional Taxonomy for
+  Autonomous LLM-powered Multi-Agent Architectures
+
+publish_date: 2023-10-05
+
+paper_content:
+
+Large language models (LLMs) have revolutionized the field of artificial
+intelligence, endowing it with sophisticated language understanding and
+generation capabilities. However, when faced with more complex and
+interconnected tasks that demand a profound and iterative thought process, LLMs
+reveal their inherent limitations. Autonomous LLM-powered multi-agent systems
+represent a strategic response to these challenges. Such systems strive for
+autonomously tackling user-prompted goals by decomposing them into manageable
+tasks and orchestrating their execution and result synthesis through a
+collective of specialized intelligent agents. Equipped with LLM-powered
+reasoning capabilities, these agents harness the cognitive synergy of
+collaborating with their peers, enhanced by leveraging contextual resources
+such as tools and datasets. While these architectures hold promising potential
+in amplifying AI capabilities, striking the right balance between different
+levels of autonomy and alignment remains the crucial challenge for their
+effective operation. This paper proposes a comprehensive multi-dimensional
+taxonomy, engineered to analyze how autonomous LLM-powered multi-agent systems
+balance the dynamic interplay between autonomy and alignment across various
+aspects inherent to architectural viewpoints such as goal-driven task
+management, agent composition, multi-agent collaboration, and context
+interaction. It also includes a domain-ontology model specifying fundamental
+architectural concepts. Our taxonomy aims to empower researchers, engineers,
+and AI practitioners to systematically analyze the architectural dynamics and
+balancing strategies employed by these increasingly prevalent AI systems. The
+exploratory taxonomic classification of selected representative LLM-powered
+multi-agent systems illustrates its practical utility and reveals potential for
+future research and development.
+---
+paper_title: Challenges and Directions for Engineering Multi-agent Systems
+
+publish_date: 2012-09-07
+
+paper_content:
+
+In this talk I review where we stand regarding the engineering of multi-agent
+systems. There is both good news and bad news. The good news is that over the
+past decade we've made considerable progress on techniques for engineering
+multi-agent systems: we have good, usable methodologies, and mature tools.
+Furthermore, we've seen a wide range of demonstrated applications, and have
+even begun to quantify the advantages of agent technology. However, industry
+involvement in AAMAS appears to be declining (as measured by industry
+sponsorship of the conference), and industry affiliated attendants at AAMAS
+2012 were few (1-2%). Furthermore, looking at the applications of agents being
+reported at recent AAMAS, usage of Agent Oriented Software Engineering (AOSE)
+and of Agent Oriented Programming Languages (AOPLs) is quite limited. This
+observation is corroborated by the results of a 2008 survey by Frank and
+Virginia Dignum. Based on these observations, I make five recommendations: (1)
+Re-engage with industry; (2) Stop designing AOPLs and AOSE methodologies ...
+and instead ... (3) Move to the "macro" level: develop techniques for designing
+and implementing interaction, integrate micro (single cognitive agent) and
+macro (MAS) design and implementation; (4) Develop techniques for the Assurance
+of MAS; and (5) Re-engage with the US.
+---
+paper_title: BattleAgentBench: A Benchmark for Evaluating Cooperation and Competition Capabilities of Language Models in Multi-Agent Systems
+
+publish_date: 2024-08-28
+
+paper_content:
+
+Large Language Models (LLMs) are becoming increasingly powerful and capable
+of handling complex tasks, e.g., building single agents and multi-agent
+systems. Compared to single agents, multi-agent systems have higher
+requirements for the collaboration capabilities of language models. Many
+benchmarks are proposed to evaluate their collaborative abilities. However,
+these benchmarks lack fine-grained evaluations of LLM collaborative
+capabilities. Additionally, multi-agent collaborative and competitive scenarios
+are ignored in existing works. To address these two problems, we propose a
+benchmark, called BattleAgentBench, which defines seven sub-stages of three
+varying difficulty levels and conducts a fine-grained evaluation of language
+models in terms of single-agent scenario navigation capabilities, paired-agent
+task execution abilities, and multi-agent collaboration and competition
+capabilities. We conducted extensive evaluations on leading four closed-source
+and seven open-source models. Experimental results indicate that API-based
+models perform excellently on simple tasks but open-source small models
+struggle with simple tasks. Regarding difficult tasks that require
+collaborative and competitive abilities, although API-based models have
+demonstrated some collaborative capabilities, there is still enormous room for
+improvement.
+---
+paper_title: High Performance Simulation for Scalable Multi-Agent Reinforcement
+  Learning
+
+publish_date: 2022-07-08
+
+paper_content:
+
+Multi-agent reinforcement learning experiments and open-source training
+environments are typically limited in scale, supporting tens or sometimes up to
+hundreds of interacting agents. In this paper we demonstrate the use of Vogue,
+a high performance agent based model (ABM) framework. Vogue serves as a
+multi-agent training environment, supporting thousands to tens of thousands of
+interacting agents while maintaining high training throughput by running both
+the environment and reinforcement learning (RL) agents on the GPU. High
+performance multi-agent environments at this scale have the potential to enable
+the learning of robust and flexible policies for use in ABMs and simulations of
+complex systems. We demonstrate training performance with two newly developed,
+large scale multi-agent training environments. Moreover, we show that these
+environments can train shared RL policies on time-scales of minutes and hours.
+---
+paper_title: Eco-evolutionary Dynamics of Non-episodic Neuroevolution in Large
+  Multi-agent Environments
+
+publish_date: 2023-02-18
+
+paper_content:
+
+Neuroevolution (NE) has recently proven a competitive alternative to learning
+by gradient descent in reinforcement learning tasks. However, the majority of
+NE methods and associated simulation environments differ crucially from
+biological evolution: the environment is reset to initial conditions at the end
+of each generation, whereas natural environments are continuously modified by
+their inhabitants; agents reproduce based on their ability to maximize rewards
+within a population, while biological organisms reproduce and die based on
+internal physiological variables that depend on their resource consumption;
+simulation environments are primarily single-agent while the biological world
+is inherently multi-agent and evolves alongside the population. In this work we
+present a method for continuously evolving adaptive agents without any
+environment or population reset. The environment is a large grid world with
+complex spatiotemporal resource generation, containing many agents that are
+each controlled by an evolvable recurrent neural network and locally reproduce
+based on their internal physiology. The entire system is implemented in JAX,
+allowing very fast simulation on a GPU. We show that NE can operate in an
+ecologically-valid non-episodic multi-agent setting, finding sustainable
+collective foraging strategies in the presence of a complex interplay between
+ecological and evolutionary dynamics.
+---
+paper_title: Why Solving Multi-agent Path Finding with Large Language Model has not
+  Succeeded Yet
+
+publish_date: 2024-01-08
+
+paper_content:
+
+With the explosive influence caused by the success of large language models
+(LLM) like ChatGPT and GPT-4, there has been an extensive amount of recent work
+showing that foundation models can be used to solve a large variety of tasks.
+However, there is very limited work that shares insights on multi-agent
+planning. Multi-agent planning is different from other domains by combining the
+difficulty of multi-agent coordination and planning, and making it hard to
+leverage external tools to facilitate the reasoning needed. In this paper, we
+focus on the problem of multi-agent path finding (MAPF), which is also known as
+multi-robot route planning, and study the performance of solving MAPF with
+LLMs. We first show the motivating success on an empty room map without
+obstacles, then the failure to plan on the harder room map and maze map of the
+standard MAPF benchmark. We present our position on why directly solving MAPF
+with LLMs has not been successful yet, and we use various experiments to
+support our hypothesis. Based on our results, we discussed how researchers with
+different backgrounds could help with this problem from different perspectives.
+---
+paper_title: MAgIC  Investigation of Large Language Model Powered Multi-Agent in
+  Cognition, Adaptability, Rationality and Collaboration
+
+publish_date: 2023-11-14
+
+paper_content:
+
+Large Language Models (LLMs) have marked a significant advancement in the
+field of natural language processing, demonstrating exceptional capabilities in
+reasoning, tool usage, and memory. As their applications extend into
+multi-agent environments, a need has arisen for a comprehensive evaluation
+framework that captures their abilities in reasoning, planning, collaboration,
+and more. This work introduces a novel benchmarking framework specifically
+tailored to assess LLMs within multi-agent settings, providing quantitative
+metrics to evaluate their judgment, reasoning, deception, self-awareness,
+cooperation, coordination, and rationality. We utilize games such as Chameleon
+and Undercover, alongside game theory scenarios like Cost Sharing, Multi-player
+Prisoner's Dilemma, and Public Good, to create diverse testing environments.
+Our framework is fortified with the Probabilistic Graphical Modeling (PGM)
+method, enhancing the LLMs' capabilities in navigating complex social and
+cognitive dimensions. The benchmark evaluates seven multi-agent systems powered
+by different LLMs, quantitatively highlighting a significant capability gap
+over threefold between the strongest, GPT-4, and the weakest, Llama-2-70B. It
+also confirms that our PGM enhancement boosts the inherent abilities of all
+selected models by 50% on average. Our codes are released here
+https://github.com/cathyxl/MAgIC.
+---
+paper_title: Benchmark Self-Evolving  A Multi-Agent Framework for Dynamic LLM
+  Evaluation
+
+publish_date: 2024-02-18
+
+paper_content:
+
+This paper presents a benchmark self-evolving framework to dynamically
+evaluate rapidly advancing Large Language Models (LLMs), aiming for a more
+accurate assessment of their capabilities and limitations. We utilize a
+multi-agent system to manipulate the context or question of original instances,
+reframing new evolving instances with high confidence that dynamically extend
+existing benchmarks. Towards a more scalable, robust and fine-grained
+evaluation, we implement six reframing operations to construct evolving
+instances testing LLMs against diverse queries, data noise and probing their
+problem-solving sub-abilities. With this framework, we extend benchmark
+datasets of four tasks. Experimental results show a general performance decline
+in most LLMs against their original results. This decline under our scalable
+and robust evaluations, alongside our fine-grained evaluation, more accurately
+reflect models' capabilities. Besides, our framework widens performance
+discrepancies both between different models and within the same model across
+various tasks, facilitating more informed model selection for specific tasks
+(Code and data are available at
+https://github.com/NanshineLoong/Self-Evolving-Benchmark).
+---
+paper_title: LLM Multi-Agent Systems  Challenges and Open Problems
+
+publish_date: 2024-02-05
+
+paper_content:
+
+This paper explores existing works of multi-agent systems and identifies
+challenges that remain inadequately addressed. By leveraging the diverse
+capabilities and roles of individual agents within a multi-agent system, these
+systems can tackle complex tasks through collaboration. We discuss optimizing
+task allocation, fostering robust reasoning through iterative debates, managing
+complex and layered context information, and enhancing memory management to
+support the intricate interactions within multi-agent systems. We also explore
+the potential application of multi-agent systems in blockchain systems to shed
+light on their future development and application in real-world distributed
+systems.
+---
+paper_title: A Multiagent Framework for the Asynchronous and Collaborative Extension
+  of Multitask ML Systems
+
+publish_date: 2022-09-29
+
+paper_content:
+
+The traditional ML development methodology does not enable a large number of
+contributors, each with distinct objectives, to work collectively on the
+creation and extension of a shared intelligent system. Enabling such a
+collaborative methodology can accelerate the rate of innovation, increase ML
+technologies accessibility and enable the emergence of novel capabilities. We
+believe that this novel methodology for ML development can be demonstrated
+through a modularized representation of ML models and the definition of novel
+abstractions allowing to implement and execute diverse methods for the
+asynchronous use and extension of modular intelligent systems. We present a
+multiagent framework for the collaborative and asynchronous extension of
+dynamic large-scale multitask systems.
+---
+paper_title: Instigating Cooperation among LLM Agents Using Adaptive Information Modulation
+
+publish_date: 2024-09-19
+
+paper_content:
+
+This paper introduces a novel framework combining LLM agents as proxies for
+human strategic behavior with reinforcement learning (RL) to engage these
+agents in evolving strategic interactions within team environments. Our
+approach extends traditional agent-based simulations by using strategic LLM
+agents (SLA) and introducing dynamic and adaptive governance through a
+pro-social promoting RL agent (PPA) that modulates information access across
+agents in a network, optimizing social welfare and promoting pro-social
+behavior. Through validation in iterative games, including the prisoner
+dilemma, we demonstrate that SLA agents exhibit nuanced strategic adaptations.
+The PPA agent effectively learns to adjust information transparency, resulting
+in enhanced cooperation rates. This framework offers significant insights into
+AI-mediated social dynamics, contributing to the deployment of AI in real-world
+team settings.
+---
+paper_title: Large Model Agents: State-of-the-Art, Cooperation Paradigms, Security and Privacy, and Future Trends
+
+publish_date: 2024-09-22
+
+paper_content:
+
+Large Model (LM) agents, powered by large foundation models such as GPT-4 and
+DALL-E 2, represent a significant step towards achieving Artificial General
+Intelligence (AGI). LM agents exhibit key characteristics of autonomy,
+embodiment, and connectivity, allowing them to operate across physical,
+virtual, and mixed-reality environments while interacting seamlessly with
+humans, other agents, and their surroundings. This paper provides a
+comprehensive survey of the state-of-the-art in LM agents, focusing on the
+architecture, cooperation paradigms, security, privacy, and future prospects.
+Specifically, we first explore the foundational principles of LM agents,
+including general architecture, key components, enabling technologies, and
+modern applications. Then, we discuss practical collaboration paradigms from
+data, computation, and knowledge perspectives towards connected intelligence of
+LM agents. Furthermore, we systematically analyze the security vulnerabilities
+and privacy breaches associated with LM agents, particularly in multi-agent
+settings. We also explore their underlying mechanisms and review existing and
+potential countermeasures. Finally, we outline future research directions for
+building robust and secure LM agent ecosystems.
+---
+paper_title: Enhancing Trust in LLM-Based AI Automation Agents  New Considerations
+  and Future Challenges
+
+publish_date: 2023-08-10
+
+paper_content:
+
+Trust in AI agents has been extensively studied in the literature, resulting
+in significant advancements in our understanding of this field. However, the
+rapid advancements in Large Language Models (LLMs) and the emergence of
+LLM-based AI agent frameworks pose new challenges and opportunities for further
+research. In the field of process automation, a new generation of AI-based
+agents has emerged, enabling the execution of complex tasks. At the same time,
+the process of building automation has become more accessible to business users
+via user-friendly no-code tools and training mechanisms. This paper explores
+these new challenges and opportunities, analyzes the main aspects of trust in
+AI agents discussed in existing literature, and identifies specific
+considerations and challenges relevant to this new generation of automation
+agents. We also evaluate how nascent products in this category address these
+considerations. Finally, we highlight several challenges that the research
+community should address in this evolving landscape.
+---
+paper_title: Extended Markov Games to Learn Multiple Tasks in Multi-Agent
+  Reinforcement Learning
+
+publish_date: 2020-02-14
+
+paper_content:
+
+The combination of Formal Methods with Reinforcement Learning (RL) has
+recently attracted interest as a way for single-agent RL to learn multiple-task
+specifications. In this paper we extend this convergence to multi-agent
+settings and formally define Extended Markov Games as a general mathematical
+model that allows multiple RL agents to concurrently learn various
+non-Markovian specifications. To introduce this new model we provide formal
+definitions and proofs as well as empirical tests of RL algorithms running on
+this framework. Specifically, we use our model to train two different
+logic-based multi-agent RL algorithms to solve diverse settings of
+non-Markovian co-safe LTL specifications.
+---
+paper_title: Shall We Talk  Exploring Spontaneous Collaborations of Competing LLM
+  Agents
+
+publish_date: 2024-02-19
+
+paper_content:
+
+Recent advancements have shown that agents powered by large language models
+(LLMs) possess capabilities to simulate human behaviors and societal dynamics.
+However, the potential for LLM agents to spontaneously establish collaborative
+relationships in the absence of explicit instructions has not been studied. To
+address this gap, we conduct three case studies, revealing that LLM agents are
+capable of spontaneously forming collaborations even within competitive
+settings. This finding not only demonstrates the capacity of LLM agents to
+mimic competition and cooperation in human societies but also validates a
+promising vision of computational social science. Specifically, it suggests
+that LLM agents could be utilized to model human social interactions, including
+those with spontaneous collaborations, thus offering insights into social
+phenomena. The source codes for this study are available at
+https://github.com/wuzengqing001225/SABM_ShallWeTalk .
+---
+paper_title: On the limits of agency in agent-based models
+
+publish_date: 2024-09-14
+
+paper_content:
+
+Agent-based modeling (ABM) seeks to understand the behavior of complex
+systems by simulating a collection of agents that act and interact within an
+environment. Their practical utility requires capturing realistic environment
+dynamics and adaptive agent behavior while efficiently simulating million-size
+populations. Recent advancements in large language models (LLMs) present an
+opportunity to enhance ABMs by using LLMs as agents with further potential to
+capture adaptive behavior. However, the computational infeasibility of using
+LLMs for large populations has hindered their widespread adoption. In this
+paper, we introduce AgentTorch -- a framework that scales ABMs to millions of
+agents while capturing high-resolution agent behavior using LLMs. We benchmark
+the utility of LLMs as ABM agents, exploring the trade-off between simulation
+scale and individual agency. Using the COVID-19 pandemic as a case study, we
+demonstrate how AgentTorch can simulate 8.4 million agents representing New
+York City, capturing the impact of isolation and employment behavior on health
+and economic outcomes. We compare the performance of different agent
+architectures based on heuristic and LLM agents in predicting disease waves and
+unemployment rates. Furthermore, we showcase AgentTorch's capabilities for
+retrospective, counterfactual, and prospective analyses, highlighting how
+adaptive agent behavior can help overcome the limitations of historical data in
+policy design. AgentTorch is an open-source project actively being used for
+policy-making and scientific discovery around the world. The framework is
+available here: github.com/AgentTorch/AgentTorch.
+---
+paper_title: EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms
+
+publish_date: 2024-07-11
+
+paper_content:
+
+The rise of powerful large language models (LLMs) has spurred a new trend in
+building LLM-based autonomous agents for solving complex tasks, especially
+multi-agent systems. Despite the remarkable progress, we notice that existing
+works are heavily dependent on human-designed frameworks, which greatly limits
+the functional scope and scalability of agent systems. How to automatically
+extend the specialized agent to multi-agent systems to improve task-solving
+capability still remains a significant challenge. In this paper, we introduce
+EvoAgent, a generic method to automatically extend expert agents to multi-agent
+systems via the evolutionary algorithm, thereby improving the effectiveness of
+LLM-based agents in solving tasks. Specifically, we consider the existing agent
+frameworks as the initial individual and then apply a series of evolutionary
+operators (e.g., mutation, crossover, selection, etc.) to generate multiple
+agents with diverse agent settings. EvoAgent can be generalized to any
+LLM-based agent framework, and can automatically extend the existing agent
+framework to multi-agent systems without any extra human designs. Experimental
+results across various tasks have shown that EvoAgent can automatically
+generate multiple expert agents and significantly enhance the task-solving
+capabilities of LLM-based agents.
+---
+paper_title: MMAU: A Holistic Benchmark of Agent Capabilities Across Diverse Domains
+
+publish_date: 2024-08-15
+
+paper_content:
+
+Recent advances in large language models (LLMs) have increased the demand for
+comprehensive benchmarks to evaluate their capabilities as human-like agents.
+Existing benchmarks, while useful, often focus on specific application
+scenarios, emphasizing task completion but failing to dissect the underlying
+skills that drive these outcomes. This lack of granularity makes it difficult
+to deeply discern where failures stem from. Additionally, setting up these
+environments requires considerable effort, and issues of unreliability and
+reproducibility sometimes arise, especially in interactive tasks. To address
+these limitations, we introduce the Massive Multitask Agent Understanding
+(MMAU) benchmark, featuring comprehensive offline tasks that eliminate the need
+for complex environment setups. It evaluates models across five domains,
+including Tool-use, Directed Acyclic Graph (DAG) QA, Data Science and Machine
+Learning coding, Contest-level programming and Mathematics, and covers five
+essential capabilities: Understanding, Reasoning, Planning, Problem-solving,
+and Self-correction. With a total of 20 meticulously designed tasks
+encompassing over 3K distinct prompts, MMAU provides a comprehensive framework
+for evaluating the strengths and limitations of LLM agents. By testing 18
+representative models on MMAU, we provide deep and insightful analyses.
+Ultimately, MMAU not only sheds light on the capabilities and limitations of
+LLM agents but also enhances the interpretability of their performance.
+Datasets and evaluation scripts of MMAU are released at
+https://github.com/apple/axlearn/tree/main/docs/research/mmau.
+---
+paper_title: Measurements of collective machine intelligence
+
+publish_date: 2013-06-27
+
+paper_content:
+
+Independent from the still ongoing research in measuring individual
+intelligence, we anticipate and provide a framework for measuring collective
+intelligence. Collective intelligence refers to the idea that several
+individuals can collaborate in order to achieve high levels of intelligence. We
+present thus some ideas on how the intelligence of a group can be measured and
+simulate such tests. We will however focus here on groups of artificial
+intelligence agents (i.e., machines). We will explore how a group of agents is
+able to choose the appropriate problem and to specialize for a variety of
+tasks. This is a feature which is an important contributor to the increase of
+intelligence in a group (apart from the addition of more agents and the
+improvement due to common decision making). Our results reveal some interesting
+results about how (collective) intelligence can be modeled, about how
+collective intelligence tests can be designed and about the underlying dynamics
+of collective intelligence. As it will be useful for our simulations, we
+provide also some improvements of the threshold allocation model originally
+used in the area of swarm intelligence but further generalized here.
+---
+paper_title: Self-Adaptive Large Language Model (LLM)-Based Multiagent Systems
+
+publish_date: 2023-07-12
+
+paper_content:
+
+In autonomic computing, self-adaptation has been proposed as a fundamental
+paradigm to manage the complexity of multiagent systems (MASs). This achieved
+by extending a system with support to monitor and adapt itself to achieve
+specific concerns of interest. Communication in these systems is key given that
+in scenarios involving agent interaction, it enhances cooperation and reduces
+coordination challenges by enabling direct, clear information exchange.
+However, improving the expressiveness of the interaction communication with
+MASs is not without challenges. In this sense, the interplay between
+self-adaptive systems and effective communication is crucial for future MAS
+advancements. In this paper, we propose the integration of large language
+models (LLMs) such as GPT-based technologies into multiagent systems. We anchor
+our methodology on the MAPE-K model, which is renowned for its robust support
+in monitoring, analyzing, planning, and executing system adaptations in
+response to dynamic environments. We also present a practical illustration of
+the proposed approach, in which we implement and assess a basic MAS-based
+application. The approach significantly advances the state-of-the-art of
+self-adaptive systems by proposing a new paradigm for MAS self-adaptation of
+autonomous systems based on LLM capabilities.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to LLM-based Multi-Agent.
+   ---
+   ---
+paper_title: Large Language Model-Based Agents for Software Engineering: A Survey
+
+publish_date: 2024-09-04
+
+paper_abstract:
+
+The recent advance in Large Language Models (LLMs) has shaped a new paradigm
+of AI agents, i.e., LLM-based agents. Compared to standalone LLMs, LLM-based
+agents substantially extend the versatility and expertise of LLMs by enhancing
+LLMs with the capabilities of perceiving and utilizing external resources and
+tools. To date, LLM-based agents have been applied and shown remarkable
+effectiveness in Software Engineering (SE). The synergy between multiple agents
+and human interaction brings further promise in tackling complex real-world SE
+problems. In this work, we present a comprehensive and systematic survey on
+LLM-based agents for SE. We collect 106 papers and categorize them from two
+perspectives, i.e., the SE and agent perspectives. In addition, we discuss open
+challenges and future directions in this critical domain. The repository of
+this survey is at https://github.com/FudanSELab/Agent4SE-Paper-List.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 BACKGROUND AND PRELIMINARY  
+2.1 Basic Framework of LLM-based Agents  
+2.2 Advanced LLM-based Agent Systems  
+2.3 Related Surveys  
+
+3 SURVEY METHODOLOGY  
+3.1 Survey Scope  
+3.2 Paper Collection  
+3.3 Statistics of Collected Papers  
+
+4 ANALYSIS FROM SEPER PERSPECTIVES  
+4.1 Requirements Engineering  
+4.2 Code Generation  
+4.3 Static Code Checking  
+4.4 Testing  
+4.5 Debugging  
+4.6 End-to-end Software Development  
+4.7 End-to-end Software Maintenance  
+
+5 ANALYSIS FROM AGENT PERSPECTIVE  
+5.1 Agent Framework  
+5.2 Multi-agent System  
+5.3 Human-Agent Collaboration  
+
+6 RESEARCH OPPORTUNITIES  
+
+7 CONCLUSION
+---
+paper_title: From LLMs to LLM-based Agents for Software Engineering: A Survey of Current, Challenges and Future
+
+publish_date: 2024-08-05
+
+paper_abstract:
+
+With the rise of large language models (LLMs), researchers are increasingly
+exploring their applications in var ious vertical domains, such as software
+engineering. LLMs have achieved remarkable success in areas including code
+generation and vulnerability detection. However, they also exhibit numerous
+limitations and shortcomings. LLM-based agents, a novel tech nology with the
+potential for Artificial General Intelligence (AGI), combine LLMs as the core
+for decision-making and action-taking, addressing some of the inherent
+limitations of LLMs such as lack of autonomy and self-improvement. Despite
+numerous studies and surveys exploring the possibility of using LLMs in
+software engineering, it lacks a clear distinction between LLMs and LLM based
+agents. It is still in its early stage for a unified standard and benchmarking
+to qualify an LLM solution as an LLM-based agent in its domain. In this survey,
+we broadly investigate the current practice and solutions for LLMs and
+LLM-based agents for software engineering. In particular we summarise six key
+topics: requirement engineering, code generation, autonomous decision-making,
+software design, test generation, and software maintenance. We review and
+differentiate the work of LLMs and LLM-based agents from these six topics,
+examining their differences and similarities in tasks, benchmarks, and
+evaluation metrics. Finally, we discuss the models and benchmarks used,
+providing a comprehensive analysis of their applications and effectiveness in
+software engineering. We anticipate this work will shed some lights on pushing
+the boundaries of LLM-based agents in software engineering for future research.
+
+paper_outline:
+
+I. INTRODUCTION
+II. EXISTING WORKS AND THE SURVEY STRUCTURE
+A. Existing Works
+B. Methodology
+C. Overall Structure of the Work
+III. PRELIMINARIES
+A. Large Language Model
+B. Model Architecture
+C. Large Language Model Based Agent
+D. Single and Multi-Agents
+E. LLM in Software Engineering
+IV. REQUIREMENT ENGINEERING AND DOCUMENTATION
+A. LLMs Tasks
+B. LLM-based Agents Tasks
+C. Analysis
+D. Benchmarks
+E. Evaluation Metrics
+V. CODE GENERATION AND SOFTWARE DEVELOPMENT
+A. LLMs Tasks
+B. LLM-based Agents Tasks
+C. Analysis
+D. Benchmarks
+E. Evaluation Metrics
+VI. AUTONOMOUS LEARNING AND DECISION MAKING
+A. LLMs Tasks
+B. LLM-based Agents Tasks
+C. Analysis
+D. Benchmarks
+E. Evaluation Metrics
+VII. SOFTWARE DESIGN AND EVALUATION
+A. LLMs Tasks
+B. LLM-based Agents Tasks
+C. Analysis
+D. Benchmarks
+E. Evaluation Metrics
+VIII. SOFTWARE TEST GENERATION
+A. LLMs Tasks
+B. LLM-based Agents Tasks
+D. Benchmarks
+E. Evaluation Metrics
+IX. SOFTWARE SECURITY AND MAINTENANCE
+A. LLMs Tasks
+B. LLM-based Agents Task
+C. Analysis
+D. Benchmarks
+E. Evaluation Metrics
+X. DISCUSSION
+A. Experiment Models
+B. Topics Overlapping
+C. Benchmarks and Metrics
+XI. CONCLUSION
+---
+paper_title: A Survey on LLM-Based Agents: Common Workflows and Reusable LLM-Profiled Components
+
+publish_date: 2024-06-16
+
+paper_abstract:
+
+Recent advancements in Large Language Models (LLMs) have catalyzed the
+development of sophisticated frameworks for developing LLM-based agents.
+However, the complexity of these frameworks r poses a hurdle for nuanced
+differentiation at a granular level, a critical aspect for enabling efficient
+implementations across different frameworks and fostering future research.
+Hence, the primary purpose of this survey is to facilitate a cohesive
+understanding of diverse recently proposed frameworks by identifying common
+workflows and reusable LLM-Profiled Components (LMPCs).
+
+paper_outline:
+
+1 Introduction  
+2 Task Environments And Tool Environments  
+2.1 Typical Task Environments  
+2.3 Tool Environments  
+3 LLM-Profiled Components  
+4 Workflows of LLM-Based Agents  
+4.1 Policy-Only Workflows  
+4.2 Search Workflows  
+4.3 Feedback-Learning Workflows  
+5 Implementations of LMPCs  
+5.1 Universal Implementations  
+5.2 Workflow-Specific Implementations  
+5.3 Task-Specific Implementations  
+6 Future Work  
+7 Conclusion
+---
+paper_title: A Survey of Useful LLM Evaluation
+
+publish_date: 2024-06-03
+
+paper_abstract:
+
+LLMs have gotten attention across various research domains due to their
+exceptional performance on a wide range of complex tasks. Therefore, refined
+methods to evaluate the capabilities of LLMs are needed to determine the tasks
+and responsibility they should undertake. Our study mainly discussed how LLMs,
+as useful tools, should be effectively assessed. We proposed the two-stage
+framework: from ``core ability'' to ``agent'', clearly explaining how LLMs can
+be applied based on their specific capabilities, along with the evaluation
+methods in each stage. Core ability refers to the capabilities that LLMs need
+in order to generate high-quality natural language texts. After confirming LLMs
+possess core ability, they can solve real-world and complex tasks as agent. In
+the "core ability" stage, we discussed the reasoning ability, societal impact,
+and domain knowledge of LLMs. In the ``agent'' stage, we demonstrated embodied
+action, planning, and tool learning of LLMs agent applications. Finally, we
+examined the challenges currently confronting the evaluation methods for LLMs,
+as well as the directions for future development.
+
+paper_outline:
+
+1 Introduction  
+1.1 Artificial Intelligence and Large Language Model  
+1.2 Why Evaluating LLMs is Important  
+1.3 The Roadmap of Useful LLMs  
+1.4 Study Overview  
+2 Core Ability Evaluation  
+2.1 Reasoning  
+2.2 Societal Impact  
+2.3 Domain Knowledge  
+3 Agent Evaluation  
+3.1 Planning  
+3.2 Application Scenarios  
+3.3 Benchmark  
+4 Future Directions  
+4.1 Dynamic Evaluation  
+4.2 LLMs as Evaluators  
+4.3 Root Cause Analysis  
+4.4 Fine-grained LLM Agent Evaluation  
+4.5 Robot Benchmark Development  
+5 Conclusion
+---
+paper_title: A Survey on the Memory Mechanism of Large Language Model based Agents
+
+publish_date: 2024-04-21
+
+paper_abstract:
+
+Large language model (LLM) based agents have recently attracted much
+attention from the research and industry communities. Compared with original
+LLMs, LLM-based agents are featured in their self-evolving capability, which is
+the basis for solving real-world problems that need long-term and complex
+agent-environment interactions. The key component to support agent-environment
+interactions is the memory of the agents. While previous studies have proposed
+many promising memory mechanisms, they are scattered in different papers, and
+there lacks a systematical review to summarize and compare these works from a
+holistic perspective, failing to abstract common and effective designing
+patterns for inspiring future studies. To bridge this gap, in this paper, we
+propose a comprehensive survey on the memory mechanism of LLM-based agents. In
+specific, we first discuss ''what is'' and ''why do we need'' the memory in
+LLM-based agents. Then, we systematically review previous studies on how to
+design and evaluate the memory module. In addition, we also present many agent
+applications, where the memory module plays an important role. At last, we
+analyze the limitations of existing work and show important future directions.
+To keep up with the latest advances in this field, we create a repository at
+\url{https://github.com/nuster1128/LLM_Agent_Memory_Survey}.
+
+paper_outline:
+
+1 Introduction
+
+2 Related Surveys
+2.1 Surveys on Large Language Models
+2.2 Surveys on Large Language Model-based Agents
+
+3 What is the Memory of LLM-based Agent
+3.1 Basic Knowledge
+3.2 Narrow Definition of the Agent Memory
+3.3 Broad Definition of the Agent Memory
+3.4 Memory-assisted Agent-Environment Interaction
+
+4 Why We Need the Memory in LLM-based Agent
+4.1 Perspective of Cognitive Psychology
+4.2 Perspective of Self-Evolution
+4.3 Perspective of Agent Applications
+
+5 How to Implement the Memory of LLM-based Agent
+5.1 Memory Sources
+5.2 Memory Forms
+5.3 Memory Operations
+
+6 How to Evaluate the Memory in LLM-based Agent
+6.1 Direct Evaluation
+6.2 Indirect Evaluation
+6.3 Discussions
+
+7 Memory-enhanced Agent Applications
+7.1 Role-playing and Social Simulation
+7.2 Personal Assistant
+7.3 Open-world Game
+7.4 Code Generation
+7.5 Recommendation
+7.6 Expert System in Specific Domains
+7.7 Other Applications
+
+8 Limitations & Future Directions
+8.1 More Advances in Parametric Memory
+8.2 Memory in LLM-based Multi-agent Applications
+8.3 Memory-based Lifelong Learning
+8.4 Memory in Humanoid Agent
+
+9 Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **LLM-based Multi-Agent**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Challenges, Limitations, and Open Research Frontiers**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **LLM-based Multi-Agent** and **Challenges, Limitations, and Open Research Frontiers**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Challenges, Limitations, and Open Research Frontiers** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Challenges, Limitations, and Open Research Frontiers**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Challenges, Limitations, and Open Research Frontiers**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

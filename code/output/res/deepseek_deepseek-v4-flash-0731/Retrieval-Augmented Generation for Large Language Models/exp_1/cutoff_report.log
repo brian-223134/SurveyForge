@@ -1,0 +1,5 @@
+[cutoff/db] 589123 papers, newest id 2409.17146v1 (2024-09), dates 2012-01-01..2024-09-25
+[cutoff/cfg] --paper_id_cutoff=2412 --paper_date_oldest=2012-01-01 --paper_date_newest=2024-09-26
+[cutoff/outline] arXiv id prefix <= 2412: 589123/589123 papers retrievable, 0 excluded
+[cutoff/writer] arXiv id prefix <= 2412: 589123/589123 papers retrievable, 0 excluded
+[cutoff/rerank] total: 0/7341 retrieved documents discarded by the citation window [2012-01-01, 2024-09-26]
