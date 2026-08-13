@@ -11,8 +11,49 @@ load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, 
 from src.agents.outline_writer import outlineWriter
 from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
-from src.rag import GeneralRAG_langchain
 from src.utils import arxiv_month, cutoff_log, find_index
+
+# --- survey-search arm -------------------------------------------------------
+# `from src.rag import GeneralRAG_langchain` 를 대체합니다. 검색만 갈아끼우고
+# 생성 로직·프롬프트·평가는 그대로 둡니다. 원본으로 되돌리려면 위 한 줄을 복구하세요.
+#
+# 259 행(초록 인덱스)과 270 행(제목 인덱스)은 성격이 다르므로 config 를 가릅니다 —
+# 인용 검증 쿼리는 논문 제목이라 facet 분해가 의미 없고, 켜면 인용 1건마다 LLM 40초가
+# 붙습니다. 근거는 ../SURVEY-SEARCH.md §6.
+from functools import partial
+
+from survey_search.adapters.surveyforge import SurveySearchRAG
+from survey_search.backends.faiss_duckdb import FaissDuckDBBackend
+from survey_search.core.facets import load_dotenv as _load_survey_search_env
+from survey_search.types import SearchConfig
+
+_load_survey_search_env("/data2/chanjoong/survey-agent/survey-search/.env")  # facet 용 OpenRouter 키
+
+_BACKEND = None
+
+
+def _backend():
+    """FAISS 인덱스를 **한 번만** 올립니다 (로드 16초 + 메모리). 두 인스턴스가 공유합니다."""
+    global _BACKEND
+    if _BACKEND is None:
+        _BACKEND = FaissDuckDBBackend()
+    return _BACKEND
+
+
+def GeneralRAG_langchain(*args, **kwargs):
+    """main.py:259 — 토픽 수준 쿼리. facet 이 +18%p 를 내는 곳."""
+    return SurveySearchRAG(*args, backend=_backend(),
+                           config=SearchConfig(facets=True, freshness=True, lexical=False),
+                           **kwargs)
+
+
+def GeneralRAG_langchain_citation(*args, **kwargs):
+    """main.py:270 — 쿼리가 논문 제목. facet 은 무의미하고 제목 인덱스가 맞습니다."""
+    return SurveySearchRAG(*args, backend=_backend(),
+                           config=SearchConfig(facets=False, lexical=False,
+                                               dense_field="title"),
+                           **kwargs)
+# --- /survey-search arm ------------------------------------------------------
 from tqdm import tqdm
 import time
 import re
@@ -267,7 +308,7 @@ def main(args):
         
     rag_abstract4subsection = rag_abstract4outline
 
-    rag_title4citation = GeneralRAG_langchain(args=args,
+    rag_title4citation = GeneralRAG_langchain_citation(args=args,
                                               retriever_type='vectorstore',
                                               index_db_path=title_index_db_path,
                                               doc_db_path=doc_db_path,

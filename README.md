@@ -130,6 +130,53 @@ SurveyForge/
 그중 셋은 **예외를 내지 않고 조용히 틀리는** 종류입니다 — 시간창 밖 문서 폐기,
 `get_time_windows` 경계 off-by-one, 아웃라인 코퍼스 미커버.
 
+### survey-search arm — 브랜치 `survey-search-arm` 에서만
+
+검색 레이어를 [`../survey-search`](../SURVEY-SEARCH.md) 로 바꿔 끼운 실험 arm 입니다.
+**`main` 에는 없습니다.** 생성 로직·프롬프트·평가는 그대로 두고 검색만 갈아끼웁니다.
+
+| 파일 | 내용 |
+|---|---|
+| `code/main.py:14` | `from src.rag import GeneralRAG_langchain` → survey-search 어댑터 배선 블록 |
+| `code/main.py:311` | `rag_title4citation` 만 `GeneralRAG_langchain_citation` 으로 |
+| `scripts/run_survey_search_arm.sh` | 이 arm 의 실행 스크립트 (신규) |
+
+인스턴스별로 config 가 다릅니다 — 300행(초록 인덱스)은 `facets=True, freshness=True,
+lexical=False`, 311행(제목 인덱스)은 `facets=False, lexical=False, dense_field="title"`.
+인용 검증 쿼리는 논문 제목이라 facet 분해가 의미 없고, 켜면 인용 1건마다 LLM 40초가 붙습니다.
+
+#### 원래 방식으로 되돌리기
+
+```bash
+# 1. 코드 — 브랜치를 벗어나면 끝입니다 (main.py 는 커밋돼 있습니다)
+git checkout main
+
+# 2. 파이썬 환경 — 이게 브랜치를 안 따라갑니다. 아래를 지워야 완전히 원복입니다
+.venv/bin/pip uninstall -y survey-search
+#    duckdb·einops·pyarrow 는 survey-search 가 끌고 온 것이지만 순수 추가라
+#    남겨도 무해합니다. 원본 조건을 엄밀히 맞출 때만 지우세요:
+# .venv/bin/pip uninstall -y duckdb einops pyarrow
+```
+
+**설치는 `git` 밖에 있습니다.** `pip install -e ../survey-search` 는 venv 를 고치므로
+`git checkout main` 만으로는 안 없어집니다. 다만 `main` 의 `code/main.py` 는
+`survey_search` 를 import 하지 않으므로 **설치가 남아 있어도 원본 실행에는 영향이 없습니다.**
+
+> ⚠ **생성이 도는 중에는 브랜치를 바꾸지 마세요.** 실행 중인 `main.py` 는 이미 메모리에
+> 올라와 있지만 지연 import 가 남아 있고, 실행 스크립트를 bash 가 아직 읽고 있습니다.
+> `pgrep -af '^[^ ]*python main\.py'` 가 비었는지 먼저 확인하세요.
+
+되돌린 뒤 확인:
+
+```bash
+git diff main --stat                       # 비어야 합니다
+grep -n "survey_search" code/main.py       # 아무것도 안 나와야 합니다
+```
+
+출력물은 손댈 필요가 없습니다. 이 arm 은
+`code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/` 아래에만 쓰고,
+기존 구 DB·신 DB 결과는 건드리지 않습니다.
+
 ### 범위 밖
 
 - **SurveyBench 정량 평가 전체 미실시** — 10토픽 중 3토픽만 씁니다. Outline·Content 품질(SAM-O/SAM-C)은 LLM judge라 별도 비용이 듭니다.
