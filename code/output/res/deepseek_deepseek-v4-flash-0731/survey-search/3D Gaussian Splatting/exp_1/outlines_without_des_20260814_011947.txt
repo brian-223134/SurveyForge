@@ -1,0 +1,42 @@
+# 3D Gaussian Splatting: Foundations, Advances, and Future Directions — A Comprehensive Survey
+## 1 Introduction
+## 2 Optimization, Densification, and Geometric Fidelity
+### 2.1 Adaptive Density Control and Primitive Management
+### 2.2 Optimization Strategies and Loss Function Design
+### 2.3 Handling Sparse-View and Few-Shot Scenarios
+### 2.4 Geometric Fidelity and Surface Extraction
+### 2.5 Training Dynamics and Compactness
+## 3 Efficient Rendering, Compression, and Scalability
+### 3.1 Algorithmic Rendering Acceleration and Level-of-Detail Management
+### 3.2 Model Compression, Quantization, and Storage Optimization
+### 3.3 Hardware-Accelerated Rasterization and Software-Hardware Co-Design
+### 3.4 Distributed Training, Large-Scale Rendering, and Memory Management
+## 4 Generalization, Sparse-View Reconstruction, and Generation
+### 4.1 Generalizable and Feed-Forward Gaussian Prediction
+### 4.2 Sparse-View and Uncalibrated Reconstruction
+### 4.3 Single-View Reconstruction and Generative Completion
+### 4.4 Test-Time Optimization and Hybrid Prediction-Refinement
+### 4.5 Leveraging Foundation Models and Semantic-Aware Generalization
+## 5 Dynamics, Deformation, and Temporal Representations
+### 5.1 Deformation Architectures and Canonical Space Modeling
+### 5.2 Direct Spatio-Temporal Primitive Representations
+### 5.3 Motion Correspondence, Tracking, and Velocity-Aware Dynamics
+### 5.4 Dynamic Scene Generation, Editing, and Streaming
+## 6 Scene Understanding, Semantics, and Interaction
+### 6.1 Language-Embedded Semantics and Open-Vocabulary Querying  
+### 6.2 Scene Editing, Manipulation, and Inpainting  
+### 6.3 Scene Understanding for Embodied and Interactive Agents  
+### 6.4 Generative Content Creation and Physical Simulation
+## 7 Rendering Appearance, Inverse Rendering, and Photorealism**
+### 7.1 Physically-Based Appearance Decomposition and Inverse Rendering
+### 7.2 Relighting, High-Dynamic-Range Imaging, and Global Illumination Approximation
+### 7.3 Advanced Material Modeling and Complex Light Transport Effects
+### 7.4 Visibility, Occlusion, and Physical Correctness in Rasterization and Rendering
+## 8 Practical Deployment, Benchmarks, and Future Horizons**
+### 8.1 Evaluation Protocols, Benchmark Suites, and Standardized Metrics
+### 8.2 Robustness, Reliability, and Degradation Analysis in the Wild
+### 8.3 Interoperability, File Standards, and Industrial-Grade Usability
+### 8.4 Scaling, Temporal Streams, and Deployment on Device
+### 8.5 Future Horizons, Emerging Paradigms, and Multi-Modal Integration
+## 9 Conclusion
+

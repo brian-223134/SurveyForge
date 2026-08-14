@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # survey-search arm — 검색만 갈아끼운 서베이 1편.
 #
+#   bash scripts/run_survey_search_arm.sh "3D Gaussian Splatting"
+#
 # 대조군은 이미 있습니다:
 #   구 DB   code/output/res/deepseek_deepseek-v4-flash-0731/<T>/exp_1
 #   신 DB   code/output/res/deepseek_deepseek-v4-flash-0731__database_2026-08/<T>/exp_1
@@ -10,20 +12,25 @@ set -u
 cd /data2/chanjoong/survey-agent/SurveyForge
 
 set -a; . ./.env; set +a
-export CUDA_VISIBLE_DEVICES=6
+export CUDA_VISIBLE_DEVICES="${SS_GPU:-6}"
 export SURVEYFORGE_DB_DIR=database_2026-08
 export SURVEYFORGE_PAPER_ID_CUTOFF=2608
 export SURVEYFORGE_PAPER_DATE_NEWEST=2026-08-31
 
-T="Retrieval-Augmented Generation for Large Language Models"
+T="${1:-Retrieval-Augmented Generation for Large Language Models}"
 OUT="output/res/deepseek_deepseek-v4-flash-0731/survey-search/$T/exp_1"
+
+if [ -e "code/$OUT/$T.md" ]; then
+    echo "!! 이미 있습니다: code/$OUT — 덮어쓰지 않고 멈춥니다"
+    exit 1
+fi
 
 # main.py:318 은 os.mkdir 이라 부모를 안 만듭니다. 먼저 파 둡니다.
 mkdir -p "code/$OUT"
 
 cd code
 echo "=== [$(date '+%F %T')] 생성 시작 — $T ==="
-echo "=== 출력: code/$OUT ==="
+echo "=== 출력: code/$OUT  ·  GPU $CUDA_VISIBLE_DEVICES ==="
 
 ../.venv/bin/python main.py \
     --topic "$T" \

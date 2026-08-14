@@ -1,0 +1,744 @@
+Optimization, Densification, and Geometric Fidelity
+['This section systematically examines the core algorithmic framework and enhancements that govern the training and optimization of 3D Gaussian Splatting scenes. It explores the foundational adaptive density control mechanisms for creating, splitting, and pruning primitives, and discusses advanced improvements that lead to more stable, robust, and geometrically accurate reconstructions. Key topics include handling sparse input views, regularization strategies, integration of external sensor cues, and methods for extraction of explicit surface geometry from the volumetric Gaussian cloud.', '1. Adaptive density control and primitive management: A deep dive into the essential heuristics for densifying and pruning Gaussians, including gradient-based criteria for cloning and splitting primitives in under-reconstructed regions, opacity-based normalization for removing floaters, and the assessment of modern improvements based on pixel-error, frequency-domain, and geometric priors for more effective and localized capacity allocation.', '2. Optimization strategies and loss function design: An investigation into the photometric loss functions and gradient descent approaches that drive parameter updates, along with introductions of more robust optimization techniques such as second-order methods and learnable distribution of primitives, that improve convergence speed and final reconstruction quality.', '3. Geometrical fidelity and surface extraction: Methodologies that transform the volumetric Gaussian representation into coherent and accurate geometry, involving the use of two-dimensional planar primitives aligned with object surfaces, leveraging depth and normal unbiased regularizers, and differentiably extracting watertight triangle meshes or signed distance fields from the trained Gaussian field.', '4. Handling sparse views and regularization: Strategies that improve robustness to scene under heavy or very limited observer coverage, primarily by leveraging monocular depth and normal priors, introducing generative diffusion priors to synthesize plausible geometry, and using iterative re-weighting or unrolled strategies to stabilize training when positional ambiguity is high.']
+
+Temporally Aware Densification for Dynamic 3D Gaussian Splatting
+
+SplatFormer: Point Transformer for Robust 3D Gaussian Splatting
+
+ResGS: Residual Densification of 3D Gaussian for Efficient Detail Recovery
+
+Decomposing Densification in Gaussian Splatting for Faster 3D Scene Reconstruction
+
+AnchorSplat: Fast and Structure Consistent Detail Synthesis for Gaussian Splatting
+
+TurboGS: Accelerating 3D Gaussian Splatting via Error-Guided Sparse Pixel Sampling and Optimization
+
+On the Error Analysis of 3D Gaussian Splatting and an Optimal Projection
+  Strategy
+
+Taming Video Diffusion Prior with Scene-Grounding Guidance for 3D Gaussian Splatting from Sparse Inputs
+
+GaussianDiffusion  3D Gaussian Splatting for Denoising Diffusion
+  Probabilistic Models with Structured Noise
+
+Opacity-Gradient Driven Density Control for Compact and Efficient Few-Shot 3D Gaussian Splatting
+
+SuGaR  Surface-Aligned Gaussian Splatting for Efficient 3D Mesh
+  Reconstruction and High-Quality Mesh Rendering
+
+DC4GS: Directional Consistency-Driven Adaptive Density Control for 3D Gaussian Splatting
+
+From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians
+
+F4Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting
+
+3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt
+
+Enhancing Novel View Synthesis from extremely sparse views with SfM-free 3D Gaussian Splatting Framework
+
+GSM-GS: Geometry-Constrained Single and Multi-view Gaussian Splatting for Surface Reconstruction
+
+From Uncertainty to Stability and Fidelity: Guiding Sparse-View 3D Gaussian Splatting with Fisher Information
+
+Plug-and-Play PDE Optimization for 3D Gaussian Splatting: Toward High-Quality Rendering and Reconstruction
+
+Matrix-free Second-order Optimization of Gaussian Splats with Residual Sampling
+
+StableGS: A Floater-Free Framework for 3D Gaussian Splatting
+
+FillGS: Filling Observation Gaps in 4D Gaussian Splatting via Viewpoint-Time Selection and Generative Refinement
+
+ReorgGS: Equivalent Distribution Reorganization for 3D Gaussian Splatting
+
+View-Dependent Uncertainty Estimation of 3D Gaussian Splatting
+
+High-Fidelity Surface Splatting-Based 3D Reconstruction from Multi-View Images
+
+Refining Gaussian Splatting: A Volumetric Densification Approach
+
+MeshGS: Adaptive Mesh-Aligned Gaussian Splatting for High-Quality Rendering
+
+GBR: Generative Bundle Refinement for High-fidelity Gaussian Splatting with Enhanced Mesh Reconstruction
+
+BOGausS: Better Optimized Gaussian Splatting
+
+You Only Gaussian Once: Controllable 3D Gaussian Splatting for Ultra-Densely Sampled Scenes
+
+3DGSR  Implicit Surface Reconstruction with 3D Gaussian Splatting
+
+Learn2Splat: Extending the Horizon of Learned 3DGS Optimization
+
+SparseSurf: Sparse-View 3D Gaussian Splatting for Surface Reconstruction
+
+Depth-Regularized Optimization for 3D Gaussian Splatting in Few-Shot
+  Images
+
+Beyond Gaussians: Fast and High-Fidelity 3D Splatting with Linear Kernels
+
+PAGaS: Pixel-Aligned 1DoF Gaussian Splatting for Depth Refinement
+
+RaDe-GS: Rasterizing Depth in Gaussian Splatting
+
+Revisiting Photometric Ambiguity for Accurate Gaussian-Splatting Surface Reconstruction
+
+Faster-GS: Analyzing and Improving Gaussian Splatting Optimization
+
+Photometric Stereo using Gaussian Splatting and inverse rendering
+
+Camera Splatting for Continuous View Optimization
+
+DeMapGS: Simultaneous Mesh Deformation and Surface Attribute Mapping via Gaussian Splatting
+
+Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review
+
+Gaussian Splatting for Efficient Satellite Image Photogrammetry
+
+REFINE: Super-efficient 3D Gaussian Splatting Pruning via Rendering-Free Primitive Importance
+
+Enhancing non-Rigid 3D Model Deformations Using Mesh-based Gaussian Splatting
+
+3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction
+
+Using Gaussian Splats to Create High-Fidelity Facial Geometry and Texture
+
+A Constrained Optimization Approach for Gaussian Splatting from Coarsely-posed Images and Noisy Lidar Point Clouds
+
+Diffusion-Guided Gaussian Splatting for Large-Scale Unconstrained 3D Reconstruction and Novel View Synthesis
+
+Efficient Rendering, Compression, and Scalability
+['This section addresses the critical aspects of making 3D Gaussian Splatting a practical and deployable technology, focusing on the efficient use of computational resources, reduction of memory footprint, and scaling across scene complexities. It systematically reviews methods targeting the full stack of technology: from algorithmic innovations for faster rasterization, to procedures for quantizing and coding the primitive data, and system-level design choices for massively large environments. Additionally, it covers the collaborative designs between algorithmic updates and modern computer hardware is covered.', '1. Algorithmic rendering advancements and level-of-detail strategies: convergent rendering speed through novel rasterization strategies, hierarchical visibility culling, and level-of-detail management that dynamically adjust the number and complexity of primitives based on the viewed region and camera distance, enabling constant frame rate for city-scale or intricate environments.', '2. Model compression and data quantization: The reduction of memory overhead using techniques such as vector quantization for visual attributes, importance-based pruning and replanting of high-impact-based Gaussians, entropy coding of parameters, and conversion of the primitive cloud into a more compact latent or grid-based representation to significantly lower the storage and bandwidth requirements.', '3. Hardware-accelerated and software-hardware co-design: Technological solutions that include custom graphic processing unit kernels for faster splat rasterization, specialized hardware accelerators optimized for the sorting and blending operations, and warp-level primitives and resource-aware scheduling to fully exploit the available parallel computing power.', '4. Large-scale training and out-of-core rendering: Methods for handling scenes of city-scale or larger by partitioning the environment into manageable blocks or sectors, allocating the work load across multiple graphics processing units, and implementing disk-streaming or load management to fit the renderable model within local memory while maintaining high visual fidelity.']
+
+Sort-free Gaussian Splatting via Weighted Sum Rendering
+
+LODGE: Level-of-Detail Large-Scale Gaussian Splatting with Efficient Rendering
+
+HUG: Hierarchical Urban Gaussian Splatting with Block-Based Reconstruction for Large-Scale Aerial Scenes
+
+GS-TG: 3D Gaussian Splatting Accelerator with Tile Grouping for Reducing Redundant Sorting while Preserving Rasterization Efficiency
+
+1000+ FPS 4D Gaussian Splatting for Dynamic Scene Rendering
+
+Toward Distributed 3D Gaussian Splatting for High-Resolution Isosurface Visualization
+
+TextureSplat: Per-Primitive Texture Mapping for Reflective Gaussian Splatting
+
+Temporally Compressed 3D Gaussian Splatting for Dynamic Scenes
+
+LightGaussian  Unbounded 3D Gaussian Compression with 15x Reduction and
+  200+ FPS
+
+Arbitrary-Scale 3D Gaussian Super-Resolution
+
+STREAMINGGS: Voxel-Based Streaming 3D Gaussian Splatting with Memory Optimization and Architectural Support
+
+Locality-aware Gaussian Compression for Fast and High-quality Rendering
+
+GaussianPOP: Principled Simplification Framework for Compact 3D Gaussian Splatting via Error Quantification
+
+Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication
+
+RadSplat  Radiance Field-Informed Gaussian Splatting for Robust
+  Real-Time Rendering with 900+ FPS
+
+GASP: Gaussian Splatting for Physic-Based Simulations
+
+Perceive-Sample-Compress: Towards Real-Time 3D Gaussian Splatting
+
+Improving 3D Gaussian Splatting Compression by Scene-Adaptive Lattice Vector Quantization
+
+Virtual Memory for 3D Gaussian Splatting
+
+3DTurboQuant: Training-Free Near-Optimal Quantization for 3D Reconstruction Models
+
+SCAR-GS: Spatial Context Attention for Residuals in Progressive Gaussian Splatting
+
+MEGS$^{2}$: Memory-Efficient Gaussian Splatting via Spherical Gaussians and Unified Pruning
+
+Efficient Density Control for 3D Gaussian Splatting
+
+Distributed 3D Gaussian Splatting for High-Resolution Isosurface Visualization
+
+GS^2: Graph-based Spatial Distribution Optimization for Compact 3D Gaussian Splatting
+
+FLoD: Integrating Flexible Level of Detail into 3D Gaussian Splatting for Customizable Rendering
+
+Prune Wisely, Reconstruct Sharply: Compact 3D Gaussian Splatting via Adaptive Pruning and Difference-of-Gaussian Primitives
+
+GEMM-GS: Accelerating 3D Gaussian Splatting on Tensor Cores with GEMM-Compatible Blending
+
+TC-GS: Tri-plane based compression for 3D Gaussian Splatting
+
+TC-GS: A Faster Gaussian Splatting Module Utilizing Tensor Cores
+
+Bake It Till You Make It: Ultrafast Spatial Texture-Atlas Splatting
+
+GS-Scale: Unlocking Large-Scale 3D Gaussian Splatting Training via Host Offloading
+
+LOD-GS: Level-of-Detail-Sensitive 3D Gaussian Splatting for Detail Conserved Anti-Aliasing
+
+A 129FPS Full HD Real-Time Accelerator for 3D Gaussian Splatting
+
+Steepest Descent Density Control for Compact 3D Gaussian Splatting
+
+Leveraging Learned Image Prior for 3D Gaussian Compression
+
+SizeGS: Size-aware Compression of 3D Gaussian Splatting via Mixed Integer Programming
+
+A Novel Benchmark and Dataset for Efficient 3D Gaussian Splatting with Gaussian Point Cloud Compression
+
+Compact 3D Gaussian Representation for Radiance Field
+
+From Volume Rendering to 3D Gaussian Splatting: Theory and Applications
+
+SG-Splatting: Accelerating 3D Gaussian Splatting with Spherical Gaussians
+
+Enhancing 3D Gaussian Splatting Compression via Spatial Condition-based Prediction
+
+Optimized Minimal 3D Gaussian Splatting
+
+A New Split Algorithm for 3D Gaussian Splatting
+
+CSGaussian: Progressive Rate-Distortion Compression and Segmentation for 3D Gaussian Splatting
+
+A LoD of Gaussians: Unified Training and Rendering for Ultra-Large Scale Reconstruction with External Memory
+
+Identifying Unnecessary 3D Gaussians using Clustering for Fast Rendering
+  of 3D Gaussian Splatting
+
+7DGS: Unified Spatial-Temporal-Angular Gaussian Splatting
+
+Vorion: A RISC-V GPU with Hardware-Accelerated 3D Gaussian Rendering and Training
+
+ELMGS: Enhancing memory and computation scaLability through coMpression for 3D Gaussian Splatting
+
+Generalization, Sparse-View Reconstruction, and Generation
+['This section shifts focus from per-scene optimization towards the broader goal of building models and that can generalize across scenes, reconstruct from limited observational input, and even generate novel content. It surveys the shift from optimization-only methods to learnable, feed-forward architectures, and discusses the utilization of generative priorss from language or image-space models. The section also covers the emerging field of using generative priors to create, complete, or edit hidden geometry and appearance.', '1. Generalizable and feed-forward Gaussian prediction: An exploration of large, transformer-like neural modules that take a set of images as input and predict the parameters of a Gaussian scene in a single forward pass, bypassing per-scene test-time optimization, and allowing zero-shot generalization and real-time inference for unseen scenes.', '2. Sparse-view and uncalibrated reconstruction: Focus on enabling high-fidelity rendering from a small number of input images or images without known camera poses, achieved through the training of network models to infer geometry and material properties from sparse image sets, often superintended by diffusion-based or monocular geometric priors to constrain the ill-posed inverse problem.', '3. Single-view and generative completion: Methods that address the extreme case of generating an extensive field of a three-dimensional scene from a single image, using learned generative priors from diffusion models to create plausible and multi-view-consistent geometry and appearance for unobserved regions of the scene.', '4. Learning robust novel view synthesis with foundation models: Techniques that leverage large-scale pre-trained vision or language models for externals, such as large-scale monocular depth estimation or feature extraction, to supervise or condition the iterative optimization of the Gaussian representation, improving the robustness and semantic awareness of reconstructions in the wild.']
+
+VA-GS: Enhancing the Geometric Representation of Gaussian Splatting via View Alignment
+
+Gaussian Splatting: 3D Reconstruction and Novel View Synthesis, a Review
+
+3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction
+
+Self-augmented Gaussian Splatting with Structure-aware Masks for Sparse-view 3D Reconstruction
+
+Learn2Splat: Extending the Horizon of Learned 3DGS Optimization
+
+Novel View Synthesis with Gaussian Splatting: Impact on Photogrammetry Model Accuracy and Resolution
+
+AnySplat: Feed-forward 3D Gaussian Splatting from Unconstrained Views
+
+Enhancing Novel View Synthesis from extremely sparse views with SfM-free 3D Gaussian Splatting Framework
+
+PAGaS: Pixel-Aligned 1DoF Gaussian Splatting for Depth Refinement
+
+GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens
+
+Matrix-free Second-order Optimization of Gaussian Splats with Residual Sampling
+
+Analysis of Converged 3D Gaussian Splatting Solutions: Density Effects and Prediction Limit
+
+FreeSplatter: Pose-free Gaussian Splatting for Sparse-view 3D Reconstruction
+
+Uncertainty-Aware Normal-Guided Gaussian Splatting for Surface Reconstruction from Sparse Image Sequences
+
+Recent Advances in 3D Gaussian Splatting
+
+CSS: Overcoming Pose and Scene Challenges in Crowd-Sourced 3D Gaussian Splatting
+
+DSplats: 3D Generation by Denoising Splats-Based Multiview Diffusion Models
+
+GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis
+
+3DGS-Enhancer: Enhancing Unbounded 3D Gaussian Splatting with View-consistent 2D Diffusion Priors
+
+MS-GS: Multi-Appearance Sparse-View 3D Gaussian Splatting in the Wild
+
+AGG  Amortized Generative 3D Gaussians for Single Image to 3D
+
+Diff3R: Feed-forward 3D Gaussian Splatting with Uncertainty-aware Differentiable Optimization
+
+GPS-Gaussian  Generalizable Pixel-wise 3D Gaussian Splatting for
+  Real-time Human Novel View Synthesis
+
+Feature Splatting for Better Novel View Synthesis with Low Overlap
+
+FSGS  Real-Time Few-shot View Synthesis using Gaussian Splatting
+
+CL-Splats: Continual Learning of Gaussian Splatting with Local Optimization
+
+SfM-Free 3D Gaussian Splatting via Hierarchical Training
+
+GeoGS3D: Single-view 3D Reconstruction via Geometric-aware Diffusion Model and Gaussian Splatting
+
+From Volume Rendering to 3D Gaussian Splatting: Theory and Applications
+
+LM-Gaussian: Boost Sparse-view 3D Gaussian Splatting with Large Model Priors
+
+Wild3R: Feed-Forward 3D Gaussian Splatting from Unconstrained Sparse Photo Collection
+
+GauSSmart: Enhanced 3D Reconstruction through 2D Foundation Models and Geometric Filtering
+
+GaussianDiffusion  3D Gaussian Splatting for Denoising Diffusion
+  Probabilistic Models with Structured Noise
+
+Plug-and-Play PDE Optimization for 3D Gaussian Splatting: Toward High-Quality Rendering and Reconstruction
+
+SPFSplatV2: Efficient Self-Supervised Pose-Free 3D Gaussian Splatting from Sparse Views
+
+GAINS: Gaussian-based Inverse Rendering from Sparse Multi-View Captures
+
+Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes
+
+DepthSplat: Connecting Gaussian Splatting and Depth
+
+GaussVideoDreamer: 3D Scene Generation with Video Diffusion and Inconsistency-Aware Gaussian Splatting
+
+GS-Net: Generalizable Plug-and-Play 3D Gaussian Splatting Module
+
+Z-Order Transformer for Feed-Forward Gaussian Splatting
+
+UFV-Splatter: Pose-Free Feed-Forward 3D Gaussian Splatting Adapted to Unfavorable Views
+
+AdaptSplat: Adapting Vision Foundation Models for Feed-Forward 3D Gaussian Splatting
+
+GenSplatCodec: Feed-Forward Gaussian Splatting Compression via One-Step Diffusion
+
+SparseSurf: Sparse-View 3D Gaussian Splatting for Surface Reconstruction
+
+DiffGS: Functional Gaussian Splatting Diffusion
+
+PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting
+
+3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt
+
+SplatFormer: Point Transformer for Robust 3D Gaussian Splatting
+
+OmniSplat: Taming Feed-Forward 3D Gaussian Splatting for Omnidirectional Images with Editable Capabilities
+
+Dynamics, Deformation, and Temporal Representations
+['This section addresses the extension of the static 3D Gaussian splatting framework into the temporal dimension, enabling the representation of dynamic scenes, non-rigid motion, and 4D visualization. It provides a taxonomy of the primary conceptual approaches, compares them in terms of representational power and efficiency, and discusses their use in applications such as free-viewpoint video, performance capture, and virtual reality.', '1. Deformation architecture and scene dynamics: An in-depth look at methods that model non-rigid motion in a given set of Gaussians by learning a canonical 3D space with a deformation network or a spatio-temporal appearance that maps observation time to a deformed configuration of the probes.', '2. Direct four-dimensional Gaussian representations: A discussion of methods that build a four-dimensional scene representation, either by creating primitives with four-dimensional positions that are future-slized from time or by learning v a set of compact and pixels pathways to generate, locate, orient, and deform the static cloud parts over space-time.', '3. Motion, correspondence, and velocity-aware modeling: Techniques that integrate explicit optical flow, point trajectories, or action learning frameworks to directly or analog, enforce the physical or temporal coherence of motion, or that decompose the scene into independent moving objects and a background domain to greater efficiency and control.', '4. Dynamic scene generation and streaming: Methods for synthesizing new dynamic scenes via generative models or text or sketch inputs, and techniques for representing usable dynamic sequences in compressed and streamable that allow for real-time playback/ and rendering, especially for avatar and telepresence.']
+
+Enhancing non-Rigid 3D Model Deformations Using Mesh-based Gaussian Splatting
+
+Smol-GS: Compact Representations for Abstract 3D Gaussian Splatting
+
+Compact 3D Scene Representation via Self-Organizing Gaussian Grids
+
+From Volume Rendering to 3D Gaussian Splatting: Theory and Applications
+
+SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis
+
+On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting
+
+DreamGaussian4D  Generative 4D Gaussian Splatting
+
+3D Gaussian Splatting as Markov Chain Monte Carlo
+
+Motion Blender Gaussian Splatting for Dynamic Scene Reconstruction
+
+GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis
+
+4D Gaussian Splatting  Towards Efficient Novel View Synthesis for
+  Dynamic Scenes
+
+MGStream: Motion-aware 3D Gaussian for Streamable Dynamic Scene Reconstruction
+
+4-LEGS: 4D Language Embedded Gaussian Splatting
+
+Multi4D: High-Fidelity Dynamic Gaussian Splatting via Multi-Level Competitive Allocation
+
+DEGS: Deformable Event-based 3D Gaussian Splatting from RGB and Event Stream
+
+Large Images are Gaussians: High-Quality Large Image Representation with Levels of 2D Gaussian Splatting
+
+Learning Unified Representation of 3D Gaussian Splatting
+
+EMD: Explicit Motion Modeling for High-Quality Street Gaussian Splatting
+
+Scale-GS: Efficient Scalable Gaussian Splatting via Redundancy-filtering Training on Streaming Content
+
+FreeTimeGS++: Secrets of Dynamic Gaussian Splatting and Their Principles
+
+DynSUP: Dynamic Gaussian Splatting from An Unposed Image Pair
+
+Generative Gaussian Splatting: Generating 3D Scenes with Video Diffusion Priors
+
+Gaussian Splashing  Dynamic Fluid Synthesis with Gaussian Splatting
+
+GaussianVideo: Efficient Video Representation via Hierarchical Gaussian Splatting
+
+D-MiSo: Editing Dynamic 3D Scenes using Multi-Gaussians Soup
+
+COLMAP-Free 3D Gaussian Splatting
+
+GauFRe  Gaussian Deformation Fields for Real-time Dynamic Novel View
+  Synthesis
+
+Decoupling Motion and Geometry in 4D Gaussian Splatting
+
+MEGA: Memory-Efficient 4D Gaussian Splatting for Dynamic Scenes
+
+Spacetime Gaussian Feature Splatting for Real-Time Dynamic View
+  Synthesis
+
+VDG: Vision-Only Dynamic Gaussian for Driving Simulation
+
+TRiGS: Temporal Rigid-Body Motion for Scalable 4D Gaussian Splatting
+
+4D Gaussian Splatting: Modeling Dynamic Scenes with Native 4D Primitives
+
+Beyond Static Gaussians: An Empirical Investigation of Architectural Paradigms for Dynamic 3D Scene Reconstruction
+
+Motion Matters: Compact Gaussian Streaming for Free-Viewpoint Video Reconstruction
+
+Superpoint Gaussian Splatting for Real-Time High-Fidelity Dynamic Scene Reconstruction
+
+Grassmannian Splatting I: Moving rank-2 Spacetime Surfels for Dynamic Scene Rendering
+
+Sketch and Patch: Efficient 3D Gaussian Representation for Man-Made Scenes
+
+4D Gaussian Splatting SLAM
+
+Gaussian-Flow  4D Reconstruction with Dynamic 3D Gaussian Particle
+
+Gaussian Splatting LK
+
+SD-GS: Structured Deformable 3D Gaussians for Efficient Dynamic Scene Reconstruction
+
+AHA! Animating Human Avatars in Diverse Scenes with Gaussian Splatting
+
+4D Gaussian Splatting with Scale-aware Residual Field and Adaptive Optimization for Real-time Rendering of Temporally Complex Dynamic Scenes
+
+7DGS: Unified Spatial-Temporal-Angular Gaussian Splatting
+
+HiCoM: Hierarchical Coherent Motion for Streamable Dynamic Scene with 3D Gaussian Splatting
+
+DreamScene360  Unconstrained Text-to-3D Scene Generation with Panoramic
+  Gaussian Splatting
+
+3D Gaussian Editing with A Single Image
+
+Fast and Robust Deformable 3D Gaussian Splatting
+
+Reinforcement Learning with Generalizable Gaussian Splatting
+
+Scene Understanding, Semantics, and Interaction
+['This section explores how language, semantic knowledge, and interactive manipulation can be directly embedded or discovered within the explicit architecture of 3D Gaussian Splatting scenes. It covers approaches that move beyond a pure radiance field to capture high-level understanding, editing, and control, (i.e., from semantic segmentation to text-prompt-driven modifications, and creating new practical and interactive experiences).', '1. Language-embedded and open-vocabulary semantics: Techniques that merge language, with training contrastive language-image pretraining features, large-scale multi-modal vision foundation, or semantic field with the Gaussian primitives, thus enabling open-vocabulary object detection, retrieval, and segmentation based on text, completing the semantic*, high-level understanding of the spatial layout.', '2. Scene editing, manipulation, and inpainting: A review of user-centric tools, from geometric transformations, and appearance styles, to flexible and semantically-aware editing, performed by direct manipulation of the primitive properties (using clicks or cage-based edit) or using textual design, incorporating diffusion-model-guided modification and stitching so that consistency and fidelity are maintained.', '3. Scene understanding for embodied and interactive AI: Approaches that apply 3D Gaussian Splatting as a primary scene understanding representation for robotics, digital twins, spatial computing, and interactive vision, addressing tasks such as camera (simultaneous localization and mapping), object-centric manipulation, navigation, and closed-loop interaction with the environment.', '4. Content creation and physical simulation: Techniques that utilize the explicit Gaussian primitives as deformable or physical bodies within physics engines for real-time interactable environments, avatar control, and generation as enhanced artificial virtual scenes, as well as tools for interactive deformation, sculpting, and combinational composition in mixed reality and virtual production.', '**']
+
+3DSceneEditor: Controllable 3D Scene Editing with Gaussian Splatting
+
+GSAC: Leveraging Gaussian Splatting for Photorealistic Avatar Creation with Unity Integration
+
+GaussianEditor  Swift and Controllable 3D Editing with Gaussian
+  Splatting
+
+QuadBox: Accelerating 3D Gaussian Splatting with Geometry-Aware Boxes
+
+SparseLGS: Sparse View Language Embedded Gaussian Splatting
+
+A New Split Algorithm for 3D Gaussian Splatting
+
+GaussLite: Online Task-Conditioned 3D Gaussian Splatting for Real-Time Robotic Mapping
+
+DiffGS: Functional Gaussian Splatting Diffusion
+
+Content-Aware Texturing for Gaussian Splatting
+
+Large Material Gaussian Model for Relightable 3D Generation
+
+GSEditPro: 3D Gaussian Splatting Editing with Attention-based Progressive Localization
+
+NegGS: Negative Gaussian Splatting
+
+LangSplat  3D Language Gaussian Splatting
+
+Query-based Semantic Gaussian Field for Scene Representation in Reinforcement Learning
+
+Textured-GS: Gaussian Splatting with Spatially Defined Color and Opacity
+
+4D Gaussian Splatting: Modeling Dynamic Scenes with Native 4D Primitives
+
+From Volume Rendering to 3D Gaussian Splatting: Theory and Applications
+
+ScalingGaussian: Enhancing 3D Content Creation with Generative Gaussian Splatting
+
+Recent Advances in 3D Gaussian Splatting
+
+Splat4D: Diffusion-Enhanced 4D Gaussian Splatting for Temporally and Spatially Consistent Content Creation
+
+FMLGS: Fast Multilevel Language Embedded Gaussians for Part-level Interactive Agents
+
+UniGS: Unified Language-Image-3D Pretraining with Gaussian Splatting
+
+TextSplat: Text-Guided Semantic Fusion for Generalizable Gaussian Splatting
+
+Language-Embedded Gaussian Splats (LEGS): Incrementally Building Room-Scale Representations with a Mobile Robot
+
+4-LEGS: 4D Language Embedded Gaussian Splatting
+
+Feature 3DGS  Supercharging 3D Gaussian Splatting to Enable Distilled
+  Feature Fields
+
+Spec-Gaussian  Anisotropic View-Dependent Appearance for 3D Gaussian
+  Splatting
+
+SplatFill: 3D Scene Inpainting via Depth-Guided Gaussian Splatting
+
+Point'n Move  Interactive Scene Object Manipulation on Gaussian
+  Splatting Radiance Fields
+
+Localized Gaussian Splatting Editing with Contextual Awareness
+
+Gaussian Grouping  Segment and Edit Anything in 3D Scenes
+
+FastLGS: Speeding up Language Embedded Gaussians with Feature Grid Mapping
+
+3D Gaussian Splatting aided Localization for Large and Complex Indoor-Environments
+
+AHA! Animating Human Avatars in Diverse Scenes with Gaussian Splatting
+
+ART3D: 3D Gaussian Splatting for Text-Guided Artistic Scenes Generation
+
+ARAP-GS: Drag-driven As-Rigid-As-Possible 3D Gaussian Splatting Editing with Diffusion Prior
+
+DN-Splatter  Depth and Normal Priors for Gaussian Splatting and Meshing
+
+Tackling View-Dependent Semantics in 3D Language Gaussian Splatting
+
+AG$^2$aussian: Anchor-Graph Structured Gaussian Splatting for Instance-Level 3D Scene Understanding and Editing
+
+AdR-Gaussian: Accelerating Gaussian Splatting with Adaptive Radius
+
+GSVisLoc: Generalizable Visual Localization for Gaussian Splatting Scene Representations
+
+Intrinsic decomposition and editing of 3D Gaussian splats
+
+Gaussians-to-Life: Text-Driven Animation of 3D Gaussian Splatting Scenes
+
+StochasticSplats: Stochastic Rasterization for Sorting-Free 3D Gaussian Splatting
+
+Reconstructing and Simulating Dynamic 3D Objects with Mesh-adsorbed Gaussian Splatting
+
+GASP: Gaussian Splatting for Physic-Based Simulations
+
+GaussianFluent: Gaussian Simulation for Dynamic Scenes with Mixed Materials
+
+3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch
+
+From ex(p) to poly: Gaussian Splatting with Polynomial Kernels
+
+CL-Splats: Continual Learning of Gaussian Splatting with Local Optimization
+
+Rendering Appearance, Inverse Rendering, and Photorealism**
+['This section covers the progress and challenges in the physical modeling of light transport and material appearance within the 3D Gaussian Splatting pipeline. It extends the discussion from fundamental color (radiance) modeling to full inverse rendering, where intrinsic surface properties such as albedo, roughness, and specular reflection are inferred from multi-view imagery, enabled by physically-based shading models, and crucial for asset relighting under novel illumination.', '1. Physical appearance decomposition and inverse rendering: An exploration of methods that decouple the interleaved contributions of scene geometry, light, and surface materials, enabling predictions for illumination-based decomposition, and, high-resolution estimation of reflectance, specular, and transmission properties for relighting and control.', '2. Relighting and high-dynamic-range rendering: Techniques for manipulating light and the inference of dynamic illumination with environment maps, enabling the pipeline to re-render the scene under new illumination, and presented are solution for handling high-dynamic-range inputs, specular interactions, and the separation of volumetric effects.', '3. Modeling complex materials and transport effects: A review of methods that extend the basic Gaussian primitive covari, covariance* appearance representation to account for transparency, specular surface, reflectors with arbitrary geometric lensing, and light scattering through anisotropic or spectral properties and that attempt to more than 3D physical light.', '4. Visibility, occlusion, and shadow modeling: Algorithms that incorporate hard and soft shadows, corrected visibility for occluded Gaussians, and the view-dependent specular visibility into the rasterizer and shading process, crucial for highly diffusive synthetic imagery and touch, in augmented or virtual reality.', '**']
+
+HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting
+
+SplatBus: A Gaussian Splatting Viewer Framework via GPU Interprocess Communication
+
+SSD-GS: Scattering and Shadow Decomposition for Relightable 3D Gaussian Splatting
+
+AEGIR: Modeling Area Emitters for Indoor Inverse Rendering using Gaussian Splatting
+
+MSGS: Multispectral 3D Gaussian Splatting
+
+Relightable 3D Gaussian  Real-time Point Cloud Relighting with BRDF
+  Decomposition and Ray Tracing
+
+Gaussian Splatting with Discretized SDF for Relightable Assets
+
+Gaussians-to-Life: Text-Driven Animation of 3D Gaussian Splatting Scenes
+
+Generalized non-exponential Gaussian splatting
+
+Relightable Gaussian Splatting for Virtual Production Using Image-Based Illumination
+
+Gaussian Blending: Rethinking Alpha Blending in 3D Gaussian Splatting
+
+BiGS: Bidirectional Gaussian Primitives for Relightable 3D Gaussian Splatting
+
+NegGS: Negative Gaussian Splatting
+
+Gaussian Billboards: Expressive 2D Gaussian Splatting with Textures
+
+From ex(p) to poly: Gaussian Splatting with Polynomial Kernels
+
+Material-informed Gaussian Splatting for 3D World Reconstruction in a Digital Twin
+
+Laplace-Beltrami Operator for Gaussian Splatting
+
+3D Gaussian Splatting with Self-Constrained Priors for High Fidelity Surface Reconstruction
+
+Instant Colorization of Gaussian Splats
+
+GS^2: Graph-based Spatial Distribution Optimization for Compact 3D Gaussian Splatting
+
+GeoSplatting: Towards Geometry Guided Gaussian Splatting for Physically-based Inverse Rendering
+
+Moment-Based 3D Gaussian Splatting: Resolving Volumetric Occlusion with Order-Independent Transmittance
+
+InvSplat: Inverse Feed-Forward Scene Splatting
+
+MaterialClusterGS: Palette-Based Material Decomposition and Physically-Based Relighting with 2D Gaussian Splatting
+
+Phys3DGS: Physically-based 3D Gaussian Splatting for Inverse Rendering
+
+3D Gaussian Splatting with Deferred Reflection
+
+PhySG  Inverse Rendering with Spherical Gaussians for Physics-based
+  Material Editing and Relighting
+
+StopThePop  Sorted Gaussian Splatting for View-Consistent Real-time
+  Rendering
+
+Volumetrically Consistent 3D Gaussian Rasterization
+
+GS^3: Efficient Relighting with Triple Gaussian Splatting
+
+OMG: Opacity Matters in Material Modeling with Gaussian Splatting
+
+ASAP-Textured Gaussians: Enhancing Textured Gaussians with Adaptive Sampling and Anisotropic Parameterization
+
+AdR-Gaussian: Accelerating Gaussian Splatting with Adaptive Radius
+
+SVG-IR: Spatially-Varying Gaussian Splatting for Inverse Rendering
+
+The Impact and Outlook of 3D Gaussian Splatting
+
+GDGS: 3D Gaussian Splatting Via Geometry-Guided Initialization And Dynamic Density Control
+
+DN-Splatter  Depth and Normal Priors for Gaussian Splatting and Meshing
+
+Spec-Gaussian  Anisotropic View-Dependent Appearance for 3D Gaussian
+  Splatting
+
+Geometry Gaussians: Decoupling Appearance and Geometry in Gaussian Splatting
+
+Textured-GS: Gaussian Splatting with Spatially Defined Color and Opacity
+
+GUS-IR: Gaussian Splatting with Unified Shading for Inverse Rendering
+
+Intrinsic decomposition and editing of 3D Gaussian splats
+
+SeeLe: A Unified Acceleration Framework for Real-Time Gaussian Splatting
+
+Isotropic Gaussian Splatting for Real-Time Radiance Field Rendering
+
+ROSGS: Relightable Outdoor Scenes With Gaussian Splatting
+
+TR-Gaussians: High-fidelity Real-time Rendering of Planar Transmission and Reflection with 3D Gaussian Splatting
+
+Stochastic Ray Tracing for the Reconstruction of 3D Gaussian Splatting
+
+GS-Octree: Octree-based 3D Gaussian Splatting for Robust Object-level 3D Reconstruction Under Strong Lighting
+
+Mathematical Supplement for the $\texttt{gsplat}$ Library
+
+2D Gaussian Splatting for Geometrically Accurate Radiance Fields
+
+Practical Deployment, Benchmarks, and Future Horizons**
+['This section synthesizes the state of the art, addresses gaps in consistency, evaluation protocols, and outlines research opportunities. It provides a comprehensive analysis of the benchmarks and metrics used to assess 3D Gaussian Splatting, and the missing of a rigorous and consolidated framework. It also points towards open challenges, such as robustness under variable real-world conditions, interoperability with standard graphics pipelines, and future pathways for unlocking the full potential of this representation.', '1. Analysis of standard evaluation protocols and benchmarks: A review of the accepted datasets (for example, the multi-view Mip-NeRF 360 used, tanks and temples, and the deep blending) and the metrics (peak signal-to-noise ratio, structural similarity, and learned per-image similarity) that are critical for comparing model strengths, reproducibility of results, and comprehensive.', '2. Open issues: robustness, pathology, and reliability: An analysis of challenges including the occurrence of floating artifacts, sensitivity to initial camera positions and sparse inputs, memory occupancy, and behavior under data with high dynamic range, or noisy pose estimates, and a discussion of the need for robust, uncertainty-aware metrics in real-world deployment.', '3. The importance of standardized and interoperable standards: Discussion about the lack of a universal, file-based standard for Gaussian scenes, the required interoperability with traditional graphics and geometry, and the implications for scalability, hybrid representations, and next-generation content pipelines.', '4. A forward-looking roadmap towards large scale, dynamic, and multi-modal models: Bridging methods towards general models, foundation models, physical simulations, and autonomous and continual learning in an open environment, and how the integration of causality, and high-level semantic and meta knowledge could open the next chapter of this field, accompanied by a discussion of privacy, safety, and societal implications.']
+
+ADGaussian: Generalizable Gaussian Splatting for Autonomous Driving via Multi-modal Joint Learning
+
+From Volume Rendering to 3D Gaussian Splatting: Theory and Applications
+
+Multi4D: High-Fidelity Dynamic Gaussian Splatting via Multi-Level Competitive Allocation
+
+Geometry-Aware Style Transfer in 3D Gaussian Splatting
+
+Pushing Rendering Boundaries: Hard Gaussian Splatting
+
+4D Gaussian Splatting as a Learned Dynamical System
+
+4D Gaussian Splatting: Modeling Dynamic Scenes with Native 4D Primitives
+
+UniMGS: Unifying Mesh and 3D Gaussian Splatting with Single-Pass Rasterization and Proxy-Based Deformation
+
+LVD-GS: Gaussian Splatting SLAM for Dynamic Scenes via Hierarchical Explicit-Implicit Representation Collaboration Rendering
+
+Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives
+
+RobustSplat++: Decoupling Densification, Dynamics, and Illumination for In-the-Wild 3DGS
+
+GP-GS: Gaussian Processes Densification for 3D Gaussian Splatting
+
+MVSGaussian: Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo
+
+StopThePop  Sorted Gaussian Splatting for View-Consistent Real-time
+  Rendering
+
+Textured Gaussians for Enhanced 3D Scene Appearance Modeling
+
+Uncertainty Matters in Dynamic Gaussian Splatting for Monocular 4D Reconstruction
+
+GaussianUpdate: Continual 3D Gaussian Splatting Update for Changing Environments
+
+3D Gaussian Splatting as Markov Chain Monte Carlo
+
+Gaussian Billboards: Expressive 2D Gaussian Splatting with Textures
+
+Creating Virtual Environments with 3D Gaussian Splatting: A Comparative Study
+
+Generalizable Human Gaussian Splatting via Multi-view Semantic Consistency
+
+G3Splat: Geometrically Consistent Generalizable Gaussian Splatting
+
+Benchmarking Single-Step Inpainting Methods for Multi-Object 3D Gaussian Splatting Scenes
+
+Scene-Level Heterogeneous Physics Simulation with 3D Gaussian Splats
+
+GauStudio  A Modular Framework for 3D Gaussian Splatting and Beyond
+
+Rethinking Pose Refinement in 3D Gaussian Splatting under Pose Prior and Geometric Uncertainty
+
+Content-Aware Texturing for Gaussian Splatting
+
+Optimization-Free Style Transfer for 3D Gaussian Splats
+
+Using Gaussian Splats to Create High-Fidelity Facial Geometry and Texture
+
+Advancing Extended Reality with 3D Gaussian Splatting: Innovations and Prospects
+
+GASP: Gaussian Splatting for Physic-Based Simulations
+
+Faster-GS: Analyzing and Improving Gaussian Splatting Optimization
+
+Manifold-GS: Certified Hybrid Assets via Varifold-Conservative Gaussian Splatting
+
+A New Split Algorithm for 3D Gaussian Splatting
+
+Learning Unified Representation of 3D Gaussian Splatting
+
+Generative Object Insertion in Gaussian Splatting with a Multi-View Diffusion Model
+
+SplatPainter: Interactive Authoring of 3D Gaussians from 2D Edits via Test-Time Training
+
+Uncertainty-Aware Normal-Guided Gaussian Splatting for Surface Reconstruction from Sparse Image Sequences
+
+On the Design of Mixture-of-Experts for Dynamic Gaussian Splatting
+
+Real2Sim: A Physics-driven and Editable Gaussian Splatting Framework for Autonomous Driving Scenes
+
+Hybrid 3D-4D Gaussian Splatting for Fast Dynamic Scene Representation
+
+StableGS: A Floater-Free Framework for 3D Gaussian Splatting
+
+I3DGS: Improve 3D Gaussian Splatting from Multiple Dimensions
+
+TSOG: A Format For Temporally And Spatially Ordered Gaussians
+
+RobustSplat: Decoupling Densification and Dynamics for Transient-Free 3DGS
+
+CUS-GS: A Compact Unified Structured Gaussian Splatting Framework for Multimodal Scene Representation
+
+GSM-GS: Geometry-Constrained Single and Multi-view Gaussian Splatting for Surface Reconstruction
+
+GaussianDiffusion  3D Gaussian Splatting for Denoising Diffusion
+  Probabilistic Models with Structured Noise
+
+Large Images are Gaussians: High-Quality Large Image Representation with Levels of 2D Gaussian Splatting
+
+Gaussian Splashing  Dynamic Fluid Synthesis with Gaussian Splatting
+
