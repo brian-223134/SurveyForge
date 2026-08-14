@@ -41,14 +41,35 @@ def _backend():
 
 
 def GeneralRAG_langchain(*args, **kwargs):
-    """main.py:259 — 토픽 수준 쿼리. facet 이 +18%p 를 내는 곳."""
+    """아웃라인용 — 토픽 수준 쿼리. facet 이 +18%p 를 내는 곳이고, 여기서만 냅니다."""
     return SurveySearchRAG(*args, backend=_backend(),
                            config=SearchConfig(facets=True, freshness=True, lexical=False),
                            **kwargs)
 
 
+def GeneralRAG_langchain_subsection(*args, **kwargs):
+    """서브아웃라인·서브섹션용 — 같은 초록 인덱스, **facet 만 끕니다.**
+
+    끄는 근거는 취향이 아니라 호스트의 자료 흐름입니다. `writer.py:41` 이 토픽 하나로
+    1,500편을 뽑고 `writer.py:50` 이 그 집합을 `id_selector` 로 만들어 이후 모든 서브섹션
+    검색에 겁니다. **후보 풀은 토픽 수준 검색이 이미 정했고**, 서브섹션 검색은 그 안에서
+    순서만 바꿉니다. facet 을 여기서 또 돌려도 풀이 넓어지지 않습니다.
+
+    대가는 큽니다. 서브섹션 쿼리 30~40개는 전부 처음 보는 문자열이라 캐시가 안 듣고,
+    호출마다 LLM 40초가 붙습니다. 2026-08-13 실행에서 50분 중 대부분이 여기서 나갔고,
+    OpenRouter 가 밀리면서 facet 분해가 3회 재시도 끝에 실패해 **규칙 기반 fallback 으로
+    내려간 것이 2건** 있었습니다 — survey-search 의 170토픽 평가가 품질 조건으로 건
+    "fallback 0회"를 못 맞춘 실행이 됐습니다.
+
+    freshness 는 켜 둡니다. 랭킹 단계는 풀 크기와 무관하게 매번 작동합니다.
+    """
+    return SurveySearchRAG(*args, backend=_backend(),
+                           config=SearchConfig(facets=False, freshness=True, lexical=False),
+                           **kwargs)
+
+
 def GeneralRAG_langchain_citation(*args, **kwargs):
-    """main.py:270 — 쿼리가 논문 제목. facet 은 무의미하고 제목 인덱스가 맞습니다."""
+    """인용 검증용 — 쿼리가 논문 제목. facet 은 무의미하고 제목 인덱스가 맞습니다."""
     return SurveySearchRAG(*args, backend=_backend(),
                            config=SearchConfig(facets=False, lexical=False,
                                                dense_field="title"),
@@ -304,9 +325,17 @@ def main(args):
                                                 arxivid_to_index_path=arxivid_to_index_path,
                                                 embedding_model=args.embedding_model)
 
-    rag_abstract4suboutline = rag_abstract4outline
-        
-    rag_abstract4subsection = rag_abstract4outline
+    # 원본은 여기서 rag_abstract4outline 을 **별칭으로 공유**합니다. survey-search arm 은
+    # 별칭을 끊습니다 — 셋의 쿼리 성격이 다르기 때문입니다. 토픽 하나로 후보 풀(1,500편)을
+    # 정하는 것은 아웃라인 인스턴스이고(writer.py:41·50), 아래 둘은 그 풀 안에서 순서만
+    # 바꿉니다. 같은 초록 인덱스·같은 freshness 를 쓰되 facet 만 끕니다. 자세한 근거는
+    # GeneralRAG_langchain_subsection 의 독스트링.
+    rag_abstract4suboutline = GeneralRAG_langchain_subsection(
+        args=args, retriever_type='vectorstore', index_db_path=abs_index_db_path,
+        doc_db_path=doc_db_path, arxivid_to_index_path=arxivid_to_index_path,
+        embedding_model=args.embedding_model)
+
+    rag_abstract4subsection = rag_abstract4suboutline
 
     rag_title4citation = GeneralRAG_langchain_citation(args=args,
                                               retriever_type='vectorstore',

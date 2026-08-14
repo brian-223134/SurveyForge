@@ -88,12 +88,24 @@ def integrity(run_dir):
 
 
 def coverage_parts(topic, ref_path):
-    """(matched, 분모, 기준일 이후로 평가에서 빠진 수). test.py 와 같은 규칙으로 센다.
+    """(matched, 분모, 기준일 이후로 평가에서 빠진 수, 기준일, 전체 인용 수, 정전 문헌 수).
 
     coverage 비율만 보면 안 되기 때문에 분해한다. test.py 는 벤치마크 기준일보다 새
     논문을 **분자와 분모 양쪽에서** 뺀다. 그래서 최신 논문을 많이 인용할수록 분모가
     작아지고, 정전 문헌을 실제로 더 적게 맞혀도 비율은 오른다 — 2026-08 스냅샷에서
     실제로 그랬다 (matched 38 -> 18 인데 coverage 는 0.304 -> 0.643).
+
+    그래서 **분모가 실행마다 달라지지 않는 값**을 두 개 더 돌려준다. coverage 는
+    실행 간 비교에 못 쓴다 (분모가 28 대 30 처럼 제각각이다):
+
+      정전 비중  matched / 전체 인용    -- 인용 슬롯을 정전 문헌에 얼마나 썼나
+      재현율     matched / 정전 문헌     -- 정전 문헌을 얼마나 건졌나
+
+    둘 다 분모가 고정이라 실행끼리 그대로 견줄 수 있다. 다만 어느 쪽도 **기준일
+    이후 인용은 평가하지 못한다** -- 정답이 과거 시점 서베이의 인용 목록이라
+    그 이후 논문은 원리적으로 정답에 있을 수 없다. 최신 논문을 미는 실행일수록
+    출력의 더 많은 부분이 측정 밖에 남는다는 뜻이고, 이건 지표를 바꿔서 풀리는
+    문제가 아니다 (SurGE 정답 집합도 2019~2023 서베이라 마찬가지다).
     """
     sys.path.insert(0, BENCH)
     from test import parse_arxiv_date                      # noqa: E402
@@ -113,7 +125,8 @@ def coverage_parts(topic, ref_path):
         target = dated(json.load(f))
     lbd, lbs = max(bench.values(), key=lambda x: (x[0], x[1]))
     valid = {k for k, (d, s) in target.items() if d < lbd or (d == lbd and s < lbs)}
-    return len(valid & set(bench)), len(valid), len(target) - len(valid), lbd
+    return (len(valid & set(bench)), len(valid), len(target) - len(valid), lbd,
+            len(target), len(bench))
 
 
 def run_coverage(topic, out_root, exp=1):
@@ -173,10 +186,14 @@ def main():
                        check=True, capture_output=True)
         cov, raw = run_coverage(args.topic, out_root)
         ref_json = os.path.join(out_root, args.topic, 'exp_1', 'ref.json')
-        matched, denom, ignored, bench_cut = coverage_parts(args.topic, ref_json)
+        (matched, denom, ignored, bench_cut,
+         n_refs_dated, n_bench) = coverage_parts(args.topic, ref_json)
 
         rows.append({'matched': matched, 'denom': denom, 'ignored': ignored,
-                     'bench_cut': bench_cut,
+                     'bench_cut': bench_cut, 'n_bench': n_bench,
+                     # 분모가 실행마다 안 바뀌는 두 값. coverage 와 달리 실행끼리 견줄 수 있다.
+                     'share': matched / n_refs_dated if n_refs_dated else None,
+                     'recall': matched / n_bench if n_bench else None,
                      'label': label, 'path': path, 'refs': len(ids),
                      'dated': len(known), 'recent': recent,
                      'recent_pct': 100 * recent / len(known) if known else 0,
@@ -188,17 +205,37 @@ def main():
     lines = [f'# 회귀 검사 — {args.topic}', '',
              f'인용 날짜 기준 DB: `{os.path.basename(os.path.dirname(args.db))}`  '
              f'/ 최신 판정 기준: {BASE_CUTOFF} 이후', '',
-             '| 실행 | 참고문헌 | **matched** | 분모 | coverage | 평가 제외 | 최신 인용 | 최신 비율 | 단어 | 섹션/서브 | 무결성 |',
-             '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
+             '| 실행 | 참고문헌 | **matched** | **정전 비중** | **재현율** | 분모 | coverage | 평가 제외 | 최신 인용 | 최신 비율 | 단어 | 섹션/서브 | 무결성 |',
+             '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
     for r in rows:
         s = r['stats'] or {}
         ig = r['integrity']
         ok = 'OK' if not any(ig.values()) else ', '.join(f'{k}{v}' for k, v in ig.items() if v)
         cov = f"{r['coverage']:.3f}" if r['coverage'] is not None else '실패'
         lines.append(
-            f"| {r['label']} | {r['refs']} | **{r['matched']}** | {r['denom']} | {cov} | "
+            f"| {r['label']} | {r['refs']} | **{r['matched']}** | "
+            f"**{r['share']:.1%}** | **{r['recall']:.1%}** | {r['denom']} | {cov} | "
             f"{r['ignored']} | {r['recent']}/{r['dated']} | {r['recent_pct']:.1f}% | "
             f"{s.get('words', '-')} | {s.get('sections', '-')}/{s.get('subsections', '-')} | {ok} |")
+
+    if rows:
+        nb = rows[0]['n_bench']
+        lines += ['',
+            f'**정전 비중** = matched / 전체 인용, **재현율** = matched / 정전 문헌 {nb}편. '
+            f'둘 다 분모가 실행과 무관하게 고정이라 **실행끼리 그대로 견줄 수 있다** — '
+            f'coverage 는 분모가 실행마다 달라져 그렇게 못 쓴다.',
+            '',
+            '> **코퍼스가 다른 실행끼리는 이 표의 어느 열로도 비교하지 마라.** 정답이 과거 시점 '
+            '서베이의 인용 목록이라, 기준일 이후 논문은 원리적으로 정답에 들 수 없다. 그래서 '
+            '정규화를 어느 쪽으로 하든 편향이 남는다 — `coverage` 는 분모가 줄어 **최신 논문을 '
+            '미는 실행에 유리**하고, `정전 비중`·`재현율` 은 같은 이유로 **불리**하다. 실제로 두 '
+            '지표가 구 DB 대 신 DB 에서 정반대 순위를 낸다. 지표를 바꿔서 풀리는 문제가 아니다 '
+            '(SurGE 정답 집합도 2019~2023 서베이라 마찬가지다).',
+            '',
+            '> **읽어도 되는 비교는 코퍼스·모델·인자가 같고 검색만 다른 짝뿐이다.** 이 표에서는 '
+            '신 DB 대 survey-search 가 거기 해당한다(최신 비율 78.1% 대 73.0% 로 시기 분포도 '
+            '비슷하다). 구 DB 는 코퍼스가 2024-09 에서 멈춰 인용이 전부 판정 대상이 되므로 '
+            '어느 열에서도 나머지 둘과 같은 자에 놓이지 않는다.']
 
     if len(rows) == 2:
         a, b = rows
