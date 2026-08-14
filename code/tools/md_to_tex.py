@@ -98,7 +98,47 @@ UNICODE_MAP = {
     "\u00ad": "",              # soft hyphen -- invisible, drop it
     "\u200b": "",              # zero-width space
     "\ufeff": "",              # BOM
+    # Math prose. The model writes formulas inline as running text
+    # ("the system computes P(y|x) = \u03a3 ..."), so these arrive in the body, not in
+    # any math environment. One unmapped \u03a3 aborted a whole run at pdflatex pass 1,
+    # and a pass-1 abort leaves every citation number unresolved -- the PDF renders
+    # but its bibliography references are broken, which looks like a data problem
+    # rather than a compile one.
+    "\u00b7": r"$\cdot$",      # middle dot
+    "\u2248": r"$\approx$",
+    "\u2264": r"$\leq$",
+    "\u2265": r"$\geq$",
+    "\u2260": r"$\neq$",
+    "\u00b1": r"$\pm$",
+    "\u221e": r"$\infty$",
+    "\u2208": r"$\in$",
+    "\u2211": r"$\sum$",
+    "\u220f": r"$\prod$",
+    "\u221a": r"$\sqrt{}$",
+    "\u00b0": r"$^{\circ}$",
+    "\u2205": r"$\emptyset$",
+    "\u2229": r"$\cap$",
+    "\u222a": r"$\cup$",
+    "\u2200": r"$\forall$",
+    "\u2203": r"$\exists$",
 }
+
+# Greek. Enumerable, unlike the accented Latin range, but not uniform: the
+# uppercase letters that look like Latin ones (\u0391 \u0392 \u0395 ...) have **no** LaTeX macro
+# -- \Alpha does not exist -- so they map to the Latin letter they are drawn as.
+# A rule that derived every macro from the character name would compile-error on
+# exactly those.
+UNICODE_MAP.update({c: rf"$\{n}$" for c, n in zip(
+    "\u03b1\u03b2\u03b3\u03b4\u03b5\u03b6\u03b7\u03b8\u03b9\u03ba\u03bb\u03bc\u03bd\u03be\u03c0\u03c1\u03c3\u03c4\u03c5\u03c6\u03c7\u03c8\u03c9",
+    ("alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu nu xi "
+     "pi rho sigma tau upsilon phi chi psi omega").split())})
+UNICODE_MAP.update({c: rf"$\{n}$" for c, n in zip(
+    "\u0393\u0394\u0398\u039b\u039e\u03a0\u03a3\u03a5\u03a6\u03a8\u03a9",
+    "Gamma Delta Theta Lambda Xi Pi Sigma Upsilon Phi Psi Omega".split())})
+UNICODE_MAP.update(dict(zip(
+    "\u0391\u0392\u0395\u0396\u0397\u0399\u039a\u039c\u039d\u039f\u03a1\u03a4\u03a7",  # Latin-lookalike uppercase
+    "ABEZHIKMNOPTX")))
+UNICODE_MAP["\u03bf"] = "o"    # omicron -- likewise indistinguishable from Latin o
 
 # Accented letters are not enumerable in advance -- they arrive with author names
 # from the database (K\u00fchn, M\u00fcller, P\u00e9rez, ...). Decomposing to base letter plus
@@ -505,9 +545,19 @@ def main():
 
     print(f"converting {os.path.basename(md_path)}")
     db_path = args.db or db_for_run(os.path.dirname(os.path.abspath(md_path)))
-    if db_path != DEFAULT_DB:
-        print(f"  snapshot: {os.path.basename(os.path.dirname(db_path))} "
-              f"(산출물 경로에서 되짚음)")
+    snapshot = os.path.basename(os.path.dirname(db_path))
+    if args.db:
+        print(f"  snapshot: {snapshot} (--db 로 지정)")
+    elif db_path != DEFAULT_DB:
+        print(f"  snapshot: {snapshot} (산출물 경로에서 되짚음)")
+    else:
+        # 되짚기가 실패해도 조용히 배포본을 물면 최신 논문의 제목·저자가 통째로 빠진
+        # 참고문헌이 나오고, 그건 컴파일도 되고 그럴듯해 보입니다. 경로에 스냅샷
+        # 접미사가 없는 배치(예: 실험 arm 하위 디렉터리)가 실제로 여기에 걸립니다.
+        print(f"  snapshot: {snapshot} (기본값 — 경로에서 되짚지 못했습니다)")
+        print( "  WARNING: 이 실행이 다른 스냅샷을 썼다면 --db <그 스냅샷>/"
+               "arxiv_paper_db_with_cc.json 을 주세요. 안 주면 최신 논문의 "
+               "제목·저자가 빠진 채로 조용히 진행됩니다")
     tex, bib, n = convert(md_path, json_path, out_dir, db_path, args.max_authors)
     print(f"  wrote {tex}")
     if n:
