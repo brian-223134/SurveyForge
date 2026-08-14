@@ -135,6 +135,11 @@ SurveyForge/
 검색 레이어를 [`../survey-search`](../SURVEY-SEARCH.md) 로 바꿔 끼운 실험 arm 입니다.
 **`main` 에는 없습니다.** 생성 로직·프롬프트·평가는 그대로 두고 검색만 갈아끼웁니다.
 
+> `main` 에 병합하지 않은 것은 의도입니다. 병합하면 아무 설정 없이 `run_demo.py` 를
+> 돌렸을 때 원본 SurveyForge 검색이 아니라 survey-search 를 쓰게 되고, 그걸 모르고
+> 돌린 결과를 기존 구 DB·신 DB 결과와 나란히 놓으면 **검색 레이어가 다른 것을
+> 비교**하게 됩니다. 원본이 기본값으로 남아 있어야 통제 비교의 원점이 유지됩니다.
+
 | 파일 | 내용 |
 |---|---|
 | `code/main.py:14` | `from src.rag import GeneralRAG_langchain` → survey-search 어댑터 배선 블록 |
@@ -151,7 +156,7 @@ lexical=False`, 311행(제목 인덱스)은 `facets=False, lexical=False, dense_
 # 1. 코드 — 브랜치를 벗어나면 끝입니다 (main.py 는 커밋돼 있습니다)
 git checkout main
 
-# 2. 파이썬 환경 — 이게 브랜치를 안 따라갑니다. 아래를 지워야 완전히 원복입니다
+# 2. 파이썬 환경 — 이게 브랜치를 안 따라갑니다
 .venv/bin/pip uninstall -y survey-search
 #    duckdb·einops·pyarrow 는 survey-search 가 끌고 온 것이지만 순수 추가라
 #    남겨도 무해합니다. 원본 조건을 엄밀히 맞출 때만 지우세요:
@@ -162,7 +167,7 @@ git checkout main
 `git checkout main` 만으로는 안 없어집니다. 다만 `main` 의 `code/main.py` 는
 `survey_search` 를 import 하지 않으므로 **설치가 남아 있어도 원본 실행에는 영향이 없습니다.**
 
-> ⚠ **생성이 도는 중에는 브랜치를 바꾸지 마세요.** 실행 중인 `main.py` 는 이미 메모리에
+> ⚠ **생성이 도는 중에는 브랜치를 바꾸지 마세요.** 실행 중인 `main.py` 는 메모리에
 > 올라와 있지만 지연 import 가 남아 있고, 실행 스크립트를 bash 가 아직 읽고 있습니다.
 > `pgrep -af '^[^ ]*python main\.py'` 가 비었는지 먼저 확인하세요.
 
@@ -172,6 +177,34 @@ git checkout main
 git diff main --stat                       # 비어야 합니다
 grep -n "survey_search" code/main.py       # 아무것도 안 나와야 합니다
 ```
+
+> `md_to_tex.py` 의 유니코드·스냅샷 수정(`01964d9`)은 이 arm 과 무관한 일반 버그
+> 수정이라 `main` 에도 있으면 좋습니다. 필요하면 그 커밋만 따로 cherry-pick 하세요.
+
+#### 첫 실행 결과 (2026-08-13)
+
+RAG 토픽 1편. 50분, 본문 22,353 words, 참고문헌 122편, `TRUNCATED`·`EMPTY` 0건.
+**어댑터가 실제 호스트에서 끝까지 돕니다** — 이게 가장 큰 미검증 구간이었습니다.
+
+정답 대조는 [`eval_out/eval_survey_search_arm.md`](eval_out/eval_survey_search_arm.md).
+**정확도가 신 DB 보다 낮습니다**(0.400 vs 0.643, matched 12 vs 18). 검색 단계
+정답 기준으로는 R@1500 이 38.7% → 57.5% 인데 생성물 인용 정확도로는 뒤집힙니다.
+분모가 28~30 이라 이 표만으로 "검색 개선이 본문에 전달 안 됐다"인지 "이 지표가
+그걸 못 잰다"인지 가릴 수 없습니다. 해석은 아직 열려 있습니다.
+
+실행 중 오염 2건 — facet 분해가 재시도 끝에 실패해 규칙 기반 fallback 으로
+내려갔습니다(429 6건, facet 120초 타임아웃 다수). survey-search 의 170토픽 평가는
+fallback 0회를 품질 조건으로 걸었으므로 이 실행은 그 조건을 못 맞춥니다.
+
+> **PDF 로 변환할 땐 `--db` 를 반드시 주세요.** 이 arm 의 출력 경로에는
+> `__database_2026-08` 접미사가 없어 `md_to_tex` 의 스냅샷 되짚기가 배포본(2024-09)
+> 으로 폴백합니다. 지금은 그 경우 경고가 뜨지만, 경고를 무시하면 최신 논문의
+> 제목·저자가 빠진 참고문헌이 나옵니다.
+>
+> ```bash
+> .venv/bin/python code/tools/md_to_tex.py "<run_dir>" --compile \
+>   --db $SURVEYFORGE_DATA/database_2026-08/arxiv_paper_db_with_cc.json
+> ```
 
 출력물은 손댈 필요가 없습니다. 이 arm 은
 `code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/` 아래에만 쓰고,

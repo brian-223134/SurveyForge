@@ -21,19 +21,28 @@ ls eval_out/eval_*.md 2>/dev/null          # 완료된 회귀 검사
 git log --oneline -5 ; git status --short
 ```
 
-**2026-08-13 07:07 기준 — survey-search arm 생성 1편이 돌고 있습니다.**
-브랜치 `survey-search-arm` 에서만 재현됩니다. 끝났는지는
-`pgrep -af '^[^ ]*python main\.py'` 로 확인하세요.
+**2026-08-13 08:54 기준 — 돌고 있는 것 없습니다.** survey-search arm 생성 1편이
+완주했고 후처리(PDF·회귀 비교)까지 끝났습니다.
 
 | 작업 | 스크립트 | 로그 | 산출 |
 |---|---|---|---|
-| survey-search arm (RAG 토픽 1편) | `scripts/run_survey_search_arm.sh` | `eval_out/survey_search_arm.log` | `code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/<토픽>/exp_1` |
+| *(없음)* | | | |
 
-- 07:06:48 시작, **예상 55~70분** (베이스라인 34분 + 서브섹션 facet 분해 20~30분)
-- 대조군은 이미 있습니다 — 같은 토픽·모델·인자의
-  `deepseek_deepseek-v4-flash-0731__database_2026-08/` (신 DB arm)
-- **원래 방식으로 되돌리는 절차는 [`README.md`](README.md) §2 「survey-search arm」** 에 있습니다.
-  요지: `git checkout main` + `pip uninstall survey-search`. **생성이 끝난 뒤에 하세요.**
+> **survey-search arm 은 브랜치 `survey-search-arm` 에만 있습니다.** `main` 은 원본
+> 검색 그대로입니다 — 통제 비교의 원점을 기본값으로 남겨 두기 위해 병합하지
+> 않았습니다. 아래 산출물을 재현하려면 그 브랜치로 옮기고 `pip install -e
+> ../survey-search` 를 먼저 하세요. 절차는 [`README.md`](README.md) §2.
+
+지난 실행 (2026-08-13 08:04~08:54, 50분, 브랜치 `survey-search-arm`):
+
+| 스크립트 | 로그 | 산출 |
+|---|---|---|
+| `scripts/run_survey_search_arm.sh` | `eval_out/survey_search_arm.log` | `code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/<토픽>/exp_1` |
+| `scripts/post_survey_search_arm.sh` (후처리) | `eval_out/survey_search_arm_post.log` | `eval_out/eval_survey_search_arm.md` |
+
+- 본문 22,353 words · 참고문헌 122편 · `TRUNCATED`·`EMPTY` 0건 · PDF 47페이지
+- **정확도는 신 DB 보다 낮습니다** (0.400 vs 0.643). 해석은 열려 있습니다 — §README
+- 오염 2건: facet 분해 fallback (429 6건, 120초 타임아웃 다수)
 
 서베이 생성은 **사용자가 지시할 때만** 합니다(편당 실비 $0.3~2). 검증·집계처럼 돈이 안 드는
 구간은 알아서 진행해도 됩니다.
