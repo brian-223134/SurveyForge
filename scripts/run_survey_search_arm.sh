@@ -18,7 +18,10 @@ export SURVEYFORGE_PAPER_ID_CUTOFF=2608
 export SURVEYFORGE_PAPER_DATE_NEWEST=2026-08-31
 
 T="${1:-Retrieval-Augmented Generation for Large Language Models}"
-OUT="output/res/deepseek_deepseek-v4-flash-0731/survey-search/$T/exp_1"
+# 설정이 다르면 디렉터리를 가릅니다. exp_N 은 "같은 조건 반복"(SURVEYFORGE_EXPS)이라
+# 다른 설정을 exp_2 로 두면 둘을 평균 내는 사람이 조건 섞인 표를 만듭니다.
+VARIANT="${SS_VARIANT:-survey-search}"
+OUT="output/res/deepseek_deepseek-v4-flash-0731/$VARIANT/$T/exp_1"
 
 if [ -e "code/$OUT/$T.md" ]; then
     echo "!! 이미 있습니다: code/$OUT — 덮어쓰지 않고 멈춥니다"
@@ -31,6 +34,7 @@ mkdir -p "code/$OUT"
 cd code
 echo "=== [$(date '+%F %T')] 생성 시작 — $T ==="
 echo "=== 출력: code/$OUT  ·  GPU $CUDA_VISIBLE_DEVICES ==="
+echo "=== 서브섹션 rerank: ${SURVEY_SEARCH_SUBSECTION_RERANK:-<호스트 인자 그대로>} ==="
 
 ../.venv/bin/python main.py \
     --topic "$T" \

@@ -31,6 +31,44 @@ _load_survey_search_env("/data2/chanjoong/survey-agent/survey-search/.env")  # f
 
 _BACKEND = None
 
+#: 서브섹션 검색의 `rerank` 인자를 강제로 바꿉니다. 비우면 호스트 인자를 그대로 씁니다.
+#: `raw` 로 주면 freshness 랭킹이 꺼지고 RRF 순서만 남습니다 — 정전 문헌 손실이
+#: freshness 치환에서 오는지 가리는 실험용 스위치입니다.
+_SUB_RERANK = os.environ.get("SURVEY_SEARCH_SUBSECTION_RERANK", "").strip()
+
+
+class _ForceRerank:
+    """`retrieve_id` 의 `rerank` 만 바꿔 넘기는 얇은 위임 래퍼.
+
+    설정을 조용히 바꾸면 A/B 가 무의미해지므로 **첫 호출에서 한 번 로그로 남깁니다.**
+    나머지 속성(`id_to_index`, `rag_data`, `last_stats`, `report_window_drops` …)은
+    그대로 통과시킵니다.
+    """
+
+    def __init__(self, inner, rerank):
+        self._inner = inner
+        self._rerank = rerank
+        self._announced = False
+
+    def retrieve_id(self, query, *a, **kw):
+        # 호스트는 query 만 위치 인자로 주고 나머지는 전부 키워드입니다
+        # (writer.py:76, outline_writer.py:240·247). 위치 인자가 오면 rerank 를
+        # 중복 전달하게 되므로 조용히 통과시키지 않고 여기서 멈춥니다.
+        if a:
+            raise TypeError(
+                f"_ForceRerank 는 위치 인자를 받지 못합니다({len(a)}개 왔습니다). "
+                "호스트 호출부가 바뀌었다면 이 래퍼를 같이 고치세요.")
+        if not self._announced:
+            print(f"[survey-search] 서브섹션 rerank {kw.get('rerank', 'raw')!r}"
+                  f" -> {self._rerank!r} 강제 (SURVEY_SEARCH_SUBSECTION_RERANK). "
+                  f"freshness 랭킹이 꺼집니다.")
+            self._announced = True
+        kw['rerank'] = self._rerank
+        return self._inner.retrieve_id(query, **kw)
+
+    def __getattr__(self, name):
+        return getattr(self._inner, name)
+
 
 def _backend():
     """FAISS 인덱스를 **한 번만** 올립니다 (로드 16초 + 메모리). 두 인스턴스가 공유합니다."""
@@ -61,11 +99,17 @@ def GeneralRAG_langchain_subsection(*args, **kwargs):
     내려간 것이 2건** 있었습니다 — survey-search 의 170토픽 평가가 품질 조건으로 건
     "fallback 0회"를 못 맞춘 실행이 됐습니다.
 
-    freshness 는 켜 둡니다. 랭킹 단계는 풀 크기와 무관하게 매번 작동합니다.
+    **freshness 는 config 로 못 끕니다.** 어댑터가 `adapters/surveyforge.py:170` 에서
+    `freshness = rerank in ("citation","citation_period")` 로 호스트 인자를 우선합니다.
+    서브아웃라인은 `rerank='raw'` 라 원래 꺼져 있고, 서브섹션은 `writer.py:76` 이
+    `rerank='citation'` 을 넘겨 켜집니다. 그래서 아래 config 의 freshness 값은
+    서브섹션 경로에서 **아무 효과가 없습니다** — 끄려면 인자를 가로채야 하고,
+    그게 `SURVEY_SEARCH_SUBSECTION_RERANK=raw` 입니다(`_ForceRerank`).
     """
-    return SurveySearchRAG(*args, backend=_backend(),
-                           config=SearchConfig(facets=False, freshness=True, lexical=False),
-                           **kwargs)
+    rag = SurveySearchRAG(*args, backend=_backend(),
+                          config=SearchConfig(facets=False, freshness=True, lexical=False),
+                          **kwargs)
+    return _ForceRerank(rag, _SUB_RERANK) if _SUB_RERANK else rag
 
 
 def GeneralRAG_langchain_citation(*args, **kwargs):

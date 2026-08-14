@@ -121,7 +121,15 @@ UNICODE_MAP = {
     "\u222a": r"$\cup$",
     "\u2200": r"$\forall$",
     "\u2203": r"$\exists$",
+    "\u00a7": r"\S{}",           # section sign
+    "\u00df": r"\ss{}",          # NFD 분해가 없어 deaccent 로는 안 잡힌다 (Nie\u00dfner)
+    "\u1d40": r"$^{T}$",         # 전치. 모델이 산문에 S\u1d40 R\u1d40 처럼 쓴다
 }
+
+# 아래첨자. 위첨자 \u00b9\u00b2\u00b3\u2074 는 위에 있지만 나머지 자리와 아래첨자 전체가 비어 있었다.
+# 모델이 L\u2081 / x\u2080 처럼 본문에 그대로 쓴다.
+UNICODE_MAP.update({c: rf"$^{{{d}}}$" for c, d in zip("\u2070\u2075\u2076\u2077\u2078\u2079", "056789")})
+UNICODE_MAP.update({c: rf"$_{{{d}}}$" for c, d in zip("\u2080\u2081\u2082\u2083\u2084\u2085\u2086\u2087\u2088\u2089", "0123456789")})
 
 # Greek. Enumerable, unlike the accented Latin range, but not uniform: the
 # uppercase letters that look like Latin ones (\u0391 \u0392 \u0395 ...) have **no** LaTeX macro
@@ -227,14 +235,39 @@ def protect(text, store):
     for step in (
         sub(r"\\\[.*?\\\]", "MATH", re.S),   # display
         sub(r"\\\(.*?\\\)", "MATH", re.S),   # inline
-        sub(r"`[^`]+`", "CODE"),
+        # 줄바꿈을 넘지 않는다. Markdown 코드 스팬은 한 줄 안에서 닫히는데, 모델이
+        # 백틱을 짝 없이 흘리면 `[^`]+` 가 **산문 한 뭉치를 통째로** 삼킨다. 그러면
+        # 문단 경계를 품은 \texttt{...} 가 만들어져 "Paragraph ended before
+        # \text@command was complete" 로 죽는다 (실측: 산문 블록 하나에 em dash 66개).
+        sub(r"`[^`\n]+`", "CODE"),
     ):
         text = step(text)
     return text
 
 
+def _map_only(text, math_mode=False):
+    """UNICODE_MAP + deaccent 만 적용한다 (LaTeX 특수문자 이스케이프는 하지 않는다).
+
+    보호 구간(MATH/CODE)은 escape() 를 안 거치므로 여기서 따로 태워야 한다. 안 그러면
+    맵에 **있는** 문자도 그대로 남아 pdflatex 이 죽는다 -- 실측으로 `\u2014` 151개 중 66개,
+    `\u03b8` 3개 전부가 보호 구간 안이었다.
+
+    `math_mode=True` 면 치환값의 `$` 를 벗긴다. 이미 수식 안이라 `$` 를 그대로 넣으면
+    수식이 닫혔다 열리면서 깨진다.
+    """
+    for ch, esc in UNICODE_MAP.items():
+        if ch not in text:
+            continue
+        if math_mode and len(esc) > 1 and esc.startswith("$") and esc.endswith("$"):
+            esc = esc[1:-1]
+        text = text.replace(ch, esc)
+    return deaccent(text)
+
+
 def restore(text, store):
     for i, (kind, raw) in enumerate(store):
+        if kind == "MATH":
+            raw = _map_only(raw, math_mode=True)
         if kind == "CODE":
             # Strip the backticks and make the content verbatim-ish. The only
             # occurrence in practice is an HTML-looking tag such as `<read>`,
@@ -243,6 +276,7 @@ def restore(text, store):
             for ch, esc in LATEX_SPECIALS:
                 body = body.replace(ch, esc)
             body = body.replace("\x00BS\x00", r"\textbackslash{}")
+            body = _map_only(body)
             raw = r"\texttt{" + body + "}"
         text = text.replace(f"\x00{kind}{i}\x00", raw)
     return text
@@ -508,10 +542,10 @@ def convert(md_path, json_path, out_dir, db_path, max_authors):
     if leftover:
         print("  WARNING: unmapped non-ASCII characters remain: "
               + " ".join(f"U+{ord(c):04X}({c})" for c in leftover)
-              + "\n  add them to UNICODE_MAP, or compile with xelatex",
+              + "\n  -> xelatex 으로 컴파일합니다. 자주 나오는 문자면 UNICODE_MAP 에 넣으세요",
               file=sys.stderr)
 
-    return tex_path, bib_path, len(order)
+    return tex_path, bib_path, len(order), bool(leftover)
 
 
 def main():
@@ -558,7 +592,8 @@ def main():
         print( "  WARNING: 이 실행이 다른 스냅샷을 썼다면 --db <그 스냅샷>/"
                "arxiv_paper_db_with_cc.json 을 주세요. 안 주면 최신 논문의 "
                "제목·저자가 빠진 채로 조용히 진행됩니다")
-    tex, bib, n = convert(md_path, json_path, out_dir, db_path, args.max_authors)
+    tex, bib, n, needs_xetex = convert(md_path, json_path, out_dir, db_path,
+                                       args.max_authors)
     print(f"  wrote {tex}")
     if n:
         print(f"  wrote {bib}  ({n} references)")
@@ -569,21 +604,25 @@ def main():
         # working install (on this box it is a perl wrapper that needs a GUI).
         # Two passes resolve \cite and the table of contents; a third settles
         # page numbers if the ToC changed pagination.
-        print("  compiling (3 pdflatex passes)...")
+        # 모델이 내놓는 문자를 미리 다 열거할 수는 없다. 남은 게 있으면 engine 을 바꾼다 --
+        # 경고만 띄우던 판에서는 그 경고가 두 번 다 무시됐고, 두 번 다 pass 1 에서 죽어
+        # **인용 번호가 전부 미해소된 PDF** 가 남았다. 열려서 데이터 문제로 보이는 종류다.
+        engine = "xelatex" if needs_xetex else "pdflatex"
+        print(f"  compiling (3 {engine} passes)...")
         for i in range(1, 4):
             # errors="replace": pdflatex echoes source bytes into its log, and a
             # font-encoding warning can carry a byte that is not valid UTF-8.
             # Without this the decode raises and the traceback buries the actual
             # LaTeX error we were trying to report.
             r = subprocess.run(
-                ["pdflatex", "-interaction=nonstopmode", os.path.basename(tex)],
+                [engine, "-interaction=nonstopmode", os.path.basename(tex)],
                 cwd=out_dir, capture_output=True, text=True,
                 encoding="utf-8", errors="replace")
             if r.returncode != 0:
                 errs = [l for l in r.stdout.splitlines()
                         if l.startswith("!") or l.startswith("l.")]
-                sys.exit("  pdflatex failed on pass %d:\n    %s"
-                         % (i, "\n    ".join(errs[:15] or r.stdout.splitlines()[-15:])))
+                sys.exit("  %s failed on pass %d:\n    %s"
+                         % (engine, i, "\n    ".join(errs[:15] or r.stdout.splitlines()[-15:])))
         pdf = os.path.splitext(tex)[0] + ".pdf"
         print(f"  wrote {pdf} ({os.path.getsize(pdf) / 1024:.0f} KB)")
 

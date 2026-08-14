@@ -1,0 +1,39 @@
+# 3D Gaussian Splatting: A Comprehensive Survey of Representations, Algorithms, and Emerging Frontiers
+## 1 Introduction
+## 2 Mathematical Foundations, Rendering Pipeline, and Optimization
+### 2.1 Mathematical Formulation of Anisotropic Gaussian Primitives
+### 2.2 The Differentiable Rasterization and Volume Rendering Pipeline
+### 2.3 Optimization, Loss Design, and Adaptive Density Control
+### 2.4 Initialization Strategies and Robust Optimization from Suboptimal Inputs
+### 2.5 Acceleration and System-Level Optimization
+## 3 Quality Enhancement, Regularization, and Robustness
+### 3.1 Scale-Aware Rendering and Anti-Aliasing
+### 3.2 Geometric and Surface Regularization for Accurate Reconstruction
+### 3.3 Sparse-View and Generalizable Reconstruction
+### 3.4 Appearance and Degradation in the Wild
+## 4 Scene Representation, Geometry Extraction, and Compression for Scalability
+### 4.1 Surface Extraction and Geometry Reconstruction
+### 4.2 Physically-Based Modeling and Material Decomposition
+### 4.3 Spatial Scalability and Large-Scale Scene Representation
+### 4.4 Compression, Compact Representation, and Storage Optimization
+### 4.5 Feed-Forward and Generalizable Reconstruction
+## 5 Dynamic Scene Modeling and Spatial-Temporal Representation
+### 5.1 Foundations of Deformable and Canonical-Space Modeling
+### 5.2 Explicit and Native Spatio-Temporal Gaussian Representations
+### 5.3 Static-Dynamic Decomposition and Multi-Object Scene Partitioning
+### 5.4 Semantic, Controllable, and Interactive Dynamic Modeling
+### 5.5 Occlusion, Robustness, and Monocular Video Degradation
+### 5.6 Dynamic Surface Reconstruction and Simulation
+## 6 Scene Understanding, Interaction, and Editing Applications
+### 6.1 Semantic Decomposition and Open-Vocabulary Scene Understanding
+### 6.2 Spatial and Appearance Editing Techniques
+### 6.3 Deformation, Animation, and Control Structures
+### 6.4 Scene Generation and Content Synthesis with Generative Priors**
+## 7 Real-World Applications and Advanced Interaction
+### 7.1 Robotics, Autonomous Navigation, and SLAM
+### 7.2 Large-Scale and Aerial-to-Ground Scene Modeling
+### 7.3 Virtual Production, Mixed Reality, and Embedded Systems
+### 7.4 Physics-Integrated Simulation and Digital Twins
+### 7.5 Emergent Domains: Multimodal Sensing, Generation, and Safety
+## 8 Conclusion
+

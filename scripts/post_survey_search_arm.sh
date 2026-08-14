@@ -11,8 +11,9 @@ cd /data2/chanjoong/survey-agent/SurveyForge
 DATA=/data2/chanjoong/survey-agent/SurveyForge_data
 DB="$DATA/database_2026-08/arxiv_paper_db_with_cc.json"
 T="${1:-Retrieval-Augmented Generation for Large Language Models}"
-SLUG=$(echo "$T" | tr ' /' '__')
-RUN="code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/$T/exp_1"
+VARIANT="${SS_VARIANT:-survey-search}"
+SLUG=$(echo "${VARIANT}_${T}" | tr ' /' '__')
+RUN="code/output/res/deepseek_deepseek-v4-flash-0731/$VARIANT/$T/exp_1"
 LOG="eval_out/survey_search_arm_${SLUG}.log"
 SS_PID="${SS_PID:-0}"
 
@@ -59,7 +60,8 @@ say "회귀 비교 (구 DB · 신 DB · survey-search${HUMAN:+ · 인간})"
 .venv/bin/python scripts/compare_runs.py --topic "$T" \
     --run "구 DB=code/output/res/deepseek_deepseek-v4-flash-0731/$T/exp_1" \
     --run "신 DB=code/output/res/deepseek_deepseek-v4-flash-0731__database_2026-08/$T/exp_1" \
-    --run "survey-search=$RUN" \
+    --run "survey-search=code/output/res/deepseek_deepseek-v4-flash-0731/survey-search/$T/exp_1" \
+    ${SS_EXTRA_RUN:+--run "$SS_EXTRA_RUN"} \
     ${HUMAN:+--human "$HUMAN"} \
     --out "eval_out/eval_survey_search_${SLUG}.md" \
     && say "비교표: eval_out/eval_survey_search_${SLUG}.md" \
