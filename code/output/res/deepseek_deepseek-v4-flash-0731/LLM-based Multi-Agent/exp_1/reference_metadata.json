@@ -1,0 +1,2047 @@
+{
+ "2311.13743v2": {
+  "id": "2311.13743v2",
+  "title": "FinMem  A Performance-Enhanced LLM Trading Agent with Layered Memory and\n  Character Design",
+  "url": "http://arxiv.org/pdf/2311.13743v2",
+  "date": "2023-11-23",
+  "abs": "Recent advancements in Large Language Models (LLMs) have exhibited notable\nefficacy in question-answering (QA) tasks across diverse domains. Their prowess\nin integrating extensive web knowledge has fueled interest in developing\nLLM-based autonomous agents. While LLMs are efficient in decoding human\ninstructions and deriving solutions by holistically processing historical\ninputs, transitioning to purpose-driven agents requires a supplementary\nrational architecture to process multi-source information, establish reasoning\nchains, and prioritize critical tasks. Addressing this, we introduce\n\\textsc{FinMem}, a novel LLM-based agent framework devised for financial\ndecision-making. It encompasses three core modules: Profiling, to customize the\nagent's characteristics; Memory, with layered message processing, to aid the\nagent in assimilating hierarchical financial data; and Decision-making, to\nconvert insights gained from memories into investment decisions. Notably,\n\\textsc{FinMem}'s memory module aligns closely with the cognitive structure of\nhuman traders, offering robust interpretability and real-time tuning. Its\nadjustable cognitive span allows for the retention of critical information\nbeyond human perceptual limits, thereby enhancing trading outcomes. This\nframework enables the agent to self-evolve its professional knowledge, react\nagilely to new investment cues, and continuously refine trading decisions in\nthe volatile financial environment. We first compare \\textsc{FinMem} with\nvarious algorithmic agents on a scalable real-world financial dataset,\nunderscoring its leading trading performance in stocks. We then fine-tuned the\nagent's perceptual span and character setting to achieve a significantly\nenhanced trading performance. Collectively, \\textsc{FinMem} presents a\ncutting-edge LLM agent framework for automated trading, boosting cumulative\ninvestment returns.",
+  "cat": "q-fin.CP",
+  "authors": [
+   "Yangyang Yu",
+   "Haohang Li",
+   "Zhi Chen",
+   "Yuechen Jiang",
+   "Yang Li",
+   "Denghui Zhang",
+   "Rong Liu",
+   "Jordan W. Suchow",
+   "Khaldoun Khashanah"
+  ],
+  "citation_count": 22
+ },
+ "2311.13148v3": {
+  "id": "2311.13148v3",
+  "title": "Towards Responsible Generative AI  A Reference Architecture for\n  Designing Foundation Model based Agents",
+  "url": "http://arxiv.org/pdf/2311.13148v3",
+  "date": "2023-11-22",
+  "abs": "Foundation models, such as large language models (LLMs), have been widely\nrecognised as transformative AI technologies due to their capabilities to\nunderstand and generate content, including plans with reasoning capabilities.\nFoundation model based agents derive their autonomy from the capabilities of\nfoundation models, which enable them to autonomously break down a given goal\ninto a set of manageable tasks and orchestrate task execution to meet the goal.\nDespite the huge efforts put into building foundation model based agents, the\narchitecture design of the agents has not yet been systematically explored.\nAlso, while there are significant benefits of using agents for planning and\nexecution, there are serious considerations regarding responsible AI related\nsoftware quality attributes, such as security and accountability. Therefore,\nthis paper presents a pattern-oriented reference architecture that serves as\nguidance when designing foundation model based agents. We evaluate the\ncompleteness and utility of the proposed reference architecture by mapping it\nto the architecture of two real-world agents.",
+  "cat": "cs.AI",
+  "authors": [
+   "Qinghua Lu",
+   "Liming Zhu",
+   "Xiwei Xu",
+   "Zhenchang Xing",
+   "Stefan Harrer",
+   "Jon Whittle"
+  ],
+  "citation_count": 4
+ },
+ "1901.08441v3": {
+  "id": "1901.08441v3",
+  "title": "An Evaluation of Communication Protocol Languages for Engineering\n  Multiagent Systems",
+  "url": "http://arxiv.org/pdf/1901.08441v3",
+  "date": "2019-01-24",
+  "abs": "Communication protocols are central to engineering decentralized multiagent\nsystems. Modern protocol languages are typically formal and address aspects of\ndecentralization, such as asynchrony. However, modern languages differ in\nimportant ways in their basic abstractions and operational assumptions. This\ndiversity makes a comparative evaluation of protocol languages a challenging\ntask.\n  We contribute a rich evaluation of modern protocol languages based on diverse\napproaches. Among the selected languages, Scribble is based on session types;\nTrace-C and Trace-F on trace expressions; HAPN on hierarchical state machines,\nand BSPL on information causality. Our contribution is four-fold. One, we\ncontribute important criteria for evaluating protocol languages. Two, for each\ncriterion, we compare the languages on the basis of whether they are able to\nspecify elementary protocols that go to the heart of the criterion. Three, for\neach language, we map our findings to a canonical architecture style for\nmultiagent systems, highlighting where the languages depart from the\narchitecture. Four, we identify a few design principles for protocol languages\nas guidance for future research.",
+  "cat": "cs.SE",
+  "authors": [
+   "Amit K. Chopra",
+   "Samuel H. Christie V",
+   "Munindar P. Singh"
+  ],
+  "citation_count": 20
+ },
+ "1901.06085v1": {
+  "id": "1901.06085v1",
+  "title": "Theory of Minds  Understanding Behavior in Groups Through Inverse\n  Planning",
+  "url": "http://arxiv.org/pdf/1901.06085v1",
+  "date": "2019-01-18",
+  "abs": "Human social behavior is structured by relationships. We form teams, groups,\ntribes, and alliances at all scales of human life. These structures guide\nmulti-agent cooperation and competition, but when we observe others these\nunderlying relationships are typically unobservable and hence must be inferred.\nHumans make these inferences intuitively and flexibly, often making rapid\ngeneralizations about the latent relationships that underlie behavior from just\nsparse and noisy observations. Rapid and accurate inferences are important for\ndetermining who to cooperate with, who to compete with, and how to cooperate in\norder to compete. Towards the goal of building machine-learning algorithms with\nhuman-like social intelligence, we develop a generative model of multi-agent\naction understanding based on a novel representation for these latent\nrelationships called Composable Team Hierarchies (CTH). This representation is\ngrounded in the formalism of stochastic games and multi-agent reinforcement\nlearning. We use CTH as a target for Bayesian inference yielding a new\nalgorithm for understanding behavior in groups that can both infer hidden\nrelationships as well as predict future actions for multiple agents interacting\ntogether. Our algorithm rapidly recovers an underlying causal model of how\nagents relate in spatial stochastic games from just a few observations. The\npatterns of inference made by this algorithm closely correspond with human\njudgments and the algorithm makes the same rapid generalizations that people\ndo.",
+  "cat": "cs.AI",
+  "authors": [
+   "Michael Shum",
+   "Max Kleiman-Weiner",
+   "Michael L. Littman",
+   "Joshua B. Tenenbaum"
+  ],
+  "citation_count": 74
+ },
+ "2304.14721v4": {
+  "id": "2304.14721v4",
+  "title": "Towards autonomous system  flexible modular production system enhanced\n  with large language model agents",
+  "url": "http://arxiv.org/pdf/2304.14721v4",
+  "date": "2023-04-28",
+  "abs": "In this paper, we present a novel framework that combines large language\nmodels (LLMs), digital twins and industrial automation system to enable\nintelligent planning and control of production processes. We retrofit the\nautomation system for a modular production facility and create executable\ncontrol interfaces of fine-granular functionalities and coarse-granular skills.\nLow-level functionalities are executed by automation components, and high-level\nskills are performed by automation modules. Subsequently, a digital twin system\nis developed, registering these interfaces and containing additional\ndescriptive information about the production system. Based on the retrofitted\nautomation system and the created digital twins, LLM-agents are designed to\ninterpret descriptive information in the digital twins and control the physical\nsystem through service interfaces. These LLM-agents serve as intelligent agents\non different levels within an automation system, enabling autonomous planning\nand control of flexible production. Given a task instruction as input, the\nLLM-agents orchestrate a sequence of atomic functionalities and skills to\naccomplish the task. We demonstrate how our implemented prototype can handle\nun-predefined tasks, plan a production process, and execute the operations.\nThis research highlights the potential of integrating LLMs into industrial\nautomation systems in the context of smart factory for more agile, flexible,\nand adaptive production processes, while it also underscores the critical\ninsights and limitations for future work. Demos at:\nhttps://github.com/YuchenXia/GPT4IndustrialAutomation",
+  "cat": "cs.RO",
+  "authors": [
+   "Yuchen Xia",
+   "Manthan Shenoy",
+   "Nasser Jazdi",
+   "Michael Weyrich"
+  ],
+  "citation_count": 32
+ },
+ "2006.00176v2": {
+  "id": "2006.00176v2",
+  "title": "When2com  Multi-Agent Perception via Communication Graph Grouping",
+  "url": "http://arxiv.org/pdf/2006.00176v2",
+  "date": "2020-05-30",
+  "abs": "While significant advances have been made for single-agent perception, many\napplications require multiple sensing agents and cross-agent communication due\nto benefits such as coverage and robustness. It is therefore critical to\ndevelop frameworks which support multi-agent collaborative perception in a\ndistributed and bandwidth-efficient manner. In this paper, we address the\ncollaborative perception problem, where one agent is required to perform a\nperception task and can communicate and share information with other agents on\nthe same task. Specifically, we propose a communication framework by learning\nboth to construct communication groups and decide when to communicate. We\ndemonstrate the generalizability of our framework on two different perception\ntasks and show that it significantly reduces communication bandwidth while\nmaintaining superior performance.",
+  "cat": "cs.CV",
+  "authors": [
+   "Yen-Cheng Liu",
+   "Junjiao Tian",
+   "Nathaniel Glaser",
+   "Zsolt Kira"
+  ],
+  "citation_count": 161
+ },
+ "1204.1581v1": {
+  "id": "1204.1581v1",
+  "title": "A new approach of designing Multi-Agent Systems",
+  "url": "http://arxiv.org/pdf/1204.1581v1",
+  "date": "2012-04-07",
+  "abs": "Agent technology is a software paradigm that permits to implement large and\ncomplex distributed applications. In order to assist analyzing, conception and\ndevelopment or implementation phases of multi-agent systems, we've tried to\npresent a practical application of a generic and scalable method of a MAS with\na component-oriented architecture and agent-based approach that allows MDA to\ngenerate source code from a given model. We've designed on AUML the class\ndiagrams as a class meta-model of different agents of a MAS. Then we generated\nthe source code of the models developed using an open source tool called\nAndroMDA. This agent-based and evolutive approach enhances the modularity and\ngenericity developments and promotes their reusability in future developments.\nThis property distinguishes our design methodology of existing methodologies in\nthat it is constrained by any particular agent-based model while providing a\nlibrary of generic models",
+  "cat": "cs.MA",
+  "authors": [
+   "Sara Maalal",
+   "Malika Addou"
+  ],
+  "citation_count": 24
+ },
+ "2208.09099v3": {
+  "id": "2208.09099v3",
+  "title": "Scalable Multi-Agent Lab Framework for Lab Optimization",
+  "url": "http://arxiv.org/pdf/2208.09099v3",
+  "date": "2022-08-19",
+  "abs": "Autonomous materials research systems allow scientists to fail smarter, learn\nfaster, and spend less resources in their studies. As these systems grow in\nnumber, capability, and complexity, a new challenge arises - how will they work\ntogether across large facilities? We explore one solution to this question - a\nmulti-agent laboratory control frame-work. We demonstrate this framework with\nan autonomous material science lab in mind - where information from diverse\nresearch campaigns can be combined to ad-dress the scientific question at hand.\nThis framework can 1) account for realistic resource limits such as equipment\nuse, 2) allow for machine learning agents with diverse learning capabilities\nand goals capable of running re-search campaigns, and 3) facilitate multi-agent\ncollaborations and teams. The framework is dubbed the MULTI-agent auTonomous\nfAcilities - a Scalable frameworK aka MULTITASK. MULTITASK makes possible\nfacility-wide simulations, including agent-instrument and agent-agent\ninteractions. Through MULTITASK's modularity, real-world facilities can come\non-line in phases, with simulated instruments gradually replaced by real-world\ninstruments. We hope MULTITASK opens new areas of study in large-scale\nautonomous and semi-autonomous research campaigns and facilities.",
+  "cat": "cs.MA",
+  "authors": [
+   "A. Gilad Kusne",
+   "Austin McDannald"
+  ],
+  "citation_count": 12
+ },
+ "1507.03826v1": {
+  "id": "1507.03826v1",
+  "title": "Modelling Structured Societies  a Multi-relational Approach to Context\n  Permeability",
+  "url": "http://arxiv.org/pdf/1507.03826v1",
+  "date": "2015-07-14",
+  "abs": "The structure of social relations is fundamental for the construction of\nplausible simulation scenarios. It shapes the way actors interact and create\ntheir identity within overlapping social contexts. Each actor interacts in\nmultiple contexts within different types of social relations that constitute\ntheir social space. In this article, we present an approach to model structured\nagent societies with multiple coexisting social networks. We study the notion\nof context permeability, using a game in which agents try to achieve global\nconsensus. We design and analyse two different models of permeability. In the\nfirst model, agents interact concurrently in multiple social networks. In the\nsecond, we introduce a context switching mechanism which adds a dynamic\ntemporal component to agent interaction in the model. Agents switch between the\ndifferent networks spending more or less time in each one. We compare these\nmodels and analyse the influence of different social networks regarding the\nspeed of convergence to consensus. We conduct a series of experiments that show\nthe impact of different configurations for coexisting social networks. This\napproach unveils both the limitations of the current modelling approaches and\npossible research directions for complex social space simulations.",
+  "cat": "cs.MA",
+  "authors": [
+   "Davide Nunes",
+   "Luis Antunes"
+  ],
+  "citation_count": 6
+ },
+ "1803.05464v1": {
+  "id": "1803.05464v1",
+  "title": "Review of Multi-Agent Algorithms for Collective Behavior  a Structural\n  Taxonomy",
+  "url": "http://arxiv.org/pdf/1803.05464v1",
+  "date": "2018-03-14",
+  "abs": "In this paper, we review multi-agent collective behavior algorithms in the\nliterature and classify them according to their underlying mathematical\nstructure. For each mathematical technique, we identify the multi-agent\ncoordination tasks it can be applied to, and we analyze its scalability,\nbandwidth use, and demonstrated maturity. We highlight how versatile techniques\nsuch as artificial potential functions can be used for applications ranging\nfrom low-level position control to high-level coordination and task allocation,\nwe discuss possible reasons for the slow adoption of complex distributed\ncoordination algorithms in the field, and we highlight areas for further\nresearch and development.",
+  "cat": "cs.RO",
+  "authors": [
+   "Federico Rossi",
+   "Saptarshi Bandyopadhyay",
+   "Michael Wolf",
+   "Marco Pavone"
+  ],
+  "citation_count": 96
+ },
+ "2402.08189v1": {
+  "id": "2402.08189v1",
+  "title": "Simulating Human Strategic Behavior  Comparing Single and Multi-agent\n  LLMs",
+  "url": "http://arxiv.org/pdf/2402.08189v1",
+  "date": "2024-02-13",
+  "abs": "When creating plans, policies, or applications for people, it is challenging\nfor designers to think through the strategic ways that different people will\nbehave. Recently, Large Language Models (LLMs) have been shown to create\nrealistic simulations of human-like behavior based on personas. We build on\nthis to investigate whether LLMs can simulate human strategic behavior. Human\nstrategies are complex because they take into account social norms in addition\nto aiming to maximize personal gain. The ultimatum game is a classic economics\nexperiment used to understand human strategic behavior in a social setting. It\nshows that people will often choose to \"punish\" other players to enforce social\nnorms rather than to maximize personal profits. We test whether LLMs can\nreplicate this complex behavior in simulations. We compare two architectures:\nsingle- and multi-agent LLMs. We compare their abilities to (1) simulate\nhuman-like actions in the ultimatum game, (2) simulate two player\npersonalities, greedy and fair, and (3) create robust strategies that are\nlogically complete and consistent with personality. Our evaluation shows the\nmulti-agent architecture is much more accurate than single LLMs (88% vs. 50%)\nin simulating human strategy creation and actions for personality pairs. Thus\nthere is potential to use LLMs to simulate human strategic behavior to help\ndesigners, planners, and policymakers perform preliminary exploration of how\npeople behave in systems.",
+  "cat": "cs.HC",
+  "authors": [
+   "Karthik Sreedhar",
+   "Lydia Chilton"
+  ],
+  "citation_count": 13
+ },
+ "2402.04578v3": {
+  "id": "2402.04578v3",
+  "title": "S-Agents  Self-organizing Agents in Open-ended Environments",
+  "url": "http://arxiv.org/pdf/2402.04578v3",
+  "date": "2024-02-07",
+  "abs": "Leveraging large language models (LLMs), autonomous agents have significantly\nimproved, gaining the ability to handle a variety of tasks. In open-ended\nsettings, optimizing collaboration for efficiency and effectiveness demands\nflexible adjustments. Despite this, current research mainly emphasizes fixed,\ntask-oriented workflows and overlooks agent-centric organizational structures.\nDrawing inspiration from human organizational behavior, we introduce a\nself-organizing agent system (S-Agents) with a \"tree of agents\" structure for\ndynamic workflow, an \"hourglass agent architecture\" for balancing information\npriorities, and a \"non-obstructive collaboration\" method to allow asynchronous\ntask execution among agents. This structure can autonomously coordinate a group\nof agents, efficiently addressing the challenges of open and dynamic\nenvironments without human intervention. Our experiments demonstrate that\nS-Agents proficiently execute collaborative building tasks and resource\ncollection in the Minecraft environment, validating their effectiveness.",
+  "cat": "cs.AI",
+  "authors": [
+   "Jiaqi Chen",
+   "Yuxian Jiang",
+   "Jiachen Lu",
+   "Li Zhang"
+  ],
+  "citation_count": 7
+ },
+ "2402.04559v2": {
+  "id": "2402.04559v2",
+  "title": "Can Large Language Model Agents Simulate Human Trust Behaviors ",
+  "url": "http://arxiv.org/pdf/2402.04559v2",
+  "date": "2024-02-07",
+  "abs": "Large Language Model (LLM) agents have been increasingly adopted as\nsimulation tools to model humans in applications such as social science.\nHowever, one fundamental question remains: can LLM agents really simulate human\nbehaviors? In this paper, we focus on one of the most critical behaviors in\nhuman interactions, trust, and aim to investigate whether or not LLM agents can\nsimulate human trust behaviors. We first find that LLM agents generally exhibit\ntrust behaviors, referred to as agent trust, under the framework of Trust\nGames, which are widely recognized in behavioral economics. Then, we discover\nthat LLM agents can have high behavioral alignment with humans regarding trust\nbehaviors, particularly for GPT-4, indicating the feasibility to simulate human\ntrust behaviors with LLM agents. In addition, we probe into the biases in agent\ntrust and the differences in agent trust towards agents and humans. We also\nexplore the intrinsic properties of agent trust under conditions including\nadvanced reasoning strategies and external manipulations. We further offer\nimportant implications of our discoveries for various scenarios where trust is\nparamount. Our study provides new insights into the behaviors of LLM agents and\nthe fundamental analogy between LLMs and humans.",
+  "cat": "cs.AI",
+  "authors": [
+   "Chengxing Xie",
+   "Canyu Chen",
+   "Feiran Jia",
+   "Ziyu Ye",
+   "Kai Shu",
+   "Adel Bibi",
+   "Ziniu Hu",
+   "Philip Torr",
+   "Bernard Ghanem",
+   "Guohao Li"
+  ],
+  "citation_count": 27
+ },
+ "2402.03578v1": {
+  "id": "2402.03578v1",
+  "title": "LLM Multi-Agent Systems  Challenges and Open Problems",
+  "url": "http://arxiv.org/pdf/2402.03578v1",
+  "date": "2024-02-05",
+  "abs": "This paper explores existing works of multi-agent systems and identifies\nchallenges that remain inadequately addressed. By leveraging the diverse\ncapabilities and roles of individual agents within a multi-agent system, these\nsystems can tackle complex tasks through collaboration. We discuss optimizing\ntask allocation, fostering robust reasoning through iterative debates, managing\ncomplex and layered context information, and enhancing memory management to\nsupport the intricate interactions within multi-agent systems. We also explore\nthe potential application of multi-agent systems in blockchain systems to shed\nlight on their future development and application in real-world distributed\nsystems.",
+  "cat": "cs.MA",
+  "authors": [
+   "Shanshan Han",
+   "Qifan Zhang",
+   "Yuhang Yao",
+   "Weizhao Jin",
+   "Zhaozhuo Xu",
+   "Chaoyang He"
+  ],
+  "citation_count": 14
+ },
+ "2402.02716v1": {
+  "id": "2402.02716v1",
+  "title": "Understanding the planning of LLM agents  A survey",
+  "url": "http://arxiv.org/pdf/2402.02716v1",
+  "date": "2024-02-05",
+  "abs": "As Large Language Models (LLMs) have shown significant intelligence, the\nprogress to leverage LLMs as planning modules of autonomous agents has\nattracted more attention. This survey provides the first systematic view of\nLLM-based agents planning, covering recent works aiming to improve planning\nability. We provide a taxonomy of existing works on LLM-Agent planning, which\ncan be categorized into Task Decomposition, Plan Selection, External Module,\nReflection and Memory. Comprehensive analyses are conducted for each direction,\nand further challenges for the field of research are discussed.",
+  "cat": "cs.AI",
+  "authors": [
+   "Xu Huang",
+   "Weiwen Liu",
+   "Xiaolong Chen",
+   "Xingmei Wang",
+   "Hao Wang",
+   "Defu Lian",
+   "Yasheng Wang",
+   "Ruiming Tang",
+   "Enhong Chen"
+  ],
+  "citation_count": 48
+ },
+ "2402.05120v1": {
+  "id": "2402.05120v1",
+  "title": "More Agents Is All You Need",
+  "url": "http://arxiv.org/pdf/2402.05120v1",
+  "date": "2024-02-03",
+  "abs": "We find that, simply via a sampling-and-voting method, the performance of\nlarge language models (LLMs) scales with the number of agents instantiated.\nAlso, this method is orthogonal to existing complicated methods to further\nenhance LLMs, while the degree of enhancement is correlated to the task\ndifficulty. We conduct comprehensive experiments on a wide range of LLM\nbenchmarks to verify the presence of our finding, and to study the properties\nthat can facilitate its occurrence. Our code is publicly available at:\n\\url{https://anonymous.4open.science/r/more_agent_is_all_you_need}.",
+  "cat": "cs.CL",
+  "authors": [
+   "Junyou Li",
+   "Qin Zhang",
+   "Yangbin Yu",
+   "Qiang Fu",
+   "Deheng Ye"
+  ],
+  "citation_count": 32
+ },
+ "2402.01108v1": {
+  "id": "2402.01108v1",
+  "title": "Reasoning Capacity in Multi-Agent Systems  Limitations, Challenges and\n  Human-Centered Solutions",
+  "url": "http://arxiv.org/pdf/2402.01108v1",
+  "date": "2024-02-02",
+  "abs": "Remarkable performance of large language models (LLMs) in a variety of tasks\nbrings forth many opportunities as well as challenges of utilizing them in\nproduction settings. Towards practical adoption of LLMs, multi-agent systems\nhold great promise to augment, integrate, and orchestrate LLMs in the larger\ncontext of enterprise platforms that use existing proprietary data and models\nto tackle complex real-world tasks. Despite the tremendous success of these\nsystems, current approaches rely on narrow, single-focus objectives for\noptimization and evaluation, often overlooking potential constraints in\nreal-world scenarios, including restricted budgets, resources and time.\nFurthermore, interpreting, analyzing, and debugging these systems requires\ndifferent components to be evaluated in relation to one another. This demand is\ncurrently not feasible with existing methodologies. In this postion paper, we\nintroduce the concept of reasoning capacity as a unifying criterion to enable\nintegration of constraints during optimization and establish connections among\ndifferent components within the system, which also enable a more holistic and\ncomprehensive approach to evaluation. We present a formal definition of\nreasoning capacity and illustrate its utility in identifying limitations within\neach component of the system. We then argue how these limitations can be\naddressed with a self-reflective process wherein human-feedback is used to\nalleviate shortcomings in reasoning and enhance overall consistency of the\nsystem.",
+  "cat": "cs.CL",
+  "authors": [
+   "Pouya Pezeshkpour",
+   "Eser Kandogan",
+   "Nikita Bhutani",
+   "Sajjadur Rahman",
+   "Tom Mitchell",
+   "Estevam Hruschka"
+  ],
+  "citation_count": 3
+ },
+ "2402.00798v2": {
+  "id": "2402.00798v2",
+  "title": "Formal-LLM  Integrating Formal Language and Natural Language for\n  Controllable LLM-based Agents",
+  "url": "http://arxiv.org/pdf/2402.00798v2",
+  "date": "2024-02-01",
+  "abs": "Recent advancements on Large Language Models (LLMs) enable AI Agents to\nautomatically generate and execute multi-step plans to solve complex tasks.\nHowever, since LLM's content generation process is hardly controllable, current\nLLM-based agents frequently generate invalid or non-executable plans, which\njeopardizes the performance of the generated plans and corrupts users' trust in\nLLM-based agents. In response, this paper proposes a novel ``Formal-LLM''\nframework for LLM-based agents by integrating the expressiveness of natural\nlanguage and the precision of formal language. Specifically, the framework\nallows human users to express their requirements or constraints for the\nplanning process as an automaton. A stack-based LLM plan generation process is\nthen conducted under the supervision of the automaton to ensure that the\ngenerated plan satisfies the constraints, making the planning process\ncontrollable. We conduct experiments on both benchmark tasks and practical\nreal-life tasks, and our framework achieves over 50% overall performance\nincrease, which validates the feasibility and effectiveness of employing\nFormal-LLM to guide the plan generation of agents, preventing the agents from\ngenerating invalid and unsuccessful plans. Further, more controllable LLM-based\nagents can facilitate the broader utilization of LLM in application scenarios\nwhere high validity of planning is essential. The work is open-sourced at\nhttps://github.com/agiresearch/Formal-LLM.",
+  "cat": "cs.LG",
+  "authors": [
+   "Zelong Li",
+   "Wenyue Hua",
+   "Hao Wang",
+   "He Zhu",
+   "Yongfeng Zhang"
+  ],
+  "citation_count": 11
+ },
+ "2402.00262v1": {
+  "id": "2402.00262v1",
+  "title": "Computational Experiments Meet Large Language Model Based Agents  A\n  Survey and Perspective",
+  "url": "http://arxiv.org/pdf/2402.00262v1",
+  "date": "2024-02-01",
+  "abs": "Computational experiments have emerged as a valuable method for studying\ncomplex systems, involving the algorithmization of counterfactuals. However,\naccurately representing real social systems in Agent-based Modeling (ABM) is\nchallenging due to the diverse and intricate characteristics of humans,\nincluding bounded rationality and heterogeneity. To address this limitation,\nthe integration of Large Language Models (LLMs) has been proposed, enabling\nagents to possess anthropomorphic abilities such as complex reasoning and\nautonomous learning. These agents, known as LLM-based Agent, offer the\npotential to enhance the anthropomorphism lacking in ABM. Nonetheless, the\nabsence of explicit explainability in LLMs significantly hinders their\napplication in the social sciences. Conversely, computational experiments excel\nin providing causal analysis of individual behaviors and complex phenomena.\nThus, combining computational experiments with LLM-based Agent holds\nsubstantial research potential. This paper aims to present a comprehensive\nexploration of this fusion. Primarily, it outlines the historical development\nof agent structures and their evolution into artificial societies, emphasizing\ntheir importance in computational experiments. Then it elucidates the\nadvantages that computational experiments and LLM-based Agents offer each\nother, considering the perspectives of LLM-based Agent for computational\nexperiments and vice versa. Finally, this paper addresses the challenges and\nfuture trends in this research domain, offering guidance for subsequent related\nstudies.",
+  "cat": "cs.AI",
+  "authors": [
+   "Qun Ma",
+   "Xiao Xue",
+   "Deyu Zhou",
+   "Xiangning Yu",
+   "Donghua Liu",
+   "Xuwen Zhang",
+   "Zihan Zhao",
+   "Yifan Shen",
+   "Peilin Ji",
+   "Juanjuan Li",
+   "Gang Wang",
+   "Wanpeng Ma"
+  ],
+  "citation_count": 6
+ },
+ "1209.1428v1": {
+  "id": "1209.1428v1",
+  "title": "Challenges and Directions for Engineering Multi-agent Systems",
+  "url": "http://arxiv.org/pdf/1209.1428v1",
+  "date": "2012-09-07",
+  "abs": "In this talk I review where we stand regarding the engineering of multi-agent\nsystems. There is both good news and bad news. The good news is that over the\npast decade we've made considerable progress on techniques for engineering\nmulti-agent systems: we have good, usable methodologies, and mature tools.\nFurthermore, we've seen a wide range of demonstrated applications, and have\neven begun to quantify the advantages of agent technology. However, industry\ninvolvement in AAMAS appears to be declining (as measured by industry\nsponsorship of the conference), and industry affiliated attendants at AAMAS\n2012 were few (1-2%). Furthermore, looking at the applications of agents being\nreported at recent AAMAS, usage of Agent Oriented Software Engineering (AOSE)\nand of Agent Oriented Programming Languages (AOPLs) is quite limited. This\nobservation is corroborated by the results of a 2008 survey by Frank and\nVirginia Dignum. Based on these observations, I make five recommendations: (1)\nRe-engage with industry; (2) Stop designing AOPLs and AOSE methodologies ...\nand instead ... (3) Move to the \"macro\" level: develop techniques for designing\nand implementing interaction, integrate micro (single cognitive agent) and\nmacro (MAS) design and implementation; (4) Develop techniques for the Assurance\nof MAS; and (5) Re-engage with the US.",
+  "cat": "cs.MA",
+  "authors": [
+   "Michael Winikoff"
+  ],
+  "citation_count": 15
+ },
+ "2401.13178v1": {
+  "id": "2401.13178v1",
+  "title": "AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents",
+  "url": "http://arxiv.org/pdf/2401.13178v1",
+  "date": "2024-01-24",
+  "abs": "Evaluating large language models (LLMs) as general-purpose agents is\nessential for understanding their capabilities and facilitating their\nintegration into practical applications. However, the evaluation process\npresents substantial challenges. A primary obstacle is the benchmarking of\nagent performance across diverse scenarios within a unified framework,\nespecially in maintaining partially-observable environments and ensuring\nmulti-round interactions. Moreover, current evaluation frameworks mostly focus\non the final success rate, revealing few insights during the process and\nfailing to provide a deep understanding of the model abilities. To address\nthese challenges, we introduce AgentBoard, a pioneering comprehensive benchmark\nand accompanied open-source evaluation framework tailored to analytical\nevaluation of LLM agents. AgentBoard offers a fine-grained progress rate metric\nthat captures incremental advancements as well as a comprehensive evaluation\ntoolkit that features easy assessment of agents for multi-faceted analysis\nthrough interactive visualization. This not only sheds light on the\ncapabilities and limitations of LLM agents but also propels the\ninterpretability of their performance to the forefront. Ultimately, AgentBoard\nserves as a significant step towards demystifying agent behaviors and\naccelerating the development of stronger LLM agents.",
+  "cat": "cs.CL",
+  "authors": [
+   "Chang Ma",
+   "Junlei Zhang",
+   "Zhihao Zhu",
+   "Cheng Yang",
+   "Yujiu Yang",
+   "Yaohui Jin",
+   "Zhenzhong Lan",
+   "Lingpeng Kong",
+   "Junxian He"
+  ],
+  "citation_count": 28
+ },
+ "2402.01680v2": {
+  "id": "2402.01680v2",
+  "title": "Large Language Model based Multi-Agents  A Survey of Progress and\n  Challenges",
+  "url": "http://arxiv.org/pdf/2402.01680v2",
+  "date": "2024-01-21",
+  "abs": "Large Language Models (LLMs) have achieved remarkable success across a wide\narray of tasks. Due to the impressive planning and reasoning abilities of LLMs,\nthey have been used as autonomous agents to do many tasks automatically.\nRecently, based on the development of using one LLM as a single planning or\ndecision-making agent, LLM-based multi-agent systems have achieved considerable\nprogress in complex problem-solving and world simulation. To provide the\ncommunity with an overview of this dynamic field, we present this survey to\noffer an in-depth discussion on the essential aspects of multi-agent systems\nbased on LLMs, as well as the challenges. Our goal is for readers to gain\nsubstantial insights on the following questions: What domains and environments\ndo LLM-based multi-agents simulate? How are these agents profiled and how do\nthey communicate? What mechanisms contribute to the growth of agents'\ncapacities? For those interested in delving into this field of study, we also\nsummarize the commonly used datasets or benchmarks for them to have convenient\naccess. To keep researchers updated on the latest studies, we maintain an\nopen-source GitHub repository, dedicated to outlining the research on LLM-based\nmulti-agent systems.",
+  "cat": "cs.CL",
+  "authors": [
+   "Taicheng Guo",
+   "Xiuying Chen",
+   "Yaqi Wang",
+   "Ruidi Chang",
+   "Shichao Pei",
+   "Nitesh V. Chawla",
+   "Olaf Wiest",
+   "Xiangliang Zhang"
+  ],
+  "citation_count": 96
+ },
+ "2309.07870v3": {
+  "id": "2309.07870v3",
+  "title": "Agents  An Open-source Framework for Autonomous Language Agents",
+  "url": "http://arxiv.org/pdf/2309.07870v3",
+  "date": "2023-09-14",
+  "abs": "Recent advances on large language models (LLMs) enable researchers and\ndevelopers to build autonomous language agents that can automatically solve\nvarious tasks and interact with environments, humans, and other agents using\nnatural language interfaces. We consider language agents as a promising\ndirection towards artificial general intelligence and release Agents, an\nopen-source library with the goal of opening up these advances to a wider\nnon-specialist audience. Agents is carefully engineered to support important\nfeatures including planning, memory, tool usage, multi-agent communication, and\nfine-grained symbolic control. Agents is user-friendly as it enables\nnon-specialists to build, customize, test, tune, and deploy state-of-the-art\nautonomous language agents without much coding. The library is also\nresearch-friendly as its modularized design makes it easily extensible for\nresearchers. Agents is available at https://github.com/aiwaves-cn/agents.",
+  "cat": "cs.CL",
+  "authors": [
+   "Wangchunshu Zhou",
+   "Yuchen Eleanor Jiang",
+   "Long Li",
+   "Jialong Wu",
+   "Tiannan Wang",
+   "Shi Qiu",
+   "Jintian Zhang",
+   "Jing Chen",
+   "Ruipu Wu",
+   "Shuai Wang",
+   "Shiding Zhu",
+   "Jiyu Chen",
+   "Wentao Zhang",
+   "Xiangru Tang",
+   "Ningyu Zhang",
+   "Huajun Chen",
+   "Peng Cui",
+   "Mrinmaya Sachan"
+  ],
+  "citation_count": 62
+ },
+ "2309.07864v3": {
+  "id": "2309.07864v3",
+  "title": "The Rise and Potential of Large Language Model Based Agents  A Survey",
+  "url": "http://arxiv.org/pdf/2309.07864v3",
+  "date": "2023-09-14",
+  "abs": "For a long time, humanity has pursued artificial intelligence (AI) equivalent\nto or surpassing the human level, with AI agents considered a promising vehicle\nfor this pursuit. AI agents are artificial entities that sense their\nenvironment, make decisions, and take actions. Many efforts have been made to\ndevelop intelligent agents, but they mainly focus on advancement in algorithms\nor training strategies to enhance specific capabilities or performance on\nparticular tasks. Actually, what the community lacks is a general and powerful\nmodel to serve as a starting point for designing AI agents that can adapt to\ndiverse scenarios. Due to the versatile capabilities they demonstrate, large\nlanguage models (LLMs) are regarded as potential sparks for Artificial General\nIntelligence (AGI), offering hope for building general AI agents. Many\nresearchers have leveraged LLMs as the foundation to build AI agents and have\nachieved significant progress. In this paper, we perform a comprehensive survey\non LLM-based agents. We start by tracing the concept of agents from its\nphilosophical origins to its development in AI, and explain why LLMs are\nsuitable foundations for agents. Building upon this, we present a general\nframework for LLM-based agents, comprising three main components: brain,\nperception, and action, and the framework can be tailored for different\napplications. Subsequently, we explore the extensive applications of LLM-based\nagents in three aspects: single-agent scenarios, multi-agent scenarios, and\nhuman-agent cooperation. Following this, we delve into agent societies,\nexploring the behavior and personality of LLM-based agents, the social\nphenomena that emerge from an agent society, and the insights they offer for\nhuman society. Finally, we discuss several key topics and open problems within\nthe field. A repository for the related papers at\nhttps://github.com/WooooDyy/LLM-Agent-Paper-List.",
+  "cat": "cs.AI",
+  "authors": [
+   "Zhiheng Xi",
+   "Wenxiang Chen",
+   "Xin Guo",
+   "Wei He",
+   "Yiwen Ding",
+   "Boyang Hong",
+   "Ming Zhang",
+   "Junzhe Wang",
+   "Senjie Jin",
+   "Enyu Zhou",
+   "Rui Zheng",
+   "Xiaoran Fan",
+   "Xiao Wang",
+   "Limao Xiong",
+   "Yuhao Zhou",
+   "Weiran Wang",
+   "Changhao Jiang",
+   "Yicheng Zou",
+   "Xiangyang Liu",
+   "Zhangyue Yin",
+   "Shihan Dou",
+   "Rongxiang Weng",
+   "Wensen Cheng",
+   "Qi Zhang",
+   "Wenjuan Qin",
+   "Yongyan Zheng",
+   "Xipeng Qiu",
+   "Xuanjing Huang",
+   "Tao Gui"
+  ],
+  "citation_count": 547
+ },
+ "2404.13501v1": {
+  "id": "2404.13501v1",
+  "title": "A Survey on the Memory Mechanism of Large Language Model based Agents",
+  "url": "http://arxiv.org/pdf/2404.13501v1",
+  "date": "2024-04-21",
+  "abs": "Large language model (LLM) based agents have recently attracted much\nattention from the research and industry communities. Compared with original\nLLMs, LLM-based agents are featured in their self-evolving capability, which is\nthe basis for solving real-world problems that need long-term and complex\nagent-environment interactions. The key component to support agent-environment\ninteractions is the memory of the agents. While previous studies have proposed\nmany promising memory mechanisms, they are scattered in different papers, and\nthere lacks a systematical review to summarize and compare these works from a\nholistic perspective, failing to abstract common and effective designing\npatterns for inspiring future studies. To bridge this gap, in this paper, we\npropose a comprehensive survey on the memory mechanism of LLM-based agents. In\nspecific, we first discuss ''what is'' and ''why do we need'' the memory in\nLLM-based agents. Then, we systematically review previous studies on how to\ndesign and evaluate the memory module. In addition, we also present many agent\napplications, where the memory module plays an important role. At last, we\nanalyze the limitations of existing work and show important future directions.\nTo keep up with the latest advances in this field, we create a repository at\n\\url{https://github.com/nuster1128/LLM_Agent_Memory_Survey}.",
+  "cat": "cs.AI",
+  "authors": [
+   "Zeyu Zhang",
+   "Xiaohe Bo",
+   "Chen Ma",
+   "Rui Li",
+   "Xu Chen",
+   "Quanyu Dai",
+   "Jieming Zhu",
+   "Zhenhua Dong",
+   "Ji-Rong Wen"
+  ],
+  "citation_count": 37
+ },
+ "1712.00600v1": {
+  "id": "1712.00600v1",
+  "title": "MAgent  A Many-Agent Reinforcement Learning Platform for Artificial\n  Collective Intelligence",
+  "url": "http://arxiv.org/pdf/1712.00600v1",
+  "date": "2017-12-02",
+  "abs": "We introduce MAgent, a platform to support research and development of\nmany-agent reinforcement learning. Unlike previous research platforms on single\nor multi-agent reinforcement learning, MAgent focuses on supporting the tasks\nand the applications that require hundreds to millions of agents. Within the\ninteractions among a population of agents, it enables not only the study of\nlearning algorithms for agents' optimal polices, but more importantly, the\nobservation and understanding of individual agent's behaviors and social\nphenomena emerging from the AI society, including communication languages,\nleaderships, altruism. MAgent is highly scalable and can host up to one million\nagents on a single GPU server. MAgent also provides flexible configurations for\nAI researchers to design their customized environments and agents. In this\ndemo, we present three environments designed on MAgent and show emerged\ncollective intelligence by learning from scratch.",
+  "cat": "cs.LG",
+  "authors": [
+   "Lianmin Zheng",
+   "Jiacheng Yang",
+   "Han Cai",
+   "Weinan Zhang",
+   "Jun Wang",
+   "Yong Yu"
+  ],
+  "citation_count": 193
+ },
+ "2308.07201v1": {
+  "id": "2308.07201v1",
+  "title": "ChatEval  Towards Better LLM-based Evaluators through Multi-Agent Debate",
+  "url": "http://arxiv.org/pdf/2308.07201v1",
+  "date": "2023-08-14",
+  "abs": "Text evaluation has historically posed significant challenges, often\ndemanding substantial labor and time cost. With the emergence of large language\nmodels (LLMs), researchers have explored LLMs' potential as alternatives for\nhuman evaluation. While these single-agent-based approaches show promise,\nexperimental results suggest that further advancements are needed to bridge the\ngap between their current effectiveness and human-level evaluation quality.\nRecognizing that best practices of human evaluation processes often involve\nmultiple human annotators collaborating in the evaluation, we resort to a\nmulti-agent debate framework, moving beyond single-agent prompting strategies.\nThe multi-agent-based approach enables a group of LLMs to synergize with an\narray of intelligent counterparts, harnessing their distinct capabilities and\nexpertise to enhance efficiency and effectiveness in handling intricate tasks.\nIn this paper, we construct a multi-agent referee team called ChatEval to\nautonomously discuss and evaluate the quality of generated responses from\ndifferent models on open-ended questions and traditional natural language\ngeneration (NLG) tasks. Our analysis shows that ChatEval transcends mere\ntextual scoring, offering a human-mimicking evaluation process for reliable\nassessments. Our code is available at https://github.com/chanchimin/ChatEval.",
+  "cat": "cs.CL",
+  "authors": [
+   "Chi-Min Chan",
+   "Weize Chen",
+   "Yusheng Su",
+   "Jianxuan Yu",
+   "Wei Xue",
+   "Shanghang Zhang",
+   "Jie Fu",
+   "Zhiyuan Liu"
+  ],
+  "citation_count": 241
+ },
+ "2308.05960v1": {
+  "id": "2308.05960v1",
+  "title": "BOLAA  Benchmarking and Orchestrating LLM-augmented Autonomous Agents",
+  "url": "http://arxiv.org/pdf/2308.05960v1",
+  "date": "2023-08-11",
+  "abs": "The massive successes of large language models (LLMs) encourage the emerging\nexploration of LLM-augmented Autonomous Agents (LAAs). An LAA is able to\ngenerate actions with its core LLM and interact with environments, which\nfacilitates the ability to resolve complex tasks by conditioning on past\ninteractions such as observations and actions. Since the investigation of LAA\nis still very recent, limited explorations are available. Therefore, we provide\na comprehensive comparison of LAA in terms of both agent architectures and LLM\nbackbones. Additionally, we propose a new strategy to orchestrate multiple LAAs\nsuch that each labor LAA focuses on one type of action, \\textit{i.e.} BOLAA,\nwhere a controller manages the communication among multiple agents. We conduct\nsimulations on both decision-making and multi-step reasoning environments,\nwhich comprehensively justify the capacity of LAAs. Our performance results\nprovide quantitative suggestions for designing LAA architectures and the\noptimal choice of LLMs, as well as the compatibility of both. We release our\nimplementation code of LAAs to the public at\n\\url{https://github.com/salesforce/BOLAA}.",
+  "cat": "cs.AI",
+  "authors": [
+   "Zhiwei Liu",
+   "Weiran Yao",
+   "Jianguo Zhang",
+   "Le Xue",
+   "Shelby Heinecke",
+   "Rithesh Murthy",
+   "Yihao Feng",
+   "Zeyuan Chen",
+   "Juan Carlos Niebles",
+   "Devansh Arpit",
+   "Ran Xu",
+   "Phil Mui",
+   "Huan Wang",
+   "Caiming Xiong",
+   "Silvio Savarese"
+  ],
+  "citation_count": 62
+ },
+ "2308.03688v2": {
+  "id": "2308.03688v2",
+  "title": "AgentBench  Evaluating LLMs as Agents",
+  "url": "http://arxiv.org/pdf/2308.03688v2",
+  "date": "2023-08-07",
+  "abs": "Large Language Models (LLMs) are becoming increasingly smart and autonomous,\ntargeting real-world pragmatic missions beyond traditional NLP tasks. As a\nresult, there has been an urgent need to evaluate LLMs as agents on challenging\ntasks in interactive environments. We present AgentBench, a multi-dimensional\nevolving benchmark that currently consists of 8 distinct environments to assess\nLLM-as-Agent's reasoning and decision-making abilities in a multi-turn\nopen-ended generation setting. Our extensive test over 27 API-based and\nopen-sourced (OSS) LLMs shows that, while top commercial LLMs present a strong\nability of acting as agents in complex environments, there is a significant\ndisparity in performance between them and OSS competitors. We identify the\ntypical reasons of failures in environments and LLMs, showing that poor\nlong-term reasoning, decision-making, and instruction following abilities are\nthe main obstacles for developing usable LLM agents. Training on code and high\nquality multi-turn alignment data could improve agent performance. Datasets,\nenvironments, and an integrated evaluation package for AgentBench are released\nat \\url{https://github.com/THUDM/AgentBench}.",
+  "cat": "cs.AI",
+  "authors": [
+   "Xiao Liu",
+   "Hao Yu",
+   "Hanchen Zhang",
+   "Yifan Xu",
+   "Xuanyu Lei",
+   "Hanyu Lai",
+   "Yu Gu",
+   "Hangliang Ding",
+   "Kaiwen Men",
+   "Kejuan Yang",
+   "Shudan Zhang",
+   "Xiang Deng",
+   "Aohan Zeng",
+   "Zhengxiao Du",
+   "Chenhui Zhang",
+   "Sheng Shen",
+   "Tianjun Zhang",
+   "Yu Su",
+   "Huan Sun",
+   "Minlie Huang",
+   "Yuxiao Dong",
+   "Jie Tang"
+  ],
+  "citation_count": 158
+ },
+ "2307.06187v1": {
+  "id": "2307.06187v1",
+  "title": "Self-Adaptive Large Language Model (LLM)-Based Multiagent Systems",
+  "url": "http://arxiv.org/pdf/2307.06187v1",
+  "date": "2023-07-12",
+  "abs": "In autonomic computing, self-adaptation has been proposed as a fundamental\nparadigm to manage the complexity of multiagent systems (MASs). This achieved\nby extending a system with support to monitor and adapt itself to achieve\nspecific concerns of interest. Communication in these systems is key given that\nin scenarios involving agent interaction, it enhances cooperation and reduces\ncoordination challenges by enabling direct, clear information exchange.\nHowever, improving the expressiveness of the interaction communication with\nMASs is not without challenges. In this sense, the interplay between\nself-adaptive systems and effective communication is crucial for future MAS\nadvancements. In this paper, we propose the integration of large language\nmodels (LLMs) such as GPT-based technologies into multiagent systems. We anchor\nour methodology on the MAPE-K model, which is renowned for its robust support\nin monitoring, analyzing, planning, and executing system adaptations in\nresponse to dynamic environments. We also present a practical illustration of\nthe proposed approach, in which we implement and assess a basic MAS-based\napplication. The approach significantly advances the state-of-the-art of\nself-adaptive systems by proposing a new paradigm for MAS self-adaptation of\nautonomous systems based on LLM capabilities.",
+  "cat": "cs.MA",
+  "authors": [
+   "Nathalia Nascimento",
+   "Paulo Alencar",
+   "Donald Cowan"
+  ],
+  "citation_count": 22
+ },
+ "2307.04738v1": {
+  "id": "2307.04738v1",
+  "title": "RoCo  Dialectic Multi-Robot Collaboration with Large Language Models",
+  "url": "http://arxiv.org/pdf/2307.04738v1",
+  "date": "2023-07-10",
+  "abs": "We propose a novel approach to multi-robot collaboration that harnesses the\npower of pre-trained large language models (LLMs) for both high-level\ncommunication and low-level path planning. Robots are equipped with LLMs to\ndiscuss and collectively reason task strategies. They then generate sub-task\nplans and task space waypoint paths, which are used by a multi-arm motion\nplanner to accelerate trajectory planning. We also provide feedback from the\nenvironment, such as collision checking, and prompt the LLM agents to improve\ntheir plan and waypoints in-context. For evaluation, we introduce RoCoBench, a\n6-task benchmark covering a wide range of multi-robot collaboration scenarios,\naccompanied by a text-only dataset for agent representation and reasoning. We\nexperimentally demonstrate the effectiveness of our approach -- it achieves\nhigh success rates across all tasks in RoCoBench and adapts to variations in\ntask semantics. Our dialog setup offers high interpretability and flexibility\n-- in real world experiments, we show RoCo easily incorporates\nhuman-in-the-loop, where a user can communicate and collaborate with a robot\nagent to complete tasks together. See project website\nhttps://project-roco.github.io for videos and code.",
+  "cat": "cs.RO",
+  "authors": [
+   "Zhao Mandi",
+   "Shreeya Jain",
+   "Shuran Song"
+  ],
+  "citation_count": 67
+ },
+ "2307.02485v2": {
+  "id": "2307.02485v2",
+  "title": "Building Cooperative Embodied Agents Modularly with Large Language\n  Models",
+  "url": "http://arxiv.org/pdf/2307.02485v2",
+  "date": "2023-07-05",
+  "abs": "In this work, we address challenging multi-agent cooperation problems with\ndecentralized control, raw sensory observations, costly communication, and\nmulti-objective tasks instantiated in various embodied environments. While\nprevious research either presupposes a cost-free communication channel or\nrelies on a centralized controller with shared observations, we harness the\ncommonsense knowledge, reasoning ability, language comprehension, and text\ngeneration prowess of LLMs and seamlessly incorporate them into a\ncognitive-inspired modular framework that integrates with perception, memory,\nand execution. Thus building a Cooperative Embodied Language Agent CoELA, who\ncan plan, communicate, and cooperate with others to accomplish long-horizon\ntasks efficiently. Our experiments on C-WAH and TDW-MAT demonstrate that CoELA\ndriven by GPT-4 can surpass strong planning-based methods and exhibit emergent\neffective communication. Though current Open LMs like LLAMA-2 still\nunderperform, we fine-tune a CoELA with data collected with our agents and show\nhow they can achieve promising performance. We also conducted a user study for\nhuman-agent interaction and discovered that CoELA communicating in natural\nlanguage can earn more trust and cooperate more effectively with humans. Our\nresearch underscores the potential of LLMs for future research in multi-agent\ncooperation. Videos can be found on the project website\nhttps://vis-www.cs.umass.edu/Co-LLM-Agents/.",
+  "cat": "cs.AI",
+  "authors": [
+   "Hongxin Zhang",
+   "Weihua Du",
+   "Jiaming Shan",
+   "Qinhong Zhou",
+   "Yilun Du",
+   "Joshua B. Tenenbaum",
+   "Tianmin Shu",
+   "Chuang Gan"
+  ],
+  "citation_count": 99
+ },
+ "1311.5108v1": {
+  "id": "1311.5108v1",
+  "title": "A Methodology to Engineer and Validate Dynamic Multi-level Multi-agent\n  Based Simulations",
+  "url": "http://arxiv.org/pdf/1311.5108v1",
+  "date": "2013-11-20",
+  "abs": "This article proposes a methodology to model and simulate complex systems,\nbased on IRM4MLS, a generic agent-based meta-model able to deal with\nmulti-level systems. This methodology permits the engineering of dynamic\nmulti-level agent-based models, to represent complex systems over several\nscales and domains of interest. Its goal is to simulate a phenomenon using\ndynamically the lightest representation to save computer resources without loss\nof information. This methodology is based on two mechanisms: (1) the activation\nor deactivation of agents representing different domain parts of the same\nphenomenon and (2) the aggregation or disaggregation of agents representing the\nsame phenomenon at different scales.",
+  "cat": "cs.MA",
+  "authors": [
+   "Jean-Baptiste Soyez",
+   "Gildas Morvan",
+   "Daniel Dupont",
+   "Rochdi Merzouki"
+  ],
+  "citation_count": 18
+ },
+ "2003.08039v3": {
+  "id": "2003.08039v3",
+  "title": "ROMA  Multi-Agent Reinforcement Learning with Emergent Roles",
+  "url": "http://arxiv.org/pdf/2003.08039v3",
+  "date": "2020-03-18",
+  "abs": "The role concept provides a useful tool to design and understand complex\nmulti-agent systems, which allows agents with a similar role to share similar\nbehaviors. However, existing role-based methods use prior domain knowledge and\npredefine role structures and behaviors. In contrast, multi-agent reinforcement\nlearning (MARL) provides flexibility and adaptability, but less efficiency in\ncomplex tasks. In this paper, we synergize these two paradigms and propose a\nrole-oriented MARL framework (ROMA). In this framework, roles are emergent, and\nagents with similar roles tend to share their learning and to be specialized on\ncertain sub-tasks. To this end, we construct a stochastic role embedding space\nby introducing two novel regularizers and conditioning individual policies on\nroles. Experiments show that our method can learn specialized, dynamic, and\nidentifiable roles, which help our method push forward the state of the art on\nthe StarCraft II micromanagement benchmark. Demonstrative videos are available\nat https://sites.google.com/view/romarl/.",
+  "cat": "cs.MA",
+  "authors": [
+   "Tonghan Wang",
+   "Heng Dong",
+   "Victor Lesser",
+   "Chongjie Zhang"
+  ],
+  "citation_count": 180
+ },
+ "2305.19118v1": {
+  "id": "2305.19118v1",
+  "title": "Encouraging Divergent Thinking in Large Language Models through\n  Multi-Agent Debate",
+  "url": "http://arxiv.org/pdf/2305.19118v1",
+  "date": "2023-05-30",
+  "abs": "Modern large language models (LLMs) like ChatGPT have shown remarkable\nperformance on general language tasks but still struggle on complex reasoning\ntasks, which drives the research on cognitive behaviors of LLMs to explore\nhuman-like problem-solving strategies. Along this direction, one representative\nstrategy is self-reflection, which asks an LLM to refine the solution with the\nfeedback generated by itself iteratively. However, our study shows that such\nreflection-style methods suffer from the Degeneration-of-Thought (DoT) problem:\nonce the LLM has established confidence in its solutions, it is unable to\ngenerate novel thoughts later through reflection even if its initial stance is\nincorrect. To address the DoT problem, we propose a Multi-Agent Debate (MAD)\nframework, in which multiple agents express their arguments in the state of\n\"tit for tat\" and a judge manages the debate process to obtain a final\nsolution. Clearly, our MAD framework encourages divergent thinking in LLMs\nwhich would be helpful for tasks that require deep levels of contemplation.\nExperiment results on two challenging datasets, commonsense machine translation\nand counter-intuitive arithmetic reasoning, demonstrate the effectiveness of\nour MAD framework. Extensive analyses suggest that the adaptive break of debate\nand the modest level of \"tit for tat\" state are required for MAD to obtain good\nperformance. Moreover, we find that LLMs might not be a fair judge if different\nLLMs are used for agents. Codes:\nhttps://github.com/Skytliang/Multi-Agents-Debate",
+  "cat": "cs.CL",
+  "authors": [
+   "Tian Liang",
+   "Zhiwei He",
+   "Wenxiang Jiao",
+   "Xing Wang",
+   "Yan Wang",
+   "Rui Wang",
+   "Yujiu Yang",
+   "Zhaopeng Tu",
+   "Shuming Shi"
+  ],
+  "citation_count": 213
+ },
+ "1307.4477v1": {
+  "id": "1307.4477v1",
+  "title": "Modularity and Openness in Modeling Multi-Agent Systems",
+  "url": "http://arxiv.org/pdf/1307.4477v1",
+  "date": "2013-07-17",
+  "abs": "We revisit the formalism of modular interpreted systems (MIS) which\nencourages modular and open modeling of synchronous multi-agent systems. The\noriginal formulation of MIS did not live entirely up to its promise. In this\npaper, we propose how to improve modularity and openness of MIS by changing the\nstructure of interference functions. These relatively small changes allow for\nsurprisingly high flexibility when modeling actual multi-agent systems. We\ndemonstrate this on two well-known examples, namely the trains, tunnel and\ncontroller, and the dining cryptographers.\n  Perhaps more importantly, we propose how the notions of multi-agency and\nopenness, crucial for multi-agent systems, can be precisely defined based on\ntheir MIS representations.",
+  "cat": "cs.MA",
+  "authors": [
+   "Wojciech Jamroga",
+   "Artur M\u0229ski",
+   "Maciej Szreter"
+  ],
+  "citation_count": 9
+ },
+ "1708.02361v1": {
+  "id": "1708.02361v1",
+  "title": "Verification & Validation of Agent Based Simulations using the VOMAS\n  (Virtual Overlay Multi-agent System) approach",
+  "url": "http://arxiv.org/pdf/1708.02361v1",
+  "date": "2017-08-08",
+  "abs": "Agent Based Models are very popular in a number of different areas. For\nexample, they have been used in a range of domains ranging from modeling of\ntumor growth, immune systems, molecules to models of social networks, crowds\nand computer and mobile self-organizing networks. One reason for their success\nis their intuitiveness and similarity to human cognition. However, with this\npower of abstraction, in spite of being easily applicable to such a wide number\nof domains, it is hard to validate agent-based models. In addition, building\nvalid and credible simulations is not just a challenging task but also a\ncrucial exercise to ensure that what we are modeling is, at some level of\nabstraction, a model of our conceptual system; the system that we have in mind.\nIn this paper, we address this important area of validation of agent based\nmodels by presenting a novel technique which has broad applicability and can be\napplied to all kinds of agent-based models. We present a framework, where a\nvirtual overlay multi-agent system can be used to validate simulation models.\nIn addition, since agent-based models have been typically growing, in parallel,\nin multiple domains, to cater for all of these, we present a new single\nvalidation technique applicable to all agent based models. Our technique, which\nallows for the validation of agent based simulations uses VOMAS: a Virtual\nOverlay Multi-agent System. This overlay multi-agent system can comprise\nvarious types of agents, which form an overlay on top of the agent based\nsimulation model that needs to be validated. Other than being able to watch and\nlog, each of these agents contains clearly defined constraints, which, if\nviolated, can be logged in real time. To demonstrate its effectiveness, we show\nits broad applicability in a wide variety of simulation models ranging from\nsocial sciences to computer networks in spatial and non-spatial conceptual\nmodels.",
+  "cat": "cs.MA",
+  "authors": [
+   "Muaz A. Niazi",
+   "Amir Hussain",
+   "Mario Kolberg"
+  ],
+  "citation_count": 5986
+ },
+ "2312.03815v2": {
+  "id": "2312.03815v2",
+  "title": "LLM as OS, Agents as Apps  Envisioning AIOS, Agents and the AIOS-Agent\n  Ecosystem",
+  "url": "http://arxiv.org/pdf/2312.03815v2",
+  "date": "2023-12-06",
+  "abs": "This paper envisions a revolutionary AIOS-Agent ecosystem, where Large\nLanguage Model (LLM) serves as the (Artificial) Intelligent Operating System\n(IOS, or AIOS)--an operating system \"with soul\". Upon this foundation, a\ndiverse range of LLM-based AI Agent Applications (Agents, or AAPs) are\ndeveloped, enriching the AIOS-Agent ecosystem and signaling a paradigm shift\nfrom the traditional OS-APP ecosystem. We envision that LLM's impact will not\nbe limited to the AI application level, instead, it will in turn revolutionize\nthe design and implementation of computer system, architecture, software, and\nprogramming language, featured by several main concepts: LLM as OS\n(system-level), Agents as Applications (application-level), Natural Language as\nProgramming Interface (user-level), and Tools as Devices/Libraries\n(hardware/middleware-level). We begin by introducing the architecture of\ntraditional OS. Then we formalize a conceptual framework for AIOS through \"LLM\nas OS (LLMOS)\", drawing analogies between AIOS and traditional OS: LLM is\nlikened to OS kernel, context window to memory, external storage to file\nsystem, hardware tools to peripheral devices, software tools to programming\nlibraries, and user prompts to user commands. Subsequently, we introduce the\nnew AIOS-Agent Ecosystem, where users can easily program Agent Applications\n(AAPs) using natural language, democratizing the development of software, which\nis different from the traditional OS-APP ecosystem. Following this, we explore\nthe diverse scope of Agent Applications. We delve into both single-agent and\nmulti-agent systems, as well as human-agent interaction. Lastly, drawing on the\ninsights from traditional OS-APP ecosystem, we propose a roadmap for the\nevolution of the AIOS-Agent ecosystem. This roadmap is designed to guide the\nfuture research and development, suggesting systematic progresses of AIOS and\nits Agent applications.",
+  "cat": "cs.OS",
+  "authors": [
+   "Yingqiang Ge",
+   "Yujie Ren",
+   "Wenyue Hua",
+   "Shuyuan Xu",
+   "Juntao Tan",
+   "Yongfeng Zhang"
+  ],
+  "citation_count": 19
+ },
+ "1503.07220v2": {
+  "id": "1503.07220v2",
+  "title": "Individual Planning in Agent Populations  Exploiting Anonymity and\n  Frame-Action Hypergraphs",
+  "url": "http://arxiv.org/pdf/1503.07220v2",
+  "date": "2015-03-24",
+  "abs": "Interactive partially observable Markov decision processes (I-POMDP) provide\na formal framework for planning for a self-interested agent in multiagent\nsettings. An agent operating in a multiagent environment must deliberate about\nthe actions that other agents may take and the effect these actions have on the\nenvironment and the rewards it receives. Traditional I-POMDPs model this\ndependence on the actions of other agents using joint action and model spaces.\nTherefore, the solution complexity grows exponentially with the number of\nagents thereby complicating scalability. In this paper, we model and extend\nanonymity and context-specific independence -- problem structures often present\nin agent populations -- for computational gain. We empirically demonstrate the\nefficiency from exploiting these problem structures by solving a new multiagent\nproblem involving more than 1,000 agents.",
+  "cat": "cs.MA",
+  "authors": [
+   "Ekhlas Sonu",
+   "Yingke Chen",
+   "Prashant Doshi"
+  ],
+  "citation_count": 15
+ },
+ "1503.05317v1": {
+  "id": "1503.05317v1",
+  "title": "Model Checking AORTA  Verification of Organization-Aware Agents",
+  "url": "http://arxiv.org/pdf/1503.05317v1",
+  "date": "2015-03-18",
+  "abs": "As agent systems grow larger and more complex, there is an increasing need to\nformally verify them. Furthermore, it is often suggested that complex systems\ncan be regulated using organizational models, imposing constraints on the\nagents in the systems. Agents that can understand the organizational model and\nconstraints in a system is said to be organization-aware. This paper is\nconcerned with verification of organization-aware agents. We show how agents\nusing AORTA, a framework for making agents organization-aware, can be formally\nverified using an extended version of the Agent Java PathFinder (AJPF), a model\nchecking system designed specifically for agent programming languages. We\nintegrate AORTA with the Agent Infrastructure Layer (AIL), which is an\nintermediate layer on top of which APLs can be implemented, and use our\nextension of AJPF to verify a system of agents aiming to write a paper together\nby using an organization for coordination.",
+  "cat": "cs.MA",
+  "authors": [
+   "Andreas Schmidt Jensen"
+  ],
+  "citation_count": 4
+ },
+ "1712.07305v1": {
+  "id": "1712.07305v1",
+  "title": "Revisiting the Master-Slave Architecture in Multi-Agent Deep\n  Reinforcement Learning",
+  "url": "http://arxiv.org/pdf/1712.07305v1",
+  "date": "2017-12-20",
+  "abs": "Many tasks in artificial intelligence require the collaboration of multiple\nagents. We exam deep reinforcement learning for multi-agent domains. Recent\nresearch efforts often take the form of two seemingly conflicting perspectives,\nthe decentralized perspective, where each agent is supposed to have its own\ncontroller; and the centralized perspective, where one assumes there is a\nlarger model controlling all agents. In this regard, we revisit the idea of the\nmaster-slave architecture by incorporating both perspectives within one\nframework. Such a hierarchical structure naturally leverages advantages from\none another. The idea of combining both perspectives is intuitive and can be\nwell motivated from many real world systems, however, out of a variety of\npossible realizations, we highlights three key ingredients, i.e. composed\naction representation, learnable communication and independent reasoning. With\nnetwork designs to facilitate these explicitly, our proposal consistently\noutperforms latest competing methods both in synthetic experiments and when\napplied to challenging StarCraft micromanagement tasks.",
+  "cat": "cs.AI",
+  "authors": [
+   "Xiangyu Kong",
+   "Bo Xin",
+   "Fangchen Liu",
+   "Yizhou Wang"
+  ],
+  "citation_count": 43
+ },
+ "2403.08282v2": {
+  "id": "2403.08282v2",
+  "title": "Hierarchical Auto-Organizing System for Open-Ended Multi-Agent\n  Navigation",
+  "url": "http://arxiv.org/pdf/2403.08282v2",
+  "date": "2024-03-13",
+  "abs": "Due to the dynamic and unpredictable open-world setting, navigating complex\nenvironments in Minecraft poses significant challenges for multi-agent systems.\nAgents must interact with the environment and coordinate their actions with\nother agents to achieve common objectives. However, traditional approaches\noften struggle to efficiently manage inter-agent communication and task\ndistribution, crucial for effective multi-agent navigation. Furthermore,\nprocessing and integrating multi-modal information (such as visual, textual,\nand auditory data) is essential for agents to comprehend their goals and\nnavigate the environment successfully and fully. To address this issue, we\ndesign the HAS framework to auto-organize groups of LLM-based agents to\ncomplete navigation tasks. In our approach, we devise a hierarchical\nauto-organizing navigation system, which is characterized by 1) a hierarchical\nsystem for multi-agent organization, ensuring centralized planning and\ndecentralized execution; 2) an auto-organizing and intra-communication\nmechanism, enabling dynamic group adjustment under subtasks; 3) a multi-modal\ninformation platform, facilitating multi-modal perception to perform the three\nnavigation tasks with one system. To assess organizational behavior, we design\na series of navigation tasks in the Minecraft environment, which includes\nsearching and exploring. We aim to develop embodied organizations that push the\nboundaries of embodied AI, moving it towards a more human-like organizational\nstructure.",
+  "cat": "cs.CV",
+  "authors": [
+   "Zhonghan Zhao",
+   "Kewei Chen",
+   "Dongxu Guo",
+   "Wenhao Chai",
+   "Tian Ye",
+   "Yanting Zhang",
+   "Gaoang Wang"
+  ],
+  "citation_count": 12
+ },
+ "2403.07769v3": {
+  "id": "2403.07769v3",
+  "title": "Transforming Competition into Collaboration  The Revolutionary Role of\n  Multi-Agent Systems and Language Models in Modern Organizations",
+  "url": "http://arxiv.org/pdf/2403.07769v3",
+  "date": "2024-03-12",
+  "abs": "This article explores the dynamic influence of computational entities based\non multi-agent systems theory (SMA) combined with large language models (LLM),\nwhich are characterized by their ability to simulate complex human\ninteractions, as a possibility to revolutionize human user interaction from the\nuse of specialized artificial agents to support everything from operational\norganizational processes to strategic decision making based on applied\nknowledge and human orchestration. Previous investigations reveal that there\nare limitations, particularly in the autonomous approach of artificial agents,\nespecially when dealing with new challenges and pragmatic tasks such as\ninducing logical reasoning and problem solving. It is also considered that\ntraditional techniques, such as the stimulation of chains of thoughts, require\nexplicit human guidance. In our approach we employ agents developed from large\nlanguage models (LLM), each with distinct prototyping that considers behavioral\nelements, driven by strategies that stimulate the generation of knowledge based\non the use case proposed in the scenario (role-play) business, using a\ndiscussion approach between agents (guided conversation). We demonstrate the\npotential of developing agents useful for organizational strategies, based on\nmulti-agent system theories (SMA) and innovative uses based on large language\nmodels (LLM based), offering a differentiated and adaptable experiment to\ndifferent applications, complexities, domains, and capabilities from LLM.",
+  "cat": "cs.AI",
+  "authors": [
+   "Carlos Jose Xavier Cruz"
+  ],
+  "citation_count": 1
+ },
+ "2311.08562v2": {
+  "id": "2311.08562v2",
+  "title": "MAgIC  Investigation of Large Language Model Powered Multi-Agent in\n  Cognition, Adaptability, Rationality and Collaboration",
+  "url": "http://arxiv.org/pdf/2311.08562v2",
+  "date": "2023-11-14",
+  "abs": "Large Language Models (LLMs) have marked a significant advancement in the\nfield of natural language processing, demonstrating exceptional capabilities in\nreasoning, tool usage, and memory. As their applications extend into\nmulti-agent environments, a need has arisen for a comprehensive evaluation\nframework that captures their abilities in reasoning, planning, collaboration,\nand more. This work introduces a novel benchmarking framework specifically\ntailored to assess LLMs within multi-agent settings, providing quantitative\nmetrics to evaluate their judgment, reasoning, deception, self-awareness,\ncooperation, coordination, and rationality. We utilize games such as Chameleon\nand Undercover, alongside game theory scenarios like Cost Sharing, Multi-player\nPrisoner's Dilemma, and Public Good, to create diverse testing environments.\nOur framework is fortified with the Probabilistic Graphical Modeling (PGM)\nmethod, enhancing the LLMs' capabilities in navigating complex social and\ncognitive dimensions. The benchmark evaluates seven multi-agent systems powered\nby different LLMs, quantitatively highlighting a significant capability gap\nover threefold between the strongest, GPT-4, and the weakest, Llama-2-70B. It\nalso confirms that our PGM enhancement boosts the inherent abilities of all\nselected models by 50% on average. Our codes are released here\nhttps://github.com/cathyxl/MAgIC.",
+  "cat": "cs.CL",
+  "authors": [
+   "Lin Xu",
+   "Zhiyuan Hu",
+   "Daquan Zhou",
+   "Hongyu Ren",
+   "Zhen Dong",
+   "Kurt Keutzer",
+   "See Kiong Ng",
+   "Jiashi Feng"
+  ],
+  "citation_count": 14
+ },
+ "2306.07929v2": {
+  "id": "2306.07929v2",
+  "title": "Large Language Models Are Semi-Parametric Reinforcement Learning Agents",
+  "url": "http://arxiv.org/pdf/2306.07929v2",
+  "date": "2023-06-09",
+  "abs": "Inspired by the insights in cognitive science with respect to human memory\nand reasoning mechanism, a novel evolvable LLM-based (Large Language Model)\nagent framework is proposed as REMEMBERER. By equipping the LLM with a\nlong-term experience memory, REMEMBERER is capable of exploiting the\nexperiences from the past episodes even for different task goals, which excels\nan LLM-based agent with fixed exemplars or equipped with a transient working\nmemory. We further introduce Reinforcement Learning with Experience Memory\n(RLEM) to update the memory. Thus, the whole system can learn from the\nexperiences of both success and failure, and evolve its capability without\nfine-tuning the parameters of the LLM. In this way, the proposed REMEMBERER\nconstitutes a semi-parametric RL agent. Extensive experiments are conducted on\ntwo RL task sets to evaluate the proposed framework. The average results with\ndifferent initialization and training sets exceed the prior SOTA by 4% and 2%\nfor the success rate on two task sets and demonstrate the superiority and\nrobustness of REMEMBERER.",
+  "cat": "cs.CL",
+  "authors": [
+   "Danyang Zhang",
+   "Lu Chen",
+   "Situo Zhang",
+   "Hongshen Xu",
+   "Zihan Zhao",
+   "Kai Yu"
+  ],
+  "citation_count": 8
+ },
+ "2306.03314v1": {
+  "id": "2306.03314v1",
+  "title": "Multi-Agent Collaboration  Harnessing the Power of Intelligent LLM\n  Agents",
+  "url": "http://arxiv.org/pdf/2306.03314v1",
+  "date": "2023-06-05",
+  "abs": "In this paper, we present a novel framework for enhancing the capabilities of\nlarge language models (LLMs) by leveraging the power of multi-agent systems.\nOur framework introduces a collaborative environment where multiple intelligent\nagent components, each with distinctive attributes and roles, work together to\nhandle complex tasks more efficiently and effectively. We demonstrate the\npracticality and versatility of our framework through case studies in\nartificial general intelligence (AGI), specifically focusing on the Auto-GPT\nand BabyAGI models. We also examine the \"Gorilla\" model, which integrates\nexternal APIs into the LLM. Our framework addresses limitations and challenges\nsuch as looping issues, security risks, scalability, system evaluation, and\nethical considerations. By modeling various domains such as courtroom\nsimulations and software development scenarios, we showcase the potential\napplications and benefits of our proposed multi-agent system. Our framework\nprovides an avenue for advancing the capabilities and performance of LLMs\nthrough collaboration and knowledge exchange among intelligent agents.",
+  "cat": "cs.AI",
+  "authors": [
+   "Yashar Talebirad",
+   "Amirhossein Nadiri"
+  ],
+  "citation_count": 110
+ },
+ "2310.14985v3": {
+  "id": "2310.14985v3",
+  "title": "LLM-Based Agent Society Investigation  Collaboration and Confrontation\n  in Avalon Gameplay",
+  "url": "http://arxiv.org/pdf/2310.14985v3",
+  "date": "2023-10-23",
+  "abs": "This paper aims to investigate the open research problem of uncovering the\nsocial behaviors of LLM-based agents. To achieve this goal, we adopt Avalon, a\nrepresentative communication game, as the environment and use system prompts to\nguide LLM agents to play the game. While previous studies have conducted\npreliminary investigations into gameplay with LLM agents, there lacks research\non their social behaviors. In this paper, we present a novel framework designed\nto seamlessly adapt to Avalon gameplay. The core of our proposed framework is a\nmulti-agent system that enables efficient communication and interaction among\nagents. We evaluate the performance of our framework based on metrics from two\nperspectives: winning the game and analyzing the social behaviors of LLM\nagents. Our results demonstrate the effectiveness of our framework in\ngenerating adaptive and intelligent agents and highlight the potential of\nLLM-based agents in addressing the challenges associated with dynamic social\nenvironment interaction. By analyzing the social behaviors of LLM agents from\nthe aspects of both collaboration and confrontation, we provide insights into\nthe research and applications of this domain. Our code is publicly available at\nhttps://github.com/3DAgentWorld/LLM-Game-Agent",
+  "cat": "cs.CL",
+  "authors": [
+   "Yihuai Lan",
+   "Zhiqiang Hu",
+   "Lei Wang",
+   "Yang Wang",
+   "Deheng Ye",
+   "Peilin Zhao",
+   "Ee-Peng Lim",
+   "Hui Xiong",
+   "Hao Wang"
+  ],
+  "citation_count": 22
+ },
+ "2310.10701v2": {
+  "id": "2310.10701v2",
+  "title": "Theory of Mind for Multi-Agent Collaboration via Large Language Models",
+  "url": "http://arxiv.org/pdf/2310.10701v2",
+  "date": "2023-10-16",
+  "abs": "While Large Language Models (LLMs) have demonstrated impressive\naccomplishments in both reasoning and planning, their abilities in multi-agent\ncollaborations remains largely unexplored. This study evaluates LLM-based\nagents in a multi-agent cooperative text game with Theory of Mind (ToM)\ninference tasks, comparing their performance with Multi-Agent Reinforcement\nLearning (MARL) and planning-based baselines. We observed evidence of emergent\ncollaborative behaviors and high-order Theory of Mind capabilities among\nLLM-based agents. Our results reveal limitations in LLM-based agents' planning\noptimization due to systematic failures in managing long-horizon contexts and\nhallucination about the task state. We explore the use of explicit belief state\nrepresentations to mitigate these issues, finding that it enhances task\nperformance and the accuracy of ToM inferences for LLM-based agents.",
+  "cat": "cs.CL",
+  "authors": [
+   "Huao Li",
+   "Yu Quan Chong",
+   "Simon Stepputtis",
+   "Joseph Campbell",
+   "Dana Hughes",
+   "Michael Lewis",
+   "Katia Sycara"
+  ],
+  "citation_count": 28
+ },
+ "1509.08560v1": {
+  "id": "1509.08560v1",
+  "title": "CARMA  Collective Adaptive Resource-sharing Markovian Agents",
+  "url": "http://arxiv.org/pdf/1509.08560v1",
+  "date": "2015-09-29",
+  "abs": "In this paper we present CARMA, a language recently defined to support\nspecification and analysis of collective adaptive systems. CARMA is a\nstochastic process algebra equipped with linguistic constructs specifically\ndeveloped for modelling and programming systems that can operate in open-ended\nand unpredictable environments. This class of systems is typically composed of\na huge number of interacting agents that dynamically adjust and combine their\nbehaviour to achieve specific goals. A CARMA model, termed a collective,\nconsists of a set of components, each of which exhibits a set of attributes. To\nmodel dynamic aggregations, which are sometimes referred to as ensembles, CARMA\nprovides communication primitives that are based on predicates over the\nexhibited attributes. These predicates are used to select the participants in a\ncommunication. Two communication mechanisms are provided in the CARMA language:\nmulticast-based and unicast-based. In this paper, we first introduce the basic\nprinciples of CARMA and then we show how our language can be used to support\nspecification with a simple but illustrative example of a socio-technical\ncollective adaptive system.",
+  "cat": "cs.PL",
+  "authors": [
+   "Luca Bortolussi",
+   "Rocco De Nicola",
+   "Vashti Galpin",
+   "Stephen Gilmore",
+   "Jane Hillston",
+   "Diego Latella",
+   "Michele Loreti",
+   "Mieke Massink"
+  ],
+  "citation_count": 42
+ },
+ "2310.06500v1": {
+  "id": "2310.06500v1",
+  "title": "MetaAgents  Simulating Interactions of Human Behaviors for LLM-based\n  Task-oriented Coordination via Collaborative Generative Agents",
+  "url": "http://arxiv.org/pdf/2310.06500v1",
+  "date": "2023-10-10",
+  "abs": "Significant advancements have occurred in the application of Large Language\nModels (LLMs) for various tasks and social simulations. Despite this, their\ncapacities to coordinate within task-oriented social contexts are\nunder-explored. Such capabilities are crucial if LLMs are to effectively mimic\nhuman-like social behavior and produce meaningful results. To bridge this gap,\nwe introduce collaborative generative agents, endowing LLM-based Agents with\nconsistent behavior patterns and task-solving abilities. We situate these\nagents in a simulated job fair environment as a case study to scrutinize their\ncoordination skills. We propose a novel framework that equips collaborative\ngenerative agents with human-like reasoning abilities and specialized skills.\nOur evaluation demonstrates that these agents show promising performance.\nHowever, we also uncover limitations that hinder their effectiveness in more\ncomplex coordination tasks. Our work provides valuable insights into the role\nand evolution of LLMs in task-oriented social simulations.",
+  "cat": "cs.AI",
+  "authors": [
+   "Yuan Li",
+   "Yixuan Zhang",
+   "Lichao Sun"
+  ],
+  "citation_count": 57
+ },
+ "2310.03659v1": {
+  "id": "2310.03659v1",
+  "title": "Balancing Autonomy and Alignment  A Multi-Dimensional Taxonomy for\n  Autonomous LLM-powered Multi-Agent Architectures",
+  "url": "http://arxiv.org/pdf/2310.03659v1",
+  "date": "2023-10-05",
+  "abs": "Large language models (LLMs) have revolutionized the field of artificial\nintelligence, endowing it with sophisticated language understanding and\ngeneration capabilities. However, when faced with more complex and\ninterconnected tasks that demand a profound and iterative thought process, LLMs\nreveal their inherent limitations. Autonomous LLM-powered multi-agent systems\nrepresent a strategic response to these challenges. Such systems strive for\nautonomously tackling user-prompted goals by decomposing them into manageable\ntasks and orchestrating their execution and result synthesis through a\ncollective of specialized intelligent agents. Equipped with LLM-powered\nreasoning capabilities, these agents harness the cognitive synergy of\ncollaborating with their peers, enhanced by leveraging contextual resources\nsuch as tools and datasets. While these architectures hold promising potential\nin amplifying AI capabilities, striking the right balance between different\nlevels of autonomy and alignment remains the crucial challenge for their\neffective operation. This paper proposes a comprehensive multi-dimensional\ntaxonomy, engineered to analyze how autonomous LLM-powered multi-agent systems\nbalance the dynamic interplay between autonomy and alignment across various\naspects inherent to architectural viewpoints such as goal-driven task\nmanagement, agent composition, multi-agent collaboration, and context\ninteraction. It also includes a domain-ontology model specifying fundamental\narchitectural concepts. Our taxonomy aims to empower researchers, engineers,\nand AI practitioners to systematically analyze the architectural dynamics and\nbalancing strategies employed by these increasingly prevalent AI systems. The\nexploratory taxonomic classification of selected representative LLM-powered\nmulti-agent systems illustrates its practical utility and reveals potential for\nfuture research and development.",
+  "cat": "cs.AI",
+  "authors": [
+   "Thorsten H\u00e4ndler"
+  ],
+  "citation_count": 13
+ },
+ "2310.02170v1": {
+  "id": "2310.02170v1",
+  "title": "Dynamic LLM-Agent Network  An LLM-agent Collaboration Framework with\n  Agent Team Optimization",
+  "url": "http://arxiv.org/pdf/2310.02170v1",
+  "date": "2023-10-03",
+  "abs": "Large language model (LLM) agents have been shown effective on a wide range\nof tasks, and by ensembling multiple LLM agents, their performances could be\nfurther improved. Existing approaches employ a fixed set of agents to interact\nwith each other in a static architecture, which limits their generalizability\nto various tasks and requires strong human prior in designing these agents. In\nthis work, we propose to construct a strategic team of agents communicating in\na dynamic interaction architecture based on the task query. Specifically, we\nbuild a framework named Dynamic LLM-Agent Network ($\\textbf{DyLAN}$) for\nLLM-agent collaboration on complicated tasks like reasoning and code\ngeneration. DyLAN enables agents to interact for multiple rounds in a dynamic\narchitecture with inference-time agent selection and an early-stopping\nmechanism to improve performance and efficiency. We further design an automatic\nagent team optimization algorithm based on an unsupervised metric termed\n$\\textit{Agent Importance Score}$, enabling the selection of best agents based\non the contribution each agent makes. Empirically, we demonstrate that DyLAN\nperforms well in both reasoning and code generation tasks with reasonable\ncomputational cost. DyLAN achieves 13.0% and 13.3% improvement on MATH and\nHumanEval, respectively, compared to a single execution on GPT-35-turbo. On\nspecific subjects of MMLU, agent team optimization in DyLAN increases accuracy\nby up to 25.0%.",
+  "cat": "cs.CL",
+  "authors": [
+   "Zijun Liu",
+   "Yanzhe Zhang",
+   "Peng Li",
+   "Yang Liu",
+   "Diyi Yang"
+  ],
+  "citation_count": 72
+ },
+ "2310.02124v2": {
+  "id": "2310.02124v2",
+  "title": "Exploring Collaboration Mechanisms for LLM Agents  A Social Psychology\n  View",
+  "url": "http://arxiv.org/pdf/2310.02124v2",
+  "date": "2023-10-03",
+  "abs": "As Natural Language Processing (NLP) systems are increasingly employed in\nintricate social environments, a pressing query emerges: Can these NLP systems\nmirror human-esque collaborative intelligence, in a multi-agent society\nconsisting of multiple large language models (LLMs)? This paper probes the\ncollaboration mechanisms among contemporary NLP systems by melding practical\nexperiments with theoretical insights. We fabricate four unique `societies'\ncomprised of LLM agents, where each agent is characterized by a specific\n`trait' (easy-going or overconfident) and engages in collaboration with a\ndistinct `thinking pattern' (debate or reflection). Through evaluating these\nmulti-agent societies on three benchmark datasets, we discern that certain\ncollaborative strategies not only outshine previous top-tier approaches, but\nalso optimize efficiency (using fewer API tokens). Moreover, our results\nfurther illustrate that LLM agents manifest human-like social behaviors, such\nas conformity and consensus reaching, mirroring foundational social psychology\ntheories. In conclusion, we integrate insights from social psychology to\ncontextualize the collaboration of LLM agents, inspiring further investigations\ninto the collaboration mechanism for LLMs. We commit to sharing our code and\ndatasets\\footnote{\\url{https://github.com/zjunlp/MachineSoM}.}, hoping to\ncatalyze further research in this promising avenue.",
+  "cat": "cs.CL",
+  "authors": [
+   "Jintian Zhang",
+   "Xin Xu",
+   "Ningyu Zhang",
+   "Ruibo Liu",
+   "Bryan Hooi",
+   "Shumin Deng"
+  ],
+  "citation_count": 62
+ },
+ "1501.07423v1": {
+  "id": "1501.07423v1",
+  "title": "A Flexible Coupling Approach to Multi-Agent Planning under Incomplete\n  Information",
+  "url": "http://arxiv.org/pdf/1501.07423v1",
+  "date": "2015-01-29",
+  "abs": "Multi-agent planning (MAP) approaches are typically oriented at solving\nloosely-coupled problems, being ineffective to deal with more complex,\nstrongly-related problems. In most cases, agents work under complete\ninformation, building complete knowledge bases. The present article introduces\na general-purpose MAP framework designed to tackle problems of any coupling\nlevels under incomplete information. Agents in our MAP model are partially\nunaware of the information managed by the rest of agents and share only the\ncritical information that affects other agents, thus maintaining a distributed\nvision of the task.",
+  "cat": "cs.AI",
+  "authors": [
+   "Alejandro Torre\u00f1o",
+   "Eva Onaindia",
+   "\u00d3scar Sapena"
+  ],
+  "citation_count": 20
+ },
+ "2312.17515v1": {
+  "id": "2312.17515v1",
+  "title": "Cooperation on the Fly  Exploring Language Agents for Ad Hoc Teamwork in\n  the Avalon Game",
+  "url": "http://arxiv.org/pdf/2312.17515v1",
+  "date": "2023-12-29",
+  "abs": "Multi-agent collaboration with Large Language Models (LLMs) demonstrates\nproficiency in basic tasks, yet its efficiency in more complex scenarios\nremains unexplored. In gaming environments, these agents often face situations\nwithout established coordination protocols, requiring them to make intelligent\ninferences about teammates from limited data. This problem motivates the area\nof ad hoc teamwork, in which an agent may potentially cooperate with a variety\nof teammates to achieve a shared goal. Our study focuses on the ad hoc teamwork\nproblem where the agent operates in an environment driven by natural language.\nOur findings reveal the potential of LLM agents in team collaboration,\nhighlighting issues related to hallucinations in communication. To address this\nissue, we develop CodeAct, a general agent that equips LLM with enhanced memory\nand code-driven reasoning, enabling the repurposing of partial information for\nrapid adaptation to new teammates.",
+  "cat": "cs.CL",
+  "authors": [
+   "Zijing Shi",
+   "Meng Fang",
+   "Shunfeng Zheng",
+   "Shilong Deng",
+   "Ling Chen",
+   "Yali Du"
+  ],
+  "citation_count": 13
+ },
+ "2006.07301v2": {
+  "id": "2006.07301v2",
+  "title": "Human and Multi-Agent collaboration in a human-MARL teaming framework",
+  "url": "http://arxiv.org/pdf/2006.07301v2",
+  "date": "2020-06-12",
+  "abs": "Reinforcement learning provides effective results with agents learning from\ntheir observations, received rewards, and internal interactions between agents.\nThis study proposes a new open-source MARL framework, called COGMENT, to\nefficiently leverage human and agent interactions as a source of learning. We\ndemonstrate these innovations by using a designed real-time environment with\nunmanned aerial vehicles driven by RL agents, collaborating with a human. The\nresults of this study show that the proposed collaborative paradigm and the\nopen-source framework leads to significant reductions in both human effort and\nexploration costs.",
+  "cat": "cs.AI",
+  "authors": [
+   "Neda Navidi",
+   "Francoi Chabo",
+   "Saga Kurandwa",
+   "Iv Lutigma",
+   "Vincent Robt",
+   "Gregry Szrftgr",
+   "Andea Schuh"
+  ],
+  "citation_count": 2
+ },
+ "2006.05619v1": {
+  "id": "2006.05619v1",
+  "title": "Towards Jacamo-rest  A Resource-Oriented Abstraction for Managing\n  Multi-Agent Systems",
+  "url": "http://arxiv.org/pdf/2006.05619v1",
+  "date": "2020-06-10",
+  "abs": "The Multi-Agent Oriented Programming (MAOP) paradigm provides abstractions to\nmodel and implements entities of agents, as well as of their organisations and\nenvironments. In recent years, researchers have started to explore the\nintegration of MAOP and the resource-oriented web architecture (REST). This\npaper further advances this line of research by presenting an ongoing work on\njacamo-rest, a resource-oriented web-based abstraction for the multi-agent\nprogramming platform JaCaMo. Jacamo-rest takes Multi-Agent System (MAS)\ninteroperability to a new level, enabling MAS to not only interact with\nservices or applications of the World Wide Web but also to be managed and\nupdated in their specifications by other applications. To add a developer\ninterface to JaCaMo that is suitable for the Web, we provide a novel conceptual\nperspective on the management of MAOP specification entities as web resources.\nWe tested jacamo-rest using it as a middleware of a programming interface\napplication that provides modern software engineering facilities such as\ncontinuous deployments and iterative software development for MAS.",
+  "cat": "cs.MA",
+  "authors": [
+   "Cleber Jorge Amaral",
+   "Jomi Fred H\u00fcbner",
+   "Timotheus Kampik"
+  ],
+  "citation_count": 4
+ },
+ "2006.04222v3": {
+  "id": "2006.04222v3",
+  "title": "Randomized Entity-wise Factorization for Multi-Agent Reinforcement\n  Learning",
+  "url": "http://arxiv.org/pdf/2006.04222v3",
+  "date": "2020-06-07",
+  "abs": "Multi-agent settings in the real world often involve tasks with varying types\nand quantities of agents and non-agent entities; however, common patterns of\nbehavior often emerge among these agents/entities. Our method aims to leverage\nthese commonalities by asking the question: ``What is the expected utility of\neach agent when only considering a randomly selected sub-group of its observed\nentities?'' By posing this counterfactual question, we can recognize\nstate-action trajectories within sub-groups of entities that we may have\nencountered in another task and use what we learned in that task to inform our\nprediction in the current one. We then reconstruct a prediction of the full\nreturns as a combination of factors considering these disjoint groups of\nentities and train this ``randomly factorized\" value function as an auxiliary\nobjective for value-based multi-agent reinforcement learning. By doing so, our\nmodel can recognize and leverage similarities across tasks to improve learning\nefficiency in a multi-task setting. Our approach, Randomized Entity-wise\nFactorization for Imagined Learning (REFIL), outperforms all strong baselines\nby a significant margin in challenging multi-task StarCraft micromanagement\nsettings.",
+  "cat": "cs.LG",
+  "authors": [
+   "Shariq Iqbal",
+   "Christian A. Schroeder de Witt",
+   "Bei Peng",
+   "Wendelin B\u00f6hmer",
+   "Shimon Whiteson",
+   "Fei Sha"
+  ],
+  "citation_count": 55
+ },
+ "2010.01523v1": {
+  "id": "2010.01523v1",
+  "title": "RODE  Learning Roles to Decompose Multi-Agent Tasks",
+  "url": "http://arxiv.org/pdf/2010.01523v1",
+  "date": "2020-10-04",
+  "abs": "Role-based learning holds the promise of achieving scalable multi-agent\nlearning by decomposing complex tasks using roles. However, it is largely\nunclear how to efficiently discover such a set of roles. To solve this problem,\nwe propose to first decompose joint action spaces into restricted role action\nspaces by clustering actions according to their effects on the environment and\nother agents. Learning a role selector based on action effects makes role\ndiscovery much easier because it forms a bi-level learning hierarchy -- the\nrole selector searches in a smaller role space and at a lower temporal\nresolution, while role policies learn in significantly reduced primitive\naction-observation spaces. We further integrate information about action\neffects into the role policies to boost learning efficiency and policy\ngeneralization. By virtue of these advances, our method (1) outperforms the\ncurrent state-of-the-art MARL algorithms on 10 of the 14 scenarios that\ncomprise the challenging StarCraft II micromanagement benchmark and (2)\nachieves rapid transfer to new environments with three times the number of\nagents. Demonstrative videos are available at\nhttps://sites.google.com/view/rode-marl .",
+  "cat": "cs.LG",
+  "authors": [
+   "Tonghan Wang",
+   "Tarun Gupta",
+   "Anuj Mahajan",
+   "Bei Peng",
+   "Shimon Whiteson",
+   "Chongjie Zhang"
+  ],
+  "citation_count": 177
+ },
+ "2107.06857v1": {
+  "id": "2107.06857v1",
+  "title": "Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting\n  Pot",
+  "url": "http://arxiv.org/pdf/2107.06857v1",
+  "date": "2021-07-14",
+  "abs": "Existing evaluation suites for multi-agent reinforcement learning (MARL) do\nnot assess generalization to novel situations as their primary objective\n(unlike supervised-learning benchmarks). Our contribution, Melting Pot, is a\nMARL evaluation suite that fills this gap, and uses reinforcement learning to\nreduce the human labor required to create novel test scenarios. This works\nbecause one agent's behavior constitutes (part of) another agent's environment.\nTo demonstrate scalability, we have created over 80 unique test scenarios\ncovering a broad range of research topics such as social dilemmas, reciprocity,\nresource sharing, and task partitioning. We apply these test scenarios to\nstandard MARL training algorithms, and demonstrate how Melting Pot reveals\nweaknesses not apparent from training performance alone.",
+  "cat": "cs.MA",
+  "authors": [
+   "Joel Z. Leibo",
+   "Edgar Du\u00e9\u00f1ez-Guzm\u00e1n",
+   "Alexander Sasha Vezhnevets",
+   "John P. Agapiou",
+   "Peter Sunehag",
+   "Raphael Koster",
+   "Jayd Matyas",
+   "Charles Beattie",
+   "Igor Mordatch",
+   "Thore Graepel"
+  ],
+  "citation_count": 84
+ },
+ "1210.7035v1": {
+  "id": "1210.7035v1",
+  "title": "Development of Fault Tolerant MAS with Cooperative Error Recovery by\n  Refinement in Event-B",
+  "url": "http://arxiv.org/pdf/1210.7035v1",
+  "date": "2012-10-26",
+  "abs": "Designing fault tolerance mechanisms for multi-agent systems is a notoriously\ndifficult task. In this paper we present an approach to formal development of a\nfault tolerant multi-agent system by refinement in Event-B. We demonstrate how\nto formally specify cooperative error recovery and dynamic reconfiguration in\nEvent-B. Moreover, we discuss how to express and verify essential properties of\na fault tolerant multi-agent system while refining it. The approach is\nillustrated by a case study - a multi-robotic system.",
+  "cat": "cs.SE",
+  "authors": [
+   "Inna Pereverzeva",
+   "Elena Troubitsyna",
+   "Linas Laibinis"
+  ],
+  "citation_count": 11
+ },
+ "1210.5936v1": {
+  "id": "1210.5936v1",
+  "title": "Mod\u00e9lisation multi-niveaux dans AA4MM",
+  "url": "http://arxiv.org/pdf/1210.5936v1",
+  "date": "2012-10-22",
+  "abs": "In this article, we propose to represent a multi-level phenomenon as a set of\ninteracting models. This perspective makes the levels of representation and\ntheir relationships explicit. To deal with coherence, causality and\ncoordination issues between models, we rely on AA4MM, a metamodel dedicated to\nsuch a representation. We illustrate our proposal and we show the interest of\nour approach on a flocking phenomenon.",
+  "cat": "cs.MA",
+  "authors": [
+   "Benjamin Camus",
+   "Julien Siebert",
+   "Christine Bourjot",
+   "Vincent Chevrier"
+  ],
+  "citation_count": 4
+ },
+ "1810.11187v2": {
+  "id": "1810.11187v2",
+  "title": "TarMAC  Targeted Multi-Agent Communication",
+  "url": "http://arxiv.org/pdf/1810.11187v2",
+  "date": "2018-10-26",
+  "abs": "We propose a targeted communication architecture for multi-agent\nreinforcement learning, where agents learn both what messages to send and whom\nto address them to while performing cooperative tasks in partially-observable\nenvironments. This targeting behavior is learnt solely from downstream\ntask-specific reward without any communication supervision. We additionally\naugment this with a multi-round communication approach where agents coordinate\nvia multiple rounds of communication before taking actions in the environment.\nWe evaluate our approach on a diverse set of cooperative multi-agent tasks, of\nvarying difficulties, with varying number of agents, in a variety of\nenvironments ranging from 2D grid layouts of shapes and simulated traffic\njunctions to 3D indoor environments, and demonstrate the benefits of targeted\nand multi-round communication. Moreover, we show that the targeted\ncommunication strategies learned by agents are interpretable and intuitive.\nFinally, we show that our architecture can be easily extended to mixed and\ncompetitive environments, leading to improved performance and sample complexity\nover recent state-of-the-art approaches.",
+  "cat": "cs.LG",
+  "authors": [
+   "Abhishek Das",
+   "Th\u00e9ophile Gervet",
+   "Joshua Romoff",
+   "Dhruv Batra",
+   "Devi Parikh",
+   "Michael Rabbat",
+   "Joelle Pineau"
+  ],
+  "citation_count": 330
+ },
+ "2308.12503v2": {
+  "id": "2308.12503v2",
+  "title": "CGMI  Configurable General Multi-Agent Interaction Framework",
+  "url": "http://arxiv.org/pdf/2308.12503v2",
+  "date": "2023-08-24",
+  "abs": "Benefiting from the powerful capabilities of large language models (LLMs),\nagents based on LLMs have shown the potential to address domain-specific tasks\nand emulate human behaviors. However, the content generated by these agents\nremains somewhat superficial, owing to their limited domain expertise and the\nabsence of an effective cognitive architecture. To address this, we present the\nConfigurable General Multi-Agent Interaction (CGMI) framework, designed to\nreplicate human interactions in real-world scenarios. Specifically, we propose\na tree-structured methodology for the assignment, detection, and maintenance of\nagent personality. Additionally, we designed a cognitive architecture equipped\nwith a skill library based on the ACT* model, which contains memory,\nreflection, and planning modules. We have also integrated general agents to\naugment the virtual environment's realism. Using the CGMI framework, we\nsimulated numerous classroom interactions between teacher and students. The\nexperiments indicate that aspects such as the teaching methodology, curriculum,\nand student performance closely mirror real classroom settings. We will open\nsource our work.",
+  "cat": "cs.AI",
+  "authors": [
+   "Shi Jinxin",
+   "Zhao Jiabao",
+   "Wang Yilei",
+   "Wu Xingjiao",
+   "Li Jiawen",
+   "He Liang"
+  ],
+  "citation_count": 16
+ },
+ "2308.11432v5": {
+  "id": "2308.11432v5",
+  "title": "A Survey on Large Language Model based Autonomous Agents",
+  "url": "http://arxiv.org/pdf/2308.11432v5",
+  "date": "2023-08-22",
+  "abs": "Autonomous agents have long been a prominent research focus in both academic\nand industry communities. Previous research in this field often focuses on\ntraining agents with limited knowledge within isolated environments, which\ndiverges significantly from human learning processes, and thus makes the agents\nhard to achieve human-like decisions. Recently, through the acquisition of vast\namounts of web knowledge, large language models (LLMs) have demonstrated\nremarkable potential in achieving human-level intelligence. This has sparked an\nupsurge in studies investigating LLM-based autonomous agents. In this paper, we\npresent a comprehensive survey of these studies, delivering a systematic review\nof the field of LLM-based autonomous agents from a holistic perspective. More\nspecifically, we first discuss the construction of LLM-based autonomous agents,\nfor which we propose a unified framework that encompasses a majority of the\nprevious work. Then, we present a comprehensive overview of the diverse\napplications of LLM-based autonomous agents in the fields of social science,\nnatural science, and engineering. Finally, we delve into the evaluation\nstrategies commonly used for LLM-based autonomous agents. Based on the previous\nstudies, we also present several challenges and future directions in this\nfield. To keep track of this field and continuously update our survey, we\nmaintain a repository of relevant references at\nhttps://github.com/Paitesanshi/LLM-Agent-Survey.",
+  "cat": "cs.AI",
+  "authors": [
+   "Lei Wang",
+   "Chen Ma",
+   "Xueyang Feng",
+   "Zeyu Zhang",
+   "Hao Yang",
+   "Jingsen Zhang",
+   "Zhiyuan Chen",
+   "Jiakai Tang",
+   "Xu Chen",
+   "Yankai Lin",
+   "Wayne Xin Zhao",
+   "Zhewei Wei",
+   "Ji-Rong Wen"
+  ],
+  "citation_count": 610
+ },
+ "2308.10848v3": {
+  "id": "2308.10848v3",
+  "title": "AgentVerse  Facilitating Multi-Agent Collaboration and Exploring\n  Emergent Behaviors",
+  "url": "http://arxiv.org/pdf/2308.10848v3",
+  "date": "2023-08-21",
+  "abs": "Autonomous agents empowered by Large Language Models (LLMs) have undergone\nsignificant improvements, enabling them to generalize across a broad spectrum\nof tasks. However, in real-world scenarios, cooperation among individuals is\noften required to enhance the efficiency and effectiveness of task\naccomplishment. Hence, inspired by human group dynamics, we propose a\nmulti-agent framework \\framework that can collaboratively and dynamically\nadjust its composition as a greater-than-the-sum-of-its-parts system. Our\nexperiments demonstrate that \\framework framework can effectively deploy\nmulti-agent groups that outperform a single agent. Furthermore, we delve into\nthe emergence of social behaviors among individual agents within a group during\ncollaborative task accomplishment. In view of these behaviors, we discuss some\npossible strategies to leverage positive ones and mitigate negative ones for\nimproving the collaborative potential of multi-agent groups. Our codes for\n\\framework will soon be released at\n\\url{https://github.com/OpenBMB/AgentVerse}.",
+  "cat": "cs.CL",
+  "authors": [
+   "Weize Chen",
+   "Yusheng Su",
+   "Jingwei Zuo",
+   "Cheng Yang",
+   "Chenfei Yuan",
+   "Chi-Min Chan",
+   "Heyang Yu",
+   "Yaxi Lu",
+   "Yi-Hsin Hung",
+   "Chen Qian",
+   "Yujia Qin",
+   "Xin Cong",
+   "Ruobing Xie",
+   "Zhiyuan Liu",
+   "Maosong Sun",
+   "Jie Zhou"
+  ],
+  "citation_count": 55
+ },
+ "2206.01833v3": {
+  "id": "2206.01833v3",
+  "title": "Leveraging Heterogeneous Capabilities in Multi-Agent Systems for\n  Environmental Conflict Resolution",
+  "url": "http://arxiv.org/pdf/2206.01833v3",
+  "date": "2022-06-03",
+  "abs": "In this paper, we introduce a high-level controller synthesis framework that\nenables teams of heterogeneous agents to assist each other in resolving\nenvironmental conflicts that appear at runtime. This conflict resolution method\nis built upon temporal-logic-based reactive synthesis to guarantee safety and\ntask completion under specific environment assumptions. In heterogeneous\nmulti-agent systems, every agent is expected to complete its own tasks in\nservice of a global team objective. However, at runtime, an agent may encounter\nun-modeled obstacles (e.g., doors or walls) that prevent it from achieving its\nown task. To address this problem, we employ the capabilities of other\nheterogeneous agents to resolve the obstacle. A controller framework is\nproposed to redirect agents with the capability of resolving the appropriate\nobstacles to the required target when such a situation is detected. Three case\nstudies involving a bipedal robot Digit and a quadcopter are used to evaluate\nthe controller performance in action. Additionally, we implement the proposed\nframework on a physical multi-agent robotic system to demonstrate its viability\nfor real world applications.",
+  "cat": "cs.RO",
+  "authors": [
+   "Michael Enqi Cao",
+   "Jonas Warnke",
+   "Yunhai Han",
+   "Xinpei Ni",
+   "Ye Zhao",
+   "Samuel Coogan"
+  ],
+  "citation_count": 9
+ },
+ "2005.07064v1": {
+  "id": "2005.07064v1",
+  "title": "Multi-agent Communication meets Natural Language  Synergies between\n  Functional and Structural Language Learning",
+  "url": "http://arxiv.org/pdf/2005.07064v1",
+  "date": "2020-05-14",
+  "abs": "We present a method for combining multi-agent communication and traditional\ndata-driven approaches to natural language learning, with an end goal of\nteaching agents to communicate with humans in natural language. Our starting\npoint is a language model that has been trained on generic, not task-specific\nlanguage data. We then place this model in a multi-agent self-play environment\nthat generates task-specific rewards used to adapt or modulate the model,\nturning it into a task-conditional language model. We introduce a new way for\ncombining the two types of learning based on the idea of reranking language\nmodel samples, and show that this method outperforms others in communicating\nwith humans in a visual referential communication task. Finally, we present a\ntaxonomy of different types of language drift that can occur alongside a set of\nmeasures to detect them.",
+  "cat": "cs.CL",
+  "authors": [
+   "Angeliki Lazaridou",
+   "Anna Potapenko",
+   "Olivier Tieleman"
+  ],
+  "citation_count": 90
+ },
+ "2403.17246v1": {
+  "id": "2403.17246v1",
+  "title": "TwoStep  Multi-agent Task Planning using Classical Planners and Large\n  Language Models",
+  "url": "http://arxiv.org/pdf/2403.17246v1",
+  "date": "2024-03-25",
+  "abs": "Classical planning formulations like the Planning Domain Definition Language\n(PDDL) admit action sequences guaranteed to achieve a goal state given an\ninitial state if any are possible. However, reasoning problems defined in PDDL\ndo not capture temporal aspects of action taking, for example that two agents\nin the domain can execute an action simultaneously if postconditions of each do\nnot interfere with preconditions of the other. A human expert can decompose a\ngoal into largely independent constituent parts and assign each agent to one of\nthese subgoals to take advantage of simultaneous actions for faster execution\nof plan steps, each using only single agent planning. By contrast, large\nlanguage models (LLMs) used for directly inferring plan steps do not guarantee\nexecution success, but do leverage commonsense reasoning to assemble action\nsequences. We combine the strengths of classical planning and LLMs by\napproximating human intuitions for two-agent planning goal decomposition. We\ndemonstrate that LLM-based goal decomposition leads to faster planning times\nthan solving multi-agent PDDL problems directly while simultaneously achieving\nfewer plan execution steps than a single agent plan alone and preserving\nexecution success. Additionally, we find that LLM-based approximations of\nsubgoals can achieve similar multi-agent execution steps than those specified\nby human experts. Website and resources at https://glamor-usc.github.io/twostep",
+  "cat": "cs.AI",
+  "authors": [
+   "Ishika Singh",
+   "David Traum",
+   "Jesse Thomason"
+  ],
+  "citation_count": 8
+ },
+ "2403.16971v2": {
+  "id": "2403.16971v2",
+  "title": "AIOS  LLM Agent Operating System",
+  "url": "http://arxiv.org/pdf/2403.16971v2",
+  "date": "2024-03-25",
+  "abs": "The integration and deployment of large language model (LLM)-based\nintelligent agents have been fraught with challenges that compromise their\nefficiency and efficacy. Among these issues are sub-optimal scheduling and\nresource allocation of agent requests over the LLM, the difficulties in\nmaintaining context during interactions between agent and LLM, and the\ncomplexities inherent in integrating heterogeneous agents with different\ncapabilities and specializations. The rapid increase of agent quantity and\ncomplexity further exacerbates these issues, often leading to bottlenecks and\nsub-optimal utilization of resources. Inspired by these challenges, this paper\npresents AIOS, an LLM agent operating system, which embeds large language model\ninto operating systems (OS) as the brain of the OS, enabling an operating\nsystem \"with soul\" -- an important step towards AGI. Specifically, AIOS is\ndesigned to optimize resource allocation, facilitate context switch across\nagents, enable concurrent execution of agents, provide tool service for agents,\nand maintain access control for agents. We present the architecture of such an\noperating system, outline the core challenges it aims to resolve, and provide\nthe basic design and implementation of the AIOS. Our experiments on concurrent\nexecution of multiple agents demonstrate the reliability and efficiency of our\nAIOS modules. Through this, we aim to not only improve the performance and\nefficiency of LLM agents but also to pioneer for better development and\ndeployment of the AIOS ecosystem in the future. The project is open-source at\nhttps://github.com/agiresearch/AIOS.",
+  "cat": "cs.OS",
+  "authors": [
+   "Kai Mei",
+   "Zelong Li",
+   "Shuyuan Xu",
+   "Ruosong Ye",
+   "Yingqiang Ge",
+   "Yongfeng Zhang"
+  ],
+  "citation_count": 5
+ },
+ "2403.16524v1": {
+  "id": "2403.16524v1",
+  "title": "Harnessing the power of LLMs for normative reasoning in MASs",
+  "url": "http://arxiv.org/pdf/2403.16524v1",
+  "date": "2024-03-25",
+  "abs": "Software agents, both human and computational, do not exist in isolation and\noften need to collaborate or coordinate with others to achieve their goals. In\nhuman society, social mechanisms such as norms ensure efficient functioning,\nand these techniques have been adopted by researchers in multi-agent systems\n(MAS) to create socially aware agents. However, traditional techniques have\nlimitations, such as operating in limited environments often using brittle\nsymbolic reasoning. The advent of Large Language Models (LLMs) offers a\npromising solution, providing a rich and expressive vocabulary for norms and\nenabling norm-capable agents that can perform a range of tasks such as norm\ndiscovery, normative reasoning and decision-making. This paper examines the\npotential of LLM-based agents to acquire normative capabilities, drawing on\nrecent Natural Language Processing (NLP) and LLM research. We present our\nvision for creating normative LLM agents. In particular, we discuss how the\nrecently proposed \"LLM agent\" approaches can be extended to implement such\nnormative LLM agents. We also highlight challenges in this emerging field. This\npaper thus aims to foster collaboration between MAS, NLP and LLM researchers in\norder to advance the field of normative agents.",
+  "cat": "cs.AI",
+  "authors": [
+   "Bastin Tony Roy Savarimuthu",
+   "Surangika Ranathunga",
+   "Stephen Cranefield"
+  ],
+  "citation_count": 3
+ },
+ "2403.12482v1": {
+  "id": "2403.12482v1",
+  "title": "Embodied LLM Agents Learn to Cooperate in Organized Teams",
+  "url": "http://arxiv.org/pdf/2403.12482v1",
+  "date": "2024-03-19",
+  "abs": "Large Language Models (LLMs) have emerged as integral tools for reasoning,\nplanning, and decision-making, drawing upon their extensive world knowledge and\nproficiency in language-related tasks. LLMs thus hold tremendous potential for\nnatural language interaction within multi-agent systems to foster cooperation.\nHowever, LLM agents tend to over-report and comply with any instruction, which\nmay result in information redundancy and confusion in multi-agent cooperation.\nInspired by human organizations, this paper introduces a framework that imposes\nprompt-based organization structures on LLM agents to mitigate these problems.\nThrough a series of experiments with embodied LLM agents and human-agent\ncollaboration, our results highlight the impact of designated leadership on\nteam efficiency, shedding light on the leadership qualities displayed by LLM\nagents and their spontaneous cooperative behaviors. Further, we harness the\npotential of LLMs to propose enhanced organizational prompts, via a\nCriticize-Reflect process, resulting in novel organization structures that\nreduce communication costs and enhance team efficiency.",
+  "cat": "cs.AI",
+  "authors": [
+   "Xudong Guo",
+   "Kaixuan Huang",
+   "Jiale Liu",
+   "Wenhui Fan",
+   "Natalia V\u00e9lez",
+   "Qingyun Wu",
+   "Huazheng Wang",
+   "Thomas L. Griffiths",
+   "Mengdi Wang"
+  ],
+  "citation_count": 14
+ },
+ "2404.04834v1": {
+  "id": "2404.04834v1",
+  "title": "LLM-Based Multi-Agent Systems for Software Engineering  Vision and the\n  Road Ahead",
+  "url": "http://arxiv.org/pdf/2404.04834v1",
+  "date": "2024-04-07",
+  "abs": "Integrating Large Language Models(LLMs) into autonomous agents marks a\nsignificant shift in the research landscape by offering cognitive abilities\ncompetitive to human planning and reasoning. This paper envisions the evolution\nof LLM-based Multi-Agent (LMA) systems in addressing complex and multi-faceted\nsoftware engineering challenges. LMA systems introduce numerous benefits,\nincluding enhanced robustness through collaborative cross-examination,\nautonomous problem-solving, and scalable solutions to complex software\nprojects. By examining the role of LMA systems in future software engineering\npractices, this vision paper highlights the potential applications and emerging\nchallenges. We further point to specific opportunities for research and\nconclude with a research agenda with a set of research questions to guide\nfuture research directions.",
+  "cat": "cs.SE",
+  "authors": [
+   "Junda He",
+   "Christoph Treude",
+   "David Lo"
+  ],
+  "citation_count": 5
+ },
+ "2404.02183v1": {
+  "id": "2404.02183v1",
+  "title": "Self-Organized Agents  A LLM Multi-Agent Framework toward Ultra\n  Large-Scale Code Generation and Optimization",
+  "url": "http://arxiv.org/pdf/2404.02183v1",
+  "date": "2024-04-02",
+  "abs": "Recent advancements in automatic code generation using large language model\n(LLM) agent have brought us closer to the future of automated software\ndevelopment. However, existing single-agent approaches face limitations in\ngenerating and improving large-scale, complex codebases due to constraints in\ncontext length. To tackle this challenge, we propose Self-Organized multi-Agent\nframework (SoA), a novel multi-agent framework that enables the scalable and\nefficient generation and optimization of large-scale code. In SoA,\nself-organized agents operate independently to generate and modify code\ncomponents while seamlessly collaborating to construct the overall codebase. A\nkey feature of our framework is the automatic multiplication of agents based on\nproblem complexity, allowing for dynamic scalability. This enables the overall\ncode volume to be increased indefinitely according to the number of agents,\nwhile the amount of code managed by each agent remains constant. We evaluate\nSoA on the HumanEval benchmark and demonstrate that, compared to a single-agent\nsystem, each agent in SoA handles significantly less code, yet the overall\ngenerated code is substantially greater. Moreover, SoA surpasses the powerful\nsingle-agent baseline by 5% in terms of Pass@1 accuracy.",
+  "cat": "cs.SE",
+  "authors": [
+   "Yoichi Ishibashi",
+   "Yoshimasa Nishimura"
+  ],
+  "citation_count": 12
+ },
+ "2210.06012v3": {
+  "id": "2210.06012v3",
+  "title": "Phantom -- A RL-driven multi-agent framework to model complex systems",
+  "url": "http://arxiv.org/pdf/2210.06012v3",
+  "date": "2022-10-12",
+  "abs": "Agent based modelling (ABM) is a computational approach to modelling complex\nsystems by specifying the behaviour of autonomous decision-making components or\nagents in the system and allowing the system dynamics to emerge from their\ninteractions. Recent advances in the field of Multi-agent reinforcement\nlearning (MARL) have made it feasible to study the equilibrium of complex\nenvironments where multiple agents learn simultaneously. However, most ABM\nframeworks are not RL-native, in that they do not offer concepts and interfaces\nthat are compatible with the use of MARL to learn agent behaviours. In this\npaper, we introduce a new open-source framework, Phantom, to bridge the gap\nbetween ABM and MARL. Phantom is an RL-driven framework for agent-based\nmodelling of complex multi-agent systems including, but not limited to economic\nsystems and markets. The framework aims to provide the tools to simplify the\nABM specification in a MARL-compatible way - including features to encode\ndynamic partial observability, agent utility functions, heterogeneity in agent\npreferences or types, and constraints on the order in which agents can act\n(e.g. Stackelberg games, or more complex turn-taking environments). In this\npaper, we present these features, their design rationale and present two new\nenvironments leveraging the framework.",
+  "cat": "cs.AI",
+  "authors": [
+   "Leo Ardon",
+   "Jared Vann",
+   "Deepeka Garg",
+   "Tom Spooner",
+   "Sumitra Ganesh"
+  ],
+  "citation_count": 7
+ },
+ "2402.16823v2": {
+  "id": "2402.16823v2",
+  "title": "Language Agents as Optimizable Graphs",
+  "url": "http://arxiv.org/pdf/2402.16823v2",
+  "date": "2024-02-26",
+  "abs": "Various human-designed prompt engineering techniques have been proposed to\nimprove problem solvers based on Large Language Models (LLMs), yielding many\ndisparate code bases. We unify these approaches by describing LLM-based agents\nas computational graphs. The nodes implement functions to process multimodal\ndata or query LLMs, and the edges describe the information flow between\noperations. Graphs can be recursively combined into larger composite graphs\nrepresenting hierarchies of inter-agent collaboration (where edges connect\noperations of different agents). Our novel automatic graph optimizers (1)\nrefine node-level LLM prompts (node optimization) and (2) improve agent\norchestration by changing graph connectivity (edge optimization). Experiments\ndemonstrate that our framework can be used to efficiently develop, integrate,\nand automatically improve various LLM agents. The code can be found at\nhttps://github.com/metauto-ai/gptswarm.",
+  "cat": "cs.AI",
+  "authors": [
+   "Mingchen Zhuge",
+   "Wenyi Wang",
+   "Louis Kirsch",
+   "Francesco Faccio",
+   "Dmitrii Khizbullin",
+   "J\u00fcrgen Schmidhuber"
+  ],
+  "citation_count": 9
+ },
+ "2402.15538v1": {
+  "id": "2402.15538v1",
+  "title": "AgentLite  A Lightweight Library for Building and Advancing\n  Task-Oriented LLM Agent System",
+  "url": "http://arxiv.org/pdf/2402.15538v1",
+  "date": "2024-02-23",
+  "abs": "The booming success of LLMs initiates rapid development in LLM agents. Though\nthe foundation of an LLM agent is the generative model, it is critical to\ndevise the optimal reasoning strategies and agent architectures. Accordingly,\nLLM agent research advances from the simple chain-of-thought prompting to more\ncomplex ReAct and Reflection reasoning strategy; agent architecture also\nevolves from single agent generation to multi-agent conversation, as well as\nmulti-LLM multi-agent group chat. However, with the existing intricate\nframeworks and libraries, creating and evaluating new reasoning strategies and\nagent architectures has become a complex challenge, which hinders research\ninvestigation into LLM agents. Thus, we open-source a new AI agent library,\nAgentLite, which simplifies this process by offering a lightweight,\nuser-friendly platform for innovating LLM agent reasoning, architectures, and\napplications with ease. AgentLite is a task-oriented framework designed to\nenhance the ability of agents to break down tasks and facilitate the\ndevelopment of multi-agent systems. Furthermore, we introduce multiple\npractical applications developed with AgentLite to demonstrate its convenience\nand flexibility. Get started now at:\n\\url{https://github.com/SalesforceAIResearch/AgentLite}.",
+  "cat": "cs.MA",
+  "authors": [
+   "Zhiwei Liu",
+   "Weiran Yao",
+   "Jianguo Zhang",
+   "Liangwei Yang",
+   "Zuxin Liu",
+   "Juntao Tan",
+   "Prafulla K. Choubey",
+   "Tian Lan",
+   "Jason Wu",
+   "Huan Wang",
+   "Shelby Heinecke",
+   "Caiming Xiong",
+   "Silvio Savarese"
+  ],
+  "citation_count": 12
+ },
+ "2402.15116v1": {
+  "id": "2402.15116v1",
+  "title": "Large Multimodal Agents  A Survey",
+  "url": "http://arxiv.org/pdf/2402.15116v1",
+  "date": "2024-02-23",
+  "abs": "Large language models (LLMs) have achieved superior performance in powering\ntext-based AI agents, endowing them with decision-making and reasoning\nabilities akin to humans. Concurrently, there is an emerging research trend\nfocused on extending these LLM-powered AI agents into the multimodal domain.\nThis extension enables AI agents to interpret and respond to diverse multimodal\nuser queries, thereby handling more intricate and nuanced tasks. In this paper,\nwe conduct a systematic review of LLM-driven multimodal agents, which we refer\nto as large multimodal agents ( LMAs for short). First, we introduce the\nessential components involved in developing LMAs and categorize the current\nbody of research into four distinct types. Subsequently, we review the\ncollaborative frameworks integrating multiple LMAs , enhancing collective\nefficacy. One of the critical challenges in this field is the diverse\nevaluation methods used across existing studies, hindering effective comparison\namong different LMAs . Therefore, we compile these evaluation methodologies and\nestablish a comprehensive framework to bridge the gaps. This framework aims to\nstandardize evaluations, facilitating more meaningful comparisons. Concluding\nour review, we highlight the extensive applications of LMAs and propose\npossible future research directions. Our discussion aims to provide valuable\ninsights and guidelines for future research in this rapidly evolving field. An\nup-to-date resource list is available at\nhttps://github.com/jun0wanan/awesome-large-multimodal-agents.",
+  "cat": "cs.CV",
+  "authors": [
+   "Junlin Xie",
+   "Zhihong Chen",
+   "Ruifei Zhang",
+   "Xiang Wan",
+   "Guanbin Li"
+  ],
+  "citation_count": 13
+ },
+ "2402.14672v1": {
+  "id": "2402.14672v1",
+  "title": "Middleware for LLMs  Tools Are Instrumental for Language Agents in\n  Complex Environments",
+  "url": "http://arxiv.org/pdf/2402.14672v1",
+  "date": "2024-02-22",
+  "abs": "The applications of large language models (LLMs) have expanded well beyond\nthe confines of text processing, signaling a new era where LLMs are envisioned\nas generalist language agents capable of operating within complex real-world\nenvironments. These environments are often highly expansive, making it\nimpossible for the LLM to process them within its short-term memory. Motivated\nby recent research on extending the capabilities of LLMs with tools, this paper\ninvestigates the intriguing potential of tools to augment LLMs in handling such\ncomplexity. To this end, we design customized tools to aid in the proactive\nexploration within these massive environments. Such tools can serve as a\nmiddleware layer shielding the LLM from environmental complexity. In two\nrepresentative complex environments -- knowledge bases (KBs) and databases --\nwe demonstrate the significant potential of augmenting language agents with\ntools in complex environments. Notably, equipped with these tools, GPT-4\nachieves 2.8X the performance of the best baseline in tasks requiring access to\ndatabase content and 2.2X in KB tasks. Our findings illuminate the path for\nadvancing language agents in complex real-world applications.",
+  "cat": "cs.CL",
+  "authors": [
+   "Yu Gu",
+   "Yiheng Shu",
+   "Hao Yu",
+   "Xiao Liu",
+   "Yuxiao Dong",
+   "Jie Tang",
+   "Jayanth Srinivasa",
+   "Hugo Latapie",
+   "Yu Su"
+  ],
+  "citation_count": 15
+ },
+ "2402.14034v1": {
+  "id": "2402.14034v1",
+  "title": "AgentScope  A Flexible yet Robust Multi-Agent Platform",
+  "url": "http://arxiv.org/pdf/2402.14034v1",
+  "date": "2024-02-21",
+  "abs": "With the rapid advancement of Large Language Models (LLMs), significant\nprogress has been made in multi-agent applications. However, the complexities\nin coordinating agents' cooperation and LLMs' erratic performance pose notable\nchallenges in developing robust and efficient multi-agent applications. To\ntackle these challenges, we propose AgentScope, a developer-centric multi-agent\nplatform with message exchange as its core communication mechanism. Together\nwith abundant syntactic tools, built-in resources, and user-friendly\ninteractions, our communication mechanism significantly reduces the barriers to\nboth development and understanding. Towards robust and flexible multi-agent\napplication, AgentScope provides both built-in and customizable fault tolerance\nmechanisms while it is also armed with system-level supports for multi-modal\ndata generation, storage and transmission. Additionally, we design an\nactor-based distribution framework, enabling easy conversion between local and\ndistributed deployments and automatic parallel optimization without extra\neffort. With these features, AgentScope empowers developers to build\napplications that fully realize the potential of intelligent agents. We have\nreleased AgentScope at https://github.com/modelscope/agentscope, and hope\nAgentScope invites wider participation and innovation in this fast-moving\nfield.",
+  "cat": "cs.MA",
+  "authors": [
+   "Dawei Gao",
+   "Zitao Li",
+   "Weirui Kuang",
+   "Xuchen Pan",
+   "Daoyuan Chen",
+   "Zhijian Ma",
+   "Bingchen Qian",
+   "Liuyi Yao",
+   "Lin Zhu",
+   "Chen Cheng",
+   "Hongzhu Shi",
+   "Yaliang Li",
+   "Bolin Ding",
+   "Jingren Zhou"
+  ],
+  "citation_count": 7
+ },
+ "2402.11443v1": {
+  "id": "2402.11443v1",
+  "title": "Benchmark Self-Evolving  A Multi-Agent Framework for Dynamic LLM\n  Evaluation",
+  "url": "http://arxiv.org/pdf/2402.11443v1",
+  "date": "2024-02-18",
+  "abs": "This paper presents a benchmark self-evolving framework to dynamically\nevaluate rapidly advancing Large Language Models (LLMs), aiming for a more\naccurate assessment of their capabilities and limitations. We utilize a\nmulti-agent system to manipulate the context or question of original instances,\nreframing new evolving instances with high confidence that dynamically extend\nexisting benchmarks. Towards a more scalable, robust and fine-grained\nevaluation, we implement six reframing operations to construct evolving\ninstances testing LLMs against diverse queries, data noise and probing their\nproblem-solving sub-abilities. With this framework, we extend benchmark\ndatasets of four tasks. Experimental results show a general performance decline\nin most LLMs against their original results. This decline under our scalable\nand robust evaluations, alongside our fine-grained evaluation, more accurately\nreflect models' capabilities. Besides, our framework widens performance\ndiscrepancies both between different models and within the same model across\nvarious tasks, facilitating more informed model selection for specific tasks\n(Code and data are available at\nhttps://github.com/NanshineLoong/Self-Evolving-Benchmark).",
+  "cat": "cs.CL",
+  "authors": [
+   "Siyuan Wang",
+   "Zhuohan Long",
+   "Zhihao Fan",
+   "Zhongyu Wei",
+   "Xuanjing Huang"
+  ],
+  "citation_count": 12
+ },
+ "2307.14984v2": {
+  "id": "2307.14984v2",
+  "title": "S3  Social-network Simulation System with Large Language Model-Empowered\n  Agents",
+  "url": "http://arxiv.org/pdf/2307.14984v2",
+  "date": "2023-07-27",
+  "abs": "Social network simulation plays a crucial role in addressing various\nchallenges within social science. It offers extensive applications such as\nstate prediction, phenomena explanation, and policy-making support, among\nothers. In this work, we harness the formidable human-like capabilities\nexhibited by large language models (LLMs) in sensing, reasoning, and behaving,\nand utilize these qualities to construct the S$^3$ system (short for\n$\\textbf{S}$ocial network $\\textbf{S}$imulation $\\textbf{S}$ystem). Adhering to\nthe widely employed agent-based simulation paradigm, we employ prompt\nengineering and prompt tuning techniques to ensure that the agent's behavior\nclosely emulates that of a genuine human within the social network.\nSpecifically, we simulate three pivotal aspects: emotion, attitude, and\ninteraction behaviors. By endowing the agent in the system with the ability to\nperceive the informational environment and emulate human actions, we observe\nthe emergence of population-level phenomena, including the propagation of\ninformation, attitudes, and emotions. We conduct an evaluation encompassing two\nlevels of simulation, employing real-world social network data. Encouragingly,\nthe results demonstrate promising accuracy. This work represents an initial\nstep in the realm of social network simulation empowered by LLM-based agents.\nWe anticipate that our endeavors will serve as a source of inspiration for the\ndevelopment of simulation systems within, but not limited to, social science.",
+  "cat": "cs.SI",
+  "authors": [
+   "Chen Gao",
+   "Xiaochong Lan",
+   "Zhihong Lu",
+   "Jinzhu Mao",
+   "Jinghua Piao",
+   "Huandong Wang",
+   "Depeng Jin",
+   "Yong Li"
+  ],
+  "citation_count": 80
+ },
+ "2309.14365v1": {
+  "id": "2309.14365v1",
+  "title": "An In-depth Survey of Large Language Model-based Artificial Intelligence\n  Agents",
+  "url": "http://arxiv.org/pdf/2309.14365v1",
+  "date": "2023-09-23",
+  "abs": "Due to the powerful capabilities demonstrated by large language model (LLM),\nthere has been a recent surge in efforts to integrate them with AI agents to\nenhance their performance. In this paper, we have explored the core differences\nand characteristics between LLM-based AI agents and traditional AI agents.\nSpecifically, we first compare the fundamental characteristics of these two\ntypes of agents, clarifying the significant advantages of LLM-based agents in\nhandling natural language, knowledge storage, and reasoning capabilities.\nSubsequently, we conducted an in-depth analysis of the key components of AI\nagents, including planning, memory, and tool use. Particularly, for the crucial\ncomponent of memory, this paper introduced an innovative classification scheme,\nnot only departing from traditional classification methods but also providing a\nfresh perspective on the design of an AI agent's memory system. We firmly\nbelieve that in-depth research and understanding of these core components will\nlay a solid foundation for the future advancement of AI agent technology. At\nthe end of the paper, we provide directional suggestions for further research\nin this field, with the hope of offering valuable insights to scholars and\nresearchers in the field.",
+  "cat": "cs.CL",
+  "authors": [
+   "Pengyu Zhao",
+   "Zijian Jin",
+   "Ning Cheng"
+  ],
+  "citation_count": 12
+ },
+ "2309.13193v1": {
+  "id": "2309.13193v1",
+  "title": "SurrealDriver  Designing Generative Driver Agent Simulation Framework in\n  Urban Contexts based on Large Language Model",
+  "url": "http://arxiv.org/pdf/2309.13193v1",
+  "date": "2023-09-22",
+  "abs": "Simulation plays a critical role in the research and development of\nautonomous driving and intelligent transportation systems. However, the current\nsimulation platforms exhibit limitations in the realism and diversity of agent\nbehaviors, which impede the transfer of simulation outcomes to the real world.\nIn this paper, we propose a generative driver agent simulation framework based\non large language models (LLMs), capable of perceiving complex traffic\nscenarios and providing realistic driving maneuvers. Notably, we conducted\ninterviews with 24 drivers and used their detailed descriptions of driving\nbehavior as chain-of-thought prompts to develop a `coach agent' module, which\ncan evaluate and assist driver agents in accumulating driving experience and\ndeveloping human-like driving styles. Through practical simulation experiments\nand user experiments, we validate the feasibility of this framework in\ngenerating reliable driver agents and analyze the roles of each module. The\nresults show that the framework with full architect decreased the collision\nrate by 81.04% and increased the human-likeness by 50%. Our research proposes\nthe first urban context driver agent simulation framework based on LLMs and\nprovides valuable insights into the future of agent simulation for complex\ntasks.",
+  "cat": "cs.HC",
+  "authors": [
+   "Ye Jin",
+   "Xiaoxi Shen",
+   "Huiling Peng",
+   "Xiaoan Liu",
+   "Jingli Qin",
+   "Jiayang Li",
+   "Jintao Xie",
+   "Peizhong Gao",
+   "Guyue Zhou",
+   "Jiangtao Gong"
+  ],
+  "citation_count": 38
+ },
+ "2309.13007v2": {
+  "id": "2309.13007v2",
+  "title": "ReConcile  Round-Table Conference Improves Reasoning via Consensus among\n  Diverse LLMs",
+  "url": "http://arxiv.org/pdf/2309.13007v2",
+  "date": "2023-09-22",
+  "abs": "Large Language Models (LLMs) still struggle with natural language reasoning\ntasks. Motivated by the society of minds (Minsky, 1988), we propose ReConcile,\na multi-model multiagent framework designed as a round table conference among\ndiverse LLM agents. ReConcile enhances collaborative reasoning between LLM\nagents via multiple rounds of discussion, learning to convince other agents to\nimprove their answers, and employing a confidence-weighted voting mechanism\nthat leads to a better consensus. In each round, ReConcile initiates discussion\nbetween agents via a 'discussion prompt' that consists of (a) grouped answers\nand explanations generated by each agent in the previous round, (b) their\nconfidence scores, and (c) demonstrations of answer-rectifying human\nexplanations, used for convincing other agents. Experiments on seven benchmarks\ndemonstrate that ReConcile significantly improves LLMs' reasoning -- both\nindividually and as a team -- surpassing prior single-agent and multi-agent\nbaselines by up to 11.4% and even outperforming GPT-4 on three datasets.\nReConcile also flexibly incorporates different combinations of agents,\nincluding API-based, open-source, and domain-specific models, leading to an 8%\nimprovement on MATH. Finally, we analyze the individual components of\nReConcile, demonstrating that the diversity originating from different models\nis critical to its superior performance. Code:\nhttps://github.com/dinobby/ReConcile",
+  "cat": "cs.CL",
+  "authors": [
+   "Justin Chih-Yao Chen",
+   "Swarnadeep Saha",
+   "Mohit Bansal"
+  ],
+  "citation_count": 59
+ },
+ "2401.07324v3": {
+  "id": "2401.07324v3",
+  "title": "Small LLMs Are Weak Tool Learners  A Multi-LLM Agent",
+  "url": "http://arxiv.org/pdf/2401.07324v3",
+  "date": "2024-01-14",
+  "abs": "Large Language Model (LLM) agents significantly extend the capabilities of\nstandalone LLMs, empowering them to interact with external tools (e.g., APIs,\nfunctions) and complete various tasks in a self-directed fashion. The challenge\nof tool use demands that LLMs not only understand user queries and generate\nanswers accurately but also excel in task planning, tool invocation, and result\nsummarization. While traditional works focus on training a single LLM with all\nthese capabilities, performance limitations become apparent, particularly with\nsmaller models. To overcome these challenges, we propose a novel approach that\ndecomposes the aforementioned capabilities into a planner, caller, and\nsummarizer. Each component is implemented by a single LLM that focuses on a\nspecific capability and collaborates with others to accomplish the task. This\nmodular framework facilitates individual updates and the potential use of\nsmaller LLMs for building each capability. To effectively train this framework,\nwe introduce a two-stage training paradigm. First, we fine-tune a backbone LLM\non the entire dataset without discriminating sub-tasks, providing the model\nwith a comprehensive understanding of the task. Second, the fine-tuned LLM is\nused to instantiate the planner, caller, and summarizer respectively, which are\ncontinually fine-tuned on respective sub-tasks. Evaluation across various\ntool-use benchmarks illustrates that our proposed multi-LLM framework surpasses\nthe traditional single-LLM approach, highlighting its efficacy and advantages\nin tool learning.",
+  "cat": "cs.AI",
+  "authors": [
+   "Weizhou Shen",
+   "Chenliang Li",
+   "Hongzhan Chen",
+   "Ming Yan",
+   "Xiaojun Quan",
+   "Hehong Chen",
+   "Ji Zhang",
+   "Fei Huang"
+  ],
+  "citation_count": 30
+ },
+ "2401.06201v3": {
+  "id": "2401.06201v3",
+  "title": "EASYTOOL  Enhancing LLM-based Agents with Concise Tool Instruction",
+  "url": "http://arxiv.org/pdf/2401.06201v3",
+  "date": "2024-01-11",
+  "abs": "To address intricate real-world tasks, there has been a rising interest in\ntool utilization in applications of large language models (LLMs). To develop\nLLM-based agents, it usually requires LLMs to understand many tool functions\nfrom different tool documentation. But these documentations could be diverse,\nredundant or incomplete, which immensely affects the capability of LLMs in\nusing tools. To solve this, we introduce EASYTOOL, a framework transforming\ndiverse and lengthy tool documentation into a unified and concise tool\ninstruction for easier tool usage. EasyTool purifies essential information from\nextensive tool documentation of different sources, and elaborates a unified\ninterface (i.e., tool instruction) to offer standardized tool descriptions and\nfunctionalities for LLM-based agents. Extensive experiments on multiple\ndifferent tasks demonstrate that EasyTool can significantly reduce token\nconsumption and improve the performance of tool utilization in real-world\nscenarios. Our code will be available at\n\\url{https://github.com/microsoft/JARVIS/} in the future.",
+  "cat": "cs.CL",
+  "authors": [
+   "Siyu Yuan",
+   "Kaitao Song",
+   "Jiangjie Chen",
+   "Xu Tan",
+   "Yongliang Shen",
+   "Ren Kan",
+   "Dongsheng Li",
+   "Deqing Yang"
+  ],
+  "citation_count": 30
+ },
+ "2401.03428v1": {
+  "id": "2401.03428v1",
+  "title": "Exploring Large Language Model based Intelligent Agents  Definitions,\n  Methods, and Prospects",
+  "url": "http://arxiv.org/pdf/2401.03428v1",
+  "date": "2024-01-07",
+  "abs": "Intelligent agents stand out as a potential path toward artificial general\nintelligence (AGI). Thus, researchers have dedicated significant effort to\ndiverse implementations for them. Benefiting from recent progress in large\nlanguage models (LLMs), LLM-based agents that use universal natural language as\nan interface exhibit robust generalization capabilities across various\napplications -- from serving as autonomous general-purpose task assistants to\napplications in coding, social, and economic domains, LLM-based agents offer\nextensive exploration opportunities. This paper surveys current research to\nprovide an in-depth overview of LLM-based intelligent agents within\nsingle-agent and multi-agent systems. It covers their definitions, research\nframeworks, and foundational components such as their composition, cognitive\nand planning methods, tool utilization, and responses to environmental\nfeedback. We also delve into the mechanisms of deploying LLM-based agents in\nmulti-agent systems, including multi-role collaboration, message passing, and\nstrategies to alleviate communication issues between agents. The discussions\nalso shed light on popular datasets and application scenarios. We conclude by\nenvisioning prospects for LLM-based agents, considering the evolving landscape\nof AI and natural language processing.",
+  "cat": "cs.AI",
+  "authors": [
+   "Yuheng Cheng",
+   "Ceyao Zhang",
+   "Zhengwen Zhang",
+   "Xiangrui Meng",
+   "Sirui Hong",
+   "Wenhao Li",
+   "Zihao Wang",
+   "Zekai Wang",
+   "Feng Yin",
+   "Junhua Zhao",
+   "Xiuqiang He"
+  ],
+  "citation_count": 35
+ },
+ "2401.02777v2": {
+  "id": "2401.02777v2",
+  "title": "From LLM to Conversational Agent  A Memory Enhanced Architecture with\n  Fine-Tuning of Large Language Models",
+  "url": "http://arxiv.org/pdf/2401.02777v2",
+  "date": "2024-01-05",
+  "abs": "This paper introduces RAISE (Reasoning and Acting through Scratchpad and\nExamples), an advanced architecture enhancing the integration of Large Language\nModels (LLMs) like GPT-4 into conversational agents. RAISE, an enhancement of\nthe ReAct framework, incorporates a dual-component memory system, mirroring\nhuman short-term and long-term memory, to maintain context and continuity in\nconversations. It entails a comprehensive agent construction scenario,\nincluding phases like Conversation Selection, Scene Extraction, CoT Completion,\nand Scene Augmentation, leading to the LLMs Training phase. This approach\nappears to enhance agent controllability and adaptability in complex,\nmulti-turn dialogues. Our preliminary evaluations in a real estate sales\ncontext suggest that RAISE has some advantages over traditional agents,\nindicating its potential for broader applications. This work contributes to the\nAI field by providing a robust framework for developing more context-aware and\nversatile conversational agents.",
+  "cat": "cs.CL",
+  "authors": [
+   "Na Liu",
+   "Liangyu Chen",
+   "Xiaoyu Tian",
+   "Wei Zou",
+   "Kaijiang Chen",
+   "Ming Cui"
+  ],
+  "citation_count": 15
+ },
+ "2203.08975v1": {
+  "id": "2203.08975v1",
+  "title": "A Survey of Multi-Agent Reinforcement Learning with Communication",
+  "url": "http://arxiv.org/pdf/2203.08975v1",
+  "date": "2022-03-16",
+  "abs": "Communication is an effective mechanism for coordinating the behavior of\nmultiple agents. In the field of multi-agent reinforcement learning, agents can\nimprove the overall learning performance and achieve their objectives by\ncommunication. Moreover, agents can communicate various types of messages,\neither to all agents or to specific agent groups, and through specific\nchannels. With the growing body of research work in MARL with communication\n(Comm-MARL), there is lack of a systematic and structural approach to\ndistinguish and classify existing Comm-MARL systems. In this paper, we survey\nrecent works in the Comm-MARL field and consider various aspects of\ncommunication that can play a role in the design and development of multi-agent\nreinforcement learning systems. With these aspects in mind, we propose several\ndimensions along which Comm-MARL systems can be analyzed, developed, and\ncompared.",
+  "cat": "cs.MA",
+  "authors": [
+   "Changxi Zhu",
+   "Mehdi Dastani",
+   "Shihan Wang"
+  ],
+  "citation_count": 73
+ },
+ "2110.14241v1": {
+  "id": "2110.14241v1",
+  "title": "Dynamic population-based meta-learning for multi-agent communication\n  with natural language",
+  "url": "http://arxiv.org/pdf/2110.14241v1",
+  "date": "2021-10-27",
+  "abs": "In this work, our goal is to train agents that can coordinate with seen,\nunseen as well as human partners in a multi-agent communication environment\ninvolving natural language. Previous work using a single set of agents has\nshown great progress in generalizing to known partners, however it struggles\nwhen coordinating with unfamiliar agents. To mitigate that, recent work\nexplored the use of population-based approaches, where multiple agents interact\nwith each other with the goal of learning more generic protocols. These\nmethods, while able to result in good coordination between unseen partners,\nstill only achieve so in cases of simple languages, thus failing to adapt to\nhuman partners using natural language. We attribute this to the use of static\npopulations and instead propose a dynamic population-based meta-learning\napproach that builds such a population in an iterative manner. We perform a\nholistic evaluation of our method on two different referential games, and show\nthat our agents outperform all prior work when communicating with seen partners\nand humans. Furthermore, we analyze the natural language generation skills of\nour agents, where we find that our agents also outperform strong baselines.\nFinally, we test the robustness of our agents when communicating with\nout-of-population agents and carefully test the importance of each component of\nour method through ablation studies.",
+  "cat": "cs.LG",
+  "authors": [
+   "Abhinav Gupta",
+   "Marc Lanctot",
+   "Angeliki Lazaridou"
+  ],
+  "citation_count": 18
+ },
+ "2409.11393v1": {
+  "id": "2409.11393v1",
+  "title": "LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Integration of Multi Active/Passive Core-Agents",
+  "url": "http://arxiv.org/pdf/2409.11393v1",
+  "date": "2024-09-17",
+  "abs": "The integration of tools in LLM-based agents overcame the difficulties of\nstandalone LLMs and traditional agents' limited capabilities. However, the\nconjunction of these technologies and the proposed enhancements in several\nstate-of-the-art works followed a non-unified software architecture resulting\nin a lack of modularity. Indeed, they focused mainly on functionalities and\noverlooked the definition of the component's boundaries within the agent. This\ncaused terminological and architectural ambiguities between researchers which\nwe addressed in this paper by proposing a unified framework that establishes a\nclear foundation for LLM-based agents' development from both functional and\nsoftware architectural perspectives.\n  Our framework, LLM-Agent-UMF (LLM-based Agent Unified Modeling Framework),\nclearly distinguishes between the different components of an agent, setting\nLLMs, and tools apart from a newly introduced element: the core-agent, playing\nthe role of the central coordinator of the agent which comprises five modules:\nplanning, memory, profile, action, and security, the latter often neglected in\nprevious works. Differences in the internal structure of core-agents led us to\nclassify them into a taxonomy of passive and active types. Based on this, we\nproposed different multi-core agent architectures combining unique\ncharacteristics of various individual agents.\n  For evaluation purposes, we applied this framework to a selection of\nstate-of-the-art agents, thereby demonstrating its alignment with their\nfunctionalities and clarifying the overlooked architectural aspects. Moreover,\nwe thoroughly assessed four of our proposed architectures by integrating\ndistinctive agents into hybrid active/passive core-agents' systems. This\nanalysis provided clear insights into potential improvements and highlighted\nthe challenges involved in the combination of specific agents.",
+  "cat": "cs.SE",
+  "authors": [
+   "Amine B. Hassouna",
+   "Hana Chaari",
+   "Ines Belhaj"
+  ],
+  "citation_count": 0
+ },
+ "2407.14239v1": {
+  "id": "2407.14239v1",
+  "title": "KoMA: Knowledge-driven Multi-agent Framework for Autonomous Driving with Large Language Models",
+  "url": "http://arxiv.org/pdf/2407.14239v1",
+  "date": "2024-07-19",
+  "abs": "Large language models (LLMs) as autonomous agents offer a novel avenue for\ntackling real-world challenges through a knowledge-driven manner. These\nLLM-enhanced methodologies excel in generalization and interpretability.\nHowever, the complexity of driving tasks often necessitates the collaboration\nof multiple, heterogeneous agents, underscoring the need for such LLM-driven\nagents to engage in cooperative knowledge sharing and cognitive synergy.\nDespite the promise of LLMs, current applications predominantly center around\nsingle agent scenarios. To broaden the horizons of knowledge-driven strategies\nand bolster the generalization capabilities of autonomous agents, we propose\nthe KoMA framework consisting of multi-agent interaction, multi-step planning,\nshared-memory, and ranking-based reflection modules to enhance multi-agents'\ndecision-making in complex driving scenarios. Based on the framework's\ngenerated text descriptions of driving scenarios, the multi-agent interaction\nmodule enables LLM agents to analyze and infer the intentions of surrounding\nvehicles, akin to human cognition. The multi-step planning module enables LLM\nagents to analyze and obtain final action decisions layer by layer to ensure\nconsistent goals for short-term action decisions. The shared memory module can\naccumulate collective experience to make superior decisions, and the\nranking-based reflection module can evaluate and improve agent behavior with\nthe aim of enhancing driving safety and efficiency. The KoMA framework not only\nenhances the robustness and adaptability of autonomous driving agents but also\nsignificantly elevates their generalization capabilities across diverse\nscenarios. Empirical results demonstrate the superiority of our approach over\ntraditional methods, particularly in its ability to handle complex,\nunpredictable driving environments without extensive retraining.",
+  "cat": "cs.AI",
+  "authors": [
+   "Kemou Jiang",
+   "Xuan Cai",
+   "Zhiyong Cui",
+   "Aoyong Li",
+   "Yilong Ren",
+   "Haiyang Yu",
+   "Hao Yang",
+   "Daocheng Fu",
+   "Licheng Wen",
+   "Pinlong Cai"
+  ],
+  "citation_count": 1
+ },
+ "2407.07791v2": {
+  "id": "2407.07791v2",
+  "title": "Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities",
+  "url": "http://arxiv.org/pdf/2407.07791v2",
+  "date": "2024-07-23",
+  "abs": "The rapid adoption of large language models (LLMs) in multi-agent systems has\nhighlighted their impressive capabilities in various applications, such as\ncollaborative problem-solving and autonomous negotiation. However, the security\nimplications of these LLM-based multi-agent systems have not been thoroughly\ninvestigated, particularly concerning the spread of manipulated knowledge. In\nthis paper, we investigate this critical issue by constructing a detailed\nthreat model and a comprehensive simulation environment that mirrors real-world\nmulti-agent deployments in a trusted platform. Subsequently, we propose a novel\ntwo-stage attack method involving Persuasiveness Injection and Manipulated\nKnowledge Injection to systematically explore the potential for manipulated\nknowledge (i.e., counterfactual and toxic knowledge) spread without explicit\nprompt manipulation.\n  Our method leverages the inherent vulnerabilities of LLMs in handling world\nknowledge, which can be exploited by attackers to unconsciously spread\nfabricated information. Through extensive experiments, we demonstrate that our\nattack method can successfully induce LLM-based agents to spread both\ncounterfactual and toxic knowledge without degrading their foundational\ncapabilities during agent communication. Furthermore, we show that these\nmanipulations can persist through popular retrieval-augmented generation\nframeworks, where several benign agents store and retrieve manipulated chat\nhistories for future interactions. This persistence indicates that even after\nthe interaction has ended, the benign agents may continue to be influenced by\nmanipulated knowledge. Our findings reveal significant security risks in\nLLM-based multi-agent systems, emphasizing the imperative need for robust\ndefenses against manipulated knowledge spread, such as introducing ``guardian''\nagents and advanced fact-checking tools.",
+  "cat": "cs.CL",
+  "authors": [
+   "Tianjie Ju",
+   "Yiting Wang",
+   "Xinbei Ma",
+   "Pengzhou Cheng",
+   "Haodong Zhao",
+   "Yulong Wang",
+   "Lifeng Liu",
+   "Jian Xie",
+   "Zhuosheng Zhang",
+   "Gongshen Liu"
+  ],
+  "citation_count": 6
+ },
+ "2406.07155v1": {
+  "id": "2406.07155v1",
+  "title": "Scaling Large-Language-Model-based Multi-Agent Collaboration",
+  "url": "http://arxiv.org/pdf/2406.07155v1",
+  "date": "2024-06-11",
+  "abs": "Pioneering advancements in large language model-powered agents have\nunderscored the design pattern of multi-agent collaboration, demonstrating that\ncollective intelligence can surpass the capabilities of each individual.\nInspired by the neural scaling law, which posits that increasing neurons leads\nto emergent abilities, this study investigates whether a similar principle\napplies to increasing agents in multi-agent collaboration. Technically, we\npropose multi-agent collaboration networks (MacNet), which utilize directed\nacyclic graphs to organize agents and streamline their interactive reasoning\nvia topological ordering, with solutions derived from their dialogues.\nExtensive experiments show that MacNet consistently outperforms baseline\nmodels, enabling effective agent collaboration across various network\ntopologies and supporting cooperation among more than a thousand agents.\nNotably, we observed a small-world collaboration phenomenon, where topologies\nresembling small-world properties achieved superior performance. Additionally,\nwe identified a collaborative scaling law, indicating that normalized solution\nquality follows a logistic growth pattern as scaling agents, with collaborative\nemergence occurring much earlier than previously observed instances of neural\nemergence. The code and data will be available at\nhttps://github.com/OpenBMB/ChatDev.",
+  "cat": "cs.AI",
+  "authors": [
+   "Chen Qian",
+   "Zihao Xie",
+   "Yifei Wang",
+   "Wei Liu",
+   "Yufan Dang",
+   "Zhuoyun Du",
+   "Weize Chen",
+   "Cheng Yang",
+   "Zhiyuan Liu",
+   "Maosong Sun"
+  ],
+  "citation_count": 14
+ },
+ "2406.00584v1": {
+  "id": "2406.00584v1",
+  "title": "A Blueprint Architecture of Compound AI Systems for Enterprise",
+  "url": "http://arxiv.org/pdf/2406.00584v1",
+  "date": "2024-06-02",
+  "abs": "Large Language Models (LLMs) have showcased remarkable capabilities\nsurpassing conventional NLP challenges, creating opportunities for use in\nproduction use cases. Towards this goal, there is a notable shift to building\ncompound AI systems, wherein LLMs are integrated into an expansive software\ninfrastructure with many components like models, retrievers, databases and\ntools. In this paper, we introduce a blueprint architecture for compound AI\nsystems to operate in enterprise settings cost-effectively and feasibly. Our\nproposed architecture aims for seamless integration with existing compute and\ndata infrastructure, with ``stream'' serving as the key orchestration concept\nto coordinate data and instructions among agents and other components. Task and\ndata planners, respectively, break down, map, and optimize tasks and data to\navailable agents and data sources defined in respective registries, given\nproduction constraints such as accuracy and latency.",
+  "cat": "cs.DB",
+  "authors": [
+   "Eser Kandogan",
+   "Sajjadur Rahman",
+   "Nikita Bhutani",
+   "Dan Zhang",
+   "Rafael Li Chen",
+   "Kushan Mitra",
+   "Sairam Gurajada",
+   "Pouya Pezeshkpour",
+   "Hayate Iso",
+   "Yanlin Feng",
+   "Hannah Kim",
+   "Chen Shen",
+   "Jin Wang",
+   "Estevam Hruschka"
+  ],
+  "citation_count": 1
+ },
+ "2407.17789v1": {
+  "id": "2407.17789v1",
+  "title": "Very Large-Scale Multi-Agent Simulation in AgentScope",
+  "url": "http://arxiv.org/pdf/2407.17789v1",
+  "date": "2024-07-25",
+  "abs": "Recent advances in large language models (LLMs) have opened new avenues for\napplying multi-agent systems in very large-scale simulations. However, there\nremain several challenges when conducting multi-agent simulations with existing\nplatforms, such as limited scalability and low efficiency, unsatisfied agent\ndiversity, and effort-intensive management processes. To address these\nchallenges, we develop several new features and components for AgentScope, a\nuser-friendly multi-agent platform, enhancing its convenience and flexibility\nfor supporting very large-scale multi-agent simulations. Specifically, we\npropose an actor-based distributed mechanism as the underlying technological\ninfrastructure towards great scalability and high efficiency, and provide\nflexible environment support for simulating various real-world scenarios, which\nenables parallel execution of multiple agents, centralized workflow\norchestration, and both inter-agent and agent-environment interactions among\nagents. Moreover, we integrate an easy-to-use configurable tool and an\nautomatic background generation pipeline in AgentScope, simplifying the process\nof creating agents with diverse yet detailed background settings. Last but not\nleast, we provide a web-based interface for conveniently monitoring and\nmanaging a large number of agents that might deploy across multiple devices. We\nconduct a comprehensive simulation to demonstrate the effectiveness of the\nproposed enhancements in AgentScope, and provide detailed observations and\ndiscussions to highlight the great potential of applying multi-agent systems in\nlarge-scale simulations. The source code is released on GitHub at\nhttps://github.com/modelscope/agentscope to inspire further research and\ndevelopment in large-scale multi-agent simulations.",
+  "cat": "cs.MA",
+  "authors": [
+   "Xuchen Pan",
+   "Dawei Gao",
+   "Yuexiang Xie",
+   "Zhewei Wei",
+   "Yaliang Li",
+   "Bolin Ding",
+   "Ji-Rong Wen",
+   "Jingren Zhou"
+  ],
+  "citation_count": 2
+ },
+ "2409.02977v1": {
+  "id": "2409.02977v1",
+  "title": "Large Language Model-Based Agents for Software Engineering: A Survey",
+  "url": "http://arxiv.org/pdf/2409.02977v1",
+  "date": "2024-09-04",
+  "abs": "The recent advance in Large Language Models (LLMs) has shaped a new paradigm\nof AI agents, i.e., LLM-based agents. Compared to standalone LLMs, LLM-based\nagents substantially extend the versatility and expertise of LLMs by enhancing\nLLMs with the capabilities of perceiving and utilizing external resources and\ntools. To date, LLM-based agents have been applied and shown remarkable\neffectiveness in Software Engineering (SE). The synergy between multiple agents\nand human interaction brings further promise in tackling complex real-world SE\nproblems. In this work, we present a comprehensive and systematic survey on\nLLM-based agents for SE. We collect 106 papers and categorize them from two\nperspectives, i.e., the SE and agent perspectives. In addition, we discuss open\nchallenges and future directions in this critical domain. The repository of\nthis survey is at https://github.com/FudanSELab/Agent4SE-Paper-List.",
+  "cat": "cs.SE",
+  "authors": [
+   "Junwei Liu",
+   "Kaixin Wang",
+   "Yixuan Chen",
+   "Xin Peng",
+   "Zhenpeng Chen",
+   "Lingming Zhang",
+   "Yiling Lou"
+  ],
+  "citation_count": 8
+ },
+ "2406.04692v1": {
+  "id": "2406.04692v1",
+  "title": "Mixture-of-Agents Enhances Large Language Model Capabilities",
+  "url": "http://arxiv.org/pdf/2406.04692v1",
+  "date": "2024-06-07",
+  "abs": "Recent advances in large language models (LLMs) demonstrate substantial\ncapabilities in natural language understanding and generation tasks. With the\ngrowing number of LLMs, how to harness the collective expertise of multiple\nLLMs is an exciting open direction. Toward this goal, we propose a new approach\nthat leverages the collective strengths of multiple LLMs through a\nMixture-of-Agents (MoA) methodology. In our approach, we construct a layered\nMoA architecture wherein each layer comprises multiple LLM agents. Each agent\ntakes all the outputs from agents in the previous layer as auxiliary\ninformation in generating its response. MoA models achieves state-of-art\nperformance on AlpacaEval 2.0, MT-Bench and FLASK, surpassing GPT-4 Omni. For\nexample, our MoA using only open-source LLMs is the leader of AlpacaEval 2.0 by\na substantial gap, achieving a score of 65.1% compared to 57.5% by GPT-4 Omni.",
+  "cat": "cs.CL",
+  "authors": [
+   "Junlin Wang",
+   "Jue Wang",
+   "Ben Athiwaratkun",
+   "Ce Zhang",
+   "James Zou"
+  ],
+  "citation_count": 33
+ },
+ "2407.18749v1": {
+  "id": "2407.18749v1",
+  "title": "Multi-Robot System Architecture design in SysML and BPMN",
+  "url": "http://arxiv.org/pdf/2407.18749v1",
+  "date": "2024-07-26",
+  "abs": "Multi-Robot System (MRS) is a complex system that contains many different\nsoftware and hardware components. This main problem addressed in this article\nis the MRS design complexity. The proposed solution provides a modular modeling\nand simulation technique that is based on formal system engineering method,\ntherefore the MRS design complexity is decomposed and reduced. Modeling the MRS\nhas been achieved via two formal Architecture Description Languages (ADLs),\nwhich are Systems Modeling Language (SysML) and Business Process Model and\nNotation (BPMN), to design the system blueprints. By using those abstract\ndesign ADLs, the implementation of the project becomes technology agnostic.\nThis allows to transfer the design concept from on programming language to\nanother. During the simulation phase, a multi-agent environment is used to\nsimulate the MRS blueprints. The simulation has been implemented in Java Agent\nDevelopment (JADE) middleware. Therefore, its results can be used to analysis\nand verify the proposed MRS model in form of performance evaluation matrix.",
+  "cat": "cs.AI",
+  "authors": [
+   "Ahmed R. Sadik",
+   "Christian Goerick"
+  ],
+  "citation_count": 2
+ },
+ "2406.14228v2": {
+  "id": "2406.14228v2",
+  "title": "EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms",
+  "url": "http://arxiv.org/pdf/2406.14228v2",
+  "date": "2024-07-11",
+  "abs": "The rise of powerful large language models (LLMs) has spurred a new trend in\nbuilding LLM-based autonomous agents for solving complex tasks, especially\nmulti-agent systems. Despite the remarkable progress, we notice that existing\nworks are heavily dependent on human-designed frameworks, which greatly limits\nthe functional scope and scalability of agent systems. How to automatically\nextend the specialized agent to multi-agent systems to improve task-solving\ncapability still remains a significant challenge. In this paper, we introduce\nEvoAgent, a generic method to automatically extend expert agents to multi-agent\nsystems via the evolutionary algorithm, thereby improving the effectiveness of\nLLM-based agents in solving tasks. Specifically, we consider the existing agent\nframeworks as the initial individual and then apply a series of evolutionary\noperators (e.g., mutation, crossover, selection, etc.) to generate multiple\nagents with diverse agent settings. EvoAgent can be generalized to any\nLLM-based agent framework, and can automatically extend the existing agent\nframework to multi-agent systems without any extra human designs. Experimental\nresults across various tasks have shown that EvoAgent can automatically\ngenerate multiple expert agents and significantly enhance the task-solving\ncapabilities of LLM-based agents.",
+  "cat": "cs.AI",
+  "authors": [
+   "Siyu Yuan",
+   "Kaitao Song",
+   "Jiangjie Chen",
+   "Xu Tan",
+   "Dongsheng Li",
+   "Deqing Yang"
+  ],
+  "citation_count": 3
+ },
+ "2408.09559v1": {
+  "id": "2408.09559v1",
+  "title": "HiAgent: Hierarchical Working Memory Management for Solving Long-Horizon Agent Tasks with Large Language Model",
+  "url": "http://arxiv.org/pdf/2408.09559v1",
+  "date": "2024-08-18",
+  "abs": "Large Language Model (LLM)-based agents exhibit significant potential across\nvarious domains, operating as interactive systems that process environmental\nobservations to generate executable actions for target tasks. The effectiveness\nof these agents is significantly influenced by their memory mechanism, which\nrecords historical experiences as sequences of action-observation pairs. We\ncategorize memory into two types: cross-trial memory, accumulated across\nmultiple attempts, and in-trial memory (working memory), accumulated within a\nsingle attempt. While considerable research has optimized performance through\ncross-trial memory, the enhancement of agent performance through improved\nworking memory utilization remains underexplored. Instead, existing approaches\noften involve directly inputting entire historical action-observation pairs\ninto LLMs, leading to redundancy in long-horizon tasks. Inspired by human\nproblem-solving strategies, this paper introduces HiAgent, a framework that\nleverages subgoals as memory chunks to manage the working memory of LLM-based\nagents hierarchically. Specifically, HiAgent prompts LLMs to formulate subgoals\nbefore generating executable actions and enables LLMs to decide proactively to\nreplace previous subgoals with summarized observations, retaining only the\naction-observation pairs relevant to the current subgoal. Experimental results\nacross five long-horizon tasks demonstrate that HiAgent achieves a twofold\nincrease in success rate and reduces the average number of steps required by\n3.8. Additionally, our analysis shows that HiAgent consistently improves\nperformance across various steps, highlighting its robustness and\ngeneralizability. Project Page: https://github.com/HiAgent2024/HiAgent .",
+  "cat": "cs.CL",
+  "authors": [
+   "Mengkang Hu",
+   "Tianxing Chen",
+   "Qiguang Chen",
+   "Yao Mu",
+   "Wenqi Shao",
+   "Ping Luo"
+  ],
+  "citation_count": 2
+ },
+ "2406.11638v1": {
+  "id": "2406.11638v1",
+  "title": "MASAI: Modular Architecture for Software-engineering AI Agents",
+  "url": "http://arxiv.org/pdf/2406.11638v1",
+  "date": "2024-06-17",
+  "abs": "A common method to solve complex problems in software engineering, is to\ndivide the problem into multiple sub-problems. Inspired by this, we propose a\nModular Architecture for Software-engineering AI (MASAI) agents, where\ndifferent LLM-powered sub-agents are instantiated with well-defined objectives\nand strategies tuned to achieve those objectives. Our modular architecture\noffers several advantages: (1) employing and tuning different problem-solving\nstrategies across sub-agents, (2) enabling sub-agents to gather information\nfrom different sources scattered throughout a repository, and (3) avoiding\nunnecessarily long trajectories which inflate costs and add extraneous context.\nMASAI enabled us to achieve the highest performance (28.33% resolution rate) on\nthe popular and highly challenging SWE-bench Lite dataset consisting of 300\nGitHub issues from 11 Python repositories. We conduct a comprehensive\nevaluation of MASAI relative to other agentic methods and analyze the effects\nof our design decisions and their contribution to the success of MASAI.",
+  "cat": "cs.AI",
+  "authors": [
+   "Daman Arora",
+   "Atharv Sonwane",
+   "Nalin Wadhwa",
+   "Abhav Mehrotra",
+   "Saiteja Utpala",
+   "Ramakrishna Bairi",
+   "Aditya Kanade",
+   "Nagarajan Natarajan"
+  ],
+  "citation_count": 7
+ },
+ "2406.11776v1": {
+  "id": "2406.11776v1",
+  "title": "Improving Multi-Agent Debate with Sparse Communication Topology",
+  "url": "http://arxiv.org/pdf/2406.11776v1",
+  "date": "2024-06-17",
+  "abs": "Multi-agent debate has proven effective in improving large language models\nquality for reasoning and factuality tasks. While various role-playing\nstrategies in multi-agent debates have been explored, in terms of the\ncommunication among agents, existing approaches adopt a brute force algorithm\n-- each agent can communicate with all other agents. In this paper, we\nsystematically investigate the effect of communication connectivity in\nmulti-agent systems. Our experiments on GPT and Mistral models reveal that\nmulti-agent debates leveraging sparse communication topology can achieve\ncomparable or superior performance while significantly reducing computational\ncosts. Furthermore, we extend the multi-agent debate framework to multimodal\nreasoning and alignment labeling tasks, showcasing its broad applicability and\neffectiveness. Our findings underscore the importance of communication\nconnectivity on enhancing the efficiency and effectiveness of the \"society of\nminds\" approach.",
+  "cat": "cs.CL",
+  "authors": [
+   "Yunxuan Li",
+   "Yibing Du",
+   "Jiageng Zhang",
+   "Le Hou",
+   "Peter Grabowski",
+   "Yeqing Li",
+   "Eugene Ie"
+  ],
+  "citation_count": 4
+ },
+ "2406.04151v1": {
+  "id": "2406.04151v1",
+  "title": "AgentGym: Evolving Large Language Model-based Agents across Diverse Environments",
+  "url": "http://arxiv.org/pdf/2406.04151v1",
+  "date": "2024-06-06",
+  "abs": "Building generalist agents that can handle diverse tasks and evolve\nthemselves across different environments is a long-term goal in the AI\ncommunity. Large language models (LLMs) are considered a promising foundation\nto build such agents due to their generalized capabilities. Current approaches\neither have LLM-based agents imitate expert-provided trajectories step-by-step,\nrequiring human supervision, which is hard to scale and limits environmental\nexploration; or they let agents explore and learn in isolated environments,\nresulting in specialist agents with limited generalization. In this paper, we\ntake the first step towards building generally-capable LLM-based agents with\nself-evolution ability. We identify a trinity of ingredients: 1) diverse\nenvironments for agent exploration and learning, 2) a trajectory set to equip\nagents with basic capabilities and prior knowledge, and 3) an effective and\nscalable evolution method. We propose AgentGym, a new framework featuring a\nvariety of environments and tasks for broad, real-time, uni-format, and\nconcurrent agent exploration. AgentGym also includes a database with expanded\ninstructions, a benchmark suite, and high-quality trajectories across\nenvironments. Next, we propose a novel method, AgentEvol, to investigate the\npotential of agent self-evolution beyond previously seen data across tasks and\nenvironments. Experimental results show that the evolved agents can achieve\nresults comparable to SOTA models. We release the AgentGym suite, including the\nplatform, dataset, benchmark, checkpoints, and algorithm implementations. The\nAgentGym suite is available on https://github.com/WooooDyy/AgentGym.",
+  "cat": "cs.AI",
+  "authors": [
+   "Zhiheng Xi",
+   "Yiwen Ding",
+   "Wenxiang Chen",
+   "Boyang Hong",
+   "Honglin Guo",
+   "Junzhe Wang",
+   "Dingwen Yang",
+   "Chenyang Liao",
+   "Xin Guo",
+   "Wei He",
+   "Songyang Gao",
+   "Lu Chen",
+   "Rui Zheng",
+   "Yicheng Zou",
+   "Tao Gui",
+   "Qi Zhang",
+   "Xipeng Qiu",
+   "Xuanjing Huang",
+   "Zuxuan Wu",
+   "Yu-Gang Jiang"
+  ],
+  "citation_count": 7
+ },
+ "2406.14928v1": {
+  "id": "2406.14928v1",
+  "title": "Autonomous Agents for Collaborative Task under Information Asymmetry",
+  "url": "http://arxiv.org/pdf/2406.14928v1",
+  "date": "2024-06-21",
+  "abs": "Large Language Model Multi-Agent Systems (LLM-MAS) have achieved great\nprogress in solving complex tasks. It performs communication among agents\nwithin the system to collaboratively solve tasks, under the premise of shared\ninformation. However, when agents' communication is leveraged to enhance human\ncooperation, a new challenge arises due to information asymmetry, since each\nagent can only access the information of its human user. Previous MAS struggle\nto complete tasks under this condition. To address this, we propose a new MAS\nparadigm termed iAgents, which denotes Informative Multi-Agent Systems. In\niAgents, the human social network is mirrored in the agent network, where\nagents proactively exchange human information necessary for task resolution,\nthereby overcoming information asymmetry. iAgents employs a novel agent\nreasoning mechanism, InfoNav, to navigate agents' communication towards\neffective information exchange. Together with InfoNav, iAgents organizes human\ninformation in a mixed memory to provide agents with accurate and comprehensive\ninformation for exchange. Additionally, we introduce InformativeBench, the\nfirst benchmark tailored for evaluating LLM agents' task-solving ability under\ninformation asymmetry. Experimental results show that iAgents can collaborate\nwithin a social network of 140 individuals and 588 relationships, autonomously\ncommunicate over 30 turns, and retrieve information from nearly 70,000 messages\nto complete tasks within 3 minutes.",
+  "cat": "cs.AI",
+  "authors": [
+   "Wei Liu",
+   "Chenxi Wang",
+   "Yifei Wang",
+   "Zihao Xie",
+   "Rennai Qiu",
+   "Yufan Dang",
+   "Zhuoyun Du",
+   "Weize Chen",
+   "Cheng Yang",
+   "Chen Qian"
+  ],
+  "citation_count": 1
+ },
+ "2406.11342v3": {
+  "id": "2406.11342v3",
+  "title": "KAOS: Large Model Multi-Agent Operating System",
+  "url": "http://arxiv.org/pdf/2406.11342v3",
+  "date": "2024-08-09",
+  "abs": "The intelligent interaction model based on large models reduces the\ndifferences in user experience across various system platforms but faces\nchallenges in multi-agent collaboration and resource sharing. To demonstrate a\nuniform user experience across different foundational software platforms and\naddress resource coordination management challenges, this paper proposes KAOS,\na multi-agent operating system based on the open-source Kylin. The research\nmethod involves empowering agents with large models to serve applications.\nFirst, by introducing management role agents and vertical multi-agent\ncollaboration to construct or replace typical application software. Second, by\nstudying system-level shared resource scheduling strategies to enhance user\nexperience and optimize resource utilization. And finally, by validating the\nefficiency and superiority of the large model multi-agent operating system\nthrough real applications and scoring intelligence. The feasibility of this\nsystem is demonstrated, providing a new perspective for the development of\nmulti-agent operating systems. Experimental results show significant advantages\nof multi-agent collaboration in various application scenarios.",
+  "cat": "cs.MA",
+  "authors": [
+   "Zhao Zhuo",
+   "Rongzhen Li",
+   "Kai Liu",
+   "Huhai Zou",
+   "KaiMao Li",
+   "Jie Yu",
+   "Tianhao Sun",
+   "Qingbo Wu"
+  ],
+  "citation_count": 1
+ },
+ "2405.11106v1": {
+  "id": "2405.11106v1",
+  "title": "LLM-based Multi-Agent Reinforcement Learning: Current and Future Directions",
+  "url": "http://arxiv.org/pdf/2405.11106v1",
+  "date": "2024-05-17",
+  "abs": "In recent years, Large Language Models (LLMs) have shown great abilities in\nvarious tasks, including question answering, arithmetic problem solving, and\npoem writing, among others. Although research on LLM-as-an-agent has shown that\nLLM can be applied to Reinforcement Learning (RL) and achieve decent results,\nthe extension of LLM-based RL to Multi-Agent System (MAS) is not trivial, as\nmany aspects, such as coordination and communication between agents, are not\nconsidered in the RL frameworks of a single agent. To inspire more research on\nLLM-based MARL, in this letter, we survey the existing LLM-based single-agent\nand multi-agent RL frameworks and provide potential research directions for\nfuture research. In particular, we focus on the cooperative tasks of multiple\nagents with a common goal and communication among them. We also consider\nhuman-in/on-the-loop scenarios enabled by the language component in the\nframework.",
+  "cat": "cs.MA",
+  "authors": [
+   "Chuanneng Sun",
+   "Songjun Huang",
+   "Dario Pompili"
+  ],
+  "citation_count": 11
+ },
+ "2407.19354v1": {
+  "id": "2407.19354v1",
+  "title": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+  "url": "http://arxiv.org/pdf/2407.19354v1",
+  "date": "2024-07-28",
+  "abs": "Inspired by the rapid development of Large Language Models (LLMs), LLM agents\nhave evolved to perform complex tasks. LLM agents are now extensively applied\nacross various domains, handling vast amounts of data to interact with humans\nand execute tasks. The widespread applications of LLM agents demonstrate their\nsignificant commercial value; however, they also expose security and privacy\nvulnerabilities. At the current stage, comprehensive research on the security\nand privacy of LLM agents is highly needed. This survey aims to provide a\ncomprehensive overview of the newly emerged privacy and security issues faced\nby LLM agents. We begin by introducing the fundamental knowledge of LLM agents,\nfollowed by a categorization and analysis of the threats. We then discuss the\nimpacts of these threats on humans, environment, and other agents.\nSubsequently, we review existing defensive strategies, and finally explore\nfuture trends. Additionally, the survey incorporates diverse case studies to\nfacilitate a more accessible understanding. By highlighting these critical\nsecurity and privacy issues, the survey seeks to stimulate future research\ntowards enhancing the security and privacy of LLM agents, thereby increasing\ntheir reliability and trustworthiness in future applications.",
+  "cat": "cs.CR",
+  "authors": [
+   "Feng He",
+   "Tianqing Zhu",
+   "Dayong Ye",
+   "Bo Liu",
+   "Wanlei Zhou",
+   "Philip S. Yu"
+  ],
+  "citation_count": 4
+ },
+ "2407.10718v2": {
+  "id": "2407.10718v2",
+  "title": "Sibyl: Simple yet Effective Agent Framework for Complex Real-world Reasoning",
+  "url": "http://arxiv.org/pdf/2407.10718v2",
+  "date": "2024-07-16",
+  "abs": "Existing agents based on large language models (LLMs) demonstrate robust\nproblem-solving capabilities by integrating LLMs' inherent knowledge, strong\nin-context learning and zero-shot capabilities, and the use of tools combined\nwith intricately designed LLM invocation workflows by humans. However, these\nagents still exhibit shortcomings in long-term reasoning and under-use the\npotential of existing tools, leading to noticeable deficiencies in complex\nreal-world reasoning scenarios. To address these limitations, we introduce\nSibyl, a simple yet powerful LLM-based agent framework designed to tackle\ncomplex reasoning tasks by efficiently leveraging a minimal set of tools.\nDrawing inspiration from Global Workspace Theory, Sibyl incorporates a global\nworkspace to enhance the management and sharing of knowledge and conversation\nhistory throughout the system. Furthermore, guided by Society of Mind Theory,\nSibyl implements a multi-agent debate-based jury to self-refine the final\nanswers, ensuring a comprehensive and balanced approach. This approach aims to\nreduce system complexity while expanding the scope of problems solvable-from\nmatters typically resolved by humans in minutes to those requiring hours or\neven days, thus facilitating a shift from System-1 to System-2 thinking. Sibyl\nhas been designed with a focus on scalability and ease of debugging by\nincorporating the concept of reentrancy from functional programming from its\ninception, with the aim of seamless and low effort integration in other LLM\napplications to improve capabilities. Our experimental results on the GAIA\nbenchmark test set reveal that the Sibyl agent instantiated with GPT-4 achieves\nstate-of-the-art performance with an average score of 34.55%, compared to other\nagents based on GPT-4. We hope that Sibyl can inspire more reliable and\nreusable LLM-based agent solutions to address complex real-world reasoning\ntasks.",
+  "cat": "cs.AI",
+  "authors": [
+   "Yulong Wang",
+   "Tianhao Shen",
+   "Lifeng Liu",
+   "Jian Xie"
+  ],
+  "citation_count": 2
+ },
+ "2406.08979v1": {
+  "id": "2406.08979v1",
+  "title": "Multi-Agent Software Development through Cross-Team Collaboration",
+  "url": "http://arxiv.org/pdf/2406.08979v1",
+  "date": "2024-06-13",
+  "abs": "The latest breakthroughs in Large Language Models (LLMs), eg., ChatDev, have\ncatalyzed profound transformations, particularly through multi-agent\ncollaboration for software development. LLM agents can collaborate in teams\nlike humans, and follow the waterfall model to sequentially work on\nrequirements analysis, development, review, testing, and other phases to\nperform autonomous software generation. However, for an agent team, each phase\nin a single development process yields only one possible outcome. This results\nin the completion of only one development chain, thereby losing the opportunity\nto explore multiple potential decision paths within the solution space.\nConsequently, this may lead to obtaining suboptimal results. To address this\nchallenge, we introduce Cross-Team Collaboration (CTC), a scalable multi-team\nframework that enables orchestrated teams to jointly propose various decisions\nand communicate with their insights in a cross-team collaboration environment\nfor superior content generation. Experimental results in software development\nreveal a notable increase in quality compared to state-of-the-art baselines,\nunderscoring the efficacy of our framework. The significant improvements in\nstory generation demonstrate the promising generalization ability of our\nframework across various domains. We anticipate that our work will guide LLM\nagents towards a cross-team paradigm and contribute to their significant growth\nin but not limited to software development. The code and data will be available\nat https://github.com/OpenBMB/ChatDev.",
+  "cat": "cs.CL",
+  "authors": [
+   "Zhuoyun Du",
+   "Chen Qian",
+   "Wei Liu",
+   "Zihao Xie",
+   "Yifei Wang",
+   "Yufan Dang",
+   "Weize Chen",
+   "Cheng Yang"
+  ],
+  "citation_count": 7
+ },
+ "2405.03825v1": {
+  "id": "2405.03825v1",
+  "title": "Organizing a Society of Language Models: Structures and Mechanisms for Enhanced Collective Intelligence",
+  "url": "http://arxiv.org/pdf/2405.03825v1",
+  "date": "2024-05-06",
+  "abs": "Recent developments in Large Language Models (LLMs) have significantly\nexpanded their applications across various domains. However, the effectiveness\nof LLMs is often constrained when operating individually in complex\nenvironments. This paper introduces a transformative approach by organizing\nLLMs into community-based structures, aimed at enhancing their collective\nintelligence and problem-solving capabilities. We investigate different\norganizational models-hierarchical, flat, dynamic, and federated-each\npresenting unique benefits and challenges for collaborative AI systems. Within\nthese structured communities, LLMs are designed to specialize in distinct\ncognitive tasks, employ advanced interaction mechanisms such as direct\ncommunication, voting systems, and market-based approaches, and dynamically\nadjust their governance structures to meet changing demands. The implementation\nof such communities holds substantial promise for improve problem-solving\ncapabilities in AI, prompting an in-depth examination of their ethical\nconsiderations, management strategies, and scalability potential. This position\npaper seeks to lay the groundwork for future research, advocating a paradigm\nshift from isolated to synergistic operational frameworks in AI research and\napplication.",
+  "cat": "cs.AI",
+  "authors": [
+   "Silvan Ferreira",
+   "Ivanovitch Silva",
+   "Allan Martins"
+  ],
+  "citation_count": 1
+ },
+ "2405.14314v2": {
+  "id": "2405.14314v2",
+  "title": "Towards Efficient LLM Grounding for Embodied Multi-Agent Collaboration",
+  "url": "http://arxiv.org/pdf/2405.14314v2",
+  "date": "2024-05-26",
+  "abs": "Grounding the reasoning ability of large language models (LLMs) for embodied\ntasks is challenging due to the complexity of the physical world. Especially,\nLLM planning for multi-agent collaboration requires communication of agents or\ncredit assignment as the feedback to re-adjust the proposed plans and achieve\neffective coordination. However, existing methods that overly rely on physical\nverification or self-reflection suffer from excessive and inefficient querying\nof LLMs. In this paper, we propose a novel framework for multi-agent\ncollaboration that introduces Reinforced Advantage feedback (ReAd) for\nefficient self-refinement of plans. Specifically, we perform critic regression\nto learn a sequential advantage function from LLM-planned data, and then treat\nthe LLM planner as an optimizer to generate actions that maximize the advantage\nfunction. It endows the LLM with the foresight to discern whether the action\ncontributes to accomplishing the final task. We provide theoretical analysis by\nextending advantage-weighted regression in reinforcement learning to\nmulti-agent systems. Experiments on Overcooked-AI and a difficult variant of\nRoCoBench show that ReAd surpasses baselines in success rate, and also\nsignificantly decreases the interaction steps of agents and query rounds of\nLLMs, demonstrating its high efficiency for grounding LLMs. More results are\ngiven at https://read-llm.github.io/.",
+  "cat": "cs.AI",
+  "authors": [
+   "Yang Zhang",
+   "Shixin Yang",
+   "Chenjia Bai",
+   "Fei Wu",
+   "Xiu Li",
+   "Zhen Wang",
+   "Xuelong Li"
+  ],
+  "citation_count": 12
+ },
+ "2407.07061v2": {
+  "id": "2407.07061v2",
+  "title": "Internet of Agents: Weaving a Web of Heterogeneous Agents for Collaborative Intelligence",
+  "url": "http://arxiv.org/pdf/2407.07061v2",
+  "date": "2024-07-10",
+  "abs": "The rapid advancement of large language models (LLMs) has paved the way for\nthe development of highly capable autonomous agents. However, existing\nmulti-agent frameworks often struggle with integrating diverse capable\nthird-party agents due to reliance on agents defined within their own\necosystems. They also face challenges in simulating distributed environments,\nas most frameworks are limited to single-device setups. Furthermore, these\nframeworks often rely on hard-coded communication pipelines, limiting their\nadaptability to dynamic task requirements. Inspired by the concept of the\nInternet, we propose the Internet of Agents (IoA), a novel framework that\naddresses these limitations by providing a flexible and scalable platform for\nLLM-based multi-agent collaboration. IoA introduces an agent integration\nprotocol, an instant-messaging-like architecture design, and dynamic mechanisms\nfor agent teaming and conversation flow control. Through extensive experiments\non general assistant tasks, embodied AI tasks, and retrieval-augmented\ngeneration benchmarks, we demonstrate that IoA consistently outperforms\nstate-of-the-art baselines, showcasing its ability to facilitate effective\ncollaboration among heterogeneous agents. IoA represents a step towards linking\ndiverse agents in an Internet-like environment, where agents can seamlessly\ncollaborate to achieve greater intelligence and capabilities. Our codebase has\nbeen released at \\url{https://github.com/OpenBMB/IoA}.",
+  "cat": "cs.CL",
+  "authors": [
+   "Weize Chen",
+   "Ziming You",
+   "Ran Li",
+   "Yitong Guan",
+   "Chen Qian",
+   "Chenyang Zhao",
+   "Cheng Yang",
+   "Ruobing Xie",
+   "Zhiyuan Liu",
+   "Maosong Sun"
+  ],
+  "citation_count": 16
+ },
+ "2408.02920v1": {
+  "id": "2408.02920v1",
+  "title": "A Taxonomy of Architecture Options for Foundation Model-based Agents: Analysis and Decision Model",
+  "url": "http://arxiv.org/pdf/2408.02920v1",
+  "date": "2024-08-06",
+  "abs": "The rapid advancement of AI technology has led to widespread applications of\nagent systems across various domains. However, the need for detailed\narchitecture design poses significant challenges in designing and operating\nthese systems. This paper introduces a taxonomy focused on the architectures of\nfoundation-model-based agents, addressing critical aspects such as functional\ncapabilities and non-functional qualities. We also discuss the operations\ninvolved in both design-time and run-time phases, providing a comprehensive\nview of architectural design and operational characteristics. By unifying and\ndetailing these classifications, our taxonomy aims to improve the design of\nfoundation-model-based agents. Additionally, the paper establishes a decision\nmodel that guides critical design and runtime decisions, offering a structured\napproach to enhance the development of foundation-model-based agents. Our\ncontributions include providing a structured architecture design option and\nguiding the development process of foundation-model-based agents, thereby\naddressing current fragmentation in the field.",
+  "cat": "cs.SE",
+  "authors": [
+   "Jingwen Zhou",
+   "Qinghua Lu",
+   "Jieshan Chen",
+   "Liming Zhu",
+   "Xiwei Xu",
+   "Zhenchang Xing",
+   "Stefan Harrer"
+  ],
+  "citation_count": 0
+ },
+ "2405.08550v1": {
+  "id": "2405.08550v1",
+  "title": "Learning Multi-Agent Communication from Graph Modeling Perspective",
+  "url": "http://arxiv.org/pdf/2405.08550v1",
+  "date": "2024-05-14",
+  "abs": "In numerous artificial intelligence applications, the collaborative efforts\nof multiple intelligent agents are imperative for the successful attainment of\ntarget objectives. To enhance coordination among these agents, a distributed\ncommunication framework is often employed. However, information sharing among\nall agents proves to be resource-intensive, while the adoption of a manually\npre-defined communication architecture imposes limitations on inter-agent\ncommunication, thereby constraining the potential for collaborative efforts. In\nthis study, we introduce a novel approach wherein we conceptualize the\ncommunication architecture among agents as a learnable graph. We formulate this\nproblem as the task of determining the communication graph while enabling the\narchitecture parameters to update normally, thus necessitating a bi-level\noptimization process. Utilizing continuous relaxation of the graph\nrepresentation and incorporating attention units, our proposed approach,\nCommFormer, efficiently optimizes the communication graph and concurrently\nrefines architectural parameters through gradient descent in an end-to-end\nmanner. Extensive experiments on a variety of cooperative tasks substantiate\nthe robustness of our model across diverse cooperative scenarios, where agents\nare able to develop more coordinated and sophisticated strategies regardless of\nchanges in the number of agents.",
+  "cat": "cs.LG",
+  "authors": [
+   "Shengchao Hu",
+   "Li Shen",
+   "Ya Zhang",
+   "Dacheng Tao"
+  ],
+  "citation_count": 9
+ }
+}
