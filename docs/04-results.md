@@ -1,7 +1,7 @@
 # 03 — 결과와 진단
 
 > 읽는 규칙: **같은 코퍼스끼리만 비교합니다.** 구 DB 행은 코퍼스가 달라 참고로만 둡니다
-> (이유는 [02-evaluation.md](02-evaluation.md) §4).
+> (이유는 [03-evaluation.md](03-evaluation.md) §4).
 
 ## 1. 표 — 토픽 2개
 
