@@ -137,12 +137,12 @@ exporter 매핑: `id`=arXiv **base id**, `url`=`http://arxiv.org/abs/<id>`,
 | # | 함정 | 영향 | 대응 |
 |---|---|---|---|
 | 1 | **arXiv id에 버전 접미사 없음** (`1209.5292`; 구 DB는 `1811.06122v1`) | 새 DB 내부적으로는 일관되어 무해. 구 DB와의 id 혼용만 금지 | 새 스냅샷 디렉터리로 격리 (§3). 실행 로그·인용 id가 base id로 바뀜을 인지 |
-| 2 | **구식 id** (`cs/0503039`) 포함 (코퍼스가 1991년까지 소급) | `get_index_filter_by_id_prefix`의 YYMM 접두사 컷이 구식 id에서 오작동 | **`--paper_id_cutoff` 게이트를 끈다** — 뷰가 이미 2025-12-31로 잘라서 이중 게이트는 불필요. 서브아웃라인 단계가 원래 게이트 밖이던 비대칭도 함께 소멸 |
+| 2 | **구식 id** (`cs/0503039`) **54,217편** 포함 (코퍼스가 1991-08까지 소급) | YYMM 접두사 컷(`get_index_filter_by_id_prefix`)이 구식 id를 통과시킴 — 다만 check_db 실측대로 구식 id는 전부 2007-04 이전이라 어떤 컷오프에도 안 걸려 무해 | **`--paper_id_cutoff` 게이트를 끈다** — 뷰가 이미 2025-12-31로 잘라서 이중 게이트는 불필요. 서브아웃라인 단계가 원래 게이트 밖이던 비대칭도 함께 소멸 |
 | 3 | **TRE 날짜 창 밖 논문 무음 폐기** (`sort_by_citation_period`) | 코퍼스가 1991년까지 있는데 `--paper_date_oldest`가 2012면 그 이전 논문이 조용히 사라짐 | oldest를 뷰 범위에 맞추고(잠정 1991-01-01 / newest 2025-12-31), 매 실행 `report_window_drops()` 확인. 창 개수 증가(~17개)가 TRE 쿼터에 주는 영향은 파일럿에서 관찰 |
 | 4 | **`citation_count` 출처 교체** (S2 → OpenAlex@2026-02-03) | TRE 랭킹 분포가 달라짐 | 의도된 변화 — agent 간 인용수 출처 통일이 목적에 부합. 구 DB와 점수 직접 비교만 금지 |
 | 5 | **`date` 월 정밀도 44.5만 편** (월초로 저장) | TRE 2년 윈도우엔 무해, 일 단위 정렬만 부정확 | 무대응. manifest의 `date_precision` 통계 인지 |
 | 6 | **`authors` 없음, `cat`은 OpenAlex subfield** | 생성 파이프라인은 안 읽음. `md_to_tex.py` BibTeX만 저자 결손·카테고리 상이 | 생성 실험 범위 밖. BibTeX가 필요해지면 arXiv 메타데이터로 후보강 (00-status §8) |
-| 7 | **초록에 raw `\n` 이스케이프 잔존 가능** (OpenAlex 원문 그대로) | 프롬프트·임베딩 입력 오염 가능 | export 후 샘플 검사, 필요시 build 스크립트에서 정규화 (빌드 전 1회, 원본 JSON은 불변 유지) |
+| 7 | **초록의 `\n` 오염 — 실측 확정** (표본 2만: 리터럴 `\n` 10%, 개행 문자 6%, 선두 공백) | 프롬프트·임베딩에 그대로 노출 | **정규화하지 않는다 (결정).** 근거 둘: AutoSurvey가 같은 export를 바이트 그대로 임베딩했으므로 agent 간 텍스트 통일이 우선하고, 리터럴 `\n` 블라인드 치환은 LaTeX 명령(`\nu`, `\nabla`)을 오손한다. 덤으로 스냅샷 JSON = export 사본이 되어 manifest의 `content_sha256`이 파일 지문으로 그대로 유효 |
 | 8 | **1-based 불변식 + L2 정규화 + prefix 없음** | 어기면 예외 없이 랭킹만 망가짐 | append_snapshot.py 규약 재사용, check_db.py 재임베딩 검증을 관문으로 |
 | 9 | **레코드 947K로 증가** (589K 대비 1.6배) | TinyDB JSON 전체 로드 — 실행당 RAM·기동 시간 증가 | 파일럿에서 기동 실측. 문제가 되면 그때 논의 (검색 코드 무수정 원칙 우선) |
 
@@ -192,12 +192,12 @@ env 주도로 손봐 왔다. 이것이 이번 통합의 **유일한 소스 코�
 
 ## 8. 작업 순서
 
-| # | 작업 | 위치 | 비고 |
+| # | 작업 | 위치 | 상태 (2026-08-31) |
 |---|---|---|---|
-| 1 | `surveyeval-2512.surveyforge.json` export + 뷰의 config 등록 | asg-common-corpus | CLI, ~1분 |
-| 2 | `scripts/build_db_from_corpus.py` 작성 | SurveyForge | append_snapshot.py 규약 재사용. 초록 `\n` 정규화 여부 판단(함정 7) 포함 |
-| 3 | 인덱스 빌드 실행 | GPU 박스 | ~8시간, 빈 GPU 지정, detached 실행 |
-| 4 | `check_db.py`로 재임베딩 검증 + manifest 사이드카 배치 | SurveyForge | 함정 8의 관문 |
+| 1 | `surveyeval-2512.surveyforge.json` export + 뷰의 config 등록 | asg-common-corpus | **완료** — 947,444편, 12초, `content_sha256=d64bd71d…`. 뷰는 `benchmark_policy.yaml` `views:`에 등록 |
+| 2 | `scripts/build_db_from_corpus.py` 작성 | SurveyForge | **완료** — 청크 체크포인트로 재시작 가능, 스모크 2,000편 + check_db 재임베딩 cos 1.000000 통과 |
+| 3 | 인덱스 빌드 실행 | GPU 박스 | **진행 중** — GPU 5, detached, `SurveyForge_data/database_cc-surveyeval-2512/build.log` |
+| 4 | `check_db.py`로 재임베딩 검증 + manifest 사이드카 배치 | SurveyForge | 함정 8의 관문. 사이드카·build_manifest는 빌드 스크립트가 배치 |
 | 5 | `.env` 갱신 + `model.py` 라우팅 수정 | SurveyForge | §6. 라우팅 수정은 기존 deepseek 경로 회귀 확인 포함 |
 | 6 | survey DB GT 누출 점검 | SurveyForge | §7 |
 | 7 | 무료 구간 검증: 기동(로드 시간·RAM), `report_cutoffs_vs_database`, `report_window_drops`, hello 프로브 | SurveyForge | LLM 실비용 발생 전 단계까지 |
