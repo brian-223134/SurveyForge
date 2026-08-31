@@ -198,10 +198,10 @@ env 주도로 손봐 왔다. 이것이 이번 통합의 **유일한 소스 코�
 | 2 | `scripts/build_db_from_corpus.py` 작성 | SurveyForge | **완료** — 청크 체크포인트로 재시작 가능, 스모크 2,000편 + check_db 재임베딩 cos 1.000000 통과 |
 | 3 | 인덱스 빌드 실행 | GPU 박스 | **진행 중** — GPU 5, detached, `SurveyForge_data/database_cc-surveyeval-2512/build.log` |
 | 4 | `check_db.py`로 재임베딩 검증 + manifest 사이드카 배치 | SurveyForge | 함정 8의 관문. 사이드카·build_manifest는 빌드 스크립트가 배치 |
-| 5 | `.env` 갱신 + `model.py` 라우팅 수정 | SurveyForge | §6. 라우팅 수정은 기존 deepseek 경로 회귀 확인 포함 |
-| 6 | survey DB GT 누출 점검 | SurveyForge | §7 |
-| 7 | 무료 구간 검증: 기동(로드 시간·RAM), `report_cutoffs_vs_database`, `report_window_drops`, hello 프로브 | SurveyForge | LLM 실비용 발생 전 단계까지 |
-| 8 | 파일럿 생성 | — | **별도 지시 후** (편당 실비용). 아웃라인($0.25 급)만 먼저 끊어서 |
+| 5 | `.env` 갱신 + `model.py` 라우팅 수정 | SurveyForge | **완료** — URL 모양(…/v1) 라우팅. 헬로 프로브에서 `[PROVIDER] served by: AkashML` 확인 |
+| 6 | survey DB GT 누출 점검 | SurveyForge | **완료** — GT 20편 중 **17편 실재** 확인. `SURVEYFORGE_SURVEY_EXCLUDE_IDS` env로 `database_survey.get_ids_from_query`에서 제외 (상시 켜 둠) |
+| 7 | 검증: 기동(로드 시간·RAM), `report_cutoffs_vs_database`, `report_window_drops` | SurveyForge | 빌드 완료 후 |
+| 8 | 파일럿 생성 | — | **지시됨 (2026-08-31)**: topic "Edge Computing" 1편 — SurveyBench GT 밖 토픽이라 GT 비교 없는 자유 생성 |
 
 ## 9. 검증 계획
 
