@@ -59,3 +59,8 @@ SurveyBench/eval_runs/
 eval_out/*
 # 비교 리포트는 남긴다 -- README §3.5 가 링크하고, 셋 다 합쳐 5KB다.
 !eval_out/eval_*.md
+
+# survey-search-arm 브랜치 작업 중 세션이 만든 로컬 노트. 브랜치를 넘나들며
+# untracked 로 따라다니므로 여기서 무시한다.
+CLAUDE.md
+HANDOFF.md
