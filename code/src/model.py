@@ -98,8 +98,17 @@ class APIModel:
         self.__api_url = api_url
         self.model = model
         
+    def __openai_compatible(self):
+        # OpenRouter처럼 base URL(…/v1)로 설정된 엔드포인트는 모델명과 무관하게
+        # OpenAI SDK 분기를 태운다. 아래 raw requests 분기는 전체 경로
+        # (…/chat/completions)를 기대하고, 백오프·PROVIDER/TRUNCATED/EMPTY 진단이
+        # 없다 — 모델명 하드코딩(deepseek/claude)으로는 meta-llama 등 새 백본이
+        # 그 약한 분기로 떨어진다.
+        return bool(self.__api_url) and self.__api_url.rstrip('/').endswith('v1')
+
     def __req(self, text, temperature, max_try = 10):
-        if "deepseek" in self.model:
+        if "deepseek" in self.model or \
+                ("claude" not in self.model and self.__openai_compatible()):
             last_error = None
             for _ in range(max_try):
                 try:
@@ -108,10 +117,11 @@ class APIModel:
                         base_url=self.__api_url,
                     )
                     completion = client.chat.completions.create(
-                        model=self.model,  # e.g. deepseek/deepseek-v4-pro on OpenRouter
+                        model=self.model,  # e.g. meta-llama/llama-3.3-70b-instruct on OpenRouter
                         messages=[
                             {'role': 'user', 'content': f'{text}'}
                             ],
+                        temperature=temperature,
                         max_tokens=MAX_TOKENS,
                         extra_body=OPENROUTER_EXTRA,
                     )
