@@ -82,10 +82,15 @@ def embed_chunked(model, texts, batch_size, chunk_size, tmp_dir, label):
                 parts.append(vec)
                 continue
             os.remove(path)  # 죽다 만 청크
-        outs = [model.encode(texts[i:i + batch_size], show_progress_bar=False,
-                             normalize_embeddings=True)  # 저장 벡터 규약: norm 1.0
-                for i in range(start, end, batch_size)]
-        vec = np.concatenate(outs).astype('float32')
+        # batch_size를 encode에 직접 준다. sentence-transformers는 청크를 길이순으로
+        # 정렬해 배칭한 뒤 원래 순서로 복원하므로 (1) id 순서 불변식이 유지되고
+        # (2) 장문 배치가 균질해진다. 코퍼스에는 구 DB(최대 567 tokens)와 달리
+        # ~1,900 token짜리 초록이 있어, batch 64 × seq² 어텐션이 15 GiB를 요구하며
+        # OOM 났다 (2026-08-31 실측) — 기본 batch를 16으로 내린 이유.
+        vec = model.encode(texts[start:end], batch_size=batch_size,
+                           show_progress_bar=False,
+                           normalize_embeddings=True  # 저장 벡터 규약: norm 1.0
+                           ).astype('float32')
         np.save(path + '.part.npy', vec)
         os.replace(path + '.part.npy', path)
         parts.append(vec)
@@ -109,7 +114,9 @@ def main():
                     help='서베이 DB 4종을 복사해 올 기존 스냅샷 (기본: <out 부모>/database)')
     ap.add_argument('--embedding-model', default='',
                     help='기본: <out 부모>/gte-large-en-v1.5')
-    ap.add_argument('--batch-size', type=int, default=64)  # L40S 실측 최적 (append_snapshot 주석)
+    # append_snapshot의 실측 최적은 64였지만 그건 최대 567 token 코퍼스 기준.
+    # 공용 코퍼스의 장문 초록에서는 64가 OOM — embed_chunked 주석 참조.
+    ap.add_argument('--batch-size', type=int, default=16)
     ap.add_argument('--chunk-size', type=int, default=25600, help='재시작 체크포인트 단위')
     ap.add_argument('--device', default='')
     ap.add_argument('--tag', default='', help='인덱스 파일명 접미사 (기본: manifest의 view명)')
