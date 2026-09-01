@@ -196,12 +196,12 @@ env 주도로 손봐 왔다. 이것이 이번 통합의 **유일한 소스 코�
 |---|---|---|---|
 | 1 | `surveyeval-2512.surveyforge.json` export + 뷰의 config 등록 | asg-common-corpus | **완료** — 947,444편, 12초, `content_sha256=d64bd71d…`. 뷰는 `benchmark_policy.yaml` `views:`에 등록 |
 | 2 | `scripts/build_db_from_corpus.py` 작성 | SurveyForge | **완료** — 청크 체크포인트로 재시작 가능, 스모크 2,000편 + check_db 재임베딩 cos 1.000000 통과 |
-| 3 | 인덱스 빌드 실행 | GPU 박스 | **진행 중** — GPU 5, detached, `SurveyForge_data/database_cc-surveyeval-2512/build.log` |
-| 4 | `check_db.py`로 재임베딩 검증 + manifest 사이드카 배치 | SurveyForge | 함정 8의 관문. 사이드카·build_manifest는 빌드 스크립트가 배치 |
+| 3 | 인덱스 빌드 실행 | GPU 박스 | **완료 (2026-09-01)** — §10. OOM 1회(GPU 경합+장문 배치)·sha 오독 1회 겪고 3차에 완주, 체크포인트 덕에 재임베딩 손실 0 |
+| 4 | `check_db.py`로 재임베딩 검증 + manifest 사이드카 배치 | SurveyForge | **완료** — 전량 스냅샷 재임베딩 cos **1.000000** (두 필드), §10 |
 | 5 | `.env` 갱신 + `model.py` 라우팅 수정 | SurveyForge | **완료** — URL 모양(…/v1) 라우팅. 헬로 프로브에서 `[PROVIDER] served by: AkashML` 확인 |
 | 6 | survey DB GT 누출 점검 | SurveyForge | **완료** — GT 20편 중 **17편 실재** 확인. `SURVEYFORGE_SURVEY_EXCLUDE_IDS` env로 `database_survey.get_ids_from_query`에서 제외 (상시 켜 둠) |
-| 7 | 검증: 기동(로드 시간·RAM), `report_cutoffs_vs_database`, `report_window_drops` | SurveyForge | 빌드 완료 후 |
-| 8 | 파일럿 생성 | — | **지시됨 (2026-08-31)**: topic "Edge Computing" 1편 — SurveyBench GT 밖 토픽이라 GT 비교 없는 자유 생성 |
+| 7 | 검증: 기동(로드 시간·RAM), `report_cutoffs_vs_database`, `report_window_drops` | SurveyForge | **완료** — 게이트 0 excluded, 창 폐기 0건, §10 |
+| 8 | 파일럿 생성 | — | **완료 (2026-09-01)**: "Edge Computing" 1편 (GT 밖 토픽, 자유 생성) — §10 |
 
 ## 9. 검증 계획
 
@@ -210,7 +210,50 @@ env 주도로 손봐 왔다. 이것이 이번 통합의 **유일한 소스 코�
 - **컷오프 정합**: `report_cutoffs_vs_database`가 date 최대값 ≤ 2025-12-31을
   보고하는지. GT 20편 id가 DB에 없는지 직접 조회.
 - **검색 스택 무수정 확인**: `git diff main -- code/src/rag.py code/src/database.py
-  code/src/agents/` 가 비어 있어야 한다 (model.py만 예외).
+  code/src/agents/` 가 비어 있어야 한다. 예외 둘: `model.py`(LLM 라우팅, §6)와
+  `database.py`의 `database_survey` GT 제외 훅(§7-1의 계획된 변경 — 논문 검색 경로가
+  아니라 아웃라인 예시 검색에만 관여).
 - **동작 등가성**: 구 스냅샷과 새 스냅샷으로 같은 topic의 아웃라인 단계까지만 돌려
   retrieved id 분포(연도 히스토그램, window drop 수)를 비교 — TRE가 새 날짜 범위에서
   기대대로 동작하는지 본다.
+
+## 10. 실행 결과 (2026-09-01)
+
+### 스냅샷 빌드·검증
+
+| 항목 | 실측 | 계획 대비 |
+|---|---|---|
+| 스냅샷 | `database_cc-surveyeval-2512/` 947,444편, 인덱스 2종 + JSON ≈ 9 GB | §3 추정과 일치 |
+| 임베딩 처리량 | title+abs 93편/s (batch 16, 길이 정렬), title 876편/s — 합 ~3.2h | §3 추정 8h보다 빠름 |
+| check_db | 키/매핑/인덱스 1..947444 전단사, 재임베딩 **cos 1.000000** (두 필드, 20건) | 함정 8 관문 통과 |
+| 겪은 문제 | ① GPU 경합+장문 배치 OOM → batch 64→16, encode에 길이 정렬 위임 ② export manifest `content_sha256`을 파일 지문으로 오독해 중단 → 함정 10으로 추가 | 체크포인트 재사용으로 재임베딩 손실 0 |
+
+**함정 10 (실측으로 추가)**: export manifest의 `content_sha256`은 **레코드 청크만**
+해시한 값이라(JSON 껍데기 제외) 파일 지문이 아니다. 파일 대조는 직접 해시하거나,
+2026-09-01 exporter에 추가된 `file_sha256`을 쓸 것.
+
+### Edge Computing 파일럿 (무인 체인, run_demo exit 0)
+
+| 지표 | 값 | 판정 |
+|---|---|---|
+| 본문 | refined 31,455 words, 7/7 섹션 완결 | 저자 기준선 13k~33k 내 (상단부) |
+| 참고문헌 | 101편, id 매핑 정상 | — |
+| 실비용 / 소요 | **$0.39 / 37분** (크레딧 스냅샷 전후 차) | deepseek 실측 $0.7~2.2 대비 대폭 절감 |
+| provider | `[PROVIDER] served by: AkashML` 단일 | 고정 성공 |
+| 컷오프 게이트 | outline/writer 모두 947,444/947,444, **0 excluded** | 함정 2 대응 적중 |
+| TRE 창 폐기 | **0/5,175** | 함정 3 대응 적중 |
+| PDF | `Edge Computing.pdf` 46쪽, pdflatex 3패스 무경고 | md_to_tex가 새 스냅샷 자동 인식 |
+
+### 잔여 관찰 (다음 실행 전 검토)
+
+1. **[TRUNCATED] 2건** — 단계 경계의 대형 호출이 `max_tokens=16384` 상한에 닿음
+   (finish_reason=length). 이번 결과물에 구조 손상은 없었으나(7/7 섹션, 결론 완결)
+   다음 실행 전 `SURVEYFORGE_MAX_TOKENS` 상향(32768) 검토.
+2. **대형 검색 ~250s × 2회/실행** — rag.py가 retrieve마다 벡터스토어를 재인스턴스화하는
+   기존 구조가 947K 코퍼스에서 드러난 것. 실행당 ~8분이라 급하지 않은 최적화 후보.
+3. **서지의 저자·게재처 결손** — 코퍼스에 authors/venue가 없어 `.bib`이 제목·연도·arXiv
+   링크만 표기(함정 6 예상대로). 평가 지표는 전부 json의 arXiv id 기반이라 **지표 영향 0**
+   (SurveyBench 커버리지·인용 정합 판정 모두 id→DB 조회). SurveyX는 코퍼스 저장소의
+   raw OpenAlex 미러에서 venue lookup(27%)을 사적으로 추출해 쓰고 있어 표기 비대칭이
+   있는데, 보강한다면 그 lookup을 **코퍼스 공식 부속 산출물로 승격**시켜 소비하는 경로가
+   맞다 — 논문 제출용 PDF가 필요해지는 시점에 처리 (2026-09-01 논의).
