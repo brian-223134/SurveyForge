@@ -195,12 +195,16 @@ def main():
         with open(out_db, 'w') as f:
             json.dump({'cs_paper_info': table}, f, ensure_ascii=False)
     else:
-        # 바이트 동일 사본 — 사이드카의 content_sha256이 그대로 이 파일의 지문이다.
+        # 바이트 동일 사본. 주의: 사이드카의 content_sha256은 파일 전체가 아니라
+        # 레코드 청크만 해시한 값이다 (JSON 껍데기 '{"cs_paper_info": {' / '}}' 제외
+        # — exporter 구현 특성, 2026-08-31 밤 빌드가 여기서 헛되이 중단됐다).
+        # 그래서 원본 파일을 직접 해시해 사본과 대조한다.
+        src_sha = sha256(args.export)
         shutil.copy2(args.export, out_db)
         got = sha256(out_db)
-        if got != sidecar['content_sha256']:
-            raise SystemExit(f"복사본 sha256 불일치: {got} != {sidecar['content_sha256']}")
-        print(f'      {PAPER_DB} = export 사본, sha256 일치 확인')
+        if got != src_sha:
+            raise SystemExit(f'복사본 sha256 불일치: {got} != {src_sha}')
+        print(f'      {PAPER_DB} = export 사본, 파일 sha256 {got[:12]}… 일치 확인')
     with open(out_map, 'w') as f:
         json.dump(mapping, f)
     faiss.write_index(abs_idx, out_abs)
@@ -229,6 +233,8 @@ def main():
     build_manifest = {
         'built_at': time.strftime('%Y-%m-%dT%H:%M:%S%z'),
         'export': os.path.abspath(args.export),
+        # 파일 전체 지문. sidecar의 content_sha256(레코드 청크만)과 다르다 — 위 주석.
+        'export_file_sha256': None if args.limit else src_sha,
         'export_manifest': sidecar,
         'records': n,
         'limit': args.limit or None,
