@@ -1,0 +1,911 @@
+{
+ "1602.00484": {
+  "id": "1602.00484",
+  "title": "Mobile edge computing, Fog et al.: A survey and analysis of security threats and challenges",
+  "url": "http://arxiv.org/abs/1602.00484",
+  "date": "2016-02-01",
+  "abs": "  For various reasons, the cloud computing paradigm is unable to meet certain\\nrequirements (e.g. low latency and jitter, context awareness, mobility support)\\nthat are crucial for several applications (e.g. vehicular networks, augmented\\nreality). To fulfil these requirements, various paradigms, such as fog\\ncomputing, mobile edge computing, and mobile cloud computing, have emerged in\\nrecent years. While these edge paradigms share several features, most of the\\nexisting research is compartmentalised; no synergies have been explored. This\\nis especially true in the field of security, where most analyses focus only on\\none edge paradigm, while ignoring the others. The main goal of this study is to\\nholistically analyse the security threats, challenges, and mechanisms inherent\\nin all edge paradigms, while highlighting potential synergies and venues of\\ncollaboration. In our results, we will show that all edge paradigms should\\nconsider the advances in other paradigms.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1236
+ },
+ "1810.13287": {
+  "id": "1810.13287",
+  "title": "Caching at the wireless edge: design aspects, challenges, and future directions",
+  "url": "http://arxiv.org/abs/1810.13287",
+  "date": "2018-10-01",
+  "abs": "  Caching at the wireless edge is a promising way of boosting spectral\\nefficiency and reducing energy consumption of wireless systems. These\\nimprovements are rooted in the fact that popular contents are reused,\\nasynchronously, by many users. In this article, we first introduce methods to\\npredict the popularity distributions and user preferences, and the impact of\\nerroneous information. We then discuss the two aspects of caching systems,\\nnamely content placement and delivery. We expound the key differences between\\nwired and wireless caching, and outline the differences in the system arising\\nfrom where the caching takes place, e.g., at base stations, or on the wireless\\ndevices themselves. Special attention is paid to the essential limitations in\\nwireless caching, and possible tradeoffs between spectral efficiency, energy\\nefficiency and cache size.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 468
+ },
+ "1611.05539": {
+  "id": "1611.05539",
+  "title": "Fog Computing: A Taxonomy, Survey and Future Directions",
+  "url": "http://arxiv.org/abs/1611.05539",
+  "date": "2016-11-17",
+  "abs": "  In recent years, the number of Internet of Things (IoT) devices/sensors has\\nincreased to a great extent. To support the computational demand of real-time\\nlatency-sensitive applications of largely geo-distributed IoT devices/sensors,\\na new computing paradigm named \"Fog computing\" has been introduced. Generally,\\nFog computing resides closer to the IoT devices/sensors and extends the\\nCloud-based computing, storage and networking facilities. In this chapter, we\\ncomprehensively analyse the challenges in Fogs acting as an intermediate layer\\nbetween IoT devices/ sensors and Cloud datacentres and review the current\\ndevelopments in this field. We present a taxonomy of Fog computing according to\\nthe identified challenges and its key features.We also map the existing works\\nto the taxonomy in order to identify current research gaps in the area of Fog\\ncomputing. Moreover, based on the observations, we propose future directions\\nfor research.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 878
+ },
+ "1701.01090": {
+  "id": "1701.01090",
+  "title": "Mobile Edge Computing: Survey and Research Outlook.",
+  "url": "http://arxiv.org/abs/1701.01090",
+  "date": "2017-01-04",
+  "abs": "Driven by the visions of Internet of Things and 5G communications, recent\nyears have seen a paradigm shift in mobile computing, from the centralized\nMobile Cloud Computing towards Mobile Edge Computing (MEC). The main feature of\nMEC is to push mobile computing, network control and storage to the network\nedges (e.g., base stations and access points) so as to enable\ncomputation-intensive and latency-critical applications at the resource-limited\nmobile devices. MEC promises dramatic reduction in latency and mobile energy\nconsumption, tackling the key challenges for materializing 5G vision. The\npromised gains of MEC have motivated extensive efforts in both academia and\nindustry on developing the technology. A main thrust of MEC research is to\nseamlessly merge the two disciplines of wireless communications and mobile\ncomputing, resulting in a wide-range of new designs ranging from techniques for\ncomputation offloading to network architectures. This paper provides a\ncomprehensive survey of the state-of-the-art MEC research with a focus on joint\nradio-and-computational resource management. We also present a research outlook\nconsisting of a set of promising directions for MEC research, including MEC\nsystem deployment, cache-enabled MEC, mobility management for MEC, green MEC,\nas well as privacy-aware MEC. Advancements in these directions will facilitate\nthe transformation of MEC from theory to practice. Finally, we introduce recent\nstandardization efforts on MEC as well as some typical MEC application\nscenarios.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 174
+ },
+ "1701.08680": {
+  "id": "1701.08680",
+  "title": "Fog-Assisted wIoT: A Smart Fog Gateway for End-to-End Analytics in Wearable Internet of Things",
+  "url": "http://arxiv.org/abs/1701.08680",
+  "date": "2017-01-25",
+  "abs": "Today, wearable internet-of-things (wIoT) devices continuously flood the cloud data centers at an enormous rate. This increases a demand to deploy an edge infrastructure for computing, intelligence, and storage close to the users. The emerging paradigm of fog computing could play an important role to make wIoT more efficient and affordable. Fog computing is known as the cloud on the ground. This paper presents an end-to-end architecture that performs data conditioning and intelligent filtering for generating smart analytics from wearable data. In wIoT, wearable sensor devices serve on one end while the cloud backend offers services on the other end. We developed a prototype of smart fog gateway (a middle layer) using Intel Edison and Raspberry Pi. We discussed the role of the smart fog gateway in orchestrating the process of data conditioning, intelligent filtering, smart analytics, and selective transfer to the cloud for long-term storage and temporal variability monitoring. We benchmarked the performance of developed prototypes on real-world data from smart e-textile gloves. Results demonstrated the usability and potential of proposed architecture for converting the real-world data into useful analytics while making use of knowledge-based models. In this way, the smart fog gateway enhances the end-to-end interaction between wearables (sensor devices) and the cloud.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 42
+ },
+ "1702.06331": {
+  "id": "1702.06331",
+  "title": "Demystifying Fog Computing: Characterizing Architectures, Applications and Abstractions",
+  "url": "http://arxiv.org/abs/1702.06331",
+  "date": "2017-02-21",
+  "abs": "  Internet of Things (IoT) has accelerated the deployment of millions of\\nsensors at the edge of the network, through Smart City infrastructure and\\nlifestyle devices. Cloud computing platforms are often tasked with handling\\nthese large volumes and fast streams of data from the edge. Recently, Fog\\ncomputing has emerged as a concept for low-latency and resource-rich processing\\nof these observation streams, to complement Edge and Cloud computing. In this\\npaper, we review various dimensions of system architecture, application\\ncharacteristics and platform abstractions that are manifest in this Edge, Fog\\nand Cloud eco-system. We highlight novel capabilities of the Edge and Fog\\nlayers, such as physical and application mobility, privacy sensitivity, and a\\nnascent runtime environment. IoT application case studies based on first-hand\\nexperiences across diverse domains drive this categorization. We also highlight\\nthe gap between the potential and the reality of Fog computing, and identify\\nchallenges that need to be overcome for the solution to be sustainable.\\nTogether, our article can help platform and application developers bridge the\\ngap that remains in making Fog computing viable.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 145
+ },
+ "1702.05309": {
+  "id": "1702.05309",
+  "title": "Mobile Edge Computing: A Survey on Architecture and Computation Offloading",
+  "url": "http://arxiv.org/abs/1702.05309",
+  "date": "2017-02-17",
+  "abs": "  Technological evolution of mobile user equipments (UEs), such as smartphones\\nor laptops, goes hand-in-hand with evolution of new mobile applications.\\nHowever, running computationally demanding applications at the UEs is\\nconstrained by limited battery capacity and energy consumption of the UEs.\\nSuitable solution extending the battery life-time of the UEs is to offload the\\napplications demanding huge processing to a conventional centralized cloud\\n(CC). Nevertheless, this option introduces significant execution delay\\nconsisting in delivery of the offloaded applications to the cloud and back plus\\ntime of the computation at the cloud. Such delay is inconvenient and make the\\noffloading unsuitable for real-time applications. To cope with the delay\\nproblem, a new emerging concept, known as mobile edge computing (MEC), has been\\nintroduced. The MEC brings computation and storage resources to the edge of\\nmobile network enabling to run the highly demanding applications at the UE\\nwhile meeting strict delay requirements. The MEC computing resources can be\\nexploited also by operators and third parties for specific purposes. In this\\npaper, we first describe major use cases and reference scenarios where the MEC\\nis applicable. After that we survey existing concepts integrating MEC\\nfunctionalities to the mobile networks and discuss current advancement in\\nstandardization of the MEC. The core of this survey is, then, focused on\\nuser-oriented use case in the MEC, i.e., computation offloading. In this\\nregard, we divide the research on computation offloading to three key areas: i)\\ndecision on computation offloading, ii) allocation of computing resource within\\nthe MEC, and iii) mobility management. Finally, we highlight lessons learned in\\narea of the MEC and we discuss open research challenges yet to be addressed in\\norder to fully enjoy potentials offered by the MEC.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 2854
+ },
+ "1703.10750": {
+  "id": "1703.10750",
+  "title": "A Survey on Mobile Edge Networks: Convergence of Computing, Caching and Communications",
+  "url": "http://arxiv.org/abs/1703.10750",
+  "date": "2017-03-01",
+  "abs": "  As the explosive growth of smart devices and the advent of many new\\napplications, traffic volume has been growing exponentially. The traditional\\ncentralized network architecture cannot accommodate such user demands due to\\nheavy burden on the backhaul links and long latency. Therefore, new\\narchitectures which bring network functions and contents to the network edge\\nare proposed, i.e., mobile edge computing and caching. Mobile edge networks\\nprovide cloud computing and caching capabilities at the edge of cellular\\nnetworks. In this survey, we make an exhaustive review on the state-of-the-art\\nresearch efforts on mobile edge networks. We first give an overview of mobile\\nedge networks including definition, architecture and advantages. Next, a\\ncomprehensive survey of issues on computing, caching and communication\\ntechniques at the network edge is presented respectively. The applications and\\nuse cases of mobile edge networks are discussed. Subsequently, the key enablers\\nof mobile edge networks such as cloud technology, SDN/NFV and smart devices are\\ndiscussed. Finally, open research challenges and future directions are\\npresented as well.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 924
+ },
+ "1704.06749": {
+  "id": "1704.06749",
+  "title": "Proactive edge computing in latency-constrained fog networks",
+  "url": "http://arxiv.org/abs/1704.06749",
+  "date": "2017-04-22",
+  "abs": "In this paper, the fundamental problem of distribution and proactive caching of computing tasks in fog networks is studied under latency and reliability constraints. In the proposed scenario, computing can be executed either locally at the user device or offloaded to an edge cloudlet. Moreover, cloudlets exploit both their computing and storage capabilities by proactively caching popular task computation results to minimize computing latency. To this end, a clustering method to group spatially proximate user devices with mutual task popularity interests and their serving cloudlets is proposed. Then, cloudlets can proactively cache the popular tasks' computations of their cluster members to minimize computing latency. Additionally, the problem of distributing tasks to cloudlets is formulated as a matching game in which a cost function of computing delay is minimized under latency and reliability constraints. Simulation results show that the proposed scheme guarantees reliable computations with bounded latency and achieves up to 91% decrease in computing latency as compared to baseline schemes.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 17
+ },
+ "1709.08025": {
+  "id": "1709.08025",
+  "title": "Deep Learning for Secure Mobile Edge Computing",
+  "url": "http://arxiv.org/abs/1709.08025",
+  "date": "2017-09-23",
+  "abs": "Mobile edge computing (MEC) is a promising approach for enabling cloud-computing capabilities at the edge of cellular networks. Nonetheless, security is becoming an increasingly important issue in MEC-based applications. In this paper, we propose a deep-learning-based model to detect security threats. The model uses unsupervised learning to automate the detection process, and uses location information as an important feature to improve the performance of detection. Our proposed model can be used to detect malicious applications at the edge of a cellular network, which is a serious security threat. Extensive experiments are carried out with 10 different datasets, the results of which illustrate that our deep-learning-based model achieves an average gain of 6% accuracy compared with state-of-the-art machine learning algorithms.",
+  "cat": "Signal Processing",
+  "citation_count": 35
+ },
+ "1710.11001": {
+  "id": "1710.11001",
+  "title": "A Comprehensive Survey on Fog Computing: State-of-the-Art and Research Challenges",
+  "url": "http://arxiv.org/abs/1710.11001",
+  "date": "2017-10-30",
+  "abs": "Cloud computing with its three key facets (i.e., IaaS, PaaS, and SaaS) and its inherent advantages (e.g., elasticity and scalability) still faces several challenges. The distance between the cloud and the end devices might be an issue for latency-sensitive applications such as disaster management and content delivery applications. Service Level Agreements (SLAs) may also impose processing at locations where the cloud provider does not have data centers. Fog computing is a novel paradigm to address such issues. It enables provisioning resources and services outside the cloud, at the edge of the network, closer to end devices or eventually, at locations stipulated by SLAs. Fog computing is not a substitute for cloud computing but a powerful complement. It enables processing at the edge while still offering the possibility to interact with the cloud. This article presents a comprehensive survey on fog computing. It critically reviews the state of the art in the light of a concise set of evaluation criteria. We cover both the architectures and the algorithms that make fog systems. Challenges and research directions are also introduced. In addition, the lessons learned are reviewed and the prospects are discussed in terms of the key role fog is likely to play in emerging technologies such as Tactile Internet.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 50
+ },
+ "1712.04980": {
+  "id": "1712.04980",
+  "title": "Edge Computing Aware NOMA for 5G Networks",
+  "url": "http://arxiv.org/abs/1712.04980",
+  "date": "2017-12-13",
+  "abs": "  With the fast development of Internet of things (IoT), the fifth generation\\n(5G) wireless networks need to provide massive connectivity of IoT devices and\\nmeet the demand for low latency. To satisfy these requirements, Non-Orthogonal\\nMultiple Access (NOMA) has been recognized as a promising solution for 5G\\nnetworks to significantly improve the network capacity. In parallel with the\\ndevelopment of NOMA techniques, Mobile Edge Computing (MEC) is becoming one of\\nthe key emerging technologies to reduce the latency and improve the Quality of\\nService (QoS) for 5G networks. In order to capture the potential gains of NOMA\\nin the context of MEC, this paper proposes an edge computing aware NOMA\\ntechnique which can enjoy the benefits of uplink NOMA in reducing MEC users'\\nuplink energy consumption. To this end, we formulate a NOMA based optimization\\nframework which minimizes the energy consumption of MEC users via optimizing\\nthe user clustering, computing and communication resource allocation, and\\ntransmit powers. In particular, similar to frequency Resource Blocks (RBs), we\\ndivide the computing capacity available at the cloudlet to computing RBs.\\nAccordingly, we explore the joint allocation of the frequency and computing RBs\\nto the users that are assigned to different order indices within the NOMA\\nclusters. We also design an efficient heuristic algorithm for user clustering\\nand RBs allocation, and formulate a convex optimization problem for the power\\ncontrol to be solved independently per NOMA cluster. The performance of the\\nproposed NOMA scheme is evaluated via simulations.\\n",
+  "cat": "Electrical and Electronic Engineering",
+  "citation_count": 293
+ },
+ "1805.03591": {
+  "id": "1805.03591",
+  "title": "Secure Mobile Edge Computing in IoT via Collaborative Online Learning",
+  "url": "http://arxiv.org/abs/1805.03591",
+  "date": "2018-05-09",
+  "abs": "To accommodate heterogeneous tasks in Internet of Things (IoT), a new communication and computing paradigm termed mobile edge computing emerges that extends computing services from the cloud to edge, but at the same time exposes new challenges on security. The present paper studies online security-aware edge computing under jamming attacks. Leveraging online learning tools, novel algorithms abbreviated as SAVE-S and SAVE-A are developed to cope with the stochastic and adversarial forms of jamming, respectively. Without utilizing extra resources such as spectrum and transmission power to evade jamming attacks, SAVE-S and SAVE-A can select the most reliable server to offload computing tasks with minimal privacy and security concerns. It is analytically established that without any prior information on future jamming and server security risks, the proposed schemes can achieve ${\\cal O}\\big(\\sqrt{T}\\big)$ regret. Information sharing among devices can accelerate the security-aware computing tasks. Incorporating the information shared by other devices, SAVE-S and SAVE-A offer impressive improvements on the sublinear regret, which is guaranteed by what is termed \"value of cooperation.\" Effectiveness of the proposed schemes is tested on both synthetic and real datasets.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 42
+ },
+ "1805.06695": {
+  "id": "1805.06695",
+  "title": "Survey on Multi-Access Edge Computing for Internet of Things Realization",
+  "url": "http://arxiv.org/abs/1805.06695",
+  "date": "2018-05-17",
+  "abs": "  The Internet of Things (IoT) has recently advanced from an experimental\\ntechnology to what will become the backbone of future customer value for both\\nproduct and service sector businesses. This underscores the cardinal role of\\nIoT on the journey towards the fifth generation (5G) of wireless communication\\nsystems. IoT technologies augmented with intelligent and big data analytics are\\nexpected to rapidly change the landscape of myriads of application domains\\nranging from health care to smart cities and industrial automations. The\\nemergence of Multi-Access Edge Computing (MEC) technology aims at extending\\ncloud computing capabilities to the edge of the radio access network, hence\\nproviding real-time, high-bandwidth, low-latency access to radio network\\nresources. IoT is identified as a key use case of MEC, given MEC's ability to\\nprovide cloud platform and gateway services at the network edge. MEC will\\ninspire the development of myriads of applications and services with demand for\\nultra low latency and high Quality of Service (QoS) due to its dense\\ngeographical distribution and wide support for mobility. MEC is therefore an\\nimportant enabler of IoT applications and services which require real-time\\noperations. In this survey, we provide a holistic overview on the exploitation\\nof MEC technology for the realization of IoT applications and their synergies.\\nWe further discuss the technical aspects of enabling MEC in IoT and provide\\nsome insight into various other integration technologies therein.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 747
+ },
+ "1807.00976": {
+  "id": "1807.00976",
+  "title": "Fog Computing: Survey of Trends, Architectures, Requirements, and Research Directions",
+  "url": "http://arxiv.org/abs/1807.00976",
+  "date": "2018-07-03",
+  "abs": "  Emerging technologies like the Internet of Things (IoT) require latency-aware\\ncomputation for real-time application processing. In IoT environments,\\nconnected things generate a huge amount of data, which are generally referred\\nto as big data. Data generated from IoT devices are generally processed in a\\ncloud infrastructure because of the on-demand services and scalability features\\nof the cloud computing paradigm. However, processing IoT application requests\\non the cloud exclusively is not an efficient solution for some IoT\\napplications, especially time-sensitive ones. To address this issue, Fog\\ncomputing, which resides in between cloud and IoT devices, was proposed. In\\ngeneral, in the Fog computing environment, IoT devices are connected to Fog\\ndevices. These Fog devices are located in close proximity to users and are\\nresponsible for intermediate computation and storage. Fog computing research is\\nstill in its infancy, and taxonomy-based investigation into the requirements of\\nFog infrastructure, platform, and applications mapped to current research is\\nstill required. This paper starts with an overview of Fog computing in which\\nthe definition of Fog computing, research trends, and the technical differences\\nbetween Fog and cloud are reviewed. Then, we investigate numerous proposed Fog\\ncomputing architecture and describe the components of these architectures in\\ndetail. From this, the role of each component will be defined, which will help\\nin the deployment of Fog computing. Next, a taxonomy of Fog computing is\\nproposed by considering the requirements of the Fog computing paradigm. We also\\ndiscuss existing research works and gaps in resource allocation and scheduling,\\nfault tolerance, simulation tools, and Fog-based microservices. Finally, by\\naddressing the limitations of current research works, we present some open\\nissues, which will determine the future research direction.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 547
+ },
+ "1808.05283": {
+  "id": "1808.05283",
+  "title": "All one needs to know about fog computing and related edge computing paradigms: A complete survey",
+  "url": "http://arxiv.org/abs/1808.05283",
+  "date": "2018-08-01",
+  "abs": "  With the Internet of Things (IoT) becoming part of our daily life and our\\nenvironment, we expect rapid growth in the number of connected devices. IoT is\\nexpected to connect billions of devices and humans to bring promising\\nadvantages for us. With this growth, fog computing, along with its related edge\\ncomputing paradigms, such as multi-access edge computing (MEC) and cloudlet,\\nare seen as promising solutions for handling the large volume of\\nsecurity-critical and time-sensitive data that is being produced by the IoT. In\\nthis paper, we first provide a tutorial on fog computing and its related\\ncomputing paradigms, including their similarities and differences. Next, we\\nprovide a taxonomy of research topics in fog computing, and through a\\ncomprehensive survey, we summarize and categorize the efforts on fog computing\\nand its related computing paradigms. Finally, we provide challenges and future\\ndirections for research in fog computing.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1305
+ },
+ "1809.00343": {
+  "id": "1809.00343",
+  "title": "Towards an Intelligent Edge: Wireless Communication Meets Machine Learning",
+  "url": "http://arxiv.org/abs/1809.00343",
+  "date": "2018-09-02",
+  "abs": "The recent revival of artificial intelligence (AI) is revolutionizing almost every branch of science and technology. Given the ubiquitous smart mobile gadgets and Internet of Things (IoT) devices, it is expected that a majority of intelligent applications will be deployed at the edge of wireless networks. This trend has generated strong interests in realizing an \"intelligent edge\" to support AI-enabled applications at various edge devices. Accordingly, a new research area, called edge learning, emerges, which crosses and revolutionizes two disciplines: wireless communication and machine learning. A major theme in edge learning is to overcome the limited computing power, as well as limited data, at each edge device. This is accomplished by leveraging the mobile edge computing (MEC) platform and exploiting the massive data distributed over a large number of edge devices. In such systems, learning from distributed data and communicating between the edge server and devices are two critical and coupled aspects, and their fusion poses many new research challenges. This article advocates a new set of design principles for wireless communication in edge learning, collectively called learning-driven communication. Illustrative examples are provided to demonstrate the effectiveness of these design principles, and unique research opportunities are identified.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 56
+ },
+ "1810.00305": {
+  "id": "1810.00305",
+  "title": "Resource Management in Fog/Edge Computing",
+  "url": "http://arxiv.org/abs/1810.00305",
+  "date": "2018-10-01",
+  "abs": "<jats:p>Contrary to using distant and centralized cloud data center resources, employing decentralized resources at the edge of a network for processing data closer to user devices, such as smartphones and tablets, is an upcoming computing paradigm, referred to as fog/edge computing. Fog/edge resources are typically resource-constrained, heterogeneous, and dynamic compared to the cloud, thereby making resource management an important challenge that needs to be addressed. This article reviews publications as early as 1991, with 85% of the publications between 2013 and 2018, to identify and classify the architectures, infrastructure, and underlying algorithms for managing resources in fog/edge computing.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 386
+ },
+ "1811.11268": {
+  "id": "1811.11268",
+  "title": "Emerging Edge Computing Technologies for Distributed IoT Systems",
+  "url": "http://arxiv.org/abs/1811.11268",
+  "date": "2018-11-01",
+  "abs": "  The ever-increasing growth in the number of connected smart devices and\\nvarious Internet of Things (IoT) verticals is leading to a crucial challenge of\\nhandling massive amount of raw data generated from distributed IoT systems and\\nproviding real-time feedback to the end-users. Although existing\\ncloud-computing paradigm has an enormous amount of virtual computing power and\\nstorage capacity, it is not suitable for latency-sensitive applications and\\ndistributed systems due to the involved latency and its centralized mode of\\noperation. To this end, edge/fog computing has recently emerged as the next\\ngeneration of computing systems for extending cloud-computing functions to the\\nedges of the network. Despite several benefits of edge computing such as\\ngeo-distribution, mobility support and location awareness, various\\ncommunication and computing related challenges need to be addressed in\\nrealizing edge computing technologies for future IoT systems. In this regard,\\nthis paper provides a holistic view on the current issues and effective\\nsolutions by classifying the emerging technologies in regard to the joint\\ncoordination of radio and computing resources, system optimization and\\nintelligent resource management. Furthermore, an optimization framework for\\nedge-IoT systems is proposed to enhance various performance metrics such as\\nthroughput, delay, resource utilization and energy consumption. Finally, a\\nMachine Learning (ML) based case study is presented along with some numerical\\nresults to illustrate the significance of edge computing.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 78
+ },
+ "1812.01344": {
+  "id": "1812.01344",
+  "title": "Realizing Edge Marketplaces: Challenges and Opportunities",
+  "url": "http://arxiv.org/abs/1812.01344",
+  "date": "2018-12-04",
+  "abs": "  The edge of the network has the potential to host services for supporting a\\nvariety of user applications, ranging in complexity from data preprocessing,\\nimage and video rendering, and interactive gaming, to embedded systems in\\nautonomous cars and built environments. However, the computational and data\\nresources over which such services are hosted, and the actors that interact\\nwith these services, have an intermittent availability and access profile,\\nintroducing significant risk for user applications that must rely on them. This\\narticle investigates the development of an edge marketplace, which is able to\\nsupport multiple providers for offering services at the network edge, and to\\nenable demand supply for influencing the operation of such a marketplace.\\nResilience, cost, and quality of service and experience will subsequently\\nenable such a marketplace to adapt its services over time. This article also\\ndescribes how distributed-ledger technologies (such as blockchains) provide a\\npromising approach to support the operation of such a marketplace and regulate\\nits behavior (such as the GDPR in Europe) and operation. Two application\\nscenarios provide context for the discussion of how such a marketplace would\\nfunction and be utilized in practice.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 17
+ },
+ "2004.07311": {
+  "id": "2004.07311",
+  "title": "Edge Computing for Smart Health: Context-Aware Approaches, Opportunities, and Challenges",
+  "url": "http://arxiv.org/abs/2004.07311",
+  "date": "2020-04-01",
+  "abs": "Improving the efficiency of healthcare systems is a top national interest worldwide. However, the need to deliver scalable healthcare services to patients while reducing costs is a challenging issue. Among the most promising approaches for enabling smart healthcare (s-health) are edge-computing capabilities and next-generation wireless networking technologies that can provide real-time and cost-effective patient remote monitoring. In this article, we present our vision of exploiting MEC for s-health applications. We envision a MEC-based architecture and discuss the benefits that it can bring to realize in-network and context-aware processing so that the s-health requirements are met. We then present two main functionalities that can be implemented leveraging such an architecture to provide efficient data delivery, namely, multimodal data compression and edge-based feature extraction for event detection. The former allows efficient and low distortion compression, while the latter ensures high-reliability and fast response in case of emergency applications. Finally, we discuss the main challenges and opportunities that edge computing could provide and possible directions for future research.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 261
+ },
+ "1904.10125": {
+  "id": "1904.10125",
+  "title": "Characterizing application scheduling on edge, fog, and cloud computing resources",
+  "url": "http://arxiv.org/abs/1904.10125",
+  "date": "2019-04-23",
+  "abs": "<jats:title>Summary</jats:title><jats:p>Cloud computing has grown to become a popular distributed computing service offered by commercial providers. More recently, edge and fog computing resources have emerged on the wide\u2010area network as part of Internet of things (IoT) deployments. These three resource abstraction layers are complementary, and offer distinctive benefits. Scheduling applications on clouds has been an active area of research, with workflow and data flow models offering a flexible abstraction to specify applications for execution. However, the application programming and scheduling models for edge and fog are still maturing, and can benefit from learnings on cloud resources. At the same time, there is also value in using these resources cohesively for application execution. In this article, we offer a taxonomy of concepts essential for specifying and solving the problem of scheduling applications on edge, fog, and cloud computing resources. We first characterize the resource capabilities and limitations of these infrastructure and offer a taxonomy of application models, quality\u2010of\u2010service constraints and goals, and scheduling techniques, based on a literature review. We also tabulate key research prototypes and papers using this taxonomy. This survey benefits developers and researchers on these distributed resources in designing and categorizing their applications, selecting the relevant computing abstraction(s), and developing or selecting the appropriate scheduling algorithm. It also highlights gaps in literature where open problems remain.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 64
+ },
+ "1905.10083": {
+  "id": "1905.10083",
+  "title": "Edge Intelligence: Paving the Last Mile of Artificial Intelligence with Edge Computing",
+  "url": "http://arxiv.org/abs/1905.10083",
+  "date": "2019-05-24",
+  "abs": "With the breakthroughs in deep learning, the recent years have witnessed a booming of artificial intelligence (AI) applications and services, spanning from personal assistant to recommendation systems to video/audio surveillance. More recently, with the proliferation of mobile computing and Internet-of-Things (IoT), billions of mobile and IoT devices are connected to the Internet, generating zillions Bytes of data at the network edge. Driving by this trend, there is an urgent need to push the AI frontiers to the network edge so as to fully unleash the potential of the edge big data. To meet this demand, edge computing, an emerging paradigm that pushes computing tasks and services from the network core to the network edge, has been widely recognized as a promising solution. The resulted new inter-discipline, edge AI or edge intelligence, is beginning to receive a tremendous amount of interest. However, research on edge intelligence is still in its infancy stage, and a dedicated venue for exchanging the recent advances of edge intelligence is highly desired by both the computer system and artificial intelligence communities. To this end, we conduct a comprehensive survey of the recent research efforts on edge intelligence. Specifically, we first review the background and motivation for artificial intelligence running at the network edge. We then provide an overview of the overarching architectures, frameworks and emerging key technologies for deep learning model towards training/inference at the network edge. Finally, we discuss future research opportunities on edge intelligence. We believe that this survey will elicit escalating attentions, stimulate fruitful discussions and inspire further research ideas on edge intelligence.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 98
+ },
+ "1906.00711": {
+  "id": "1906.00711",
+  "title": "Joint Optimization of Service Caching Placement and Computation Offloading in Mobile Edge Computing Systems",
+  "url": "http://arxiv.org/abs/1906.00711",
+  "date": "2019-06-03",
+  "abs": "In mobile edge computing (MEC) systems, edge service caching refers to pre-storing the necessary programs for executing computation tasks at MEC servers. At resource-constrained edge servers, service caching placement is in general a complicated problem that highly correlates to the offloading decisions of computation tasks. In this paper, we consider a single edge server that assists a mobile user (MU) in executing a sequence of computation tasks. In particular, the MU can run its customized programs at the edge server, while the server can selectively cache the previously generated programs for future service reuse. To minimize the computation delay and energy consumption of the MU, we formulate a mixed integer non-linear programming (MINLP) that jointly optimizes the service caching placement, computation offloading, and system resource allocation. We first derive the closed-form expressions of the optimal resource allocation, and subsequently transform the MINLP into an equivalent pure 0-1 integer linear programming (ILP). To further reduce the complexity in solving the ILP, we exploit the underlying structures in optimal solutions, and devise a reduced-complexity alternating minimization technique to update the caching placement and offloading decision alternately. Simulations show that the proposed techniques achieve substantial resource savings compared to other representative benchmark methods.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 14
+ },
+ "1906.08452": {
+  "id": "1906.08452",
+  "title": "A Survey of Multi-Access Edge Computing in 5G and Beyond: Fundamentals, Technology Integration, and State-of-the-Art",
+  "url": "http://arxiv.org/abs/1906.08452",
+  "date": "2019-06-20",
+  "abs": "Driven by the emergence of new compute-intensive applications and the vision of the Internet of Things (IoT), it is foreseen that the emerging 5G network will face an unprecedented increase in traffic volume and computation demands. However, end users mostly have limited storage capacities and finite processing capabilities, thus how to run compute-intensive applications on resource-constrained users has recently become a natural concern. Mobile edge computing (MEC), a key technology in the emerging fifth generation (5G) network, can optimize mobile resources by hosting compute-intensive applications, process large data before sending to the cloud, provide the cloud computing capabilities within the radio access network (RAN) in close proximity to mobile users, and offer context-aware services with the help of RAN information. Therefore, MEC enables a wide variety of applications, where the real-time response is strictly required, e.g., driverless vehicles, augmented reality, robotics, and immerse media. Indeed, the paradigm shift from 4G to 5G could become a reality with the advent of new technological concepts. The successful realization of MEC in the 5G network is still in its infancy and demands for constant efforts from both academic and industry communities. In this survey, we first provide a holistic overview of MEC technology and its potential use cases and applications. Then, we outline up-to-date researches on the integration of MEC with the new technologies that will be deployed in 5G and beyond. We also summarize testbeds and experimental evaluations, and open source activities, for edge computing. We further summarize lessons learned from state-of-the-art research works as well as discuss challenges and potential future directions for MEC research.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 40
+ },
+ "1609.01967": {
+  "id": "1609.01967",
+  "title": "Challenges and Opportunities in Edge Computing",
+  "url": "http://arxiv.org/abs/1609.01967",
+  "date": "2016-09-07",
+  "abs": "Many cloud-based applications employ a data centre as a central server to process data that is generated by edge devices, such as smartphones, tablets and wearables. This model places ever increasing demands on communication and computational infrastructure with inevitable adverse effect on Quality-of-Service and Experience. The concept of Edge Computing is predicated on moving some of this computational load towards the edge of the network to harness computational capabilities that are currently untapped in edge nodes, such as base stations, routers and switches. This position paper considers the challenges and opportunities that arise out of this new direction in the computing landscape.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 56
+ },
+ "1911.02794": {
+  "id": "1911.02794",
+  "title": "A Survey on Edge Computing Systems and Tools",
+  "url": "http://arxiv.org/abs/1911.02794",
+  "date": "2019-11-07",
+  "abs": "  Driven by the visions of Internet of Things and 5G communications, the edge\\ncomputing systems integrate computing, storage and network resources at the\\nedge of the network to provide computing infrastructure, enabling developers to\\nquickly develop and deploy edge applications. Nowadays the edge computing\\nsystems have received widespread attention in both industry and academia. To\\nexplore new research opportunities and assist users in selecting suitable edge\\ncomputing systems for specific applications, this survey paper provides a\\ncomprehensive overview of the existing edge computing systems and introduces\\nrepresentative projects. A comparison of open source tools is presented\\naccording to their applicability. Finally, we highlight energy efficiency and\\ndeep learning optimization of edge computing systems. Open issues for analyzing\\nand designing an edge computing system are also studied in this survey.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 308
+ },
+ "1906.11056": {
+  "id": "1906.11056",
+  "title": "EdgeLens: Deep Learning based Object Detection in Integrated IoT, Fog and Cloud Computing Environments",
+  "url": "http://arxiv.org/abs/1906.11056",
+  "date": "2019-06-26",
+  "abs": "Data-intensive applications are growing at an increasing rate and there is a growing need to solve scalability and high-performance issues in them. By the advent of Cloud computing paradigm, it became possible to harness remote resources to build and deploy these applications. In recent years, new set of applications and services based on Internet of Things (IoT) paradigm, require to process large amount of data in very less time. Among them surveillance and object detection have gained prime importance, but cloud is unable to bring down the network latencies to meet the response time requirements. This problem is solved by Fog computing which harnesses resources in the edge of the network along with remote cloud resources as required. However, there is still a lack of frameworks that are successfully able to integrate sophisticated software and applications, especially deep learning, with fog and cloud computing environments. In this work, we propose a framework to deploy deep learning-based applications in fog-cloud environments to harness edge and cloud resources to provide better service quality for such applications. Our proposed framework, called EdgeLens, adapts to the application or user requirements to provide high accuracy or low latency modes of services. We also tested the performance of the software in terms of accuracy, response time, jitter, network bandwidth and power consumption and show how EdgeLens adapts to different service requirements.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 19
+ },
+ "1907.08349": {
+  "id": "1907.08349",
+  "title": "Convergence of Edge Computing and Deep Learning: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/1907.08349",
+  "date": "2019-07-19",
+  "abs": "  Ubiquitous sensors and smart devices from factories and communities are\\ngenerating massive amounts of data, and ever-increasing computing power is\\ndriving the core of computation and services from the cloud to the edge of the\\nnetwork. As an important enabler broadly changing people's lives, from face\\nrecognition to ambitious smart factories and cities, developments of artificial\\nintelligence (especially deep learning, DL) based applications and services are\\nthriving. However, due to efficiency and latency issues, the current cloud\\ncomputing service architecture hinders the vision of \"providing artificial\\nintelligence for every person and every organization at everywhere\". Thus,\\nunleashing DL services using resources at the network edge near the data\\nsources has emerged as a desirable solution. Therefore, edge intelligence,\\naiming to facilitate the deployment of DL services by edge computing, has\\nreceived significant attention. In addition, DL, as the representative\\ntechnique of artificial intelligence, can be integrated into edge computing\\nframeworks to build intelligent edge for dynamic, adaptive edge maintenance and\\nmanagement. With regard to mutually beneficial edge intelligence and\\nintelligent edge, this paper introduces and discusses: 1) the application\\nscenarios of both; 2) the practical implementation methods and enabling\\ntechnologies, namely DL training and inference in the customized edge computing\\nframework; 3) challenges and future trends of more pervasive and fine-grained\\nintelligence. We believe that by consolidating information scattered across the\\ncommunication, networking, and DL areas, this survey can help readers to\\nunderstand the connections between enabling technologies while promoting\\nfurther discussions on the fusion of edge intelligence and intelligent edge,\\ni.e., Edge DL.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1377
+ },
+ "1908.00080": {
+  "id": "1908.00080",
+  "title": "Machine Learning at the Network Edge: A Survey",
+  "url": "http://arxiv.org/abs/1908.00080",
+  "date": "2019-08-01",
+  "abs": "<jats:p>Resource-constrained IoT devices, such as sensors and actuators, have become ubiquitous in recent years. This has led to the generation of large quantities of data in real-time, which is an appealing target for AI systems. However, deploying machine learning models on such end-devices is nearly impossible. A typical solution involves offloading data to external computing systems (such as cloud servers) for further processing but this worsens latency, leads to increased communication costs, and adds to privacy concerns. To address this issue, efforts have been made to place additional computing devices at the edge of the network, i.e., close to the IoT devices where the data is generated. Deploying machine learning systems on such edge computing devices alleviates the above issues by allowing computations to be performed close to the data sources. This survey describes major research efforts where machine learning systems have been deployed at the edge of computer networks, focusing on the operational aspects including compression techniques, tools, frameworks, and hardware used in successful applications of intelligent edge systems.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 336
+ },
+ "1908.06849": {
+  "id": "1908.06849",
+  "title": "Vehicular Edge Computing and Networking: A Survey",
+  "url": "http://arxiv.org/abs/1908.06849",
+  "date": "2019-08-01",
+  "abs": "As one key enabler of Intelligent Transportation System (ITS), Vehicular Ad Hoc Network (VANET) has received remarkable interest from academia and industry. The emerging vehicular applications and the exponential growing data have naturally led to the increased needs of communication, computation and storage resources, and also to strict performance requirements on response time and network bandwidth. In order to deal with these challenges, Mobile Edge Computing (MEC) is regarded as a promising solution. MEC pushes powerful computational and storage capacities from the remote cloud to the edge of networks in close proximity of vehicular users, which enables low latency and reduced bandwidth consumption. Driven by the benefits of MEC, many efforts have been devoted to integrating vehicular networks into MEC, thereby forming a novel paradigm named as Vehicular Edge Computing (VEC). In this paper, we provide a comprehensive survey of state-of-art research on VEC. First of all, we provide an overview of VEC, including the introduction, architecture, key enablers, advantages, challenges as well as several attractive application scenarios. Then, we describe several typical research topics where VEC is applied. After that, we present a careful literature review on existing research work in VEC by classification. Finally, we identify open research issues and discuss future research directions.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 13
+ },
+ "1909.00560": {
+  "id": "1909.00560",
+  "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+  "url": "http://arxiv.org/abs/1909.00560",
+  "date": "2019-09-02",
+  "abs": "  Along with the rapid developments in communication technologies and the surge\\nin the use of mobile devices, a brand-new computation paradigm, Edge Computing,\\nis surging in popularity. Meanwhile, Artificial Intelligence (AI) applications\\nare thriving with the breakthroughs in deep learning and the many improvements\\nin hardware architectures. Billions of data bytes, generated at the network\\nedge, put massive demands on data processing and structural optimization. Thus,\\nthere exists a strong demand to integrate Edge Computing and AI, which gives\\nbirth to Edge Intelligence. In this paper, we divide Edge Intelligence into AI\\nfor edge (Intelligence-enabled Edge Computing) and AI on edge (Artificial\\nIntelligence on Edge). The former focuses on providing more optimal solutions\\nto key problems in Edge Computing with the help of popular and effective AI\\ntechnologies while the latter studies how to carry out the entire process of\\nbuilding AI models, i.e., model training and inference, on the edge. This paper\\nprovides insights into this new inter-disciplinary field from a broader\\nperspective. It discusses the core concepts and the research road-map, which\\nshould provide the necessary background for potential future research\\ninitiatives in Edge Intelligence.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 987
+ },
+ "1911.11966": {
+  "id": "1911.11966",
+  "title": "A Survey of Mobile Edge Computing in the Industrial Internet",
+  "url": "http://arxiv.org/abs/1911.11966",
+  "date": "2019-11-27",
+  "abs": "With the advent of a new round of the Industrial Revolution, the Industrial Internet will carry the convergence of heterogeneous network and the dynamic reconfiguration of industrial equipment. In order to further provide higher performance of network capabilities, the Industrial Internet has experienced unprecedented growth while facing enormous challenges from the actual needs of industrial networks. The typical scenarios in industrial applications, combined with the technical advantages of mobile edge computing, are described in view of the low latency, high bandwidth and high reliability demanded by the Industrial Internet in the new era. The key technologies of mobile edge computing for the Industrial Internet have been outlined in this treatise, whose feasibility and importance are demonstrated by typical industrial applications that have been deployed. As combined with the development trend of the Industrial Internet, this paper summarizes the existing work and discusses the future research direction of key technologies of mobile edge computing for the Industrial Internet.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 28
+ },
+ "1909.08747": {
+  "id": "1909.08747",
+  "title": "Edge-Computing-Enabled Smart Cities: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/1909.08747",
+  "date": "2019-09-11",
+  "abs": "Recent years have disclosed a remarkable proliferation of compute-intensive applications in smart cities. Such applications continuously generate enormous amounts of data which demand strict latency-aware computational processing capabilities. Although edge computing is an appealing technology to compensate for stringent latency related issues, its deployment engenders new challenges. In this survey, we highlight the role of edge computing in realizing the vision of smart cities. First, we analyze the evolution of edge computing paradigms. Subsequently, we critically review the state-of-the-art literature focusing on edge computing applications in smart cities. Later, we categorize and classify the literature by devising a comprehensive and meticulous taxonomy. Furthermore, we identify and discuss key requirements, and enumerate recently reported synergies of edge computing enabled smart cities. Finally, several indispensable open challenges along with their causes and guidelines are discussed, serving as future research directions.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 15
+ },
+ "1910.05316": {
+  "id": "1910.05316",
+  "title": "Edge AI: On-Demand Accelerating Deep Neural Network Inference via Edge Computing",
+  "url": "http://arxiv.org/abs/1910.05316",
+  "date": "2019-10-04",
+  "abs": "As a key technology of enabling Artificial Intelligence (AI) applications in 5G era, Deep Neural Networks (DNNs) have quickly attracted widespread attention. However, it is challenging to run computation-intensive DNN-based tasks on mobile devices due to the limited computation resources. What's worse, traditional cloud-assisted DNN inference is heavily hindered by the significant wide-area network latency, leading to poor real-time performance as well as low quality of user experience. To address these challenges, in this paper, we propose Edgent, a framework that leverages edge computing for DNN collaborative inference through device-edge synergy. Edgent exploits two design knobs: (1) DNN partitioning that adaptively partitions computation between device and edge for purpose of coordinating the powerful cloud resource and the proximal edge resource for real-time DNN inference; (2) DNN right-sizing that further reduces computing latency via early exiting inference at an appropriate intermediate DNN layer. In addition, considering the potential network fluctuation in real-world deployment, Edgentis properly design to specialize for both static and dynamic network environment. Specifically, in a static environment where the bandwidth changes slowly, Edgent derives the best configurations with the assist of regression-based prediction models, while in a dynamic environment where the bandwidth varies dramatically, Edgent generates the best execution plan through the online change point detection algorithm that maps the current bandwidth state to the optimal configuration. We implement Edgent prototype based on the Raspberry Pi and the desktop PC and the extensive experimental evaluations demonstrate Edgent's effectiveness in enabling on-demand low-latency edge intelligence.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 32
+ },
+ "1912.06567": {
+  "id": "1912.06567",
+  "title": "Challenges in designing edge-based middlewares for the Internet of Things: A survey",
+  "url": "http://arxiv.org/abs/1912.06567",
+  "date": "2019-12-13",
+  "abs": "The Internet of Things paradigm connects edge devices via the Internet enabling them to be seamlessly integrated with a wide variety of applications. In recent years, the number of connected devices has grown significantly, along with the volume and variety of data that is being generated by these devices at the edge of the network. An edge-based middleware is defined as a software that serves as an interface between the computational resources and the IoT devices, making communication possible among elements. Such middleware is required to provide the necessary functional components for sensor registration, discovery, workflow composition, and data pre-processing. In recent years, the landscape of the edge middleware platforms has grown exponentially, each of them with different platform requirements, architectures, and features. The core of this survey is a comprehensive review of existing edge middleware solutions. In this regard, we propose a four-layer architecture for the design of edge-based middleware, along with some design goals for each of the proposed layer. The paper concludes with some open challenges and possible future research directions.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 5
+ },
+ "1912.08530": {
+  "id": "1912.08530",
+  "title": "Edge Computing: A Comprehensive Survey of Current Initiatives and a Roadmap for a Sustainable Edge Computing Development",
+  "url": "http://arxiv.org/abs/1912.08530",
+  "date": "2019-12-18",
+  "abs": "Edge Computing is a new distributed Cloud Computing paradigm in which computing and storage capabilities are pushed to the topological edge of a network. However, various standards and implementations are promoted by different initiatives. Lead by a reference architecture model for Edge Computing, current initiatives are analyzed by explorative content analysis. Providing two main contributions to the field, we present, first, how current initiatives are characterized, and second, a roadmap for sustainable Edge Computing relating three dimensions of sustainable development to four cross-concerns of Edge Computing. Findings show that most initiatives are internationally organized software development projects; important branches are currently telecom and industrial sectors; most addressed is the network virtualization layer. The roadmap reveals numerous chances and risks of Edge Computing related to sustainable development; such as the use of renewable energies, biases, new business models, increase and decrease of energy consumption, responsiveness, monitoring and traceability.",
+  "cat": "Electrical and Electronic Engineering",
+  "citation_count": 4
+ },
+ "2002.03805": {
+  "id": "2002.03805",
+  "title": "Engineering and Experimentally Benchmarking a Container-based Edge Computing System",
+  "url": "http://arxiv.org/abs/2002.03805",
+  "date": "2020-02-10",
+  "abs": "While edge computing is envisioned to superbly serve latency sensitive applications, the implementation-based studies benchmarking its performance are few and far between. To address this gap, we engineer a modular edge cloud computing system architecture that is built on latest advances in containerization techniques, including Kafka, for data streaming, Docker, as application platform, and Firebase Cloud, as realtime database system. We benchmark the performance of the system in terms of scalability, resource utilization and latency by comparing three scenarios: cloud-only, edge-only and combined edge-cloud. The measurements show that edge-only solution outperforms other scenarios only when deployed with data located at one edge only, i.e., without edge computing wide data synchronization. In case of applications requiring data synchronization through the cloud, edge-cloud scales around a factor 10 times better than cloud-only, until certain number of concurrent users in the system, and above this point, cloud-only scales better. In terms of resource utilization, we observe that whereas the mean utilization increases linearly with the number of user requests, the maximum values for the memory and the network I/O heavily increase when with an increasing amount of data.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 12
+ },
+ "2003.12488": {
+  "id": "2003.12488",
+  "title": "AI on the Edge: Rethinking AI-based IoT Applications Using Specialized Edge Architectures",
+  "url": "http://arxiv.org/abs/2003.12488",
+  "date": "2020-03-27",
+  "abs": "Edge computing has emerged as a popular paradigm for supporting mobile and IoT applications with low latency or high bandwidth needs. The attractiveness of edge computing has been further enhanced due to the recent availability of special-purpose hardware to accelerate specific compute tasks, such as deep learning inference, on edge nodes. In this paper, we experimentally compare the benefits and limitations of using specialized edge systems, built using edge accelerators, to more traditional forms of edge and cloud computing. Our experimental study using edge-based AI workloads shows that today's edge accelerators can provide comparable, and in many cases better, performance, when normalized for power or cost, than traditional edge and cloud servers. They also provide latency and bandwidth benefits for split processing, across and within tiers, when using model compression or model splitting, but require dynamic methods to determine the optimal split across tiers. We find that edge accelerators can support varying degrees of concurrency for multi-tenant inference applications, but lack isolation mechanisms necessary for edge cloud multi-tenant hosting.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 14
+ },
+ "2005.04563": {
+  "id": "2005.04563",
+  "title": "Efficient Privacy Preserving Edge Computing Framework for Image Classification",
+  "url": "http://arxiv.org/abs/2005.04563",
+  "date": "2020-05-10",
+  "abs": "In order to extract knowledge from the large data collected by edge devices, traditional cloud based approach that requires data upload may not be feasible due to communication bandwidth limitation as well as privacy and security concerns of end users. To address these challenges, a novel privacy preserving edge computing framework is proposed in this paper for image classification. Specifically, autoencoder will be trained unsupervised at each edge device individually, then the obtained latent vectors will be transmitted to the edge server for the training of a classifier. This framework would reduce the communications overhead and protect the data of the end users. Comparing to federated learning, the training of the classifier in the proposed framework does not subject to the constraints of the edge devices, and the autoencoder can be trained independently at each edge device without any server involvement. Furthermore, the privacy of the end users' data is protected by transmitting latent vectors without additional cost of encryption. Experimental results provide insights on the image classification performance vs. various design parameters such as the data compression ratio of the autoencoder and the model complexity.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 6
+ },
+ "2004.14850": {
+  "id": "2004.14850",
+  "title": "6G White Paper on Edge Intelligence",
+  "url": "http://arxiv.org/abs/2004.14850",
+  "date": "2020-04-01",
+  "abs": "In this white paper we provide a vision for 6G Edge Intelligence. Moving towards 5G and beyond the future 6G networks, intelligent solutions utilizing data-driven machine learning and artificial intelligence become crucial for several real-world applications including but not limited to, more efficient manufacturing, novel personal smart device environments and experiences, urban computing and autonomous traffic settings. We present edge computing along with other 6G enablers as a key component to establish the future 2030 intelligent Internet technologies as shown in this series of 6G White Papers. In this white paper, we focus in the domains of edge computing infrastructure and platforms, data and edge network management, software development for edge, and real-time and distributed training of ML/AI algorithms, along with security, privacy, pricing, and end-user aspects. We discuss the key enablers and challenges and identify the key research questions for the development of the Intelligent Edge services. As a main outcome of this white paper, we envision a transition from Internet of Things to Intelligent Internet of Intelligent Things and provide a roadmap for development of 6G Intelligent Edge.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 126
+ },
+ "2003.12172": {
+  "id": "2003.12172",
+  "title": "Edge Intelligence: Architectures, Challenges, and Applications",
+  "url": "http://arxiv.org/abs/2003.12172",
+  "date": "2020-03-26",
+  "abs": "Edge intelligence refers to a set of connected systems and devices for data collection, caching, processing, and analysis in locations close to where data is captured based on artificial intelligence. The aim of edge intelligence is to enhance the quality and speed of data processing and protect the privacy and security of the data. Although recently emerged, spanning the period from 2011 to now, this field of research has shown explosive growth over the past five years. In this paper, we present a thorough and comprehensive survey on the literature surrounding edge intelligence. We first identify four fundamental components of edge intelligence, namely edge caching, edge training, edge inference, and edge offloading, based on theoretical and practical results pertaining to proposed and deployed systems. We then aim for a systematic classification of the state of the solutions by examining research results and observations for each of the four components and present a taxonomy that includes practical problems, adopted techniques, and application goals. For each category, we elaborate, compare and analyse the literature from the perspectives of adopted techniques, objectives, performance, advantages and drawbacks, etc. This survey article provides a comprehensive introduction to edge intelligence and its application areas. In addition, we summarise the development of the emerging research field and the current state-of-the-art and discuss the important open issues and possible theoretical and technical solutions.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 122
+ },
+ "2011.00236": {
+  "id": "2011.00236",
+  "title": "An edge-based architecture to support the execution of ambience intelligence tasks using the IoP paradigm",
+  "url": "http://arxiv.org/abs/2011.00236",
+  "date": "2020-11-01",
+  "abs": "  In an IoP environment, edge computing has been proposed to address the\\nproblems of resource limitations of edge devices such as smartphones as well as\\nthe high-latency, user privacy exposure and network bottleneck that the cloud\\ncomputing platform solutions incur. This paper presents a context management\\nframework comprised of sensors, mobile devices such as smartphones and an edge\\nserver to enable high performance, context-aware computing at the edge. Key\\nfeatures of this architecture include energy-efficient discovery of available\\nsensors and edge services for the client, an automated mechanism for task\\nplanning and execution on the edge server, and a dynamic environment where new\\nsensors and services may be added to the framework. A prototype of this\\narchitecture has been implemented, and an experimental evaluation using two\\ncomputer vision tasks as example services is presented. Performance measurement\\nshows that the execution of the example tasks performs quite well and the\\nproposed framework is well suited for an edge-computing environment.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 7
+ },
+ "2012.05410": {
+  "id": "2012.05410",
+  "title": "Artificial Intelligence at the Edge",
+  "url": "http://arxiv.org/abs/2012.05410",
+  "date": "2020-12-10",
+  "abs": "The Internet of Things (IoT) and edge computing applications aim to support a variety of societal needs, including the global pandemic situation that the entire world is currently experiencing and responses to natural disasters. The need for real-time interactive applications such as immersive video conferencing, augmented/virtual reality, and autonomous vehicles, in education, healthcare, disaster recovery and other domains, has never been higher. At the same time, there have been recent technological breakthroughs in highly relevant fields such as artificial intelligence (AI)/machine learning (ML), advanced communication systems (5G and beyond), privacy-preserving computations, and hardware accelerators. 5G mobile communication networks increase communication capacity, reduce transmission latency and error, and save energy -- capabilities that are essential for new applications. The envisioned future 6G technology will integrate many more technologies, including for example visible light communication, to support groundbreaking applications, such as holographic communications and high precision manufacturing. Many of these applications require computations and analytics close to application end-points: that is, at the edge of the network, rather than in a centralized cloud. AI techniques applied at the edge have tremendous potential both to power new applications and to need more efficient operation of edge infrastructure. However, it is critical to understand where to deploy AI systems within complex ecosystems consisting of advanced applications and the specific real-time requirements towards AI systems.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2012.11206": {
+  "id": "2012.11206",
+  "title": "Edge Computing in Transportation: Security Issues and Challenges",
+  "url": "http://arxiv.org/abs/2012.11206",
+  "date": "2020-12-21",
+  "abs": "As the amount of data that needs to be processed in real-time due to recent application developments increase, the need for a new computing paradigm is required. Edge computing resolves this issue by offloading computing resources required by intelligent transportation systems such as the Internet of Vehicles from the cloud closer to the end devices to improve performance however, it is susceptible to security issues that make the transportation systems vulnerable to attackers. In addition to this, there are security issues in transportation technologies that impact the edge computing paradigm as well. This paper presents some of the main security issues and challenges that are present in edge computing, which are Distributed Denial of Service attacks, side channel attacks, malware injection attacks and authentication and authorization attacks, how these impact intelligent transportation systems and research being done to help realize and mitigate these issues.",
+  "cat": "Electrical and Electronic Engineering",
+  "citation_count": 5
+ },
+ "2101.07930": {
+  "id": "2101.07930",
+  "title": "Air-Ground Collaborative Mobile Edge Computing: Architecture, Challenges, and Opportunities",
+  "url": "http://arxiv.org/abs/2101.07930",
+  "date": "2021-01-20",
+  "abs": "By pushing computation, cache, and network control to the edge, mobile edge computing (MEC) is expected to play a leading role in fifth generation (5G) and future sixth generation (6G). Nevertheless, facing ubiquitous fast-growing computational demands, it is impossible for a single MEC paradigm to effectively support high-quality intelligent services at end user equipments (UEs). To address this issue, we propose an air-ground collaborative MEC (AGC-MEC) architecture in this article. The proposed AGC-MEC integrates all potentially available MEC servers within air and ground in the envisioned 6G, by a variety of collaborative ways to provide computation services at their best for UEs. Firstly, we introduce the AGC-MEC architecture and elaborate three typical use cases. Then, we discuss four main challenges in the AGC-MEC as well as their potential solutions. Next, we conduct a case study of collaborative service placement for AGC-MEC to validate the effectiveness of the proposed collaborative service placement strategy. Finally, we highlight several potential research directions of the AGC-MEC.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2101.10417": {
+  "id": "2101.10417",
+  "title": "Cloud, Fog, or Edge: Where to Compute?",
+  "url": "http://arxiv.org/abs/2101.10417",
+  "date": "2021-01-25",
+  "abs": "&lt;blockquote&gt;The computing continuum extends the high-performance cloud data centers with energy-efficient and low-latency devices close to the data sources located at the edge of the network. However, the heterogeneity of the computing continuum raises multiple challenges related to application management. These include where to offload an application - from the cloud to the edge - to meet its computation and communication requirements. To support these decisions, we provide in this article a detailed performance and carbon footprint analysis of a selection of use case applications with complementary resource requirements across the computing continuum over a real-life evaluation testbed.&lt;/blockquote&gt;",
+  "cat": "Information Systems",
+  "citation_count": 96
+ },
+ "2105.03559": {
+  "id": "2105.03559",
+  "title": "Applications of Auction and Mechanism Design in Edge Computing: A Survey",
+  "url": "http://arxiv.org/abs/2105.03559",
+  "date": "2021-05-08",
+  "abs": "Edge computing as a promising technology provides lower latency, more efficient transmission, and faster speed of data processing since the edge servers are closer to the user devices. Each edge server with limited resources can offload latency-sensitive and computation-intensive tasks from nearby user devices. However, edge computing faces challenges such as resource allocation, energy consumption, security and privacy issues, etc. Auction mechanisms can well characterize bidirectional interactions between edge servers and user devices under the above constraints in edge computing. As demonstrated by the existing works, auction and mechanism design approaches are outstanding on achieving optimal allocation strategy while guaranteeing mutual satisfaction among edge servers and user devices, especially for scenarios with scarce resources. In this paper, we introduce a comprehensive survey of recent researches that apply auction approaches in edge computing. Firstly, a brief overview of edge computing including three common edge computing paradigms, i.e., cloudlet, fog computing and mobile edge computing, is presented. Then, we introduce fundamentals and backgrounds of auction schemes commonly used in edge computing systems. After then, a comprehensive survey of applications of auction-based approaches applied for edge computing is provided, which is categorized by different auction approaches. Finally, several open challenges and promising research directions are discussed.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2106.10063": {
+  "id": "2106.10063",
+  "title": "V-Edge: Virtual Edge Computing as an Enabler for Novel Microservices and Cooperative Computing",
+  "url": "http://arxiv.org/abs/2106.10063",
+  "date": "2021-06-18",
+  "abs": "  As we move from 5G to 6G, edge computing is one of the concepts that needs\\nrevisiting. Its core idea is still intriguing: instead of sending all data and\\ntasks from an end user's device to the cloud, possibly covering thousands of\\nkilometers and introducing delays that are just owed to limited propagation\\nspeed, edge servers deployed in close proximity to the user, e.g., at some 5G\\ngNB, serve as proxy for the cloud. Yet this promising idea is hampered by the\\nlimited availability of such edge servers. In this paper, we discuss a way\\nforward, namely the virtual edge computing (V-Edge) concept. V-Edge bridges the\\ngap between cloud, edge, and fog by virtualizing all available resources\\nincluding the end users' devices and making these resources widely available\\nusing well-defined interfaces. V-Edge also acts as an enabler for novel\\nmicroservices as well as cooperative computing solutions. We introduce the\\ngeneral V-Edge architecture and we characterize some of the key research\\nchallenges to overcome, in order to enable wide-spread and even more powerful\\nedge services.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 40
+ },
+ "2101.03533": {
+  "id": "2101.03533",
+  "title": "Con-Pi: A Distributed Container-Based Edge and Fog Computing Framework",
+  "url": "http://arxiv.org/abs/2101.03533",
+  "date": "2021-01-10",
+  "abs": "  Edge and Fog computing paradigms overcome the limitations of cloud-centric\\nexecution for different latency-sensitive Internet of Things (IoT) applications\\nby offering computing resources closer to the data sources. Small single-board\\ncomputers (SBCs) like Raspberry Pis (RPis) are widely used as computing nodes\\nin both paradigms. These devices are usually equipped with moderate speed\\nprocessors and provide support for peripheral interfacing and networking,\\nmaking them well-suited to deal with IoT-driven operations such as data\\nsensing, analysis, and actuation. However, these small Edge devices are\\nconstrained in facilitating multi-tenancy and resource sharing. The management\\nof computing and peripheral resources through centralized entities further\\ndegrades their performance and service quality significantly. To address these\\nissues, a fully distributed framework, named Con-Pi, is proposed in this work\\nto manage resources at the Edge or Fog environments. Con-Pi exploits the\\nconcept of containerization and harnesses Docker containers to run IoT\\napplications as micro-services. %Moreover, Con-Pi operates in a distributed\\nmanner across multiple RPis and enables them to share resources. The software\\nsystem of the proposed framework also provides a scope to integrate different\\nIoT applications, resource and energy management policies for Edge and Fog\\ncomputing. Its performance is compared with the state-of-the-art frameworks\\nthrough real-world experiments. The experimental results show that Con-Pi\\noutperforms others in enhancing response time and managing energy usage and\\ncomputing resources through its distributed offloading model. Further, we have\\ndeveloped an automated pest bird deterrent system using Con-Pi to demonstrate\\nits suitability in developing practical solutions for various IoT-enabled use\\ncases, including smart agriculture.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 60
+ },
+ "2108.00591": {
+  "id": "2108.00591",
+  "title": "Resource Management in Edge and Fog Computing using FogBus2 Framework",
+  "url": "http://arxiv.org/abs/2108.00591",
+  "date": "2021-08-02",
+  "abs": "Edge/Fog computing is a novel computing paradigm that provides resource-limited Internet of Things (IoT) devices with scalable computing and storage resources. Compared to cloud computing, edge/fog servers have fewer resources, but they can be accessed with higher bandwidth and less communication latency. Thus, integrating edge/fog and cloud infrastructures can support the execution of diverse latency-sensitive and computation-intensive IoT applications. Although some frameworks attempt to provide such integration, there are still several challenges to be addressed, such as dynamic scheduling of different IoT applications, scalability mechanisms, multi-platform support, and supporting different interaction models. FogBus2, as a new python-based framework, offers a lightweight and distributed container-based framework to overcome these challenges. In this chapter, we highlight key features of the FogBus2 framework alongside describing its main components. Besides, we provide a step-by-step guideline to set up an integrated computing environment, containing multiple cloud service providers (Hybrid-cloud) and edge devices, which is a prerequisite for any IoT application scenario. To obtain this, a low-overhead communication network among all computing resources is initiated by the provided scripts and configuration files. Next, we provide instructions and corresponding code snippets to install and run the main framework and its integrated applications. Finally, we demonstrate how to implement and integrate several new IoT applications and custom scheduling and scalability policies with the FogBus2 framework.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 4
+ },
+ "2108.08059": {
+  "id": "2108.08059",
+  "title": "Resource Scheduling in Edge Computing: A Survey",
+  "url": "http://arxiv.org/abs/2108.08059",
+  "date": "2021-08-18",
+  "abs": "With the proliferation of the Internet of Things (IoT) and the wide penetration of wireless networks, the surging demand for data communications and computing calls for the emerging edge computing paradigm. By moving the services and functions located in the cloud to the proximity of users, edge computing can provide powerful communication, storage, networking, and communication capacity. The resource scheduling in edge computing, which is the key to the success of edge computing systems, has attracted increasing research interests. In this paper, we survey the state-of-the-art research findings to know the research progress in this field. Specifically, we present the architecture of edge computing, under which different collaborative manners for resource scheduling are discussed. Particularly, we introduce a unified model before summarizing the current works on resource scheduling from three research issues, including computation offloading, resource allocation, and resource provisioning. Based on two modes of operation, i.e., centralized and distributed modes, different techniques for resource scheduling are discussed and compared. Also, we summarize the main performance indicators based on the surveyed literature. To shed light on the significance of resource scheduling in real-world scenarios, we discuss several typical application scenarios involved in the research of resource scheduling in edge computing. Finally, we highlight some open research challenges yet to be addressed and outline several open issues as the future research direction.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 7
+ },
+ "2108.07879": {
+  "id": "2108.07879",
+  "title": "Edge AI without Compromise: Efficient, Versatile and Accurate Neurocomputing in Resistive Random-Access Memory",
+  "url": "http://arxiv.org/abs/2108.07879",
+  "date": "2021-08-17",
+  "abs": "Realizing today's cloud-level artificial intelligence functionalities directly on devices distributed at the edge of the internet calls for edge hardware capable of processing multiple modalities of sensory data (e.g. video, audio) at unprecedented energy-efficiency. AI hardware architectures today cannot meet the demand due to a fundamental \"memory wall\": data movement between separate compute and memory units consumes large energy and incurs long latency. Resistive random-access memory (RRAM) based compute-in-memory (CIM) architectures promise to bring orders of magnitude energy-efficiency improvement by performing computation directly within memory. However, conventional approaches to CIM hardware design limit its functional flexibility necessary for processing diverse AI workloads, and must overcome hardware imperfections that degrade inference accuracy. Such trade-offs between efficiency, versatility and accuracy cannot be addressed by isolated improvements on any single level of the design. By co-optimizing across all hierarchies of the design from algorithms and architecture to circuits and devices, we present NeuRRAM - the first multimodal edge AI chip using RRAM CIM to simultaneously deliver a high degree of versatility for diverse model architectures, record energy-efficiency $5\\times$ - $8\\times$ better than prior art across various computational bit-precisions, and inference accuracy comparable to software models with 4-bit weights on all measured standard AI benchmarks including accuracy of 99.0% on MNIST and 85.7% on CIFAR-10 image classification, 84.7% accuracy on Google speech command recognition, and a 70% reduction in image reconstruction error on a Bayesian image recovery task. This work paves a way towards building highly efficient and reconfigurable edge AI hardware platforms for the more demanding and heterogeneous AI applications of the future.",
+  "cat": "Electrical and Electronic Engineering",
+  "citation_count": 11
+ },
+ "2005.07301": {
+  "id": "2005.07301",
+  "title": "Joint Planning of Network Slicing and Mobile Edge Computing: Models and Algorithms",
+  "url": "http://arxiv.org/abs/2005.07301",
+  "date": "2020-05-01",
+  "abs": "Multi-access Edge Computing (MEC) facilitates the deployment of critical applications with stringent QoS requirements, latency in particular. Our paper considers the problem of jointly planning the availability of computational resources at the edge, the slicing of mobile network and edge computation resources, and the routing of heterogeneous traffic types to the various slices. These aspects are intertwined and must be addressed together to provide the desired QoS to all mobile users and traffic types still keeping costs under control. We formulate our problem as a mixed-integer nonlinear program (MINLP) and we define a heuristic, named Neighbor Exploration and Sequential Fixing (NESF), to facilitate the solution of the problem. The approach allows network operators to fine tune the network operation cost and the total latency experienced by users. We evaluate the performance of the proposed model and heuristic against two natural greedy approaches. We show the impact of the variation of all the considered parameters (viz., different types of traffic, tolerable latency, network topology and bandwidth, computation and link capacity) on the defined model. Numerical results demonstrate that NESF is very effective, achieving near-optimal planning and resource allocation solutions in a very short computing time even for large-scale network scenarios.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 11
+ },
+ "2109.03395": {
+  "id": "2109.03395",
+  "title": "From Cloud to Edge: A First Look at Public Edge Platforms",
+  "url": "http://arxiv.org/abs/2109.03395",
+  "date": "2021-09-08",
+  "abs": "Public edge platforms have drawn increasing attention from both academia and industry. In this study, we perform a first-of-its-kind measurement study on a leading public edge platform that has been densely deployed in China. Based on this measurement, we quantitatively answer two critical yet unexplored questions. First, from end users' perspective, what is the performance of commodity edge platforms compared to cloud, in terms of the end-to-end network delay, throughput, and the application QoE. Second, from the edge service provider's perspective, how are the edge workloads different from cloud, in terms of their VM subscription, monetary cost, and resource usage. Our study quantitatively reveals the status quo of today's public edge platforms, and provides crucial insights towards developing and operating future edge services.",
+  "cat": "Information Systems",
+  "citation_count": 7
+ },
+ "2109.12195": {
+  "id": "2109.12195",
+  "title": "A Manifesto for Modern Fog and Edge Computing: Vision, New Paradigms, Opportunities, and Future Directions",
+  "url": "http://arxiv.org/abs/2109.12195",
+  "date": "2021-09-19",
+  "abs": "  The advancements in the use of Internet of Things (IoT) devices is increasing\\ncontinuously and generating huge amounts of data in a fast manner. Cloud\\ncomputing is an important paradigm which processes and manages user data\\neffectively. Further, fog and edge computing paradigms are introduced to\\nimprove user service by reducing latency and response time. This chapter\\npresents a manifesto for modern fog and edge computing systems based on the\\ncurrent research trends. Further, architectures and applications of fog and\\nedge computing are explained. Moreover, research opportunities and promising\\nfuture directions are presented with respect to the new paradigms, which will\\nbe helpful for practitioners, researchers, and academicians to continue their\\nresearch.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 17
+ },
+ "2109.12983": {
+  "id": "2109.12983",
+  "title": "EdgePier: P2P-based Container Image Distribution in Edge Computing Environments",
+  "url": "http://arxiv.org/abs/2109.12983",
+  "date": "2021-09-27",
+  "abs": "  Edge and fog computing architectures utilize container technologies in order\\nto offer a lightweight application deployment. Container images are stored in\\nregistry services and operated by orchestration platforms to download and start\\nthe respective applications on nodes of the infrastructure. During large\\napplication rollouts, the connection to the registry is prone to become a\\nbottleneck, which results in longer provisioning times and deployment\\nlatencies. Previous work has mainly addressed this problem by proposing\\nscalable registries, leveraging the BitTorrent protocol or distributed storage\\nto host container images. However, for lightweight and dynamic edge\\nenvironments the overhead of several dedicated components is not feasible in\\nregard to its interference of the actual workload and is subject to failures\\ndue to the introduced complexity.\\n  In this paper we introduce a fully decentralized container registry called\\nEdgePier, that can be deployed across edge sites and is able to decrease\\ncontainer deployment times by utilizing peer-to-peer connections between\\nparticipating nodes. Image layers are shared without the need for further\\ncentralized orchestration entities. The conducted evaluation shows that the\\nprovisioning times are improved by up to 65% in comparison to a baseline\\nregistry, even with limited bandwidth to the cloud.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 25
+ },
+ "2111.00416": {
+  "id": "2111.00416",
+  "title": "How BlockChain Can Help Enhance The Security And Privacy in Edge Computing?",
+  "url": "http://arxiv.org/abs/2111.00416",
+  "date": "2021-11-01",
+  "abs": "In order to solve security and privacy issues of centralized cloud services, the edge computing network is introduced, where computing and storage resources are distributed to the edge of the network. However, native edge computing is subject to the limited performance of edge devices, which causes challenges in data authorization, data encryption, user privacy, and other fields. Blockchain is currently the hottest technology for distributed networks. It solves the consistent issue of distributed data and is used in many areas, such as cryptocurrency, smart grid, and the Internet of Things. Our work discussed the security and privacy challenges of edge computing networks. From the perspectives of data authorization, encryption, and user privacy, we analyze the solutions brought by blockchain technology to edge computing networks. In this work, we deeply present the benefits from the integration of the edge computing network and blockchain technology, which effectively controls the data authorization and data encryption of the edge network and enhances the architecture's scalability under the premise of ensuring security and privacy. Finally, we investigate challenges on storage, workload, and latency for future research in this field.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 3
+ },
+ "2112.01250": {
+  "id": "2112.01250",
+  "title": "The Benefits of Edge Computing in Healthcare, Smart Cities, and IoT",
+  "url": "http://arxiv.org/abs/2112.01250",
+  "date": "2021-12-01",
+  "abs": "  Recent advancements in technology now allow for the generation of massive\\nquantities of data. There is a growing need to transmit this data faster and\\nmore securely such that it cannot be accessed by malicious individuals. Edge\\ncomputing has emerged in previous research as a method capable of improving\\ndata transmission times and security before the data ends up in the cloud. Edge\\ncomputing has an impressive transmission speed based on fifth generation (5G)\\ncommunication which transmits data with low latency and high bandwidth. While\\nedge computing is sufficient to extract important features from the raw data to\\nprevent large amounts of data requiring excessive bandwidth to be transmitted,\\ncloud computing is used for the computational processes required for developing\\nalgorithms and modeling the data. Edge computing also improves the quality of\\nthe user experience by saving time and integrating quality of life (QoL)\\nfeatures. QoL features are important for the healthcare sector by helping to\\nprovide real-time feedback of data produced by healthcare devices back to\\npatients for a faster recovery. Edge computing has better energy efficiency,\\ncan reduce the electricity cost, and in turn help people reduce their living\\nexpenses. This paper will take a detailed look into edge computing applications\\naround Internet of Things (IoT) devices, smart city infrastructure, and\\nbenefits to healthcare.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 33
+ },
+ "2111.10076": {
+  "id": "2111.10076",
+  "title": "Edge computing vs centralized cloud: Impact of communication latency on the energy consumption of LTE terminal nodes",
+  "url": "http://arxiv.org/abs/2111.10076",
+  "date": "2021-11-19",
+  "abs": "  Edge computing brings several advantages, such as reduced latency, increased\\nbandwidth, and improved locality of traffic. One aspect that is not\\nsufficiently understood is to what extent the different communication latency\\nexperienced in the edge-cloud continuum impacts on the energy consumption of\\nclients. We studied the energy consumption of a request-response communication\\nscheme when an LTE node communicates with edge-based or cloud-based servers.\\nResults show that the reduced latency of edge servers bring significant\\nbenefits in terms of energy consumption. Experiments also show how the energy\\nsavings brought by edge computing are influenced by the prevalent direction of\\ndata transfer (upload vs download), load of the server, and daytime/nighttime\\noperation.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 35
+ },
+ "2204.10282": {
+  "id": "2204.10282",
+  "title": "AI-Empowered Data Offloading in MEC-Enabled IoV Networks",
+  "url": "http://arxiv.org/abs/2204.10282",
+  "date": "2022-04-01",
+  "abs": "Advancements in smart vehicle design have enabled the creation of Internet of Vehicle (IoV) technologies that can utilize the information provided by various sensors and wireless communication to perform complex functionality. Many of these functionalities rely on high computational power and low latency. Mobile Edge Computing (MEC) technologies have been proposed as a way to meet these requirements, as their proximity and decentralization provide unique benefits for networks like real-time communication, higher throughput, and flexibility. Diverse challenges to the process of offloading data in a MEC-enabled IoV network have emerged, such as offloading reliability in highly mobile environments, security for users within the same network, and energy management to keep users from being disincentivized to participate in the network. This article surveys research studies that use AI as part of the data offloading process, categorized based on four main issues: reliability, security, energy management, and service seller profit. Afterward, this article discusses challenges and future perspectives for IoV technologies.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 3
+ },
+ "2201.00242": {
+  "id": "2201.00242",
+  "title": "Industrial Edge-based Cyber-Physical Systems -- Application Needs and Concerns for Realization",
+  "url": "http://arxiv.org/abs/2201.00242",
+  "date": "2022-01-01",
+  "abs": "Industry is moving towards advanced Cyber-Physical Systems (CPS), with trends in smartness, automation, connectivity and collaboration. We examine the drivers and requirements for the use of edge computing in critical industrial applications. Our purpose is to provide a better understanding of industrial needs and to initiate a discussion on what role edge computing could take, complementing current industrial and embedded systems, and the cloud. Four domains are chosen for analysis with representative use-cases; manufacturing, transportation, the energy sector and networked applications in the defense domain. We further discuss challenges, open issues and suggested directions that are needed to pave the way for the use of edge computing in industrial CPS.",
+  "cat": "Control and Systems Engineering",
+  "citation_count": 8
+ },
+ "2205.02764": {
+  "id": "2205.02764",
+  "title": "Edge-enabled Metaverse: The Convergence of Metaverse and Mobile Edge Computing",
+  "url": "http://arxiv.org/abs/2205.02764",
+  "date": "2022-05-01",
+  "abs": "The Metaverse is a virtual environment where users are represented by avatars to navigate a virtual world, which has strong links with the physical one. State-of-the-art Metaverse architectures rely on a cloud-based approach for avatar physics emulation and graphics rendering computation. Such centralized design is unfavorable as it suffers from several drawbacks caused by the long latency required for cloud access, such as low quality visualization. To solve this issue, in this paper, we propose a Fog-Edge hybrid computing architecture for Metaverse applications that leverage an edge-enabled distributed computing paradigm, which makes use of edge devices computing power to fulfil the required computational cost for heavy tasks such as collision detection in virtual universe and computation of 3D physics in virtual simulation. The computational cost related to an entity in the Metaverse such as collision detection or physics emulation are performed at the end-device of the associated physical entity. To prove the effectiveness of the proposed architecture, we simulate a distributed social metaverse application. Simulation results shows that the proposed architecture can reduce the latency by 50% when compared with the legacy cloud-based Metaverse applications.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 9
+ },
+ "2205.01423": {
+  "id": "2205.01423",
+  "title": "Autonomy and Intelligence in the Computing Continuum: Challenges, Enablers, and Future Directions for Orchestration",
+  "url": "http://arxiv.org/abs/2205.01423",
+  "date": "2022-05-03",
+  "abs": "Future AI applications require performance, reliability and privacy that the existing, cloud-dependant system architectures cannot provide. In this article, we study orchestration in the device-edge-cloud continuum, and focus on edge AI for resource orchestration. We claim that to support the constantly growing requirements of intelligent applications in the device-edge-cloud computing continuum, resource orchestration needs to embrace edge AI and emphasize local autonomy and intelligence. To justify the claim, we provide a general definition for continuum orchestration, and look at how current and emerging orchestration paradigms are suitable for the computing continuum. We describe certain major emerging research themes that may affect future orchestration, and provide an early vision of an orchestration paradigm that embraces those research themes. Finally, we survey current key edge AI methods and look at how they may contribute into fulfilling the vision of future continuum orchestration.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 21
+ },
+ "2206.07164": {
+  "id": "2206.07164",
+  "title": "Edge Security: Challenges and Issues",
+  "url": "http://arxiv.org/abs/2206.07164",
+  "date": "2022-06-14",
+  "abs": "Edge computing is a paradigm that shifts data processing services to the network edge, where data are generated. While such an architecture provides faster processing and response, among other benefits, it also raises critical security issues and challenges that must be addressed. This paper discusses the security threats and vulnerabilities emerging from the edge network architecture spanning from the hardware layer to the system layer. We further discuss privacy and regulatory compliance challenges in such networks. Finally, we argue the need for a holistic approach to analyze edge network security posture, which must consider knowledge from each layer.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 8
+ },
+ "2211.05851": {
+  "id": "2211.05851",
+  "title": "DHT-based Edge and Fog Computing Systems: Infrastructures and Applications",
+  "url": "http://arxiv.org/abs/2211.05851",
+  "date": "2022-11-10",
+  "abs": "Intending to support new emerging applications with latency requirements below what can be offered by the cloud data centers, the edge and fog computing paradigms have reared. In such systems, the real-time instant data is processed closer to the edge of the network, instead of the remote data centers. With the advances in edge and fog computing systems, novel and efficient solutions based on Distributed Hash Tables (DHTs) emerge and play critical roles in system design. Several DHT-based solutions have been proposed to either augment the scalability and efficiency of edge and fog computing infrastructures or to enable application-specific functionalities such as task and resource management. This paper presents the first comprehensive study on the state-of-the-art DHT-based architectures in edge and fog computing systems from the lenses of infrastructure and application. Moreover, the paper details the open problems and discusses future research guidelines for the DHT-based edge and fog computing systems.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 7
+ },
+ "1912.00595": {
+  "id": "1912.00595",
+  "title": "Industrial Internet of Things (IIoT) Applications of Edge and Fog Computing: A Review and Future Directions",
+  "url": "http://arxiv.org/abs/1912.00595",
+  "date": "2019-12-02",
+  "abs": "With rapid technological advancements within the domain of Internet of Things (IoT), strong trends have emerged which indicate a rapid growth in the number of smart devices connected to IoT networks and this growth cannot be supported by traditional cloud computing platforms. In response to the increased capacity of data being transferred over networks, the edge and fog computing paradigms have emerged as extremely viable frameworks that shift computational and storage resources towards the edge of the network, thereby migrating processing power from centralized cloud servers to distributed LAN resources and powerful embedded devices within the network. These computing paradigms, therefore, have the potential to support massive IoT networks of the future and have also fueled the advancement of IoT systems within industrial settings, leading to the creation of the Industrial Internet of Things (IIoT) technology that is revolutionizing industrial processes in a variety of domains. In this paper, we elaborate on the impact of edge and fog computing paradigms on IIoT. We also highlight the how edge and fog computing are poised to bring about a turnaround in several industrial applications through a use-case approach. Finally, we conclude with the current issues and challenges faced by these paradigms in IIoT and suggest some research directions that should be followed to solve these problems and accelerate the adaptation of edge and fog computing in IIoT.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 13
+ },
+ "2005.10460": {
+  "id": "2005.10460",
+  "title": "Application Management in Fog Computing Environments: A Taxonomy, Review\\n and Future Directions",
+  "url": "http://arxiv.org/abs/2005.10460",
+  "date": "2020-05-21",
+  "abs": "  The Internet of Things (IoT) paradigm is being rapidly adopted for the\\ncreation of smart environments in various domains. The IoT-enabled\\nCyber-Physical Systems (CPSs) associated with smart city, healthcare, Industry\\n4.0 and Agtech handle a huge volume of data and require data processing\\nservices from different types of applications in real-time. The Cloud-centric\\nexecution of IoT applications barely meets such requirements as the Cloud\\ndatacentres reside at a multi-hop distance from the IoT devices. \\\\textit{Fog\\ncomputing}, an extension of Cloud at the edge network, can execute these\\napplications closer to data sources. Thus, Fog computing can improve\\napplication service delivery time and resist network congestion. However, the\\nFog nodes are highly distributed, heterogeneous and most of them are\\nconstrained in resources and spatial sharing. Therefore, efficient management\\nof applications is necessary to fully exploit the capabilities of Fog nodes. In\\nthis work, we investigate the existing application management strategies in Fog\\ncomputing and review them in terms of architecture, placement and maintenance.\\nAdditionally, we propose a comprehensive taxonomy and highlight the research\\ngaps in Fog-based application management. We also discuss a perspective model\\nand provide future research directions for further improvement of application\\nmanagement in Fog computing.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 165
+ },
+ "2209.14141": {
+  "id": "2209.14141",
+  "title": "Energy Efficient Deployment and Orchestration of Computing Resources at the Network Edge: a Survey on Algorithms, Trends and Open Challenges",
+  "url": "http://arxiv.org/abs/2209.14141",
+  "date": "2022-09-28",
+  "abs": "Mobile networks are becoming energy hungry, and this trend is expected to continue due to a surge in communication and computation demand. Multi-access Edge Computing (MEC), will entail energy-consuming services and applications, with non-negligible impact in terms of ecological sustainability. In this paper, we provide a comprehensive review of existing approaches to make edge computing networks greener, including but not limited to the exploitation of renewable energy resources, and context-awareness. We hence provide an updated account of recent developments on MEC from an energetic sustainability perspective, addressing the initial deployment of computing resources, their dynamic (re)allocation, as well as distributed and federated learning designs. In doing so, we highlight the energy aspects of these algorithms, advocating the need for energy-sustainable edge computing systems that are aligned with Sustainable Development Goals (SDGs) and the Paris agreement. To the best of our knowledge, this is the first work providing a systematic literature review on the efficient deployment and management of energy harvesting MEC, with special focus on the deployment, provisioning, and scheduling of computing tasks, including federated learning for distributed edge intelligence, toward making edge networks greener and more sustainable. At the end of the paper, open research avenues and challenges are identified for all the surveyed topics.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2210.03204": {
+  "id": "2210.03204",
+  "title": "Enabling Deep Learning on Edge Devices",
+  "url": "http://arxiv.org/abs/2210.03204",
+  "date": "2022-10-06",
+  "abs": "Deep neural networks (DNNs) have succeeded in many different perception tasks, e.g., computer vision, natural language processing, reinforcement learning, etc. The high-performed DNNs heavily rely on intensive resource consumption. For example, training a DNN requires high dynamic memory, a large-scale dataset, and a large number of computations (a long training time); even inference with a DNN also demands a large amount of static storage, computations (a long inference time), and energy. Therefore, state-of-the-art DNNs are often deployed on a cloud server with a large number of super-computers, a high-bandwidth communication bus, a shared storage infrastructure, and a high power supplement. Recently, some new emerging intelligent applications, e.g., AR/VR, mobile assistants, Internet of Things, require us to deploy DNNs on resource-constrained edge devices. Compare to a cloud server, edge devices often have a rather small amount of resources. To deploy DNNs on edge devices, we need to reduce the size of DNNs, i.e., we target a better trade-off between resource consumption and model accuracy. In this dissertation, we studied four edge intelligence scenarios, i.e., Inference on Edge Devices, Adaptation on Edge Devices, Learning on Edge Devices, and Edge-Server Systems, and developed different methodologies to enable deep learning in each scenario. Since current DNNs are often over-parameterized, our goal is to find and reduce the redundancy of the DNNs in each scenario.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 3
+ },
+ "2403.19729": {
+  "id": "2403.19729",
+  "title": "Is the edge really necessary for drone computing offloading? An experimental assessment in carrier\u2010grade 5G operator networks",
+  "url": "http://arxiv.org/abs/2403.19729",
+  "date": "2024-03-28",
+  "abs": "<jats:title>Abstract</jats:title><jats:p>In this article, we evaluate the first experience of computation offloading from drones to real fifth\u2010generation (5G) operator systems, including commercial and private carrier\u2010grade 5G networks. A follow\u2010me drone service was implemented as a representative testbed of remote video analytics. In this application, an image of a person from a drone camera is processed at the edge, and image tracking displacements are translated into positioning commands that are sent back to the drone, so that the drone keeps the camera focused on the person at all times. The application is characterised to identify the processing and communication contributions to service delay. Then, we evaluate the latency of the application in a real non standalone 5G operator network, a standalone carrier\u2010grade 5G private network, and, to compare these results with previous research, a Wi\u2010Fi wireless local area network. We considered both multi\u2010access edge computing (MEC) and cloud offloading scenarios. Onboard computing was also evaluated to assess the trade\u2010offs with task offloading. The results determine the network configurations that are feasible for the follow\u2010me application use case depending on the mobility of the end user, and to what extent MEC is advantageous over a state\u2010of\u2010the\u2010art cloud service.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 6
+ },
+ "2211.01863": {
+  "id": "2211.01863",
+  "title": "Edge, Fog, and Cloud Computing : An Overview on Challenges and Applications",
+  "url": "http://arxiv.org/abs/2211.01863",
+  "date": "2022-11-03",
+  "abs": "With the rapid growth of the Internet of Things (IoT) and a wide range of mobile devices, the conventional cloud computing paradigm faces significant challenges (high latency, bandwidth cost, etc.). Motivated by those constraints and concerns for the future of the IoT, modern architectures are gearing toward distributing the cloud computational resources to remote locations where most end-devices are located. Edge and fog computing are considered as the key enablers for applications where centralized cloud-based solutions are not suitable. In this paper, we review the high-level definition of edge, fog, cloud computing, and their configurations in various IoT scenarios. We further discuss their interactions and collaborations in many applications such as cloud offloading, smart cities, health care, and smart agriculture. Though there are still challenges in the development of such distributed systems, early research to tackle those limitations have also surfaced.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 9
+ },
+ "2212.04645": {
+  "id": "2212.04645",
+  "title": "AI-based Fog and Edge Computing: A Systematic Review, Taxonomy and Future Directions",
+  "url": "http://arxiv.org/abs/2212.04645",
+  "date": "2022-12-09",
+  "abs": "Resource management in computing is a very challenging problem that involves making sequential decisions. Resource limitations, resource heterogeneity, dynamic and diverse nature of workload, and the unpredictability of fog/edge computing environments have made resource management even more challenging to be considered in the fog landscape. Recently Artificial Intelligence (AI) and Machine Learning (ML) based solutions are adopted to solve this problem. AI/ML methods with the capability to make sequential decisions like reinforcement learning seem most promising for these type of problems. But these algorithms come with their own challenges such as high variance, explainability, and online training. The continuously changing fog/edge environment dynamics require solutions that learn online, adopting changing computing environment. In this paper, we used standard review methodology to conduct this Systematic Literature Review (SLR) to analyze the role of AI/ML algorithms and the challenges in the applicability of these algorithms for resource management in fog/edge computing environments. Further, various machine learning, deep learning and reinforcement learning techniques for edge AI management have been discussed. Furthermore, we have presented the background and current status of AI/ML-based Fog/Edge Computing. Moreover, a taxonomy of AI/ML-based resource management techniques for fog/edge computing has been proposed and compared the existing techniques based on the proposed taxonomy. Finally, open challenges and promising future research directions have been identified and discussed in the area of AI/ML-based fog/edge computing.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 12
+ },
+ "2509.12296": {
+  "id": "2509.12296",
+  "title": "An End to End Edge to Cloud Data and Analytics Strategy",
+  "url": "http://arxiv.org/abs/2509.12296",
+  "date": "2025-09-15",
+  "abs": "There is an exponential growth of connected Internet of Things (IoT) devices. These have given rise to applications that rely on real time data to make critical decisions quickly. Enterprises today are adopting cloud at a rapid pace. There is a critical need to develop secure and efficient strategy and architectures to best leverage capabilities of cloud and edge assets. This paper provides an end to end secure edge to cloud data and analytics strategy. To enable real life implementation, the paper provides reference architectures for device layer, edge layer and cloud layer.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1
+ },
+ "2301.07803": {
+  "id": "2301.07803",
+  "title": "Relating Edge Computing and Microservices by means of Architecture Approaches and Features, Orchestration, Choreography, and Offloading: A Systematic Literature Review",
+  "url": "http://arxiv.org/abs/2301.07803",
+  "date": "2023-01-18",
+  "abs": "Context: Microservices running and being powered by Edge Computing have been gaining much attention in the industry and academia. Since 2014, when Martin Fowler popularized the Microservice term, many studies have been published relating these subjects to explore how the Edge's low-latency feature could be combined with the high throughput of the distributed paradigm from Microservices. Objective: Identifying how Microservices work together with Edge Computing whereas they take advantage when running on Edge. Method: In order to better understand this relationship, we first identified its key concepts, which are: architecture approaches and features, microservice composition (orchestration/choreography), and offloading. Afterward, we conducted a Systematic Literature Review (SLR) as the survey method. Results: We reviewed 111 selected studies and built a taxonomy of Microservices on Edge Computing demonstrating their current architecture approaches and features, composition, and offloading modes. Moreover, we identify the research gaps and trends. Conclusion: This paper is a step forward to help researchers and professionals get a general overview of how Microservices and Edge have been related in the last years. It also discusses gaps and research trends. This SLR will also be a good introduction for new researchers in Edge and Microservices.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 4
+ },
+ "2303.14329": {
+  "id": "2303.14329",
+  "title": "Edge-Based Video Analytics: A Survey",
+  "url": "http://arxiv.org/abs/2303.14329",
+  "date": "2023-03-25",
+  "abs": "Edge computing has been getting a momentum with ever-increasing data at the edge of the network. In particular, huge amounts of video data and their real-time processing requirements have been increasingly hindering the traditional cloud computing approach due to high bandwidth consumption and high latency. Edge computing in essence aims to overcome this hindrance by processing most video data making use of edge servers, such as small-scale on-premises server clusters, server-grade computing resources at mobile base stations and even mobile devices like smartphones and tablets; hence, the term edge-based video analytics. However, the actual realization of such analytics requires more than the simple, collective use of edge servers. In this paper, we survey state-of-the-art works on edge-based video analytics with respect to applications, architectures, techniques, resource management, security and privacy. We provide a comprehensive and detailed review on what works, what doesn't work and why. These findings give insights and suggestions for next generation edge-based video analytics. We also identify open issues and research directions.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 6
+ },
+ "2304.14271": {
+  "id": "2304.14271",
+  "title": "A Survey on Approximate Edge AI for Energy Efficient Autonomous Driving Services",
+  "url": "http://arxiv.org/abs/2304.14271",
+  "date": "2023-04-13",
+  "abs": "Autonomous driving services rely heavily on sensors such as cameras, LiDAR, radar, and communication modules. A common practice of processing the sensed data is using a high-performance computing unit placed inside the vehicle, which deploys AI models and algorithms to act as the brain or administrator of the vehicle. The vehicular data generated from average hours of driving can be up to 20 Terabytes depending on the data rate and specification of the sensors. Given the scale and fast growth of services for autonomous driving, it is essential to improve the overall energy and environmental efficiency, especially in the trend towards vehicular electrification (e.g., battery-powered). Although the areas have seen significant advancements in sensor technologies, wireless communications, computing and AI/ML algorithms, the challenge still exists in how to apply and integrate those technology innovations to achieve energy efficiency. This survey reviews and compares the connected vehicular applications, vehicular communications, approximation and Edge AI techniques. The focus is on energy efficiency by covering newly proposed approximation and enabling frameworks. To the best of our knowledge, this survey is the first to review the latest approximate Edge AI frameworks and publicly available datasets in energy-efficient autonomous driving. The insights and vision from this survey can be beneficial for the collaborative driving service development on low-power and memory-constrained systems and also for the energy optimization of autonomous vehicles.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 3
+ },
+ "2305.01974": {
+  "id": "2305.01974",
+  "title": "A Decade of Research in Fog computing: Relevance, Challenges, and Future Directions",
+  "url": "http://arxiv.org/abs/2305.01974",
+  "date": "2023-05-03",
+  "abs": "Recent developments in the Internet of Things (IoT) and real-time applications, have led to the unprecedented growth in the connected devices and their generated data. Traditionally, this sensor data is transferred and processed at the cloud, and the control signals are sent back to the relevant actuators, as part of the IoT applications. This cloud-centric IoT model, resulted in increased latencies and network load, and compromised privacy. To address these problems, Fog Computing was coined by Cisco in 2012, a decade ago, which utilizes proximal computational resources for processing the sensor data. Ever since its proposal, fog computing has attracted significant attention and the research fraternity focused at addressing different challenges such as fog frameworks, simulators, resource management, placement strategies, quality of service aspects, fog economics etc. However, after a decade of research, we still do not see large-scale deployments of public/private fog networks, which can be utilized in realizing interesting IoT applications. In the literature, we only see pilot case studies and small-scale testbeds, and utilization of simulators for demonstrating scale of the specified models addressing the respective technical challenges. There are several reasons for this, and most importantly, fog computing did not present a clear business case for the companies and participating individuals yet. This paper summarizes the technical, non-functional and economic challenges, which have been posing hurdles in adopting fog computing, by consolidating them across different clusters. The paper also summarizes the relevant academic and industrial contributions in addressing these challenges and provides future research directions in realizing real-time fog computing applications, also considering the emerging trends such as federated learning and quantum computing.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 5
+ },
+ "2306.17170": {
+  "id": "2306.17170",
+  "title": "An Overview on Generative AI at Scale with Edge-Cloud Computing",
+  "url": "http://arxiv.org/abs/2306.17170",
+  "date": "2023-06-02",
+  "abs": "<jats:p>&lt;p&gt;As a specific category of artificial intelligence (AI), generative artificial intelligence (GenAI) generates new content that resembles what is created by humans. The rapid development of GenAI systems has created a huge amount of new data on the Internet, posing new challenges to current computing and communication frameworks. Currently, GenAI services rely on the traditional cloud computing framework due to the need for large computation resources. However, such services will encounter high latency because of data transmission and a high volume of requests. On the other hand, edge-cloud computing can provide adequate computation power and low latency at the same time through the collaboration between edges and the cloud. Thus, it is attractive to build GenAI systems at scale by leveraging the edge-cloud computing paradigm. \u00a0In this overview paper, we review recent developments in GenAI and edge-cloud computing, respectively. \u00a0Then, we use two exemplary GenAI applications to discuss technical challenges in scaling up their solutions using edge-cloud collaborative systems. Finally, we list design considerations for training and deploying GenAI systems at scale and point out future research directions.\u00a0&lt;/p&gt;</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1
+ },
+ "2107.13374": {
+  "id": "2107.13374",
+  "title": "5G Multi-Access Edge Computing: A Survey on Security, Dependability, and Performance",
+  "url": "http://arxiv.org/abs/2107.13374",
+  "date": "2021-07-28",
+  "abs": "  The Fifth Generation (5G) of mobile networks offers new and advanced services\\nwith stricter requirements. Multi-access Edge Computing (MEC) is a key\\ntechnology that enables these new services by deploying multiple devices with\\ncomputing and storage capabilities at the edge of the network, close to\\nend-users. MEC enhances network efficiency by reducing latency, enabling\\nreal-time awareness of the local environment, allowing cloud offloading, and\\nreducing traffic congestion. New mission-critical applications require high\\nsecurity and dependability, which are rarely addressed alongside performance.\\nThis survey paper fills this gap by presenting 5G MEC's three aspects:\\nsecurity, dependability, and performance. The paper provides an overview of\\nMEC, introduces taxonomy, state-of-the-art, and challenges related to each\\naspect. Finally, the paper presents the challenges of jointly addressing these\\nthree aspects.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 45
+ },
+ "2309.05416": {
+  "id": "2309.05416",
+  "title": "Towards Characterization of\u00a0Edge-Cloud Continuum",
+  "url": "http://arxiv.org/abs/2309.05416",
+  "date": "2023-09-11",
+  "abs": "  Internet of Things and cloud computing are two technological paradigms that\\nreached widespread adoption in recent years. These paradigms are complementary:\\nIoT applications often rely on the computational resources of the cloud to\\nprocess the data generated by IoT devices. The highly distributed nature of IoT\\napplications and the giant amounts of data involved led to significant parts of\\ncomputation being moved from the centralized cloud to the edge of the network.\\nThis gave rise to new hybrid paradigms, such as edge-cloud computing and fog\\ncomputing. Recent advances in IoT hardware, combined with the continued\\nincrease in complexity and variability of the edge-cloud environment, led to an\\nemergence of a new vision of edge-cloud continuum: the next step of integration\\nbetween the IoT and the cloud, where software components can seamlessly move\\nbetween the levels of computational hierarchy. However, as this concept is very\\nnew, there is still no established view of what exactly it entails. Several\\nviews on the future edge-cloud continuum have been proposed, each with its own\\nset of requirements and expected characteristics. In order to move the\\ndiscussion of this concept forward, these views need to be put into a coherent\\npicture. In this paper, we provide a review and generalization of the existing\\nliterature on edge-cloud continuum, point out its expected features, and\\ndiscuss the challenges that need to be addressed in order to bring about this\\nenvisioned environment for the next generation of smart distributed\\napplications.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 13
+ },
+ "2309.03420": {
+  "id": "2309.03420",
+  "title": "The Power of Internet of Things (IoT): Connecting the Dots with Cloud, Edge, and Fog Computing",
+  "url": "http://arxiv.org/abs/2309.03420",
+  "date": "2023-09-07",
+  "abs": "The Internet of Things (IoT) is regarded as an improved communication system that has revolutionized traditional lifestyles. To function successfully, IoT requires a combination of cloud, fog, and edge computing architectures. Few studies have addressed cloud, fog, and edge computing simultaneously, comparing them and their issues, although several studies have looked into ways of integrating IoT with either one or two computing systems. Thus, this review provides a thorough understanding of IoT integration with these three computing architectures, as well as their respective applications and limitations. It also highlights the advantages, unresolved issues, future opportunities and directions of IoT integration with the computing systems to advance the IoT. IoT can use the Cloud's almost limitless resources to overcome technology restrictions, such as data processing, storage, and transmission. While edge computing can outperform cloud computing in many circumstances, IoT and edge computing become increasingly integrated as IoT devices increase. Cloud computing also poses a few issues, including managing time-sensitive IoT applications like video gaming, simulation, and streaming, which can be addressed by fog computing integrated with IoT. Due to the proximity of fog computing resources to the edge, data transfers and communication delays to the cloud can be reduced as a result of combining the two. The integration of IoT with cloud, fog, and edge computing will create new business prototypes and opportunities. Since IoT has the potential to greatly enhance connectivity infrastructure as an inevitable component of the future internet, further study is needed before it can be fully integrated.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 3
+ },
+ "2311.01224": {
+  "id": "2311.01224",
+  "title": "EISim: A Platform for Simulating Intelligent Edge Orchestration Solutions",
+  "url": "http://arxiv.org/abs/2311.01224",
+  "date": "2023-11-02",
+  "abs": "To support the stringent requirements of the future intelligent and interactive applications, intelligence needs to become an essential part of the resource management in the edge environment. Developing intelligent orchestration solutions is a challenging and arduous task, where the evaluation and comparison of the proposed solution is a focal point. Simulation is commonly used to evaluate and compare proposed solutions. However, the currently existing, openly available simulators are lacking in terms of supporting the research on intelligent edge orchestration methods. To address this need, this article presents a simulation platform called Edge Intelligence Simulator (EISim), the purpose of which is to facilitate the research on intelligent edge orchestration solutions. EISim is extended from an existing fog simulator called PureEdgeSim. In its current form, EISim supports simulating deep reinforcement learning based solutions and different orchestration control topologies in scenarios related to task offloading and resource pricing on edge. The platform also includes additional tools for creating simulation environments, running simulations for agent training and evaluation, and plotting results.",
+  "cat": "Management Information Systems",
+  "citation_count": 2
+ },
+ "2401.11305": {
+  "id": "2401.11305",
+  "title": "A Narrative Review of Identity, Data, and Location Privacy Techniques in Edge Computing and Mobile Crowdsourcing",
+  "url": "http://arxiv.org/abs/2401.11305",
+  "date": "2024-01-20",
+  "abs": "As digital technology advances, the proliferation of connected devices poses significant challenges and opportunities in mobile crowdsourcing and edge computing. This narrative review focuses on the need for privacy protection in these fields, emphasizing the increasing importance of data security in a data-driven world. Through an analysis of contemporary academic literature, this review provides an understanding of the current trends and privacy concerns in mobile crowdsourcing and edge computing. We present insights and highlight advancements in privacy-preserving techniques, addressing identity, data, and location privacy. This review also discusses the potential directions that can be useful resources for researchers, industry professionals, and policymakers.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2402.13056": {
+  "id": "2402.13056",
+  "title": "Edge Computing for IoT",
+  "url": "http://arxiv.org/abs/2402.13056",
+  "date": "2024-02-20",
+  "abs": "  Over the past few years, The idea of edge computing has seen substantial\\nexpansion in both academic and industrial circles. This computing approach has\\ngarnered attention due to its integrating role in advancing various\\nstate-of-the-art technologies such as Internet of Things (IoT) , 5G, artificial\\nintelligence, and augmented reality. In this chapter, we introduce computing\\nparadigms for IoT, offering an overview of the current cutting-edge computing\\napproaches that can be used with IoT. Furthermore, we go deeper into edge\\ncomputing paradigms, specifically focusing on cloudlet and mobile edge\\ncomputing. After that, we investigate the architecture of edge computing-based\\nIoT, its advantages, and the technologies that make Edge computing-based IoT\\npossible, including artificial intelligence and lightweight virtualization.\\nAdditionally, we review real-life case studies of how edge computing is applied\\nin IoT-based Intelligent Systems, including areas like healthcare,\\nmanufacturing, agriculture, and transportation. Finally, we discuss current\\nresearch obstacles and outline potential future directions for further\\ninvestigation in this domain.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 13
+ },
+ "2403.15665": {
+  "id": "2403.15665",
+  "title": "Improved Methods of Task Assignment and Resource Allocation with Preemption in Edge Computing Systems",
+  "url": "http://arxiv.org/abs/2403.15665",
+  "date": "2024-03-23",
+  "abs": "Edge computing has become a very popular service that enables mobile devices to run complex tasks with the help of network-based computing resources. However, edge clouds are often resource-constrained, which makes resource allocation a challenging issue. In addition, edge cloud servers must make allocation decisions with only limited information available, since the arrival of future client tasks might be impossible to predict, and the states and behavior of neighboring servers might be obscured. We focus on a distributed resource allocation method in which servers operate independently and do not communicate with each other, but interact with clients (tasks) to make allocation decisions. We follow a two-round bidding approach to assign tasks to edge cloud servers, and servers are allowed to preempt previous tasks to allocate more useful ones. We evaluate the performance of our system using realistic simulations and real-world trace data from a high-performance computing cluster. Results show that our heuristic improves system-wide performance by $20-25\\%$ over previous work when accounting for the time taken by each approach. In this way, an ideal trade-off between performance and speed is achieved.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 1
+ },
+ "2310.03908": {
+  "id": "2310.03908",
+  "title": "Realizing XR Applications Using 5G-Based 3D Holographic Communication and Mobile Edge Computing",
+  "url": "http://arxiv.org/abs/2310.03908",
+  "date": "2023-10-05",
+  "abs": "3D holographic communication has the potential to revolutionize the way people interact with each other in virtual spaces, offering immersive and realistic experiences. However, demands for high data rates, extremely low latency, and high computations to enable this technology pose a significant challenge. To address this challenge, we propose a novel job scheduling algorithm that leverages Mobile Edge Computing (MEC) servers in order to minimize the total latency in 3D holographic communication. One of the motivations for this work is to prevent the uncanny valley effect, which can occur when the latency hinders the seamless and real-time rendering of holographic content, leading to a less convincing and less engaging user experience. Our proposed algorithm dynamically allocates computation tasks to MEC servers, considering the network conditions, computational capabilities of the servers, and the requirements of the 3D holographic communication application. We conduct extensive experiments to evaluate the performance of our algorithm in terms of latency reduction, and the results demonstrate that our approach significantly outperforms other baseline methods. Furthermore, we present a practical scenario involving Augmented Reality (AR), which not only illustrates the applicability of our algorithm but also highlights the importance of minimizing latency in achieving high-quality holographic views. By efficiently distributing the computation workload among MEC servers and reducing the overall latency, our proposed algorithm enhances the user experience in 3D holographic communications and paves the way for the widespread adoption of this technology in various applications, such as telemedicine, remote collaboration, and entertainment.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 2
+ },
+ "2404.13411": {
+  "id": "2404.13411",
+  "title": "Urgent Edge Computing",
+  "url": "http://arxiv.org/abs/2404.13411",
+  "date": "2024-04-20",
+  "abs": "  This position paper introduces Urgent Edge Computing (UEC) as a paradigm\\nshift addressing the evolving demands of time-sensitive applications in\\ndistributed edge environments, in time-critical scenarios. With a focus on\\nultra-low latency, availability, resource management, decentralization,\\nself-organization, and robust security, UEC aims to facilitate operations in\\ncritical scenarios such as disaster response, environmental monitoring, and\\nsmart city management. This paper outlines and discusses the key requirements,\\nchallenges, and enablers along with a conceptual architecture. The paper also\\noutlines the potential applications of Urgent Edge Computing\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 10
+ },
+ "2405.04824": {
+  "id": "2405.04824",
+  "title": "Quantum-Edge Cloud Computing: A Future Paradigm for IoT Applications",
+  "url": "http://arxiv.org/abs/2405.04824",
+  "date": "2024-05-08",
+  "abs": "The Internet of Things (IoT) is expanding rapidly, which has created a need for sophisticated computational frameworks that can handle the data and security requirements inherent in modern IoT applications. However, traditional cloud computing frameworks have struggled with latency, scalability, and security vulnerabilities. Quantum-Edge Cloud Computing (QECC) is a new paradigm that effectively addresses these challenges by combining the computational power of quantum computing, the low-latency benefits of edge computing, and the scalable resources of cloud computing. This study has been conducted based on a published literature review, performance improvements, and metrics data from Bangladesh on smart city infrastructure, healthcare monitoring, and the industrial IoT sector. We have discussed the integration of quantum cryptography to enhance data integrity, the role of edge computing in reducing response times, and how cloud computing's resource abundance can support large IoT networks. We examine case studies, such as the use of quantum sensors in self-driving vehicles, to illustrate the real-world impact of QECC. Furthermore, the paper identifies future research directions, including developing quantum-resistant encryption and optimizing quantum algorithms for edge computing. The convergence of these technologies in QECC promises to overcome the existing limitations of IoT frameworks and set a new standard for the future of IoT applications.",
+  "cat": "Information Systems",
+  "citation_count": 3
+ },
+ "2407.04053": {
+  "id": "2407.04053",
+  "title": "Edge AI: A Taxonomy, Systematic Review and Future Directions",
+  "url": "http://arxiv.org/abs/2407.04053",
+  "date": "2024-07-04",
+  "abs": "Edge Artificial Intelligence (AI) incorporates a network of interconnected systems and devices that receive, cache, process, and analyze data in close communication with the location where the data is captured with AI technology. Recent advancements in AI efficiency, the widespread use of Internet of Things (IoT) devices, and the emergence of edge computing have unlocked the enormous scope of Edge AI. Edge AI aims to optimize data processing efficiency and velocity while ensuring data confidentiality and integrity. Despite being a relatively new field of research from 2014 to the present, it has shown significant and rapid development over the last five years. This article presents a systematic literature review for Edge AI to discuss the existing research, recent advancements, and future research directions. We created a collaborative edge AI learning system for cloud and edge computing analysis, including an in-depth study of the architectures that facilitate this mechanism. The taxonomy for Edge AI facilitates the classification and configuration of Edge AI systems while examining its potential influence across many fields through compassing infrastructure, cloud computing, fog computing, services, use cases, ML and deep learning, and resource management. This study highlights the significance of Edge AI in processing real-time data at the edge of the network. Additionally, it emphasizes the research challenges encountered by Edge AI systems, including constraints on resources, vulnerabilities to security threats, and problems with scalability. Finally, this study highlights the potential future research directions that aim to address the current limitations of Edge AI by providing innovative solutions.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 7
+ },
+ "2407.05963": {
+  "id": "2407.05963",
+  "title": "6GSoft: Software for Edge-to-Cloud Continuum",
+  "url": "http://arxiv.org/abs/2407.05963",
+  "date": "2024-07-09",
+  "abs": "In the era of 6G, developing and managing software requires cutting-edge software engineering (SE) theories and practices tailored for such complexity across a vast number of connected edge devices. Our project aims to lead the development of sustainable methods and energy-efficient orchestration models specifically for edge environments, enhancing architectural support driven by AI for contemporary edge-to-cloud continuum computing. This initiative seeks to position Finland at the forefront of the 6G landscape, focusing on sophisticated edge orchestration and robust software architectures to optimize the performance and scalability of edge networks. Collaborating with leading Finnish universities and companies, the project emphasizes deep industry-academia collaboration and international expertise to address critical challenges in edge orchestration and software architecture, aiming to drive significant advancements in software productivity and market impact.",
+  "cat": "Information Systems",
+  "citation_count": 1
+ },
+ "2407.08543": {
+  "id": "2407.08543",
+  "title": "Distributed edge analytics in edge\u2010fog\u2010cloud continuum",
+  "url": "http://arxiv.org/abs/2407.08543",
+  "date": "2024-07-11",
+  "abs": "<jats:title>Abstract</jats:title>\n                  <jats:p>To address the increased latency, network load and compromised privacy issues associated with the Cloud\u2010centric IoT applications, fog computing has emerged. Fog computing utilizes the proximal computational and storage devices, for sensor data analytics. The edge\u2010fog\u2010cloud continuum thus provides significant edge analytics capabilities for realizing interesting IoT applications. While edge analytics tasks are usually performed on a single node, distributed edge analytics proposes utilizing multiple nodes from the continuum, concurrently. This paper discusses and demonstrates distributed edge analytics from three different perspectives; serverless data pipelines (SDP), distributed computing and edge analytics, and federated learning, with our frameworks, MQTT based SDP, CANTO and FIDEL, respectively. The results produced in the paper, through different case studies, show the feasibility of performing distributed edge analytics following the three approaches, across the continuum.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 5
+ },
+ "2412.01412": {
+  "id": "2412.01412",
+  "title": "Optimizing Microservices Placement in the Cloud-to-Edge Continuum: A Comparative Analysis of App and Service Based Approaches",
+  "url": "http://arxiv.org/abs/2412.01412",
+  "date": "2024-12-02",
+  "abs": "  In the ever-evolving landscape of computing, the advent of edge and fog\\ncomputing has revolutionized data processing by bringing it closer to\\nend-users. While cloud computing offers numerous advantages, including\\nmobility, flexibility and scalability, it introduces challenges such as\\nlatency. Fog and edge computing emerge as complementary solutions, bridging the\\ngap and enhancing services' proximity to users. The pivotal challenge addressed\\nin this paper revolves around optimizing the placement of application\\nmicroservices to minimize latency in the cloud-to-edge continuum, where a\\nproper node selection may influence the app's performance. Therefore, this task\\ngains complexity due to the paradigm shift from monolithic to\\nmicroservices-based architectures. Two distinct placement approaches, app-based\\nand service-based, are compared through four different placement algorithms\\nbased on criteria such as link latency, node resources, and gateway proximity.\\nApp-based allocates all the services of one app sequentially, while\\nservice-based allocates one service of each app at a time. The study, conducted\\nusing YAFS (Yet Another Fog Simulator), evaluates the impact of these\\napproaches on latency and load balance. The findings consistently confirm the\\nhypothesis that strategies utilizing a service-based approach outperformed or\\nperformed equally well compared to app-based approaches, offering valuable\\ninsights into trade-offs and performance differences among the algorithms and\\neach approach in the context of efficient microservices placement in\\ncloud-to-edge environments.\\n",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 4
+ },
+ "2502.11644": {
+  "id": "2502.11644",
+  "title": "InTec: integrated things-edge computing: a framework for distributing machine learning pipelines in edge AI systems",
+  "url": "http://arxiv.org/abs/2502.11644",
+  "date": "2025-02-17",
+  "abs": "With the rapid expansion of the Internet of Things (IoT), sensors, smartphones, and wearables have become integral to daily life, powering smart applications in home automation, healthcare, and intelligent transportation. However, these advancements face significant challenges due to latency and bandwidth constraints imposed by traditional cloud based machine learning (ML) frameworks. The need for innovative solutions is evident as cloud computing struggles with increased latency and network congestion. Previous attempts to offload parts of the ML pipeline to edge and cloud layers have yet to fully resolve these issues, often worsening system response times and network congestion due to the computational limitations of edge devices. In response to these challenges, this study introduces the InTec (Integrated Things Edge Computing) framework, a groundbreaking innovation in IoT architecture. Unlike existing methods, InTec fully leverages the potential of a three tier architecture by strategically distributing ML tasks across the Things, Edge, and Cloud layers. This comprehensive approach enables real time data processing at the point of data generation, significantly reducing latency, optimizing network traffic, and enhancing system reliability. InTec effectiveness is validated through empirical evaluation using the MHEALTH dataset for human motion detection in smart homes, demonstrating notable improvements in key metrics: an 81.56 percent reduction in response time, a 10.92 percent decrease in network traffic, a 9.82 percent improvement in throughput, a 21.86 percent reduction in edge energy consumption, and a 25.83 percent reduction in cloud energy consumption. These advancements establish InTec as a new benchmark for scalable, responsive, and energy efficient IoT applications, demonstrating its potential to revolutionize how the ML pipeline is integrated into Edge AI (EI) systems.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2501.02804": {
+  "id": "2501.02804",
+  "title": "Latency and Privacy-Aware Resource Allocation in Vehicular Edge Computing",
+  "url": "http://arxiv.org/abs/2501.02804",
+  "date": "2025-01-07",
+  "abs": "The rapid increase in the number of connected vehicles has led to the generation of vast amounts of data. As a significant portion of this data pertains to vehicle-to-vehicle and vehicle-to-infrastructure communications, it is predominantly generated at the edge. Considering the enormous volume of data, real-time applications, and privacy concerns, it is crucial to process the data at the edge. Neglecting the management of processing resources in vehicular edge computing (VEC) could lead to numerous challenges as a substantial number of vehicles with diverse safety, economic, and entertainment applications, along with their data processing, emerge in the near future [1]. Previous research in VEC resource allocation has primarily focused on issues such as response time and privacy preservation techniques. However, an approach that takes into account privacy-aware resource allocation based on vehicular network architecture and application requirements has not yet been proposed. In this paper, we present a privacy and latency-aware approach for allocating processing resources at the edge of the vehicular network, considering the specific requirements of different applications. Our approach involves categorizing vehicular network applications based on their processing accuracy, real-time processing needs, and privacy preservation requirements. We further divide the vehicular network edge into two parts: the user layer (OBUs) is considered for processing applications with privacy requirements, while the allocation of resources in the RSUs and cloud layer is based on the specific needs of different applications. In this study, we evaluate the quality of service based on parameters such as privacy preservation, processing cost, meeting deadlines, and result quality. Comparative analyses demonstrate that our approach enhances service quality by 55% compared to existing state-of-the-art methods.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 9
+ },
+ "2501.14823": {
+  "id": "2501.14823",
+  "title": "Quantifying Energy and Cost Benefits of Hybrid Edge Cloud: Analysis of Traditional and Agentic Workloads",
+  "url": "http://arxiv.org/abs/2501.14823",
+  "date": "2025-01-29",
+  "abs": "This paper examines the workload distribution challenges in centralized cloud systems and demonstrates how Hybrid Edge Cloud (HEC) [1] mitigates these inefficiencies. Workloads in cloud environments often follow a Pareto distribution, where a small percentage of tasks consume most resources, leading to bottlenecks and energy inefficiencies. By analyzing both traditional workloads reflective of typical IoT and smart device usage and agentic workloads, such as those generated by AI agents, robotics, and autonomous systems, this study quantifies the energy and cost savings enabled by HEC. Our findings reveal that HEC achieves energy savings of up to 75% and cost reductions exceeding 80%, even in resource-intensive agentic scenarios. These results highlight the critical role of HEC in enabling scalable, cost-effective, and sustainable computing for the next generation of intelligent systems.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 0
+ },
+ "2503.04815": {
+  "id": "2503.04815",
+  "title": "Comparative Analysis of\u00a0Lightweight Kubernetes Distributions for\u00a0Edge Computing: Security, Resilience and\u00a0Maintainability",
+  "url": "http://arxiv.org/abs/2503.04815",
+  "date": "2025-03-04",
+  "abs": "The increasing demand for real-time data processing in Internet of Things (IoT) devices has elevated the importance of edge computing, necessitating efficient and secure deployment of applications on resource-constrained devices. Kubernetes and its lightweight distributions (k0s, k3s, KubeEdge, and OpenYurt) extend container orchestration to edge environments, but their security, reliability, and maintainability have not been comprehensively analyzed. This study compares Kubernetes and these lightweight distributions by evaluating security compliance using kube-bench, simulating network outages to assess resiliency, and documenting maintainability. Results indicate that while k3s and k0s offer superior ease of development due to their simplicity, they have lower security compliance compared to Kubernetes, KubeEdge, and OpenYurt. Kubernetes provides a balanced approach but may be resource-intensive for edge deployments. KubeEdge and OpenYurt enhance security features and reliability under network outages but increase complexity and resource consumption. The findings highlight trade-offs between performance, security, resiliency, and maintainability, offering insights for practitioners deploying Kubernetes in edge environments.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 4
+ },
+ "2503.06027": {
+  "id": "2503.06027",
+  "title": "Empowering Edge Intelligence: A Comprehensive Survey on On-Device AI Models",
+  "url": "http://arxiv.org/abs/2503.06027",
+  "date": "2025-03-17",
+  "abs": "<jats:p>The rapid advancement of artificial intelligence (AI) technologies has led to an increasing deployment of AI models on edge and terminal devices, driven by the proliferation of the Internet of Things (IoT) and the need for real-time data processing. This survey comprehensively explores the current state, technical challenges, and future trends of on-device AI models. We define on-device AI models as those designed to perform local data processing and inference, emphasizing their characteristics such as real-time performance, resource constraints, and enhanced data privacy. The survey is structured around key themes, including the fundamental concepts of AI models, application scenarios across various domains, and technical challenges faced in edge environments. We also discuss optimization and implementation strategies, such as data preprocessing, model compression, and hardware acceleration, which are essential for effective deployment. Furthermore, we examine the impact of emerging technologies, including edge computing and foundation models, on the evolution of on-device AI models. By providing a structured overview of the challenges, solutions, and future directions, this survey aims to facilitate further research and application of on-device AI, ultimately contributing to the advancement of intelligent systems in everyday life.</jats:p>",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 51
+ },
+ "2407.17314": {
+  "id": "2407.17314",
+  "title": "Edge-Cloud Continuum Orchestration of Critical Services: A Smart-City Approach",
+  "url": "http://arxiv.org/abs/2407.17314",
+  "date": "2024-07-24",
+  "abs": "Smart-city services are typically developed as closed systems within each city's vertical, communicating and interacting with cloud services while remaining isolated within each provider's domain. With the emergence of 5G private domains and the introduction of new M2M services focusing on autonomous systems, there is a shift from the cloud-based approach to a distributed edge computing paradigm, in a \\textit{continuum} orchestration. However, an essential component is missing. Current orchestration tools, designed for cloud-based deployments, lack robust workload isolation, fail to meet timing constraints, and are not tailored to the resource-constrained nature of edge devices. Therefore, new orchestration methods are needed to support MEC environments. The work presented in this paper addresses this gap. Based on the real needs of a smart-city testbed - the Aveiro Living Lab-, we developed a set of orchestration components to facilitate the seamless orchestration of both cloud and edge-based services, encompassing both critical and non-critical services. This work extends the current Kubernetes orchestration platform to include a novel location-specific resource definition, a custom scheduler to accommodate real-time and legacy services, continuous service monitoring to detect sub-optimal states, and a refined load balancing mechanism that prioritizes the fastest response times.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 7
+ },
+ "2502.15775": {
+  "id": "2502.15775",
+  "title": "Serverless Edge Computing: A Taxonomy, Systematic Literature Review, Current Trends and Research Challenges",
+  "url": "http://arxiv.org/abs/2502.15775",
+  "date": "2025-02-16",
+  "abs": "In recent years, the rapid expansion of Internet of Things (IoT) nodes and devices has seamlessly integrated technology into everyday life, amplifying the demand for optimized computing solutions. To meet the critical Quality of Service (QoS) requirements such as reduced latency, efficient bandwidth usage, swift reaction times, scalability, privacy, and security serverless edge computing has emerged as a transformative paradigm. This systematic literature review explores the current landscape of serverless edge computing, analyzing recent studies to uncover the present state of this technology. The review identifies the essential features of serverless edge computing, focusing on architectural designs, QoS metrics, implementation specifics, practical applications, and communication modalities central to this paradigm. Furthermore, we propose a comprehensive taxonomy that categorizes existing research efforts, providing a comparative analysis based on these classifications. The paper concludes with an in depth discussion of open research challenges and highlights promising future directions that hold potential for advancing serverless edge computing research.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 0
+ },
+ "2510.10166": {
+  "id": "2510.10166",
+  "title": "Proactive and Reactive Autoscaling Techniques for Edge Computing",
+  "url": "http://arxiv.org/abs/2510.10166",
+  "date": "2025-10-11",
+  "abs": "Edge computing allows for the decentralization of computing resources. This decentralization is achieved through implementing microservice architectures, which require low latencies to meet stringent service level agreements (SLA) such as performance, reliability, and availability metrics. While cloud computing offers the large data storage and computation resources necessary to handle peak demands, a hybrid cloud and edge environment is required to ensure SLA compliance. Several auto-scaling algorithms have been proposed to try to achieve these compliance challenges, but they suffer from performance issues and configuration complexity. This chapter provides a brief overview of edge computing architecture, its uses, benefits, and challenges for resource scaling. We then introduce Service Level Agreements, and existing research on devising algorithms used in edge computing environments to meet these agreements, along with their benefits and drawbacks.",
+  "cat": "Information Systems",
+  "citation_count": 0
+ }
+}
