@@ -1,0 +1,515 @@
+Edge Computing Architectures and Technologies
+['This section explores the technical aspects of Edge Computing, including its architecture, enabling technologies, and infrastructure requirements.', '1. Overview of Edge Computing architectures, including the role of edge nodes, gateways, and other components.', '2. Discussion of enabling technologies for Edge Computing, such as Fifth Generation networks, Internet of Things protocols, and edge-specific software frameworks.', '3. Examination of infrastructure requirements for Edge Computing, including edge data centers, networking, and storage.']
+
+Serverless Edge Computing: A Taxonomy, Systematic Literature Review, Current Trends and Research Challenges
+
+Edge computing for cyber-physical systems: A systematic mapping study emphasizing trustworthiness
+
+Wearable Communications in 5G: Challenges and Enabling Technologies
+
+Wireless Networks for Mobile Edge Computing: Spatial Modeling and Latency Analysis (Extended version)
+
+Towards Characterization of Edge-Cloud Continuum
+
+Developing an edge computing platform for real-time descriptive analytics
+
+Evolving 5G: ANIARA, an Edge-Cloud perspective
+
+Resource Management in Edge and Fog Computing using FogBus2 Framework
+
+Wireless Edge Computing With Latency and Reliability Guarantees
+
+Relating Edge Computing and Microservices by means of Architecture Approaches and Features, Orchestration, Choreography, and Offloading: A Systematic Literature Review
+
+DHT-based Edge and Fog Computing Systems: Infrastructures and Applications
+
+Toward Edge-enabled Cyber-Physical Systems Testbeds
+
+Choosing an effective setup for stream processing
+
+A Manifesto for Modern Fog and Edge Computing: Vision, New Paradigms, Opportunities, and Future Directions
+
+V-Edge: Virtual Edge Computing as an Enabler for Novel Microservices and Cooperative Computing
+
+Five Driving Forces of Multi-Access Edge Computing
+
+Secure Edge Computing Reference Architecture for Data-driven Structural Health Monitoring: Lessons Learned from Implementation and Benchmarking
+
+Collaborative Mobile Edge Computing in 5G Networks: New Paradigms, Scenarios, and Challenges
+
+A 5G-Edge Architecture for Computational Offloading of Computer Vision Applications
+
+Fog Computing: Focusing on Mobile Users at the Edge
+
+From Megabits to CPU Ticks: Enriching a Demand Trace in the Age of MEC
+
+EdgeBench: A Workflow-based Benchmark for Edge Computing
+
+Edge Computing in Transportation: Security Issues and Challenges
+
+Aerial Computing: A New Computing Paradigm, Applications, and Challenges
+
+Edge Computing for IoT: Novel Insights from a Comparative Analysis of Access Control Models
+
+At the Edge of a Seamless Cloud Experience
+
+Edge Computing for IoT
+
+Can Edge Computing Fulfill the Requirements of Automated Vehicular Services Using 5G Network ?
+
+Measurement-driven design and runtime optimization in edge computing: Methodology and tools
+
+Edge Intelligence: Architectures, Challenges, and Applications
+
+EdgeDS: Data Spaces enabled Multi-access Edge Computing
+
+Theory vs. Practice in Modeling Edge Storage Systems
+
+Real-Time Agile Software Management for Edge and Fog Computing Based Smart City Infrastructure
+
+Bringing AI to the edge: a formal M&amp;S specification to deploy effective IoT architectures
+
+A Review of the In-Network Computing and Its Role in the Edge-Cloud Continuum
+
+Sustainable Edge Computing: Challenges and Future Directions
+
+On the Deployability of Augmented Reality Using Embedded Edge Devices
+
+The SPEC-RG Reference Architecture for the Compute Continuum
+
+WONDER: Workload Optimized Network Defined Edge Routing
+
+Deep Learning at the Edge
+
+Fog Computing Architectures: A Reference for Practitioners
+
+Enabling Reproducible Analysis of Complex Workflows on the Edge-to-Cloud Continuum
+
+Proactive and Reactive Autoscaling Techniques for Edge Computing
+
+Edge Computing: A Systematic Mapping Study
+
+Cloud, Fog, or Edge: Where to Compute?
+
+Mobile Edge Computing
+
+Edge Cloud Offloading Algorithms: Issues, Methods, and Perspectives
+
+ENORM: A Framework For Edge NOde Resource Management
+
+Deep Edge Intelligence: Architecture, Key Features, Enabling Technologies and Challenges
+
+Artificial Intelligence at the Edge
+
+Edge Computing Applications and Use Cases
+['This section delves into the diverse applications and use cases of Edge Computing, highlighting its potential to transform various industries and domains.', '1. Overview of Industrial Automation applications, including predictive maintenance and quality control.', '2. Discussion of Smart City applications, including intelligent transportation systems and smart energy management.', '3. Examination of emerging applications in areas such as Healthcare, Finance, and Education.']
+
+Predictive Maintenance for Edge-Based Sensor Networks: A Deep Reinforcement Learning Approach
+
+Mobile Edge Computing
+
+Towards Edge-Based Data Lake Architecture for Intelligent Transportation System
+
+Cloud, Fog, or Edge: Where to Compute?
+
+Edge computing for cyber-physical systems: A systematic mapping study emphasizing trustworthiness
+
+A Manifesto for Modern Fog and Edge Computing: Vision, New Paradigms, Opportunities, and Future Directions
+
+Democratizing the Edge: A Pervasive Edge Computing Framework
+
+Mobile Edge Intelligence and Computing for the Internet of Vehicles
+
+eDisco: Discovering Edge Nodes Along the Path
+
+Urgent Edge Computing
+
+Cloud-Edge Collaborative Data Anomaly Detection in Industrial Sensor Networks
+
+SAEC: Scene-Aware Enhanced Edge-Cloud Collaborative Industrial Vision Inspection with Multimodal LLM
+
+Aggregate Processes as Distributed Adaptive Services for the Industrial Internet of Things
+
+An SLR on Edge Computing Security and possible threat protection
+
+GreenScale: Carbon-Aware Systems for Edge Computing
+
+Enabling Opportunistic Low-cost Smart Cities By Using Tactical Edge Node Placement
+
+Sustainable Edge Computing: Challenges and Future Directions
+
+Data Analytics for Smart Cities: Challenges and Promises
+
+Edge Computing and Dynamic Vision Sensing for Low Delay Access to Visual Medical Information
+
+Computing: Looking Back and Moving Forward
+
+A Comprehensive System Architecture using Field Programmable Gate Arrays Technology, Dijkstra’s Algorithm, and Edge Computing for Emergency Response in Smart Cities
+
+Caching and Computation Offloading in High Altitude Platform Station (HAPS) Assisted Intelligent Transportation Systems
+
+Ubiquitous Computing: Potentials and Challenges
+
+Driving Intelligent IoT Monitoring and Control through Cloud Computing and Machine Learning
+
+Positioning Fog Computing for Smart Manufacturing
+
+Edge Computing for Smart Health: Context-Aware Approaches, Opportunities, and Challenges
+
+The Power of Internet of Things (IoT): Connecting the Dots with Cloud, Edge, and Fog Computing
+
+AR-Assisted Surgical Care via 5G networks for First Aid Responders
+
+MEET: Mobility-Enhanced Edge inTelligence for Smart and Green 6G Networks
+
+Towards an Edge Intelligence-Based Traffic Monitoring System
+
+Fog Computing Architectures: A Reference for Practitioners
+
+Toward Multi-Service Edge-Intelligence Paradigm: Temporal-Adaptive Prediction for Time-Critical Control over Wireless
+
+Aqua Computing: Coupling Computing and Communications
+
+Industrial Internet of Things (IIoT) Applications of Edge and Fog Computing: A Review and Future Directions
+
+Fog Computing: Principals, Architectures, and Applications
+
+High fusion computers: The IoTs, edges, data centers, and humans-in-the-loop as a computer
+
+An Energy-Aware Approach to Design Self-Adaptive AI-based Applications on the Edge
+
+Towards a Reference Architecture Model for Industrial Edge Computing
+
+Cloud Computing - Architecture and Applications
+
+Empowering Mobile Edge Computing by Exploiting Reconfigurable Intelligent Surface
+
+An Edge Assisted Robust Smart Traffic Management and Signalling System for Guiding Emergency Vehicles During Peak Hours
+
+Edge Computing for IoT
+
+Edge-Cloud Continuum Orchestration of Critical Services: A Smart-City Approach
+
+Industrial Edge-based Cyber-Physical Systems -- Application Needs and Concerns for Realization
+
+EdgeFD: An Edge-Friendly Drift-Aware Fault Diagnosis System for Industrial IoT
+
+The edge cloud: A holistic view of communication, computation and caching
+
+Realtime Predictive Maintenance with Lambda Architecture
+
+Computational Intelligence and Deep Learning for Next-Generation Edge-Enabled Industrial IoT
+
+EdgeFaaS: A Function-based Framework for Edge Computing
+
+Artificial Intelligence at the Edge
+
+Edge Computing Security and Privacy
+['This section addresses the security and privacy concerns associated with Edge Computing, including the challenges and solutions for protecting edge data and devices.', '1. Discussion of security threats and vulnerabilities in Edge Computing, including data breaches, denial-of-service attacks, and device compromise.', '2. Examination of privacy concerns in Edge Computing, including data protection, anonymity, and surveillance.', '3. Overview of security and privacy solutions for Edge Computing, including encryption, authentication, and access control.']
+
+An SLR on Edge Computing Security and possible threat protection
+
+Edge Computing for IoT: Novel Insights from a Comparative Analysis of Access Control Models
+
+Dependability in Edge Computing
+
+Wireless Edge Computing With Latency and Reliability Guarantees
+
+Joint Storage Allocation and Computation Design for Private Edge Computing
+
+Internet of Cloud: Security and Privacy issues
+
+Authentication, Access Control, Privacy, Threats and Trust Management\n Towards Securing Fog Computing Environments: A Review
+
+Security modeling and efficient computation offloading for service workflow in mobile edge computing
+
+Security Assessment and Hardening of Fog Computing Systems
+
+Confidential Computing in Edge-Cloud Hierarchy
+
+Impact of User Privacy and Mobility on Edge Offloading
+
+A Preliminary Study On Emerging Cloud Computing Security Challenges
+
+Privacy, Trust and Identity in Pervasive Computing: A Review of Technical Challenges and Future Research Directions
+
+New Security Challenges Towards In-Sensor Computing Systems
+
+Private Edge Computing for Linear Inference Based on Secret Sharing
+
+Edge Computing in Transportation: Security Issues and Challenges
+
+Latency and Privacy-Aware Resource Allocation in Vehicular Edge Computing
+
+Privacy for Rescue: A New Testimony Why Privacy is Vulnerable In Deep Models
+
+Privacy Concerns Raised by Pervasive User Data Collection From Cyberspace and Their Countermeasures
+
+EdgeDS: Data Spaces enabled Multi-access Edge Computing
+
+Edge computing for cyber-physical systems: A systematic mapping study emphasizing trustworthiness
+
+Towards Privacy-aware Task Allocation in Social Sensing based Edge Computing Systems
+
+Quantifying Surveillance in the Networked Age: Node-based Intrusions and Group Privacy.
+
+A Detail Study of Security and Privacy issues of Internet of Things
+
+EdgeLeakage: Membership Information Leakage in Distributed Edge Intelligence Systems
+
+Revisiting the Arguments for Edge Computing Research
+
+Towards Edge-assisted Internet of Things: From Security and Efficiency Perspectives
+
+Deep Learning for Secure Mobile Edge Computing
+
+Distributed Threat Intelligence at the Edge Devices: A Large Language Model-Driven Approach
+
+Encryption Mechanism And Resource Allocation Optimization Based On Edge Computing Environment
+
+TinyML Security: Exploring Vulnerabilities in Resource-Constrained Machine Learning Systems
+
+Edge Computing in IoT: A 6G Perspective
+
+On the Modeling of Reliability in Extreme Edge Computing Systems
+
+The Trusted Edge.
+
+Towards Green Mobile Edge Computing Offloading Systems with Security Enhancement
+
+A Flexible Privacy-preserving Framework for Singular Value Decomposition under Internet of Things Environment
+
+EC-SVC: Secure CAN Bus In-Vehicle Communications with Fine-grained Access Control Based on Edge Computing
+
+Edge, Fog, and Cloud Computing : An Overview on Challenges and Applications
+
+Our House is Our Glassy Castle: Challenges of Pervasive Computing in Private Spaces
+
+UMLsec4Edge: Extending UMLsec to model data-protection-compliant edge computing systems
+
+New Frontiers in IoT: Networking, Systems, Reliability, and Security Challenges
+
+Security and Privacy Issues in Cloud Computing
+
+Efficient Privacy Preserving Edge Computing Framework for Image Classification
+
+The Benefits of Edge Computing in Healthcare, Smart Cities, and IoT
+
+Computer and Network Security
+
+REVAMP<sup>2</sup>T: Real-Time Edge Video Analytics for Multicamera Privacy-Aware Pedestrian Tracking
+
+Secure Mobile Edge Computing in IoT via Collaborative Online Learning
+
+New Problems and Solutions in IoT Security and Privacy
+
+Privacy-Preserving Detection Method for Transmission Line Based on Edge Collaboration
+
+STEC-IoT: A Security Tactic by Virtualizing Edge Computing on IoT
+
+Edge Computing and Artificial Intelligence
+['This section explores the integration of Artificial Intelligence and Edge Computing, including the role of Artificial Intelligence in Edge Computing, Artificial Intelligence-driven Edge Computing applications, and the challenges of deploying Artificial Intelligence at the edge.', '1. Overview of Artificial Intelligence applications in Edge Computing, including computer vision, natural language processing, and machine learning.', '2. Discussion of Artificial Intelligence-driven Edge Computing applications, including intelligent surveillance, autonomous vehicles, and smart homes.', '3. Examination of challenges and future directions in Edge Artificial Intelligence, including model deployment, training, and inference at the edge.']
+
+A Comprehensive Review and a Taxonomy of Edge Machine Learning: Requirements, Paradigms, and Techniques
+
+SARS: A Resource Selection Algorithm for Autonomous Driving Tasks in Heterogeneous Mobile Edge Computing
+
+AI Augmented Edge and Fog Computing: Trends and Challenges
+
+Enabling Design Methodologies and Future Trends for Edge AI: Specialization and Co-design
+
+Enabling All In-Edge Deep Learning: A Literature Review
+
+Deep Learning at the Edge
+
+Towards Enabling Novel Edge-Enabled Applications
+
+Mobile Edge Intelligence and Computing for the Internet of Vehicles
+
+Deep Learning in the Era of Edge Computing: Challenges and Opportunities
+
+Edge Large AI Models: Collaborative Deployment and IoT Applications
+
+Rethinking Machine Learning Development and Deployment for Edge Devices
+
+AI-based Fog and Edge Computing: A Systematic Review, Taxonomy and Future Directions
+
+Challenges and Opportunities in Edge Computing
+
+Techreport: Time-sensitive probabilistic inference for the edge
+
+Integrated Sensing-Communication-Computation for Edge Artificial Intelligence
+
+Resource-Efficient Generative AI Model Deployment in Mobile Edge Networks
+
+Revisiting the Arguments for Edge Computing Research
+
+AI for next generation computing: Emerging trends and future directions
+
+Mist Computing: Principles, Trends and Future Direction
+
+Edge, Fog, and Cloud Computing : An Overview on Challenges and Applications
+
+Edge Computing: A Systematic Mapping Study
+
+End-Edge Model Collaboration: Bandwidth Allocation for Data Upload and Model Transmission
+
+EdgeAISim: A Toolkit for Simulation and Modelling of AI Models in Edge Computing Environments
+
+A Fog Computing Framework for Autonomous Driving Assist: Architecture,\n Experiments, and Challenges
+
+Mobility and Cost Aware Inference Accelerating Algorithm for Edge Intelligence
+
+Towards AIOps in Edge Computing Environments
+
+EdgeRL: Reinforcement Learning-driven Deep Learning Model Inference Optimization at Edge
+
+Internet of Things (IoT) and New Computing Paradigms
+
+Wireless Network Intelligence at the Edge
+
+Bringing AI to the edge: a formal M&amp;S specification to deploy effective IoT architectures
+
+Embedded Development Boards for Edge-AI: A Comprehensive Report
+
+Artificial Intelligence Edge Applications in 5G Networks
+
+Modeling of Deep Neural Network (DNN) Placement and Inference in Edge Computing
+
+Architectural Design Alternatives Based on Cloud/Edge/Fog Computing for Connected Vehicles
+
+Training on the Edge: The why and the how
+
+Wireless Edge Computing With Latency and Reliability Guarantees
+
+Smart-Edge-CoCaCo: AI-Enabled Smart Edge with Joint Computation, Caching, and Communication in Heterogeneous IoT
+
+Roadmap for Edge AI: A Dagstuhl Perspective
+
+Bringing AI to edge: From deep learning’s perspective
+
+Artificial Intelligence at the Edge
+
+Edge General Intelligence Through World Models and Agentic AI: Fundamentals, Solutions, and Challenges
+
+High fusion computers: The IoTs, edges, data centers, and humans-in-the-loop as a computer
+
+Communication-Efficient Edge AI Inference Over Wireless Networks
+
+PI-Edge: A Low-Power Edge Computing System for Real-Time Autonomous Driving Services
+
+A Dynamic Distributed Scheduler for Computing on the Edge
+
+Edge AI: A Taxonomy, Systematic Review and Future Directions
+
+The Security and Privacy of Mobile Edge Computing: An Artificial Intelligence Perspective
+
+Toward Edge General Intelligence with Agentic AI and Agentification: Concepts, Technologies, and Future Directions
+
+Edge AI for Internet of Energy: Challenges and Perspectives
+
+Edge Computing Architectures for Enabling the Realisation of the Next Generation Robotic Systems
+
+Edge Computing Challenges and Open Issues
+['This section discusses the challenges and open issues in Edge Computing, including technical, operational, and societal challenges.', '1. Analysis of technical challenges, including resource constraints, energy efficiency, and scalability in edge environments.', '2. Discussion of operational challenges, such as management, orchestration, and maintenance of edge infrastructure and applications.', '3. Examination of societal and ethical challenges, including digital divide concerns and the potential impact of Edge Computing on employment and skills.']
+
+Review and analysis of networking challenges in cloud computing
+
+Edge Computing: A Systematic Mapping Study
+
+Making ethical decisions for the immersive web
+
+Energy Minimization for Mobile Edge Computing Networks with Time-Sensitive Constraints
+
+At the Edge of a Seamless Cloud Experience
+
+Democratizing the Edge: A Pervasive Edge Computing Framework
+
+Security and Privacy Issues in Cloud Computing
+
+Supporting UAVs with Edge Computing: A Review of Opportunities and Challenges
+
+Systems Computing Challenges in the Internet of Things
+
+Green-aware Mobile Edge Computing for IoT: Challenges, Solutions and Future Directions
+
+Dynamic Service Provisioning in the Edge-cloud Continuum with Provable Guarantees
+
+Opportunistic Edge Computing: Concepts, opportunities and research challenges
+
+Energy-Efficient Offloading in Mobile Edge Computing with Edge-Cloud Collaboration
+
+A Risk-Sensitive Task Offloading Strategy for Edge Computing in Industrial Internet of Things
+
+Sharing is Caring: A Mobile Edge Computing Perspective
+
+Resource Management in Fog/Edge Computing
+
+HRNET: AI on Edge for mask detection and social distancing
+
+Consider ethical and social challenges in smart grid research
+
+The Cloud Next Door: Investigating the Environmental and Socioeconomic Strain of Datacenters on Local Communities
+
+Challenges and Opportunities in Edge Computing
+
+How Close to the Edge? Delay/utilization tradeoffs in MEC
+
+A Review on Computational Intelligence Techniques in Cloud and Edge Computing
+
+Relating Edge Computing and Microservices by means of Architecture Approaches and Features, Orchestration, Choreography, and Offloading: A Systematic Literature Review
+
+Internet of Things (IoT) and New Computing Paradigms
+
+Towards Characterization of Edge-Cloud Continuum
+
+Proactive and Reactive Autoscaling Techniques for Edge Computing
+
+Characterizing application scheduling on edge, fog, and cloud computing resources
+
+Coalescent computing
+
+Ubiquitous Computing: Potentials and Challenges
+
+Collaborative Resource Management and Workloads Scheduling in Cloud-Assisted Mobile Edge Computing across Timescales
+
+Cloud No Longer a Silver Bullet, Edge to the Rescue
+
+Social Welfare Maximization for Collaborative Edge Computing: A Deep Reinforcement Learning-Based Approach
+
+Research Challenges for Enterprise Cloud Computing
+
+Resource Allocation for Semantic-Aware Mobile Edge Computing Systems
+
+Evolving 5G: ANIARA, an Edge-Cloud perspective
+
+A Narrative Review of Identity, Data, and Location Privacy Techniques in Edge Computing and Mobile Crowdsourcing
+
+The Liberalities and Tyrannies of ICTs for Vulnerable Migrants: The Status Quo, Gaps and Directions
+
+Deep Learning in the Era of Edge Computing: Challenges and Opportunities
+
+Edge, Fog, and Cloud Computing : An Overview on Challenges and Applications
+
+Measuring Latency Reduction and the Digital Divide of Cloud Edge Datacenters
+
+Emerging Edge Computing Technologies for Distributed IoT Systems
+
+Delay-optimal computation task scheduling for mobile-edge computing systems
+
+Edge-Cloud Continuum Orchestration of Critical Services: A Smart-City Approach
+
+Edge computing vs centralized cloud: Impact of communication latency on the energy consumption of LTE terminal nodes
+
+Local Ratio based Real-time Job Offloading and Resource Allocation in Mobile Edge Computing
+
+Caching at the wireless edge: design aspects, challenges, and future directions
+
+Delay-Optimal Distributed Edge Computing in Wireless Edge Networks
+
+Resource Dimensioning for Single-Cell Edge Video Analytics
+
+Edge Computing in Transportation: Security Issues and Challenges
+
+Mobility Aware Edge Computing Segmentation Towards Localized Orchestration
+

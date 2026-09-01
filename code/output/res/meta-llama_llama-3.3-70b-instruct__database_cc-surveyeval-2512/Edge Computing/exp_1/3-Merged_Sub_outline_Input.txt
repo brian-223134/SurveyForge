@@ -1,0 +1,906 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Edge Computing**.
+
+You have created the following overall outline:
+---
+Title: Comprehensive Survey of Edge Computing: Architectures, Applications, and Future Directions
+
+Section 1: Introduction
+Description 1: Edge Computing is a novel paradigm that extends cloud computing capabilities to the edge of the network, reducing latency and improving real-time processing for various applications. 
+1. Definition and evolution of Edge Computing, highlighting its key characteristics and benefits over traditional cloud computing.
+2. Overview of the current state of Edge Computing, including its applications, challenges, and future prospects.
+3. Importance of Edge Computing in enabling real-time data processing and analysis for emerging technologies like the Internet of Things, Artificial Intelligence, and Fifth Generation networks.
+
+Section 2: Edge Computing Architectures and Technologies
+Description 2: This section explores the technical aspects of Edge Computing, including its architecture, enabling technologies, and infrastructure requirements. 
+1. Overview of Edge Computing architectures, including the role of edge nodes, gateways, and other components.
+2. Discussion of enabling technologies for Edge Computing, such as Fifth Generation networks, Internet of Things protocols, and edge-specific software frameworks.
+3. Examination of infrastructure requirements for Edge Computing, including edge data centers, networking, and storage.
+
+Section 3: Edge Computing Applications and Use Cases
+Description 3: This section delves into the diverse applications and use cases of Edge Computing, highlighting its potential to transform various industries and domains. 
+1. Overview of Industrial Automation applications, including predictive maintenance and quality control.
+2. Discussion of Smart City applications, including intelligent transportation systems and smart energy management.
+3. Examination of emerging applications in areas such as Healthcare, Finance, and Education.
+
+Section 4: Edge Computing Security and Privacy
+Description 4: This section addresses the security and privacy concerns associated with Edge Computing, including the challenges and solutions for protecting edge data and devices. 
+1. Discussion of security threats and vulnerabilities in Edge Computing, including data breaches, denial-of-service attacks, and device compromise.
+2. Examination of privacy concerns in Edge Computing, including data protection, anonymity, and surveillance.
+3. Overview of security and privacy solutions for Edge Computing, including encryption, authentication, and access control.
+
+Section 5: Edge Computing and Artificial Intelligence
+Description 5: This section explores the integration of Artificial Intelligence and Edge Computing, including the role of Artificial Intelligence in Edge Computing, Artificial Intelligence-driven Edge Computing applications, and the challenges of deploying Artificial Intelligence at the edge. 
+1. Overview of Artificial Intelligence applications in Edge Computing, including computer vision, natural language processing, and machine learning.
+2. Discussion of Artificial Intelligence-driven Edge Computing applications, including intelligent surveillance, autonomous vehicles, and smart homes.
+3. Examination of challenges and future directions in Edge Artificial Intelligence, including model deployment, training, and inference at the edge.
+
+Section 6: Edge Computing Challenges and Open Issues
+Description 6: This section discusses the challenges and open issues in Edge Computing, including technical, operational, and societal challenges. 
+1. Analysis of technical challenges, including resource constraints, energy efficiency, and scalability in edge environments.
+2. Discussion of operational challenges, such as management, orchestration, and maintenance of edge infrastructure and applications.
+3. Examination of societal and ethical challenges, including digital divide concerns and the potential impact of Edge Computing on employment and skills.
+
+Section 7: Future Directions and Conclusion
+Description 7: This final section looks ahead to the future of Edge Computing, discussing emerging trends, potential applications, and the role Edge Computing might play in shaping the digital landscape of tomorrow. 
+1. Overview of future research directions, including the integration of Edge Computing with emerging technologies like Sixth Generation networks, Quantum Computing, and Augmented Reality.
+2. Discussion on the potential of Edge Computing to enable new applications and services that were previously unimaginable, such as immersive technologies and autonomous systems.
+3. Conclusion summarizing the key points of the survey and reiterating the importance of Edge Computing in the modern technological ecosystem.
+---
+
+You need to enrich the section **Edge Computing Challenges and Open Issues**, described as: **This section discusses the challenges and open issues in Edge Computing, including technical, operational, and societal challenges.
+1. Analysis of technical challenges, including resource constraints, energy efficiency, and scalability in edge environments.
+2. Discussion of operational challenges, such as management, orchestration, and maintenance of edge infrastructure and applications.
+3. Examination of societal and ethical challenges, including digital divide concerns and the potential impact of Edge Computing on employment and skills.**
+
+**Main task:**
+Generate a comprehensive framework for **Edge Computing Challenges and Open Issues** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Review and analysis of networking challenges in cloud computing
+
+publish_date: 2016-01-20
+
+paper_content:
+
+  Cloud Computing offers virtualized computing, storage, and networking\nresources, over the Internet, to organizations and individual users in a\ncompletely dynamic way. These cloud resources are cheaper, easier to manage,\nand more elastic than sets of local, physical, ones. This encourages customers\nto outsource their applications and services to the cloud. The migration of\nboth data and applications outside the administrative domain of customers into\na shared environment imposes transversal, functional problems across distinct\nplatforms and technologies. This article provides a contemporary discussion of\nthe most relevant functional problems associated with the current evolution of\nCloud Computing, mainly from the network perspective. The paper also gives a\nconcise description of Cloud Computing concepts and technologies. It starts\nwith a brief history about cloud computing, tracing its roots. Then,\narchitectural models of cloud services are described, and the most relevant\nproducts for Cloud Computing are briefly discussed along with a comprehensive\nliterature review. The paper highlights and analyzes the most pertinent and\npractical network issues of relevance to the provision of high-assurance cloud\nservices through the Internet, including security. Finally, trends and future\nresearch directions are also presented.\n
+---
+paper_title: Edge Computing: A Systematic Mapping Study
+
+publish_date: 2021-02-04
+
+paper_content:
+
+Edge computing is a novel computing paradigm that extends cloud resources at the edge of the network to tackle the problem of communication latency in latency-sensitive applications. For the last decades, there have been many efforts dedicated to this field. The dramatic growth in the publications, and the great attention of the research community, have made it necessary to conduct a Systematic Mapping Study (SMS) to enable researchers get a better view of the field. A three-tier search method is considered in this work. In this method, we defined some quality criteria to extract appropriate search spaces and studies. Using this methodology, we select 112 search spaces out of 805 ones, and by searching in these search spaces we select 1440 studies out of 8725. In our SMS, 8 research questions have been designed and answered to identify the main topics, architectures, techniques, etc. in the field of edge computing.
+---
+paper_title: Making ethical decisions for the immersive web
+
+publish_date: 2019-05-14
+
+paper_content:
+
+Mixed reality (MR) ethics occupies a space that intersects with web ethics, emerging tech ethics, healthcare ethics and product ethics (among others). This paper focuses on how we can build an immersive web that encourages ethical development and usage. The technology is beyond emerging (footnote: generally, the ethics of emerging technologies are focused on ethical assessments of research and innovation), but not quite entrenched. We're still in a position to intervene in the development process, instead of attempting to retrofit ethical decisions into an established design. While we have a wider range of data to analyze than most emerging technologies, we're still in a much more speculative state than entrenched technologies. This space is a challenge and an opportunity.
+---
+paper_title: Energy Minimization for Mobile Edge Computing Networks with Time-Sensitive Constraints
+
+publish_date: 2020-08-20
+
+paper_content:
+
+Mobile edge computing (MEC) provides users with a high quality experience (QoE) by placing servers with rich services close to the end users. Compared with local computing, MEC can contribute to energy saving, but results in increased communication latency. In this paper, we jointly optimize task offloading and resource allocation to minimize the energy consumption in an orthogonal frequency division multiple access (OFDMA)-based MEC networks, where the time-sensitive tasks can be processed at both local users and MEC server via partial offloading. Since the optimization variables of the problem are strongly coupled, we first decompose the original problem into two subproblems named as offloading selection (PO), and subcarriers and computing resource allocation (PS), and then propose an iterative algorithm to deal with them in a sequence. To be specific, we derive the closed-form solution for PO, and deal with PS by an alternating way in the dual domain due to its NP-hardness. Simulation results demonstrate
+---
+paper_title: At the Edge of a Seamless Cloud Experience
+
+publish_date: 2021-11-11
+
+paper_content:
+
+There is a growing need for low latency for many devices and users. The traditional cloud computing paradigm can not meet this requirement, legitimizing the need for a new paradigm. Edge computing proposes to move computing capacities to the edge of the network, closer to where data is produced and consumed. However, edge computing raises new challenges. At the edge, devices are more heterogeneous than in the data centre, where everything is optimized to achieve economies of scale. Edge devices can be mobile, like a car, which complicates architecture with dynamic topologies. IoT devices produce a considerable amount of data that can be processed at the Edge. In this paper, we discuss the main challenges to be met in edge computing and solutions to achieve a seamless cloud experience. We propose to use technologies like containers and WebAssembly to manage applications' execution on heterogeneous devices.
+---
+paper_title: Democratizing the Edge: A Pervasive Edge Computing Framework
+
+publish_date: 2020-07-01
+
+paper_content:
+
+The needs of emerging applications, such as augmented and virtual reality, federated machine learning, and autonomous driving, have motivated edge computing--the push of computation capabilities to the edge. Various edge computing architectures have emerged, including multi-access edge computing and edge-cloud, all with the premise of reducing communication latency and augmenting privacy. However, these architectures rely on static and pre-deployed infrastructure, falling short in harnessing the abundant resources at the network's edge. In this paper, we discuss the design of Pervasive Edge Computing (PEC)--a democratized edge computing framework, which enables end-user devices (e.g., smartphones, IoT devices, and vehicles) to dynamically participate in a large-scale computing ecosystem. Our vision of the democratized edge involves the real-time composition of services using available edge resources like data, software, and compute-hardware from multiple stakeholders. We discuss how the novel Named-Data Networking architecture can facilitate service deployment, discovery, invocation, and migration. We also discuss the economic models critical to the adoption of PEC and the outstanding challenges for its full realization.
+---
+paper_title: Security and Privacy Issues in Cloud Computing
+
+publish_date: 2013-03-01
+
+paper_content:
+
+<jats:p>Cloud computing transforms the way Information Technology (IT) is consumed and managed, promising improved cost efficiencies, accelerated innovation, faster time-to-market, and the ability to scale applications on demand (Leighton, 2009). According to Gartner, while the hype grew exponentially during 2008 and continued since, it is clear that there is a major shift towards the cloud computing model and that the benefits may be substantial (Gartner Hype-Cycle, 2012). However, as the shape of cloud computing is emerging and developing rapidly both conceptually and in reality, the legal/contractual, economic, service quality, interoperability, security, and privacy issues still pose significant challenges. In this chapter, the authors describe various service and deployment models of cloud computing and identify major challenges. In particular, they discuss three critical challenges: regulatory, security, and privacy issues in cloud computing. Some solutions to mitigate these challenges are also proposed along with a brief presentation on the future trends in cloud computing deployment. </jats:p>
+---
+paper_title: Supporting UAVs with Edge Computing: A Review of Opportunities and Challenges
+
+publish_date: 2023-10-18
+
+paper_content:
+
+Over the last years, Unmanned Aerial Vehicles (UAVs) have seen significant advancements in sensor capabilities and computational abilities, allowing for efficient autonomous navigation and visual tracking applications. However, the demand for computationally complex tasks has increased faster than advances in battery technology. This opens up possibilities for improvements using edge computing. In edge computing, edge servers can achieve lower latency responses compared to traditional cloud servers through strategic geographic deployments. Furthermore, these servers can maintain superior computational performance compared to UAVs, as they are not limited by battery constraints. Combining these technologies by aiding UAVs with edge servers, research finds measurable improvements in task completion speed, energy efficiency, and reliability across multiple applications and industries. This systematic literature review aims to analyze the current state of research and collect, select, and extract the key areas where UAV activities can be supported and improved through edge computing.
+---
+paper_title: Systems Computing Challenges in the Internet of Things
+
+publish_date: 2016-04-11
+
+paper_content:
+
+A recent McKinsey report estimates the economic impact of the Internet of Things (IoT) to be between $3.9 to $11 trillion dollars by 20251 . IoT has the potential to have a profound impact on our daily lives, including technologies for the home, for health, for transportation, and for managing our natural resources. The Internet was largely driven by information and ideas generated by people, but advances in sensing and hardware have enabled computers to more easily observe the physical world. Coupling this additional layer of information with advances in machine learning brings dramatic new capabilities including the ability to capture and process tremendous amounts of data; to predict behaviors, activities, and the future in uncanny ways; and to manipulate the physical world in response. This trend will fundamentally change how people interact with physical objects and the environment. Success in developing value-added capabilities around IoT requires a broad approach that includes expertise in sensing and hardware, machine learning, networked systems, human-computer interaction, security, and privacy. Strategies for making IoT practical and spurring its ultimate adoption also require a multifaceted approach that often transcends technology, such as with concerns over data security, privacy, public policy, and regulatory issues. In this paper we argue that existing best practices in building robust and secure systems are insufficient to address the new challenges that IoT systems will present. We provide recommendations regarding investments in research areas that will help address inadequacies in existing systems, practices, tools, and policies.
+---
+paper_title: Green-aware Mobile Edge Computing for IoT: Challenges, Solutions and Future Directions
+
+publish_date: 2020-09-08
+
+paper_content:
+
+The development of Internet of Things (IoT) technology enables the rapid growth of connected smart devices and mobile applications. However, due to the constrained resources and limited battery capacity, there are bottlenecks when utilizing the smart devices. Mobile edge computing (MEC) offers an attractive paradigm to handle this challenge. In this work, we concentrate on the MEC application for IoT and deal with the energy saving objective via offloading workloads between cloud and edge. In this regard, we firstly identify the energy-related challenges in MEC. Then we present a green-aware framework for MEC to address the energy-related challenges, and provide a generic model formulation for the green MEC. We also discuss some state-of-the-art workloads offloading approaches to achieve green IoT and compare them in comprehensive perspectives. Finally, some future research directions related to energy efficiency in MEC are given.
+---
+paper_title: Dynamic Service Provisioning in the Edge-cloud Continuum with Provable Guarantees
+
+publish_date: 2022-02-17
+
+paper_content:
+
+We consider a hierarchical edge-cloud architecture in which services are provided to mobile users as chains of virtual network functions. Each service has specific computation requirements and target delay performance, which require placing the corresponding chain properly and allocating a suitable amount of computing resources. Furthermore, chain migration may be necessary to meet the services' target delay, or convenient to keep the service provisioning cost low. We tackle such issues by formalizing the problem of optimal chain placement and resource allocation in the edge-cloud continuum, taking into account migration, bandwidth, and computation costs. Specifically, we first envision an algorithm that, leveraging resource augmentation, addresses the above problem and provides an upper bound to the amount of resources required to find a feasible solution. We use this algorithm as a building block to devise an efficient approach targeting the minimum-cost solution, while minimizing the required resource augmentation. Our results, obtained through trace-driven, large-scale simulations, show that our solution can provide a feasible solution by using half the amount of resources required by state-of-the-art alternatives.
+---
+paper_title: Opportunistic Edge Computing: Concepts, opportunities and research challenges
+
+publish_date: 2018-06-12
+
+paper_content:
+
+  The growing need for low-latency access to computing resources has motivated\nthe introduction of edge computing, where resources are strategically placed at\nthe access networks. Unfortunately, edge computing infrastructures like fogs\nand cloudlets have limited scalability and may be prohibitively expensive to\ninstall given the vast edge of the Internet. In this paper, we present\nOpportunistic Edge Computing (OEC), a new computing paradigm that provides a\nframework to create scalable infrastructures at the edge using end-user\ncontributed resources. One of the goals of OEC is to place resources where\nthere is high demand for them by incentivizing people to share their resources.\nThis paper defines the OEC paradigm and the involved stakeholders and puts\nforward a management framework to build, manage and monitor scalable edge\ninfrastructures. It also highlights the key differences between the OEC\ncomputing models and the existing computing models and shed the light on early\nworks on the topic. The paper also presents preliminary experimental results\nthat highlight the benefits and the limitations of OEC compared to the regular\ncloud computing deployment and the Fog deployment. It finally summarizes key\nresearch directions pertaining to resource management in OEC environments.\n
+---
+paper_title: Energy-Efficient Offloading in Mobile Edge Computing with Edge-Cloud Collaboration
+
+publish_date: 2018-11-09
+
+paper_content:
+
+Multiple access mobile edge computing is an emerging technique to bring computation resources close to end mobile users. By deploying edge servers at WiFi access points or cellular base stations, the computation capabilities of mobile users can be extended. Existing works mostly assume the remote cloud server can be viewed as a special edge server or the edge servers are willing to cooperate, which is not practical. In this work, we propose an edge-cloud cooperative architecture where edge servers can rent for the remote cloud servers to expedite the computation of tasks from mobile users. With this architecture, the computation offloading problem is modeled as a mixed integer programming with delay constraints, which is NP-hard. The objective is to minimize the total energy consumption of mobile devices. We propose a greedy algorithm as well as a simulated annealing algorithm to effectively solve the problem. Extensive simulation results demonstrate that, the proposed greedy algorithm and simulated annealing algorithm can achieve the near optimal performance. On average, the proposed greedy algorithm can achieve the same application completing time budget performance of the Brute Force optional algorithm with only 31\% extra energy cost. The simulated annealing algorithm can achieve similar performance with the greedy algorithm.
+---
+paper_title: A Risk-Sensitive Task Offloading Strategy for Edge Computing in Industrial Internet of Things
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Edge computing has become one of the key enablers for ultra-reliable and low-latency communications in the industrial Internet of Things in the fifth generation communication systems, and is also a promising technology in the future sixth generation communication systems. In this work, we consider the application of edge computing to smart factories for mission-critical task offloading through wireless links. In such scenarios, although high end-to-end delays from the generation to completion of tasks happen with low probability, they may incur severe casualties and property loss, and should be seriously treated. Inspired by the risk management theory widely used in finance, we adopt the Conditional Value at Risk to capture the tail of the delay distribution. An upper bound of the Conditional Value at Risk is derived through analysis of the queues both at the devices and the edge computing servers. We aim to find out the optimal offloading policy taking into consideration both the average and the worst case delay performance of the system. Given that the formulated optimization problem is a non-convex mixed integer non-linear programming problem, a decomposition into sub-problems is performed and a two-stage heuristic algorithm is proposed. Simulation results validate our analysis and indicate that the proposed algorithm can reduce the risk in both the queuing and end-to-end delay.
+---
+paper_title: Sharing is Caring: A Mobile Edge Computing Perspective
+
+publish_date: 2021-07-11
+
+paper_content:
+
+In this paper, we consider a system model in conjunction with two major technologies in 5G communications, i.e., mobile edge computing and spectrum sharing. An IoT network, which does not have access to any licensed spectrum, carries its computational task offloading activities with help of spectrum sharing. The IoT network cooperates with a licensed spectrum holding network by relaying its data and in return gets access to the licensed spectrum. The licensed spectrum holding network focuses on throughput maximization, whereas, the IoT network tries to maximize task computation rate. We formulate an optimization problem giving importance to both networks' interests. Typical IoT nodes may be energy-constrained, which is considered along with task computation time constraints. Parallel computation is considered while computing IoT nodes' computational tasks at the mobile edge computing server, where the processor is allocated based on IoT nodes' offloading capabilities. The advantage of such processor allocation is shown in the result section. Moreover, we also show how both IoT and licensed spectrum holding networks benefit from the spectrum sharing by caring for each other requirements, which echoes the fact, i.e., Sharing is Caring.
+---
+paper_title: Resource Management in Fog/Edge Computing
+
+publish_date: 2018-10-01
+
+paper_content:
+
+<jats:p>Contrary to using distant and centralized cloud data center resources, employing decentralized resources at the edge of a network for processing data closer to user devices, such as smartphones and tablets, is an upcoming computing paradigm, referred to as fog/edge computing. Fog/edge resources are typically resource-constrained, heterogeneous, and dynamic compared to the cloud, thereby making resource management an important challenge that needs to be addressed. This article reviews publications as early as 1991, with 85% of the publications between 2013 and 2018, to identify and classify the architectures, infrastructure, and underlying algorithms for managing resources in fog/edge computing.</jats:p>
+---
+paper_title: HRNET: AI on Edge for mask detection and social distancing
+
+publish_date: 2021-11-01
+
+paper_content:
+
+The purpose of the paper is to provide innovative emerging technology framework for community to combat epidemic situations. The paper proposes a unique outbreak response system framework based on artificial intelligence and edge computing for citizen centric services to help track and trace people eluding safety policies like mask detection and social distancing measure in public or workplace setup. The framework further provides implementation guideline in industrial setup as well for governance and contact tracing tasks. The adoption will thus lead in smart city planning and development focusing on citizen health systems contributing to improved quality of life. The conceptual framework presented is validated through quantitative data analysis via secondary data collection from researcher's public websites, GitHub repositories and renowned journals and further benchmarking were conducted for experimental results in Microsoft Azure cloud environment. The study includes selective AI-models for benchmark analysis and were assessed on performance and accuracy in edge computing environment for large scale societal setup. Overall YOLO model Outperforms in object detection task and is faster enough for mask detection and HRNetV2 outperform semantic segmentation problem applied to solve social distancing task in AI-Edge inferencing environmental setup. The paper proposes new Edge-AI algorithm for building technology-oriented solutions for detecting mask in human movement and social distance. The paper enriches the technological advancement in artificial intelligence and edge-computing applied to problems in society and healthcare systems. The framework further equips government agency, system providers to design and constructs technology-oriented models in community setup to Increase the quality of life using emerging technologies into smart urban environments.
+---
+paper_title: Consider ethical and social challenges in smart grid research
+
+publish_date: 2019-12-01
+
+paper_content:
+
+  Artificial Intelligence and Machine Learning are increasingly seen as key\ntechnologies for building more decentralised and resilient energy grids, but\nresearchers must consider the ethical and social implications of their use\n
+---
+paper_title: The Cloud Next Door: Investigating the Environmental and Socioeconomic Strain of Datacenters on Local Communities
+
+publish_date: 2025-06-03
+
+paper_content:
+
+Datacenters have become the backbone of modern digital infrastructure, powering the rapid rise of artificial intelligence and promising economic growth and technological progress. However, this expansion has brought growing tensions in the local communities where datacenters are already situated or being proposed. While the mainstream discourse often focuses on energy usage and carbon footprint of the computing sector at a global scale, the local socio-environmental consequences -- such as health impacts, water usage, noise pollution, infrastructural strain, and economic burden -- remain largely underexplored and poorly addressed. In this work, we surface these community-level consequences through a mixed-methods study that combines quantitative data with qualitative insights. Focusing on Northern Virginia's ``Data Center Valley,'' we highlight how datacenter growth reshapes local environments and everyday life, and examine the power dynamics that determine who benefits and who bears the costs. Our goal is to bring visibility to these impacts and prompt more equitable and informed decisions about the future of digital infrastructure.
+---
+paper_title: Challenges and Opportunities in Edge Computing
+
+publish_date: 2016-09-07
+
+paper_content:
+
+Many cloud-based applications employ a data centre as a central server to process data that is generated by edge devices, such as smartphones, tablets and wearables. This model places ever increasing demands on communication and computational infrastructure with inevitable adverse effect on Quality-of-Service and Experience. The concept of Edge Computing is predicated on moving some of this computational load towards the edge of the network to harness computational capabilities that are currently untapped in edge nodes, such as base stations, routers and switches. This position paper considers the challenges and opportunities that arise out of this new direction in the computing landscape.
+---
+paper_title: How Close to the Edge? Delay/utilization tradeoffs in MEC
+
+publish_date: 2016-11-25
+
+paper_content:
+
+Virtually all of the rapidly increasing data traffic consumed by mobile users requires some kind of processing, normally performed at cloud servers. A recent thrust, {\em mobile edge computing}, moves such processing to servers {\em within} the cellular mobile network. The large temporal and spatial variations to which mobile data usage is subject could make the reduced latency that edge clouds offer come at an unacceptable cost in redundant and underutilized infrastructure. We present some first empirical results on this question, based on large scale sampled crowd-sourced traces from several major cities spanning multiple operators and identifying the applications in use. We find opportunities to obtain both high server utilization and low application latency, but the best approaches will depend on the individual network operator's deployment strategy and geographic specifics of the cities we study.
+---
+paper_title: A Review on Computational Intelligence Techniques in Cloud and Edge Computing
+
+publish_date: 2020-07-27
+
+paper_content:
+
+Cloud computing (CC) is a centralized computing paradigm that accumulates
+resources centrally and provides these resources to users through Internet.
+Although CC holds a large number of resources, it may not be acceptable by
+real-time mobile applications, as it is usually far away from users
+geographically. On the other hand, edge computing (EC), which distributes
+resources to the network edge, enjoys increasing popularity in the applications
+with low-latency and high-reliability requirements. EC provides resources in a
+decentralized manner, which can respond to users' requirements faster than the
+normal CC, but with limited computing capacities. As both CC and EC are
+resource-sensitive, several big issues arise, such as how to conduct job
+scheduling, resource allocation, and task offloading, which significantly
+influence the performance of the whole system. To tackle these issues, many
+optimization problems have been formulated. These optimization problems usually
+have complex properties, such as non-convexity and NP-hardness, which may not
+be addressed by the traditional convex optimization-based solutions.
+Computational intelligence (CI), consisting of a set of nature-inspired
+computational approaches, recently exhibits great potential in addressing these
+optimization problems in CC and EC. This paper provides an overview of research
+problems in CC and EC and recent progresses in addressing them with the help of
+CI techniques. Informative discussions and future research trends are also
+presented, with the aim of offering insights to the readers and motivating new
+research directions.
+---
+paper_title: Relating Edge Computing and Microservices by means of Architecture Approaches and Features, Orchestration, Choreography, and Offloading: A Systematic Literature Review
+
+publish_date: 2023-01-18
+
+paper_content:
+
+Context: Microservices running and being powered by Edge Computing have been gaining much attention in the industry and academia. Since 2014, when Martin Fowler popularized the Microservice term, many studies have been published relating these subjects to explore how the Edge's low-latency feature could be combined with the high throughput of the distributed paradigm from Microservices. Objective: Identifying how Microservices work together with Edge Computing whereas they take advantage when running on Edge. Method: In order to better understand this relationship, we first identified its key concepts, which are: architecture approaches and features, microservice composition (orchestration/choreography), and offloading. Afterward, we conducted a Systematic Literature Review (SLR) as the survey method. Results: We reviewed 111 selected studies and built a taxonomy of Microservices on Edge Computing demonstrating their current architecture approaches and features, composition, and offloading modes. Moreover, we identify the research gaps and trends. Conclusion: This paper is a step forward to help researchers and professionals get a general overview of how Microservices and Edge have been related in the last years. It also discusses gaps and research trends. This SLR will also be a good introduction for new researchers in Edge and Microservices.
+---
+paper_title: Internet of Things (IoT) and New Computing Paradigms
+
+publish_date: 2018-12-03
+
+paper_content:
+
+The chapter presents foundations of computing paradigms for realizing emerging IoT applications, especially fog and edge computing, their background, characteristics, architectures and open challenges.
+---
+paper_title: Towards Characterization of Edge-Cloud Continuum
+
+publish_date: 2023-09-11
+
+paper_content:
+
+  Internet of Things and cloud computing are two technological paradigms that\nreached widespread adoption in recent years. These paradigms are complementary:\nIoT applications often rely on the computational resources of the cloud to\nprocess the data generated by IoT devices. The highly distributed nature of IoT\napplications and the giant amounts of data involved led to significant parts of\ncomputation being moved from the centralized cloud to the edge of the network.\nThis gave rise to new hybrid paradigms, such as edge-cloud computing and fog\ncomputing. Recent advances in IoT hardware, combined with the continued\nincrease in complexity and variability of the edge-cloud environment, led to an\nemergence of a new vision of edge-cloud continuum: the next step of integration\nbetween the IoT and the cloud, where software components can seamlessly move\nbetween the levels of computational hierarchy. However, as this concept is very\nnew, there is still no established view of what exactly it entails. Several\nviews on the future edge-cloud continuum have been proposed, each with its own\nset of requirements and expected characteristics. In order to move the\ndiscussion of this concept forward, these views need to be put into a coherent\npicture. In this paper, we provide a review and generalization of the existing\nliterature on edge-cloud continuum, point out its expected features, and\ndiscuss the challenges that need to be addressed in order to bring about this\nenvisioned environment for the next generation of smart distributed\napplications.\n
+---
+paper_title: Proactive and Reactive Autoscaling Techniques for Edge Computing
+
+publish_date: 2025-10-11
+
+paper_content:
+
+Edge computing allows for the decentralization of computing resources. This decentralization is achieved through implementing microservice architectures, which require low latencies to meet stringent service level agreements (SLA) such as performance, reliability, and availability metrics. While cloud computing offers the large data storage and computation resources necessary to handle peak demands, a hybrid cloud and edge environment is required to ensure SLA compliance. Several auto-scaling algorithms have been proposed to try to achieve these compliance challenges, but they suffer from performance issues and configuration complexity. This chapter provides a brief overview of edge computing architecture, its uses, benefits, and challenges for resource scaling. We then introduce Service Level Agreements, and existing research on devising algorithms used in edge computing environments to meet these agreements, along with their benefits and drawbacks.
+---
+paper_title: Characterizing application scheduling on edge, fog, and cloud computing resources
+
+publish_date: 2019-04-23
+
+paper_content:
+
+<jats:title>Summary</jats:title><jats:p>Cloud computing has grown to become a popular distributed computing service offered by commercial providers. More recently, edge and fog computing resources have emerged on the wide‐area network as part of Internet of things (IoT) deployments. These three resource abstraction layers are complementary, and offer distinctive benefits. Scheduling applications on clouds has been an active area of research, with workflow and data flow models offering a flexible abstraction to specify applications for execution. However, the application programming and scheduling models for edge and fog are still maturing, and can benefit from learnings on cloud resources. At the same time, there is also value in using these resources cohesively for application execution. In this article, we offer a taxonomy of concepts essential for specifying and solving the problem of scheduling applications on edge, fog, and cloud computing resources. We first characterize the resource capabilities and limitations of these infrastructure and offer a taxonomy of application models, quality‐of‐service constraints and goals, and scheduling techniques, based on a literature review. We also tabulate key research prototypes and papers using this taxonomy. This survey benefits developers and researchers on these distributed resources in designing and categorizing their applications, selecting the relevant computing abstraction(s), and developing or selecting the appropriate scheduling algorithm. It also highlights gaps in literature where open problems remain.</jats:p>
+---
+paper_title: Coalescent computing
+
+publish_date: 2021-04-14
+
+paper_content:
+
+As computational infrastructure extends to the edge, it will increasingly
+offer the same fine-grained resource provisioning mechanisms used in
+large-scale cloud datacenters, and advances in low-latency, wireless networking
+technology will allow service providers to blur the distinction between local
+and remote resources for commodity computing. From the users' perspectives,
+their devices will no longer have fixed computational power, but rather will
+appear to have flexible computational capabilities that vary subject to the
+shared, disaggregated edge resources available in their physical proximity.
+System software will transparently leverage these ephemeral resources to
+provide a better end-user experience. We discuss key systems challenges to
+enabling such tightly-coupled, disaggregated, and ephemeral infrastructure
+provisioning, advocate for more research in the area, and outline possible
+paths forward.
+---
+paper_title: Ubiquitous Computing: Potentials and Challenges
+
+publish_date: 2010-11-01
+
+paper_content:
+
+The world is witnessing the birth of a revolutionary computing paradigm that promises to have a profound effect on the way we interact with computers, devices, physical spaces, and other people. This new technology, called ubiquitous computing, envisions a world where embedded processors, computers, sensors, and digital communications are inexpensive commodities that are available everywhere. This paper presents a comprehensive discussion on the central trends in ubiquitous computing considering them form technical, social and economic perspectives. It clearly identifies different application areas and sectors that will benefit from the potentials of ubiquitous computing. It also brings forth the challenges of ubiquitous computing that require active solutions and management.
+---
+paper_title: Collaborative Resource Management and Workloads Scheduling in Cloud-Assisted Mobile Edge Computing across Timescales
+
+publish_date: 2024-05-31
+
+paper_content:
+
+Due to the limited resource capacity of edge servers and the high purchase costs of edge resources, service providers are facing the new challenge of how to take full advantage of the constrained edge resources for Internet of Things (IoT) service hosting and task scheduling to maximize system performance. In this paper, we study the joint optimization problem on service placement, resource provisioning, and workloads scheduling under resource and budget constraints, which is formulated as a mixed integer non-linear programming problem. Given that the frequent service placement and resource provisioning will significantly increase system configuration costs and instability, we propose a two-timescale framework for resource management and workloads scheduling, named RMWS. RMWS consists of a Gibbs sampling algorithm and an alternating minimization algorithm to determine the service placement and resource provisioning on large timescales. And a sub-gradient descent method has been designed to solve the workload scheduling challenge on small timescales.We conduct comprehensive experiments under different parameter settings. The RMWS consistently ensures a minimum 10% performance enhancement compared to other algorithms, showcasing its superiority. Theoretical proofs are also provided accordingly.
+---
+paper_title: Cloud No Longer a Silver Bullet, Edge to the Rescue
+
+publish_date: 2018-02-01
+
+paper_content:
+
+This paper takes the position that, while cognitive computing today relies heavily on the cloud, we will soon see a paradigm shift where cognitive computing primarily happens on network edges. The shift toward edge devices is fundamentally propelled both by technological constraints in data centers and wireless network infrastructures, as well as practical considerations such as privacy and safety. The remainder of this paper lays out our view of how these constraints will impact future cognitive computing. Bringing cognitive computing to edge devices opens up several new opportunities and challenges, some of which demand new solutions and some of which require us to revisit entrenched techniques in light of new technologies. We close the paper with a call to action for future research.
+---
+paper_title: Social Welfare Maximization for Collaborative Edge Computing: A Deep Reinforcement Learning-Based Approach
+
+publish_date: 2022-11-13
+
+paper_content:
+
+Collaborative Edge Computing (CEC) is an effective method that improves the performance of Mobile Edge Computing (MEC) systems by offloading computation tasks from busy edge servers (ESs) to idle ones. However, ESs usually belong to different MEC service providers so they have no incentive to help others. To motivate cooperation among them, this paper proposes a cooperative mechanism where idle ESs can earn extra profits by sharing their spare computational resources. To achieve the optimal resource allocation, we formulate the social welfare maximization problem as a Markov Decision Process (MDP) and decompose it into two stages involving the allocation and execution of offloaded tasks. The first stage is solved by extending the well-known Deep Deterministic Policy Gradient (DDPG) algorithm. For the second stage, we first show that we only need to decide the processing order of tasks and the utilized computational resources. After that, we propose a dynamic programming and a Deep Reinforcement Learning (DRL)-based algorithm to solve the two types of decisions, respectively. Numerical results indicate that our algorithm significantly improves social welfare under various situations.
+---
+paper_title: Research Challenges for Enterprise Cloud Computing
+
+publish_date: 2010-01-01
+
+paper_content:
+
+Cloud computing represents a shift away from computing as a product that is purchased, to computing as a service that is delivered to consumers over the internet from large-scale data centers - or "clouds". This paper discusses some of the research challenges for cloud computing from an enterprise or organizational perspective, and puts them in context by reviewing the existing body of literature in cloud computing. Various research challenges relating to the following topics are discussed: the organizational changes brought about by cloud computing; the economic and organizational implications of its utility billing model; the security, legal and privacy issues that cloud computing raises. It is important to highlight these research challenges because cloud computing is not simply about a technological improvement of data centers but a fundamental change in how IT is provisioned and used. This type of research has the potential to influence wider adoption of cloud computing in enterprise, and in the consumer market too.
+---
+paper_title: Resource Allocation for Semantic-Aware Mobile Edge Computing Systems
+
+publish_date: 2023-09-01
+
+paper_content:
+
+In this paper, a semantic-aware joint communication and computation resource allocation framework is proposed for mobile edge computing (MEC) systems. In the considered system, each terminal device (TD) has a computation task, which needs to be executed by offloading to the MEC server. To further decrease the transmission burden, each TD sends the small-size extracted semantic information of tasks to the server instead of the large-size raw data. An optimization problem of joint semantic-aware division factor, communication and computation resource management is formulated. The problem aims to minimize the maximum execution delay of all TDs while satisfying energy consumption constraints. The original non-convex problem is transformed into a convex one based on the geometric programming and the optimal solution is obtained by the alternating optimization algorithm. Moreover, the closed-form optimal solution of the semantic extraction factor is derived. Simulation results show that the proposed algorithm yields up to 37.10% delay reduction compared with the benchmark algorithm without semantic-aware allocation. Furthermore, small semantic extraction factors are preferred in the case of large task sizes and poor channel conditions.
+---
+paper_title: Evolving 5G: ANIARA, an Edge-Cloud perspective
+
+publish_date: 2022-05-06
+
+paper_content:
+
+Emerging use-cases like smart manufacturing and smart cities pose challenges in terms of latency, which cannot be satisfied by traditional centralized networks. Edge networks, which bring computational capacity closer to the users/clients, are a promising solution for supporting these critical low latency services. Different from traditional centralized networks, the edge is distributed by nature and is usually equipped with limited connectivity and compute capacity. This creates a complex network to handle, subject to failures of different natures, that requires novel solutions to work in practice. To reduce complexity, more lightweight solutions are needed for containerization as well as smart monitoring strategies with reduced overhead. Orchestration strategies should provide reliable resource slicing with limited resources, and intelligent scaling while preserving data privacy in a distributed fashion. Power management is also critical, as providing and managing a large amount of power at the edge is unprecedented.
+---
+paper_title: A Narrative Review of Identity, Data, and Location Privacy Techniques in Edge Computing and Mobile Crowdsourcing
+
+publish_date: 2024-01-20
+
+paper_content:
+
+As digital technology advances, the proliferation of connected devices poses significant challenges and opportunities in mobile crowdsourcing and edge computing. This narrative review focuses on the need for privacy protection in these fields, emphasizing the increasing importance of data security in a data-driven world. Through an analysis of contemporary academic literature, this review provides an understanding of the current trends and privacy concerns in mobile crowdsourcing and edge computing. We present insights and highlight advancements in privacy-preserving techniques, addressing identity, data, and location privacy. This review also discusses the potential directions that can be useful resources for researchers, industry professionals, and policymakers.
+---
+paper_title: The Liberalities and Tyrannies of ICTs for Vulnerable Migrants: The Status Quo, Gaps and Directions
+
+publish_date: 2021-08-22
+
+paper_content:
+
+Information and communication technologies (ICTs) have increasingly become vital for people on the move including the nearly 80 million displaced due to conflict, violence, and human right violations globally. However, existing research on ICTs and migrants, which almost entirely focused on migrants' ICT use 'en route' or within developed economies principally in the perspectives of researchers from these regions, is very fragmented posing a difficulty in understanding the key objects of research. Moreover, ICTs are often celebrated as liberating and exploitable at migrants' rational discretion even though they are 'double-edged swords' with significant risks, burdens, pressures and inequality challenges particularly for vulnerable migrants including those forcefully displaced and trafficked. Towards addressing these limitations and illuminating future directions, this paper, first, scrutinises the existing research vis-a-vis ICTs' liberating and authoritarian role particularly for vulnerable migrants whereby explicating key issues in the research domain. Second, it identifies key gaps and opportunities for future research. Using a tailored methodology, broad literature relating to ICTs and migration/development published in the period 1990-2020 was surveyed resulting in 157 selected publications which were critically appraised vis-a-vis the key themes, major technologies dealt with, and methodologies and theories/concepts adopted. Furthermore, key insights, trends, gaps, and future research opportunities pertaining to both the existing and missing objects of research in ICTs and migration/development are spotlighted.
+---
+paper_title: Deep Learning in the Era of Edge Computing: Challenges and Opportunities
+
+publish_date: 2020-10-17
+
+paper_content:
+
+The era of edge computing has arrived. Although the Internet is the backbone of edge computing, its true value lies at the intersection of gathering data from sensors and extracting meaningful information from the sensor data. We envision that in the near future, majority of edge devices will be equipped with machine intelligence powered by deep learning. However, deep learning-based approaches require a large volume of high-quality data to train and are very expensive in terms of computation, memory, and power consumption. In this chapter, we describe eight research challenges and promising opportunities at the intersection of computer systems, networking, and machine learning. Solving those challenges will enable resource-limited edge devices to leverage the amazing capability of deep learning. We hope this chapter could inspire new research that will eventually lead to the realization of the vision of intelligent edge.
+---
+paper_title: Edge, Fog, and Cloud Computing : An Overview on Challenges and Applications
+
+publish_date: 2022-11-03
+
+paper_content:
+
+With the rapid growth of the Internet of Things (IoT) and a wide range of mobile devices, the conventional cloud computing paradigm faces significant challenges (high latency, bandwidth cost, etc.). Motivated by those constraints and concerns for the future of the IoT, modern architectures are gearing toward distributing the cloud computational resources to remote locations where most end-devices are located. Edge and fog computing are considered as the key enablers for applications where centralized cloud-based solutions are not suitable. In this paper, we review the high-level definition of edge, fog, cloud computing, and their configurations in various IoT scenarios. We further discuss their interactions and collaborations in many applications such as cloud offloading, smart cities, health care, and smart agriculture. Though there are still challenges in the development of such distributed systems, early research to tackle those limitations have also surfaced.
+---
+paper_title: Measuring Latency Reduction and the Digital Divide of Cloud Edge Datacenters
+
+publish_date: 2023-04-11
+
+paper_content:
+
+Cloud providers are highly incentivized to reduce latency. One way they do this is by locating datacenters as close to users as possible. These "cloud edge" datacenters are placed in metropolitan areas and enable edge computing for residents of these cities. Therefore, which cities are selected to host edge datacenters determines who has the fastest access to applications requiring edge compute - creating a digital divide between those closest and furthest from a datacenter. In this study we measure latency to the current and predicted cloud edge datacenters of three major cloud providers around the world. Our measurements use the RIPE Atlas platform targeting cloud regions, AWS Local Zones, and network optimization services that minimize the path to the cloud edge. An analysis of the digital divide shows rising inequality as the relative difference between users closest and farthest from cloud compute increases. We also find this inequality unfairly affects lower income census tracts in the US. This result is extended globally using remotely sensed night time lights as a proxy for wealth. Finally, we demonstrate that low earth orbit satellite internet can help to close this digital divide and provide more fair access to the cloud edge.
+---
+paper_title: Emerging Edge Computing Technologies for Distributed IoT Systems
+
+publish_date: 2018-11-01
+
+paper_content:
+
+  The ever-increasing growth in the number of connected smart devices and\nvarious Internet of Things (IoT) verticals is leading to a crucial challenge of\nhandling massive amount of raw data generated from distributed IoT systems and\nproviding real-time feedback to the end-users. Although existing\ncloud-computing paradigm has an enormous amount of virtual computing power and\nstorage capacity, it is not suitable for latency-sensitive applications and\ndistributed systems due to the involved latency and its centralized mode of\noperation. To this end, edge/fog computing has recently emerged as the next\ngeneration of computing systems for extending cloud-computing functions to the\nedges of the network. Despite several benefits of edge computing such as\ngeo-distribution, mobility support and location awareness, various\ncommunication and computing related challenges need to be addressed in\nrealizing edge computing technologies for future IoT systems. In this regard,\nthis paper provides a holistic view on the current issues and effective\nsolutions by classifying the emerging technologies in regard to the joint\ncoordination of radio and computing resources, system optimization and\nintelligent resource management. Furthermore, an optimization framework for\nedge-IoT systems is proposed to enhance various performance metrics such as\nthroughput, delay, resource utilization and energy consumption. Finally, a\nMachine Learning (ML) based case study is presented along with some numerical\nresults to illustrate the significance of edge computing.\n
+---
+paper_title: Delay-optimal computation task scheduling for mobile-edge computing systems
+
+publish_date: 2016-04-26
+
+paper_content:
+
+<p>Mobile-edge computing (MEC) emerges as a promising paradigm to improve the quality of computation experience for mobile devices. Nevertheless, the design of computation task scheduling policies for MEC systems inevitably encounters a challenging two-timescale stochastic optimization problem. Specifically, in the larger timescale, whether to execute a task locally at the mobile device or to offload a task to the MEC server for cloud computing should be decided, while in the smaller timescale, the transmission policy for the task input data should adapt to the channel side information. In this paper, we adopt a Markov decision process approach to handle this problem, where the computation tasks are scheduled based on the queueing state of the task buffer, the execution state of the local processing unit, as well as the state of the transmission unit. By analyzing the average delay of each task and the average power consumption at the mobile device, we formulate a power-constrained delay minimization problem, and propose an efficient one-dimensional search algorithm to find the optimal task scheduling policy. Simulation results are provided to demonstrate the capability of the proposed optimal stochastic task scheduling policy in achieving a shorter average execution delay compared to the baseline policies.</p>
+---
+paper_title: Edge-Cloud Continuum Orchestration of Critical Services: A Smart-City Approach
+
+publish_date: 2024-07-24
+
+paper_content:
+
+Smart-city services are typically developed as closed systems within each city's vertical, communicating and interacting with cloud services while remaining isolated within each provider's domain. With the emergence of 5G private domains and the introduction of new M2M services focusing on autonomous systems, there is a shift from the cloud-based approach to a distributed edge computing paradigm, in a \textit{continuum} orchestration. However, an essential component is missing. Current orchestration tools, designed for cloud-based deployments, lack robust workload isolation, fail to meet timing constraints, and are not tailored to the resource-constrained nature of edge devices. Therefore, new orchestration methods are needed to support MEC environments. The work presented in this paper addresses this gap. Based on the real needs of a smart-city testbed - the Aveiro Living Lab-, we developed a set of orchestration components to facilitate the seamless orchestration of both cloud and edge-based services, encompassing both critical and non-critical services. This work extends the current Kubernetes orchestration platform to include a novel location-specific resource definition, a custom scheduler to accommodate real-time and legacy services, continuous service monitoring to detect sub-optimal states, and a refined load balancing mechanism that prioritizes the fastest response times.
+---
+paper_title: Edge computing vs centralized cloud: Impact of communication latency on the energy consumption of LTE terminal nodes
+
+publish_date: 2021-11-19
+
+paper_content:
+
+  Edge computing brings several advantages, such as reduced latency, increased\nbandwidth, and improved locality of traffic. One aspect that is not\nsufficiently understood is to what extent the different communication latency\nexperienced in the edge-cloud continuum impacts on the energy consumption of\nclients. We studied the energy consumption of a request-response communication\nscheme when an LTE node communicates with edge-based or cloud-based servers.\nResults show that the reduced latency of edge servers bring significant\nbenefits in terms of energy consumption. Experiments also show how the energy\nsavings brought by edge computing are influenced by the prevalent direction of\ndata transfer (upload vs download), load of the server, and daytime/nighttime\noperation.\n
+---
+paper_title: Local Ratio based Real-time Job Offloading and Resource Allocation in Mobile Edge Computing
+
+publish_date: 2025-03-21
+
+paper_content:
+
+Mobile Edge Computing (MEC) has emerged as a promising paradigm enabling vehicles to handle computation-intensive and time-sensitive applications for intelligent transportation. Due to the limited resources in MEC, effective resource management is crucial for improving system performance. While existing studies mostly focus on the job offloading problem and assume that job resource demands are fixed and given apriori, the joint consideration of job offloading (selecting the edge server for each job) and resource allocation (determining the bandwidth and computation resources for offloading and processing) remains underexplored. This paper addresses the joint problem for deadline-constrained jobs in MEC with both communication and computation resource constraints, aiming to maximize the total utility gained from jobs. To tackle this problem, we propose an approximation algorithm, $\mathtt{IDAssign}$, with an approximation bound of $\frac{1}{6}$, and experimentally evaluate the performance of $\mathtt{IDAssign}$ by comparing it to state-of-the-art heuristics using a real-world taxi trace and object detection applications.
+---
+paper_title: Caching at the wireless edge: design aspects, challenges, and future directions
+
+publish_date: 2018-10-01
+
+paper_content:
+
+  Caching at the wireless edge is a promising way of boosting spectral\nefficiency and reducing energy consumption of wireless systems. These\nimprovements are rooted in the fact that popular contents are reused,\nasynchronously, by many users. In this article, we first introduce methods to\npredict the popularity distributions and user preferences, and the impact of\nerroneous information. We then discuss the two aspects of caching systems,\nnamely content placement and delivery. We expound the key differences between\nwired and wireless caching, and outline the differences in the system arising\nfrom where the caching takes place, e.g., at base stations, or on the wireless\ndevices themselves. Special attention is paid to the essential limitations in\nwireless caching, and possible tradeoffs between spectral efficiency, energy\nefficiency and cache size.\n
+---
+paper_title: Delay-Optimal Distributed Edge Computing in Wireless Edge Networks
+
+publish_date: 2020-02-07
+
+paper_content:
+
+By integrating edge computing with parallel computing, distributed edge computing (DEC) makes use of distributed devices in edge networks to perform computing in parallel, which can substantially reduce service delays. In this paper, we explore DEC that exploits distributed edge devices connected by a wireless network to perform a computation task offloaded from an end device. In particular, we study the fundamental problem of minimizing the delay of executing a distributed algorithm of the computation task. We first establish some structural properties of the optimal communication scheduling policy. Then, given these properties, we characterize the optimal computation allocation policy, which can be found by an efficient algorithm. Next, based on the optimal computation allocation, we characterize the optimal scheduling order of communications for some special cases, and develop an efficient algorithm with a finite approximation ratio to find it for the general case. Last, based on the optimal computation allocation and communication scheduling, we further show that the optimal selection of devices can be found efficiently for some special cases. Our results provide some useful insights for the optimal computation-communication co-design. We evaluate the performance of the theoretical findings using simulations.
+---
+paper_title: Resource Dimensioning for Single-Cell Edge Video Analytics
+
+publish_date: 2023-05-01
+
+paper_content:
+
+Edge intelligence is an emerging technology where the base stations located at the edge of the network are equipped with computing units that provide machine learning services to the end users. To provide high-quality services in a cost-efficient way, the wireless and computing resources need to be dimensioned carefully. In this paper, we address the problem of resource dimensioning in a single-cell system that supports edge video analytics under latency and accuracy constraints. We show that the resource-dimensioning problem can be transformed into a convex optimization problem, and we provide numerical results that give insights into the trade-offs between the wireless and computing resources for varying cell sizes and for varying intensity of incoming tasks. Overall, we observe that the wireless and computing resources exhibit opposite trends; the wireless resources favor from smaller cells, where high attenuation losses are avoided, and the computing resources favor from larger cells, where statistical multiplexing allows for computing more tasks. We also show that small cells with low loads have high per-request costs, even when the wireless resources are increased to compensate for the low multiplexing gain at the servers.
+---
+paper_title: Edge Computing in Transportation: Security Issues and Challenges
+
+publish_date: 2020-12-21
+
+paper_content:
+
+As the amount of data that needs to be processed in real-time due to recent application developments increase, the need for a new computing paradigm is required. Edge computing resolves this issue by offloading computing resources required by intelligent transportation systems such as the Internet of Vehicles from the cloud closer to the end devices to improve performance however, it is susceptible to security issues that make the transportation systems vulnerable to attackers. In addition to this, there are security issues in transportation technologies that impact the edge computing paradigm as well. This paper presents some of the main security issues and challenges that are present in edge computing, which are Distributed Denial of Service attacks, side channel attacks, malware injection attacks and authentication and authorization attacks, how these impact intelligent transportation systems and research being done to help realize and mitigate these issues.
+---
+paper_title: Mobility Aware Edge Computing Segmentation Towards Localized Orchestration
+
+publish_date: 2021-10-01
+
+paper_content:
+
+The current trend in end-user devices' advancements in computing and communication capabilities makes edge computing an attractive solution to pave the way for the coveted ultra-low latency services. The success of the edge computing networking paradigm depends on the proper orchestration of the edge servers. Several Edge applications and services are intolerant to latency, especially in 5G and beyond networks, such as intelligent video surveillance, E-health, Internet of Vehicles, and augmented reality applications. The edge devices underwent rapid growth in both capabilities and size to cope with the service demands. Orchestrating it on the cloud was a prominent trend during the past decade. However, the increasing number of edge devices poses a significant burden on the orchestration delay. In addition to the growth in edge devices, the high mobility of users renders traditional orchestration schemes impractical for contemporary edge networks. Proper segmentation of the edge space becomes necessary to adapt these schemes to address these challenges. In this paper, we introduce a segmentation technique employing lax clustering and segregated mobility-based clustering. We then apply latency mapping to these clusters. The proposed scheme's main objective is to create subspaces (segments) that enable light and efficient edge orchestration by reducing the processing time and the core cloud communication overhead. A bench-marking simulation is conducted with the results showing decreased mobility-related failures and reduced orchestration delay.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Edge Computing.
+   ---
+   ---
+paper_title: Edge Video Analytics: A Survey on Applications, Systems and Enabling Techniques
+
+publish_date: 2023-10-11
+
+paper_abstract:
+
+Video, as a key driver in the global explosion of digital information, can
+create tremendous benefits for human society. Governments and enterprises are
+deploying innumerable cameras for a variety of applications, e.g., law
+enforcement, emergency management, traffic control, and security surveillance,
+all facilitated by video analytics (VA). This trend is spurred by the rapid
+advancement of deep learning (DL), which enables more precise models for object
+classification, detection, and tracking. Meanwhile, with the proliferation of
+Internet-connected devices, massive amounts of data are generated daily,
+overwhelming the cloud. Edge computing, an emerging paradigm that moves
+workloads and services from the network core to the network edge, has been
+widely recognized as a promising solution. The resulting new intersection, edge
+video analytics (EVA), begins to attract widespread attention. Nevertheless,
+only a few loosely-related surveys exist on this topic. The basic concepts of
+EVA (e.g., definition, architectures) were not fully elucidated due to the
+rapid development of this domain. To fill these gaps, we provide a
+comprehensive survey of the recent efforts on EVA. In this paper, we first
+review the fundamentals of edge computing, followed by an overview of VA. EVA
+systems and their enabling techniques are discussed next. In addition, we
+introduce prevalent frameworks and datasets to aid future researchers in the
+development of EVA systems. Finally, we discuss existing challenges and foresee
+future research directions. We believe this survey will help readers comprehend
+the relationship between VA and edge computing, and spark new ideas on EVA.
+
+paper_outline:
+
+I. Introduction  
+II. Paper Selection Methodology  
+A. Survey Scope  
+B. Paper Selection Criteria  
+C. Paper Selection Results  
+III. Fundamentals of Edge Computing  
+A. Definition of Edge Computing  
+B. Basic Components in Edge Computing Paradigm  
+C. Computational Hardware  
+IV. Overview of Video Analytics  
+A. Definition of Video Analytics  
+B. Basic Components of Video Analytics Pipelines  
+C. Categorization of Video Analytics Applications  
+V. Edge Video Analytics System  
+A. Definition of Edge Video Analytics  
+B. Architectures of Edge Video Analytics Systems  
+C. Basic Components of Edge Video Analytics Systems  
+D. Performance Indicators  
+E. Application Architectures  
+VI. Enabling Techniques in Edge Video Analytics Systems  
+A. Performance Profiling  
+B. Input Filtering  
+C. Hierarchical Inference  
+D. Configuration Optimization  
+E. Workload Placement and Scheduling  
+VII. Frameworks and Datasets for Video Analytics  
+A. Container Orchestration Frameworks  
+B. Datasets  
+VIII. Research Challenges and Future Directions  
+A. Adaptive Configuration Optimization  
+B. Multi-Camera Collaborative Video Analytics  
+C. Benchmarks, Datasets and Evaluation Methodology  
+D. Large-Scale Edge Video Analytics Systems  
+IX. Conclusion
+---
+paper_title: Edge-Based Video Analytics: A Survey
+
+publish_date: 2023-03-25
+
+paper_abstract:
+
+Edge computing has been getting a momentum with ever-increasing data at the
+edge of the network. In particular, huge amounts of video data and their
+real-time processing requirements have been increasingly hindering the
+traditional cloud computing approach due to high bandwidth consumption and high
+latency. Edge computing in essence aims to overcome this hindrance by
+processing most video data making use of edge servers, such as small-scale
+on-premises server clusters, server-grade computing resources at mobile base
+stations and even mobile devices like smartphones and tablets; hence, the term
+edge-based video analytics. However, the actual realization of such analytics
+requires more than the simple, collective use of edge servers. In this paper,
+we survey state-of-the-art works on edge-based video analytics with respect to
+applications, architectures, techniques, resource management, security and
+privacy. We provide a comprehensive and detailed review on what works, what
+doesn't work and why. These findings give insights and suggestions for next
+generation edge-based video analytics. We also identify open issues and
+research directions.
+
+paper_outline:
+
+I. INTRODUCTION
+
+II. USE CASES AND SERVICE SCENARIOS  
+A. Smart Services  
+B. Safety and Security  
+C. XR (AR, VR, and MR)  
+
+III. ARCHITECTURE  
+A. Edge/Fog-based Architecture  
+B. P2P-based Architecture  
+C. Hierarchical Architecture  
+
+IV. TECHNIQUES AND METHODS  
+A. Video Preprocessing  
+B. Video Analytics  
+C. Computation Offloading  
+D. Collaborative Intelligence  
+
+V. RESOURCE MANAGEMENT  
+A. QoE Metrics  
+B. Resources  
+C. Resource Provisioning Methods  
+D. Other Optimizations  
+
+VI. SECURITY AND PRIVACY  
+A. Privacy-preserving Video Collection  
+B. Privacy-preserving Video Analytics  
+C. Privacy-preserving Video Storage  
+
+VII. ISSUES AND FUTURE RESEARCH DIRECTIONS  
+A. Efficient Video Compression Methods  
+B. 5G/6G Empowered Video Analytics  
+C. Interactive Video Analytics System  
+
+VIII. CONCLUSION
+---
+paper_title: Resource Scheduling in Edge Computing: A Survey
+
+publish_date: 2021-08-18
+
+paper_abstract:
+
+With the proliferation of the Internet of Things (IoT) and the wide
+penetration of wireless networks, the surging demand for data communications
+and computing calls for the emerging edge computing paradigm. By moving the
+services and functions located in the cloud to the proximity of users, edge
+computing can provide powerful communication, storage, networking, and
+communication capacity. The resource scheduling in edge computing, which is the
+key to the success of edge computing systems, has attracted increasing research
+interests. In this paper, we survey the state-of-the-art research findings to
+know the research progress in this field. Specifically, we present the
+architecture of edge computing, under which different collaborative manners for
+resource scheduling are discussed. Particularly, we introduce a unified model
+before summarizing the current works on resource scheduling from three research
+issues, including computation offloading, resource allocation, and resource
+provisioning. Based on two modes of operation, i.e., centralized and
+distributed modes, different techniques for resource scheduling are discussed
+and compared. Also, we summarize the main performance indicators based on the
+surveyed literature. To shed light on the significance of resource scheduling
+in real-world scenarios, we discuss several typical application scenarios
+involved in the research of resource scheduling in edge computing. Finally, we
+highlight some open research challenges yet to be addressed and outline several
+open issues as the future research direction.
+
+paper_outline:
+
+I. INTRODUCTION  
+A. From Cloud Computing to Edge Computing  
+B. Resource Scheduling in Edge Computing  
+C. Related Surveys  
+
+II. ARCHITECTURE  
+A. Things-Edge Collaboration  
+B. Things-Edge-Cloud Collaboration  
+C. Edge-Edge Collaboration  
+D. Edge-Cloud Collaboration  
+
+III. BASIC MODEL AND RESEARCH ISSUES  
+A. Basic Model  
+B. Computation Offloading  
+C. Resource Allocation  
+D. Resource Provisioning  
+
+IV. KEY TECHNIQUES AND PERFORMANCE INDICATORS  
+A. Centralized Methods  
+B. Distributed Methods  
+C. Performance Indicators  
+
+V. RESOURCE SCHEDULING IN APPLICATIONS CONTEXT  
+A. UAV  
+B. CAV  
+C. Video Service  
+D. Smart City  
+E. Smart Health  
+F. Smart Manufacturing  
+G. Smart Home  
+
+VI. CHALLENGES AND RESEARCH DIRECTIONS  
+A. Model and Architecture  
+B. Feasibility  
+C. Security and Privacy  
+D. Dynamics  
+E. Joint Scheduling of Communication, Computing, Storage (CCS) Resources  
+F. Evaluation  
+
+VII. CONCLUSION
+---
+paper_title: Edge-Computing-Enabled Smart Cities: A Comprehensive Survey
+
+publish_date: 2020-10-12
+
+paper_abstract:
+
+Recent years have disclosed a remarkable proliferation of compute-intensive
+applications in smart cities. Such applications continuously generate enormous
+amounts of data which demand strict latency-aware computational processing
+capabilities. Although edge computing is an appealing technology to compensate
+for stringent latency related issues, its deployment engenders new challenges.
+In this survey, we highlight the role of edge computing in realizing the vision
+of smart cities. First, we analyze the evolution of edge computing paradigms.
+Subsequently, we critically review the state-of-the-art literature focusing on
+edge computing applications in smart cities. Later, we categorize and classify
+the literature by devising a comprehensive and meticulous taxonomy.
+Furthermore, we identify and discuss key requirements, and enumerate recently
+reported synergies of edge computing enabled smart cities. Finally, several
+indispensable open challenges along with their causes and guidelines are
+discussed, serving as future research directions.
+
+paper_outline:
+
+I. Introduction  
+A. Research Trend and Statistics  
+B. Motivational Scenarios  
+C. Existing Surveys and Tutorials  
+D. Contributions  
+
+II. Evolution or Origin of Edge Computing  
+A. Metrics  
+B. Evolution  
+
+III. Recent Advances  
+A. Smart Transportation System  
+B. Augmented Reality  
+C. Smart Health-care  
+D. Smart Grids  
+E. Smart Farming  
+F. Smart Buildings  
+G. Smart Management  
+
+IV. Taxonomy  
+A. Characteristics  
+B. Edge Analytics  
+C. Resources  
+D. Resource Management Strategies  
+E. Edge Intelligence  
+F. Caching  
+G. Sustainability  
+H. Security  
+
+V. Requirements  
+A. Scalability and Reliability  
+B. Context-awareness  
+C. Resource Management  
+D. Sustainability  
+E. Elasticity  
+F. Interoperability  
+G. Privacy and Security  
+H. Business Model  
+
+VI. Case Studies  
+A. Barcelona smart city  
+B. #SmartME  
+C. WATCH  
+D. Lessons Learned: Summary and Insights  
+
+VII. Open Research Challenges  
+A. Intelligent Caching  
+B. Collaborative Edge Computing  
+C. Cooperative and Sustainable Load Balancing  
+D. Intelligent Edge Computing  
+E. Network Slicing  
+F. Cyber and Physical Security  
+
+VIII. Conclusions and Future Prospects  
+A. Conclusions  
+B. Future Prospects
+---
+paper_title: A Survey of Multi-Access Edge Computing in 5G and Beyond: Fundamentals, Technology Integration, and State-of-the-Art
+
+publish_date: 2020-01-02
+
+paper_abstract:
+
+Driven by the emergence of new compute-intensive applications and the vision
+of the Internet of Things (IoT), it is foreseen that the emerging 5G network
+will face an unprecedented increase in traffic volume and computation demands.
+However, end users mostly have limited storage capacities and finite processing
+capabilities, thus how to run compute-intensive applications on
+resource-constrained users has recently become a natural concern. Mobile edge
+computing (MEC), a key technology in the emerging fifth generation (5G)
+network, can optimize mobile resources by hosting compute-intensive
+applications, process large data before sending to the cloud, provide the cloud
+computing capabilities within the radio access network (RAN) in close proximity
+to mobile users, and offer context-aware services with the help of RAN
+information. Therefore, MEC enables a wide variety of applications, where the
+real-time response is strictly required, e.g., driverless vehicles, augmented
+reality, robotics, and immerse media. Indeed, the paradigm shift from 4G to 5G
+could become a reality with the advent of new technological concepts. The
+successful realization of MEC in the 5G network is still in its infancy and
+demands for constant efforts from both academic and industry communities. In
+this survey, we first provide a holistic overview of MEC technology and its
+potential use cases and applications. Then, we outline up-to-date researches on
+the integration of MEC with the new technologies that will be deployed in 5G
+and beyond. We also summarize testbeds and experimental evaluations, and open
+source activities, for edge computing. We further summarize lessons learned
+from state-of-the-art research works as well as discuss challenges and
+potential future directions for MEC research.
+
+paper_outline:
+
+I. Introduction  
+A. From Centralized Clouds to Mobile Edges  
+B. Limitations of Prior Works and Our Contributions  
+C. Paper Organization  
+
+II. Overview of MEC Researches  
+A. Fundamentals of MEC  
+B. Integration of MEC into the 5G System  
+C. MEC in 5G and Beyond  
+
+III. MEC with Non-Orthogonal Multiple Access  
+A. Fundamentals of NOMA  
+B. Motivation to Combine NOMA and MEC  
+C. State of the Art  
+D. Learned Lessons and Potential Works  
+
+IV. MEC with Energy Harvesting and Wireless Power Transfer  
+B. Motivation  
+C. State of the Art  
+D. Learned Lessons and Potential Works  
+
+V. MEC for UAV Communications  
+A. Fundamentals of UAV  
+B. Motivation to Combine MEC and UAV  
+C. State of the Art  
+D. Learned Lessons and Potential Works  
+
+VI. MEC for Internet of Things  
+A. Fundamentals of IoT  
+B. Motivation to Use MEC for IoT and Challenges  
+C. State of the Art - MEC-enabled IoT Application Scenarios  
+D. Learned Lessons and Potential Works  
+
+VII. MEC with Heterogeneous Cloud Radio Access Network  
+A. Fundamentals of Heterogeneous C-RANs  
+B. Motivations and Challenges  
+D. Learned Lessons and Potential Works  
+
+VIII. MEC and Machine Learning  
+A. A Brief Review of Machine Learning in Wireless Networks  
+B. Machine Learning for Multi-Access Edge Computing  
+C. Challenges and Future Works  
+
+IX. Miscellaneous Researches  
+A. Open Source Activities  
+B. Testbed and Implementation  
+
+X. Conclusion and Discussion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Edge Computing**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Edge Computing Challenges and Open Issues**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Edge Computing** and **Edge Computing Challenges and Open Issues**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Edge Computing Challenges and Open Issues** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Edge Computing Challenges and Open Issues**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Edge Computing Challenges and Open Issues**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+
