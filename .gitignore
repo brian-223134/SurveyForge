@@ -7,9 +7,11 @@ __pycache__/
 # which swallowed code/output and made the run rules at the bottom unreachable.
 /output/
 
-# holds the API key; .env.example is the tracked template
+# holds the API key; .env.example은 유일한 tracked 템플릿이라 되살린다.
+# 백업본(.env.bak, .env.pre-<view>)도 키를 그대로 담으므로 패턴으로 일괄 제외한다.
 .env
-.env.bak
+.env.*
+!.env.example
 
 # scratch notes and run logs land as .txt; keep the ones that are real config
 *.txt
