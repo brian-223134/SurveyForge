@@ -21,6 +21,30 @@ MAX_TOKENS = int(os.environ.get("SURVEYFORGE_MAX_TOKENS", 8192))
 MAX_THREADS = int(os.environ.get("SURVEYFORGE_MAX_THREADS", 8))
 MAX_SECTION_THREADS = int(os.environ.get("SURVEYFORGE_MAX_SECTION_THREADS", 2))
 
+# 전 호출 temperature 오버라이드. 호출부(outline_writer.py·writer.py 7곳)는
+# temperature=1 을 하드코딩하는데, KISTI 비교 실험은 4개 agent 공통으로 0.6 을 쓴다
+# (llama-3.3-70b 는 temp 0 에서 반복 루프에 빠져 금지). 비워 두면 호출자 값 그대로.
+_t = os.environ.get("SURVEYFORGE_TEMPERATURE", "").strip()
+TEMPERATURE_OVERRIDE = float(_t) if _t else None
+# max_tokens 가드에 걸린 응답(finish_reason=length)은 정상 호출에서 나올 수 없다 --
+# 가드(8,192)가 서브섹션 출력의 4~8배다. 반복 루프의 신호이므로 그 응답은 버리고
+# 같은 temperature 로 새 샘플을 받는다. 재시도를 다 쓰면 마지막 잘린 내용을
+# 받아들이고 truncated_accepted 로 센다. SURVEYFORGE_RETRY_TRUNCATED=0 이면 종전처럼
+# 잘린 내용을 그대로 쓴다. OpenAI-SDK 분기(OpenRouter)에만 구현돼 있다.
+_rt = os.environ.get("SURVEYFORGE_RETRY_TRUNCATED", "").strip().lower()
+RETRY_TRUNCATED = (_rt not in ("0", "false", "off", "no")) if _rt else True
+
+# 실행 단위 집계. APIModel 은 outline writer 와 subsection writer 가 따로 만들므로
+# 모듈 수준에 둔다. main.py 가 run_manifest.json 에 기록한다.
+_STATS_LOCK = threading.Lock()
+LLM_STATS = {"completions": 0, "truncated_accepted": 0, "truncation_retries": 0,
+             "empty_retries": 0, "error_retries": 0}
+
+
+def _bump(key, n=1):
+    with _STATS_LOCK:
+        LLM_STATS[key] += n
+
 
 def _csv_env(name):
     return [v.strip() for v in os.environ.get(name, "").split(",") if v.strip()]
@@ -68,6 +92,7 @@ def _openrouter_extra():
 
 OPENROUTER_EXTRA = _openrouter_extra()
 _SEEN_PROVIDERS = set()
+_PROFILE_LOGGED = False
 
 # Retries used to fire back-to-back. Against an upstream 429 that is the worst
 # possible response: MAX_THREADS * MAX_SECTION_THREADS workers each burn their
@@ -97,6 +122,12 @@ class APIModel:
         self.__api_key = api_key
         self.__api_url = api_url
         self.model = model
+        global _PROFILE_LOGGED
+        if not _PROFILE_LOGGED:
+            _PROFILE_LOGGED = True
+            print(f"[DECODING] temperature="
+                  f"{TEMPERATURE_OVERRIDE if TEMPERATURE_OVERRIDE is not None else 'caller default'}"
+                  f" max_tokens={MAX_TOKENS} retry_truncated={RETRY_TRUNCATED}")
         
     def __openai_compatible(self):
         # OpenRouter처럼 base URL(…/v1)로 설정된 엔드포인트는 모델명과 무관하게
@@ -107,6 +138,8 @@ class APIModel:
         return bool(self.__api_url) and self.__api_url.rstrip('/').endswith('v1')
 
     def __req(self, text, temperature, max_try = 10):
+        if TEMPERATURE_OVERRIDE is not None:
+            temperature = TEMPERATURE_OVERRIDE
         if "deepseek" in self.model or \
                 ("claude" not in self.model and self.__openai_compatible()):
             last_error = None
@@ -134,9 +167,24 @@ class APIModel:
                         print(f"[PROVIDER] served by: {served_by}")
 
                     choice = completion.choices[0]
+                    _bump("completions")
                     if choice.finish_reason == 'length':
+                        if RETRY_TRUNCATED and _ < max_try - 1:
+                            _bump("truncation_retries")
+                            last_error = ("truncated (finish_reason=length) -- "
+                                          "suspected repetition loop")
+                            print(f"[TRUNCATED->RETRY] finish_reason=length "
+                                  f"max_tokens={MAX_TOKENS}; discarding and resampling "
+                                  f"({_ + 1}/{max_try}), run total "
+                                  f"{LLM_STATS['truncation_retries']}")
+                            # 429 백오프가 아니라 새 샘플이 목적이므로 길게 기다리지 않는다.
+                            time.sleep(min(_retry_wait(_, max_try), 5.0))
+                            continue
+                        _bump("truncated_accepted")
                         print(f"[TRUNCATED] finish_reason=length model={self.model} "
-                              f"max_tokens={MAX_TOKENS} -- output was cut off")
+                              f"max_tokens={MAX_TOKENS} -- output was cut off"
+                              + (" and kept (resample budget exhausted)"
+                                 if RETRY_TRUNCATED else ""))
                     content = choice.message.content
                     if not content:
                         # A reasoning model can spend the whole budget thinking and
@@ -146,11 +194,13 @@ class APIModel:
                         # it as a failed attempt and let the retry loop handle it.
                         last_error = (f"empty content, finish_reason="
                                       f"{choice.finish_reason}")
+                        _bump("empty_retries")
                         print(f"[EMPTY] {last_error}\n Retrying...{_} Times")
                         time.sleep(_retry_wait(_, max_try))
                         continue
                     return content
                 except Exception as e:
+                    _bump("error_retries")
                     last_error = e
                     wait = _retry_wait(_, max_try)
                     print(f"API error: {e}\n Retrying...{_} Times "
