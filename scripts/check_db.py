@@ -154,15 +154,24 @@ def main():
 
     dates = [r['date'] for r in table.values() if r.get('date')]
     print(f'\n코퍼스: {n:,}편, 날짜 {min(dates)} .. {max(dates)}')
-    # 컷오프는 YYMM 문자열이라 신형 id에서만 뽑는다. 구형('cs/0503039')을 섞으면
-    # 'quant-ph/0412073v1' 같은 값이 최댓값으로 나와 제안이 무의미해진다.
+    # 컷오프는 YYMM 문자열이라 신형 arXiv id에서만 뽑는다. 구형('cs/0503039')을 섞으면
+    # 'quant-ph/0412073v1' 같은 값이 최댓값으로 나와 제안이 무의미해진다. KISTI view
+    # (id 규칙 B)의 DOI id 는 YYMM 게이트를 그냥 통과하므로 따로 센다.
+    ids_all = [str(r['id']) for r in table.values()]
     new_pref = sorted(m.group(0) for m in
-                      (re.match(r'^\d{4}(?=\.)', r['id']) for r in table.values()) if m)
-    n_old = n - len(new_pref)
-    print(f'        신형 id 접두사 {new_pref[0]} .. {new_pref[-1]}'
-          + (f'  (구형 id {n_old:,}편은 모두 2007-04 이전이라 어떤 컷오프에도 걸리지 않는다)'
-             if n_old else ''))
-    print(f'        실행 시 SURVEYFORGE_PAPER_ID_CUTOFF={new_pref[-1]} '
+                      (re.match(r'^\d{4}(?=\.)', i) for i in ids_all) if m)
+    n_doi = sum(1 for i in ids_all if i.startswith('10.'))
+    n_old = n - len(new_pref) - n_doi
+    if new_pref:
+        print(f'        신형 arXiv id {len(new_pref):,}편, 접두사 {new_pref[0]} .. {new_pref[-1]}')
+    else:
+        print('        신형 arXiv id 없음')
+    if n_doi:
+        print(f'        DOI id {n_doi:,}편 -- YYMM 게이트를 그냥 통과한다 '
+              f'(utils.filter_arxivids_by_prefix 는 미파싱 id 를 유지)')
+    if n_old:
+        print(f'        구형 arXiv id {n_old:,}편 -- 모두 2007-04 이전이라 어떤 컷오프에도 걸리지 않는다')
+    print(f'        실행 시 SURVEYFORGE_PAPER_ID_CUTOFF={new_pref[-1] if new_pref else "(YYMM 아무 값)"} '
           f'/ SURVEYFORGE_PAPER_DATE_NEWEST={max(dates)} 이상으로 둘 것')
 
     if args.fingerprint:

@@ -1,8 +1,11 @@
-"""공용 코퍼스 export(TinyDB JSON)에서 SurveyForge 논문 DB 스냅샷을 전체 빌드한다.
+"""corpus export(TinyDB JSON, `cs_paper_info` 1-based)에서 SurveyForge 논문 DB 스냅샷을
+전체 빌드한다.
 
-`append_snapshot.py`가 '기존 스냅샷 뒤에 이어 붙이기'라면, 이 스크립트는
-asg-common-corpus의 `export-agent-db --format surveyforge` 산출물을 입력으로
-빈 상태에서 인덱스까지 통째로 만든다. 불변식과 임베딩 규약은 append_snapshot.py
+`append_snapshot.py`가 '기존 스냅샷 뒤에 이어 붙이기'라면, 이 스크립트는 corpus 쪽
+exporter(현재는 kisti_data/adapter/common/export.py --format surveyforge; 처음엔
+asg-common-corpus의 export-agent-db)의 산출물을 입력으로 빈 상태에서 인덱스까지
+통째로 만든다. id 는 불투명 키다 -- KISTI view(id 규칙 B)에서는 arXiv base id 와
+DOI 가 섞여 있고, 이 스크립트는 형식을 세어 build_manifest 에 남길 뿐 가정하지 않는다. 불변식과 임베딩 규약은 append_snapshot.py
 헤더에 실측으로 문서화된 것과 동일하다:
 
     TinyDB 키 == arxivid_to_index_abs.json 값 == IndexIDMap stored id (1-based 연속)
@@ -30,10 +33,11 @@ content_sha256이 그대로 검증에 쓰인다. 논의: docs/common-corpus-inte
     nvidia-smi --query-gpu=index,memory.used,utilization.gpu --format=csv,noheader
     CUDA_VISIBLE_DEVICES=5 .venv/bin/python scripts/build_db_from_corpus.py ...
 
-사용법:
-    CUDA_VISIBLE_DEVICES=5 .venv/bin/python scripts/build_db_from_corpus.py \
-        --export ../asg-common-corpus/data/exports/surveyeval-2512.surveyforge.json \
-        --out $SURVEYFORGE_DATA/database_cc-surveyeval-2512
+사용법 (KISTI 는 kisti_data/adapter/surveyforge/build_db.sh 가 이 명령을 감싼다):
+    PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=3 \
+    .venv/bin/python scripts/build_db_from_corpus.py \
+        --export /data2/chanjoong/kisti_data/data/exports/kisti-2512.surveyforge.json \
+        --out $SURVEYFORGE_DATA/database_kisti-kisti-2512 --batch-size 8
     # 스모크: --limit 2000 --skip-survey-assets --out <scratch>
     # 다음: scripts/check_db.py --db <out> --verify-embeddings 20
 """
@@ -42,6 +46,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -153,9 +158,18 @@ def main():
         raise SystemExit(f'레코드에 없는 필드: {sorted(missing)}')
     mapping = {table[str(i)]['id']: i for i in range(1, n + 1)}
     if len(mapping) != n:
-        raise SystemExit(f'arXiv id 중복: {n - len(mapping):,}건')
+        raise SystemExit(f'id 중복: {n - len(mapping):,}건')
     dates = [r['date'] for r in table.values() if r.get('date')]
+    # id 형식 집계 (가정이 아니라 기록). arXiv 신형 YYMM.NNNNN / 구형 archive/YYMMNNN,
+    # DOI 는 '10.' 접두사. 나머지는 other 로 세어 드러나게 한다.
+    _arxiv = re.compile(r'^(\d{4}\.\d{4,5}|[a-z\-]+(\.[A-Z]{2})?/\d{7})$')
+    id_formats = {'arxiv': 0, 'doi': 0, 'other': 0}
+    for r in table.values():
+        i = str(r['id'])
+        id_formats['doi' if i.startswith('10.') else 'arxiv' if _arxiv.match(i) else 'other'] += 1
     print(f'      {n:,}편, id/키/필드 OK, 날짜 범위 {min(dates)} .. {max(dates)}')
+    print(f'      id 형식: arXiv {id_formats["arxiv"]:,} · DOI {id_formats["doi"]:,} '
+          f'· 기타 {id_formats["other"]:,}')
     if args.validate_only:
         print('--validate-only: 여기서 종료한다.')
         return 0
@@ -183,8 +197,10 @@ def main():
     check_consistency(table, mapping, {'abs': abs_idx, 'title': title_idx}, 'build')
 
     view = sidecar.get('view', {}).get('name', 'unknown')
+    # 인덱스 파일명 접미사 = view 이름. (asg-common-corpus 시절 스냅샷은 'CC_' 접두사가
+    # 붙어 있다 -- database_cc-*/ 안의 파일명 참조. 지금은 view 이름만 쓴다.)
     tag = args.tag or ('SMOKE_%d' % n if args.limit
-                       else 'CC_' + view.upper().replace('-', '_'))
+                       else view.upper().replace('-', '_'))
     os.makedirs(args.out, exist_ok=True)
     print(f'\n[5/6] 쓰기 {args.out}  (tag {tag})', flush=True)
     out_db = os.path.join(args.out, PAPER_DB)
@@ -237,6 +253,7 @@ def main():
         'export_file_sha256': None if args.limit else src_sha,
         'export_manifest': sidecar,
         'records': n,
+        'id_formats': id_formats,
         'limit': args.limit or None,
         'tag': tag,
         'embedding_model': model_path,

@@ -206,13 +206,22 @@ def report_cutoffs_vs_database(args, rag):
     # the newest -- and then warns that everything past it is unreachable while the gate
     # is in fact excluding nothing.
     months = [(m, i) for i in ids for m in (arxiv_month(i),) if m]
-    db_max_month, db_max_id = max(months)
+    # KISTI view(id 규칙 B)는 id 의 72%가 DOI 다. arxiv_month 가 None 을 돌려 YYMM
+    # 게이트를 그냥 통과하는데(utils.filter_arxivids_by_prefix), 그것을 "형식 불명"이
+    # 아니라 DOI 로 따로 세어 정상 상태가 정상으로 읽히게 한다. DOI 만 있는 DB 에서도
+    # max([]) 로 죽지 않게 한다.
+    n_doi = sum(1 for i in ids if i.startswith('10.'))
+    n_unparsed = len(ids) - len(months) - n_doi
+    if months:
+        db_max_month, db_max_id = max(months)
+    else:
+        db_max_month, db_max_id = (0, 0), '(no arXiv-style id)'
     cutoff_month = arxiv_month(f'{args.paper_id_cutoff}.00000')
     n_excluded = sum(1 for m, _ in months if m > cutoff_month)
-    n_unparsed = len(ids) - len(months)
 
     cutoff_log(f"[cutoff/db] {len(ids)} papers, newest id {db_max_id} "
                f"({db_max_month[0]}-{db_max_month[1]:02d}), dates {db_min_date}..{db_max_date}"
+               + (f", {n_doi} DOI ids (pass the id gate)" if n_doi else "")
                + (f", {n_unparsed} ids in no known format" if n_unparsed else ""),
                args.saving_path)
     cutoff_log(f"[cutoff/cfg] --paper_id_cutoff={args.paper_id_cutoff} "
@@ -238,6 +247,50 @@ def report_cutoffs_vs_database(args, rag):
         cutoff_log(f"[cutoff/cfg] WARNING: database has papers dated back to {db_min_date} but "
                    f"--paper_date_oldest is {args.paper_date_oldest}; older papers are "
                    f"discarded by the citation reranker.", args.saving_path)
+
+
+def write_run_manifest(args, references):
+    """편당 실행 조건과 LLM 집계를 남긴다 -- 비교 실험의 기록 항목(모델·provider·
+    temperature·max_tokens·재요청·잘림·DB 지문·refs 수). 비용은 이 안에서 알 수 없으니
+    scripts/check_credits.py 전후 차로 잰다."""
+    from src.model import MAX_TOKENS, TEMPERATURE_OVERRIDE, RETRY_TRUNCATED, LLM_STATS
+    db_build = {}
+    p = os.path.join(args.db_path, 'build_manifest.json')
+    if os.path.exists(p):
+        with open(p) as f:
+            b = json.load(f)
+        db_build = {k: b.get(k) for k in ('records', 'tag', 'export', 'export_file_sha256',
+                                          'built_at', 'id_formats')}
+        db_build['view'] = (b.get('export_manifest') or {}).get('view')
+    ids = list(references.values()) if isinstance(references, dict) else list(references or [])
+    manifest = {
+        'topic': args.topic,
+        'model': args.model,
+        'api_url': args.api_url,
+        'provider': os.environ.get('SURVEYFORGE_PROVIDER', ''),
+        'temperature': TEMPERATURE_OVERRIDE if TEMPERATURE_OVERRIDE is not None
+                       else 'caller default (1)',
+        'max_tokens': MAX_TOKENS,
+        'retry_truncated': RETRY_TRUNCATED,
+        'llm_stats': dict(LLM_STATS),
+        'section_num': args.section_num,
+        'subsection_len': args.subsection_len,
+        'outline_reference_num': args.outline_reference_num,
+        'rag_num': args.rag_num,
+        'rag_max_out': args.rag_max_out,
+        'paper_id_cutoff': args.paper_id_cutoff,
+        'paper_date_oldest': args.paper_date_oldest,
+        'paper_date_newest': args.paper_date_newest,
+        'db_path': os.path.abspath(args.db_path),
+        'db_build': db_build,
+        'refs': len(ids),
+        'refs_doi': sum(1 for i in ids if str(i).startswith('10.')),
+        'finished_at': datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+    }
+    with open(f'{args.saving_path}/run_manifest.json', 'w') as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+    print(f"[LLM] {json.dumps(manifest['llm_stats'])} temperature={manifest['temperature']} "
+          f"max_tokens={MAX_TOKENS} refs={manifest['refs']} (doi {manifest['refs_doi']})")
 
 
 def main(args):
@@ -309,6 +362,7 @@ def main(args):
         save_dic['survey'] = refined_survey_with_references
         save_dic['reference'] = refined_references
         f.write(json.dumps(save_dic, indent=4))
+    write_run_manifest(args, refined_references)
 
 if __name__ == '__main__':
 

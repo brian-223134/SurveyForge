@@ -126,8 +126,12 @@ def deaccent(text):
 
 
 def clean_title(title):
-    """Database titles carry hard line wraps ('Adaptive-RAG\\n  Learning to')."""
-    return re.sub(r"\s+", " ", title).strip()
+    """Database titles carry hard line wraps ('Adaptive-RAG\\n  Learning to').
+
+    KISTI(OpenAlex) titles from Elsevier venues carry a trailing footnote star
+    ('... for edge computing☆'); it is not part of the title, so drop it.
+    """
+    return re.sub(r"\s+", " ", title.replace("☆", "").replace("★", "")).strip()
 
 
 # src.utils.arxiv_month does the same parse, but importing it would pull in
@@ -277,7 +281,7 @@ def load_metadata(ids, db_path, cache_path):
         # 물리면 최신 논문 전부가 여기 걸리고, 참고문헌이 제목·저자 없는 껍데기가 된다.
         print(f"  WARNING: {len(wanted)}/{len(ids)} ids absent from {db_path}",
               file=sys.stderr)
-        print("  these become bare arXiv links with no title or authors. If the run "
+        print("  these become bare id links (arxiv.org / doi.org) with no title or authors. If the run "
               "used a different snapshot, pass --db <그 스냅샷>/arxiv_paper_db_with_cc.json",
               file=sys.stderr)
 
@@ -287,8 +291,27 @@ def load_metadata(ids, db_path, cache_path):
     return cached
 
 
-def bib_key(arxiv_id):
-    return "arxiv:" + arxiv_id
+def is_doi(aid):
+    """KISTI view(id 규칙 B)의 id 는 arXiv base id 또는 DOI 다. DOI 는 '10.' 으로 시작한다."""
+    return str(aid).startswith("10.")
+
+
+def bib_key(aid):
+    # DOI 에는 \cite 키로 못 쓰는 문자(%, #, {, }, 공백, 쉼표, <>; 등)가 올 수 있다.
+    if is_doi(aid):
+        return "doi:" + re.sub(r"[^A-Za-z0-9._:/\-]", "_", aid)
+    return "arxiv:" + aid
+
+
+def ref_url(aid, rec):
+    """DOI 면 DB 레코드의 url(doi.org)을 쓰고 없으면 id 로 만든다. arXiv 는 종전대로."""
+    if is_doi(aid):
+        return (rec or {}).get("url") or f"https://doi.org/{aid}"
+    return f"https://arxiv.org/abs/{aid}"
+
+
+def id_label(aid):
+    return "DOI" if is_doi(aid) else "arXiv"
 
 
 def format_authors(rec, limit):
@@ -315,16 +338,16 @@ def build_bibliography(order, refmap, meta, max_authors):
                 parts.append(authors + ".")
             parts.append(r"\newblock \emph{%s}." % escape(clean_title(rec.get("title", aid))))
             year = citation_year(aid, rec)
-            tail = "arXiv:%s" % escape(aid)
+            tail = "%s:%s" % (id_label(aid), escape(aid))
             if year:
                 tail += ", %s" % year
             parts.append(r"\newblock %s." % tail)
-            parts.append(r"\newblock \url{https://arxiv.org/abs/%s}" % aid)
+            parts.append(r"\newblock \url{%s}" % ref_url(aid, rec))
             lines.append("\n".join(parts))
         else:
             # Better a visible placeholder than a silently missing entry.
-            lines.append(r"\newblock arXiv:%s. \url{https://arxiv.org/abs/%s}"
-                         % (escape(aid), aid))
+            lines.append(r"\newblock %s:%s. \url{%s}"
+                         % (id_label(aid), escape(aid), ref_url(aid, None)))
         lines.append("")
     lines.append(r"\end{thebibliography}")
     return "\n".join(lines)
@@ -362,9 +385,12 @@ def build_bibtex(order, refmap, meta):
                 out.append("  year          = {%s}," % year)
             if rec.get("cat"):
                 out.append("  primaryClass  = {%s}," % rec["cat"])
-        out.append("  eprint        = {%s}," % aid)
-        out.append("  archivePrefix = {arXiv},")
-        out.append("  url           = {https://arxiv.org/abs/%s}," % aid)
+        if is_doi(aid):
+            out.append("  doi           = {%s}," % aid)
+        else:
+            out.append("  eprint        = {%s}," % aid)
+            out.append("  archivePrefix = {arXiv},")
+        out.append("  url           = {%s}," % ref_url(aid, rec))
         out.append("}")
         out.append("")
     return "\n".join(out)
