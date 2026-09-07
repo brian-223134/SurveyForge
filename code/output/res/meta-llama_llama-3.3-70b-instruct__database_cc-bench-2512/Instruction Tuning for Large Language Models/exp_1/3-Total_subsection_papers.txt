@@ -1,0 +1,515 @@
+Foundations of Large Language Models
+['This section delves into the foundational aspects of large language models, including their architecture, training methodologies, and evaluation metrics, to establish a baseline understanding for instruction tuning.', '1. Architectural overview of large language models, focusing on transformer-based models and their variants, such as BERT, RoBERTa, and XLNet.', '2. Discussion of training objectives, optimization methods, and common datasets used in large language model development, including masked language modeling and next sentence prediction.', '3. Examination of evaluation metrics and benchmarks for assessing large language model performance, such as GLUE, SuperGLUE, and SQuAD.']
+
+LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigms
+
+Raw Text is All you Need: Knowledge-intensive Multi-turn Instruction Tuning for Large Language Model
+
+HiDe-LLaVA: Hierarchical Decoupling for Continual Instruction Tuning of Multimodal Large Language Model
+
+Smaller Language Models are capable of selecting Instruction-Tuning Training Data for Larger Language Models
+
+Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+
+FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets
+
+Instruction Tuning With Loss Over Instructions
+
+Fine-tuning Large Language Models with Sequential Instructions
+
+IterSelectTune: An Iterative Training Framework for Efficient Instruction-Tuning Data Selection
+
+ITDR: An Instruction Tuning Dataset for Enhancing Large Language Models in Recommendations
+
+Tuna: Instruction Tuning using Feedback from Large Language Models
+
+LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation
+
+Layer by Layer: Uncovering Where Multi-Task Learning Happens in Instruction-Tuned Large Language Models
+
+Mixture-of-Experts Meets Instruction Tuning:A Winning Combination for Large Language Models
+
+Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models
+
+Astraios: Parameter-Efficient Instruction Tuning Code Large Language Models
+
+Achieving Peak Performance for Large Language Models: A Systematic Review
+
+Investigating Instruction Tuning Large Language Models on Graphs
+
+TAIA: Large Language Models are Out-of-Distribution Data Learners
+
+EasyInstruct: An Easy-to-use Instruction Processing Framework for Large Language Models
+
+Large-Scale Data Selection for Instruction Tuning
+
+Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications
+
+Towards Automatic Continual Learning: A Self-Adaptive Framework for Continual Instruction Tuning
+
+Smaller Language Models Are Better Instruction Evolvers
+
+Beyond IID: Optimizing Instruction Learning from the Perspective of Instruction Interaction and Dependency
+
+DELIFT: Data Efficient Language model Instruction Fine Tuning
+
+Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models
+
+Rethinking the Instruction Quality: LIFT is What You Need
+
+MergeIT: From Selection to Merging for Efficient Instruction Tuning
+
+LongForm: Effective Instruction Tuning with Reverse Instructions
+
+Fine-Tuning on Noisy Instructions: Effects on Generalization and Performance
+
+Unveiling the Secret Recipe: A Guide For Supervised Fine-Tuning Small LLMs
+
+Demystifying Instruction Mixing for Fine-tuning Large Language Models
+
+Refine Large Language Model Fine-tuning via Instruction Vector
+
+Federated Data-Efficient Instruction Tuning for Large Language Models
+
+RAISE: Reinforced Adaptive Instruction Selection For Large Language Models
+
+Cross-model Control: Improving Multiple Large Language Models in One-time Training
+
+One-Shot Learning as Instruction Data Prospector for Large Language Models
+
+Code Comparison Tuning for Code Large Language Models
+
+Scaling Instruction-Finetuned Language Models
+
+Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+
+RECOST: External Knowledge Guided Data-efficient Instruction Tuning
+
+InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+A Study of Optimizations for Fine-tuning Large Language Models
+
+PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+
+Chasing Random: Instruction Selection Strategies Fail to Generalize
+
+Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning
+
+Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning
+
+SFTMix: Elevating Language Model Instruction Tuning with Mixup Recipe
+
+Instruction Tuning Techniques
+['This section explores the diverse range of instruction tuning techniques, categorizing them based on their approach, application, and effectiveness.', '1. Classification and description of instruction tuning methods, including supervised fine-tuning, reinforcement learning from human feedback, and direct preference optimization.', '2. Analysis of parameter-efficient tuning methods, such as adapters, prefix tuning, and low-rank adaptations, highlighting their advantages and limitations.', '3. Discussion on the role of data quality, quantity, and diversity in instruction tuning, including strategies for dataset creation, augmentation, and selection.']
+
+Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning
+
+LESS: Selecting Influential Data for Targeted Instruction Tuning
+
+Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+
+A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model
+
+Instruction Tuning with GPT-4
+
+Unveiling the Secret Recipe: A Guide For Supervised Fine-Tuning Small LLMs
+
+Dynamics of Instruction Fine-Tuning for Chinese Large Language Models
+
+Instruction Tuned Models are Quick Learners
+
+Hyperparameter Optimization for Large Language Model Instruction-Tuning
+
+T-SHIRT: Token-Selective Hierarchical Data Selection for Instruction Tuning
+
+Large-Scale Data Selection for Instruction Tuning
+
+SwitchCIT: Switching for Continual Instruction Tuning
+
+MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions
+
+InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning
+
+Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+Is It Good Data for Multilingual Instruction Tuning or Just Bad Multilingual Evaluation for Large Language Models?
+
+HiDe-LLaVA: Hierarchical Decoupling for Continual Instruction Tuning of Multimodal Large Language Model
+
+Towards Automatic Continual Learning: A Self-Adaptive Framework for Continual Instruction Tuning
+
+CITB: A Benchmark for Continual Instruction Tuning
+
+A Study of Optimizations for Fine-tuning Large Language Models
+
+CoMMIT: Coordinated Multimodal Instruction Tuning
+
+Large Language Models for Compiler Optimization
+
+IterSelectTune: An Iterative Training Framework for Efficient Instruction-Tuning Data Selection
+
+Towards Robust Instruction Tuning on Multimodal Large Language Models
+
+MergeIT: From Selection to Merging for Efficient Instruction Tuning
+
+Diversity Measurement and Subset Selection for Instruction Tuning Datasets
+
+Maybe Only 0.5% Data is Needed: A Preliminary Exploration of Low Training Data Instruction Tuning
+
+RECOST: External Knowledge Guided Data-efficient Instruction Tuning
+
+DELIFT: Data Efficient Language model Instruction Fine Tuning
+
+Smaller Language Models Are Better Instruction Evolvers
+
+Smaller Language Models are capable of selecting Instruction-Tuning Training Data for Larger Language Models
+
+RAISE: Reinforced Adaptive Instruction Selection For Large Language Models
+
+Chasing Random: Instruction Selection Strategies Fail to Generalize
+
+Investigating Instruction Tuning Large Language Models on Graphs
+
+What Makes Good Data for Alignment? A Comprehensive Study of Automatic Data Selection in Instruction Tuning
+
+Instruction Tuning With Loss Over Instructions
+
+CoIN: A Benchmark of Continual Instruction tuNing for Multimodel Large Language Model
+
+Vision-Language Instruction Tuning: A Review and Analysis
+
+LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigms
+
+CommonIT: Commonality-Aware Instruction Tuning for Large Language Models via Data Partitions
+
+An Empirical Study of Instruction-tuning Large Language Models in Chinese
+
+ITDR: An Instruction Tuning Dataset for Enhancing Large Language Models in Recommendations
+
+Instruction Mining: Instruction Data Selection for Tuning Large Language Models
+
+Demystifying Instruction Mixing for Fine-tuning Large Language Models
+
+MDIT: A Model-free Data Interpolation Method for Diverse Instruction Tuning
+
+Beyond IID: Optimizing Instruction Learning from the Perspective of Instruction Interaction and Dependency
+
+TRIM: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
+
+The Flan Collection: Designing Data and Methods for Effective Instruction Tuning
+
+Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+Applications and Domains
+['This section investigates the application of instruction tuning across various domains and tasks, demonstrating its versatility and potential impact.', '1. Overview of natural language processing tasks that benefit from instruction tuning, such as question answering, text generation, and sentiment analysis.', '2. Exploration of instruction tuning in multimodal and cross-modal settings, including vision-language models and their applications in image captioning and visual question answering.', '3. Discussion on the use of instruction tuning in specialized domains, such as legal, medical, and educational contexts, highlighting domain-specific challenges and opportunities.']
+
+CoMMIT: Coordinated Multimodal Instruction Tuning
+
+Large-Scale Data Selection for Instruction Tuning
+
+LLaVA Steering: Visual Instruction Tuning with 500x Fewer Parameters through Modality Linear Representation-Steering
+
+TRIM: Token-wise Attention-Derived Saliency for Data-Efficient Instruction Tuning
+
+COCO is "ALL'' You Need for Visual Instruction Fine-tuning
+
+Scaling Instruction-Finetuned Language Models
+
+Less is More: High-value Data Selection for Visual Instruction Tuning
+
+Towards Better Understanding Table Instruction Tuning: Decoupling the Effects from Data versus Models
+
+Re-Imagining Multimodal Instruction Tuning: A Representation View
+
+Fine-tuning Large Language Models with Sequential Instructions
+
+Evaluating the Robustness to Instructions of Large Language Models
+
+CIEM: Contrastive Instruction Evaluation Method for Better Instruction Tuning
+
+Towards Robust Instruction Tuning on Multimodal Large Language Models
+
+HiDe-LLaVA: Hierarchical Decoupling for Continual Instruction Tuning of Multimodal Large Language Model
+
+Rethinking Overlooked Aspects in Vision-Language Models
+
+CITB: A Benchmark for Continual Instruction Tuning
+
+An Empirical Study of Instruction-tuning Large Language Models in Chinese
+
+Instruction Tuning With Loss Over Instructions
+
+The Flan Collection: Designing Data and Methods for Effective Instruction Tuning
+
+InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+MLAN: Language-Based Instruction Tuning Preserves and Transfers Knowledge in Multimodal Language Models
+
+InstructionGPT-4: A 200-Instruction Paradigm for Fine-Tuning MiniGPT-4
+
+SFTMix: Elevating Language Model Instruction Tuning with Mixup Recipe
+
+The Inherent Limits of Pretrained LLMs: The Unexpected Convergence of Instruction Tuning and In-Context Learning Capabilities
+
+Dual Instruction Tuning with Large Language Models for Mathematical Reasoning
+
+Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications
+
+T-SHIRT: Token-Selective Hierarchical Data Selection for Instruction Tuning
+
+An Empirical Study of Scaling Instruct-Tuned Large Multimodal Models
+
+Do we Really Need Visual Instructions? Towards Visual Instruction-Free Fine-tuning for Large Vision-Language Models
+
+Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning
+
+Filter Images First, Generate Instructions Later: Pre-Instruction Data Selection for Visual Instruction Tuning
+
+One-Shot Learning as Instruction Data Prospector for Large Language Models
+
+What Makes for Good Visual Instructions? Synthesizing Complex Visual Reasoning Instructions for Visual Instruction Tuning
+
+Adapt-$\infty$: Scalable Continual Multimodal Instruction Tuning via Dynamic Data Selection
+
+Smaller Language Models are capable of selecting Instruction-Tuning Training Data for Larger Language Models
+
+When Parameter-efficient Tuning Meets General-purpose Vision-language Models
+
+Does Instruction Tuning Make LLMs More Consistent?
+
+Beyond IID: Optimizing Instruction Learning from the Perspective of Instruction Interaction and Dependency
+
+PACIT: Unlocking the Power of Examples for Better In-Context Instruction Tuning
+
+Your Vision-Language Model Itself Is a Strong Filter: Towards High-Quality Instruction Tuning with Data Selection
+
+M$^3$IT: A Large-Scale Dataset towards Multi-Modal Multilingual Instruction Tuning
+
+MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions
+
+Multimodal Instruction Tuning with Conditional Mixture of LoRA
+
+Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+LESS: Selecting Influential Data for Targeted Instruction Tuning
+
+Instruction Tuning with GPT-4
+
+LAMM: Language-Assisted Multi-Modal Instruction-Tuning Dataset, Framework, and Benchmark
+
+IterSelectTune: An Iterative Training Framework for Efficient Instruction-Tuning Data Selection
+
+Maybe Only 0.5% Data is Needed: A Preliminary Exploration of Low Training Data Instruction Tuning
+
+Mixture-of-Experts Meets Instruction Tuning:A Winning Combination for Large Language Models
+
+Efficiency and Scalability
+['This section addresses the critical aspects of efficiency and scalability in instruction tuning, focusing on methods to reduce computational costs and environmental impact.', '1. Analysis of the computational requirements and memory usage of instruction tuning methods, including strategies for model pruning, quantization, and knowledge distillation.', '2. Discussion on the role of hardware acceleration, such as GPUs and TPUs, in enhancing the efficiency of instruction tuning, and potential future directions like photonic computing.', '3. Examination of energy consumption and carbon footprint of instruction tuning, highlighting the need for sustainable AI practices and environmentally friendly model development.']
+
+Learning Performance-Improving Code Edits
+
+PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+
+Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning
+
+Refine Large Language Model Fine-tuning via Instruction Vector
+
+From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference
+
+How Green are Neural Language Models? Analyzing Energy Consumption in Text Summarization Fine-tuning
+
+Great Power, Great Responsibility: Recommendations for Reducing Energy for Training Language Models
+
+LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigms
+
+Insights into resource utilization of code small language models serving with runtime engines and execution providers
+
+Lost In Translation: Exposing Hidden Compiler Optimization Opportunities
+
+Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models
+
+Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models
+
+Toward Cross-Layer Energy Optimizations in AI Systems
+
+Astraios: Parameter-Efficient Instruction Tuning Code Large Language Models
+
+Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+
+Vision-Language Instruction Tuning: A Review and Analysis
+
+CommonIT: Commonality-Aware Instruction Tuning for Large Language Models via Data Partitions
+
+Compiler generated feedback for Large Language Models
+
+Should AI Optimize Your Code? A Comparative Study of Classical Optimizing Compilers Versus Current Large Language Models
+
+LLMCarbon: Modeling the end-to-end Carbon Footprint of Large Language Models
+
+Holistically Evaluating the Environmental Impact of Creating Language Models
+
+Sustainable AI: Environmental Implications, Challenges and Opportunities
+
+Choosing to Be Green: Advancing Green AI via Dynamic Model Selection
+
+Smaller Language Models Are Better Instruction Evolvers
+
+Reporting and Analysing the Environmental Impact of Language Models on the Example of Commonsense Question Answering with External Knowledge
+
+Large Language Models for Energy-Efficient Code: Emerging Results and Future Directions
+
+Prompt engineering and its implications on the energy consumption of Large Language Models
+
+Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+
+DELIA: Diversity-Enhanced Learning for Instruction Adaptation in Large Language Models
+
+Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+Achieving Peak Performance for Large Language Models: A Systematic Review
+
+A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model
+
+Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems
+
+Code Comparison Tuning for Code Large Language Models
+
+Toward Sustainable GenAI using Generation Directives for Carbon-Friendly Large Language Model Inference
+
+Demystifying Instruction Mixing for Fine-tuning Large Language Models
+
+DolphCoder: Echo-Locating Code Large Language Models with Diverse and Multi-Objective Instruction Tuning
+
+EfficientLLM: Efficiency in Large Language Models
+
+An Empirical Study of Instruction-tuning Large Language Models in Chinese
+
+OmniBal: Towards Fast Instruction-Tuning for Vision-Language Models via Omniverse Computation Balance
+
+Generating GPU Compiler Heuristics using Reinforcement Learning
+
+Chasing Random: Instruction Selection Strategies Fail to Generalize
+
+Comparing energy consumption and accuracy in text classification inference
+
+Toward Green Code: Prompting Small Language Models for Energy-Efficient Code Generation
+
+Rethinking the Instruction Quality: LIFT is What You Need
+
+InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+CuAsmRL: Optimizing GPU SASS Schedules via Deep Reinforcement Learning
+
+Fine-Tuning on Noisy Instructions: Effects on Generalization and Performance
+
+Carbon Emissions and Large Neural Network Training
+
+In2Core: Leveraging Influence Functions for Coreset Selection in Instruction Finetuning of Large Language Models
+
+Safety, Ethics, and Reliability
+['This section examines the safety, ethical, and reliability considerations associated with instruction tuning, emphasizing the importance of responsible AI development and deployment.', '1. Discussion on the potential risks and biases introduced by instruction tuning, including issues related to data quality, model interpretability, and fairness.', '2. Analysis of methods for detecting and mitigating harmful behaviors in instruction-tuned models, such as adversarial testing and value alignment techniques.', '3. Overview of regulatory frameworks and ethical guidelines for the development and use of instruction-tuned models, emphasizing transparency, accountability, and human oversight.']
+
+Exploring Format Consistency for Instruction Tuning
+
+MergeIT: From Selection to Merging for Efficient Instruction Tuning
+
+Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models
+
+How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources
+
+Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic
+
+An Empirical Study of Instruction-tuning Large Language Models in Chinese
+
+Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+
+Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models
+
+DELIFT: Data Efficient Language model Instruction Fine Tuning
+
+LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation
+
+On the Adversarial Robustness of Instruction-Tuned Large Language Models for Code
+
+One-Shot Learning as Instruction Data Prospector for Large Language Models
+
+vTune: Verifiable Fine-Tuning for LLMs Through Backdooring
+
+Smaller Language Models are capable of selecting Instruction-Tuning Training Data for Larger Language Models
+
+SwitchCIT: Switching for Continual Instruction Tuning
+
+Trojan Activation Attack: Red-Teaming Large Language Models using Activation Steering for Safety-Alignment
+
+Towards Building the Federated GPT: Federated Instruction Tuning
+
+RAISE: Reinforced Adaptive Instruction Selection For Large Language Models
+
+InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+Vision-Language Instruction Tuning: A Review and Analysis
+
+Poisoning Language Models During Instruction Tuning
+
+On the Exploitability of Instruction Tuning
+
+Detecting Instruction Fine-tuning Attacks on Language Models using Influence Function
+
+Instruction Tuning with GPT-4
+
+A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model
+
+Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+
+Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications
+
+ROSE: A Reward-Oriented Data Selection Framework for LLM Task-Specific Instruction Tuning
+
+Code Comparison Tuning for Code Large Language Models
+
+Towards Automatic Continual Learning: A Self-Adaptive Framework for Continual Instruction Tuning
+
+ITDR: An Instruction Tuning Dataset for Enhancing Large Language Models in Recommendations
+
+MoDS: Model-oriented Data Selection for Instruction Tuning
+
+Federated Data-Efficient Instruction Tuning for Large Language Models
+
+Rethinking the Instruction Quality: LIFT is What You Need
+
+Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+BEEAR: Embedding-based Adversarial Removal of Safety Backdoors in Instruction-tuned Language Models
+
+Making Harmful Behaviors Unlearnable for Large Language Models
+
+FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets
+
+MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions
+
+Evaluating the Zero-shot Robustness of Instruction-tuned Language Models
+
+Cross-Task Defense: Instruction-Tuning LLMs for Content Safety
+
+Instructional Fingerprinting of Large Language Models
+
+Ethical Considerations and Policy Implications for Large Language Models: Guiding Responsible Development and Deployment
+
+Focus On This, Not That! Steering LLMs with Adaptive Feature Specification
+
+Mixture-of-Experts Meets Instruction Tuning:A Winning Combination for Large Language Models
+
+IterSelectTune: An Iterative Training Framework for Efficient Instruction-Tuning Data Selection
+
+Roles of Scaling and Instruction Tuning in Language Perception: Model vs. Human Attention
+
+Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning
+
+Fine-Tuning on Noisy Instructions: Effects on Generalization and Performance
+

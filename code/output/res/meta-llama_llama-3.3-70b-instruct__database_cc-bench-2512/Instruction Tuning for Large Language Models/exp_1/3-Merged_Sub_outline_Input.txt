@@ -1,0 +1,787 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Instruction Tuning for Large Language Models**.
+
+You have created the following overall outline:
+---
+Title: Comprehensive Survey on Instruction Tuning for Large Language Models
+
+Section 1: Introduction
+Description 1: This section provides an overview of the concept of instruction tuning for large language models, its importance, and the current state of research in this area. 
+1. Definition and significance of instruction tuning in the context of large language models, highlighting its role in enhancing model performance and adaptability.
+2. Historical development of instruction tuning techniques, from early approaches to current state-of-the-art methods, emphasizing key milestones and breakthroughs.
+3. Overview of the challenges and limitations associated with instruction tuning, such as data requirements, model complexity, and evaluation metrics.
+
+Section 2: Foundations of Large Language Models
+Description 2: This section delves into the foundational aspects of large language models, including their architecture, training methodologies, and evaluation metrics, to establish a baseline understanding for instruction tuning.
+1. Architectural overview of large language models, focusing on transformer-based models and their variants, such as BERT, RoBERTa, and XLNet.
+2. Discussion of training objectives, optimization methods, and common datasets used in large language model development, including masked language modeling and next sentence prediction.
+3. Examination of evaluation metrics and benchmarks for assessing large language model performance, such as GLUE, SuperGLUE, and SQuAD.
+
+Section 3: Instruction Tuning Techniques
+Description 3: This section explores the diverse range of instruction tuning techniques, categorizing them based on their approach, application, and effectiveness.
+1. Classification and description of instruction tuning methods, including supervised fine-tuning, reinforcement learning from human feedback, and direct preference optimization.
+2. Analysis of parameter-efficient tuning methods, such as adapters, prefix tuning, and low-rank adaptations, highlighting their advantages and limitations.
+3. Discussion on the role of data quality, quantity, and diversity in instruction tuning, including strategies for dataset creation, augmentation, and selection.
+
+Section 4: Applications and Domains
+Description 4: This section investigates the application of instruction tuning across various domains and tasks, demonstrating its versatility and potential impact.
+1. Overview of natural language processing tasks that benefit from instruction tuning, such as question answering, text generation, and sentiment analysis.
+2. Exploration of instruction tuning in multimodal and cross-modal settings, including vision-language models and their applications in image captioning and visual question answering.
+3. Discussion on the use of instruction tuning in specialized domains, such as legal, medical, and educational contexts, highlighting domain-specific challenges and opportunities.
+
+Section 5: Efficiency and Scalability
+Description 5: This section addresses the critical aspects of efficiency and scalability in instruction tuning, focusing on methods to reduce computational costs and environmental impact.
+1. Analysis of the computational requirements and memory usage of instruction tuning methods, including strategies for model pruning, quantization, and knowledge distillation.
+2. Discussion on the role of hardware acceleration, such as GPUs and TPUs, in enhancing the efficiency of instruction tuning, and potential future directions like photonic computing.
+3. Examination of energy consumption and carbon footprint of instruction tuning, highlighting the need for sustainable AI practices and environmentally friendly model development.
+
+Section 6: Safety, Ethics, and Reliability
+Description 6: This section examines the safety, ethical, and reliability considerations associated with instruction tuning, emphasizing the importance of responsible AI development and deployment.
+1. Discussion on the potential risks and biases introduced by instruction tuning, including issues related to data quality, model interpretability, and fairness.
+2. Analysis of methods for detecting and mitigating harmful behaviors in instruction-tuned models, such as adversarial testing and value alignment techniques.
+3. Overview of regulatory frameworks and ethical guidelines for the development and use of instruction-tuned models, emphasizing transparency, accountability, and human oversight.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing key findings, outlining future research directions, and highlighting the potential of instruction tuning to shape the future of large language models.
+1. Recap of the main themes and contributions of the survey, emphasizing the significance of instruction tuning in the development of large language models.
+2. Identification of open challenges and potential areas for future research, including the need for more efficient, scalable, and interpretable instruction tuning methods.
+3. Speculation on the long-term impact of instruction tuning on the field of natural language processing and its potential applications in real-world scenarios.
+---
+
+You need to enrich the section **Safety, Ethics, and Reliability**, described as: **This section examines the safety, ethical, and reliability considerations associated with instruction tuning, emphasizing the importance of responsible AI development and deployment.
+1. Discussion on the potential risks and biases introduced by instruction tuning, including issues related to data quality, model interpretability, and fairness.
+2. Analysis of methods for detecting and mitigating harmful behaviors in instruction-tuned models, such as adversarial testing and value alignment techniques.
+3. Overview of regulatory frameworks and ethical guidelines for the development and use of instruction-tuned models, emphasizing transparency, accountability, and human oversight.**
+
+**Main task:**
+Generate a comprehensive framework for **Safety, Ethics, and Reliability** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Exploring Format Consistency for Instruction Tuning
+
+publish_date: 2023-07-28
+
+paper_content:
+
+Instruction tuning has emerged as a promising approach to enhancing large language models in following human instructions. It is shown that increasing the diversity and number of instructions in the training data can consistently enhance generalization performance, which facilitates a recent endeavor to collect various instructions and integrate existing instruction tuning datasets into larger collections. However, different users have their unique ways of expressing instructions, and there often exist variations across different datasets in the instruction styles and formats, i.e., format inconsistency. In this work, we propose a framework named Unified Instruction Tuning (UIT), which calls OpenAI APIs for automatic format transfer among different instruction tuning datasets such as PromptSource, FLAN and CrossFit. With the framework, we (1) demonstrate the necessity of maintaining format consistency in instruction tuning; (2) improve the generalization performance on unseen instructions on T5-LM-xl; (3) provide a novel perplexity-based denoising method to reduce the noise of automatic format transfer to make the UIT framework more practical and a smaller offline model based on GPT-J that achieves comparable format transfer capability to OpenAI APIs to reduce costs in practice. Further analysis regarding variations of targeted formats and other effects is intended.
+---
+paper_title: MergeIT: From Selection to Merging for Efficient Instruction Tuning
+
+publish_date: 2025-03-01
+
+paper_content:
+
+Instruction tuning is crucial for optimizing Large Language Models (LLMs), yet mainstream data selection methods heavily rely on LLMs as instruction quality scorers, leading to high computational costs and reduced data diversity. To address these limitations, we propose MergeIT, a novel LLM-based Merging strategy for better Instruction Tuning that shifts the focus from selection to synthesis. MergeIT operates in two stages: first, topic-aware filtering clusters and refines the dataset, preserving diversity while eliminating redundancy without relying on LLM-based scoring. Second, LLM-based merging synthesizes semantically similar instructions into more informative and compact training data, enhancing data richness while further reducing dataset size. Experimental results demonstrate that MergeIT enables efficient, diverse, and scalable instruction selection and synthesis, establishing LLM-based merging as a promising alternative to conventional scoring-based selection methods for instruction tuning. Our source code and datasets are now available at https://github.com/XcloudFance/MergeIT
+---
+paper_title: Building Instruction-Tuning Datasets from Human-Written Instructions with Open-Weight Large Language Models
+
+publish_date: 2025-03-01
+
+paper_content:
+
+Instruction tuning is crucial for enabling Large Language Models (LLMs) to solve real-world tasks. Prior work has shown the effectiveness of instruction-tuning data synthesized solely from LLMs, raising a fundamental question: Do we still need human-originated signals for instruction tuning? This work answers the question affirmatively: we build state-of-the-art instruction-tuning datasets sourced from human-written instructions, by simply pairing them with LLM-generated responses. LLMs fine-tuned on our datasets consistently outperform those fine-tuned on existing ones. Our data construction approach can be easily adapted to other languages; we build datasets for Japanese and confirm that LLMs tuned with our data reach state-of-the-art performance. Analyses suggest that instruction-tuning in a new language allows LLMs to follow instructions, while the tuned models exhibit a notable lack of culture-specific knowledge in that language. The datasets and fine-tuned models will be publicly available. Our datasets, synthesized with open-weight LLMs, are openly distributed under permissive licenses, allowing for diverse use cases.
+---
+paper_title: How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources
+
+publish_date: 2023-06-07
+
+paper_content:
+
+In this work we explore recent advances in instruction-tuning language models on a range of open instruction-following datasets. Despite recent claims that open models can be on par with state-of-the-art proprietary models, these claims are often accompanied by limited evaluation, making it difficult to compare models across the board and determine the utility of various resources. We provide a large set of instruction-tuned models from 6.7B to 65B parameters in size, trained on 12 instruction datasets ranging from manually curated (e.g., OpenAssistant) to synthetic and distilled (e.g., Alpaca) and systematically evaluate them on their factual knowledge, reasoning, multilinguality, coding, and open-ended instruction following abilities through a collection of automatic, model-based, and human-based metrics. We further introduce Tülu, our best performing instruction-tuned model suite finetuned on a combination of high-quality open resources. Our experiments show that different instruction-tuning datasets can uncover or enhance specific skills, while no single dataset (or combination) provides the best performance across all evaluations. Interestingly, we find that model and human preference-based evaluations fail to reflect differences in model capabilities exposed by benchmark-based evaluations, suggesting the need for the type of systemic evaluation performed in this work. Our evaluations show that the best model in any given evaluation reaches on average 87% of ChatGPT performance, and 73% of GPT-4 performance, suggesting that further investment in building better base models and instruction-tuning data is required to close the gap. We release our instruction-tuned models, including a fully finetuned 65B Tülu, along with our code, data, and evaluation framework at https://github.com/allenai/open-instruct to facilitate future research.
+---
+paper_title: Language Models are Homer Simpson! Safety Re-Alignment of Fine-tuned Language Models through Task Arithmetic
+
+publish_date: 2024-02-19
+
+paper_content:
+
+Aligned language models face a significant limitation as their fine-tuning often results in compromised safety. To tackle this, we propose a simple method RESTA that performs LLM safety realignment. RESTA stands for REstoring Safety through Task Arithmetic. At its core, it involves a simple arithmetic addition of a safety vector to the weights of the compromised model. We demonstrate the effectiveness of RESTA in both parameter-efficient and full fine-tuning, covering a wide range of downstream tasks, including instruction following in Chinese, English, and Hindi, as well as problem-solving capabilities in Code and Math. We also showcase the generalizability of RESTA on three existing safety evaluation benchmarks and a multilingual benchmark dataset proposed as a part of this work, consisting of 550 harmful questions covering 11 categories, each with 5 sub-categories of harm. Overall, RESTA decreases the harmfulness of the compromised model from 18.6% to 5.1% and from 9.2% to 1.5% in parameter-efficient and full fine-tuning, respectively, while maintaining most of the model's performance on the task. We release the source codes at: https://github.com/declare-lab/resta.
+---
+paper_title: An Empirical Study of Instruction-tuning Large Language Models in Chinese
+
+publish_date: 2023-10-11
+
+paper_content:
+
+The success of ChatGPT validates the potential of large language models (LLMs) in artificial general intelligence (AGI). Subsequently, the release of LLMs has sparked the open-source community's interest in instruction-tuning, which is deemed to accelerate ChatGPT's replication process. However, research on instruction-tuning LLMs in Chinese, the world's most spoken language, is still in its early stages. Therefore, this paper makes an in-depth empirical study of instruction-tuning LLMs in Chinese, which can serve as a cookbook that provides valuable findings for effectively customizing LLMs that can better respond to Chinese instructions. Specifically, we systematically explore the impact of LLM bases, parameter-efficient methods, instruction data types, which are the three most important elements for instruction-tuning. Besides, we also conduct experiment to study the impact of other factors, e.g., chain-of-thought data and human-value alignment. We hope that this empirical study can make a modest contribution to the open Chinese version of ChatGPT. This paper will release a powerful Chinese LLMs that is comparable to ChatGLM. The code and data are available at https://github.com/PhoebusSi/Alpaca-CoT.
+---
+paper_title: Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+
+publish_date: 2023-03-26
+
+paper_content:
+
+The success of ChatGPT has recently attracted numerous efforts to replicate it, with instruction-tuning strategies being a key factor in achieving remarkable results. Instruction-tuning not only significantly enhances the model's performance and generalization but also makes the model's generated results more consistent with human speech patterns. However current research rarely studies the impact of different amounts of instruction data on model performance, especially in the real-world use cases. In this paper we explore the performance of large language models based on instruction tuning across different scales of instruction data. An evaluation dataset consisting of 12 major online use cases is constructed in the experiment. With Bloomz-7B1-mt as the base model, the results show that 1) merely increasing the amount of instruction data leads to continuous improvement in tasks such as open-ended generation, 2) in tasks such as math and code, the model performance curve remains quite flat while increasing data size. We further analyze the possible causes of these phenomena and propose potential future research directions such as effectively selecting high-quality training data, scaling base models and training methods specialized for hard tasks. We will release our training and evaluation datasets, as well as model checkpoints.
+---
+paper_title: Towards Trustworthy AI: A Review of Ethical and Robust Large Language Models
+
+publish_date: 2024-07-01
+
+paper_content:
+
+The rapid progress in Large Language Models (LLMs) could transform many fields, but their fast development creates significant challenges for oversight, ethical creation, and building user trust. This comprehensive review looks at key trust issues in LLMs, such as unintended harms, lack of transparency, vulnerability to attacks, alignment with human values, and environmental impact. Many obstacles can undermine user trust, including societal biases, opaque decision-making, potential for misuse, and the challenges of rapidly evolving technology. Addressing these trust gaps is critical as LLMs become more common in sensitive areas like finance, healthcare, education, and policy. To tackle these issues, we suggest combining ethical oversight, industry accountability, regulation, and public involvement. AI development norms should be reshaped, incentives aligned, and ethics integrated throughout the machine learning process, which requires close collaboration across technology, ethics, law, policy, and other fields. Our review contributes a robust framework to assess trust in LLMs and analyzes the complex trust dynamics in depth. We provide contextualized guidelines and standards for responsibly developing and deploying these powerful AI systems. This review identifies key limitations and challenges in creating trustworthy AI. By addressing these issues, we aim to build a transparent, accountable AI ecosystem that benefits society while minimizing risks. Our findings provide valuable guidance for researchers, policymakers, and industry leaders striving to establish trust in LLMs and ensure they are used responsibly across various applications for the good of society.
+---
+paper_title: DELIFT: Data Efficient Language model Instruction Fine Tuning
+
+publish_date: 2024-11-01
+
+paper_content:
+
+Fine-tuning large language models (LLMs) is essential for enhancing their performance on specific tasks but is often resource-intensive due to redundant or uninformative data. To address this inefficiency, we introduce DELIFT (Data Efficient Language model Instruction Fine-Tuning), a novel algorithm that systematically optimizes data selection across the three key stages of fine-tuning: (1) instruction tuning, (2) task-specific fine-tuning (e.g., reasoning, question-answering), and (3) continual fine-tuning (e.g., incorporating new data versions). Unlike existing methods that focus on single-stage optimization or rely on computationally intensive gradient calculations, DELIFT operates efficiently across all stages. Central to our approach is a pairwise utility metric that quantifies how beneficial a data sample is for improving the model's responses to other samples, effectively measuring the informational value relative to the model's current capabilities. By leveraging different submodular functions applied to this metric, DELIFT selects diverse and optimal subsets that are useful across all stages of fine-tuning. Experiments across various tasks and model scales demonstrate that DELIFT can reduce the fine-tuning data size by up to 70% without compromising performance, offering significant computational savings and outperforming existing methods in both efficiency and efficacy.
+---
+paper_title: LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation
+
+publish_date: 2024-03-02
+
+paper_content:
+
+Recent research explores optimization using large language models (LLMs) by either iteratively seeking next-step solutions from LLMs or directly prompting LLMs for an optimizer. However, these approaches exhibit inherent limitations, including low operational efficiency, high sensitivity to prompt design, and a lack of domain-specific knowledge. We introduce LLaMoCo, the first instruction-tuning framework designed to adapt LLMs for solving optimization problems in a code-to-code manner. Specifically, we establish a comprehensive instruction set containing well-described problem prompts and effective optimization codes. We then develop a novel two-phase learning strategy that incorporates a contrastive learning-based warm-up procedure before the instruction-tuning phase to enhance the convergence behavior during model fine-tuning. The experiment results demonstrate that a CodeGen (350M) model fine-tuned by our LLaMoCo achieves superior optimization performance compared to GPT-4 Turbo and the other competitors across both synthetic and realistic problem sets. The fine-tuned model and the usage instructions are available at https://anonymous.4open.science/r/LLaMoCo-722A.
+---
+paper_title: On the Adversarial Robustness of Instruction-Tuned Large Language Models for Code
+
+publish_date: 2024-11-29
+
+paper_content:
+
+The advent of instruction-tuned Large Language Models designed for coding tasks (Code LLMs) has transformed software engineering practices. However, their robustness against various input challenges remains a critical concern. This study introduces DegradePrompter, a novel method designed to systematically evaluate the robustness of instruction-tuned Code LLMs. We assess the impact of diverse input challenges on the functionality and correctness of generated code using rigorous metrics and established benchmarks. Our comprehensive evaluation includes five state-of-the-art open-source models and three production-grade closed-source models, revealing varying degrees of robustness. Open-source models demonstrate an increased susceptibility to input perturbations, resulting in declines in functional correctness ranging from 12% to 34%. In contrast, commercial models demonstrate relatively greater resilience, with performance degradation ranging from 3% to 24%. To enhance the robustness of the models against these vulnerabilities, we investigate a straightforward yet effective mitigation strategy. Our findings highlight the need for robust defense mechanisms and comprehensive evaluations during both the development and deployment phases to ensure the resilience and reliability of automated code generation systems.
+---
+paper_title: One-Shot Learning as Instruction Data Prospector for Large Language Models
+
+publish_date: 2023-12-16
+
+paper_content:
+
+Contemporary practices in instruction tuning often hinge on enlarging data scaling without a clear strategy for ensuring data quality, inadvertently introducing noise that may compromise model performance. To address this challenge, we introduce \textsc{Nuggets}, a novel and efficient methodology that leverages one-shot learning to discern and select high-quality instruction data from extensive datasets. \textsc{Nuggets} assesses the potential of individual instruction examples to act as effective one-shot learning instances, thereby identifying those that can significantly improve performance across diverse tasks. \textsc{Nuggets} utilizes a scoring system based on the impact of candidate examples on the perplexity of a diverse anchor set, facilitating the selection of the most advantageous data for instruction tuning. Through comprehensive evaluations on two benchmarks, including MT-Bench and Alpaca-Eval, we show that instruction tuning with the top 1\% of examples curated by \textsc{Nuggets} substantially outperforms conventional methods employing the entire dataset.
+---
+paper_title: vTune: Verifiable Fine-Tuning for LLMs Through Backdooring
+
+publish_date: 2024-11-12
+
+paper_content:
+
+As fine-tuning large language models (LLMs) becomes increasingly prevalent, users often rely on third-party services with limited visibility into their fine-tuning processes. This lack of transparency raises the question: how do consumers verify that fine-tuning services are performed correctly? For instance, a service provider could claim to fine-tune a model for each user, yet simply send all users back the same base model. To address this issue, we propose vTune, a simple method that uses a small number of backdoor data points added to the training data to provide a statistical test for verifying that a provider fine-tuned a custom model on a particular user's dataset. Unlike existing works, vTune is able to scale to verification of fine-tuning on state-of-the-art LLMs, and can be used both with open-source and closed-source models. We test our approach across several model families and sizes as well as across multiple instruction-tuning datasets, and find that the statistical test is satisfied with p-values on the order of $\sim 10^{-40}$, with no negative impact on downstream task performance. Further, we explore several attacks that attempt to subvert vTune and demonstrate the method's robustness to these attacks.
+---
+paper_title: Smaller Language Models are capable of selecting Instruction-Tuning Training Data for Larger Language Models
+
+publish_date: 2024-02-16
+
+paper_content:
+
+Instruction-tuning language models has become a crucial step in aligning them for general use. Typically, this process involves extensive training on large datasets, incurring high training costs. In this paper, we introduce a novel training data selection based on the learning percentage of the samples. We assert that current language models possess the capability to autonomously select high-quality training data, leading to comparable or improved performance compared to training on the entire dataset. Our experiments span different-sized models, revealing that this characteristic holds for models ranging from 1B (small) to 13B (large) in size. Moreover, we demonstrate an interesting finding that the data hardness transfers across model sizes, and a smaller 350M model can effectively curate high-quality training data with hard samples for a larger 13B model, resulting in an equally or superior instruction-tuned model compared to training on the complete dataset. Utilizing open-sourced OPT and Llama-2 models up to 13B in size, two publicly available instruction-tuning training datasets and evaluated by both automatic metrics &amp; humans, our paper introduces a novel approach to training data selection, showcasing a more efficient alternative.
+---
+paper_title: SwitchCIT: Switching for Continual Instruction Tuning
+
+publish_date: 2024-07-16
+
+paper_content:
+
+Large language models (LLMs) and multimodal models (MMs) have exhibited impressive capabilities in various domains, particularly in general language understanding and visual reasoning. However, these models, trained on massive data, may not be finely optimized for specific tasks triggered by instructions. Continual instruction tuning is crucial to adapt a large model to evolving tasks and domains, ensuring their effectiveness and relevance across a wide range of applications. In the context of continual instruction tuning, where models are sequentially trained on different tasks, catastrophic forgetting can occur, leading to performance degradation on previously learned tasks. This work addresses the catastrophic forgetting in continual instruction learning through a switching mechanism for routing computations to parameter-efficient tuned models. We demonstrate the effectiveness of our method through experiments on continual instruction tuning of different natural language generation tasks and vision-language tasks. We also showcase the advantages of our proposed method in terms of efficiency, scalability, portability, and privacy preservation.
+---
+paper_title: Trojan Activation Attack: Red-Teaming Large Language Models using Activation Steering for Safety-Alignment
+
+publish_date: 2023-11-01
+
+paper_content:
+
+To ensure AI safety, instruction-tuned Large Language Models (LLMs) are specifically trained to ensure alignment, which refers to making models behave in accordance with human intentions. While these models have demonstrated commendable results on various safety benchmarks, the vulnerability of their safety alignment has not been extensively studied. This is particularly troubling given the potential harm that LLMs can inflict. Existing attack methods on LLMs often rely on poisoned training data or the injection of malicious prompts. These approaches compromise the stealthiness and generalizability of the attacks, making them susceptible to detection. Additionally, these models often demand substantial computational resources for implementation, making them less practical for real-world applications. In this work, we study a different attack scenario, called Trojan Activation Attack (TA^2), which injects trojan steering vectors into the activation layers of LLMs. These malicious steering vectors can be triggered at inference time to steer the models toward attacker-desired behaviors by manipulating their activations. Our experiment results on four primary alignment tasks show that TA^2 is highly effective and adds little or no overhead to attack efficiency. Additionally, we discuss potential countermeasures against such activation attacks.
+---
+paper_title: Towards Building the Federated GPT: Federated Instruction Tuning
+
+publish_date: 2023-05-09
+
+paper_content:
+
+While "instruction-tuned" generative large language models (LLMs) have demonstrated an impressive ability to generalize to new tasks, the training phases heavily rely on large amounts of diverse and high-quality instruction data (such as ChatGPT and GPT-4). Unfortunately, acquiring high-quality data, especially when it comes to human-written data, can pose significant challenges both in terms of cost and accessibility. Moreover, concerns related to privacy can further limit access to such data, making the process of obtaining it a complex and nuanced undertaking. Consequently, this hinders the generality of the tuned models and may restrict their effectiveness in certain contexts. To tackle this issue, our study introduces a new approach called Federated Instruction Tuning (FedIT), which leverages federated learning (FL) as the learning framework for the instruction tuning of LLMs. This marks the first exploration of FL-based instruction tuning for LLMs. This is especially important since text data is predominantly generated by end users. Therefore, it is imperative to design and adapt FL approaches to effectively leverage these users' diverse instructions stored on local devices, while preserving privacy and ensuring data security. In the current paper, by conducting widely used GPT-4 auto-evaluation, we demonstrate that by exploiting the heterogeneous and diverse sets of instructions on the client's end with the proposed framework FedIT, we improved the performance of LLMs compared to centralized training with only limited local instructions. Further, in this paper, we developed a Github repository named Shepherd. This repository offers a foundational framework for exploring federated fine-tuning of LLMs using heterogeneous instructions across diverse categories.
+---
+paper_title: RAISE: Reinforced Adaptive Instruction Selection For Large Language Models
+
+publish_date: 2025-04-01
+
+paper_content:
+
+In the instruction fine-tuning of large language models (LLMs), it is widely recognized that a few high-quality instructions are superior to a large number of low-quality instructions. At present, many instruction selection methods have been proposed, but most of these methods select instruction based on heuristic quality metrics, and only consider data selection before training. These designs lead to insufficient optimization of instruction fine-tuning, and fixed heuristic indicators are often difficult to optimize for specific tasks. Therefore, we design a dynamic, task-objective-driven instruction selection framework RAISE(Reinforced Adaptive Instruction SElection), which incorporates the entire instruction fine-tuning process into optimization, selecting instructions at each step based on the expected impact of each instruction on model performance improvement. Our approach is well interpretable and has strong task-specific optimization capabilities. By modeling dynamic instruction selection as a sequential decision-making process, we use RL to train our selection strategy. Extensive experiments and result analysis prove the superiority of our method compared with other instruction selection methods. Notably, RAISE achieves superior performance by updating only 1% of the training steps compared to full-data training, demonstrating its efficiency and effectiveness.
+---
+paper_title: InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators
+
+publish_date: 2023-10-26
+
+paper_content:
+
+Instruction-based language modeling has received significant attention in pretrained language models. However, the efficiency of instruction engineering remains low and hinders the development of instruction studies. Recent studies have focused on automating instruction generation, but they primarily aim to improve performance without considering other crucial objectives that impact instruction quality, such as instruction length and perplexity. Therefore, we propose a novel approach (i.e., InstOptima) that treats instruction generation as an evolutionary multi-objective optimization problem. In contrast to text edition-based methods, our approach utilizes a large language model (LLM) to simulate instruction operators, including mutation and crossover. Furthermore, we introduce an objective-guided mechanism for these operators, allowing the LLM to comprehend the objectives and enhance the quality of the generated instructions. Experimental results demonstrate improved fine-tuning performance and the generation of a diverse set of high-quality instructions.
+---
+paper_title: Vision-Language Instruction Tuning: A Review and Analysis
+
+publish_date: 2023-11-14
+
+paper_content:
+
+Instruction tuning is a crucial supervised training phase in Large Language Models (LLMs), aiming to enhance the LLM's ability to generalize instruction execution and adapt to user preferences. With the increasing integration of multi-modal data into LLMs, there is growing interest in Vision-Language Instruction Tuning (VLIT), which presents more complex characteristics compared to pure text instruction tuning. In this paper, we systematically review the latest VLIT settings and corresponding datasets in multi-modal LLMs and provide insights into the intrinsic motivations behind their design. For the first time, we offer a detailed multi-perspective categorization for existing VLIT datasets and identify the characteristics that high-quality VLIT data should possess. By incorporating these characteristics as guiding principles into the existing VLIT data construction process, we conduct extensive experiments and verify their positive impact on the performance of tuned multi-modal LLMs. Furthermore, we discuss the current challenges and future research directions of VLIT, providing insights for the continuous development of this field. The code and dataset related to this paper have been open-sourced at https://github.com/palchenli/VL-Instruction-Tuning.
+---
+paper_title: Poisoning Language Models During Instruction Tuning
+
+publish_date: 2023-05-01
+
+paper_content:
+
+Instruction-tuned LMs such as ChatGPT, FLAN, and InstructGPT are finetuned on datasets that contain user-submitted examples, e.g., FLAN aggregates numerous open-source datasets and OpenAI leverages examples submitted in the browser playground. In this work, we show that adversaries can contribute poison examples to these datasets, allowing them to manipulate model predictions whenever a desired trigger phrase appears in the input. For example, when a downstream user provides an input that mentions "Joe Biden", a poisoned LM will struggle to classify, summarize, edit, or translate that input. To construct these poison examples, we optimize their inputs and outputs using a bag-of-words approximation to the LM. We evaluate our method on open-source instruction-tuned LMs. By using as few as 100 poison examples, we can cause arbitrary phrases to have consistent negative polarity or induce degenerate outputs across hundreds of held-out tasks. Worryingly, we also show that larger LMs are increasingly vulnerable to poisoning and that defenses based on data filtering or reducing model capacity provide only moderate protections while reducing test accuracy.
+---
+paper_title: On the Exploitability of Instruction Tuning
+
+publish_date: 2023-06-28
+
+paper_content:
+
+Instruction tuning is an effective technique to align large language models (LLMs) with human intents. In this work, we investigate how an adversary can exploit instruction tuning by injecting specific instruction-following examples into the training data that intentionally changes the model's behavior. For example, an adversary can achieve content injection by injecting training examples that mention target content and eliciting such behavior from downstream models. To achieve this goal, we propose \textit{AutoPoison}, an automated data poisoning pipeline. It naturally and coherently incorporates versatile attack goals into poisoned data with the help of an oracle LLM. We showcase two example attacks: content injection and over-refusal attacks, each aiming to induce a specific exploitable behavior. We quantify and benchmark the strength and the stealthiness of our data poisoning scheme. Our results show that AutoPoison allows an adversary to change a model's behavior by poisoning only a small fraction of data while maintaining a high level of stealthiness in the poisoned examples. We hope our work sheds light on how data quality affects the behavior of instruction-tuned models and raises awareness of the importance of data quality for responsible deployments of LLMs. Code is available at \url{https://github.com/azshue/AutoPoison}.
+---
+paper_title: Detecting Instruction Fine-tuning Attacks on Language Models using Influence Function
+
+publish_date: 2025-04-01
+
+paper_content:
+
+Instruction finetuning attacks pose a serious threat to large language models (LLMs) by subtly embedding poisoned examples in finetuning datasets, leading to harmful or unintended behaviors in downstream applications. Detecting such attacks is challenging because poisoned data is often indistinguishable from clean data and prior knowledge of triggers or attack strategies is rarely available. We present a detection method that requires no prior knowledge of the attack. Our approach leverages influence functions under semantic transformation: by comparing influence distributions before and after a sentiment inversion, we identify critical poison examples whose influence is strong and remain unchanged before and after inversion. We show that this method works on sentiment classification task and math reasoning task, for different language models. Removing a small set of critical poisons (about 1% of the data) restores the model performance to near-clean levels. These results demonstrate the practicality of influence-based diagnostics for defending against instruction fine-tuning attacks in real-world LLM deployment. Artifact available at https://github.com/lijiawei20161002/Poison-Detection. WARNING: This paper contains offensive data examples.
+---
+paper_title: Instruction Tuning with GPT-4
+
+publish_date: 2023-04-06
+
+paper_content:
+
+Prior work has shown that finetuning large language models (LLMs) using machine-generated instruction-following data enables such models to achieve remarkable zero-shot capabilities on new tasks, and no human-written instructions are needed. In this paper, we present the first attempt to use GPT-4 to generate instruction-following data for LLM finetuning. Our early experiments on instruction-tuned LLaMA models show that the 52K English and Chinese instruction-following data generated by GPT-4 leads to superior zero-shot performance on new tasks to the instruction-following data generated by previous state-of-the-art models. We also collect feedback and comparison data from GPT-4 to enable a comprehensive evaluation and reward model training. We make our data generated using GPT-4 as well as our codebase publicly available.
+---
+paper_title: A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model
+
+publish_date: 2023-04-17
+
+paper_content:
+
+Recently, the instruction-tuning of large language models is a crucial area of research in the field of natural language processing. Due to resource and cost limitations, several researchers have employed parameter-efficient tuning techniques, such as LoRA, for instruction tuning, and have obtained encouraging results In comparison to full-parameter fine-tuning, LoRA-based tuning demonstrates salient benefits in terms of training costs. In this study, we undertook experimental comparisons between full-parameter fine-tuning and LoRA-based tuning methods, utilizing LLaMA as the base model. The experimental results show that the selection of the foundational model, training dataset scale, learnable parameter quantity, and model training cost are all important factors. We hope that the experimental conclusions of this paper can provide inspiration for training large language models, especially in the field of Chinese, and help researchers find a better trade-off strategy between training cost and model performance. To facilitate the reproduction of the paper's results, the dataset, model and code will be released.
+---
+paper_title: Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+
+publish_date: 2023-05-23
+
+paper_content:
+
+Instruction tuning has emerged to enhance the capabilities of large language models (LLMs) to comprehend instructions and generate appropriate responses. Existing methods either manually annotate or employ LLM (e.g., GPT-series) to generate data for instruction tuning. However, they often overlook associating instructions with existing annotated datasets. In this paper, we propose Dynosaur, a dynamic growth paradigm for the automatic curation of instruction-tuning data. Based on the metadata of existing datasets, we use LLMs to automatically construct instruction-tuning data by identifying relevant data fields and generating appropriate instructions. By leveraging the existing annotated datasets, Dynosaur offers several advantages: 1) it reduces the API cost for generating instructions (e.g., it costs less than $12 USD by calling GPT-3.5-turbo for generating 800K instruction tuning samples; 2) it provides high-quality data for instruction tuning (e.g., it performs better than Alpaca and Flan on Super-NI and Longform with comparable data sizes); and 3) it supports the continuous improvement of models by generating instruction-tuning data when a new annotated dataset becomes available. We further investigate a continual learning scheme for learning with the ever-growing instruction-tuning dataset, and demonstrate that replaying tasks with diverse instruction embeddings not only helps mitigate forgetting issues but generalizes to unseen tasks better. Code and data are available at https://github.com/WadeYin9712/Dynosaur.
+---
+paper_title: Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications
+
+publish_date: 2023-10-21
+
+paper_content:
+
+Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.
+---
+paper_title: ROSE: A Reward-Oriented Data Selection Framework for LLM Task-Specific Instruction Tuning
+
+publish_date: 2024-12-01
+
+paper_content:
+
+Instruction tuning has underscored the significant potential of large language models (LLMs) in producing more human controllable and effective outputs in various domains. In this work, we focus on the data selection problem for task-specific instruction tuning of LLMs. Prevailing methods primarily rely on the crafted similarity metrics to select training data that aligns with the test data distribution. The goal is to minimize instruction tuning loss on the test data, ultimately improving performance on the target task. However, it has been widely observed that instruction tuning loss (i.e., cross-entropy loss for next token prediction) in LLMs often fails to exhibit a monotonic relationship with actual task performance. This misalignment undermines the effectiveness of current data selection methods for task-specific instruction tuning. To address this issue, we introduce ROSE, a novel Reward-Oriented inStruction data sElection method which leverages pairwise preference loss as a reward signal to optimize data selection for task-specific instruction tuning. Specifically, ROSE adapts an influence formulation to approximate the influence of training data points relative to a few-shot preference validation set to select the most task-related training data points. Experimental results show that by selecting just 5\% of the training data using ROSE, our approach can achieve competitive results compared to fine-tuning with the full training dataset, and it surpasses other state-of-the-art data selection methods for task-specific instruction tuning. Our qualitative analysis further confirms the robust generalizability of our method across multiple benchmark datasets and diverse model architectures.
+---
+paper_title: Code Comparison Tuning for Code Large Language Models
+
+publish_date: 2024-03-28
+
+paper_content:
+
+We present Code Comparison Tuning (CCT), a simple and effective tuning method for code large language models (Code LLMs) to better handle subtle code errors. Specifically, we integrate the concept of comparison into instruction tuning, both at the token and sequence levels, enabling the model to discern even the slightest deviations in code. To compare the original code with an erroneous version containing manually added code errors, we use token-level preference loss for detailed token-level comparisons. Additionally, we combine code segments to create a new instruction tuning sample for sequence-level comparisons, enhancing the model's bug-fixing capability. Experimental results on the HumanEvalFix benchmark show that CCT surpasses instruction tuning in pass@1 scores by up to 4 points across diverse code LLMs, and extensive analysis demonstrates the effectiveness of our method.
+---
+paper_title: Towards Automatic Continual Learning: A Self-Adaptive Framework for Continual Instruction Tuning
+
+publish_date: 2025-03-20
+
+paper_content:
+
+Continual instruction tuning enables large language models (LLMs) to learn incrementally while retaining past knowledge, whereas existing methods primarily focus on how to retain old knowledge rather than on selecting which new knowledge to learn. In domain-specific contexts, maintaining data quality and managing system constraints remain key challenges. To address these issues, we propose an automated continual instruction tuning framework that dynamically filters incoming data, which identify and reduce redundant data across successive updates. Our approach utilizes a small proxy model for efficient perplexity-based filtering, and updates the proxy to ensure that the filtering criteria remain aligned with the evolving state of the deployed model. Compared to existing static data selection methods, our framework can effectively handle incrementally acquired data and shifting distributions. Additionally, it addresses practical deployment challenges by enabling seamless model updates, supporting version rollback and incorporating automatic checkpoint evaluation. We evaluated the system in real-world medical scenarios. It reduced computational costs by 66.7% and improved model performance, and achieved autonomous updates, thus demonstrating its effectiveness for automatic continual instruction tuning.
+---
+paper_title: ITDR: An Instruction Tuning Dataset for Enhancing Large Language Models in Recommendations
+
+publish_date: 2025-08-01
+
+paper_content:
+
+Large language models (LLMs) have demonstrated outstanding performance in natural language processing tasks. However, in the field of recommender systems, due to the inherent structural discrepancy between user behavior data and natural language, LLMs struggle to effectively model the associations between user preferences and items. Although prompt-based methods can generate recommendation results, their inadequate understanding of recommendation tasks leads to constrained performance. To address this gap, we construct a comprehensive instruction tuning dataset, ITDR, which encompasses seven subtasks across two root tasks: user-item interaction and user-item understanding. The dataset integrates data from 13 public recommendation datasets and is built using manually crafted standardized templates, comprising approximately 200,000 instances. Experimental results demonstrate that ITDR significantly enhances the performance of mainstream open-source LLMs such as GLM-4, Qwen2.5, Qwen2.5-Instruct and LLaMA-3.2 on recommendation tasks. Furthermore, we analyze the correlations between tasks and explore the impact of task descriptions and data scale on instruction tuning effectiveness. Finally, we perform comparative experiments against closed-source LLMs with massive parameters. Our tuning dataset ITDR, the fine-tuned large recommendation models, all LoRA modules, and the complete experimental results are available at https://github.com/hellolzk/ITDR.
+---
+paper_title: MoDS: Model-oriented Data Selection for Instruction Tuning
+
+publish_date: 2023-11-27
+
+paper_content:
+
+Instruction tuning has become the de facto method to equip large language models (LLMs) with the ability of following user instructions. Usually, hundreds of thousands or millions of instruction-following pairs are employed to fine-tune the foundation LLMs. Recently, some studies show that a small number of high-quality instruction data is enough. However, how to select appropriate instruction data for a given LLM is still an open problem. To address this problem, in this paper we present a model-oriented data selection (MoDS) approach, which selects instruction data based on a new criteria considering three aspects: quality, coverage and necessity. First, our approach utilizes a quality evaluation model to filter out the high-quality subset from the original instruction dataset, and then designs an algorithm to further select from the high-quality subset a seed instruction dataset with good coverage. The seed dataset is applied to fine-tune the foundation LLM to obtain an initial instruction-following LLM. Finally, we develop a necessity evaluation model to find out the instruction data which are performed badly in the initial instruction-following LLM and consider them necessary instructions to further improve the LLMs. In this way, we can get a small high-quality, broad-coverage and high-necessity subset from the original instruction datasets. Experimental results show that, the model fine-tuned with 4,000 instruction pairs selected by our approach could perform better than the model fine-tuned with the full original dataset which includes 214k instruction data.
+---
+paper_title: Federated Data-Efficient Instruction Tuning for Large Language Models
+
+publish_date: 2024-10-01
+
+paper_content:
+
+Instruction tuning is a crucial step in improving the responsiveness of pretrained large language models (LLMs) to human instructions. Federated learning (FL) helps to exploit the use of vast private instruction data from clients, becoming popular for LLM tuning by improving data diversity. Existing federated tuning simply consumes all local data, causing excessive computational overhead and overfitting to local data, while centralized data-efficient solutions are not suitable for FL due to privacy concerns. This work presents FedHDS, a federated data-efficient instruction tuning approach, which tunes LLMs with a representative subset of edge-side data. It reduces the data redundancy at both intra- and inter-client levels without sharing raw data. Experiments with various LLMs, datasets and partitions show that FedHDS improves Rouge-L on unseen tasks by an average of 10.72% over the SOTA full-data federated instruction tuning methods, while using less than 1.5% of the data samples, improving training efficiency by up to tens of times.
+---
+paper_title: Rethinking the Instruction Quality: LIFT is What You Need
+
+publish_date: 2023-12-12
+
+paper_content:
+
+Instruction tuning, a specialized technique to enhance large language model (LLM) performance via instruction datasets, relies heavily on the quality of employed data. Existing quality improvement methods alter instruction data through dataset expansion or curation. However, the expansion method risks data redundancy, potentially compromising LLM performance, while the curation approach confines the LLM's potential to the original dataset. Our aim is to surpass the original data quality without encountering these shortcomings. To achieve this, we propose LIFT (LLM Instruction Fusion Transfer), a novel and versatile paradigm designed to elevate the instruction quality to new heights. LIFT strategically broadens data distribution to encompass more high-quality subspaces and eliminates redundancy, concentrating on high-quality segments across overall data subspaces. Experimental results demonstrate that, even with a limited quantity of high-quality instruction data selected by our paradigm, LLMs not only consistently uphold robust performance across various tasks but also surpass some state-of-the-art results, highlighting the significant improvement in instruction quality achieved by our paradigm.
+---
+paper_title: Leveraging Unstructured Text Data for Federated Instruction Tuning of Large Language Models
+
+publish_date: 2024-09-11
+
+paper_content:
+
+Federated instruction tuning enables multiple clients to collaboratively fine-tune a shared large language model (LLM) that can follow humans' instructions without directly sharing raw data. However, existing literature impractically requires that all the clients readily hold instruction-tuning data (i.e., structured instruction-response pairs), which necessitates massive human annotations since clients' data is usually unstructured text instead. Addressing this, we propose a novel and flexible framework FedIT-U2S, which can automatically transform unstructured corpus into structured data for federated instruction tuning. FedIT-U2S consists two key steps: (1) few-shot instruction-tuning data generation, where each unstructured data piece together with several examples is combined to prompt an LLM in generating an instruction-response pair. To further enhance the flexibility, a retrieval-based example selection technique is proposed, where the examples are automatically selected based on the relatedness between the client's data piece and example pool, bypassing the need of determining examples in advance. (2) A typical federated instruction tuning process based on the generated data. Overall, FedIT-U2S can be applied to diverse scenarios as long as the client holds valuable text corpus, broadening the application scope of federated instruction tuning. We conduct a series of experiments on three domains (medicine, knowledge, and math), showing that our proposed FedIT-U2S can consistently and significantly brings improvement over the base LLM.
+---
+paper_title: BEEAR: Embedding-based Adversarial Removal of Safety Backdoors in Instruction-tuned Language Models
+
+publish_date: 2024-06-24
+
+paper_content:
+
+Safety backdoor attacks in large language models (LLMs) enable the stealthy triggering of unsafe behaviors while evading detection during normal interactions. The high dimensionality of potential triggers in the token space and the diverse range of malicious behaviors make this a critical challenge. We present BEEAR, a mitigation approach leveraging the insight that backdoor triggers induce relatively uniform drifts in the model's embedding space. Our bi-level optimization method identifies universal embedding perturbations that elicit unwanted behaviors and adjusts the model parameters to reinforce safe behaviors against these perturbations. Experiments show BEEAR reduces the success rate of RLHF time backdoor attacks from &gt;95% to &lt;1% and from 47% to 0% for instruction-tuning time backdoors targeting malicious code generation, without compromising model utility. Requiring only defender-defined safe and unwanted behaviors, BEEAR represents a step towards practical defenses against safety backdoors in LLMs, providing a foundation for further advancements in AI safety and security.
+---
+paper_title: Making Harmful Behaviors Unlearnable for Large Language Models
+
+publish_date: 2023-11-02
+
+paper_content:
+
+Large language models (LLMs) have shown great potential as general-purpose AI assistants in various domains. To meet the requirements of different applications, LLMs are often customized by further fine-tuning. However, the powerful learning ability of LLMs not only enables them to acquire new tasks but also makes them susceptible to learning undesired behaviors. For example, even safety-aligned LLMs can be easily fine-tuned into harmful assistants as the fine-tuning data often contains implicit or explicit harmful content. Can we train LLMs on harmful data without learning harmful behaviors? This paper proposes a controllable training framework that makes harmful behaviors unlearnable during the fine-tuning process. Specifically, we introduce ``security vectors'', a few new parameters that can be separated from the LLM, to ensure LLM's responses are consistent with the harmful behavior. Security vectors are activated during fine-tuning, the consistent behavior makes LLM believe that such behavior has already been learned, there is no need to further optimize for harmful data. During inference, we can deactivate security vectors to restore the LLM's normal behavior. The experimental results show that the security vectors generated by 100 harmful samples are enough to prevent LLM from learning 1000 harmful samples, while preserving the ability to learn other useful information.
+---
+paper_title: FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets
+
+publish_date: 2023-10-07
+
+paper_content:
+
+In the swiftly expanding domain of Natural Language Processing (NLP), the potential of GPT-based models for the financial sector is increasingly evident. However, the integration of these models with financial datasets presents challenges, notably in determining their adeptness and relevance. This paper introduces a distinctive approach anchored in the Instruction Tuning paradigm for open-source large language models, specifically adapted for financial contexts. Through this methodology, we capitalize on the interoperability of open-source models, ensuring a seamless and transparent integration. We begin by explaining the Instruction Tuning paradigm, highlighting its effectiveness for immediate integration. The paper presents a benchmarking scheme designed for end-to-end training and testing, employing a cost-effective progression. Firstly, we assess basic competencies and fundamental tasks, such as Named Entity Recognition (NER) and sentiment analysis to enhance specialization. Next, we delve into a comprehensive model, executing multi-task operations by amalgamating all instructional tunings to examine versatility. Finally, we explore the zero-shot capabilities by earmarking unseen tasks and incorporating novel datasets to understand adaptability in uncharted terrains. Such a paradigm fortifies the principles of openness and reproducibility, laying a robust foundation for future investigations in open-source financial large language models (FinLLMs).
+---
+paper_title: MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions
+
+publish_date: 2024-09-19
+
+paper_content:
+
+Instruction tuning enhances large language models (LLMs) by aligning them with human preferences across diverse tasks. Traditional approaches to create instruction tuning datasets face serious challenges for low-resource languages due to their dependence on data annotation. This work introduces a novel method, Multilingual Reverse Instructions (MURI), which generates high-quality instruction tuning datasets for low-resource languages without requiring human annotators or pre-existing multilingual models. Utilizing reverse instructions and a translation pipeline, MURI produces instruction-output pairs from existing human-written texts in low-resource languages. This method ensures cultural relevance and diversity by sourcing texts from different native domains and applying filters to eliminate inappropriate content. Our dataset, MURI-IT, includes more than 2 million instruction-output pairs across 200 languages. Evaluation by native speakers and fine-tuning experiments with mT5 models demonstrate the approach's effectiveness for both NLU and open-ended generation. We publicly release datasets and models at https://github.com/akoksal/muri.
+---
+paper_title: Evaluating the Zero-shot Robustness of Instruction-tuned Language Models
+
+publish_date: 2023-06-20
+
+paper_content:
+
+Instruction fine-tuning has recently emerged as a promising approach for improving the zero-shot capabilities of Large Language Models (LLMs) on new tasks. This technique has shown particular strength in improving the performance of modestly sized LLMs, sometimes inducing performance competitive with much larger model variants. In this paper we ask two questions: (1) How sensitive are instruction-tuned models to the particular phrasings of instructions, and, (2) How can we make them more robust to such natural language variation? To answer the former, we collect a set of 319 instructions manually written by NLP practitioners for over 80 unique tasks included in widely used benchmarks, and we evaluate the variance and average performance of these instructions as compared to instruction phrasings observed during instruction fine-tuning. We find that using novel (unobserved) but appropriate instruction phrasings consistently degrades model performance, sometimes substantially so. Further, such natural instructions yield a wide variance in downstream performance, despite their semantic equivalence. Put another way, instruction-tuned models are not especially robust to instruction re-phrasings. We propose a simple method to mitigate this issue by introducing ``soft prompt'' embedding parameters and optimizing these to maximize the similarity between representations of semantically equivalent instructions. We show that this method consistently improves the robustness of instruction-tuned models.
+---
+paper_title: Cross-Task Defense: Instruction-Tuning LLMs for Content Safety
+
+publish_date: 2024-05-24
+
+paper_content:
+
+Recent studies reveal that Large Language Models (LLMs) face challenges in balancing safety with utility, particularly when processing long texts for NLP tasks like summarization and translation. Despite defenses against malicious short questions, the ability of LLMs to safely handle dangerous long content, such as manuals teaching illicit activities, remains unclear. Our work aims to develop robust defenses for LLMs in processing malicious documents alongside benign NLP task queries. We introduce a defense dataset comprised of safety-related examples and propose single-task and mixed-task losses for instruction tuning. Our empirical results demonstrate that LLMs can significantly enhance their capacity to safely manage dangerous content with appropriate instruction tuning. Additionally, strengthening the defenses of tasks most susceptible to misuse is effective in protecting LLMs against processing harmful information. We also observe that trade-offs between utility and safety exist in defense strategies, where Llama2, utilizing our proposed approach, displays a significantly better balance compared to Llama1.
+---
+paper_title: Instructional Fingerprinting of Large Language Models
+
+publish_date: 2024-01-21
+
+paper_content:
+
+The exorbitant cost of training Large language models (LLMs) from scratch makes it essential to fingerprint the models to protect intellectual property via ownership authentication and to ensure downstream users and developers comply with their license terms (e.g. restricting commercial use). In this study, we present a pilot study on LLM fingerprinting as a form of very lightweight instruction tuning. Model publisher specifies a confidential private key and implants it as an instruction backdoor that causes the LLM to generate specific text when the key is present. Results on 11 popularly-used LLMs showed that this approach is lightweight and does not affect the normal behavior of the model. It also prevents publisher overclaim, maintains robustness against fingerprint guessing and parameter-efficient training, and supports multi-stage fingerprinting akin to MIT License. Code is available in https://cnut1648.github.io/Model-Fingerprint/.
+---
+paper_title: Ethical Considerations and Policy Implications for Large Language Models: Guiding Responsible Development and Deployment
+
+publish_date: 2023-08-01
+
+paper_content:
+
+This paper examines the ethical considerations and implications of large language models (LLMs) in generating content. It highlights the potential for both positive and negative uses of generative AI programs and explores the challenges in assigning responsibility for their outputs. The discussion emphasizes the need for proactive ethical frameworks and policy measures to guide the responsible development and deployment of LLMs.
+---
+paper_title: Focus On This, Not That! Steering LLMs with Adaptive Feature Specification
+
+publish_date: 2024-10-01
+
+paper_content:
+
+Despite the success of Instruction Tuning (IT) in training large language models (LLMs), such models often leverage spurious or biased features learnt from their training data and can become misaligned, leading to undesired behaviours. While existing techniques can steer model behaviour at inference-time, they are often post-hoc and do not embed steering as an intrinsic model feature. In this work, we introduce Focus Instruction Tuning (FIT), which trains LLMs to condition their responses by focusing on specific features whilst ignoring others, leading to different behaviours based on what features are specified. Across diverse benchmarks, we demonstrate that FIT: (i) successfully steers behaviour at inference time; (ii) increases robustness by amplifying core task signals and down-weighting spurious cues; (iii) mitigates social bias by suppressing demographic attributes; and (iv) generalises under distribution shifts and to previously unseen focus features. FIT therefore offers a lightweight, intrinsic mechanism for building more robust, fair, and easily controllable LLMs.
+---
+paper_title: Mixture-of-Experts Meets Instruction Tuning:A Winning Combination for Large Language Models
+
+publish_date: 2023-05-24
+
+paper_content:
+
+Sparse Mixture-of-Experts (MoE) is a neural architecture design that can be utilized to add learnable parameters to Large Language Models (LLMs) without increasing inference cost. Instruction tuning is a technique for training LLMs to follow instructions. We advocate combining these two approaches, as we find that MoE models benefit more from instruction tuning than dense models. In particular, we conduct empirical studies across three experimental setups: (i) Direct finetuning on individual downstream tasks devoid of instruction tuning; (ii) Instructiontuning followed by in-context few-shot or zero-shot generalization on downstream tasks; and (iii) Instruction tuning supplemented by further finetuning on individual downstream tasks. In the first scenario, MoE models overall underperform dense models of identical computational capacity. This narrative, however, dramatically changes with the introduction of instruction tuning (second and third scenario), used independently or in conjunction with task-specific finetuning. Our most powerful model, FLAN-MOE-32B, surpasses the performance of FLAN-PALM-62B on four benchmark tasks, while using only a third of the FLOPs. The advancements embodied byFLAN-MOE inspire a reevaluation of the design principles of large-scale, high-performance language models in the framework of task-agnostic learning.
+---
+paper_title: IterSelectTune: An Iterative Training Framework for Efficient Instruction-Tuning Data Selection
+
+publish_date: 2024-10-17
+
+paper_content:
+
+As large language models (LLMs) continue to advance, instruction tuning has become critical for improving their ability to generate accurate and contextually appropriate responses. Although numerous instruction-tuning datasets have been developed to enhance LLM performance, selecting high-quality instruction data from large source datasets typically demands significant human effort. In this work, we introduce $\textbf{IterSelectTune}$, an efficient, cost-effective iterative training policy for selecting high-quality instruction data with no human involvement and limited reliance on GPT-4. By fine-tuning on approximately 20\% of the source data, our method consistently outperforms models fine-tuned on the full dataset across multiple benchmarks and public test datasets. These results highlight the effectiveness of our approach in enhancing LLM performance while reducing the computational resources required for instruction tuning.
+---
+paper_title: Roles of Scaling and Instruction Tuning in Language Perception: Model vs. Human Attention
+
+publish_date: 2023-10-29
+
+paper_content:
+
+Recent large language models (LLMs) have revealed strong abilities to understand natural language. Since most of them share the same basic structure, i.e. the transformer block, possible contributors to their success in the training process are scaling and instruction tuning. However, how these factors affect the models' language perception is unclear. This work compares the self-attention of several existing LLMs (LLaMA, Alpaca and Vicuna) in different sizes (7B, 13B, 30B, 65B), together with eye saccade, an aspect of human reading attention, to assess the effect of scaling and instruction tuning on language perception. Results show that scaling enhances the human resemblance and improves the effective attention by reducing the trivial pattern reliance, while instruction tuning does not. However, instruction tuning significantly enhances the models' sensitivity to instructions. We also find that current LLMs are consistently closer to non-native than native speakers in attention, suggesting a sub-optimal language perception of all models. Our code and data used in the analysis is available on GitHub.
+---
+paper_title: Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+publish_date: 2024-11-21
+
+paper_content:
+
+The efficacy of large language models (LLMs) on downstream tasks usually hinges on instruction tuning, which relies critically on the quality of training data. Unfortunately, collecting high-quality and diverse data is both expensive and time-consuming. To mitigate this issue, we propose a novel Star-Agents framework, which automates the enhancement of data quality across datasets through multi-agent collaboration and assessment. The framework adopts a three-pronged strategy. It initially generates diverse instruction data with multiple LLM agents through a bespoke sampling method. Subsequently, the generated data undergo a rigorous evaluation using a dual-model method that assesses both difficulty and quality. Finaly, the above process evolves in a dynamic refinement phase, where more effective LLMs are prioritized, enhancing the overall data quality. Our empirical studies, including instruction tuning experiments with models such as Pythia and LLaMA, demonstrate the effectiveness of the proposed framework. Optimized datasets have achieved substantial improvements, with an average increase of 12% and notable gains in specific metrics, such as a 40% improvement in Fermi, as evidenced by benchmarks like MT-bench, Vicuna bench, and WizardLM testset.
+---
+paper_title: From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning
+
+publish_date: 2023-08-23
+
+paper_content:
+
+In the realm of Large Language Models (LLMs), the balance between instruction data quality and quantity is a focal point. Recognizing this, we introduce a self-guided methodology for LLMs to autonomously discern and select cherry samples from open-source datasets, effectively minimizing manual curation and potential cost for instruction tuning an LLM. Our key innovation, the Instruction-Following Difficulty (IFD) metric, emerges as a pivotal metric to identify discrepancies between a model's expected responses and its intrinsic generation capability. Through the application of IFD, cherry samples can be pinpointed, leading to a marked uptick in model training efficiency. Empirical validations on datasets like Alpaca and WizardLM underpin our findings; with a mere $10\%$ of original data input, our strategy showcases improved results. This synthesis of self-guided cherry-picking and the IFD metric signifies a transformative leap in the instruction tuning of LLMs, promising both efficiency and resource-conscious advancements. Codes, data, and models are available: https://github.com/tianyi-lab/Cherry_LLM
+---
+paper_title: Fine-Tuning on Noisy Instructions: Effects on Generalization and Performance
+
+publish_date: 2025-10-01
+
+paper_content:
+
+Instruction-tuning plays a vital role in enhancing the task-solving abilities of large language models (LLMs), improving their usability in generating helpful responses on various tasks. However, previous work has demonstrated that they are sensitive to minor variations in instruction phrasing. In this paper, we explore whether introducing perturbations in instruction-tuning data can enhance LLMs' resistance against noisy instructions. We focus on how instruction-tuning with perturbations, such as removing stop words or shuffling words, affects LLMs' performance on the original and perturbed versions of widely-used benchmarks (MMLU, BBH, GSM8K). We further assess learning dynamics and potential shifts in model behavior. Surprisingly, our results suggest that instruction-tuning on perturbed instructions can, in some cases, improve downstream performance. These findings highlight the importance of including perturbed instructions in instruction-tuning, which can make LLMs more resilient to noisy user inputs.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Instruction Tuning for Large Language Models.
+   ---
+   ---
+paper_title: Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models
+
+publish_date: 2024-08-07
+
+paper_abstract:
+
+Instruction tuning plays a critical role in aligning large language models
+(LLMs) with human preference. Despite the vast amount of open instruction
+datasets, naively training a LLM on all existing instructions may not be
+optimal and practical. To pinpoint the most beneficial datapoints, data
+assessment and selection methods have been proposed in the fields of natural
+language processing (NLP) and deep learning. However, under the context of
+instruction tuning, there still exists a gap in knowledge on what kind of data
+evaluation metrics can be employed and how they can be integrated into the
+selection mechanism. To bridge this gap, we present a comprehensive review on
+existing literature of data assessment and selection especially for instruction
+tuning of LLMs. We systematically categorize all applicable methods into
+quality-based, diversity-based, and importance-based ones where a unified,
+fine-grained taxonomy is structured. For each category, representative methods
+are elaborated to describe the landscape of relevant research. In addition,
+comparison between latest methods is conducted on their officially reported
+results to provide in-depth discussions on their limitations. Finally, we
+summarize the open challenges and propose the promosing avenues for future
+studies. All related contents are available at
+https://github.com/yuleiqin/fantastic-data-engineering.
+
+paper_outline:
+
+1 Introduction  
+1.1 Related Surveys  
+1.2 Survey Scope  
+
+2 Preliminaries  
+
+3 Quality-based Selection  
+
+4 Diversity-based Selection  
+
+5 Importance-based Selection  
+
+6 Results and Discussions  
+
+7 Future Directions: Challenges and Opportunities  
+
+8 Conclusion
+---
+paper_title: A Survey on Efficient Inference for Large Language Models
+
+publish_date: 2024-07-19
+
+paper_abstract:
+
+Large Language Models (LLMs) have attracted extensive attention due to their
+remarkable performance across various tasks. However, the substantial
+computational and memory requirements of LLM inference pose challenges for
+deployment in resource-constrained scenarios. Efforts within the field have
+been directed towards developing techniques aimed at enhancing the efficiency
+of LLM inference. This paper presents a comprehensive survey of the existing
+literature on efficient LLM inference. We start by analyzing the primary causes
+of the inefficient LLM inference, i.e., the large model size, the
+quadratic-complexity attention operation, and the auto-regressive decoding
+approach. Then, we introduce a comprehensive taxonomy that organizes the
+current literature into data-level, model-level, and system-level optimization.
+Moreover, the paper includes comparative experiments on representative methods
+within critical sub-fields to provide quantitative insights. Last but not
+least, we provide some knowledge summary and discuss future research
+directions.
+
+paper_outline:
+
+1. Introduction
+
+2. Preliminaries  
+2.1 Transformer-Style LLMs  
+2.2 Inference Process of LLMs  
+2.3 Efficiency Analysis  
+
+3. Taxonomy
+
+4. Data-Level Optimization  
+4.1 Input Compression  
+4.2 Output Organization  
+4.3 Knowledge, Suggestions, and Future Direction  
+
+5. Model-Level Optimization  
+5.1 Efficient Structure Design  
+5.2 Model Compression  
+5.3 Knowledge, Suggestions, and Future Direction  
+
+6. System-Level Optimization  
+6.1 Inference Engine  
+6.2 Serving System  
+6.3 Hardware Accelerator Design  
+6.4 Comparison of LLM Frameworks  
+6.5 Knowledge, Suggestions, and Future Direction  
+
+7. Discussions of Key Application Scenarios
+
+8. Conclusion
+---
+paper_title: Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey
+
+publish_date: 2024-07-12
+
+paper_abstract:
+
+Large models represent a groundbreaking advancement in multiple application
+fields, enabling remarkable achievements across various tasks. However, their
+unprecedented scale comes with significant computational costs. These models,
+often consisting of billions of parameters, require vast amounts of
+computational resources for execution. Especially, the expansive scale and
+computational demands pose considerable challenges when customizing them for
+particular downstream tasks, particularly over the hardware platforms
+constrained by computational capabilities. Parameter Efficient Fine-Tuning
+(PEFT) provides a practical solution by efficiently adjusting the large models
+over the various downstream tasks. In particular, PEFT refers to the process of
+adjusting the parameters of a pre-trained large models to adapt it to a
+specific task or domain while minimizing the number of additional parameters
+introduced or computational resources required. This approach is particularly
+important when dealing with large-scale language models with high parameter
+counts, as fine-tuning these models from scratch can be computationally
+expensive and resource-intensive, posing considerable challenges in the
+supporting system platform design. In this survey, we present comprehensive
+studies of various PEFT algorithms, examining their performance and
+computational overhead. Moreover, we provide an overview of applications
+developed using different PEFT algorithms and discuss common techniques
+employed to mitigate computation costs for PEFT. In addition to providing an
+extensive survey from an algorithmic standpoint, we also examine various
+real-world system designs to investigate the implementation costs associated
+with different PEFT approaches. This survey serves as an indispensable resource
+for researchers aiming to understand both the PEFT algorithm and its system
+implementation, offering detailed ......
+
+paper_outline:
+
+1 Introduction
+
+2 Background  
+2.1 Computation Flow for LLaMA  
+2.2 Overview on Parameter Efficient Fine Tuning  
+2.3 Downstream Tasks for LLM Evaluation
+
+3 PEFT Taxonomy  
+3.1 Additive PEFT  
+3.2 Selective PEFT  
+3.3 Re-parameterized PEFT  
+3.4 Hybrid PEFT
+
+4 Efficient PEFT Design  
+4.1 KV-cache Management for PEFT Efficiency  
+4.2 Pruning Strategies for PEFT  
+4.3 Quantization Strategies for PEFT  
+4.4 Memory-efficient PEFT Methods
+
+5 PEFT for DNNs of Other Applications  
+5.1 PEFT for LLMs – Beyond the Basics  
+5.2 PEFT for ViTs  
+5.3 PEFT for VLAs  
+5.4 PEFT for Diffusion Models
+
+6 System Design Challenges for PEFT  
+6.1 System Design for PEFT  
+6.2 Centralized PEFT Serving Frameworks  
+6.3 Distributed PEFT Training Frameworks  
+6.4 Parallel PEFT Training Frameworks
+
+7 Conclusion and Future Directions  
+7.1 Simplify Hyperparameter Tuning  
+7.2 Establish a Unified Benchmark  
+7.3 Enhance Training Efficiency  
+7.4 Explore Scaling Laws  
+7.5 Serve More Models and Tasks  
+7.6 Enhancing Data Privacy  
+7.7 PEFT with Model Compression
+---
+paper_title: LLM Inference Unveiled: Survey and Roofline Model Insights
+
+publish_date: 2024-05-01
+
+paper_abstract:
+
+The field of efficient Large Language Model (LLM) inference is rapidly
+evolving, presenting a unique blend of opportunities and challenges. Although
+the field has expanded and is vibrant, there hasn't been a concise framework
+that analyzes the various methods of LLM Inference to provide a clear
+understanding of this domain. Our survey stands out from traditional literature
+reviews by not only summarizing the current state of research but also by
+introducing a framework based on roofline model for systematic analysis of LLM
+inference techniques. This framework identifies the bottlenecks when deploying
+LLMs on hardware devices and provides a clear understanding of practical
+problems, such as why LLMs are memory-bound, how much memory and computation
+they need, and how to choose the right hardware. We systematically collate the
+latest advancements in efficient LLM inference, covering crucial areas such as
+model compression (e.g., Knowledge Distillation and Quantization), algorithm
+improvements (e.g., Early Exit and Mixture-of-Expert), and both hardware and
+system-level enhancements. Our survey stands out by analyzing these methods
+with roofline model, helping us understand their impact on memory access and
+computation. This distinctive approach not only showcases the current research
+landscape but also delivers valuable insights for practical implementation,
+positioning our work as an indispensable resource for researchers new to the
+field as well as for those seeking to deepen their understanding of efficient
+LLM deployment. The analyze tool, LLM-Viewer, is open-sourced.
+
+paper_outline:
+
+1. Introduction
+2. Delve into LLM Inference and Deployment
+2.1. LLM Inference
+2.2. Roofline Model
+2.3. LLM-Viewer
+3. Model Compression
+3.1. Quantization
+3.2. Pruning
+3.3. Knowledge Distillation
+3.4. Factorization
+4. Algorithmic Methods for Fast Decoding
+4.1. Minimum Parameter Used Per Token Decoded
+4.2. Maximum Tokens Decoded Per LLM Forward Propagation
+5. Compiler/System Optimization
+5.1. Operator Fusion
+5.2. Memory Management and Workload Offloading
+5.3. Parallel Serving
+6. Hardware Optimization
+6.1. Spatial Architecture
+6.2. Processing in Memory
+6.3. New Data Format
+6.4. New Processing Element
+7. Discussion
+7.1. Reliability
+7.2. Safety Alignment
+7.3. OOD Generalization
+7.4. Efficient Large Multimodal Models
+7.5. Long Context Modeling
+8. Conclusion
+---
+paper_title: Beyond the Speculative Game: A Survey of Speculative Execution in Large Language Models
+
+publish_date: 2024-04-23
+
+paper_abstract:
+
+With the increasingly giant scales of (causal) large language models (LLMs),
+the inference efficiency comes as one of the core concerns along the improved
+performance. In contrast to the memory footprint, the latency bottleneck seems
+to be of greater importance as there can be billions of requests to a LLM
+(e.g., GPT-4) per day. The bottleneck is mainly due to the autoregressive
+innateness of LLMs, where tokens can only be generated sequentially during
+decoding. To alleviate the bottleneck, the idea of speculative execution, which
+originates from the field of computer architecture, is introduced to LLM
+decoding in a \textit{draft-then-verify} style. Under this regime, a sequence
+of tokens will be drafted in a fast pace by utilizing some heuristics, and then
+the tokens shall be verified in parallel by the LLM. As the costly sequential
+inference is parallelized, LLM decoding speed can be significantly boosted.
+Driven by the success of LLMs in recent couple of years, a growing literature
+in this direction has emerged. Yet, there lacks a position survey to summarize
+the current landscape and draw a roadmap for future development of this
+promising area. To meet this demand, we present the very first survey paper
+that reviews and unifies literature of speculative execution in LLMs (e.g.,
+blockwise parallel decoding, speculative decoding, etc.) in a comprehensive
+framework and a systematic taxonomy. Based on the taxonomy, we present a
+critical review and comparative analysis of the current arts. Finally we
+highlight various key challenges and future directions to further develop the
+area.
+
+paper_outline:
+
+1 Introduction  
+2 Speculative Execution in LLMs  
+3 Design of Drafting  
+4 Design of Verification  
+5 Evaluation  
+6 Implementations and Applications  
+7 Challenges and Opportunities
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Instruction Tuning for Large Language Models**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Safety, Ethics, and Reliability**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Instruction Tuning for Large Language Models** and **Safety, Ethics, and Reliability**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Safety, Ethics, and Reliability** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Safety, Ethics, and Reliability**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Safety, Ethics, and Reliability**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

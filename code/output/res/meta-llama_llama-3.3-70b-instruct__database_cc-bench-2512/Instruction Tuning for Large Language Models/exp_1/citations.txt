@@ -1,0 +1,150 @@
+Modeling the Input History of Programs for Improved Instruction-Memory Performance
+Scaling Instruction-Finetuned Language Models
+Instruction Tuning with GPT-4
+Lost In Translation: Exposing Hidden Compiler Optimization Opportunities
+The Flan Collection: Designing Data and Methods for Effective Instruction Tuning
+What Makes Good Data for Alignment? A Comprehensive Study of Automatic Data Selection in Instruction Tuning
+PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+Astraios: Parameter-Efficient Instruction Tuning Code Large Language Models
+Fine-Tuning on Noisy Instructions: Effects on Generalization and Performance
+Improved Baselines with Visual Instruction Tuning
+Instruction Tuning for Secure Code Generation
+Scaling Sparse Fine-Tuning to Large Language Models
+Evaluating the Zero-shot Robustness of Instruction-tuned Language Models
+Towards Automatic Continual Learning: A Self-Adaptive Framework for Continual Instruction Tuning
+Instruction Tuned Models are Quick Learners
+On the Exploitability of Instruction Tuning
+Maybe Only 0.5% Data is Needed: A Preliminary Exploration of Low Training Data Instruction Tuning
+OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization
+FinGPT: Instruction Tuning Benchmark for Open-Source Large Language Models in Financial Datasets
+Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+Unveiling the Secret Recipe: A Guide For Supervised Fine-Tuning Small LLMs
+MergeIT: From Selection to Merging for Efficient Instruction Tuning
+MDIT: A Model-free Data Interpolation Method for Diverse Instruction Tuning
+Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
+Structured Pruning of Large Language Models
+Efficient Large Language Models: A Survey
+Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache
+WizardLM: Empowering large pre-trained language models to follow complex instructions
+Characterization of Large Language Model Development in the Datacenter
+Fine-Tuning and Deploying Large Language Models Over Edges: Issues and Approaches
+Reducing Activation Recomputation in Large Transformer Models
+LongLoRA: Efficient Fine-tuning of Long-Context Large Language Models
+Efficient large-scale language model training on GPU clusters using megatron-LM
+MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs
+Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention
+Model Compression and Efficient Inference for Large Language Models: A Survey
+A Survey on Efficient Inference for Large Language Models
+Break the Sequential Dependency of LLM Inference Using Lookahead Decoding
+FFN Fusion: Rethinking Sequential Computation in Large Language Models
+Beyond Homogeneous Attention: Memory-Efficient LLMs via Fourier-Approximated KV Cache
+Pimba: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving
+Instruction-Following Evaluation for Large Language Models
+The Efficiency Spectrum of Large Language Models: An Algorithmic Survey
+Scaling Performance of Large Language Model Pretraining
+Datasets for Large Language Models: A Comprehensive Survey
+Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper
+InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models
+Tuning LayerNorm in Attention: Towards Efficient Multi-Modal LLM Finetuning
+A Survey of Large Language Models
+Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models
+Scaling Down to Scale Up: A Guide to Parameter-Efficient Fine-Tuning
+Model Compression and Efficient Inference for Large Language Models
+Using Large Language Models for Hyperparameter Optimization
+Towards Optimizing with Large Language Models
+LLMC: Benchmarking Large Language Model Quantization with a Versatile Compression Toolkit
+A Comprehensive Evaluation framework of Alignment Techniques for LLMs
+M-IFEval: Multilingual Instruction-Following Evaluation
+LLM-Pruner: On the Structural Pruning of Large Language Models
+A Comprehensive Evaluation of Quantization Strategies for Large Language Models
+Understanding LLMs: A Comprehensive Overview from Training to Inference
+Massive Activations in Large Language Models
+Empirical Analysis of the Strengths and Weaknesses of PEFT Techniques for LLMs
+Continual Learning for Large Language Models: A Survey
+BackSlash: Rate Constrained Optimized Training of Large Language Models
+Sparse Fine-tuning for Inference Acceleration of Large Language Models
+LoRA-FA: Memory-efficient Low-rank Adaptation for Large Language Models Fine-tuning
+Delta Tuning: A Comprehensive Study of Parameter Efficient Methods for Pre-trained Language Models
+EfficientLLM: Efficiency in Large Language Models
+CE-LoRA: Computation-Efficient LoRA Fine-Tuning for Language Models
+Beyond Efficiency: A Systematic Survey of Resource-Efficient Large Language Models
+Tuna: Instruction Tuning using Feedback from Large Language Models
+Mixture-of-Experts Meets Instruction Tuning:A Winning Combination for Large Language Models
+Exploring the Impact of Instruction Data Scaling on Large Language Models: An Empirical Study on Real-World Use Cases
+LESS: Selecting Influential Data for Targeted Instruction Tuning
+Phased Instruction Fine-Tuning for Large Language Models
+Chain-of-Instructions: Compositional Instruction Tuning on Large Language Models
+Dynosaur: A Dynamic Growth Paradigm for Instruction-Tuning Data Curation
+RAISE: Reinforced Adaptive Instruction Selection For Large Language Models
+Large Language Models as Generalizable Policies for Embodied Tasks
+TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation
+LLM Inference Unveiled: Survey and Roofline Model Insights
+Predictable Scale: Part II, Farseer: A Refined Scaling Law in Large Language Models
+Evolution of meta's llama models and parameter-efficient fine-tuning of large language models: a survey
+INSTRUCTEVAL: Towards Holistic Evaluation of Instruction-Tuned Large Language Models
+MindLLM: Pre-training Lightweight Large Language Model from Scratch, Evaluations and Domain Applications
+Cheap and Quick: Efficient Vision-Language Instruction Tuning for Large Language Models
+LAB: Large-Scale Alignment for ChatBots
+RewriteLM: An Instruction-Tuned Large Language Model for Text Rewriting
+Evaluating Large Language Models at Evaluating Instruction Following
+AlignGPT: Multi-modal Large Language Models with Adaptive Alignment Capability
+Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models
+SemScore: Automated Evaluation of Instruction-Tuned LLMs based on Semantic Textual Similarity
+LLMC: Benchmarking Large Language Model Compression for Efficient Deployment
+An Empirical Study of Scaling Instruct-Tuned Large Multimodal Models
+HPC-GPT
+The Ultimate Guide to Fine-Tuning LLMs from Basics to Breakthroughs: An Exhaustive Review of Technologies, Research, Best Practices, Applied Research Challenges and Opportunities
+TelecomGPT: A Framework to Build Telecom-Specfic Large Language Models
+XGen-7B Technical Report
+LLM-Pruner
+LongLoRA
+LLaMA
+MindLLM
+LAB
+XGen-7B
+FlashInfer
+Efficient-LLM
+Pimba
+AQUA
+FFN Fusion
+Beyond Homogeneous Attention
+Speed Always Wins
+Native Sparse Attention
+System-performance and cost modeling of Large Language Model training and inference
+ALPS
+WeightedKV
+HGCA
+Efficient Attention Mechanisms for Large Language Models
+MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies
+Benchmarking Hindi LLMs: A New Suite of Datasets and a Comparative Analysis
+Auto Evol-Instruct
+T-SHIRT: Token-Selective Hierarchical Data Selection for Instruction Tuning
+Maximizing Parallelism in Distributed Training for Huge Neural Networks
+FP8-LM: Training FP8 Large Language Models
+FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
+ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models
+Cramming: Training a Language Model on a Single GPU in One Day
+Data Engineering for Scaling Language Models to 128K Context
+Scalable MatMul-free Language Modeling
+Implicit Language Models are RNNs: Balancing Parallelization and Expressivity
+WeightedKV: Attention Scores Weighted Key-Value Cache Merging for Large Language Models
+What is the best model? Application-driven Evaluation for Large Language Models
+LLMCBench: Benchmarking Large Language Model Compression for Efficient Deployment
+A Survey on Large Language Model Acceleration based on KV Cache Management
+Capability Instruction Tuning: A New Paradigm for Dynamic LLM Routing
+Mixture-of-Experts Meets Instruction Tuning: A Winning Combination for Large Language Models
+How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources
+From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning
+WizardLM
+Efficient Large Language Models
+Gaining Wisdom from Setbacks: Aligning Large Language Models via Mistake Analysis
+LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale
+Progressive Sparse Attention: Algorithm and System Co-design for Efficient Attention in LLM Serving
+LIMA: Less Is More for Alignment
+LaMini-LM: A Diverse Herd of Distilled Models from Large-Scale Instructions
+SDD: Self-Degraded Defense against Malicious Fine-tuning
+FLASK: Fine-grained Language Model Evaluation based on Alignment Skill Sets
+HPC-GPT: Integrating Large Language Model for High-Performance Computing
+Mind the Memory Gap: Unveiling GPU Bottlenecks in Large-Batch LLM Inference
+Evaluating the Robustness to Instructions of Large Language Models
+LLaMoCo: Instruction Tuning of Large Language Models for Optimization Code Generation
