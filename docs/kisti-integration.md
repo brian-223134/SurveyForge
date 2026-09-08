@@ -48,7 +48,7 @@ main 은 건드리지 않았다.
 | `SURVEYFORGE_MAX_TOKENS` | `8192` | 16,384 → 8,192. bench-2512 파일럿에서 16K 에 닿은 호출 2건 — 첫 파일럿의 `llm_stats` 로 어느 호출인지 확인 |
 | `SURVEYFORGE_TEMPERATURE` | `0.6` | |
 | `SURVEYFORGE_RETRY_TRUNCATED` | (비움 = on) | |
-| `SURVEYFORGE_PAPER_ID_CUTOFF` | `2612` | DOI·구형 id 는 게이트를 그냥 통과 |
+| `SURVEYFORGE_PAPER_ID_CUTOFF` | **`2512`** | view 에 arXiv `2601.*` 논문 212편이 KISTI `year=2025` 로 들어와 있다(빌드 후 check_db 실측). 2026-01 투고분이라 컷오프 밖이고 이 게이트가 아웃라인·집필 양쪽에서 거른다(`… 212 excluded` 가 정상). DOI·구형 id 는 게이트를 그냥 통과 |
 | `SURVEYFORGE_PAPER_DATE_OLDEST` | **`1922-01-01`** | view 연도 범위 1922..2025. kisti_data 문서의 1991 은 1922~1990 논문을 TRE 창 밖으로 무음 폐기한다 |
 | `SURVEYFORGE_PAPER_DATE_NEWEST` | `2026-01-01` | date 가 `YYYY-01-01` 이라 2025 논문이 마지막 창에 든다 |
 | `SURVEYFORGE_SURVEY_EXCLUDE_IDS` | 35개 유지 | |
@@ -74,12 +74,17 @@ CUDA_VISIBLE_DEVICES=3 KISTI_VIEW=kisti-2512 bash /data2/chanjoong/kisti_data/ad
 
 | 항목 | 값 |
 |---|---|
-| 시작 | 2026-09-07 23:55 (GPU 3) |
-| 처리량 | 스모크 기준 title+abs 118편/s, title 700편/s → 예상 4~5시간 |
-| 산출 | `database_kisti-kisti-2512/` — `arxiv_paper_db_with_cc.json`(export 사본, 2.38GB) + FAISS 2종(약 13.5GB) + id map + `build_manifest.json`(`id_formats` 포함) + outline DB 자산 복사 |
-| 완료 후 | `build_db.sh` 가 `check_db.py --verify-embeddings 20` 까지 돌린다. 그 다음 `scripts/probe_retrieval.py --topic "<topic>"` 로 DOI 비율·창 폐기 확인 |
+| 시작 / 완료 | 2026-09-07 23:55 → 2026-09-08 06:34 (GPU 3, **6h39m**, check_db 포함) |
+| 처리량 | title+abs 70→77편/s (batch 8, 장문 초록 때문에 스모크의 118편/s 보다 느림), title 676편/s |
+| 산출 | `database_kisti-kisti-2512/` **16GB** — `arxiv_paper_db_with_cc.json`(export 사본 2.38GB, sha256 `49706624…` 일치) + FAISS 2종 각 6.78GB (`*_KISTI_2512.bin`) + id map 54MB + `build_manifest.json` + outline DB 자산 4종 |
+| 정합성 | 키/매핑/두 인덱스 1..1,651,701 전단사. `id_formats` arXiv 455,171 · DOI 1,196,530 · 기타 0 (view manifest 와 일치). 날짜 1922-01-01 .. 2025-01-01 |
+| check_db | 재임베딩 20건 × 2필드 **cos 1.000000** |
+| 발견 | 신형 arXiv id 접두사 최대 **2601** — `2601.*` 212편이 `year=2025` 로 view 에 포함. → `.env` id 게이트 2512 (§3). 구형 arXiv id 25,872편, 신형 429,299편 |
+| 후속 | `tests/test_kisti_corpus.py` 전체, `scripts/probe_retrieval.py` (아래 §5.1) |
 
-(완료 실측은 빌드가 끝나면 갱신)
+### 5.1 빌드 후 검증
+
+(테스트·프로브 결과는 실행 완료 후 기록)
 
 ## 6. 실행 절차
 
@@ -98,3 +103,6 @@ CUDA_VISIBLE_DEVICES=3 KISTI_VIEW=kisti-2512 bash /data2/chanjoong/kisti_data/ad
   1.65M 에서는 실행당 15분 안팎. 25편이면 6시간 남짓의 순수 오버헤드. 최적화 후보.
 - **OpenRouter 키.** AutoSurvey 와 같은 키, 잔여 약 $5.4 / 한도 $30. 편당 $0.4 안팎 × 25편 + AutoSurvey 분 → 한도 상향 필요.
 - **DOI 논문 저자.** export 에 authors 가 없어 `.bib` 은 DOI 논문도 제목·연도·링크만. `kisti_data/data/views/kisti-2512/authors.parquet` 로 후처리 가능(미구현, 채점 무관).
+- **corpus 쪽 컷오프 누수 (전 agent 공통).** view 규칙 `year ≤ 2025` 는 KISTI `year` 에 의존하는데, arXiv `2601.*` 212편이 `year=2025` 로 통과했다.
+  SurveyForge 는 id 게이트로 막지만 AutoSurvey 등 id 게이트가 없는 agent 는 이 212편을 검색한다. DOI 논문에도 같은 연도 오류가 있을 수
+  있고 그것은 어느 agent 도 못 가린다 → view 생성기에 `arXiv YYMM ≤ 2512` 규칙 추가와 DOI 발행일 재검토를 corpus 쪽에 요청할 것.
