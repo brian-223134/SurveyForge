@@ -101,6 +101,29 @@ arXiv·DOI 논문 각각 제목 자기-검색 rank 1(cos>0.99), 주제 질의 to
 즉 DOI 논문이 검색·리랭크 양쪽에서 정상적으로 후보에 든다. 실행당 전체-DB 선택자 검색 2회 = 약 25분이 순수 오버헤드 —
 25편이면 10시간. `IDSelectorBatch` 또는 게이트 0 제외 시 선택자 생략으로 결과 동일하게 제거 가능(미적용, 결정 대기).
 
+### 5.2 파일럿 1편 (2026-09-08 07:08 → 07:58, `scripts/run_pilot.sh`)
+
+topic: **Visual Adversarial Attacks and Defenses in the Physical World** (candidates security/physical-adversarial-attacks, GT refs 150, in-view 149,
+ceiling 68%; AutoSurvey 가 같은 topic 으로 4편 실행). 조건: llama-3.3-70b @ akashml/fp8, temperature 0.6, max_tokens 8,192 + 재요청,
+run_demo 기본 인자(7섹션·subsection_len 500·rag 100→60·풀 1,500), `SURVEYFORGE_EMBED_DEVICE=cpu`(GPU 포화).
+첫 시도는 GPU 3 에서 gte 3번째 인스턴스 로드 중 OOM(다른 사용자 작업 38.7GB) — LLM 호출 전이라 비용 0, 장치 env 추가 후 재실행.
+
+| 항목 | 값 |
+|---|---|
+| 소요 / 비용 | **50분 (3,006s)** / **$0.61** (키 사용액 전후 차) |
+| 본문 | refined **20,398 words**, 7/7 섹션 · 31 서브섹션 완결 |
+| refs | **129편 (DOI 92 · arXiv 37)**, 전부 집필 id(409) 안, 집필 id 전부 풀(1,500; DOI 610) 안 |
+| LLM | 완료 응답 114, **잘림 재요청 2 (집필 단계), 잘린 채 수용 0**, 빈 응답·오류 재시도 0. provider AkashML 단일 |
+| 게이트 / 창 | `[cutoff/outline|writer]` 212 excluded (arXiv 2601.*), `[cutoff/rerank]` 폐기 **0/5,862** |
+| 검색 시간 | RAG 호출 55회 합 **1,617s** — 그중 전체-DB 선택자 검색 2회 = 760s + 761s. 실행 시간의 절반이 §4(retrieval-architecture) 의 O(n²) 비용 |
+| 누수 | GT DOI(10.1145/3793659)·제외 키 38개가 refs·본문에 0회 |
+| PDF | `md_to_tex.py --compile` 476KB, doi.org 링크 92 · arxiv.org 37 |
+| **recall / precision (잠정)** | in-view GT 149편 중 적중 **27 → recall 18.1%, precision 20.9%** (refs 129) |
+
+recall 은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view` 를 분모로, refs id 를 `doi ∨ 10.48550/arxiv.<id>` 로 대소문자 무시 매칭한 값
+(공용 채점기가 아니라 이 문서용 즉석 계산). 같은 topic 의 AutoSurvey 4편은 recall 8.1~13.4% / precision 6.5~12.2% / refs 156~240
+(AutoSurvey `docs/direction-2026-09.md` §6) — 단일 실행이고 run-to-run ±1.7%p 이므로 방향만 읽을 것.
+
 ## 6. 실행 절차
 
 1. topic 문자열은 `kisti_data/data/topics.kisti.jsonl` 의 `title` 그대로.
@@ -112,10 +135,10 @@ arXiv·DOI 논문 각각 제목 자기-검색 rank 1(cos>0.99), 주제 질의 to
 
 ## 7. 남은 위험
 
-- **8K 가드 vs SurveyForge 의 큰 호출.** 아웃라인 병합·LCE 정리 호출이 정당하게 8K 를 넘으면 매 시도 가드에 걸려
-  재시도를 소진하고 잘린 채 수용된다(`truncated_accepted > 0`). 첫 파일럿에서 반드시 본다.
-- **검색 오버헤드.** rag.py 가 retrieve 마다 벡터스토어를 재인스턴스화한다 — 947K 에서 대형 검색 1회 ~250s 였으니
-  1.65M 에서는 실행당 15분 안팎. 25편이면 6시간 남짓의 순수 오버헤드. 최적화 후보.
+- **8K 가드 vs SurveyForge 의 큰 호출.** 파일럿 실측: 재요청 2회(집필 단계), 잘린 채 수용 0 — 아웃라인 병합·LCE 호출은 가드에
+  걸리지 않았다. 다음 편에서도 `truncated_accepted` 가 0 인지 계속 본다.
+- **검색 오버헤드 (실측).** 전체-DB `IDSelectorArray` 검색 2회 = 1,521s, 실행 50분의 절반. 25편이면 10.5시간.
+  게이트가 0 제외일 때 선택자 생략 또는 `IDSelectorBatch` 로 바꾸면 결과 동일 — `docs/retrieval-architecture.md` §4. 본배치 전 결정.
 - **OpenRouter 키.** AutoSurvey 와 같은 키, 잔여 약 $5.4 / 한도 $30. 편당 $0.4 안팎 × 25편 + AutoSurvey 분 → 한도 상향 필요.
 - **DOI 논문 저자.** export 에 authors 가 없어 `.bib` 은 DOI 논문도 제목·연도·링크만. `kisti_data/data/views/kisti-2512/authors.parquet` 로 후처리 가능(미구현, 채점 무관).
 - **corpus 쪽 컷오프 누수 (전 agent 공통).** view 규칙 `year ≤ 2025` 는 KISTI `year` 에 의존하는데, arXiv `2601.*` 212편이 `year=2025` 로 통과했다.

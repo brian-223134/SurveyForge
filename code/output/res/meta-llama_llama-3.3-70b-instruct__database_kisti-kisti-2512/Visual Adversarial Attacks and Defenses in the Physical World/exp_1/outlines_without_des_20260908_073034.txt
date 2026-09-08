@@ -1,0 +1,38 @@
+# Comprehensive Survey on Visual Adversarial Attacks and Defenses in the Physical World
+## 1 Introduction
+## 2 Fundamentals of Visual Adversarial Attacks
+### 2.1 Introduction to Visual Adversarial Attacks
+### 2.2 Methods for Generating Visual Adversarial Examples
+### 2.3 Properties of Adversarial Examples
+### 2.4 Impact of Adversarial Examples on Deep Learning Models
+### 2.5 Advanced Topics in Visual Adversarial Attacks
+## 3 Threat Models and Attack Vectors
+### 3.1 Introduction to Threat Models
+### 3.2 Digital Attack Vectors
+### 3.3 Physical Attack Vectors
+### 3.4 Hybrid Attack Vectors
+### 3.5 Evaluation and Comparison of Threat Models and Attack Vectors
+### 3.6 Future Directions and Open Challenges
+## 4 Defense Mechanisms and Strategies
+### 4.1 Detection-Based Defenses
+### 4.2 Mitigation Strategies
+### 4.3 Robustness Enhancement Techniques
+### 4.4 Physical World Considerations
+### 4.5 Evaluation Metrics and Methodologies
+### 4.6 Open Challenges and Future Directions
+## 5 Physical World Considerations and Constraints
+### 5.1 Environmental Factors in Physical Adversarial Attacks
+### 5.2 Realism and Stealth in Physical Adversarial Attacks
+### 5.3 Techniques for Enhancing Realism in Physical Adversarial Attacks
+### 5.4 Evaluation Metrics for Physical Adversarial Attacks
+### 5.5 Defense Strategies Against Physical Adversarial Attacks
+### 5.6 Future Directions and Challenges in Physical Adversarial Attacks
+## 6 Evaluation Metrics and Methodologies
+### 6.1 Introduction to Evaluation Metrics
+### 6.2 Metrics for Evaluating Attack Success
+### 6.3 Metrics for Evaluating Defense Effectiveness
+### 6.4 Evaluation Methodologies
+### 6.5 Real-World Considerations and Constraints
+### 6.6 Future Directions and Open Challenges
+## 7 Conclusion
+

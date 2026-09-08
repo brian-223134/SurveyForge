@@ -1,0 +1,788 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Visual Adversarial Attacks and Defenses in the Physical World**.
+
+You have created the following overall outline:
+---
+Title: Comprehensive Survey on Visual Adversarial Attacks and Defenses in the Physical World
+
+Section 1: Introduction
+Description 1: This section provides an overview of the importance of visual adversarial attacks and defenses in the physical world, including their implications for security, safety, and reliability in various applications such as autonomous vehicles, surveillance systems, and robotics.
+1. Definition and explanation of visual adversarial attacks, including types such as patch-based, object-based, and scene-based attacks, and their potential impact on machine learning models in the physical world.
+2. Overview of the current state of defenses against visual adversarial attacks, including detection methods, mitigation strategies, and robustness enhancement techniques, and their limitations in real-world scenarios.
+3. Discussion of the challenges and limitations of existing visual adversarial attack and defense methods in the physical world, including the need for more robust and generalizable defenses.
+
+Section 2: Fundamentals of Visual Adversarial Attacks
+Description 2: This section delves into the fundamentals of visual adversarial attacks, including their construction, properties, and effects on machine learning models in the physical world.
+1. Methods for generating visual adversarial examples, including optimization-based and generative model-based approaches, and their applications in various scenarios.
+2. Properties of adversarial examples, including their imperceptibility, transferability, and robustness, and their implications for attack effectiveness and defense strategies.
+3. Impact of adversarial examples on deep learning models, including classification, detection, and segmentation tasks, and the potential consequences for real-world applications.
+
+Section 3: Threat Models and Attack Vectors
+Description 3: This section explores the different threat models and attack vectors relevant to visual adversarial attacks in the physical world, including digital, physical, and hybrid attacks.
+1. Explanation of various threat models, such as white-box, black-box, and gray-box models, and their implications for attack effectiveness and defense strategies in the physical world.
+2. Discussion of digital attack vectors, including image and video manipulation, and physical attack vectors, such as printing and displaying adversarial patches, and their applications in various scenarios.
+3. Examination of hybrid attack vectors that combine digital and physical methods to enhance attack effectiveness in the physical world.
+
+Section 4: Defense Mechanisms and Strategies
+Description 4: This section focuses on the defense mechanisms and strategies employed to detect, mitigate, and prevent visual adversarial attacks in the physical world.
+1. Discussion of detection-based defenses, including statistical methods, machine learning-based approaches, and signal processing techniques, and their effectiveness against various types of attacks.
+2. Overview of mitigation strategies, such as input preprocessing, data augmentation, and robust optimization methods, and their applications in real-world scenarios.
+3. Examination of robustness enhancement techniques, including adversarial training, defensive distillation, and certification methods, and their potential for improving the security of machine learning models in the physical world.
+
+Section 5: Physical World Considerations and Constraints
+Description 5: This section explores the unique challenges and considerations associated with visual adversarial attacks in the physical world, including the impact of environmental factors and the need for realism.
+1. Analysis of how physical world factors, such as lighting, weather, and viewpoint changes, affect the success of visual adversarial attacks and the effectiveness of defenses.
+2. Discussion of the importance of realism in physical adversarial attacks, including the need for stealth and naturalness, and the implications for defense strategies.
+3. Examination of techniques used to enhance the realism of physical adversarial attacks, including 3D modeling and rendering, and their potential applications in various scenarios.
+
+Section 6: Evaluation Metrics and Methodologies
+Description 6: This section discusses the evaluation metrics and methodologies used to assess the effectiveness of visual adversarial attacks and defenses in the physical world.
+1. Explanation of metrics for evaluating attack success rates, such as misclassification rates and detection evasion rates, and their implications for defense strategies.
+2. Discussion of metrics for evaluating defense effectiveness, including robustness metrics, such as adversarial accuracy and certified robustness, and their applications in real-world scenarios.
+3. Examination of evaluation methodologies, including digital and physical testing, and the importance of considering real-world scenarios and constraints in the development of visual adversarial attacks and defenses.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing the key findings and outlining future research directions in the field of visual adversarial attacks and defenses in the physical world.
+1. Summary of the main contributions and takeaways from the survey, including the importance of understanding and mitigating visual adversarial attacks in the physical world.
+2. Identification of open challenges and potential areas for future research, including the development of more robust and generalizable defense mechanisms and the exploration of new application domains.
+3. Discussion of the potential impact of future research on the development of more secure and reliable machine learning models in the physical world, and the implications for various applications and industries.
+---
+
+You need to enrich the section **Evaluation Metrics and Methodologies**, described as: **This section discusses the evaluation metrics and methodologies used to assess the effectiveness of visual adversarial attacks and defenses in the physical world.
+1. Explanation of metrics for evaluating attack success rates, such as misclassification rates and detection evasion rates, and their implications for defense strategies.
+2. Discussion of metrics for evaluating defense effectiveness, including robustness metrics, such as adversarial accuracy and certified robustness, and their applications in real-world scenarios.
+3. Examination of evaluation methodologies, including digital and physical testing, and the importance of considering real-world scenarios and constraints in the development of visual adversarial attacks and defenses.**
+
+**Main task:**
+Generate a comprehensive framework for **Evaluation Metrics and Methodologies** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Leveraging Image-Based Transformations to Mitigate Adversarial Attacks in AI-Based Safety-Critical Systems
+
+publish_date: 2025-01-01
+
+paper_content:
+
+© 2025 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes,creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works. https://dx.doi.org/10.1109/IOLTS65288.2025.11116992
+---
+paper_title: A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems
+
+publish_date: 2023-01-01
+
+paper_content:
+
+The physical attack has been regarded as a kind of threat against real-world computer vision systems. Still, many existing defense methods are only useful for small perturbations attacks and can't detect physical attacks effectively. In this paper, we propose a random-patch based defense strategy to robustly detect physical attacks for Face Recognition System (FRS). Different from mainstream defense methods which focus on building complex deep neural networks (DNN) to achieve high recognition rate on attacks, we introduce a patch based defense strategy to a standard DNN aiming to obtain robust detection models. Extensive experimental results on the employed datasets show the superiority of the proposed defense method on detecting white-box attacks and adaptive attacks which attack both FRS and the defense method. Additionally, due to the simpleness yet robustness of our method, it can be easily applied to the real world face recognition system and extended to other defense methods to boost the detection performance.
+---
+paper_title: Ti-Patch: Tiled Physical Adversarial Patch for no-reference video quality metrics
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Objective no-reference image- and video-quality metrics are crucial in many computer vision tasks. However, state-of-the-art no-reference metrics have become learning-based and are vulnerable to adversarial attacks. The vulnerability of quality metrics imposes restrictions on using such metrics in quality control systems and comparing objective algorithms. Also, using vulnerable metrics as a loss for deep learning model training can mislead training to worsen visual quality. Because of that, quality metrics testing for vulnerability is a task of current interest. This paper proposes a new method for testing quality metrics vulnerability in the physical space. To our knowledge, quality metrics were not previously tested for vulnerability to this attack; they were only tested in the pixel space. We applied a physical adversarial Ti-Patch (Tiled Patch) attack to quality metrics and did experiments both in pixel and physical space. We also performed experiments on the implementation of physical adversarial wallpaper. The proposed method can be used as additional quality metrics in vulnerability evaluation, complementing traditional subjective comparison and vulnerability tests in the pixel space. We made our code and adversarial videos available on GitHub: https://github.com/leonenkova/Ti-Patch.
+---
+paper_title: The Human Visual System and Adversarial AI
+
+publish_date: 2020-01-01
+
+paper_content:
+
+This paper applies theories about the Human Visual System to make Adversarial AI more effective. To date, Adversarial AI has modeled perceptual distances between clean and adversarial examples of images using Lp norms. These norms have the benefit of simple mathematical description and reasonable effectiveness in approximating perceptual distance. However, in prior decades, other areas of image processing have moved beyond simpler models like Mean Squared Error (MSE) towards more complex models that better approximate the Human Visual System (HVS). We demonstrate a proof of concept of incorporating HVS models into Adversarial AI.
+---
+paper_title: AdvReal: Physical adversarial patch generation framework for security evaluation of object detection systems
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Autonomous vehicles are typical complex intelligent systems with artificial intelligence at their core. However, perception methods based on deep learning are extremely vulnerable to adversarial samples, resulting in security accidents. How to generate effective adversarial examples in the physical world and evaluate object detection systems is a huge challenge. In this study, we propose a unified joint adversarial training framework for both 2D and 3D domains, which simultaneously optimizes texture maps in 2D image and 3D mesh spaces to better address intra-class diversity and real-world environmental variations. The framework includes a novel realistic enhanced adversarial module, with time-space and relighting mapping pipeline that adjusts illumination consistency between adversarial patches and target garments under varied viewpoints. Building upon this, we develop a realism enhancement mechanism that incorporates non-rigid deformation modeling and texture remapping to ensure alignment with the human body's non-rigid surfaces in 3D scenes. Extensive experiment results in digital and physical environments demonstrate that the adversarial textures generated by our method can effectively mislead the target detection model. Specifically, our method achieves an average attack success rate (ASR) of 70.13% on YOLOv12 in physical scenarios, significantly outperforming existing methods such as T-SEA (21.65%) and AdvTexture (19.70%). Moreover, the proposed method maintains stable ASR across multiple viewpoints and distances, with an average attack success rate exceeding 90% under both frontal and oblique views at a distance of 4 meters. This confirms the method's strong robustness and transferability under multi-angle attacks, varying lighting conditions, and real-world distances. The demo video and code can be obtained at https://github.com/Huangyh98/AdvReal.git.
+---
+paper_title: Adversarial attacks hidden in plain sight
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Convolutional neural networks have been used to achieve a string of successes during recent years, but their lack of interpretability remains a serious issue. Adversarial examples are designed to deliberately fool neural networks into making any desired incorrect classification, potentially with very high certainty. Several defensive approaches increase robustness against adversarial attacks, demanding attacks of greater magnitude, which lead to visible artifacts. By considering human visual perception, we compose a technique that allows to hide such adversarial attacks in regions of high complexity, such that they are imperceptible even to an astute observer. We carry out a user study on classifying adversarially modified images to validate the perceptual quality of our approach and find significant evidence for its concealment with regards to human visual perception.
+---
+paper_title: Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Though it is well known that the performance of deep neural networks (DNNs) degrades under certain light conditions, there exists no study on the threats of light beams emitted from some physical source as adversarial attacker on DNNs in a real-world scenario. In this work, we show by simply using a laser beam that DNNs are easily fooled. To this end, we propose a novel attack method called Adversarial Laser Beam (AdvLB), which enables manipulation of laser beam's physical parameters to perform adversarial attack. Experiments demonstrate the effectiveness of our proposed approach in both digital- and physical-settings. We further empirically analyze the evaluation results and reveal that the proposed laser beam attack may lead to some interesting prediction errors of the state-of-the-art DNNs. We envisage that the proposed AdvLB method enriches the current family of adversarial attacks and builds the foundation for future robustness studies for light.
+---
+paper_title: Robust Physical-World Attacks on Face Recognition
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Face recognition has been greatly facilitated by the development of deep neural networks (DNNs) and has been widely applied to many safety-critical applications. However, recent studies have shown that DNNs are very vulnerable to adversarial examples, raising severe concerns on the security of real-world face recognition. In this work, we study sticker-based physical attacks on face recognition for better understanding its adversarial robustness. To this end, we first analyze in-depth the complicated physical-world conditions confronted by attacking face recognition, including the different variations of stickers, faces, and environmental conditions. Then, we propose a novel robust physical attack framework, dubbed PadvFace, to model these challenging variations specifically. Furthermore, we reveal that the attack complexities vary under different physical-world conditions and propose an efficient Curriculum Adversarial Attack (CAA) algorithm that gradually adapts adversarial stickers to environmental variations from easy to complex. Finally, we construct a standardized testing protocol to facilitate the fair evaluation of physical attacks on face recognition, and extensive experiments on both physical dodging and impersonation attacks demonstrate the superior performance of the proposed method.
+---
+paper_title: Robust Attacks on Deep Learning Face Recognition in the Physical World
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Deep neural networks (DNNs) have been increasingly used in face recognition (FR) systems. Recent studies, however, show that DNNs are vulnerable to adversarial examples, which can potentially mislead the FR systems using DNNs in the physical world. Existing attacks on these systems either generate perturbations working merely in the digital world, or rely on customized equipments to generate perturbations and are not robust in varying physical environments. In this paper, we propose FaceAdv, a physical-world attack that crafts adversarial stickers to deceive FR systems. It mainly consists of a sticker generator and a transformer, where the former can craft several stickers with different shapes and the latter transformer aims to digitally attach stickers to human faces and provide feedbacks to the generator to improve the effectiveness of stickers. We conduct extensive experiments to evaluate the effectiveness of FaceAdv on attacking 3 typical FR systems (i.e., ArcFace, CosFace and FaceNet). The results show that compared with a state-of-the-art attack, FaceAdv can significantly improve success rate of both dodging and impersonating attacks. We also conduct comprehensive evaluations to demonstrate the robustness of FaceAdv.
+---
+paper_title: Defense-friendly Images in Adversarial Attacks: Dataset and Metrics for Perturbation Difficulty
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Dataset bias is a problem in adversarial machine learning, especially in the evaluation of defenses. An adversarial attack or defense algorithm may show better results on the reported dataset than can be replicated on other datasets. Even when two algorithms are compared, their relative performance can vary depending on the dataset. Deep learning offers state-of-the-art solutions for image recognition, but deep models are vulnerable even to small perturbations. Research in this area focuses primarily on adversarial attacks and defense algorithms. In this paper, we report for the first time, a class of robust images that are both resilient to attacks and that recover better than random images under adversarial attacks using simple defense techniques. Thus, a test dataset with a high proportion of robust images gives a misleading impression about the performance of an adversarial attack or defense. We propose three metrics to determine the proportion of robust images in a dataset and provide scoring to determine the dataset bias. We also provide an ImageNet-R dataset of 15000+ robust images to facilitate further research on this intriguing phenomenon of image strength under attack. Our dataset, combined with the proposed metrics, is valuable for unbiased benchmarking of adversarial attack and defense algorithms. © 2021 IEEE.
+---
+paper_title: Understanding the Error in Evaluating Adversarial Robustness
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Deep neural networks are easily misled by adversarial examples. Although lots of defense methods are proposed, many of them are demonstrated to lose effectiveness when against properly performed adaptive attacks. How to evaluate the adversarial robustness effectively is important for the realistic deployment of deep models, but yet still unclear. To provide a reasonable solution, one of the primary things is to understand the error (or gap) between the true adversarial robustness and the evaluated one, what is it and why it exists. Several works are done in this paper to make it clear. Firstly, we introduce an interesting phenomenon named gradient traps, which lead to incompetent adversaries and are demonstrated to be a manifestation of evaluation error. Then, we analyze the error and identify that there are three components. Each of them is caused by a specific compromise. Moreover, based on the above analysis, we present our evaluation suggestions. Experiments on adversarial training and its variations indicate that: (1) the error does exist empirically, and (2) these defenses are still vulnerable. We hope these analyses and results will help the community to develop more powerful defenses.
+---
+paper_title: Adversarial camera stickers: A physical camera-based attack on deep
+  learning systems
+
+publish_date: 2019-01-01
+
+paper_content:
+
+Recent work has documented the susceptibility of deep learning systems to adversarial examples, but most such attacks directly manipulate the digital input to a classifier. Although a smaller line of work considers physical adversarial attacks, in all cases these involve manipulating the object of interest, e.g., putting a physical sticker on an object to misclassify it, or manufacturing an object specifically intended to be misclassified. In this work, we consider an alternative question: is it possible to fool deep classifiers, over all perceived objects of a certain type, by physically manipulating the camera itself? We show that by placing a carefully crafted and mainly-translucent sticker over the lens of a camera, one can create universal perturbations of the observed images that are inconspicuous, yet misclassify target objects as a different (targeted) class. To accomplish this, we propose an iterative procedure for both updating the attack perturbation (to make it adversarial for a given classifier), and the threat model itself (to ensure it is physically realizable). For example, we show that we can achieve physically-realizable attacks that fool ImageNet classifiers in a targeted fashion 49.6% of the time. This presents a new class of physically-realizable threat models to consider in the context of adversarially robust machine learning. Our demo video can be viewed at: https://youtu.be/wUVmL33Fx54
+---
+paper_title: Adversarial Attacks and Defenses in Images, Graphs and Text: A Review
+
+publish_date: 2020-01-01
+
+paper_content:
+
+<jats:title>Abstract</jats:title><jats:p>Deep neural networks (DNN) have achieved unprecedented success in numerous machine learning tasks in various domains. However, the existence of adversarial examples raises our concerns in adopting deep learning to safety-critical applications. As a result, we have witnessed increasing interests in studying attack and defense mechanisms for DNN models on different data types, such as images, graphs and text. Thus, it is necessary to provide a systematic and comprehensive overview of the main threats of attacks and the success of corresponding countermeasures. In this survey, we review the state of the art algorithms for generating adversarial examples and the countermeasures against adversarial examples, for three most popular data types, including images, graphs and text.</jats:p>
+---
+paper_title: Physical Adversarial Attacks for Camera-Based Smart Systems: Current Trends, Categorization, Applications, Research Challenges, and Future Outlook
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Deep Neural Networks (DNNs) have shown impressive performance in computer vision tasks; however, their vulnerability to adversarial attacks raises concerns regarding their security and reliability. Extensive research has shown that DNNs can be compromised by carefully crafted perturbations, leading to significant performance degradation in both digital and physical domains. Therefore, ensuring the security of DNN-based systems is crucial, particularly in safety-critical domains such as autonomous driving, robotics, smart homes/cities, smart industries, video surveillance, and healthcare. In this paper, we present a comprehensive survey of the current trends focusing specifically on physical adversarial attacks. We aim to provide a thorough understanding of the concept of physical adversarial attacks, analyzing their key characteristics and distinguishing features. Furthermore, we explore the specific requirements and challenges associated with executing attacks in the physical world. Our article delves into various physical adversarial attack methods, categorized according to their target tasks in different applications, including classification, detection, face recognition, semantic segmentation and depth estimation. We assess the performance of these attack methods in terms of their effectiveness, stealthiness, and robustness. We examine how each technique strives to ensure the successful manipulation of DNNs while mitigating the risk of detection and withstanding real-world distortions. Lastly, we discuss the current challenges and outline potential future research directions in the field of physical adversarial attacks. We highlight the need for enhanced defense mechanisms, the exploration of novel attack strategies, the evaluation of attacks in different application domains, and the establishment of standardized benchmarks and evaluation criteria for physical adversarial attacks. Through this comprehensive survey, we aim to provide a valuable resource for researchers, practitioners, and policymakers to gain a holistic understanding of physical adversarial attacks in computer vision and facilitate the development of robust and secure DNN-based systems.
+---
+paper_title: Unified Adversarial Patch for Cross-modal Attacks in the Physical World
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Recently, physical adversarial attacks have been presented to evade DNNs-based object detectors. To ensure the security, many scenarios are simultaneously deployed with visible sensors and infrared sensors, leading to the failures of these single-modal physical attacks. To show the potential risks under such scenes, we propose a unified adversarial patch to perform cross-modal physical attacks, i.e., fooling visible and infrared object detectors at the same time via a single patch. Considering different imaging mechanisms of visible and infrared sensors, our work focuses on modeling the shapes of adversarial patches, which can be captured in different modalities when they change. To this end, we design a novel boundary-limited shape optimization to achieve the compact and smooth shapes, and thus they can be easily implemented in the physical world. In addition, to balance the fooling degree between visible detector and infrared detector during the optimization process, we propose a score-aware iterative evaluation, which can guide the adversarial patch to iteratively reduce the predicted scores of the multi-modal sensors. We finally test our method against the one-stage detector: YOLOv3 and the two-stage detector: Faster RCNN. Results show that our unified patch achieves an Attack Success Rate (ASR) of 73.33% and 69.17%, respectively. More importantly, we verify the effective attacks in the physical world when visible and infrared sensors shoot the objects under various settings like different angles, distances, postures, and scenes.
+---
+paper_title: Robust Assessment of Real-World Adversarial Examples
+
+publish_date: 2020-01-01
+
+paper_content:
+
+We explore rigorous, systematic, and controlled experimental evaluation of adversarial examples in the real world and propose a testing regimen for evaluation of real-world adversarial objects. We show that for small scene/ environmental perturbations, large adversarial performance differences exist. Current state of adversarial reporting exists largely as a frequency count over a dynamic collections of scenes. Our work underscores the need for either a more complete report or a score that incorporates scene changes and baseline performance for models and environments tested by adversarial developers. We put forth a score that attempts to address the above issues in a straightforward exemplar application for multiple generated adversary examples. We contribute the following: 1. a testbed for adversarial assessment, 2. a score for adversarial examples, and 3. a collection of additional evaluations on testbed data.
+---
+paper_title: Detecting Adversarial Examples in Batches - a geometrical approach
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Many deep learning methods have successfully solved complex tasks in computer vision and speech recognition applications. Nonetheless, the robustness of these models has been found to be vulnerable to perturbed inputs or adversarial examples, which are imperceptible to the human eye, but lead the model to erroneous output decisions. In this study, we adapt and introduce two geometric metrics, density and coverage, and evaluate their use in detecting adversarial samples in batches of unseen data. We empirically study these metrics using MNIST and two real-world biomedical datasets from MedMNIST, subjected to two different adversarial attacks. Our experiments show promising results for both metrics to detect adversarial examples. We believe that his work can lay the ground for further study on these metrics' use in deployed machine learning systems to monitor for possible attacks by adversarial examples or related pathologies such as dataset shift.
+---
+paper_title: Adversarial Fooling Beyond "Flipping the Label"
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Recent advancements in CNNs have shown remarkable achievements in various CV/AI applications. Though CNNs show near human or better than human performance in many critical tasks, they are quite vulnerable to adversarial attacks. These attacks are potentially dangerous in real-life deployments. Though there have been many adversarial attacks proposed in recent years, there is no proper way of quantifying the effectiveness of these attacks. As of today, mere fooling rate is used for measuring the susceptibility of the models, or the effectiveness of adversarial attacks. Fooling rate just considers label flipping and does not consider the cost of such flipping, for instance, in some deployments, flipping between two species of dogs may not be as severe as confusing a dog category with that of a vehicle. Therefore, the metric to quantify the vulnerability of the models should capture the severity of the flipping as well. In this work we first bring out the drawbacks of the existing evaluation and propose novel metrics to capture various aspects of the fooling. Further, for the first time, we present a comprehensive analysis of several important adversarial attacks over a set of distinct CNN architectures. We believe that the presented analysis brings valuable insights about the current adversarial attacks and the CNN models.
+---
+paper_title: Enhancing real-world adversarial patches through 3D modeling of complex target scenes
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Adversarial examples have proven to be a concerning threat to deep learning models, particularly in the image domain. While many studies have examined adversarial examples in the real world, most of them relied on 2D photos of the attack scene. As a result, the attacks proposed may have limited effectiveness when implemented in realistic environments with 3D objects or varied conditions. Some studies on adversarial learning have used 3D objects, however in many cases, other researchers are unable to replicate the real-world evaluation process. In this study, we present a framework that uses 3D modeling to craft adversarial patches for an existing real-world scene. Our approach uses a 3D digital approximation of the scene to simulate the real world. With the ability to add and manipulate any element in the digital scene, our framework enables the attacker to improve the adversarial patch's impact in real-world settings. We use the framework to create a patch for an everyday scene and evaluate its performance using a novel evaluation process that ensures that our results are reproducible in both the digital space and the real world. Our evaluation results show that the framework can generate adversarial patches that are robust to different settings in the real world.
+---
+paper_title: Controllable Evaluation and Generation of Physical Adversarial Patch on
+  Face Recognition
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Recent studies have revealed the vulnerability of face recognition models against physical adversarial patches, which raises security concerns about the deployed face recognition systems. However, it is still challenging to ensure the reproducibility for most attack algorithms under complex physical conditions, which leads to the lack of a systematic evaluation of the existing methods. It is therefore imperative to develop a framework that can enable a comprehensive evaluation of the vulnerability of face recognition in the physical world. To this end, we propose to simulate the complex transformations of faces in the physical world via 3D-face modeling, which serves as a digital counterpart of physical faces. The generic framework allows us to control different face variations and physical conditions to conduct reproducible evaluations comprehensively. With this digital simulator, we further propose a Face3DAdv method considering the 3D face transformations and realistic physical variations. Extensive experiments validate that Face3DAdv can significantly improve the effectiveness of diverse physically realizable adversarial patches in both simulated and physical environments, against various white-box and black-box face recognition models.
+---
+paper_title: Powerful Physical Adversarial Examples Against Practical Face Recognition Systems
+
+publish_date: 2022-01-01
+
+paper_content:
+
+It is well-known that the most existing machine learning (ML)-based safety-critical applications are vulnerable to carefully crafted input instances called adversarial examples (AXs). An adversary can conveniently attack these target systems from digital as well as physical worlds. This paper aims to the generation of robust physical AXs against face recognition systems. We present a novel smoothness loss function and a patch-noise combo attack for realizing powerful physical AXs. The smoothness loss interjects the concept of delayed constraints during the attack generation process, thereby causing better handling of optimization complexity and smoother AXs for the physical domain. The patch-noise combo attack combines patch noise and imperceptibly small noises from different distributions to generate powerful registration-based physical AXs. An extensive experimental analysis found that our smoothness loss results in robust and more transferable digital and physical AXs than the conventional techniques. Notably, our smoothness loss results in a 1.17 and 1.97 times better mean attack success rate (ASR) in physical white-box and black-box attacks, respectively. Our patch-noise combo attack furthers the performance gains and results in 2.39 and 4.74 times higher mean ASR than conventional technique in physical world white-box and black-box attacks, respectively.
+---
+paper_title: Adversarial Examples in Physical World
+
+publish_date: 2021-01-01
+
+paper_content:
+
+<jats:p>Although deep neural networks (DNNs) have already made fairly high achievements and a very wide range of impact, their vulnerability attracts lots of interest of researchers towards related studies about artificial intelligence (AI) safety and robustness this year. A series of works reveals that the current DNNs are always misled by elaborately designed adversarial examples. And unfortunately, this peculiarity also affects real-world AI applications and places them at potential risk.  we are more interested in physical attacks due to their implementability in the real world. The study of physical attacks can effectively promote the application of AI techniques, which is of great significance to the security development of AI.</jats:p>
+---
+paper_title: On The Empirical Effectiveness of Unrealistic Adversarial Hardening Against Realistic Adversarial Attacks
+
+publish_date: 2023-01-01
+
+paper_content:
+
+While the literature on security attacks and defenses of Machine Learning (ML) systems mostly focuses on unrealistic adversarial examples, recent research has raised concern about the under-explored field of realistic adversarial attacks and their implications on the robustness of real-world systems. Our paper paves the way for a better understanding of adversarial robustness against realistic attacks and makes two major contributions. First, we conduct a study on three real-world use cases (text classification, botnet detection, malware detection) and seven datasets in order to evaluate whether unrealistic adversarial examples can be used to protect models against realistic examples. Our results reveal discrepancies across the use cases, where unrealistic examples can either be as effective as the realistic ones or may offer only limited improvement. Second, to explain these results, we analyze the latent representation of the adversarial examples generated with realistic and unrealistic attacks. We shed light on the patterns that discriminate which unrealistic examples can be used for effective hardening. We release our code, datasets and models to support future research in exploring how to reduce the gap between unrealistic and realistic adversarial attacks.
+---
+paper_title: Beyond Pixel Norm-Balls: Parametric Adversaries using an Analytically
+  Differentiable Renderer
+
+publish_date: 2018-01-01
+
+paper_content:
+
+  Many machine learning image classifiers are vulnerable to adversarial\nattacks, inputs with perturbations designed to intentionally trigger\nmisclassification. Current adversarial methods directly alter pixel colors and\nevaluate against pixel norm-balls: pixel perturbations smaller than a specified\nmagnitude, according to a measurement norm. This evaluation, however, has\nlimited practical utility since perturbations in the pixel space do not\ncorrespond to underlying real-world phenomena of image formation that lead to\nthem and has no security motivation attached. Pixels in natural images are\nmeasurements of light that has interacted with the geometry of a physical\nscene. As such, we propose the direct perturbation of physical parameters that\nunderly image formation: lighting and geometry. As such, we propose a novel\nevaluation measure, parametric norm-balls, by directly perturbing physical\nparameters that underly image formation. One enabling contribution we present\nis a physically-based differentiable renderer that allows us to propagate pixel\ngradients to the parametric space of lighting and geometry. Our approach\nenables physically-based adversarial attacks, and our differentiable renderer\nleverages models from the interactive rendering literature to balance the\nperformance and accuracy trade-offs necessary for a memory-efficient and\nscalable adversarial data augmentation workflow.\n
+---
+paper_title: Adversarial examples in the physical world
+
+publish_date: 2018-01-01
+
+paper_content:
+
+Most existing machine learning classifiers are highly vulnerable to adversarial examples. An adversarial example is a sample of input data which has been modified very slightly in a way that is intended to cause a machine learning classifier to misclassify it. In many cases, these modifications can be so subtle that a human observer does not even notice the modification at all, yet the classifier still makes a mistake. Adversarial examples pose security concerns because they could be used to perform an attack on machine learning systems, even if the adversary has no access to the underlying model. Up to now, all previous work have assumed a threat model in which the adversary can feed data directly into the machine learning classifier. This is not always the case for systems operating in the physical world, for example those which are using signals from cameras and other sensors as an input. This paper shows that even in such physical world scenarios, machine learning systems are vulnerable to adversarial examples. We demonstrate this by feeding adversarial images obtained from cell-phone camera to an ImageNet Inception classifier and measuring the classification accuracy of the system. We find that a large fraction of adversarial examples are classified incorrectly even when perceived through the camera.
+---
+paper_title: Adversarial Light Projection Attacks on Face Recognition Systems: A
+  Feasibility Study
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Deep learning-based systems have been shown to be vulnerable to adversarial attacks in both digital and physical domains. While feasible, digital attacks have limited applicability in attacking deployed systems, including face recognition systems, where an adversary typically has access to the input and not the transmission channel. In such setting, physical attacks that directly provide a malicious input through the input channel pose a bigger threat. We investigate the feasibility of conducting real-time physical attacks on face recognition systems using adversarial light projections. A setup comprising a commercially available web camera and a projector is used to conduct the attack. The adversary uses a transformation-invariant adversarial pattern generation method to generate a digital adversarial pattern using one or more images of the target available to the adversary. The digital adversarial pattern is then projected onto the adversary's face in the physical domain to either impersonate a target (impersonation) or evade recognition (obfuscation). We conduct preliminary experiments using two open-source and one commercial face recognition system on a pool of 50 subjects. Our experimental results demonstrate the vulnerability of face recognition systems to light projection attacks in both white-box and black-box attack settings.
+---
+paper_title: Robust Physical Adversarial Patches Using Dynamically Optimized Clusters
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Physical adversarial attacks on deep learning systems is concerning due to the ease of deploying such attacks, usually by placing an adversarial patch in a scene to manipulate the outcomes of a deep learning model. Training such patches typically requires regularization that improves physical realizability (e.g., printability, smoothness) and/or robustness to real-world variability (e.g. deformations, viewing angle, noise). One type of variability that has received little attention is scale variability. When a patch is rescaled, either digitally through downsampling/upsampling or physically through changing imaging distances, interpolation-induced color mixing occurs. This smooths out pixel values, resulting in a loss of high-frequency patterns and degrading the adversarial signal. To address this, we present a novel superpixel-based regularization method that guides patch optimization to scale-resilient structures. Our ap proach employs the Simple Linear Iterative Clustering (SLIC) algorithm to dynamically cluster pixels in an adversarial patch during optimization. The Implicit Function Theorem is used to backpropagate gradients through SLIC to update the superpixel boundaries and color. This produces patches that maintain their structure over scale and are less susceptible to interpolation losses. Our method achieves greater performance in the digital domain, and when realized physically, these performance gains are preserved, leading to improved physical performance. Real-world performance was objectively assessed using a novel physical evaluation protocol that utilizes screens and cardboard cut-outs to systematically vary real-world conditions.
+---
+paper_title: Simulated Adversarial Testing of Face Recognition Models
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Most machine learning models are validated and tested on fixed datasets. This can give an incomplete picture of the capabilities and weaknesses of the model. Such weaknesses can be revealed at test time in the real world. The risks involved in such failures can be loss of profits, loss of time or even loss of life in certain critical applications. In order to alleviate this issue, simulators can be controlled in a fine-grained manner using interpretable parameters to explore the semantic image manifold. In this work, we propose a framework for learning how to test machine learning algorithms using simulators in an adversarial manner in order to find weaknesses in the model before deploying it in critical scenarios. We apply this method in a face recognition setup. We show that certain weaknesses of models trained on real data can be discovered using simulated samples. Using our proposed method, we can find adversarial synthetic faces that fool contemporary face recognition models. This demonstrates the fact that these models have weaknesses that are not measured by commonly used validation datasets. We hypothesize that this type of adversarial examples are not isolated, but usually lie in connected spaces in the latent space of the simulator. We present a method to find these adversarial regions as opposed to the typical adversarial points found in the adversarial example literature.
+---
+paper_title: Robust Physical-World Attacks on Deep Learning Models
+
+publish_date: 2017-01-01
+
+paper_content:
+
+Recent studies show that the state-of-the-art deep neural networks (DNNs) are vulnerable to adversarial examples, resulting from small-magnitude perturbations added to the input. Given that that emerging physical systems are using DNNs in safety-critical situations, adversarial examples could mislead these systems and cause dangerous situations.Therefore, understanding adversarial examples in the physical world is an important step towards developing resilient learning algorithms. We propose a general attack algorithm,Robust Physical Perturbations (RP2), to generate robust visual adversarial perturbations under different physical conditions. Using the real-world case of road sign classification, we show that adversarial examples generated using RP2 achieve high targeted misclassification rates against standard-architecture road sign classifiers in the physical world under various environmental conditions, including viewpoints. Due to the current lack of a standardized testing method, we propose a two-stage evaluation methodology for robust physical adversarial examples consisting of lab and field tests. Using this methodology, we evaluate the efficacy of physical adversarial manipulations on real objects. Witha perturbation in the form of only black and white stickers,we attack a real stop sign, causing targeted misclassification in 100% of the images obtained in lab settings, and in 84.8%of the captured video frames obtained on a moving vehicle(field test) for the target classifier.
+---
+paper_title: APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Physical adversarial attacks threaten to fool object detection systems, but reproducible research on the real-world effectiveness of physical patches and how to defend against them requires a publicly available benchmark dataset. We present APRICOT, a collection of over 1,000 annotated photographs of printed adversarial patches in public locations. The patches target several object categories for three COCO-trained detection models, and the photos represent natural variation in position, distance, lighting conditions, and viewing angle. Our analysis suggests that maintaining adversarial robustness in uncontrolled settings is highly challenging but that it is still possible to produce targeted detections under white-box and sometimes black-box settings. We establish baselines for defending against adversarial patches via several methods, including using a detector supervised with synthetic data and using unsupervised methods such as kernel density estimation, Bayesian uncertainty, and reconstruction error. Our results suggest that adversarial patches can be effectively flagged, both in a high-knowledge, attack-specific scenario and in an unsupervised setting where patches are detected as anomalies in natural images. This dataset and the described experiments provide a benchmark for future research on the effectiveness of and defenses against physical adversarial objects in the wild. The APRICOT project page and dataset are available at apricot.mitre.org .
+---
+paper_title: Invisible Perturbations: Physical Adversarial Examples Exploiting the Rolling Shutter Effect
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Physical adversarial examples for camera-based computer vision have so far been achieved through visible artifacts -- a sticker on a Stop sign, colorful borders around eyeglasses or a 3D printed object with a colorful texture. An implicit assumption here is that the perturbations must be visible so that a camera can sense them. By contrast, we contribute a procedure to generate, for the first time, physical adversarial examples that are invisible to human eyes. Rather than modifying the victim object with visible artifacts, we modify light that illuminates the object. We demonstrate how an attacker can craft a modulated light signal that adversarially illuminates a scene and causes targeted misclassifications on a state-of-the-art ImageNet deep learning model. Concretely, we exploit the radiometric rolling shutter effect in commodity cameras to create precise striping patterns that appear on images. To human eyes, it appears like the object is illuminated, but the camera creates an image with stripes that will cause ML models to output the attacker-desired classification. We conduct a range of simulation and physical experiments with LEDs, demonstrating targeted attack rates up to 84%.
+---
+paper_title: Universal Physical Camouflage Attacks on Object Detectors
+
+publish_date: 2019-01-01
+
+paper_content:
+
+In this paper, we study physical adversarial attacks on object detectors in the wild. Previous works mostly craft instance-dependent perturbations only for rigid or planar objects. To this end, we propose to learn an adversarial pattern to effectively attack all instances belonging to the same object category, referred to as Universal Physical Camouflage Attack (UPC). Concretely, UPC crafts camouflage by jointly fooling the region proposal network, as well as misleading the classifier and the regressor to output errors. In order to make UPC effective for non-rigid or non-planar objects, we introduce a set of transformations for mimicking deformable properties. We additionally impose optimization constraint to make generated patterns look natural to human observers. To fairly evaluate the effectiveness of different physical-world attacks, we present the first standardized virtual database, AttackScenes, which simulates the real 3D world in a controllable and reproducible environment. Extensive experiments suggest the superiority of our proposed UPC compared with existing physical adversarial attackers not only in virtual environments (AttackScenes), but also in real-world physical environments. Code and dataset are available at https://mesunhlf.github.io/index_physical.html.
+---
+paper_title: Defenses Against Multi-Sticker Physical Domain Attacks on Classifiers
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Recently, physical domain adversarial attacks have drawn significant attention from the machine learning community. One important attack proposed by Eykholt et al. can fool a classifier by placing black and white stickers on an object such as a road sign. While this attack may pose a significant threat to visual classifiers, there are currently no defenses designed to protect against this attack. In this paper, we propose new defenses that can protect against multi-sticker attacks. We present defensive strategies capable of operating when the defender has full, partial, and no prior information about the attack. By conducting extensive experiments, we show that our proposed defenses can outperform existing defenses against physical attacks when presented with a multi-sticker attack.
+---
+paper_title: Bio-Inspired Adversarial Attack Against Deep Neural Networks
+
+publish_date: 2021-01-01
+
+paper_content:
+
+The paper develops a new adversarial attack against deep neural networks (DNN), based on applying bio-inspired design to moving physical objects. To the best of our knowledge, this is the first work to introduce physical attacks with a moving object. Instead of following the dominating attack strategy in the existing literature, i.e., to introduce minor perturbations to a digital input or a stationary physical object, we show two new successful attack strategies in this paper. We show by superimposing several patterns onto one physical object, a DNN becomes confused and picks one of the patterns to assign a class label. Our experiment with three flapping wing robots demonstrates the possibility of developing an adversarial camouflage to cause a targeted mistake by DNN. We also show certain motion can reduce the dependency among consecutive frames in a video and make an object detector "blind", i.e., not able to detect an object exists in the video. Hence in a successful physical attack against DNN, targeted motion against the system should also be considered.
+---
+paper_title: GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems
+
+publish_date: 2022-01-01
+
+paper_content:
+
+This paper investigates an adversary's ease of attack in generating adversarial examples for real-world scenarios. We address three key requirements for practical attacks for the real-world: 1) automatically constraining the size and shape of the attack so it can be applied with stickers, 2) transform-robustness, i.e., robustness of a attack to environmental physical variations such as viewpoint and lighting changes, and 3) supporting attacks in not only white-box, but also black-box hard-label scenarios, so that the adversary can attack proprietary models. In this work, we propose GRAPHITE, an efficient and general framework for generating attacks that satisfy the above three key requirements. GRAPHITE takes advantage of transform-robustness, a metric based on expectation over transforms (EoT), to automatically generate small masks and optimize with gradient-free optimization. GRAPHITE is also flexible as it can easily trade-off transform-robustness, perturbation size, and query count in black-box settings. On a GTSRB model in a hard-label black-box setting, we are able to find attacks on all possible 1,806 victim-target class pairs with averages of 77.8% transform-robustness, perturbation size of 16.63% of the victim images, and 126K queries per pair. For digital-only attacks where achieving transform-robustness is not a requirement, GRAPHITE is able to find successful small-patch attacks with an average of only 566 queries for 92.2% of victim-target pairs. GRAPHITE is also able to find successful attacks using perturbations that modify small areas of the input image against PatchGuard, a recently proposed defense against patch-based attacks.
+---
+paper_title: Defending Against Physically Realizable Attacks on Image Classification
+
+publish_date: 2019-01-01
+
+paper_content:
+
+We study the problem of defending deep neural network approaches for image classification from physically realizable attacks. First, we demonstrate that the two most scalable and effective methods for learning robust models, adversarial training with PGD attacks and randomized smoothing, exhibit very limited effectiveness against three of the highest profile physical attacks. Next, we propose a new abstract adversarial model, rectangular occlusion attacks, in which an adversary places a small adversarially crafted rectangle in an image, and develop two approaches for efficiently computing the resulting adversarial examples. Finally, we demonstrate that adversarial training using our new attack yields image classification models that exhibit high robustness against the physically realizable attacks we study, offering the first effective generic defense against such attacks.
+---
+paper_title: Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems Perspective
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Traffic Sign Recognition (TSR) is crucial for safe and correct driving
+automation. Recent works revealed a general vulnerability of TSR models to
+physical-world adversarial attacks, which can be low-cost, highly deployable,
+and capable of causing severe attack effects such as hiding a critical traffic
+sign or spoofing a fake one. However, so far existing works generally only
+considered evaluating the attack effects on academic TSR models, leaving the
+impacts of such attacks on real-world commercial TSR systems largely unclear.
+In this paper, we conduct the first large-scale measurement of physical-world
+adversarial attacks against commercial TSR systems. Our testing results reveal
+that it is possible for existing attack works from academia to have highly
+reliable (100\%) attack success against certain commercial TSR system
+functionality, but such attack capabilities are not generalizable, leading to
+much lower-than-expected attack success rates overall. We find that one
+potential major factor is a spatial memorization design that commonly exists in
+today's commercial TSR systems. We design new attack success metrics that can
+mathematically model the impacts of such design on the TSR system-level attack
+success, and use them to revisit existing attacks. Through these efforts, we
+uncover 7 novel observations, some of which directly challenge the observations
+or claims in prior works due to the introduction of the new metrics.
+---
+paper_title: Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs
+
+publish_date: 2022-01-01
+
+paper_content:
+
+In the physical world, deep neural networks (DNNs) are impacted by light and shadow, which can have a significant effect on their performance. While stickers have traditionally been used as perturbations in most physical attacks, their perturbations can often be easily detected. To address this, some studies have explored the use of light-based perturbations, such as lasers or projectors, to generate more subtle perturbations, which are artificial rather than natural. In this study, we introduce a novel light-based attack called the adversarial neon beam (AdvNB), which utilizes common neon beams to create a natural black-box physical attack. Our approach is evaluated on three key criteria: effectiveness, stealthiness, and robustness. Quantitative results obtained in simulated environments demonstrate the effectiveness of the proposed method, and in physical scenarios, we achieve an attack success rate of 81.82%, surpassing the baseline. By using common neon beams as perturbations, we enhance the stealthiness of the proposed attack, enabling physical samples to appear more natural. Moreover, we validate the robustness of our approach by successfully attacking advanced DNNs with a success rate of over 75% in all cases. We also discuss defense strategies against the AdvNB attack and put forward other light-based physical attacks.
+---
+paper_title: State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Adversarial attacks can mislead deep learning models to make false predictions by implanting small perturbations to the original input that are imperceptible to the human eye, which poses a huge security threat to the computer vision systems based on deep learning. Physical adversarial attacks, which is more realistic, as the perturbation is introduced to the input before it is being captured and converted to a binary image inside the vision system, when compared to digital adversarial attacks. In this paper, we focus on physical adversarial attacks and further classify them into invasive and non-invasive. Optical-based physical adversarial attack techniques (e.g. using light irradiation) belong to the non-invasive category. As the perturbations can be easily ignored by humans as the perturbations are very similar to the effects generated by a natural environment in the real world. They are highly invisibility and executable and can pose a significant or even lethal threats to real systems. This paper focuses on optical-based physical adversarial attack techniques for computer vision systems, with emphasis on the introduction and discussion of optical-based physical adversarial attack techniques.
+---
+paper_title: Invisible CMOS Camera Dazzling for Conducting Adversarial Attacks on Deep Neural Networks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:p>Despite the outstanding performance of deep neural networks, they remain vulnerable to adversarial attacks. While digital domain adversarial attacks are well-documented, most physical-world attacks are typically visible to the human eye. Here, we present a novel invisible optical-based physical adversarial attack via dazzling a CMOS camera. This attack involves using a designed light pulse sequence spatially transformed within the acquired image due to the camera’s shutter mechanism. We provide a detailed analysis of the photopic conditions required to keep the attacking light source invisible to human observers while effectively disrupting the image, thereby deceiving the DNN. The results indicate that the light source duty cycle controls the tradeoff between the attack’s success rate and the degree of concealment needed.</jats:p>
+---
+paper_title: Breaking the Illusion: Real-world Challenges for Adversarial Patches in Object Detection
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Adversarial attacks pose a significant threat to the robustness and reliability of machine learning systems, particularly in computer vision applications. This study investigates the performance of adversarial patches for the YOLO object detection network in the physical world. Two attacks were tested: a patch designed to be placed anywhere within the scene - global patch, and another patch intended to partially overlap with specific object targeted for removal from detection - local patch. Various factors such as patch size, position, rotation, brightness, and hue were analyzed to understand their impact on the effectiveness of the adversarial patches. The results reveal a notable dependency on these parameters, highlighting the challenges in maintaining attack efficacy in real-world conditions. Learning to align digitally applied transformation parameters with those measured in the real world still results in up to a 64\% discrepancy in patch performance. These findings underscore the importance of understanding environmental influences on adversarial attacks, which can inform the development of more robust defenses for practical machine learning applications.
+---
+paper_title: Benchmarking the Physical-world Adversarial Robustness of Vehicle Detection
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Adversarial attacks in the physical world can harm the robustness of detection models. Evaluating the robustness of detection models in the physical world can be challenging due to the time-consuming and labor-intensive nature of many experiments. Thus, virtual simulation experiments can provide a solution to this challenge. However, there is no unified detection benchmark based on virtual simulation environment. To address this challenge, we proposed an instant-level data generation pipeline based on the CARLA simulator. Using this pipeline, we generated the DCI dataset and conducted extensive experiments on three detection models and three physical adversarial attacks. The dataset covers 7 continuous and 1 discrete scenes, with over 40 angles, 20 distances, and 20,000 positions. The results indicate that Yolo v6 had strongest resistance, with only a 6.59% average AP drop, and ASA was the most effective attack algorithm with a 14.51% average AP reduction, twice that of other algorithms. Static scenes had higher recognition AP, and results under different weather conditions were similar. Adversarial attack algorithm improvement may be approaching its 'limitation'.
+---
+paper_title: Adversarial alignment: Breaking the trade-off between the strength of an attack and its relevance to human perception
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Deep neural networks (DNNs) are known to have a fundamental sensitivity to adversarial attacks, perturbations of the input that are imperceptible to humans yet powerful enough to change the visual decision of a model. Adversarial attacks have long been considered the "Achilles' heel" of deep learning, which may eventually force a shift in modeling paradigms. Nevertheless, the formidable capabilities of modern large-scale DNNs have somewhat eclipsed these early concerns. Do adversarial attacks continue to pose a threat to DNNs? Here, we investigate how the robustness of DNNs to adversarial attacks has evolved as their accuracy on ImageNet has continued to improve. We measure adversarial robustness in two different ways: First, we measure the smallest adversarial attack needed to cause a model to change its object categorization decision. Second, we measure how aligned successful attacks are with the features that humans find diagnostic for object recognition. We find that adversarial attacks are inducing bigger and more easily detectable changes to image pixels as DNNs grow better on ImageNet, but these attacks are also becoming less aligned with features that humans find diagnostic for recognition. To better understand the source of this trade-off, we turn to the neural harmonizer, a DNN training routine that encourages models to leverage the same features as humans to solve tasks. Harmonized DNNs achieve the best of both worlds and experience attacks that are detectable and affect features that humans find diagnostic for recognition, meaning that attacks on these models are more likely to be rendered ineffective by inducing similar effects on human perception. Our findings suggest that the sensitivity of DNNs to adversarial attacks can be mitigated by DNN scale, data scale, and training routines that align models with biological intelligence.
+---
+paper_title: Really natural adversarial examples
+
+publish_date: 2021-01-01
+
+paper_content:
+
+<jats:title>Abstract</jats:title><jats:p>The phenomenon of Adversarial Examples has become one of the most intriguing topics associated to deep learning. The so-called adversarial attacks have the ability to fool deep neural networks with inappreciable perturbations. While the effect is striking, it has been suggested that such carefully selected injected noise does not necessarily appear in real-world scenarios. In contrast to this, some authors have looked for ways to generate adversarial noise in physical scenarios (traffic signs, shirts, etc.), thus showing that attackers can indeed fool the networks. In this paper we go beyond that and show that adversarial examples also appear in the real-world without any attacker or maliciously selected noise involved. We show this by using images from tasks related to microscopy and also general object recognition with the well-known ImageNet dataset. A comparison between these natural and the artificially generated adversarial examples is performed using distance metrics and image quality metrics. We also show that the natural adversarial examples are in fact at a higher distance from the originals that in the case of artificially generated adversarial examples.</jats:p>
+---
+paper_title: Deflecting Adversarial Attacks
+
+publish_date: 2020-01-01
+
+paper_content:
+
+There has been an ongoing cycle where stronger defenses against adversarial attacks are subsequently broken by a more advanced defense-aware attack. We present a new approach towards ending this cycle where we "deflect'' adversarial attacks by causing the attacker to produce an input that semantically resembles the attack's target class. To this end, we first propose a stronger defense based on Capsule Networks that combines three detection mechanisms to achieve state-of-the-art detection performance on both standard and defense-aware attacks. We then show that undetected attacks against our defense often perceptually resemble the adversarial target class by performing a human study where participants are asked to label images produced by the attack. These attack images can no longer be called "adversarial'' because our network classifies them the same way as humans do.
+---
+paper_title: Adversarial Attacks Beyond the Image Space
+
+publish_date: 2017-01-01
+
+paper_content:
+
+Generating adversarial examples is an intriguing problem and an important way of understanding the working mechanism of deep neural networks. Most existing approaches generated perturbations in the image space, i.e., each pixel can be modified independently. However, in this paper we pay special attention to the subset of adversarial examples that correspond to meaningful changes in 3D physical properties (like rotation and translation, illumination condition, etc.). These adversaries arguably pose a more serious concern, as they demonstrate the possibility of causing neural network failure by easy perturbations of real-world 3D objects and scenes. In the contexts of object classification and visual question answering, we augment state-of-the-art deep neural networks that receive 2D input images with a rendering module (either differentiable or not) in front, so that a 3D scene (in the physical space) is rendered into a 2D image (in the image space), and then mapped to a prediction (in the output space). The adversarial perturbations can now go beyond the image space, and have clear meanings in the 3D physical world. Though image-space adversaries can be interpreted as per-pixel albedo change, we verify that they cannot be well explained along these physically meaningful dimensions, which often have a non-local effect. But it is still possible to successfully attack beyond the image space on the physical space, though this is more difficult than image-space attacks, reflected in lower success rates and heavier perturbations required.
+---
+paper_title: A General Framework for Adversarial Examples with Objectives
+
+publish_date: 2017-01-01
+
+paper_content:
+
+Images perturbed subtly to be misclassified by neural networks, called adversarial examples, have emerged as a technically deep challenge and an important concern for several application domains. Most research on adversarial examples takes as its only constraint that the perturbed images are similar to the originals. However, real-world application of these ideas often requires the examples to satisfy additional objectives, which are typically enforced through custom modifications of the perturbation process. In this paper, we propose adversarial generative nets (AGNs), a general methodology to train a generator neural network to emit adversarial examples satisfying desired objectives. We demonstrate the ability of AGNs to accommodate a wide range of objectives, including imprecise ones difficult to model, in two application domains. In particular, we demonstrate physical adversarial examples---eyeglass frames designed to fool face recognition---with better robustness, inconspicuousness, and scalability than previous approaches, as well as a new attack to fool a handwritten-digit classifier.
+---
+paper_title: Adversarial Sticker: A Stealthy Attack Method in the Physical World
+
+publish_date: 2022-01-01
+
+paper_content:
+
+To assess the vulnerability of deep learning in the physical world, recent works introduce adversarial patches and apply them on different tasks. In this paper, we propose another kind of adversarial patch: the Meaningful Adversarial Sticker, a physically feasible and stealthy attack method by using real stickers existing in our life. Unlike the previous adversarial patches by designing perturbations, our method manipulates the sticker's pasting position and rotation angle on the objects to perform physical attacks. Because the position and rotation angle are less affected by the printing loss and color distortion, adversarial stickers can keep good attacking performance in the physical world. Besides, to make adversarial stickers more practical in real scenes, we conduct attacks in the black-box setting with the limited information rather than the white-box setting with all the details of threat models. To effectively solve for the sticker's parameters, we design the Region based Heuristic Differential Evolution Algorithm, which utilizes the new-found regional aggregation of effective solutions and the adaptive adjustment strategy of the evaluation criteria. Our method is comprehensively verified in the face recognition and then extended to the image retrieval and traffic sign recognition. Extensive experiments show the proposed method is effective and efficient in complex physical conditions and has a good generalization for different tasks.
+---
+paper_title: Adversarial Attacks in Machine Learning: Key Insights and Defense Approaches
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>There is a considerable threat present in genres such as machine learning due to adversarial attacks which include purposely feeding the system with data that will alter the decision region. These attacks are committed to presenting different data to machine learning models in a way that the model would be wrong in its classification or prediction. The field of study is still relatively young and has to develop strong bodies of scientific research that would eliminate the gaps in the current knowledge. This paper provides the literature review of adversarial attacks and defenses based on the highly cited articles and conference published in the Scopus database. Through the classification and assessment of 128 systematic articles: 80 original papers and 48 review papers till May 15, 2024, this study categorizes and reviews the literature from different domains, such as Graph Neural Networks, Deep Learning Models for IoT Systems, and others. The review posits findings on identified metrics, citation analysis, and contributions from these studies while suggesting the area’s further research and development for adversarial robustness’ and protection mechanisms. The identified objective of this work is to present the basic background of adversarial attacks and defenses, and the need for maintaining the adaptability of machine learning platforms. In this context, the objective is to contribute to building efficient and sustainable protection mechanisms for AI applications in various industries</jats:p>
+---
+paper_title: Robust and Natural Physical Adversarial Examples for Object Detectors
+
+publish_date: 2021-01-01
+
+paper_content:
+
+  In this paper, we propose a natural and robust physical adversarial example\nattack method targeting object detectors under real-world conditions. The\ngenerated adversarial examples are robust to various physical constraints and\nvisually look similar to the original images, thus these adversarial examples\nare natural to humans and will not cause any suspicions. First, to ensure the\nrobustness of the adversarial examples in real-world conditions, the proposed\nmethod exploits different image transformation functions, to simulate various\nphysical changes during the iterative optimization of the adversarial examples\ngeneration. Second, to construct natural adversarial examples, the proposed\nmethod uses an adaptive mask to constrain the area and intensities of the added\nperturbations, and utilizes the real-world perturbation score (RPS) to make the\nperturbations be similar to those real noises in physical world. Compared with\nexisting studies, our generated adversarial examples can achieve a high success\nrate with less conspicuous perturbations. Experimental results demonstrate\nthat, the generated adversarial examples are robust under various indoor and\noutdoor physical conditions, including different distances, angles,\nilluminations, and photographing. Specifically, the attack success rate of\ngenerated adversarial examples indoors and outdoors is high up to 73.33% and\n82.22%, respectively. Meanwhile, the proposed method ensures the naturalness of\nthe generated adversarial example, and the size of added perturbations is much\nsmaller than the perturbations in the existing works. Further, the proposed\nphysical adversarial attack method can be transferred from the white-box models\nto other object detection models.\n
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Visual Adversarial Attacks and Defenses in the Physical World.
+   ---
+   ---
+paper_title: Adversarial Examples in the Physical World: A Survey
+
+publish_date: 2024-08-22
+
+paper_abstract:
+
+Deep neural networks (DNNs) have demonstrated high vulnerability to
+adversarial examples, raising broad security concerns about their applications.
+Besides the attacks in the digital world, the practical implications of
+adversarial examples in the physical world present significant challenges and
+safety concerns. However, current research on physical adversarial examples
+(PAEs) lacks a comprehensive understanding of their unique characteristics,
+leading to limited significance and understanding. In this paper, we address
+this gap by thoroughly examining the characteristics of PAEs within a practical
+workflow encompassing training, manufacturing, and re-sampling processes. By
+analyzing the links between physical adversarial attacks, we identify
+manufacturing and re-sampling as the primary sources of distinct attributes and
+particularities in PAEs. Leveraging this knowledge, we develop a comprehensive
+analysis and classification framework for PAEs based on their specific
+characteristics, covering over 100 studies on physical-world adversarial
+examples. Furthermore, we investigate defense strategies against PAEs and
+identify open challenges and opportunities for future research. We aim to
+provide a fresh, thorough, and systematic understanding of PAEs, thereby
+promoting the development of robust adversarial learning and its application in
+open-world scenarios to provide the community with a continuously updated list
+of physical world adversarial sample resources, including papers, code, \etc,
+within the proposed framework
+
+paper_outline:
+
+I. Introduction  
+II. Go Deep into PAEs  
+A. Overview  
+B. The Key Particularities among PAEs  
+C. The Critical Attributes of PAEs  
+D. The Definition of PAEs  
+III. Classify Physical Adversarial Examples  
+A. Overview  
+B. The Manufacturing Process Oriented PAEs  
+C. The Re-sampling Process Oriented PAEs  
+D. Other PAE Topics  
+IV. Confront Physical Adversarial Examples  
+A. Defend against PAEs  
+B. The Challenges of PAEs  
+C. The Opportunities of PAEs  
+V. Conclusions
+---
+paper_title: A Survey and Evaluation of Adversarial Attacks for Object Detection
+
+publish_date: 2024-08-06
+
+paper_abstract:
+
+Deep learning models excel in various computer vision tasks but are
+susceptible to adversarial examples-subtle perturbations in input data that
+lead to incorrect predictions. This vulnerability poses significant risks in
+safety-critical applications such as autonomous vehicles, security
+surveillance, and aircraft health monitoring. While numerous surveys focus on
+adversarial attacks in image classification, the literature on such attacks in
+object detection is limited. This paper offers a comprehensive taxonomy of
+adversarial attacks specific to object detection, reviews existing adversarial
+robustness evaluation metrics, and systematically assesses open-source attack
+methods and model robustness. Key observations are provided to enhance the
+understanding of attack effectiveness and corresponding countermeasures.
+Additionally, we identify crucial research challenges to guide future efforts
+in securing automated object detection systems.
+
+paper_outline:
+
+I. INTRODUCTION
+II. RELATED WORKS
+III. TAXONOMY OF ADVERSARIAL ATTACKS
+IV. EVALUATION METRICS ON ADVERSARIAL ATTACKS AND MODEL ROBUSTNESS
+V. EVALUATION
+VI. OPEN AREAS FOR RESEARCH
+VII. CONCLUSION
+---
+paper_title: Physical Adversarial Attacks for Surveillance: A Survey
+
+publish_date: 2023-10-14
+
+paper_abstract:
+
+Modern automated surveillance techniques are heavily reliant on deep learning
+methods. Despite the superior performance, these learning systems are
+inherently vulnerable to adversarial attacks - maliciously crafted inputs that
+are designed to mislead, or trick, models into making incorrect predictions. An
+adversary can physically change their appearance by wearing adversarial
+t-shirts, glasses, or hats or by specific behavior, to potentially avoid
+various forms of detection, tracking and recognition of surveillance systems;
+and obtain unauthorized access to secure properties and assets. This poses a
+severe threat to the security and safety of modern surveillance systems. This
+paper reviews recent attempts and findings in learning and designing physical
+adversarial attacks for surveillance applications. In particular, we propose a
+framework to analyze physical adversarial attacks and provide a comprehensive
+survey of physical adversarial attacks on four key surveillance tasks:
+detection, identification, tracking, and action recognition under this
+framework. Furthermore, we review and analyze strategies to defend against the
+physical adversarial attacks and the methods for evaluating the strengths of
+the defense. The insights in this paper present an important step in building
+resilience within surveillance systems to physical adversarial attacks.
+
+paper_outline:
+
+I. INTRODUCTION
+
+II. PRACTICAL ADVERSARIAL ATTACKS IN HUMAN SURVEILLANCE FRAMEWORK  
+A. Digital adversarial attacks  
+B. Physical adversarial attacks  
+
+III. HUMAN-DESIGNED ADVERSARIAL ATTACKS
+
+IV. MACHINE-LEARNED ADVERSARIAL ATTACKS  
+A. Surveillance Human Detection Attacks  
+B. Surveillance Human Identification Attacks  
+D. Surveillance Action Recognition Attacks  
+E. Adversarial Attacks beyond Visible  
+F. Summary of Different Adversarial Attack Methods
+
+V. DEFENDING PHYSICAL ADVERSARIAL ATTACKS  
+C. Defending Surveillance Action Recognition Attacks
+
+VI. DISCUSSION AND CONCLUSIONS
+---
+paper_title: Physical Adversarial Attack meets Computer Vision: A Decade Survey
+
+publish_date: 2023-10-01
+
+paper_abstract:
+
+Despite the impressive achievements of Deep Neural Networks (DNNs) in
+computer vision, their vulnerability to adversarial attacks remains a critical
+concern. Extensive research has demonstrated that incorporating sophisticated
+perturbations into input images can lead to a catastrophic degradation in DNNs'
+performance. This perplexing phenomenon not only exists in the digital space
+but also in the physical world. Consequently, it becomes imperative to evaluate
+the security of DNNs-based systems to ensure their safe deployment in
+real-world scenarios, particularly in security-sensitive applications. To
+facilitate a profound understanding of this topic, this paper presents a
+comprehensive overview of physical adversarial attacks. Firstly, we distill
+four general steps for launching physical adversarial attacks. Building upon
+this foundation, we uncover the pervasive role of artifacts carrying
+adversarial perturbations in the physical world. These artifacts influence each
+step. To denote them, we introduce a new term: adversarial medium. Then, we
+take the first step to systematically evaluate the performance of physical
+adversarial attacks, taking the adversarial medium as a first attempt. Our
+proposed evaluation metric, hiPAA, comprises six perspectives: Effectiveness,
+Stealthiness, Robustness, Practicability, Aesthetics, and Economics. We also
+provide comparative results across task categories, together with insightful
+observations and suggestions for future research directions.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 PRELIMINARIES  
+2.1 Computer Vision  
+2.2 Adversarial Attacks  
+2.3 The Taxonomy of Adversarial Attacks  
+2.4 Introduction to Physical Adversarial Attacks  
+
+3 ADVERSARIAL MEDIUMS  
+
+4 EVALUATION METRIC  
+4.1 Effectiveness  
+4.2 Robustness  
+4.3 Stealthiness  
+4.4 Aesthetics  
+4.5 Practicability  
+4.6 Economics  
+
+5 VICTIM TASKS  
+5.1 Attacks on Classification Tasks  
+5.2 Attacks on Detection Tasks  
+5.3 Attacks on Re-Identification Tasks  
+5.4 Attacks on Other Tasks  
+
+6 DISCUSSION  
+6.1 Current Challenges  
+6.2 Future Work  
+
+7 CONCLUSION
+---
+paper_title: A Survey on Physical Adversarial Attack in Computer Vision
+
+publish_date: 2023-09-18
+
+paper_abstract:
+
+Over the past decade, deep learning has revolutionized conventional tasks
+that rely on hand-craft feature extraction with its strong feature learning
+capability, leading to substantial enhancements in traditional tasks. However,
+deep neural networks (DNNs) have been demonstrated to be vulnerable to
+adversarial examples crafted by malicious tiny noise, which is imperceptible to
+human observers but can make DNNs output the wrong result. Existing adversarial
+attacks can be categorized into digital and physical adversarial attacks. The
+former is designed to pursue strong attack performance in lab environments
+while hardly remaining effective when applied to the physical world. In
+contrast, the latter focus on developing physical deployable attacks, thus
+exhibiting more robustness in complex physical environmental conditions.
+Recently, with the increasing deployment of the DNN-based system in the real
+world, strengthening the robustness of these systems is an emergency, while
+exploring physical adversarial attacks exhaustively is the precondition. To
+this end, this paper reviews the evolution of physical adversarial attacks
+against DNN-based computer vision tasks, expecting to provide beneficial
+information for developing stronger physical adversarial attacks. Specifically,
+we first proposed a taxonomy to categorize the current physical adversarial
+attacks and grouped them. Then, we discuss the existing physical attacks and
+focus on the technique for improving the robustness of physical attacks under
+complex physical environmental conditions. Finally, we discuss the issues of
+the current physical adversarial attacks to be solved and give promising
+directions.
+
+paper_outline:
+
+I. Background Knowledge  
+A. Deep learning  
+B. Adversarial examples  
+
+II. Taxonomy of Physical Adversarial Examples  
+A. Victim Model  
+B. Others  
+C. Problem Modeling  
+D. Optimization  
+E. Deployment  
+F. Evaluation  
+
+III. Physical Adversarial Attack on Image Recognition Task  
+A. General image recognition  
+B. Facial Recognition  
+C. Traffic sign recognition  
+D. IAP  
+
+IV. Physical Adversarial Attack on Object Detection Task  
+A. Patch-based physical adversarial attack  
+B. Wearable adversarial perturbation  
+C. Camouflage-based physical adversarial attack  
+D. Projector’s projection  
+F. Attack aerial image detector  
+
+V. Others  
+A. Attack object tracking  
+B. Attack semantic segmentation  
+C. Attack other tasks  
+
+VI. Challenges and Future Work  
+A. Input transformation  
+B. Attack algorithm design  
+C. Evaluation  
+D. Potential positive applications  
+
+VII. Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Visual Adversarial Attacks and Defenses in the Physical World**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Evaluation Metrics and Methodologies**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Visual Adversarial Attacks and Defenses in the Physical World** and **Evaluation Metrics and Methodologies**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Evaluation Metrics and Methodologies** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Evaluation Metrics and Methodologies**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Evaluation Metrics and Methodologies**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

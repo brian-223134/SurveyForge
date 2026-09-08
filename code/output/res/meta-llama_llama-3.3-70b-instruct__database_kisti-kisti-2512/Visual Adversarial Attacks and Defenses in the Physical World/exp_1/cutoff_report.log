@@ -1,0 +1,6 @@
+[cutoff/db] 1651701 papers, newest id 2601.19912 (2026-01), dates 1922-01-01..2025-01-01, 1196530 DOI ids (pass the id gate)
+[cutoff/cfg] --paper_id_cutoff=2512 --paper_date_oldest=1922-01-01 --paper_date_newest=2026-01-01
+[cutoff/cfg] WARNING: 212 papers are newer than --paper_id_cutoff=2512 and are unreachable in both the outline and the writing stage. Set SURVEYFORGE_PAPER_ID_CUTOFF=2601 to use the whole database.
+[cutoff/outline] arXiv id prefix <= 2512: 1651489/1651701 papers retrievable, 212 excluded. WARNING: those 212 papers cannot appear in the survey at any stage; raise SURVEYFORGE_PAPER_ID_CUTOFF if that is not intended
+[cutoff/writer] arXiv id prefix <= 2512: 1651489/1651701 papers retrievable, 212 excluded. WARNING: those 212 papers cannot appear in the survey at any stage; raise SURVEYFORGE_PAPER_ID_CUTOFF if that is not intended
+[cutoff/rerank] total: 0/5862 retrieved documents discarded by the citation window [1922-01-01, 2026-01-01]

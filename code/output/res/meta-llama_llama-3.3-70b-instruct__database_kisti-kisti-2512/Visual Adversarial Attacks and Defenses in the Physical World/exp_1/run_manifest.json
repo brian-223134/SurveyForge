@@ -1,0 +1,49 @@
+{
+  "topic": "Visual Adversarial Attacks and Defenses in the Physical World",
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "api_url": "https://openrouter.ai/api/v1",
+  "provider": "akashml/fp8",
+  "temperature": 0.6,
+  "max_tokens": 8192,
+  "retry_truncated": true,
+  "llm_stats": {
+    "completions": 114,
+    "truncated_accepted": 0,
+    "truncation_retries": 2,
+    "empty_retries": 0,
+    "error_retries": 0
+  },
+  "section_num": 7,
+  "subsection_len": 500,
+  "outline_reference_num": 1500,
+  "rag_num": 100,
+  "rag_max_out": 60,
+  "paper_id_cutoff": "2512",
+  "paper_date_oldest": "1922-01-01",
+  "paper_date_newest": "2026-01-01",
+  "db_path": "/data2/chanjoong/survey-agent/SurveyForge_data/database_kisti-kisti-2512",
+  "db_build": {
+    "records": 1651701,
+    "tag": "KISTI_2512",
+    "export": "/data2/chanjoong/kisti_data/data/exports/kisti-2512.surveyforge.json",
+    "export_file_sha256": "49706624a058c10ff5d06ee93229b3516a6320701d10552c24424fe4339628da",
+    "built_at": "2026-09-08T06:34:03+0000",
+    "id_formats": {
+      "arxiv": 455171,
+      "doi": 1196530,
+      "other": 0
+    },
+    "view": {
+      "name": "kisti-2512",
+      "files_sha256": {
+        "papers.parquet": "c7b8d4e71d2467a7ee86c6353e784a5ece00e29a6c597602415a5c8a8ba777bc",
+        "paper_ids.parquet": "018c0bf8e0a12992f8fd329c7819dbe7e1837256cbe1686e870a2cbd51579c95",
+        "authors.parquet": "fa2a183bc9b00af131da4053008f7b1239499f4ee431e4b3f7870623db659aea",
+        "venue.parquet": "3417b743bed94ebab30de63d4fe072721fe05f541c7af5b54b52b24703590d10"
+      }
+    }
+  },
+  "refs": 129,
+  "refs_doi": 92,
+  "finished_at": "2026-09-08T07:58:18"
+}

@@ -1,0 +1,539 @@
+Fundamentals of Visual Adversarial Attacks
+['This section delves into the fundamentals of visual adversarial attacks, including their construction, properties, and effects on machine learning models in the physical world.', '1. Methods for generating visual adversarial examples, including optimization-based and generative model-based approaches, and their applications in various scenarios.', '2. Properties of adversarial examples, including their imperceptibility, transferability, and robustness, and their implications for attack effectiveness and defense strategies.', '3. Impact of adversarial examples on deep learning models, including classification, detection, and segmentation tasks, and the potential consequences for real-world applications.']
+
+Developing a Robust Defensive System against Adversarial Examples Using Generative Adversarial Networks
+
+Physical Adversarial Attack on a Robotic Arm
+
+Synthesizing Robust Adversarial Examples
+
+Real-World Adversarial Examples involving Makeup Application
+
+Imperceptible Adversarial Examples by Spatial Chroma-Shift
+
+Comment on Transferability and Input Transformation with Additive Noise
+
+The Robust Manifold Defense: Adversarial Training using Generative
+  Models
+
+Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems Perspective
+
+Adversarial Examples in Physical World
+
+Evading Defenses to Transferable Adversarial Examples by
+  Translation-Invariant Attacks
+
+Adversarial camera stickers: A physical camera-based attack on deep
+  learning systems
+
+Adversarial Attacks Beyond the Image Space
+
+PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving
+
+Adversarial Detection: Attacking Object Detection in Real Time
+
+Markov Chain Based Efficient Defense Against Adversarial Examples in Computer Vision
+
+Shadows can be Dangerous: Stealthy and Effective Physical-world
+  Adversarial Attack by Natural Phenomenon
+
+Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods
+
+Adversarial Examples in Modern Machine Learning: A Review
+
+Fusing Physics-Driven Strategies and Cross-Modal Adversarial Learning: Toward Multi-Domain Applications
+
+Universal Physical Camouflage Attacks on Object Detectors
+
+One Man’s Trash Is Another Man’s Treasure: Resisting Adversarial Examples by Adversarial Examples
+
+PixelDefend: Leveraging Generative Models to Understand and Defend
+  against Adversarial Examples
+
+Physical Adversarial Attack on Vehicle Detector in the Carla Simulator
+
+AdvReal: Physical adversarial patch generation framework for security evaluation of object detection systems
+
+APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection
+
+Automating defense against adversarial attacks: discovery of vulnerabilities and application of multi-INT imagery to protect deployed models
+
+Adversarial Sticker: A Stealthy Attack Method in the Physical World
+
+Adversarial Attacks in Machine Learning: Key Insights and Defense Approaches
+
+Adversarial examples in the physical world
+
+Robust and Natural Physical Adversarial Examples for Object Detectors
+
+Powerful Physical Adversarial Examples Against Practical Face Recognition Systems
+
+Invisible Perturbations: Physical Adversarial Examples Exploiting the Rolling Shutter Effect
+
+State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems
+
+Breaking Machine Learning Models with Adversarial Attacks and its Variants
+
+Note on Attacking Object Detectors with Adversarial Stickers
+
+Perturbations are not Enough: Generating Adversarial Examples with
+  Spatial Distortions
+
+On Physical Adversarial Patches for Object Detection
+
+Adversarial attacks hidden in plain sight
+
+Imperceptible CMOS camera dazzle for adversarial attacks on deep neural networks
+
+Generating Visually Realistic Adversarial Patch
+
+Region-Wise Attack: On Efficient Generation of Robust Physical
+  Adversarial Examples
+
+Adversarial Machine Learning: Attacks, Defenses, and Open Challenges
+
+MAGIC: Mastering Physical Adversarial Generation in Context through Collaborative LLM Agents
+
+Towards an End-to-End (E2E) Adversarial Learning and Application in the Physical World
+
+Isometric 3D Adversarial Examples in the Physical World
+
+Adversarial Attacks on Event-Based Pedestrian Detectors: A Physical Approach
+
+Spatially Transformed Adversarial Examples
+
+REVAMP: Automated Simulations of Adversarial Attacks on Arbitrary Objects in Realistic Scenes
+
+LanCe: A Comprehensive and Lightweight CNN Defense Methodology against Physical Adversarial Attacks on Embedded Multimedia Applications
+
+Adversarial Camouflage: Hiding Physical-World Attacks With Natural Styles
+
+Threat Models and Attack Vectors
+['This section explores the different threat models and attack vectors relevant to visual adversarial attacks in the physical world, including digital, physical, and hybrid attacks.', '1. Explanation of various threat models, such as white-box, black-box, and gray-box models, and their implications for attack effectiveness and defense strategies in the physical world.', '2. Discussion of digital attack vectors, including image and video manipulation, and physical attack vectors, such as printing and displaying adversarial patches, and their applications in various scenarios.', '3. Examination of hybrid attack vectors that combine digital and physical methods to enhance attack effectiveness in the physical world.']
+
+Enhancing real-world adversarial patches through 3D modeling of complex target scenes
+
+A General Framework for Adversarial Examples with Objectives
+
+Defenses Against Multi-Sticker Physical Domain Attacks on Classifiers
+
+Adversarial Texture for Fooling Person Detectors in the Physical World
+
+Brightness-Restricted Adversarial Attack Patch
+
+GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems
+
+On Physical Adversarial Patches for Object Detection
+
+Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs
+
+BB-Patch: BlackBox Adversarial Patch-Attack using Zeroth-Order Optimization
+
+PADetBench: Towards Benchmarking Physical Attacks against Object Detection
+
+Black-box Adversarial Attacks on Video Recognition Models
+
+A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems
+
+Robust and Natural Physical Adversarial Examples for Object Detectors
+
+Real-time detectors for digital and physical adversarial inputs to perception systems
+
+Efficient Decision-Based Black-Box Adversarial Attacks on Face Recognition
+
+Understanding deep learning defenses against adversarial examples through visualizations for dynamic risk assessment
+
+Robust Physical-World Attacks on Deep Learning Models
+
+State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems
+
+On Adversarial Patches: Real-World Attack on ArcFace-100 Face Recognition System
+
+Diffusion Attack: Leveraging Stable Diffusion for Naturalistic Image Attacking
+
+Random Position Adversarial Patch for Vision Transformers
+
+LanCe: A Comprehensive and Lightweight CNN Defense Methodology against Physical Adversarial Attacks on Embedded Multimedia Applications
+
+Universal Physical Camouflage Attacks on Object Detectors
+
+PatchZero: Defending against Adversarial Patch Attacks by Detecting and
+  Zeroing the Patch
+
+A New Meta-learning-based Black-box Adversarial Attack: SA-CC
+
+Beyond Pixel Norm-Balls: Parametric Adversaries using an Analytically
+  Differentiable Renderer
+
+Physical Adversarial Examples for Object Detectors
+
+Generating Visually Realistic Adversarial Patch
+
+Adversarial Attacks in Computer Vision: Challenges and Defense Strategies
+
+Spatiotemporal Attacks for Embodied Agents
+
+Adversarial Attacks and Defenses in Deep Learning
+
+Adversarial Patch
+
+Adversarial Examples in Physical World
+
+Ti-Patch: Tiled Physical Adversarial Patch for no-reference video quality metrics
+
+Real-World Adversarial Examples involving Makeup Application
+
+Towards an End-to-End (E2E) Adversarial Learning and Application in the Physical World
+
+Robust Attacks on Deep Learning Face Recognition in the Physical World
+
+Physical Adversarial Attack on Vehicle Detector in the Carla Simulator
+
+Robust Physical Adversarial Patches Using Dynamically Optimized Clusters
+
+Adversarial Camera Patch: An Effective and Robust Physical-World Attack on Object Detectors
+
+Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink
+
+Adversarial examples in the physical world
+
+Detecting Adversarial Patches with Class Conditional Reconstruction
+  Networks
+
+MAGIC: Mastering Physical Adversarial Generation in Context through Collaborative LLM Agents
+
+Invisible CMOS Camera Dazzling for Conducting Adversarial Attacks on Deep Neural Networks
+
+Bio-Inspired Adversarial Attack Against Deep Neural Networks
+
+Adversarial Attacks Beyond the Image Space
+
+Hardening RGB-D Object Recognition Systems against Adversarial Patch Attacks
+
+Projecting Trouble: Light Based Adversarial Attacks on Deep Learning
+  Classifiers
+
+Adversarial camera stickers: A physical camera-based attack on deep
+  learning systems
+
+Defense Mechanisms and Strategies
+['This section focuses on the defense mechanisms and strategies employed to detect, mitigate, and prevent visual adversarial attacks in the physical world.', '1. Discussion of detection-based defenses, including statistical methods, machine learning-based approaches, and signal processing techniques, and their effectiveness against various types of attacks.', '2. Overview of mitigation strategies, such as input preprocessing, data augmentation, and robust optimization methods, and their applications in real-world scenarios.', '3. Examination of robustness enhancement techniques, including adversarial training, defensive distillation, and certification methods, and their potential for improving the security of machine learning models in the physical world.']
+
+Benchmarking Adversarial Patch Against Aerial Detection
+
+APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection
+
+Projecting Trouble: Light Based Adversarial Attacks on Deep Learning
+  Classifiers
+
+Controllable Evaluation and Generation of Physical Adversarial Patch on
+  Face Recognition
+
+Invisible CMOS Camera Dazzling for Conducting Adversarial Attacks on Deep Neural Networks
+
+Region-Wise Attack: On Efficient Generation of Robust Physical
+  Adversarial Examples
+
+Adversarial Attacks in Machine Learning: Key Insights and Defense Approaches
+
+Robust Physical-World Attacks on Face Recognition
+
+Physical Adversarial Examples for Object Detectors
+
+MAGIC: Mastering Physical Adversarial Generation in Context through Collaborative LLM Agents
+
+An Introduction to Adversarially Robust Deep Learning
+
+Adversarial Attacks Beyond the Image Space
+
+Adversarial Examples in Modern Machine Learning: A Review
+
+Benchmarking the Physical-world Adversarial Robustness of Vehicle Detection
+
+Extending Defensive Distillation
+
+Empirical Evaluation of Physical Adversarial Patch Attacks Against
+  Overhead Object Detection Models
+
+Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems Perspective
+
+Early Methods for Detecting Adversarial Images
+
+Adversarial Attacks in Computer Vision: Challenges and Defense Strategies
+
+Adversarial Camera Patch: An Effective and Robust Physical-World Attack on Object Detectors
+
+Deflecting Adversarial Attacks
+
+Adversarial Sticker: A Stealthy Attack Method in the Physical World
+
+Adversarial Attacks and Defense Mechanisms in Machine Learning: A Structured Review of Methods, Domains, and Open Challenges
+
+Revisiting Physically Realizable Adversarial Object Attack against LiDAR-based Detection: Clarifying Problem Formulation and Experimental Protocols
+
+Evaluating the Robustness of Deep Learning Models against Adversarial Attacks: An Analysis with FGSM, PGD and CW
+
+A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems
+
+AdvReal: Physical adversarial patch generation framework for security evaluation of object detection systems
+
+PADetBench: Towards Benchmarking Physical Attacks against Object Detection
+
+Attack Agnostic Statistical Method for Adversarial Detection
+
+Enhancing real-world adversarial patches through 3D modeling of complex target scenes
+
+Breaking the Illusion: Real-world Challenges for Adversarial Patches in Object Detection
+
+Adversarial Attacks and Defenses in Deep Learning
+
+SAD: Saliency-based Defenses Against Adversarial Examples
+
+RFLA: A Stealthy Reflected Light Adversarial Attack in the Physical World
+
+Defending Against Physically Realizable Attacks on Image Classification
+
+Breaking Barriers in Physical-World Adversarial Examples: Improving Robustness and Transferability via Robust Feature
+
+Powerful Physical Adversarial Examples Against Practical Face Recognition Systems
+
+Automating defense against adversarial attacks: discovery of vulnerabilities and application of multi-INT imagery to protect deployed models
+
+Defenses Against Multi-Sticker Physical Domain Attacks on Classifiers
+
+Defending against Adversarial Attacks using Digital Image Processing
+
+Improving Adversarial Robustness Through Adaptive Learning-Driven Multi-Teacher Knowledge Distillation
+
+Bio-Inspired Adversarial Attack Against Deep Neural Networks
+
+Physical Adversarial Attacks for Camera-Based Smart Systems: Current Trends, Categorization, Applications, Research Challenges, and Future Outlook
+
+Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink
+
+Research and Implementation of Deep Learning Counter Attack Defense Strategy
+
+Adversarial Examples in Physical World
+
+Adversarial Attacks on Event-Based Pedestrian Detectors: A Physical Approach
+
+Physical Adversarial Attack on a Robotic Arm
+
+Improving Deep Learning Model Robustness Against Adversarial Attack by Increasing the Network Capacity
+
+DoPa: A Comprehensive CNN Detection Methodology against Physical
+  Adversarial Attacks
+
+Physical World Considerations and Constraints
+['This section explores the unique challenges and considerations associated with visual adversarial attacks in the physical world, including the impact of environmental factors and the need for realism.', '1. Analysis of how physical world factors, such as lighting, weather, and viewpoint changes, affect the success of visual adversarial attacks and the effectiveness of defenses.', '2. Discussion of the importance of realism in physical adversarial attacks, including the need for stealth and naturalness, and the implications for defense strategies.', '3. Examination of techniques used to enhance the realism of physical adversarial attacks, including 3D modeling and rendering, and their potential applications in various scenarios.']
+
+Adversarial Attacks in a Multi-view Setting: An Empirical Study of the Adversarial Patches Inter-view Transferability
+
+PADetBench: Towards Benchmarking Physical Attacks against Object Detection
+
+Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink
+
+Adversarial camera stickers: A physical camera-based attack on deep
+  learning systems
+
+Towards an End-to-End (E2E) Adversarial Learning and Application in the Physical World
+
+RFLA: A Stealthy Reflected Light Adversarial Attack in the Physical World
+
+Controllable Evaluation and Generation of Physical Adversarial Patch on
+  Face Recognition
+
+On Physical Adversarial Patches for Object Detection
+
+Flexible Physical Camouflage Generation Based on a Differential Approach
+
+LanCe: A Comprehensive and Lightweight CNN Defense Methodology against Physical Adversarial Attacks on Embedded Multimedia Applications
+
+Real-time detectors for digital and physical adversarial inputs to perception systems
+
+Region-Wise Attack: On Efficient Generation of Robust Physical
+  Adversarial Examples
+
+Bio-Inspired Adversarial Attack Against Deep Neural Networks
+
+Benchmarking the Physical-world Adversarial Robustness of Vehicle Detection
+
+Physical Adversarial Attacks on an Aerial Imagery Object Detector
+
+Adversarial catoptric light: An effective, stealthy and robust physical-world attack to DNNs
+
+Generating Visually Realistic Adversarial Patch
+
+Universal Physical Camouflage Attacks on Object Detectors
+
+Spatiotemporal Attacks for Embodied Agents
+
+Unified Adversarial Patch for Cross-modal Attacks in the Physical World
+
+Messing Up 3D Virtual Environments: Transferable Adversarial 3D Objects
+
+Robust Attacks on Deep Learning Face Recognition in the Physical World
+
+Diffusion Attack: Leveraging Stable Diffusion for Naturalistic Image Attacking
+
+Synthesizing Robust Adversarial Examples
+
+Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems Perspective
+
+A Physical-World Adversarial Attack Against 3D Face Recognition
+
+A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems
+
+Breaking the Illusion: Real-world Challenges for Adversarial Patches in Object Detection
+
+SPAA: Stealthy Projector-based Adversarial Attacks on Deep Image Classifiers
+
+Real-World Adversarial Examples involving Makeup Application
+
+Reinforced Embodied Active Defense: Exploiting Adaptive Interaction for Robust Visual Perception in Adversarial 3D Environments
+
+Enhancing real-world adversarial patches through 3D modeling of complex target scenes
+
+Adversarial Examples in Physical World
+
+CBA: Contextual Background Attack Against Optical Aerial Detection in the Physical World
+
+Dual Attention Suppression Attack: Generate Adversarial Camouflage in Physical World
+
+Rethinking the Threat and Accessibility of Adversarial Attacks against Face Recognition Systems
+
+Physical Adversarial Attacks for Camera-Based Smart Systems: Current Trends, Categorization, Applications, Research Challenges, and Future Outlook
+
+Invisible Perturbations: Physical Adversarial Examples Exploiting the Rolling Shutter Effect
+
+PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving
+
+APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection
+
+Optical Adversarial Attack
+
+Defenses Against Multi-Sticker Physical Domain Attacks on Classifiers
+
+Powerful Physical Adversarial Examples Against Practical Face Recognition Systems
+
+Shedding Light on VLN Robustness: A Black-box Framework for Indoor Lighting-based Adversarial Attack
+
+Isometric 3D Adversarial Examples in the Physical World
+
+State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems
+
+Robust and Natural Physical Adversarial Examples for Object Detectors
+
+Adversarial Attacks in Computer Vision: Challenges and Defense Strategies
+
+Adversarial attacks hidden in plain sight
+
+Invisible CMOS Camera Dazzling for Conducting Adversarial Attacks on Deep Neural Networks
+
+Evaluation Metrics and Methodologies
+['This section discusses the evaluation metrics and methodologies used to assess the effectiveness of visual adversarial attacks and defenses in the physical world.', '1. Explanation of metrics for evaluating attack success rates, such as misclassification rates and detection evasion rates, and their implications for defense strategies.', '2. Discussion of metrics for evaluating defense effectiveness, including robustness metrics, such as adversarial accuracy and certified robustness, and their applications in real-world scenarios.', '3. Examination of evaluation methodologies, including digital and physical testing, and the importance of considering real-world scenarios and constraints in the development of visual adversarial attacks and defenses.']
+
+Leveraging Image-Based Transformations to Mitigate Adversarial Attacks in AI-Based Safety-Critical Systems
+
+A Random-patch based Defense Strategy Against Physical Attacks for Face Recognition Systems
+
+Ti-Patch: Tiled Physical Adversarial Patch for no-reference video quality metrics
+
+The Human Visual System and Adversarial AI
+
+AdvReal: Physical adversarial patch generation framework for security evaluation of object detection systems
+
+Adversarial attacks hidden in plain sight
+
+Adversarial Laser Beam: Effective Physical-World Attack to DNNs in a Blink
+
+Robust Physical-World Attacks on Face Recognition
+
+Robust Attacks on Deep Learning Face Recognition in the Physical World
+
+Defense-friendly Images in Adversarial Attacks: Dataset and Metrics for Perturbation Difficulty
+
+Understanding the Error in Evaluating Adversarial Robustness
+
+Adversarial camera stickers: A physical camera-based attack on deep
+  learning systems
+
+Adversarial Attacks and Defenses in Images, Graphs and Text: A Review
+
+Physical Adversarial Attacks for Camera-Based Smart Systems: Current Trends, Categorization, Applications, Research Challenges, and Future Outlook
+
+Unified Adversarial Patch for Cross-modal Attacks in the Physical World
+
+Robust Assessment of Real-World Adversarial Examples
+
+Detecting Adversarial Examples in Batches - a geometrical approach
+
+Adversarial Fooling Beyond "Flipping the Label"
+
+Enhancing real-world adversarial patches through 3D modeling of complex target scenes
+
+Controllable Evaluation and Generation of Physical Adversarial Patch on
+  Face Recognition
+
+Powerful Physical Adversarial Examples Against Practical Face Recognition Systems
+
+Adversarial Examples in Physical World
+
+On The Empirical Effectiveness of Unrealistic Adversarial Hardening Against Realistic Adversarial Attacks
+
+Beyond Pixel Norm-Balls: Parametric Adversaries using an Analytically
+  Differentiable Renderer
+
+Adversarial examples in the physical world
+
+Adversarial Light Projection Attacks on Face Recognition Systems: A
+  Feasibility Study
+
+Robust Physical Adversarial Patches Using Dynamically Optimized Clusters
+
+Simulated Adversarial Testing of Face Recognition Models
+
+Robust Physical-World Attacks on Deep Learning Models
+
+APRICOT: A Dataset of Physical Adversarial Attacks on Object Detection
+
+Invisible Perturbations: Physical Adversarial Examples Exploiting the Rolling Shutter Effect
+
+Universal Physical Camouflage Attacks on Object Detectors
+
+Defenses Against Multi-Sticker Physical Domain Attacks on Classifiers
+
+Bio-Inspired Adversarial Attack Against Deep Neural Networks
+
+GRAPHITE: Generating Automatic Physical Examples for Machine-Learning Attacks on Computer Vision Systems
+
+Defending Against Physically Realizable Attacks on Image Classification
+
+Revisiting Physical-World Adversarial Attack on Traffic Sign Recognition: A Commercial Systems Perspective
+
+Adversarial Neon Beam: Robust Physical-World Adversarial Attack to DNNs
+
+State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems
+
+Invisible CMOS Camera Dazzling for Conducting Adversarial Attacks on Deep Neural Networks
+
+Breaking the Illusion: Real-world Challenges for Adversarial Patches in Object Detection
+
+Benchmarking the Physical-world Adversarial Robustness of Vehicle Detection
+
+Adversarial alignment: Breaking the trade-off between the strength of an attack and its relevance to human perception
+
+Really natural adversarial examples
+
+Deflecting Adversarial Attacks
+
+Adversarial Attacks Beyond the Image Space
+
+A General Framework for Adversarial Examples with Objectives
+
+Adversarial Sticker: A Stealthy Attack Method in the Physical World
+
+Adversarial Attacks in Machine Learning: Key Insights and Defense Approaches
+
+Robust and Natural Physical Adversarial Examples for Object Detectors
+
