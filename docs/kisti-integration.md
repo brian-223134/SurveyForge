@@ -17,7 +17,7 @@
 | 백본 | `meta-llama/llama-3.3-70b-instruct` @ OpenRouter, provider `akashml/fp8` 고정 |
 | 디코딩 | **temperature 0.6 · max_tokens 8,192 · 가드에 걸린 응답은 버리고 재요청** (4 agent 공통, `kisti_data/docs/asg/AGENT-HANDOFF.md` §4) |
 | 분량 | 통제하지 않는다. `run_demo.py` 기본 인자 그대로 |
-| 검색 스택 | `rag.py`·`agents/` 수정 0줄. 바꾼 것은 LLM 클라이언트, 보고/기록, 후처리뿐 (§2) |
+| 검색 스택 | `rag.py`·`agents/` 수정 0줄. 바꾼 것은 LLM 클라이언트, 보고/기록, 후처리뿐 (§2). 구조는 `docs/retrieval-architecture.md` |
 
 ## 1. 브랜치
 
@@ -62,6 +62,7 @@ main 은 건드리지 않았다.
 | `probe_retrieval.py` (스모크 DB) | 기동·`[cutoff/db]`·아웃라인 검색·citation 리랭크 동작, 창 `[1922-01-01, 2026-01-01]` 폐기 0/30 |
 | model.py 프로브 A (`MAX_TOKENS=5`, `chat` 5회) | `[DECODING] temperature=0.6`, `[PROVIDER] AkashML`, 4회 재샘플 후 수용, `truncation_retries=4 truncated_accepted=1` |
 | model.py 프로브 B (정상 프로파일 `hello`) | 정상 응답, 잘림 0 |
+| temperature 프로브 (0 / 0.6 / 1.0 × 4, 실제 서브섹션 프롬프트) | 잘림·반복 0, 길이·인용 수 둔감 — `docs/experiments/temperature-probe.md` |
 | `md_to_tex.py --compile` (arXiv 1 + DOI 3, `<>;()` 든 DOI 포함, 가짜 DB) | pdflatex 3패스 성공. DOI 항목은 `DOI:` 라벨·doi.org 링크·BibTeX `doi=`; 특수문자 DOI 는 cite 키만 `_` 로 치환하고 링크는 원문 유지; `☆` 제거 확인 |
 
 ## 5. 빌드
