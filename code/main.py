@@ -262,6 +262,14 @@ def write_run_manifest(args, references):
         db_build = {k: b.get(k) for k in ('records', 'tag', 'export', 'export_file_sha256',
                                           'built_at', 'id_formats')}
         db_build['view'] = (b.get('export_manifest') or {}).get('view')
+    # view 차분(v2 이후)이 적용된 스냅샷은 view_diff_manifest.json 을 갖는다 (kisti_data adapter/index_diff.py).
+    # 결과 기록에는 view 버전이 필요하다 -- created_at 과 편수로 표기한다 (AGENT-HANDOFF.md §0).
+    p = os.path.join(args.db_path, 'view_diff_manifest.json')
+    if os.path.exists(p):
+        with open(p) as f:
+            d = json.load(f)
+        db_build['view_diff'] = {k: d.get(k) for k in ('created_at', 'v1_records', 'v2_records',
+                                                       'removed_count', 'added_count')}
     ids = list(references.values()) if isinstance(references, dict) else list(references or [])
     manifest = {
         'topic': args.topic,

@@ -48,10 +48,10 @@ main 은 건드리지 않았다.
 | `SURVEYFORGE_MAX_TOKENS` | `8192` | 16,384 → 8,192. bench-2512 파일럿에서 16K 에 닿은 호출 2건 — 첫 파일럿의 `llm_stats` 로 어느 호출인지 확인 |
 | `SURVEYFORGE_TEMPERATURE` | `0.6` | |
 | `SURVEYFORGE_RETRY_TRUNCATED` | (비움 = on) | |
-| `SURVEYFORGE_PAPER_ID_CUTOFF` | **`2512`** | view 에 arXiv `2601.*` 논문 212편이 KISTI `year=2025` 로 들어와 있다(빌드 후 check_db 실측). 2026-01 투고분이라 컷오프 밖이고 이 게이트가 아웃라인·집필 양쪽에서 거른다(`… 212 excluded` 가 정상). DOI·구형 id 는 게이트를 그냥 통과 |
+| `SURVEYFORGE_PAPER_ID_CUTOFF` | **`2512`** | v1 view 에 arXiv `2601.*` 논문 212편이 KISTI `year=2025` 로 들어와 있었고(빌드 후 check_db 실측) 이 게이트가 걸렀다. **v2 (2026-09-08 09:24~)** 는 view 에서 이미 빠져 `0 excluded` 가 정상. 값은 2512 유지(컷오프 의미 그대로). DOI·구형 id 는 게이트를 그냥 통과 |
 | `SURVEYFORGE_PAPER_DATE_OLDEST` | **`1922-01-01`** | view 연도 범위 1922..2025. kisti_data 문서의 1991 은 1922~1990 논문을 TRE 창 밖으로 무음 폐기한다 |
 | `SURVEYFORGE_PAPER_DATE_NEWEST` | `2026-01-01` | date 가 `YYYY-01-01` 이라 2025 논문이 마지막 창에 든다 |
-| `SURVEYFORGE_SURVEY_EXCLUDE_IDS` | 35개 유지 | |
+| `SURVEYFORGE_SURVEY_EXCLUDE_IDS` | 36개 | v2 에서 twin 2507.16731 추가 (exclude_ids.txt 40키 중 arXiv 16개 전부 포함) |
 
 ## 4. 검증 (2026-09-07, 비용 ≈ 0)
 
@@ -101,7 +101,12 @@ arXiv·DOI 논문 각각 제목 자기-검색 rank 1(cos>0.99), 주제 질의 to
 즉 DOI 논문이 검색·리랭크 양쪽에서 정상적으로 후보에 든다. 실행당 전체-DB 선택자 검색 2회 = 약 25분이 순수 오버헤드 —
 25편이면 10시간. `IDSelectorBatch` 또는 게이트 0 제외 시 선택자 생략으로 결과 동일하게 제거 가능(미적용, 결정 대기).
 
-### 5.2 파일럿 1편 (2026-09-08 07:08 → 07:58, `scripts/run_pilot.sh`)
+### 5.2 파일럿 1편 (2026-09-08 07:08 → 07:58, `scripts/run_pilot.sh`) — **view v1**
+
+> view 버전: 이 실행은 **v1** (papers.parquet sha `c7b8d4e7`, DB 1,651,701편)이다. 09:24 UTC 에 view `kisti-2512` 가 v2(1,651,487편:
+> GT 사본 2편 + arXiv 2601.* 212편 제거, sha `591b4325`)로 교체됐고 DB 디렉터리도 같은 경로에서 v2 로 바뀌었다(`view_diff_manifest.json`
+> created_at 2026-09-08T07:21:49Z, v1 은 `database_kisti-kisti-2512-v1/`). 이후 실행은 run_manifest 의 `db_build.view_diff` 로 v2 를 표기한다.
+> 이 파일럿의 게이트가 거른 212편이 v2 에서는 view 자체에서 빠졌으므로, v2 에서는 `[cutoff/outline|writer] … 0 excluded` 가 정상이다.
 
 topic: **Visual Adversarial Attacks and Defenses in the Physical World** (candidates security/physical-adversarial-attacks, GT refs 150, in-view 149,
 ceiling 68%; AutoSurvey 가 같은 topic 으로 4편 실행). 조건: llama-3.3-70b @ akashml/fp8, temperature 0.6, max_tokens 8,192 + 재요청,
@@ -114,7 +119,7 @@ run_demo 기본 인자(7섹션·subsection_len 500·rag 100→60·풀 1,500), `S
 | 본문 | refined **20,398 words**, 7/7 섹션 · 31 서브섹션 완결 |
 | refs | **129편 (DOI 92 · arXiv 37)**, 전부 집필 id(409) 안, 집필 id 전부 풀(1,500; DOI 610) 안 |
 | LLM | 완료 응답 114, **잘림 재요청 2 (집필 단계), 잘린 채 수용 0**, 빈 응답·오류 재시도 0. provider AkashML 단일 |
-| 게이트 / 창 | `[cutoff/outline|writer]` 212 excluded (arXiv 2601.*), `[cutoff/rerank]` 폐기 **0/5,862** |
+| 게이트 / 창 | `[cutoff/outline|writer]` 212 excluded (arXiv 2601.*; v1 이라서), `[cutoff/rerank]` 폐기 **0/5,862** |
 | 검색 시간 | RAG 호출 55회 합 **1,617s** — 그중 전체-DB 선택자 검색 2회 = 760s + 761s. 실행 시간의 절반이 §4(retrieval-architecture) 의 O(n²) 비용 |
 | 누수 | GT DOI(10.1145/3793659)·제외 키 38개가 refs·본문에 0회 |
 | PDF | `md_to_tex.py --compile` 476KB, doi.org 링크 92 · arxiv.org 37 |

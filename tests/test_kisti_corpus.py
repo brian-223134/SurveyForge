@@ -67,6 +67,20 @@ def _db_built():
     return os.path.exists(os.path.join(DB, 'build_manifest.json'))
 
 
+def _id_formats_from_map(idmap):
+    """build_manifest 에 id_formats 가 없을 때(view 차분 적용본) id map 에서 직접 센다."""
+    f = {'arxiv': 0, 'doi': 0, 'other': 0}
+    for i in idmap:
+        f['doi' if _is_doi(i) else 'arxiv' if _ARXIV.match(str(i)) else 'other'] += 1
+    return f
+
+
+def _view_diff():
+    """view 차분(v2 이후)이 적용된 스냅샷의 view_diff_manifest.json, 없으면 None."""
+    p = os.path.join(DB, 'view_diff_manifest.json')
+    return _json(p) if os.path.exists(p) else None
+
+
 def _require_db():
     if not _db_built():
         raise Skip(f'{DB}/build_manifest.json 없음 — 스냅샷 빌드 전')
@@ -132,14 +146,20 @@ def test_2_build_manifest_matches_export_and_view():
     bm, em, vm = _json(os.path.join(DB, 'build_manifest.json')), _export_manifest(), _view_manifest()
     assert bm['records'] == em['records'], (bm['records'], em['records'])
     assert bm['export_file_sha256'] == em['file_sha256'], '빌드에 쓴 export 가 현재 export 와 다르다'
-    assert os.path.abspath(bm['export']) == os.path.abspath(EXPORT)
-    f = bm['id_formats']
-    assert f['arxiv'] == vm['counts']['arxiv_id_papers'], f
+    # 차분 적용본(index_diff.py)은 export 를 상대경로로 적는다 -- 파일명만 대조한다
+    assert os.path.basename(bm['export']) == os.path.basename(EXPORT), bm['export']
+    # id_formats 는 원 빌더만 쓴다. 없으면 id map 에서 직접 센다 (불변식은 같다)
+    f = bm.get('id_formats') or _id_formats_from_map(_json(os.path.join(DB, 'arxivid_to_index_abs.json')))
+    assert f['arxiv'] == vm['counts']['arxiv_id_papers'], (f, vm['counts']['arxiv_id_papers'])
     assert f['doi'] == vm['counts']['view_papers'] - vm['counts']['arxiv_id_papers'], f
     assert f['other'] == 0, f
     copy = _json(os.path.join(DB, 'corpus_export_manifest.json'))
     assert copy == em, 'DB 옆에 복사된 export manifest 가 원본과 다르다'
-    assert bm['text_normalization'].startswith('none'), bm['text_normalization']
+    assert bm.get('text_normalization', 'none').startswith('none'), bm['text_normalization']
+    vd = _view_diff()
+    if vd:
+        assert vd['v2_records'] == bm['records'] == vd['v1_records'] - vd['removed_count'] + vd['added_count'], vd
+        print(f"    view diff 적용본: {vd['created_at']} v1 {vd['v1_records']:,} → v2 {vd['v2_records']:,} (-{vd['removed_count']} +{vd['added_count']})")
     print(f"    build {bm['built_at']} tag {bm['tag']} records {bm['records']:,} id_formats {f}")
 
 
@@ -160,7 +180,8 @@ def test_2b_db_files_and_id_map():
     vals = idmap.values()
     assert min(vals) == 1 and max(vals) == n and len(set(vals)) == n, 'id map 값이 1..n 전단사가 아니다'
     n_doi = sum(1 for i in idmap if _is_doi(i))
-    assert n_doi == bm['id_formats']['doi'], (n_doi, bm['id_formats'])
+    vm = _view_manifest()
+    assert n_doi == vm['counts']['view_papers'] - vm['counts']['arxiv_id_papers'], (n_doi, vm['counts'])
     # export 사본이어야 한다 (파일 지문 = export)
     if not FAST:
         assert _sha256(os.path.join(DB, 'arxiv_paper_db_with_cc.json')) == bm['export_file_sha256']
@@ -180,6 +201,12 @@ def test_3_excluded_keys_absent_from_snapshot():
     idmap = _json(os.path.join(DB, 'arxivid_to_index_abs.json'))
     leaked = [i for i in ex if i in idmap]
     assert not leaked, f'GT/twin id 가 DB 에 있다: {leaked}'
+    vd = _view_diff()
+    if vd:
+        # 차분으로 뺀 id 도 DB 에 남아 있으면 안 된다
+        still = [i for i in vd.get('removed_ids', []) if i in idmap]
+        assert not still, f'view diff 가 뺀 id 가 DB 에 남아 있다: {still[:5]}'
+        print(f"    view diff 제거 {len(vd.get('removed_ids', []))}개 DB 부재 확인")
     print(f'    제외 키 {len(ex)}개 모두 DB 에 없음')
 
 
