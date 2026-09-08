@@ -112,9 +112,18 @@ langchain 의 `FAISS.similarity_search_with_score_by_vector` 는 `id_selector` �
 | 서브아웃라인 검색 (선택자 없음) | — | ~1s | ~2s |
 | 인용 정합 (writer ids 잠금) | 384~525 | 4~6s | 비슷 |
 
-실행당 검색 합계 539~545s 중 500s 가 두 번의 전체-DB 선택자 검색이다. 게이트가 아무것도 제외하지 않을 때(view 가 이미
-컷오프를 적용한 지금)는 선택자를 아예 넘기지 않거나 `IDSelectorBatch`(해시 집합)로 바꾸면 **결과가 같고** 이 500s(KISTI 에서 ≈25분)가
-사라진다. 검색 스택 무수정 원칙 때문에 아직 바꾸지 않았다 — 25편 본배치 전에 결정할 것 (결과 동일성은 같은 질의의 id 집합 비교로 검증 가능).
+실행당 검색 합계 539~545s 중 500s 가 두 번의 전체-DB 선택자 검색이다. KISTI 파일럿(v1) 실측은 760s + 761s = 실행 50분의 절반.
+
+**등가성 실측 (2026-09-08, v2, `scripts/probe_selector.py`, `docs/experiments/selector-equivalence.json`)** — 같은 질의, 같은 허용 id 집합:
+
+| 선택자 | 소요 | top-1500 id 목록 |
+|---|---|---|
+| `IDSelectorArray` (현행) | **761.5s** | 기준 |
+| `IDSelectorBatch` (해시 집합) | **3.3s** | 순서까지 동일 |
+| 없음 (게이트 0 제외일 때) | 1.3s | 순서까지 동일 |
+
+즉 바뀌는 것은 멤버십 검사의 자료구조뿐이고 검색 대상 집합·점수·순위·TRE 는 그대로다(agent 논리 무관). 적용은 `utils.get_index_filter` 의
+`faiss.IDSelectorArray(results_index)` 한 줄을 `IDSelectorBatch` 로 바꾸는 것. **2026-09-08 현재 미적용** — 사용자 결정 대기.
 
 ## 5. TRE — citation 리랭크의 세부 (`utils.sort_by_citation_period`)
 

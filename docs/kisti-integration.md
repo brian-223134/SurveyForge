@@ -143,7 +143,8 @@ recall 은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view` 를 분모로
 - **8K 가드 vs SurveyForge 의 큰 호출.** 파일럿 실측: 재요청 2회(집필 단계), 잘린 채 수용 0 — 아웃라인 병합·LCE 호출은 가드에
   걸리지 않았다. 다음 편에서도 `truncated_accepted` 가 0 인지 계속 본다.
 - **검색 오버헤드 (실측).** 전체-DB `IDSelectorArray` 검색 2회 = 1,521s, 실행 50분의 절반. 25편이면 10.5시간.
-  게이트가 0 제외일 때 선택자 생략 또는 `IDSelectorBatch` 로 바꾸면 결과 동일 — `docs/retrieval-architecture.md` §4. 본배치 전 결정.
+  등가성 실측: 같은 질의에서 `IDSelectorBatch` 3.3s, 선택자 없음 1.3s, 세 경우 top-1500 id 목록이 순서까지 동일
+  (`docs/retrieval-architecture.md` §4, `scripts/probe_selector.py`). agent 논리와 무관한 자료구조 교체이며 **미적용 — 결정 대기**.
 - **OpenRouter 키.** AutoSurvey 와 같은 키, 잔여 약 $5.4 / 한도 $30. 편당 $0.4 안팎 × 25편 + AutoSurvey 분 → 한도 상향 필요.
 - **DOI 논문 저자.** export 에 authors 가 없어 `.bib` 은 DOI 논문도 제목·연도·링크만. `kisti_data/data/views/kisti-2512/authors.parquet` 로 후처리 가능(미구현, 채점 무관).
 - **corpus 쪽 컷오프 누수 (전 agent 공통).** view 규칙 `year ≤ 2025` 는 KISTI `year` 에 의존하는데, arXiv `2601.*` 212편이 `year=2025` 로 통과했다.
