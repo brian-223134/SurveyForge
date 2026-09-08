@@ -29,7 +29,7 @@ load_dotenv(os.path.join(CODE, os.pardir, '.env'))
 
 from main import report_cutoffs_vs_database  # noqa: E402
 from src.rag import GeneralRAG_langchain  # noqa: E402
-from src.utils import find_index, get_index_filter_by_id_prefix  # noqa: E402
+from src.utils import find_index, get_index_filter, get_index_filter_by_id_prefix  # noqa: E402
 
 
 def main():
@@ -90,11 +90,13 @@ def main():
     res = {'topic': args.topic, 'db_path': os.path.abspath(args.db_path),
            'outline_pool': describe(pool, 'outline')}
 
-    # 2. 집필 단계 리랭크: citation 리랭크(TRE 창) -- writer.py 는 1500 풀에 잠그지만
-    #    여기서는 창 동작만 본다.
+    # 2. 집필 단계 리랭크: writer.py 와 같이 1,500 풀에 잠근 뒤 citation 리랭크(TRE 창).
+    #    (전체 DB 선택자는 IDSelectorArray 선형 탐색이라 1.65M 에서 검색 1회 ≈760s —
+    #    위 1 단계가 그 실측이고, 여기서 또 넘기면 같은 시간이 한 번 더 든다.)
+    lock = get_index_filter(rag.id_to_index, pool)
     t2 = time.time()
     top = rag.retrieve_id(args.topic, rerank='citation', top_k=args.rag_num,
-                          max_out=args.rag_max_out, **flt)
+                          max_out=args.rag_max_out, **lock)
     print(f'[probe] citation rerank {time.time() - t2:.0f}s')
     res['rerank'] = describe(top, 'rerank')
     rag.report_window_drops()

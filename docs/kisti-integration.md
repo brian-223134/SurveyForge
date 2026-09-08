@@ -82,9 +82,24 @@ CUDA_VISIBLE_DEVICES=3 KISTI_VIEW=kisti-2512 bash /data2/chanjoong/kisti_data/ad
 | 발견 | 신형 arXiv id 접두사 최대 **2601** — `2601.*` 212편이 `year=2025` 로 view 에 포함. → `.env` id 게이트 2512 (§3). 구형 arXiv id 25,872편, 신형 429,299편 |
 | 후속 | `tests/test_kisti_corpus.py` 전체, `scripts/probe_retrieval.py` (아래 §5.1) |
 
-### 5.1 빌드 후 검증
+### 5.1 빌드 후 검증 (2026-09-08 06:36~07:03)
 
-(테스트·프로브 결과는 실행 완료 후 기록)
+`tests/test_kisti_corpus.py` **8/8 통과** (전체 DB): view·export sha256 정합, build_manifest·id map·인덱스 파일 정합,
+제외 키 38개 DB 부재, twin 15개 .env 제외 목록 포함, id→DOI→원문(kisti_data 어댑터), gte+FAISS 직접 질의 —
+arXiv·DOI 논문 각각 제목 자기-검색 rank 1(cos>0.99), 주제 질의 top-50 이 DOI/arXiv 혼합("adversarial…" DOI 20 · arXiv 30,
+"instruction…" DOI 1 · arXiv 49), 연도 ≤ 2025.
+
+`scripts/probe_retrieval.py --topic "Visual Adversarial Attacks and Defenses in the Physical World"` (파이프라인과 같은 경로, LLM 0):
+
+| 단계 | 실측 |
+|---|---|
+| 기동 (JSON 파싱 + 인덱스 + gte) | 51s |
+| `[cutoff/db]` | 1,651,701편, newest id 2601.19912, **1,196,530 DOI ids (pass the id gate)**, 형식 불명 0 |
+| 아웃라인 풀 top-1500 (전체 DB 선택자) | **762s** — `docs/retrieval-architecture.md` §4 의 O(n²) 추정(≈760s)과 일치. 풀: DOI 610 · arXiv 890, 연도 2015..2025 (2020+ 가 1,201편) |
+| citation 리랭크 → 62편 | DOI 28 · arXiv 34, 연도 2017..2025, **창 폐기 0/100** |
+
+즉 DOI 논문이 검색·리랭크 양쪽에서 정상적으로 후보에 든다. 실행당 전체-DB 선택자 검색 2회 = 약 25분이 순수 오버헤드 —
+25편이면 10시간. `IDSelectorBatch` 또는 게이트 0 제외 시 선택자 생략으로 결과 동일하게 제거 가능(미적용, 결정 대기).
 
 ## 6. 실행 절차
 
