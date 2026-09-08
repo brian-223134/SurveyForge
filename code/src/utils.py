@@ -13,6 +13,12 @@ from langchain_core.documents import Document
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
 
+# 질의 임베딩(gte)을 올릴 장치. 파이프라인은 gte 인스턴스를 3개(RAG 2 + database 1) 올려 GPU 약 6GB 를
+# 쓰는데, 공용 박스에서 GPU 가 다 차 있으면 기동 OOM 으로 죽는다 (2026-09-08 파일럿 실측). 임베딩은
+# 결정적이라 CPU 로 돌려도 검색 결과가 같고, 실행당 질의는 수십 건이라 오버헤드는 분 단위다.
+EMBED_DEVICE = os.environ.get('SURVEYFORGE_EMBED_DEVICE', '').strip() or 'cuda'
+
+
 def find_index(db_path, stem):
     """`<db_path>/<stem>_*.bin` 을 찾는다. 정확히 하나여야 한다.
 

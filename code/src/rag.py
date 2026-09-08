@@ -9,7 +9,7 @@ from langchain_core.runnables import RunnableLambda
 
 from src.faiss_param import FAISS_param as FAISS
 from .utils import (autosurvey_db_json2doc_langchain, postprocess_results_langchain2id,
-                    sort_by_citation_period, cutoff_log)
+                    sort_by_citation_period, cutoff_log, EMBED_DEVICE)
 
 logging.basicConfig()
 logging.getLogger("langchain.retrievers.multi_query").setLevel(logging.INFO)
@@ -43,7 +43,7 @@ class GeneralRAG_langchain():
         # load embedding fucntion
         self.embedding_function = HuggingFaceEmbeddings(
             model_name=self.embedding_model,
-            model_kwargs={'device': 'cuda', 'trust_remote_code': True},
+            model_kwargs={'device': EMBED_DEVICE, 'trust_remote_code': True},
         )
      
         # load local rag database
