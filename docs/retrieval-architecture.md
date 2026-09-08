@@ -106,8 +106,8 @@ langchain 의 `FAISS.similarity_search_with_score_by_vector` 는 `id_selector` �
 
 | 검색 | 선택자 길이 | 실측 (bench-2512, 947K) | 추정 (KISTI, 1.65M) |
 |---|---|---|---|
-| 아웃라인 풀 top-1500 (게이트 = 전체 DB) | 947,451 | **250s** | ≈ 760s |
-| 집필 풀 top-1500 (게이트 = 전체 DB) | 947,451 | **250s** | ≈ 760s |
+| 아웃라인 풀 top-1500 (게이트 = 전체 DB) | 947,451 | **250s** | 761.5s 실측 → **3.3s** (IDSelectorBatch, 2026-09-08 적용) |
+| 집필 풀 top-1500 (게이트 = 전체 DB) | 947,451 | **250s** | 761.5s 실측 → **3.3s** (〃) |
 | 서브섹션 검색 (풀 1,500 잠금) × ~40 | 1,500 | 중앙값 0.9s | ≈ 1.5s |
 | 서브아웃라인 검색 (선택자 없음) | — | ~1s | ~2s |
 | 인용 정합 (writer ids 잠금) | 384~525 | 4~6s | 비슷 |
@@ -122,8 +122,10 @@ langchain 의 `FAISS.similarity_search_with_score_by_vector` 는 `id_selector` �
 | `IDSelectorBatch` (해시 집합) | **3.3s** | 순서까지 동일 |
 | 없음 (게이트 0 제외일 때) | 1.3s | 순서까지 동일 |
 
-즉 바뀌는 것은 멤버십 검사의 자료구조뿐이고 검색 대상 집합·점수·순위·TRE 는 그대로다(agent 논리 무관). 적용은 `utils.get_index_filter` 의
-`faiss.IDSelectorArray(results_index)` 한 줄을 `IDSelectorBatch` 로 바꾸는 것. **2026-09-08 현재 미적용** — 사용자 결정 대기.
+즉 바뀌는 것은 멤버십 검사의 자료구조뿐이고 검색 대상 집합·점수·순위·TRE 는 그대로다(agent 논리 무관).
+**2026-09-08 적용**: `utils.get_index_filter` 가 `faiss.IDSelectorBatch` 를 만든다(호출 3곳 — 아웃라인·집필 게이트, 집필 풀 잠금, 인용 정합 —
+모두 이 함수를 거친다). 적용 후 실제 파이프라인 함수 경로(`get_index_filter_by_id_prefix`)로 만든 선택자까지 포함해 `IDSelectorArray` 와
+top-1500 목록이 순서까지 같음을 재확인했다 (`scripts/probe_selector.py` 'pipeline' 케이스, `docs/experiments/selector-equivalence.json`).
 
 ## 5. TRE — citation 리랭크의 세부 (`utils.sort_by_citation_period`)
 

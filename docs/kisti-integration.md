@@ -15,7 +15,7 @@
 | 논문 DB | `SurveyForge_data/database_kisti-kisti-2512/` — `kisti_data/adapter/surveyforge/build_db.sh` 가 `scripts/build_db_from_corpus.py` 로 빌드 (gte-large-en-v1.5, batch 8) |
 | outline DB | corpus 밖 자산 그대로 (human survey 18,816편). `SURVEYFORGE_SURVEY_EXCLUDE_IDS` 35개 유지 — KISTI twin 15편이 이 안에 있음을 대조로 확인 |
 | 백본 | `meta-llama/llama-3.3-70b-instruct` @ OpenRouter, provider `akashml/fp8` 고정 |
-| 디코딩 | **temperature 0.6 · max_tokens 8,192 · 가드에 걸린 응답은 버리고 재요청** (4 agent 공통, `kisti_data/docs/asg/AGENT-HANDOFF.md` §4) |
+| 디코딩 | **temperature 0.6 · max_tokens 8,192 · 가드에 걸린 응답은 버리고 재요청**, top_p 미전송 (4 agent 공통, `kisti_data/docs/asg/AGENT-HANDOFF.md` §4) |
 | 분량 | 통제하지 않는다. `run_demo.py` 기본 인자 그대로 |
 | 검색 스택 | `rag.py`·`agents/` 수정 0줄. 바꾼 것은 LLM 클라이언트, 보고/기록, 후처리뿐 (§2). 구조는 `docs/retrieval-architecture.md` |
 
@@ -144,8 +144,11 @@ recall 은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view` 를 분모로
   걸리지 않았다. 다음 편에서도 `truncated_accepted` 가 0 인지 계속 본다.
 - **검색 오버헤드 (실측).** 전체-DB `IDSelectorArray` 검색 2회 = 1,521s, 실행 50분의 절반. 25편이면 10.5시간.
   등가성 실측: 같은 질의에서 `IDSelectorBatch` 3.3s, 선택자 없음 1.3s, 세 경우 top-1500 id 목록이 순서까지 동일
-  (`docs/retrieval-architecture.md` §4, `scripts/probe_selector.py`). agent 논리와 무관한 자료구조 교체이며 **미적용 — 결정 대기**.
+  (`docs/retrieval-architecture.md` §4, `scripts/probe_selector.py`). agent 논리와 무관한 자료구조 교체 — **2026-09-08 적용**
+  (`utils.get_index_filter`). 이후 실행은 검색 오버헤드가 실행당 약 25분 → 수 초.
 - **OpenRouter 키.** AutoSurvey 와 같은 키, 잔여 약 $5.4 / 한도 $30. 편당 $0.4 안팎 × 25편 + AutoSurvey 분 → 한도 상향 필요.
+- **top_p (결정, 2026-09-08).** 보내지 않는다. Meta 권장 프로파일은 0.6 + top_p 0.9 세트지만, 원 SurveyForge 는 top_p 를 쓰지 않으며
+  ASG agent 의 원래 목적·기능(원 논문이 제시하는 동작)을 해칠 수 있는 손잡이는 굳이 추가하지 않는다. temperature 0.6 단독이 4 agent 공통 조건.
 - **DOI 논문 저자.** export 에 authors 가 없어 `.bib` 은 DOI 논문도 제목·연도·링크만. `kisti_data/data/views/kisti-2512/authors.parquet` 로 후처리 가능(미구현, 채점 무관).
 - **corpus 쪽 컷오프 누수 (전 agent 공통).** view 규칙 `year ≤ 2025` 는 KISTI `year` 에 의존하는데, arXiv `2601.*` 212편이 `year=2025` 로 통과했다.
   SurveyForge 는 id 게이트로 막지만 AutoSurvey 등 id 게이트가 없는 agent 는 이 212편을 검색한다. DOI 논문에도 같은 연도 오류가 있을 수

@@ -8,6 +8,7 @@ import json
 import pandas as pd
 from datetime import timedelta
 import faiss
+import numpy as np
 
 from langchain_core.documents import Document
 from langchain_community.docstore.in_memory import InMemoryDocstore
@@ -215,7 +216,12 @@ def get_index_filter(arxivid_to_index, results_arxivid):
     for i in range(len(results_arxivid)):
         results_index[i] = arxivid_to_index[results_arxivid[i]]
 
-    id_selector = faiss.IDSelectorArray(results_index)
+    # IDSelectorBatch(해시 집합), 원래는 IDSelectorArray(배열 선형 탐색). 멤버십 의미는 같고 -- "이 id 집합
+    # 안에서만 검색" -- 자료구조만 다르다. 배열 판은 (인덱스 편수 × 선택자 길이)라, 게이트가 전체 DB 를
+    # 넘기는 아웃라인·집필 풀 검색이 947K 에서 250s, 1.65M 에서 761.5s 걸렸다. 해시 판은 같은 질의에서
+    # 3.3s 이고 top-1500 id 목록이 순서까지 같다 (2026-09-08 실측, scripts/probe_selector.py,
+    # docs/retrieval-architecture.md §4). 검색 대상·점수·순위·TRE 는 그대로다.
+    id_selector = faiss.IDSelectorBatch(np.asarray(results_index, dtype='int64'))
     index_filter = {
         'id_selector': id_selector,
     }
