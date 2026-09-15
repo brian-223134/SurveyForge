@@ -1,9 +1,15 @@
 # SurveyForge 검색 구조 — corpus 에서 무엇을, 어떻게 가져오는가
 
 **2026-09-08.** 코드 기준: `code/main.py` · `code/src/rag.py` · `code/src/faiss_param.py` · `code/src/utils.py` ·
-`code/src/database.py` · `code/src/agents/{outline_writer,writer}.py`. 실측치는 bench-2512 실행 2편(Edge Computing,
-Instruction Tuning)의 `time_cost.log`·`rag_outline_subset_ids.jsonl`·`total_ids.txt`에서 뽑았다.
+`code/src/database.py` · `code/src/agents/{outline_writer,writer}.py`. 실측치는 2026-09-01~03 의 실행 2편(Edge Computing,
+Instruction Tuning; 구 공용 corpus 947K)의 `time_cost.log`·`rag_outline_subset_ids.jsonl`·`total_ids.txt`에서 뽑았다.
 KISTI 로 옮기면서 검색 스택은 한 줄도 바꾸지 않았다 — 바뀐 것은 입력(스냅샷)뿐이다 (§7).
+
+> **2026-09-15 갱신 — topic 별 retrieval cutoff.** 아래 §3 의 "게이트"(arXiv id YYMM ≤ `PAPER_ID_CUTOFF`) 자리에
+> **topic 정책 선택자**가 들어갔다: 허용 집합 = sidecar 공개일 상한 < GT survey 최초 공개일 ∧ exclude_ids 밖, 그 위에
+> 종전 게이트를 교집합(2612 = 아무것도 거르지 않음). 아웃라인 풀·집필 풀·**서브아웃라인**(종전엔 선택자 없음)·인용 정합·
+> TinyDB 직접 조회·outline DB 예시 검색이 전부 같은 집합으로 제한된다. 정본은 [`retrieval-policy.md`](retrieval-policy.md);
+> 이 문서의 §3~§6 은 그 정책이 어느 지점에 걸리는지의 배경으로 읽을 것 (§9 요약).
 
 ## 0. 한눈에
 
@@ -18,10 +24,11 @@ KISTI 로 옮기면서 검색 스택은 한 줄도 바꾸지 않았다 — 바�
    ├ faiss_paper_title_abs_*.bin   │            └ Final_outline{,_First}/<id>.md
    └ faiss_paper_title_*.bin       │
                                    ▼
- [1] 아웃라인   topic ──gate──▶ abs 인덱스 top-1500 ─▶ 30K-token 청크 ×(초록 + 서베이 예시 5) ─▶ 거친 아웃라인들
+ [1] 아웃라인   topic ──gate*──▶ abs 인덱스 top-1500 ─▶ 30K-token 청크 ×(초록 + 서베이 예시 5) ─▶ 거친 아웃라인들
                 ─▶ 최신 서베이 5편의 아웃라인과 병합 ─▶ 섹션 아웃라인
- [1'] 서브아웃라인 섹션 설명 ─▶ abs 인덱스 top-50 (게이트·풀 잠금 없음, 'survey' 제목 제거) ─▶ 서브섹션 아웃라인
- [2] 집필       topic ──gate──▶ abs 인덱스 top-1500 = 풀(IDSelector 잠금)
+ [1'] 서브아웃라인 섹션 설명 ─▶ abs 인덱스 top-50 (원 코드: 게이트·풀 잠금 없음; 정책 아래선 gate* 선택자) ─▶ 서브섹션 아웃라인
+ [2] 집필       topic ──gate*──▶ abs 인덱스 top-1500 = 풀(IDSelector 잠금)
+      gate* = 2026-09-15 부터 topic 정책 허용 집합(∩ id 게이트) — retrieval-policy.md
                 서브섹션 질의(제목+하위질의) ─▶ 풀 안 top-100 ─▶ 합집합 ─▶ TRE(2년 창 × citation_count) ─▶ ≤60편
                 ─▶ 초록 60편 프롬프트 ─▶ 초안 ─▶ 인용 검사 ─▶ LCE 정리
  [3] 인용 정합   본문의 [제목] ─▶ title 인덱스 top-1 (집필 단계에서 검색된 id 안에서만) ─▶ [n] 번호 ─▶ <topic>.json
@@ -140,9 +147,10 @@ top-1500 목록이 순서까지 같음을 재확인했다 (`scripts/probe_select
 
 | 변수 | 위치 | 값 (KISTI 실험) |
 |---|---|---|
-| corpus·컷오프·GT/twin 제외 | kisti_data view `kisti-2512` → export → 스냅샷 | year ≤ 2025, 38키 제외 |
+| corpus·GT/twin 제외 | kisti_data view `kisti-2608` (시간 컷 없음) → export → 스냅샷 `database_kisti-kisti-2608` | 1,663,704편, 40키 제외; 시간 조건은 topic 정책 |
 | outline DB 의 GT 서베이 제외 | `.env SURVEYFORGE_SURVEY_EXCLUDE_IDS` | 35개 (KISTI twin 15 포함) |
-| id 게이트 / TRE 창 | `.env SURVEYFORGE_PAPER_ID_CUTOFF` / `PAPER_DATE_OLDEST·NEWEST` | 2612 / 1922-01-01 · 2026-01-01 |
+| **topic 정책 (2026-09-15)** | `.env SURVEYFORGE_TOPIC_ID` → `AutoSurvey/data/topic_policy.kisti-2608.jsonl` 행 + sidecar `kisti_data/data/views/kisti-2608/paper_dates.json` | cutoff = GT 최초 공개일, 허용 집합 안 검색 ([retrieval-policy.md](retrieval-policy.md)) |
+| id 게이트 / TRE 창 | `.env SURVEYFORGE_PAPER_ID_CUTOFF` / `PAPER_DATE_OLDEST·NEWEST` | 2612 / 1922-01-01 · 2026-12-31 (정책 아래에서 아무것도 거르지 않는 값) |
 | 임베딩 모델 | 스냅샷 빌드 + 질의 | gte-large-en-v1.5 (agent 고유) |
 | 검색 예산 | `run_demo.py` 인자 / 코드 상수 | 풀 1500 · 서브아웃라인 50 · 서브섹션 100→60 · 인용 top-1 |
 | topic 문자열 | `run_demo.py --topic` | `topics.kisti.jsonl` 의 `title` 그대로 |
@@ -172,3 +180,18 @@ top-1500 목록이 순서까지 같음을 재확인했다 (`scripts/probe_select
 
 비용 0 으로 검색 스택만 확인하려면 `scripts/probe_retrieval.py --topic "<title>"` (기동 + §3.1 풀 검색 + §3.2 TRE 한 번),
 corpus 자체의 정합·질의 가능성은 `tests/test_kisti_corpus.py`.
+
+## 9. topic 정책이 걸리는 지점 (2026-09-15, 요약)
+
+| 검색 경로 (§3) | 종전 | 정책 아래 (`SURVEYFORGE_TOPIC_ID=<slug>`) |
+|---|---|---|
+| 아웃라인 풀 top-1500 (§3.1-1) | YYMM 게이트 `IDSelectorBatch` | `utils.get_retrieval_filter` → 허용 집합 ∩ 게이트 → `IDSelectorBatch` |
+| 서브아웃라인 top-50 (§3.1-5) | 선택자 없음 | 같은 선택자 (`outline_writer.suboutline_index_filter`) |
+| 집필 풀 top-1500 (§3.2-1) | YYMM 게이트 | 같은 선택자; 서브섹션 검색은 그 풀에 잠금(종전과 동일) |
+| 인용 정합 (§3.3) | `writer_rag_results` 잠금 | 잠금 집합 ∩ 허용 집합 |
+| `database.get_paper_info_from_ids` · `database.search` | 제한 없음 | 허용 밖 id 차단 · `SearchParameters(sel=IDSelectorBatch)` |
+| outline DB 예시 (`database_survey.get_ids_from_query`) | env 제외 목록 후필터 | arXiv id YYMM 상한 < cutoff ∧ (env ∪ 정책) 제외 → 선택자 안 검색 |
+| TRE 창 (§5) | `[1922-01-01, 2026-01-01]` | `[1922-01-01, 2026-12-31]` — 허용 집합이 이미 cutoff 이전뿐이라 거르는 역할 없음 |
+
+선택자 길이는 허용 편수(physical-adversarial 1,186,466)이지만 `IDSelectorBatch` 는 해시 집합이라 §4 의 비용 문제는
+없다 (선택자 구성 수 초, 검색 수 초). 결과 기록은 `run_manifest.json['retrieval_policy']`(§8).

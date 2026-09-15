@@ -1,0 +1,477 @@
+{
+  "db_path": "/data2/chanjoong/survey-agent/SurveyForge_data/database_kisti-kisti-2608",
+  "topics": {
+    "physical-adversarial-attacks": {
+      "topic": "Visual Adversarial Attacks and Defenses in the Physical World",
+      "checks": {
+        "outline": {
+          "n": 1500,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2022-11-02",
+          "n_2026": 0
+        },
+        "suboutline": {
+          "n": 50,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2022-10",
+          "n_2026": 0
+        },
+        "rerank": {
+          "n": 61,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2022-10",
+          "n_2026": 0
+        },
+        "citation": {
+          "n": 5,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2017-12",
+          "n_2026": 0
+        },
+        "survey_db": {
+          "n": 20,
+          "violations": 0,
+          "env_excluded_present": 0
+        },
+        "direct_lookup": {
+          "asked": [
+            "2209.14262",
+            "10.1001/jamadermatol.2023.5550",
+            "10.1145/3793659",
+            "2211.01671"
+          ],
+          "returned": [
+            "2209.14262"
+          ],
+          "own_search_violations": 0
+        }
+      },
+      "policy": {
+        "cutoff": "2022-11-03",
+        "sidecar_allowed": 1186466,
+        "sidecar_total": 1663704,
+        "sidecar_excluded": {
+          "after_cutoff_day": 332849,
+          "after_cutoff_year": 1753,
+          "after_cutoff_month": 142636
+        },
+        "db_allowed": 1186466,
+        "db_records": 1663704,
+        "allowed_fingerprint_sha256": "4bee99cd9f46c4fcc0133cdf12539193ae15697755b84c457ebdfb9279d23e48",
+        "exclude_ids": [
+          "10.1145/3793659",
+          "2211.01671"
+        ]
+      },
+      "outline_pool": {
+        "n": 1500,
+        "doi": 591,
+        "years": {
+          "2013": 1,
+          "2015": 4,
+          "2016": 17,
+          "2017": 54,
+          "2018": 143,
+          "2019": 247,
+          "2020": 358,
+          "2021": 374,
+          "2022": 302
+        }
+      },
+      "suboutline": {
+        "n": 50,
+        "doi": 17,
+        "years": {
+          "2017": 5,
+          "2018": 5,
+          "2019": 10,
+          "2020": 7,
+          "2021": 9,
+          "2022": 14
+        }
+      },
+      "rerank": {
+        "n": 61,
+        "doi": 30,
+        "years": {
+          "2017": 5,
+          "2018": 5,
+          "2019": 10,
+          "2020": 11,
+          "2021": 13,
+          "2022": 17
+        }
+      },
+      "window_drops": 0,
+      "window_docs": 100,
+      "citation_map": {
+        "queries": 5,
+        "self_hits": 5
+      },
+      "survey_db": {
+        "n": 20,
+        "policy_report": {
+          "allowed": 14814,
+          "total": 18816,
+          "excluded_after_cutoff": 3978,
+          "excluded_gt": 24,
+          "excluded_unparsed_id": 0,
+          "rule": "arXiv id YYMM (month) < cutoff"
+        },
+        "dates": [
+          "2018-02",
+          "2018-09",
+          "2018-10",
+          "2020-02",
+          "2020-06",
+          "2020-07",
+          "2020-09",
+          "2020-09",
+          "2020-10",
+          "2021-09",
+          "2021-11",
+          "2022-01",
+          "2022-01",
+          "2022-03",
+          "2022-06",
+          "2022-10",
+          "2022-10",
+          "2023-03",
+          "2023-09",
+          "2023-10"
+        ]
+      }
+    },
+    "kv-cache-serving": {
+      "topic": "Towards Efficient Large Language Model Serving",
+      "checks": {
+        "outline": {
+          "n": 1500,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2026-01-22",
+          "n_2026": 39
+        },
+        "suboutline": {
+          "n": 50,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2025-12",
+          "n_2026": 0
+        },
+        "rerank": {
+          "n": 63,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2026-01",
+          "n_2026": 1
+        },
+        "citation": {
+          "n": 5,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2021-10-21",
+          "n_2026": 0
+        },
+        "survey_db": {
+          "n": 20,
+          "violations": 0,
+          "env_excluded_present": 0
+        },
+        "direct_lookup": {
+          "asked": [
+            "10.1145/3754448",
+            "10.18653/v1/2026.findings-acl.1916"
+          ],
+          "returned": [
+            "10.1145/3754448"
+          ],
+          "own_search_violations": 0
+        }
+      },
+      "policy": {
+        "cutoff": "2026-07-01",
+        "sidecar_allowed": 1663704,
+        "sidecar_total": 1663704,
+        "sidecar_excluded": {},
+        "db_allowed": 1663704,
+        "db_records": 1663704,
+        "allowed_fingerprint_sha256": "ab09ca72fcb7959b3aadab1680ed4c410ac24268a46892f04a0dfc963dfa84e0",
+        "exclude_ids": [
+          "10.18653/v1/2026.findings-acl.1916"
+        ]
+      },
+      "outline_pool": {
+        "n": 1500,
+        "doi": 200,
+        "years": {
+          "2005": 1,
+          "2006": 1,
+          "2007": 1,
+          "2008": 3,
+          "2009": 3,
+          "2012": 3,
+          "2013": 3,
+          "2014": 2,
+          "2015": 4,
+          "2016": 7,
+          "2017": 5,
+          "2018": 6,
+          "2019": 14,
+          "2020": 16,
+          "2021": 28,
+          "2022": 47,
+          "2023": 179,
+          "2024": 504,
+          "2025": 638,
+          "2026": 35
+        }
+      },
+      "suboutline": {
+        "n": 50,
+        "doi": 8,
+        "years": {
+          "2023": 4,
+          "2024": 22,
+          "2025": 24
+        }
+      },
+      "rerank": {
+        "n": 63,
+        "doi": 15,
+        "years": {
+          "2015": 2,
+          "2016": 1,
+          "2017": 1,
+          "2021": 1,
+          "2023": 6,
+          "2024": 29,
+          "2025": 22,
+          "2026": 1
+        }
+      },
+      "window_drops": 0,
+      "window_docs": 100,
+      "citation_map": {
+        "queries": 5,
+        "self_hits": 5
+      },
+      "survey_db": {
+        "n": 20,
+        "policy_report": {
+          "allowed": 18792,
+          "total": 18816,
+          "excluded_after_cutoff": 0,
+          "excluded_gt": 24,
+          "excluded_unparsed_id": 0,
+          "rule": "arXiv id YYMM (month) < cutoff"
+        },
+        "dates": [
+          "2022-11",
+          "2023-11",
+          "2023-12",
+          "2024-01",
+          "2024-01",
+          "2024-02",
+          "2024-02",
+          "2024-02",
+          "2024-02",
+          "2024-03",
+          "2024-04",
+          "2024-05",
+          "2024-05",
+          "2024-05",
+          "2024-06",
+          "2024-07",
+          "2024-07",
+          "2024-07",
+          "2024-07",
+          "2024-08"
+        ]
+      }
+    },
+    "llm-training-data-detection": {
+      "topic": "Detecting Training Data For Large Language Models",
+      "checks": {
+        "outline": {
+          "n": 1500,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2025-12-30",
+          "n_2026": 0
+        },
+        "suboutline": {
+          "n": 50,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2025-11",
+          "n_2026": 0
+        },
+        "rerank": {
+          "n": 64,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2025-10-21",
+          "n_2026": 0
+        },
+        "citation": {
+          "n": 5,
+          "violations_not_allowed": 0,
+          "violations_exclude_id": 0,
+          "violations_date_upper_bound": 0,
+          "latest_allowed_date": "2018-09-01",
+          "n_2026": 0
+        },
+        "survey_db": {
+          "n": 20,
+          "violations": 0,
+          "env_excluded_present": 0
+        },
+        "direct_lookup": {
+          "asked": [
+            "2404.02936",
+            "10.1001/jamanetworkopen.2025.52099",
+            "10.1145/3779430"
+          ],
+          "returned": [
+            "2404.02936"
+          ],
+          "own_search_violations": 0
+        }
+      },
+      "policy": {
+        "cutoff": "2026-01-07",
+        "sidecar_allowed": 1653071,
+        "sidecar_total": 1663704,
+        "sidecar_excluded": {
+          "after_cutoff_day": 4819,
+          "after_cutoff_month": 5814
+        },
+        "db_allowed": 1653071,
+        "db_records": 1663704,
+        "allowed_fingerprint_sha256": "44a010367d2bb75f9c1e95b5f3c7eebaaa427c77fec5cd27e6c17eb9c7bd198f",
+        "exclude_ids": [
+          "10.1145/3779430"
+        ]
+      },
+      "outline_pool": {
+        "n": 1500,
+        "doi": 205,
+        "years": {
+          "1994": 1,
+          "1995": 1,
+          "1997": 1,
+          "2001": 1,
+          "2002": 1,
+          "2005": 3,
+          "2008": 1,
+          "2009": 2,
+          "2010": 1,
+          "2012": 1,
+          "2013": 2,
+          "2015": 5,
+          "2016": 10,
+          "2017": 13,
+          "2018": 12,
+          "2019": 22,
+          "2020": 25,
+          "2021": 44,
+          "2022": 95,
+          "2023": 234,
+          "2024": 541,
+          "2025": 484
+        }
+      },
+      "suboutline": {
+        "n": 50,
+        "doi": 8,
+        "years": {
+          "2012": 1,
+          "2013": 1,
+          "2015": 2,
+          "2016": 1,
+          "2018": 1,
+          "2020": 3,
+          "2021": 1,
+          "2022": 2,
+          "2023": 4,
+          "2024": 21,
+          "2025": 13
+        }
+      },
+      "rerank": {
+        "n": 64,
+        "doi": 8,
+        "years": {
+          "2012": 1,
+          "2013": 1,
+          "2015": 1,
+          "2016": 1,
+          "2018": 1,
+          "2019": 1,
+          "2020": 2,
+          "2022": 5,
+          "2023": 7,
+          "2024": 31,
+          "2025": 13
+        }
+      },
+      "window_drops": 0,
+      "window_docs": 100,
+      "citation_map": {
+        "queries": 5,
+        "self_hits": 5
+      },
+      "survey_db": {
+        "n": 20,
+        "policy_report": {
+          "allowed": 18792,
+          "total": 18816,
+          "excluded_after_cutoff": 0,
+          "excluded_gt": 24,
+          "excluded_unparsed_id": 0,
+          "rule": "arXiv id YYMM (month) < cutoff"
+        },
+        "dates": [
+          "2023-05",
+          "2023-10",
+          "2023-11",
+          "2024-02",
+          "2024-02",
+          "2024-02",
+          "2024-02",
+          "2024-02",
+          "2024-03",
+          "2024-05",
+          "2024-05",
+          "2024-06",
+          "2024-06",
+          "2024-06",
+          "2024-07",
+          "2024-07",
+          "2024-08",
+          "2024-08",
+          "2024-08",
+          "2024-09"
+        ]
+      }
+    }
+  },
+  "fails": [],
+  "status": "PASS"
+}

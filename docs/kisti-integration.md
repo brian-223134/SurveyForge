@@ -1,6 +1,10 @@
 # KISTI DB 통합 (브랜치 `kisti`)
 
-**2026-09-07.** asg-common-corpus(bench-2512)는 이날부로 쓰지 않는다. SurveyForge 는 다른 세 ASG agent
+> **2026-09-15.** corpus 는 시간 컷 없는 view **`kisti-2608`**(1,663,704편)로, 검색은 **topic 별 GT survey 최초 공개일
+> cutoff** 아래에서 돈다 — §8 과 [`retrieval-policy.md`](retrieval-policy.md). 아래 §0~§7 의 `kisti-2512`·`PAPER_ID_CUTOFF=2512`
+> 기술은 2026-09-08~14 의 기록이다. §5.2 파일럿은 **view v1 · 정책 없음** 실행으로 표기한다.
+
+**2026-09-07.** 구 공용 corpus(asg-common-corpus, bench-2512)는 이날부로 쓰지 않는다. SurveyForge 는 다른 세 ASG agent
 (AutoSurvey · SurveyX · LLM×MapReduce-V2)와 같은 **KISTI Science Data Lake 파생 스토어의 view `kisti-2512`** 를
 검색 corpus 로 쓴다. 정본은 `/data2/chanjoong/kisti_data/docs/asg/surveyforge.md`(설계·함정)와
 `kisti_data/adapter/README.md`(실행 순서)이며, 이 문서는 SurveyForge 쪽에서 실제로 무엇을 바꿨고 무엇을
@@ -10,7 +14,7 @@
 
 | 항목 | 값 |
 |---|---|
-| corpus | view `kisti-2512` — 1,651,701편, `year ≤ 2025`, GT 본체 25 + twin 15 제외. arXiv id 455,171 (27.6%) · DOI id 1,196,530 (72.4%) |
+| corpus | ~~view `kisti-2512` — 1,651,701편, `year ≤ 2025`~~ → **2026-09-15: view `kisti-2608`** 1,663,704편, 시간 컷 없음, GT/twin 40키 제외, arXiv id 460,772 · DOI id 1,202,932 (§8) |
 | id 규칙 B | `10.48550/arxiv.<id>` → arXiv base id, 그 외 DOI 소문자. **agent 는 id 를 불투명 키로 다룬다** |
 | 논문 DB | `SurveyForge_data/database_kisti-kisti-2512/` — `kisti_data/adapter/surveyforge/build_db.sh` 가 `scripts/build_db_from_corpus.py` 로 빌드 (gte-large-en-v1.5, batch 8) |
 | outline DB | corpus 밖 자산 그대로 (human survey 18,816편). `SURVEYFORGE_SURVEY_EXCLUDE_IDS` 35개 유지 — KISTI twin 15편이 이 안에 있음을 대조로 확인 |
@@ -101,7 +105,11 @@ arXiv·DOI 논문 각각 제목 자기-검색 rank 1(cos>0.99), 주제 질의 to
 즉 DOI 논문이 검색·리랭크 양쪽에서 정상적으로 후보에 든다. 실행당 전체-DB 선택자 검색 2회 = 약 25분이 순수 오버헤드 —
 25편이면 10시간. `IDSelectorBatch` 또는 게이트 0 제외 시 선택자 생략으로 결과 동일하게 제거 가능(미적용, 결정 대기).
 
-### 5.2 파일럿 1편 (2026-09-08 07:08 → 07:58, `scripts/run_pilot.sh`) — **view v1**
+### 5.2 파일럿 1편 (2026-09-08 07:08 → 07:58, `scripts/run_pilot.sh`) — **view v1 · 정책 없음**
+
+> 결과 버전 열: **v1 (`c7b8d4e7` / 2026-09-07T05:10:55Z) · retrieval_policy 없음**. 2026-09-14 규약(topic 별 cutoff)의 비교 대상이
+>아니므로 `physical-adversarial-attacks` 는 정책 아래에서 재실행한다. 이 실행의 `run_manifest.json` 에는 `retrieval_policy` 키가
+> 없다(= null 로 읽을 것).
 
 > view 버전: 이 실행은 **v1** (papers.parquet sha `c7b8d4e7`, DB 1,651,701편)이다. 09:24 UTC 에 view `kisti-2512` 가 v2(1,651,487편:
 > GT 사본 2편 + arXiv 2601.* 212편 제거, sha `591b4325`)로 교체됐고 DB 디렉터리도 같은 경로에서 v2 로 바뀌었다(`view_diff_manifest.json`
@@ -153,3 +161,39 @@ recall 은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view` 를 분모로
 - **corpus 쪽 컷오프 누수 (전 agent 공통).** view 규칙 `year ≤ 2025` 는 KISTI `year` 에 의존하는데, arXiv `2601.*` 212편이 `year=2025` 로 통과했다.
   SurveyForge 는 id 게이트로 막지만 AutoSurvey 등 id 게이트가 없는 agent 는 이 212편을 검색한다. DOI 논문에도 같은 연도 오류가 있을 수
   있고 그것은 어느 agent 도 못 가린다 → view 생성기에 `arXiv YYMM ≤ 2512` 규칙 추가와 DOI 발행일 재검토를 corpus 쪽에 요청할 것.
+
+## 8. 2026-09-15 — view `kisti-2608` 전환 + topic 별 retrieval cutoff
+
+교수님 지시(2026-09-14): reference cutoff 를 2025-12-31 로 고정하지 않는다. corpus 는 시간 컷 없는 스냅샷 전체를 두고
+(KISTI 는 앞으로 API 로 증분 적재), **검색이 topic 의 GT survey 최초 공개일 이전 문헌만** 본다. 규약 정본은
+`kisti_data/docs/asg/AGENT-HANDOFF.md` §0, SurveyForge 구현·검증은 [`retrieval-policy.md`](retrieval-policy.md).
+
+### 8.1 DB — `database_kisti-kisti-2608/` (append, 2026-09-15 11:23~11:30 UTC, GPU 3)
+
+| 항목 | 값 |
+|---|---|
+| 방법 | `scripts/append_snapshot.py --base database_kisti-kisti-2512 --new kisti-2608.surveyforge.minus-kisti-2512.json --tag KISTI_2608` — v2 인덱스 1,651,487편 뒤에 추가분 **12,217편**(2026년 12,005 + arXiv 2601.* 212; arXiv 5,814 · DOI 6,403)을 gte 로 임베딩해 stored id 1,651,488..1,663,704 로 붙임. base 벡터·레코드는 바이트 그대로 |
+| 스크립트 수정 | KISTI id 는 불투명 키 — 중복 판정을 `base_key()`(arXiv 만 버전 제거, DOI 는 그대로)로. 종전 `split('v')[0]` 은 DOI 1,374편을 'v' 에서 잘라 별개 논문을 묶었다. `authors` 없는 export 는 제목+저자 중복 제거를 건너뛴다. `append_manifest.json`·병합 후 `build_manifest.json`·전체 export 의 `corpus_export_manifest.json` 기록 |
+| 산출 | JSON 2.41GB(md5 `257acc57…`), FAISS 2종 각 6.83GB (`*_KISTI_2608.bin`), id map 55MB, `append_manifest.json`, `build_manifest.json`(`export_equivalence`: id 집합 == 전체 export `8403d3f5…`), outline DB 자산 4종 |
+| 정합성 | 키/매핑/두 인덱스 1..1,663,704 전단사. `id_formats` arXiv 460,772 · DOI 1,202,932 · 기타 0 (view manifest 와 일치). 날짜 1922-01-01 .. 2026-01-01 |
+| `check_db --verify-embeddings 20` | 표본 20건(신규 구간 10건) × 2필드 **cos 1.000000** (`eval_out/check_db_kisti-2608.log`) |
+| view 버전 열 | **`c1a0c6b3` / 2026-09-14T13:18:56Z** (`corpus_export_manifest.json` 의 `view.files_sha256.papers.parquet`, sidecar `view_created_at`) |
+
+sidecar `paper_dates.json` 은 DB 디렉터리에 복사하지 않는다 — `kisti_data/data/views/kisti-2608/paper_dates.json` 하나를 4 agent 가
+같이 쓴다 (`SURVEYFORGE_PAPER_DATES` 기본값).
+
+### 8.2 `.env` 변경
+
+| 키 | 값 | 비고 |
+|---|---|---|
+| `SURVEYFORGE_DB_DIR` | `database_kisti-kisti-2608` | |
+| `SURVEYFORGE_TOPIC_ID` | (비움; `scripts/run_pilot.sh <slug>` 가 export) | main.py 는 이 값 없이는 돌지 않는다 (`none` = 정책 없이, 비교 실험 밖) |
+| `SURVEYFORGE_TOPIC_POLICY` / `SURVEYFORGE_PAPER_DATES` | (비움 = 기본 경로) | `AutoSurvey/data/topic_policy.kisti-2608.jsonl` · view 의 sidecar |
+| `SURVEYFORGE_PAPER_ID_CUTOFF` | **2612** | arXiv 2601.* 이 view 로 복귀. 시간 조건은 정책이 담당, 게이트는 허용 집합과 교집합으로만 남는다 |
+| `SURVEYFORGE_PAPER_DATE_NEWEST` | **2026-12-31** | TRE 창이 코퍼스 전체를 덮게 (허용 집합이 이미 cutoff 이전뿐) |
+| `SURVEYFORGE_SURVEY_EXCLUDE_IDS` | 36개 유지 | 정책의 exclude_ids·cutoff(arXiv YYMM)가 여기에 더해진다 |
+
+### 8.3 채점
+
+분모는 `kisti_data/data/topics.kisti.jsonl` 의 **`n_gt_refs_cutoff`**(topic cutoff ∧ view ∧ 레코드 날짜 허용; physical-adversarial 128,
+kv-cache-serving 61). ref 목록은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view`. 구 `n_gt_refs` 는 §5.2 같은 정책 없는 실행에만.
