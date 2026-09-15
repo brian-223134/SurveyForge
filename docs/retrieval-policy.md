@@ -113,6 +113,13 @@ by_precision·by_source·rule)}` · `view_sha256` · `view_created_at` · `sidec
 - 허용 편수·지문이 AutoSurvey 와 같으므로 두 agent 의 허용 집합은 **id 단위로 동일**하다 (같은 view, 같은 sidecar, 같은 규칙).
 - 비교: 정책 없는 종전 실행(§0 결과 버전 열 v1)은 physical-adversarial 풀 1,500 중 cutoff 이후 문헌이 절반 이상이었다 (AutoSurvey 스모크 526/1,200).
 
+### 5.1 정책 아래 첫 생성 (2026-09-15)
+
+physical-adversarial-attacks 1편, 21분 · $0.40: refs 91편(DOI 59) 전부 허용 집합 안, 연도 2017~2022, GT 누수 0,
+적중 23/128 → **recall 18.0% · precision 25.3%**. 정책 없는 종전 실행(129편)은 같은 분모로 25/128 이지만 refs 의 40편이 cutoff
+이후 문헌이었다 — 정책이 그 40편을 검색 단계에서 없앴고 recall 은 오차(±1.7%p) 안에서 같다. 상세는 [`kisti-integration.md`](kisti-integration.md) §8.4,
+채점 `scripts/score_run.py`.
+
 ## 6. 한계·미결
 
 1. **arXiv 레코드의 판** — KISTI arXiv 레코드는 버전 없는 키라 초록이 최신판일 수 있다. 월 상한으로 v1 이 cutoff 이전임은 보장하지만 초록이 v1 것이라는 보장은 없다 (AutoSurvey 와 공통, 미착수).

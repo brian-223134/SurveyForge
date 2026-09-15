@@ -197,3 +197,26 @@ sidecar `paper_dates.json` 은 DB 디렉터리에 복사하지 않는다 — `ki
 
 분모는 `kisti_data/data/topics.kisti.jsonl` 의 **`n_gt_refs_cutoff`**(topic cutoff ∧ view ∧ 레코드 날짜 허용; physical-adversarial 128,
 kv-cache-serving 61). ref 목록은 `candidates/gap_to_80_refs.jsonl` 의 `tier == in_view`. 구 `n_gt_refs` 는 §5.2 같은 정책 없는 실행에만.
+
+### 8.4 정책 아래 첫 생성 — physical-adversarial-attacks (2026-09-15 11:48 → 12:09 UTC, `scripts/run_pilot.sh physical-adversarial-attacks`)
+
+결과 버전 열 **`c1a0c6b3` / 2026-09-14T13:18:56Z · retrieval_policy cutoff<2022-11-03** (근거 arXiv 선행판 2211.01671 v1; ACM 게재본은
+2026-04-01). 조건은 §5.2 와 같다(llama-3.3-70b @ akashml/fp8, temperature 0.6, max_tokens 8,192 + 재요청, run_demo 기본 인자, CPU 임베딩).
+
+| 항목 | 값 | §5.2 (v1 · 정책 없음) |
+|---|---|---|
+| 소요 / 비용 | **21분 13초 (1,273s)** / **$0.40** (키 사용액 27.4548 → 27.8501) | 50분 / $0.61 |
+| 검색 | RAG 54회 합 **43s** (전체-DB 선택자 검색 4s×2); 아웃라인 131s · 서브아웃라인 44s · 집필 14회 919s | RAG 1,617s |
+| 허용 집합 | 1,186,466 / 1,663,704 (71%), sha256 `4bee99cd9f46c4fc…` (AutoSurvey 와 동일), outline DB 14,814/18,816 | 게이트 2512 만 |
+| 본문 | refined **18,727 words**, 7 섹션 · 30 서브섹션 | 20,398 words, 7 · 31 |
+| refs | **91편 (DOI 59 · arXiv 32)**, 연도 2017~2022, 전부 허용 집합 안(위반 0), 직접 조회 차단 0 | 129편 (DOI 92), 연도 2015~2025 — 그중 **40편이 cutoff 이후** |
+| LLM | 완료 110, 잘림 재요청 1 · 수용 0, 빈 응답 0, 429 재시도 4 (AkashML 공유 풀), provider AkashML 단일 | 114 / 2 / 0 |
+| 누수 | GT DOI(10.1145/3793659)·선행판 2211.01671·GT 제목 본문·refs 0회 | 0 |
+| **recall / precision (잠정, 분모 `n_gt_refs_cutoff` 128)** | 적중 **23/128 → recall 18.0%, precision 25.3%** | 같은 분모로 재계산 25/128 → 19.5% / 19.4% (단, 40편은 규약 위반 ref) |
+
+- 채점: `scripts/score_run.py --topic_id physical-adversarial-attacks --run <exp_1>` (`docs/experiments/score.physical-adversarial-attacks.kisti-2608.json`).
+  GT ref 의 `view_id` 와 refs 의 DB id 를 대소문자 무시로 대조. §5.2 의 18.1%/20.9% 는 구 분모(in_view 149)라 이 표와 직접 비교하지 않는다.
+- 정책 없는 실행과 refs 46편이 겹친다. 없어진 것은 2023~2025년 문헌 40편이고, 그 자리를 2017~2022년 문헌이 채웠다 — recall 은 ±1.7%p 오차 안에서
+  같고 precision 이 올랐다(refs 가 129 → 91 로 줄어 분자 변화보다 분모 변화가 크다).
+- 같은 topic 의 AutoSurvey 4편(§5.2 표)은 정책 없는 실행이라 비교 대상이 아니다. AutoSurvey 가 같은 정책 파일로 재실행한 뒤 비교한다.
+- PDF: `md_to_tex.py --compile` — 본문의 `∞` 가 pdflatex 에서 죽어 UNICODE_MAP 에 수학 기호를 추가한 뒤 생성.

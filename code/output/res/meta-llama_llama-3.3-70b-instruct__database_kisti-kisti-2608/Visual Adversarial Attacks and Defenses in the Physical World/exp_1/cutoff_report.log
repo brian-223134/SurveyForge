@@ -1,0 +1,13 @@
+[policy] topic_id=physical-adversarial-attacks cutoff<2022-11-03 (근거: arxiv:2211.01671 v1 published (twin)) 제외 id 2개 ['10.1145/3793659', '2211.01671']
+[policy] sidecar 허용 1,186,466/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 332,849 / month 142,636 / year 1,753
+[policy] 정책 파일 /data2/chanjoong/survey-agent/AutoSurvey/data/topic_policy.kisti-2608.jsonl · sidecar /data2/chanjoong/kisti_data/data/views/kisti-2608/paper_dates.json (view kisti-2608 sha c1a0c6b3 / 2026-09-14T13:18:56+00:00)
+[cutoff/db] 1663704 papers, newest id 2601.22158 (2026-01), dates 1922-01-01..2026-01-01, 1202932 DOI ids (pass the id gate)
+[cutoff/cfg] --paper_id_cutoff=2612 --paper_date_oldest=1922-01-01 --paper_date_newest=2026-12-31
+[policy/outline] topic_id=physical-adversarial-attacks cutoff<2022-11-03 (근거: arxiv:2211.01671 v1 published (twin)) 제외 id 2개 ['10.1145/3793659', '2211.01671']
+[policy/outline] sidecar 허용 1,186,466/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 332,849 / month 142,636 / year 1,753
+[policy/outline] DB 허용 1,186,466/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 477,238; 허용 id 정렬 sha256 4bee99cd9f46c4fc…
+[policy/writer] topic_id=physical-adversarial-attacks cutoff<2022-11-03 (근거: arxiv:2211.01671 v1 published (twin)) 제외 id 2개 ['10.1145/3793659', '2211.01671']
+[policy/writer] sidecar 허용 1,186,466/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 332,849 / month 142,636 / year 1,753
+[policy/writer] DB 허용 1,186,466/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 477,238; 허용 id 정렬 sha256 4bee99cd9f46c4fc…
+[cutoff/rerank] total: 0/5109 retrieved documents discarded by the citation window [1922-01-01, 2026-12-31]
+[policy] 최종 참고문헌 91편 전부 허용 집합 안 (cutoff<2022-11-03)

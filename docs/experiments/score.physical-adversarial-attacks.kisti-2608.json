@@ -1,0 +1,63 @@
+{
+  "run": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/meta-llama_llama-3.3-70b-instruct__database_kisti-kisti-2608/Visual Adversarial Attacks and Defenses in the Physical World/exp_1",
+  "topic_id": "physical-adversarial-attacks",
+  "topic": "Visual Adversarial Attacks and Defenses in the Physical World",
+  "cutoff": "2022-11-03",
+  "refs": 91,
+  "refs_doi": 59,
+  "denominator_n_gt_refs_cutoff": 128,
+  "gt_pool": 183,
+  "hits": 23,
+  "recall": 0.1797,
+  "precision": 0.2527,
+  "hit_ids": [
+    "10.1007/978-3-030-10925-7_4",
+    "10.1007/978-3-030-58548-8_1",
+    "10.1007/978-3-030-58589-1_3",
+    "10.1016/j.sysarc.2020.101766",
+    "10.1109/access.2018.2807385",
+    "10.1109/biosig52210.2021.9548291",
+    "10.1109/cvpr42600.2020.00108",
+    "10.1109/cvpr42600.2020.01426",
+    "10.1109/cvpr46437.2021.00846",
+    "10.1109/cvpr52688.2022.01487",
+    "10.1145/3274895.3274904",
+    "10.1145/3319535.3339815",
+    "10.1145/3398394",
+    "10.1201/9781351251389-8",
+    "10.1609/aaai.v34i01.5443",
+    "10.1609/aaai.v35i2.16211",
+    "1712.09665",
+    "1807.07769",
+    "1810.00069",
+    "1904.00759",
+    "2007.04137",
+    "2007.16118",
+    "2203.03818"
+  ],
+  "refs_after_cutoff": [],
+  "gt_id_leaks": [],
+  "gt_title_leaks": [],
+  "words_refined": 16674,
+  "manifest": {
+    "llm_stats": {
+      "completions": 110,
+      "truncated_accepted": 0,
+      "truncation_retries": 1,
+      "empty_retries": 0,
+      "error_retries": 4
+    },
+    "temperature": 0.6,
+    "max_tokens": 8192,
+    "provider": "akashml/fp8",
+    "finished_at": "2026-09-15T12:09:39"
+  },
+  "retrieval_policy": {
+    "allowed": 1186466,
+    "db_records": 1663704,
+    "allowed_fingerprint_sha256": "4bee99cd9f46c4fcc0133cdf12539193ae15697755b84c457ebdfb9279d23e48",
+    "reference_violations": [],
+    "view_sha256": "c1a0c6b3fe1bd46f1a7d3d14832b53933dfb0b1c021531c23df109ba453ca156",
+    "view_created_at": "2026-09-14T13:18:56+00:00"
+  }
+}
