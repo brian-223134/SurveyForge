@@ -8,15 +8,20 @@
   5. 임베딩 질의       — gte 로 질의를 인코딩해 FAISS 를 직접 검색: 제목 자기-검색 rank 1, 주제 질의에서
                         DOI/arXiv 혼합 결과, 연도 ≤ 2025
 
-2 · 3(앞부분) · 5 는 `SurveyForge_data/database_kisti-<view>/build_manifest.json` 이 있어야 돌고, 없으면 SKIP.
+2 · 3(앞부분) · 5 는 `SurveyForge_data/<SURVEYFORGE_DB_DIR>/build_manifest.json` 이 있어야 돌고, 없으면 SKIP.
 5 는 FAISS 인덱스 2종(약 13GB)을 읽고 gte 를 올리므로 1~3분 걸린다. KISTI_TEST_FAST=1 이면 5 와
-2.38GB export 해시를 건너뛴다. LLM 호출은 없다.
+2.4GB export 해시·id 집합 대조를 건너뛴다. LLM 호출은 없다.
+
+append 한 스냅샷(kisti-2608 = kisti-2512 v2 인덱스 + 추가분 12,217편, scripts/append_snapshot.py)은 JSON 이
+export 의 바이트 사본이 아니라 base 접두 + 추가분이다. 그런 DB 는 append_manifest.json 을 갖고, 2 는 id 집합이
+전체 export 와 같은지·base 구간이 그대로인지·추가분이 stored id 뒤쪽을 차지하는지로 대신 확인한다.
 
     cd code && ../.venv/bin/python ../tests/test_kisti_corpus.py
     cd code && ../.venv/bin/python -m pytest ../tests/test_kisti_corpus.py -q     # pytest 가 있으면
 
-환경변수: KISTI_DATA_ROOT(기본 /data2/chanjoong/kisti_data) · KISTI_VIEW(기본 kisti-2512) ·
-SURVEYFORGE_DATA · SURVEYFORGE_DB_DIR(기본 database_kisti-<view>)
+환경변수: KISTI_DATA_ROOT(기본 /data2/chanjoong/kisti_data) · SURVEYFORGE_DATA · SURVEYFORGE_DB_DIR(.env 에서 읽음,
+기본 database_kisti-kisti-2512) · KISTI_VIEW(비우면 DB 의 corpus_export_manifest.json 의 view 이름 -- kisti_data 쪽
+KISTI_VIEW 기본값과는 무관)
 """
 
 import hashlib
@@ -30,10 +35,23 @@ ROOT = os.path.abspath(os.path.join(HERE, os.pardir))
 CODE = os.path.join(ROOT, 'code')
 sys.path.insert(0, CODE)
 
+from dotenv import load_dotenv  # noqa: E402
+load_dotenv(os.path.join(ROOT, '.env'))          # SURVEYFORGE_DB_DIR 등 실행 설정과 같은 DB 를 본다
+
 KISTI = os.environ.get('KISTI_DATA_ROOT', '/data2/chanjoong/kisti_data')
-VIEW = os.environ.get('KISTI_VIEW', 'kisti-2512')
 DATA = os.environ.get('SURVEYFORGE_DATA', '/data2/chanjoong/survey-agent/SurveyForge_data')
-DB = os.path.join(DATA, os.environ.get('SURVEYFORGE_DB_DIR', f'database_kisti-{VIEW}'))
+DB = os.path.join(DATA, os.environ.get('SURVEYFORGE_DB_DIR', 'database_kisti-kisti-2512'))
+
+
+def _view_of_db():
+    p = os.path.join(DB, 'corpus_export_manifest.json')
+    if os.path.exists(p):
+        with open(p) as f:
+            return json.load(f)['view']['name']
+    return 'kisti-2512'
+
+
+VIEW = os.environ.get('KISTI_VIEW') or _view_of_db()
 VIEW_DIR = os.path.join(KISTI, 'data', 'views', VIEW)
 EXPORT = os.path.join(KISTI, 'data', 'exports', f'{VIEW}.surveyforge.json')
 EXPORT_MANIFEST = EXPORT + '.manifest.json'
@@ -78,6 +96,12 @@ def _id_formats_from_map(idmap):
 def _view_diff():
     """view 차분(v2 이후)이 적용된 스냅샷의 view_diff_manifest.json, 없으면 None."""
     p = os.path.join(DB, 'view_diff_manifest.json')
+    return _json(p) if os.path.exists(p) else None
+
+
+def _append_manifest():
+    """append 한 스냅샷(scripts/append_snapshot.py)의 append_manifest.json, 없으면 None."""
+    p = os.path.join(DB, 'append_manifest.json')
     return _json(p) if os.path.exists(p) else None
 
 
@@ -160,6 +184,24 @@ def test_2_build_manifest_matches_export_and_view():
     if vd:
         assert vd['v2_records'] == bm['records'] == vd['v1_records'] - vd['removed_count'] + vd['added_count'], vd
         print(f"    view diff 적용본: {vd['created_at']} v1 {vd['v1_records']:,} → v2 {vd['v2_records']:,} (-{vd['removed_count']} +{vd['added_count']})")
+    am = _append_manifest()
+    if am:
+        n_base, added = am['base']['records'], am['new']['added']
+        assert n_base + added == bm['records'] == am['merged']['records'], (n_base, added, bm['records'])
+        assert am['new']['stored_ids'] == [n_base + 1, bm['records']], am['new']['stored_ids']
+        assert bm['append']['added'] == added and bm['md5'] == am['merged']['md5']
+        # 추가분 export 의 id 가 stored id 뒤쪽(n_base+1..n)을 정확히 차지하고, base 의 매핑은 접두로 그대로 있어야 한다
+        idmap = _json(os.path.join(DB, 'arxivid_to_index_abs.json'))
+        new_ids = [r['id'] for r in _json(am['new']['path'])['cs_paper_info'].values()]
+        assert len(new_ids) == am['new']['records_in_file']
+        got = sorted(idmap[i] for i in new_ids if i in idmap)
+        assert got == list(range(n_base + 1, bm['records'] + 1)), (got[:3], got[-3:])
+        base_map_path = os.path.join(am['base']['dir'], 'arxivid_to_index_abs.json')
+        if os.path.exists(base_map_path):
+            base_map = _json(base_map_path)
+            assert len(base_map) == n_base and all(idmap.get(k) == v for k, v in base_map.items()), 'base 매핑이 접두로 보존되지 않았다'
+        print(f"    append 적용본: {am['created_at']} base {n_base:,} (view {am['base']['view']['name']}) + 추가 {added:,} "
+              f"= {bm['records']:,}; 추가분 stored id {n_base + 1}..{bm['records']}, base 매핑 접두 보존")
     print(f"    build {bm['built_at']} tag {bm['tag']} records {bm['records']:,} id_formats {f}")
 
 
@@ -182,9 +224,16 @@ def test_2b_db_files_and_id_map():
     n_doi = sum(1 for i in idmap if _is_doi(i))
     vm = _view_manifest()
     assert n_doi == vm['counts']['view_papers'] - vm['counts']['arxiv_id_papers'], (n_doi, vm['counts'])
-    # export 사본이어야 한다 (파일 지문 = export)
     if not FAST:
-        assert _sha256(os.path.join(DB, 'arxiv_paper_db_with_cc.json')) == bm['export_file_sha256']
+        if _append_manifest():
+            # append 본은 바이트 사본이 아니다 -- id 집합이 전체 export 와 같아야 한다 (2.4GB 두 번 파싱)
+            db_ids = {r['id'] for r in _json(os.path.join(DB, 'arxiv_paper_db_with_cc.json'))['cs_paper_info'].values()}
+            ex_ids = {r['id'] for r in _json(EXPORT)['cs_paper_info'].values()}
+            assert db_ids == ex_ids == set(idmap), f'DB id 집합 != export (차이 {len(db_ids ^ ex_ids)})'
+            print(f'    append 본: DB id 집합 == export id 집합 == id map ({len(db_ids):,})')
+        else:
+            # export 사본이어야 한다 (파일 지문 = export)
+            assert _sha256(os.path.join(DB, 'arxiv_paper_db_with_cc.json')) == bm['export_file_sha256']
     print(f'    id map {n:,} (DOI {n_doi:,}), 인덱스 {os.path.basename(abs_idx)} / {os.path.basename(title_idx)}')
 
 
@@ -276,7 +325,8 @@ def test_5_query_corpus_with_gte_and_faiss():
     assert scores.min() > 0.99, scores
     del title_index
 
-    # (b) 초록 인덱스: 주제 질의 → DOI·arXiv 가 섞여 나오고 연도 ≤ 2025
+    # (b) 초록 인덱스: 주제 질의 → DOI·arXiv 가 섞여 나오고 연도가 view 의 year_range 안 (kisti-2608 은 1922..2026)
+    y_lo, y_hi = _view_manifest()['counts'].get('year_range', [1922, 2025])
     abs_index = faiss.read_index(find_index(DB, 'faiss_paper_title_abs_embeddings'))
     assert abs_index.ntotal == len(idmap)
     q = model.encode(['adversarial patches and physical-world attacks on object detectors',
@@ -288,7 +338,7 @@ def test_5_query_corpus_with_gte_and_faiss():
         n_doi = sum(1 for h in hits if _is_doi(h))
         assert 0 < n_doi < len(hits), f'{query}: top-50 이 한 형식뿐이다 (DOI {n_doi}/{len(hits)})'
         years = [int(papers.loc[h, 'year']) for h in hits]
-        assert max(years) <= 2025 and min(years) >= 1922, (min(years), max(years))
+        assert y_lo <= min(years) and max(years) <= y_hi, (min(years), max(years), y_lo, y_hi)
         print(f'    "{query}…" top-50: DOI {n_doi} · arXiv {len(hits) - n_doi}, 연도 {min(years)}..{max(years)}')
 
 
