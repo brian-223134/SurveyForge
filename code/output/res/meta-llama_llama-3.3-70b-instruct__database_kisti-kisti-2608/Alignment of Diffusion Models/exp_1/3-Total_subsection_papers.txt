@@ -1,0 +1,518 @@
+Foundations of Alignment in Diffusion Models
+['This section delves into the theoretical foundations of alignment in diffusion models, covering the mathematical formulations and key techniques used to achieve alignment.', '1. Mathematical background of diffusion models, including score-based models and denoising diffusion processes, and their role in alignment.', '2. Discussion on the importance of noise schedules and their impact on the alignment of generated samples.', '3. Introduction to guidance methods, such as classifier-free guidance, and their role in enhancing alignment.']
+
+Learning Diffusion Models with Flexible Representation Guidance
+
+Contractive Diffusion Probabilistic Models
+
+BalancedDPO: Adaptive Multi-Metric Alignment
+
+Domain Guidance: A Simple Transfer Approach for a Pre-trained Diffusion Model
+
+Interpreting diffusion score matching using normalizing flow
+
+Understanding Diffusion Models: A Unified Perspective
+
+Towards Better Alignment: Training Diffusion Models with Reinforcement Learning Against Sparse Rewards
+
+Diagnosing and Improving Diffusion Models by Estimating the Optimal Loss Value
+
+Diffusion Classifier Guidance for Non-robust Classifiers
+
+Diffusion Transport Alignment
+
+Optimizing training of time series diffusion models via similarity score functions: application to cyclic and acyclic motion with IMU data
+
+Understanding Diffusion Models via Code Execution
+
+Score-based Continuous-time Discrete Diffusion Models
+
+Aligning Diffusion Models by Optimizing Human Utility
+
+Improving Classifier-Free Guidance of Flow Matching via Manifold Projection
+
+Guidance Free Image Editing via Explicit Conditioning
+
+Composition and Alignment of Diffusion Models using Constrained Learning
+
+Diffusion Models are Evolutionary Algorithms
+
+REG: Rectified Gradient Guidance for Conditional Diffusion Models
+
+Diffusion Alignment as Variational Expectation-Maximization
+
+A Unification of Discrete, Gaussian, and Simplicial Diffusion
+
+Normalized Attention Guidance: Universal Negative Guidance for Diffusion Model
+
+An Analysis of Human Alignment of Latent Diffusion Models
+
+Target Score Matching
+
+Rectified-CFG++ for Flow Based Models
+
+Analyzing Neural Network-Based Generative Diffusion Models through Convex Optimization
+
+A Variational Perspective on Diffusion-Based Generative Models and Score
+  Matching
+
+Guided Path Sampling: Steering Diffusion Models Back on Track with Principled Path Guidance
+
+Aligning Modeled and Observed Behavior: A Compromise Between Computation Complexity and Quality
+
+Discrete Diffusion Trajectory Alignment via Stepwise Decomposition
+
+Exploring Diffusion and Flow Matching Under Generator Matching
+
+DAG: Depth-Aware Guidance with Denoising Diffusion Probabilistic Models
+
+Dynamic Search for Inference-Time Alignment in Diffusion Models
+
+Why Masking Diffusion Works: Condition on the Jump Schedule for Improved Discrete Diffusion
+
+In-situ Autoguidance: Eliciting Self-Correction in Diffusion Models
+
+Diffusion models for inverse problems
+
+Adaptive Guidance: Training-free Acceleration of Conditional Diffusion Models
+
+Dynamic Classifier-Free Diffusion Guidance via Online Feedback
+
+Consistency Trajectory Models: Learning Probability Flow ODE Trajectory of Diffusion
+
+CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models
+
+Generation of Scale-Free Assortative Networks via Newman Rewiring for Simulation of Diffusion Phenomena
+
+Guided Diffusion from Self-Supervised Diffusion Features
+
+On the Mathematics of Diffusion Models
+
+Test-Time Alignment of Text-to-Image Diffusion Models via Null-Text Embedding Optimisation
+
+Test-Time Iterative Error Correction for Efficient Diffusion Models
+
+A PDE Perspective on Generative Diffusion Models
+
+Training-Free Guidance Beyond Differentiability: Scalable Path Steering with Tree Search in Diffusion and Flow Models
+
+Let us Build Bridges: Understanding and Extending Diffusion Generative Models
+
+Diffusion Models in Bioinformatics: A New Wave of Deep Learning Revolution in Action
+
+Diffusion-RPO: Aligning Diffusion Models through Relative Preference Optimization
+
+Methods for Aligning Diffusion Models
+['This section presents various methods and techniques developed for aligning diffusion models with specific preferences or criteria, including classifier-free guidance, reinforcement learning from human feedback, and preference-based optimization.', '1. Classifier-free guidance and its variants for controlling the generation process without explicit classification.', '2. Reinforcement learning from human feedback for aligning models with human preferences and values.', '3. Preference-based optimization methods for incorporating user preferences into the generation process.']
+
+Influencing Humans to Conform to Preference Models for RLHF
+
+A General Framework for Inference-time Scaling and Steering of Diffusion Models
+
+Training-free Diffusion Model Alignment with Sampling Demons
+
+CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models
+
+Distortion of AI Alignment: Does Preference Optimization Optimize for Preferences?
+
+ImageReFL: Balancing Quality and Diversity in Human-Aligned Diffusion Models
+
+Understanding Diffusion Models via Code Execution
+
+From Demonstrations to Rewards: Alignment Without Explicit Human Preferences
+
+Direct Distributional Optimization for Provable Alignment of Diffusion Models
+
+Diffusion-SDPO: Safeguarded Direct Preference Optimization for Diffusion Models
+
+Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation
+
+ShortListing Model: A Streamlined SimplexDiffusion for Discrete Variable Generation
+
+Training-Free Guidance Beyond Differentiability: Scalable Path Steering with Tree Search in Diffusion and Flow Models
+
+A Minimalist Method for Fine-tuning Text-to-Image Diffusion Models
+
+Panacea: Pareto Alignment via Preference Adaptation for LLMs
+
+Inference-Time Alignment Control for Diffusion Models with Reinforcement Learning Guidance
+
+Reduce, Reuse, Recycle: Compositional Generation with Energy-Based Diffusion Models and MCMC
+
+The Anatomy of Alignment: Decomposing Preference Optimization by Steering Sparse Features
+
+Test-Time Alignment of Text-to-Image Diffusion Models via Null-Text Embedding Optimisation
+
+Rethinking Direct Preference Optimization in Diffusion Models
+
+A Unification of Discrete, Gaussian, and Simplicial Diffusion
+
+Dual Caption Preference Optimization for Diffusion Models
+
+Mind the Generative Details: Direct Localized Detail Preference Optimization for Video Diffusion Models
+
+Eliminating Oversaturation and Artifacts of High Guidance Scales in Diffusion Models
+
+Beyond Reward Margin: Rethinking and Resolving Likelihood Displacement in Diffusion Models via Video Generation
+
+Improving Classifier-Free Guidance of Flow Matching via Manifold Projection
+
+When Preferences Diverge: Aligning Diffusion Models with Minority-Aware Adaptive DPO
+
+Diffusion-NPO: Negative Preference Optimization for Better Preference Aligned Generation of Diffusion Models
+
+Forward KL Regularized Preference Optimization for Aligning Diffusion Policies
+
+Preference Diffusion for Recommendation
+
+Towards Practical Plug-and-Play Diffusion Models
+
+SEAL: Systematic Error Analysis for Value ALignment
+
+Free Lunch Alignment of Text-to-Image Diffusion Models without Preference Image Pairs
+
+Efficient Controllable Diffusion via Optimal Classifier Guidance
+
+Refining Alignment Framework for Diffusion Models with Intermediate-Step Preference Ranking
+
+Divergence Minimization Preference Optimization for Diffusion Model Alignment
+
+Composition and Alignment of Diffusion Models using Constrained Learning
+
+MoDiPO: text-to-motion alignment via AI-feedback-driven Direct Preference Optimization
+
+On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models
+
+Null-text Guidance in Diffusion Models is Secretly a Cartoon-style Creator
+
+RB-Modulation: Training-Free Personalization of Diffusion Models using Stochastic Optimal Control
+
+Learning Diffusion Models with Flexible Representation Guidance
+
+Diffusion Models without Classifier-free Guidance
+
+DAG: Depth-Aware Guidance with Denoising Diffusion Probabilistic Models
+
+Diffusion Alignment as Variational Expectation-Maximization
+
+A Dense Reward View on Aligning Text-to-Image Diffusion with Preference
+
+Guidance Free Image Editing via Explicit Conditioning
+
+Human-Feedback Efficient Reinforcement Learning for Online Diffusion Model Finetuning
+
+Taming Preference Mode Collapse via Directional Decoupling Alignment in Diffusion Reinforcement Learning
+
+Training-Free Constrained Generation With Stable Diffusion Models
+
+Applications of Aligned Diffusion Models
+['This section explores the various applications of aligned diffusion models, focusing on their ability to generate high-quality, realistic data that meets specific criteria or conditions.', '1. Text-to-image synthesis and the role of alignment in generating images that accurately reflect the input text.', '2. Image editing and manipulation using aligned diffusion models, including applications in graphics and design.', '3. Generation of realistic text and dialogue, leveraging alignment to ensure coherence and contextuality.']
+
+Segment-Level Diffusion: A Framework for Controllable Long-Form Generation with Diffusion Language Models
+
+Custom-Edit: Text-Guided Image Editing with Customized Diffusion Models
+
+Diffusion Models on the Edge: Challenges, Optimizations, and Applications
+
+Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models
+
+Improving Text-Driven Image Synthesis: Diffusion Models for Photorealistic Outcomes
+
+Provable Statistical Rates for Consistency Diffusion Models
+
+Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models
+
+Guidance Free Image Editing via Explicit Conditioning
+
+Instant Preference Alignment for Text-to-Image Diffusion Models
+
+An Alignment-Capable Microplanner for Natural Language Generation
+
+Consistency Models Made Easy
+
+Harnessing the Spatial-Temporal Attention of Diffusion Models for High-Fidelity Text-to-Image Synthesis
+
+DiffUTE: Universal Text Editing Diffusion Model
+
+Inference-Time Text-to-Video Alignment with Diffusion Latent Beam Search
+
+Training-free Diffusion Model Alignment with Sampling Demons
+
+Synthetic data generation by diffusion models
+
+DAG: Depth-Aware Guidance with Denoising Diffusion Probabilistic Models
+
+DIP: Dynamic In-Context Planner For Diffusion Language Models
+
+PRedItOR: Text Guided Image Editing with Diffusion Prior
+
+Rapid Diffusion: Building Domain-Specific Text-to-Image Synthesizers with Fast Inference Speed
+
+MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path
+
+Diffusion Models for Constrained Domains
+
+Efficient Multi-Instance Generation with Janus-Pro-Dirven Prompt Parsing
+
+AlignedGen: Aligning Style Across Generated Images
+
+CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models
+
+Aligning Diffusion Models by Optimizing Human Utility
+
+Specify and Edit: Overcoming Ambiguity in Text-Based Image Editing
+
+Exploring the latent space of diffusion models directly through singular value decomposition
+
+Improving GFlowNets for Text-to-Image Diffusion Alignment
+
+Diffusion Brush: A Latent Diffusion Model-based Editing Tool for AI-generated Images
+
+BalancedDPO: Adaptive Multi-Metric Alignment
+
+Unifying Continuous and Discrete Text Diffusion with Non-simultaneous Diffusion Processes
+
+Test-time Conditional Text-to-Image Synthesis Using Diffusion Models
+
+No Alignment Needed for Generation: Learning Linearly Separable Representations in Diffusion Models
+
+MoE-DiffuSeq: Enhancing Long-Document Diffusion Models with Sparse Attention and Mixture of Experts
+
+Real-World Image Variation by Aligning Diffusion Inversion Chain
+
+InverseMeetInsert: Robust Real Image Editing via Geometric Accumulation Inversion in Guided Diffusion Models
+
+A Unification of Discrete, Gaussian, and Simplicial Diffusion
+
+Scaling Concept With Text-Guided Diffusion Models
+
+Planned Diffusion
+
+AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation
+
+LayoutDiffusion: Controllable Diffusion Model for Layout-to-Image Generation
+
+Are Diffusion Models Vision-And-Language Reasoners?
+
+Inconsistencies In Consistency Models: Better ODE Solving Does Not Imply Better Samples
+
+Training-free Diffusion Model Adaptation for Variable-Sized Text-to-Image Synthesis
+
+Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models
+
+A state-of-the-art review of diffusion model applications for microscopic image and micro-alike image analysis
+
+GLIDE: Towards Photorealistic Image Generation and Editing with
+  Text-Guided Diffusion Models
+
+Improving Long-Text Alignment for Text-to-Image Diffusion Models
+
+Implementing and Experimenting with Diffusion Models for Text-to-Image Generation
+
+Evaluation and Comparison of Alignment Methods
+['This section focuses on the evaluation and comparison of different alignment methods for diffusion models, highlighting the strengths and weaknesses of various approaches.', '1. Overview of metrics used to evaluate alignment, including quantitative and qualitative assessments.', '2. Comparison of different guidance methods and their effectiveness in various applications.', '3. Discussion on the importance of benchmarking and the development of standardized evaluation protocols for aligned diffusion models.']
+
+ETC: training-free diffusion models acceleration with Error-aware Trend Consistency
+
+Likelihood-Based Diffusion Language Models
+
+Direct Distributional Optimization for Provable Alignment of Diffusion Models
+
+Free Lunch Alignment of Text-to-Image Diffusion Models without Preference Image Pairs
+
+Particle Diffusion Matching: Random Walk Correspondence Search for the Alignment of Standard and Ultra-Widefield Fundus Images
+
+TFG: Unified Training-Free Guidance for Diffusion Models
+
+Diffusion Transport Alignment
+
+Timed Alignments with Mixed Moves
+
+Refining Alignment Framework for Diffusion Models with Intermediate-Step Preference Ranking
+
+Review of diffusion models and its applications in biomedical informatics
+
+Cross-Frame Representation Alignment for Fine-Tuning Video Diffusion Models
+
+Theoretical Insights for Diffusion Guidance: A Case Study for Gaussian Mixture Models
+
+REG: Rectified Gradient Guidance for Conditional Diffusion Models
+
+Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening
+
+Aligning Modeled and Observed Behavior: A Compromise Between Computation Complexity and Quality
+
+Diffusion Alignment as Variational Expectation-Maximization
+
+Aligning Diffusion Models by Optimizing Human Utility
+
+The Flaw of Averages: Quantifying Uniformity of Performance on Benchmarks
+
+Null-text Guidance in Diffusion Models is Secretly a Cartoon-style Creator
+
+Usability Testing of a Web Tool for Dissemination and Implementation Science Models
+
+How to Blend Concepts in Diffusion Models
+
+Jointly Generating Multi-view Consistent PBR Textures using Collaborative Control
+
+A Comprehensive Evaluation framework of Alignment Techniques for LLMs
+
+Diffusion-RPO: Aligning Diffusion Models through Relative Preference Optimization
+
+A Closer Look at Parameter-Efficient Tuning in Diffusion Models
+
+Normalized Attention Guidance: Universal Negative Guidance for Diffusion Model
+
+Meaningful metrics for multi-level modelling
+
+Automatic benchmarking of large multimodal models via iterative experiment programming
+
+Diffusion Models Through a Global Lens: Are They Culturally Inclusive?
+
+Test-Time Alignment of Text-to-Image Diffusion Models via Null-Text Embedding Optimisation
+
+Improving Long-Text Alignment for Text-to-Image Diffusion Models
+
+CFG-Zero*: Improved Classifier-Free Guidance for Flow Matching Models
+
+Divergence Minimization Preference Optimization for Diffusion Model Alignment
+
+Beyond Binary Preference: Aligning Diffusion Models to Fine-grained Criteria by Decoupling Attributes
+
+SPQR: A Standardized Benchmark for Modern Safety Alignment Methods in Text-to-Image Diffusion Models
+
+THE ALIGNMENT BETWEEN THIRD-GRADE PRIMARY SCHOOL SCIENCE TEXTBOOKS AND CURRICULUM STANDARDS IN CHINA AND JAPAN
+
+Investigating Prompt Engineering in Diffusion Models
+
+Combined Word Alignments
+
+D3PO: Preference-Based Alignment of Discrete Diffusion Models
+
+Dynamic Classifier-Free Diffusion Guidance via Online Feedback
+
+Understanding Reinforcement Learning-Based Fine-Tuning of Diffusion Models: A Tutorial and Review
+
+Towards measuring and quantifying the comprehensibility of process models: the process model comprehension framework
+
+Knowledge Integration and Diffusion: Measures and Mapping of Diversity and Coherence
+
+Anti-Alignments -- Measuring The Precision of Process Models and Event
+  Logs
+
+Semantic Approach to Quantifying the Consistency of Diffusion Model Image Generation
+
+Alignment of Multiple Languages for Historical Comparison
+
+Information diffusion analysis: process, model, deployment, and application
+
+On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models
+
+Bias Begets Bias: The Impact of Biased Embeddings on Diffusion Models
+
+HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models
+
+Challenges and Limitations of Alignment in Diffusion Models
+['This section discusses the challenges and limitations encountered when aligning diffusion models, including issues related to mode collapse, training instability, and evaluation metrics.', '1. Mode collapse and its impact on the diversity of generated samples, along with strategies to mitigate this issue.', '2. Training instability and methods to stabilize the training process of diffusion models.', '3. Challenges in evaluating the alignment and quality of generated samples, including the development of appropriate metrics.']
+
+On the Equivalence of Consistency-Type Models: Consistency Models, Consistent Diffusion Models, and Fokker-Planck Regularization
+
+On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models
+
+Learning Diffusion Models with Flexible Representation Guidance
+
+An Analysis of Human Alignment of Latent Diffusion Models
+
+Discrete State Diffusion Models: A Sample Complexity Perspective
+
+Training-free Diffusion Model Alignment with Sampling Demons
+
+Efficient Diversity-Preserving Diffusion Alignment via Gradient-Informed GFlowNets
+
+Diffusion Alignment as Variational Expectation-Maximization
+
+Diagnosing and Improving Diffusion Models by Estimating the Optimal Loss Value
+
+Diffusion Rejection Sampling
+
+Towards Faster Training of Diffusion Models: An Inspiration of A Consistency Phenomenon
+
+Likelihood-Based Diffusion Language Models
+
+Opportunities and challenges of diffusion models for generative AI
+
+Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening
+
+Efficient Integrators for Diffusion Generative Models
+
+Understanding Diffusion Models via Code Execution
+
+Nonlinear Dimensionality Reduction with Diffusion Maps in Practice
+
+Improving Long-Text Alignment for Text-to-Image Diffusion Models
+
+Smoothed Preference Optimization via ReNoise Inversion for Aligning Diffusion Models with Varied Human Preferences
+
+Inference-Time Alignment Control for Diffusion Models with Reinforcement Learning Guidance
+
+Loss Functions in Diffusion Models: A Comparative Study
+
+Consistency Models Made Easy
+
+ETC: training-free diffusion models acceleration with Error-aware Trend Consistency
+
+Sensitivity Analysis for Diffusion Models
+
+Bias Begets Bias: The Impact of Biased Embeddings on Diffusion Models
+
+Provable Statistical Rates for Consistency Diffusion Models
+
+On the Role of Discreteness in Diffusion LLMs
+
+Improving Diffusion Model Efficiency Through Patching
+
+Align Your Tangent: Training Better Consistency Models via Manifold-Aligned Tangents
+
+Generation of Scale-Free Assortative Networks via Newman Rewiring for Simulation of Diffusion Phenomena
+
+Cross-Frame Representation Alignment for Fine-Tuning Video Diffusion Models
+
+Diffusion Blend: Inference-Time Multi-Preference Alignment for Diffusion Models
+
+Matching the Optimal Denoiser in Point Cloud Diffusion with (Improved) Rotational Alignment
+
+PC-Diffusion: Aligning Diffusion Models with Human Preferences via Preference Classifier
+
+Accelerating Diffusion-based Text-to-Speech Model Training with Dual Modality Alignment
+
+Bringing Stability to Diffusion: Decomposing and Reducing Variance of Training Masked Diffusion Models
+
+Evaluation and Comparison of Diffusion Models with Motif Features
+
+D3PO: Preference-Based Alignment of Discrete Diffusion Models
+
+Predict-Project-Renoise: Sampling Diffusion Models under Hard Constraints
+
+CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models
+
+Synthetic data generation by diffusion models
+
+Evaluating Robustness in Latent Diffusion Models via Embedding Level Augmentation
+
+Quantifying the Ease of Reproducing Training Data in Unconditional Diffusion Models
+
+Training Data Attribution for Diffusion Models
+
+Diffusion Models for Constrained Domains
+
+TAlignDiff: Automatic Tooth Alignment assisted by Diffusion-based Transformation Learning
+
+Towards a mathematical theory for consistency training in diffusion models
+
+SPQR: A Standardized Benchmark for Modern Safety Alignment Methods in Text-to-Image Diffusion Models
+
+Stable Target Field for Reduced Variance Score Estimation in Diffusion Models
+
+Top 10 Open Challenges Steering the Future of Diffusion Language Model and Its Variants
+

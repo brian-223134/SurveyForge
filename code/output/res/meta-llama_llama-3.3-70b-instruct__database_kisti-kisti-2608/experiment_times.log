@@ -22,3 +22,103 @@ Total Start Time: 2026-09-15 11:48:44
 Total End Time: 2026-09-15 12:09:57
 Total Duration: 0:21:12.889410
 Total Topics: 1
+
+Resuming experiments at: 2026-09-15 12:31:34
+==================================================
+
+Topic: Alignment of Diffusion Models, Exp 1
+Start: 2026-09-15 12:31:34
+End: 2026-09-15 12:50:56
+Duration: 0:19:21.473181
+OutlineWriter Input token usage: 404284
+OutlineWriter Output token usage: 10616
+SubsectionWriter Input token usage: 1041077
+SubsectionWriter Output token usage: 66478
+--------------------------------------------------
+
+Topic Summary: Alignment of Diffusion Models
+Total Duration: 0:19:26.479750
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-09-15 12:31:34
+Total End Time: 2026-09-15 12:51:01
+Total Duration: 0:19:26.480070
+Total Topics: 1
+
+Resuming experiments at: 2026-09-15 12:51:02
+==================================================
+
+Topic: Negative Sampling in Recommendation, Exp 1
+Start: 2026-09-15 12:51:02
+End: 2026-09-15 13:16:12
+Duration: 0:25:09.510501
+OutlineWriter Input token usage: 446083
+OutlineWriter Output token usage: 11006
+SubsectionWriter Input token usage: 1171479
+SubsectionWriter Output token usage: 67068
+--------------------------------------------------
+
+Topic Summary: Negative Sampling in Recommendation
+Total Duration: 0:25:14.517129
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-09-15 12:51:02
+Total End Time: 2026-09-15 13:16:17
+Total Duration: 0:25:14.517486
+Total Topics: 1
+
+Resuming experiments at: 2026-09-15 13:16:18
+==================================================
+
+Topic: Adversarial Attacks on Multimodal Large Language Models, Exp 1
+Start: 2026-09-15 13:16:18
+End: 2026-09-15 13:37:22
+Duration: 0:21:04.421949
+OutlineWriter Input token usage: 454596
+OutlineWriter Output token usage: 13016
+SubsectionWriter Input token usage: 1165069
+SubsectionWriter Output token usage: 67823
+--------------------------------------------------
+
+Topic Summary: Adversarial Attacks on Multimodal Large Language Models
+Total Duration: 0:21:09.427606
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-09-15 13:16:18
+Total End Time: 2026-09-15 13:37:27
+Total Duration: 0:21:09.427957
+Total Topics: 1
+
+Resuming experiments at: 2026-09-15 13:37:28
+==================================================
+
+Topic: Network Edge Inference for Large Language Models, Exp 1
+Start: 2026-09-15 13:37:28
+End: 2026-09-15 13:58:20
+Duration: 0:20:52.295459
+OutlineWriter Input token usage: 445203
+OutlineWriter Output token usage: 11820
+SubsectionWriter Input token usage: 1247376
+SubsectionWriter Output token usage: 74521
+--------------------------------------------------
+
+Topic Summary: Network Edge Inference for Large Language Models
+Total Duration: 0:20:57.300248
+Successful Experiments: 1/1
+==================================================
+
+Final Summary
+==================================================
+Total Start Time: 2026-09-15 13:37:28
+Total End Time: 2026-09-15 13:58:25
+Total Duration: 0:20:57.300591
+Total Topics: 1

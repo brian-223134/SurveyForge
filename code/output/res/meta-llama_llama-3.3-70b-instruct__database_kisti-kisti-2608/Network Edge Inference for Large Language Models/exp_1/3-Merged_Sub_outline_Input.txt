@@ -1,0 +1,776 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Network Edge Inference for Large Language Models**.
+
+You have created the following overall outline:
+---
+Title: Network Edge Inference for Large Language Models: A Comprehensive Survey
+
+Section 1: Introduction
+Description 1: This section introduces the concept of Network Edge Inference for Large Language Models, highlighting its significance in reducing latency and improving real-time processing capabilities. It sets the stage for the survey by outlining the current challenges and opportunities in this field.
+1. Definition and significance of Network Edge Inference in the context of Large Language Models, including its potential to reduce latency and improve privacy.
+2. Overview of the current state of Large Language Models and their limitations in terms of computational resources and memory requirements.
+3. Brief discussion on the need for efficient inference methods at the network edge to enable widespread adoption of Large Language Models in real-time applications.
+
+Section 2: Architectures and Models for Network Edge Inference
+Description 2: This section delves into the various architectures and models designed for Network Edge Inference, including their strengths, weaknesses, and applications.
+1. Discussion on the role of mobile edge computing in supporting Large Language Model inference, including the use of edge servers and cloudlets.
+2. Examination of model pruning, quantization, and knowledge distillation techniques for reducing the computational footprint of Large Language Models.
+3. Introduction to Mixture of Experts (MoE) models and their potential for efficient inference at the edge.
+
+Section 3: Optimization Techniques for Edge Inference
+Description 3: This section focuses on the optimization techniques used to enhance the performance of Network Edge Inference. It covers topics such as quantization, sparse coding, and dynamic voltage frequency scaling.
+1. Quantization methods for reducing memory footprint and improving inference speed, including weight quantization and activation quantization.
+2. Sparse coding techniques for efficient representation and computation, including sparse matrix multiplication and sparse tensor compression.
+3. Dynamic voltage frequency scaling for optimizing energy efficiency, including dynamic voltage and frequency scaling and power-aware scheduling.
+
+Section 4: Edge-Cloud Collaboration for Inference
+Description 4: This section discusses the collaboration between edge and cloud computing for Large Language Model inference, focusing on how this collaboration can offer a balance between latency and computational resources.
+1. Architectures for edge-cloud collaborative inference, including fog computing and hierarchical edge-cloud models.
+2. Task partitioning and offloading strategies for optimal resource utilization, including computation offloading and data offloading.
+3. Communication protocols and data management for seamless collaboration, including data synchronization and consistency models.
+
+Section 5: Security and Privacy Considerations
+Description 5: This section addresses the critical aspects of security and privacy in Network Edge Inference. It examines the vulnerabilities and threats associated with edge inference and discusses mitigation strategies.
+1. Threat models and vulnerability analysis for edge inference systems, including data breaches and model inversion attacks.
+2. Encryption and access control mechanisms for protecting user data, including homomorphic encryption and secure multi-party computation.
+3. Privacy-preserving inference techniques for sensitive applications, including differential privacy and federated learning.
+
+Section 6: Applications and Use Cases
+Description 6: This section presents various applications and use cases of Network Edge Inference for Large Language Models, highlighting their benefits and challenges.
+1. Discussion on the application of Large Language Models in edge computing scenarios, such as smart homes, autonomous vehicles, and healthcare devices.
+2. Examination of the use cases for Network Edge Inference in natural language processing tasks, such as language translation, sentiment analysis, and text summarization.
+3. Introduction to the potential of Network Edge Inference in enabling new services and applications, such as edge-based virtual assistants and augmented reality experiences.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing the key findings and highlighting future research directions in the area of Network Edge Inference for Large Language Models.
+1. Recap of the current state and advancements in Network Edge Inference, including the challenges and opportunities in this field.
+2. Discussion on emerging trends and technologies, such as 5G networks and edge computing, and their potential impact on Network Edge Inference.
+3. Identification of open research questions and challenges that need to be addressed to advance the field of Network Edge Inference for Large Language Models.
+---
+
+You need to enrich the section **Applications and Use Cases**, described as: **This section presents various applications and use cases of Network Edge Inference for Large Language Models, highlighting their benefits and challenges.
+1. Discussion on the application of Large Language Models in edge computing scenarios, such as smart homes, autonomous vehicles, and healthcare devices.
+2. Examination of the use cases for Network Edge Inference in natural language processing tasks, such as language translation, sentiment analysis, and text summarization.
+3. Introduction to the potential of Network Edge Inference in enabling new services and applications, such as edge-based virtual assistants and augmented reality experiences.**
+
+**Main task:**
+Generate a comprehensive framework for **Applications and Use Cases** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Token Level Routing Inference System for Edge Devices
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The computational complexity of large language model (LLM) inference significantly constrains their deployment efficiency on edge devices. In contrast, small language models offer faster decoding and lower resource consumption but often suffer from degraded response quality and heightened susceptibility to hallucinations. To address this trade-off, collaborative decoding, in which a large model assists in generating critical tokens, has emerged as a promising solution. This paradigm leverages the strengths of both model types by enabling high-quality inference through selective intervention of the large model, while maintaining the speed and efficiency of the smaller model. In this work, we present a novel collaborative decoding inference system that allows small models to perform on-device inference while selectively consulting a cloud-based large model for critical token generation. Remarkably, the system achieves a 60% performance gain on CommonsenseQA using only a 0.5B model on an M1 MacBook, with under 7% of tokens generation uploaded to the large model in the cloud.
+---
+paper_title: TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Language models have gained significant interest due to their general-purpose capabilities, which appear to emerge as models are scaled to increasingly larger parameter sizes. However, these large models impose stringent requirements on computing systems, necessitating significant memory and processing requirements for inference. This makes performing inference on mobile and edge devices challenging, often requiring invocating remotely-hosted models via network calls. Remote inference, in turn, introduces issues like latency, unreliable network connectivity, and privacy concerns. To address these challenges, we explored the possibility of deviating from the trend of increasing model size. Instead, we hypothesize that much smaller models (~30-120M parameters) can outperform their larger counterparts for specific tasks by carefully curating the data used for pre-training and fine-tuning. We investigate this within the context of deploying edge-device models to support sensing applications. We trained several foundational models through a systematic study and found that small models can run locally on edge devices, achieving high token rates and accuracy. Based on these findings, we developed a framework that allows users to train foundational models tailored to their specific applications and deploy them at the edge.
+---
+paper_title: Poster: Could Large Language Models Perform Network Management?
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Modern wireless communication systems have become increasingly complex due to the proliferation of wireless devices, increasing performance standards, and growing security threats. Managing these networks is becoming more challenging, requiring the use of advanced network management methods and tools. AI-driven network management systems such as Self-Optimizing Networks (SONs) are gaining attention. On the other hand, Large Language Models (LLMs) have been demonstrating exceptional zero-shot learning and generalization capabilities across several domains. In this paper, we leverage the potential of LLMs with SONs to enhance future network management systems. Specifically, we benchmark the use of various LLMs such as GPT-4, Llama, and Falcon, in a zero-shot setting based on their real-time network configuration recommendations. Our results indicate promising prospects for integrating LLMs into future network management systems.
+---
+paper_title: Distributed Inference Performance Optimization for LLMs on CPUs
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large language models (LLMs) hold tremendous potential for addressing numerous real-world challenges, yet they typically demand significant computational resources and memory. Deploying LLMs onto a resource-limited hardware device with restricted memory capacity presents considerable challenges. Distributed computing emerges as a prevalent strategy to mitigate single-node memory constraints and expedite LLM inference performance. To reduce the hardware limitation burden, we proposed an efficient distributed inference optimization solution for LLMs on CPUs. We conduct experiments with the proposed solution on 5th Gen Intel Xeon Scalable Processors, and the result shows the time per output token for the LLM with 72B parameter is 140 ms/token, much faster than the average human reading speed about 200ms per token.
+---
+paper_title: Distributed Inference and Fine-tuning of Large Language Models Over The Internet
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Large language models (LLMs) are useful in many NLP tasks and become more capable with size, with the best open-source models having over 50 billion parameters. However, using these 50B+ models requires high-end hardware, making them inaccessible to most researchers. In this work, we investigate methods for cost-efficient inference and fine-tuning of LLMs, comparing local and distributed strategies. We observe that a large enough model (50B+) can run efficiently even on geodistributed devices in a consumer-grade network. This could allow running LLM efficiently by pooling together idle compute resources of multiple research groups and volunteers. We address two open problems: (1) how to perform inference and fine-tuning reliably if any device can disconnect abruptly and (2) how to partition LLMs between devices with uneven hardware, joining and leaving at will. In order to do that, we develop special fault-tolerant inference algorithms and load-balancing protocols that automatically assign devices to maximize the total system throughput. We showcase these algorithms in Petals - a decentralized system that runs Llama 2 (70B) and BLOOM (176B) over the Internet up to 10x faster than offloading for interactive generation. We evaluate the performance of our system in simulated conditions and a real-world setup spanning two continents.
+---
+paper_title: The Role of Large Language Models in Designing Reliable Networks for Internet of Things: A Short Review of Most Recent Developments
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The rapid growth of Internet of Things (IoT) networks has increased the need for intelligent, flexible, and scalable networking solutions. This paper reviews the use of Large Language Models (LLMs) to improving network protocols, automate decision-making, and strengthen security in IoT networks. A detailed analysis was conducted to classify the existing research based on applications, network types, methodologies, and performance metrics. LLMs have been used in network configuration, security monitoring, cyber threat detection, federated learning, and for improving network performance. Their integration with edge computing, 6G networks, and AI-driven network control enables real-time network adjustment, automated troubleshooting, and efficient traffic management. However, challenges such as high computing demands, high energy consumption, security risks, and slow adaptation in dynamic networks still exist. This study identifies emerging trends, including LLM-based self-learning networks, privacy-aware AI training, and hybrid AI models that combine graph-based neural networks, reinforcement learning, and multimodal AI. By reviewing recent research from 2023 to early-2025, this study provides a clear understanding of how LLMs transform the IoT and network management. The discussion highlights future research directions, focusing on decentralized AI frameworks, optimized model training, and AI-driven network automation, with the aim of developing more efficient, secure, and reliable network infrastructures.
+---
+paper_title: Leveraging Uncertainty Estimation for Efficient LLM Routing
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Deploying large language models (LLMs) in edge-cloud environments requires an efficient routing strategy to balance cost and response quality. Traditional approaches prioritize either human-preference data or accuracy metrics from benchmark datasets as routing criteria, but these methods suffer from rigidity and subjectivity. Moreover, existing routing frameworks primarily focus on accuracy and cost, neglecting response quality from a human preference perspective. In this work, we propose the Confidence-Driven LLM Router, a novel framework that leverages uncertainty estimation to optimize routing decisions. To comprehensively assess routing performance, we evaluate both system cost efficiency and response quality. In particular, we introduce the novel use of LLM-as-a-Judge to simulate human rating preferences, providing the first systematic assessment of response quality across different routing strategies. Extensive experiments on MT-Bench, GSM8K, and MMLU demonstrate that our approach outperforms state-of-the-art routing methods, achieving superior response quality while maintaining cost efficiency.
+---
+paper_title: Measuring and Improving the Energy Efficiency of Large Language Models Inference
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recent improvements in the accuracy of machine learning (ML) models in the language domain have propelled their use in a multitude of products and services, touching millions of lives daily. These new levels of accuracy have been attained mainly through exponential growth in model size, creating a new category of models known as Large Language Models (LLMs) and leading to a substantial increase in computing and energy demands. While recent studies have focused on measuring and improving the energy consumption of LLMs during training, inference has received little attention. In this article, we present an approach to profile the energy consumption of LLMs during inference and leverage it to improve energy efficiency. For this, we deploy several state-of-the-art LLMs and observe how model size, number of layers, parallelized attention, and even vocabulary size affect their energy consumption. In addition, we leverage input batch size and different quantization levels to optimize their inference energy efficiency and latency.
+---
+paper_title: Joint Label Inference in Networks
+
+publish_date: 2018-01-01
+
+paper_content:
+
+We consider the problem of inferring node labels in a partially labeled graph where each node in the graph has multiple label types and each label type has a large number of possible labels. Existing approaches such as Label Propagation fail to consider interactions between the label types. Our proposed method, called EdgeExplain, explicitly models these interactions, while still allowing scalable inference under a distributed message-passing architecture. On a large subset of the Facebook social network, collected in a previous study, EdgeExplain outperforms label propagation for several label types, with lifts of up to $120%$ for [email protected] and 60% for [email protected]
+---
+paper_title: Unlocking the Path Towards AI-Native Networks with Optimized Lightweight Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+In the rapidly advancing era of Artificial Intelligence(AI), Large Language Models (LLMs) have emerged as a pivotalforce, revolutionizing the automated creation of diverse content.At the same time, Machine Learning (ML), particularly DeepLearning (DL), has achieved state-of-the-art (SoTA) performancein optimization and inference tasks across various domains, includingtelecommunications. However, the division of technologicaldomains poses challenges to the integration of powerful AI/MLcapabilities towards realizing the vision of “AI-native” networks,such as future 6G networks, aiming to offer ubiquitous intelligenceacross their infrastructure and service planes, seamlesslyadapting and evolving to support new application classes. Thepaper proposes a novel out-of-the-box framework, TimesLM, forautomated time series analytics, which is particularly useful forthe Edge-Cloud orchestration framework CODECO, leveragingLarge Language Models (LLMs). It addresses the challengeof developing general-purpose solutions by utilizing lightweightLLMs as forecasters and optimizers. TimesLM offers zero-shotand few-shot inference capabilities, enabling confident uncertaintynavigation for decision-making in AI-Native networks. Its architectureintegrates global optimization with lightweight LLMs,followed by input enrichment and local prompt optimization.Evaluation results on diverse real-world datasets demonstrateimproved accuracy and reduced latency, making TimesLM highlycompetitive against SoTA approaches, while reducing operationalcosts and carbon-footprint. A limitations analysis is also presented.The proposed framework stands as a promising and sustainablestep towards realizing the envisioned capabilities of AI-Nativenetworks through LLM-powered time series analytics.
+---
+paper_title: Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This paper addresses two key challenges in distributed Large Language Model (LLM) inference at the edge: 1) cost-efficient and fair task allocation, and 2) dynamic scheduling under deadline constraints. We propose two mechanisms: the Fair Cost-Efficient Incentive Mechanism (FCIM) for task and layer assignment, and the Adaptive Dynamic Scheduling Algorithm (ADSA) for execution scheduling on individual devices. FCIM is an auction-based mechanism that selects cost-effective, memory-feasible devices while minimizing task latency, reward cost, and device usage. Its adaptive reward design ensures positive utility and fairness, even under shifting system priorities. ADSA enables preemption-aware, deadline-driven scheduling by dynamically reordering tasks based on arrival time and workload characteristics. Simulations demonstrate that FCIM reduces communication overhead by 54.7% and task completion time by 36.9% compared to static and performance-driven baselines, while ADSA reduces queueing delay by 39% under strict deadline constraints.
+---
+paper_title: An Architecture for Accelerated Large-Scale Inference of Transformer-Based Language Models
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Amir Ganiev, Colton Chapin, Anderson De Andrade, Chen Liu. Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Industry Papers. 2021.
+---
+paper_title: Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large Language Models (LLMs) enable various applications on edge devices such as smartphones, wearables, and embodied robots. However, their deployment often depends on expensive cloud-based APIs, creating high operational costs, which limit access for smaller organizations and raise sustainability concerns. Certain LLMs can be deployed on-device, offering a cost-effective solution with reduced latency and improved privacy. Yet, limited computing resources constrain the size and accuracy of models that can be deployed, necessitating a collaborative design between edge and cloud. We propose a fast and cost-effective speculative edge-cloud decoding framework with a large target model on the server and a small draft model on the device. By introducing early exits in the target model, tokens are generated mid-verification, allowing the client to preemptively draft subsequent tokens before final verification, thus utilizing idle time and enhancing parallelism between edge and cloud. Using an NVIDIA Jetson Nano (client) and an A100 GPU (server) with Vicuna-68M (draft) and Llama2-7B (target) models, our method achieves up to a 35% reduction in latency compared to cloud-based autoregressive decoding, with an additional 11% improvement from preemptive drafting. To demonstrate real-world applicability, we deploy our method on the Unitree Go2 quadruped robot using Vision-Language Model (VLM) based control, achieving a 21% speedup over traditional cloud-based autoregressive decoding. These results demonstrate the potential of our framework for real-time LLM and VLM applications on resource-constrained edge devices.
+---
+paper_title: Revisiting the Graph Reasoning Ability of Large Language Models: Case Studies in Translation, Connectivity and Shortest Path
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large Language Models (LLMs) have achieved great success in various reasoning tasks. In this work, we focus on the graph reasoning ability of LLMs. Although theoretical studies proved that LLMs are capable of handling graph reasoning tasks, empirical evaluations reveal numerous failures. To deepen our understanding on this discrepancy, we revisit the ability of LLMs on three fundamental graph tasks: graph description translation, graph connectivity, and the shortest-path problem. Our findings suggest that LLMs can fail to understand graph structures through text descriptions and exhibit varying performance for all these three fundamental tasks. Meanwhile, we perform a real-world investigation on knowledge graphs and make consistent observations with our findings. The codes and datasets are available.
+---
+paper_title: On-Device Language Models: A Comprehensive Review
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The advent of large language models (LLMs) revolutionized natural language processing applications, and running LLMs on edge devices has become increasingly attractive for reasons including reduced latency, data localization, and personalized user experiences. This comprehensive review examines the challenges of deploying computationally expensive LLMs on resource-constrained devices and explores innovative solutions across multiple domains. The paper investigates the development of on-device language models, their efficient architectures, including parameter sharing and modular designs, as well as state-of-the-art compression techniques like quantization, pruning, and knowledge distillation. Hardware acceleration strategies and collaborative edge-cloud deployment approaches are analyzed, highlighting the intricate balance between performance and resource utilization. Case studies of on-device language models from major mobile manufacturers demonstrate real-world applications and potential benefits. The review also addresses critical aspects such as adaptive learning, multi-modal capabilities, and personalization. By identifying key research directions and open challenges, this paper provides a roadmap for future advancements in on-device language models, emphasizing the need for interdisciplinary efforts to realize the full potential of ubiquitous, intelligent computing while ensuring responsible and ethical deployment. For a comprehensive review of research work and educational resources on on-device large language models (LLMs), please visit https://github.com/NexaAI/Awesome-LLMs-on-device. To download and run on-device LLMs, visit https://www.nexaai.com/models.
+---
+paper_title: Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+In real world, large language models (LLMs) can serve as the assistant to help users accomplish their jobs, and also support the development of advanced applications. For the wide application of LLMs, the inference efficiency is an essential concern, which has been widely studied in existing work, and numerous optimization algorithms and code libraries have been proposed to improve it. Nonetheless, users still find it challenging to compare the effectiveness of all the above methods and understand the underlying mechanisms. In this work, we perform a detailed coarse-to-fine analysis of the inference performance of various code libraries. To evaluate the overall effectiveness, we examine four usage scenarios within two practical applications. We further provide both theoretical and empirical fine-grained analyses of each module in the Transformer architecture. Our experiments yield comprehensive results that are invaluable for researchers to evaluate code libraries and improve inference strategies.
+---
+paper_title: StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices
+
+publish_date: 2025-01-01
+
+paper_content:
+
+16th ACM International Conference on Future and Sustainable Energy Systems, Rotterdam, Netherlands, June 17-20, 2025
+---
+paper_title: HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Current multimodal large lanauge models possess strong perceptual and reasoning capabilities, however high computational and memory requirements make them difficult to deploy directly on on-device environments. While small-parameter models are progressively endowed with strong general capabilities, standard Vision Transformer (ViT) encoders remain a critical bottleneck, suffering from excessive latency and memory consumption when processing high-resolution inputs.To address these challenges, we introduce HyperVL, an efficient multimodal large language model tailored for on-device inference. HyperVL adopts an image-tiling strategy to cap peak memory usage and incorporates two novel techniques: (1) a Visual Resolution Compressor (VRC) that adaptively predicts optimal encoding resolutions to eliminate redundant computation, and (2) Dual Consistency Learning (DCL), which aligns multi-scale ViT encoders within a unified framework, enabling dynamic switching between visual branches under a shared LLM. Extensive experiments demonstrate that HyperVL achieves state-of-the-art performance among models of comparable size across multiple benchmarks. Furthermore, it significantly significantly reduces latency and power consumption on real mobile devices, demonstrating its practicality for on-device multimodal inference.
+---
+paper_title: Large Language Models Meet Next-Generation Networking Technologies: A Review
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>The evolution of network technologies has significantly transformed global communication, information sharing, and connectivity. Traditional networks, relying on static configurations and manual interventions, face substantial challenges such as complex management, inefficiency, and susceptibility to human error. The rise of artificial intelligence (AI) has begun to address these issues by automating tasks like network configuration, traffic optimization, and security enhancements. Despite their potential, integrating AI models in network engineering encounters practical obstacles including complex configurations, heterogeneous infrastructure, unstructured data, and dynamic environments. Generative AI, particularly large language models (LLMs), represents a promising advancement in AI, with capabilities extending to natural language processing tasks like translation, summarization, and sentiment analysis. This paper aims to provide a comprehensive review exploring the transformative role of LLMs in modern network engineering. In particular, it addresses gaps in the existing literature by focusing on LLM applications in network design and planning, implementation, analytics, and management. It also discusses current research efforts, challenges, and future opportunities, aiming to provide a comprehensive guide for networking professionals and researchers. The main goal is to facilitate the adoption and advancement of AI and LLMs in networking, promoting more efficient, resilient, and intelligent network systems.</jats:p>
+---
+paper_title: EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Transformer-based language models such as BERT provide significant accuracy improvement to a multitude of natural language processing (NLP) tasks. However, their hefty computational and memory demands make them challenging to deploy to resource-constrained edge platforms with strict latency requirements.
+---
+paper_title: Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large language model (LLM) inference at the network edge is a promising serving paradigm that leverages distributed edge resources to run inference near users and enhance privacy. Existing edge-based LLM inference systems typically adopt autoregressive decoding (AD), which only generates one token per forward pass. This iterative process, compounded by the limited computational resources of edge nodes, results in high serving latency and constrains the system's ability to support multiple users under growing demands.To address these challenges, we propose a speculative decoding (SD)-based LLM serving framework that deploys small and large models across heterogeneous edge nodes to collaboratively deliver inference services. Specifically, the small model rapidly generates draft tokens that the large model verifies in parallel, enabling multi-token generation per forward pass and thus reducing serving latency. To improve resource utilization of edge nodes, we incorporate pipeline parallelism to overlap drafting and verification across multiple inference tasks. Based on this framework, we analyze and derive a comprehensive latency model incorporating both communication and inference latency. Then, we formulate a joint optimization problem for speculation length, task batching, and wireless communication resource allocation to minimize total serving latency. To address this problem, we derive the closed-form solutions for wireless communication resource allocation, and develop a dynamic programming algorithm for joint batching and speculation control strategies. Experimental results demonstrate that the proposed framework achieves lower serving latency compared to AD-based serving systems. In addition,the proposed joint optimization method delivers up to 44.9% latency reduction compared to benchmark schemes.
+---
+paper_title: Poster: Scaling Up Deep Neural Network optimization for Edge Inference†
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Deep neural networks (DNNs) have been increasingly deployed on and integrated with edge devices, such as mobile phones, drones, robots and wearables. Compared to cloud-based inference, running DNN inference directly on edge devices (a.k. a. edge inference) has major advantages, including being free from the network connection requirement, saving bandwidths, and better protecting user privacy [1].
+---
+paper_title: Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The remarkable success of foundation models has been driven by scaling laws, demonstrating that model performance improves predictably with increased training data and model size. However, this scaling trajectory faces two critical challenges: the depletion of high-quality public data, and the prohibitive computational power required for larger models, which have been monopolized by tech giants. These two bottlenecks pose significant obstacles to the further development of AI. In this position paper, we argue that leveraging massive distributed edge devices can break through these barriers. We reveal the vast untapped potential of data and computational resources on massive edge devices, and review recent technical advancements in distributed/federated learning that make this new paradigm viable. Our analysis suggests that by collaborating on edge devices, everyone can participate in training large language models with small edge devices. This paradigm shift towards distributed training on edge has the potential to democratize AI development and foster a more inclusive AI community.
+---
+paper_title: Leveraging Large Language Models to Contextualize Network Measurements
+
+publish_date: 2025-01-01
+
+paper_content:
+
+With the worldwide growth of remote communication and telepresence, network measurements form a cornerstone of effective performance assessment and diagnostics for Internet users. Most often, users seek for overall connection performance measurement using publicly available tools (also known as `speed tests') that provide an overview of their connection's throughput and latency. However, extracting meaningful insights from these measurements remains a challenging task for a non-technical audience. Interpreting network measurement data often requires considerable domain expertise to account not only for subtle variations of the connection stability and metrics, but even for simpler concepts such as latency under load or packet loss influence towards connection performance. In the absence of proper expertise, common misconceptions can easily arise. To address these issues, researchers should recognize the importance of making network measurements not only more comprehensive but also more accessible for wider audience without deep technical knowledge. A promising direction to achieve this goal involves leveraging recent advancements in large language models (LLMs), which have demonstrated capabilities in conducting an analysis of complex data in other fields, such as laboratory test results interpretation, news summarization, and personal assistance.
+ In this paper, we describe an ongoing effort to apply large language models and historical data to enhance the interpretation of network measurements in real-world environments. We aim to automate the translation of low-level metric data into accessible explanations, allowing non-experts to make more informed decisions regarding network performance and reliability.
+---
+paper_title: Decentralized LLM Inference over Edge Networks with Energy Harvesting
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large language models have significantly transformed multiple fields with their exceptional performance in natural language tasks, but their deployment in resource-constrained environments like edge networks presents an ongoing challenge. Decentralized techniques for inference have emerged, distributing the model blocks among multiple devices to improve flexibility and cost effectiveness. However, energy limitations remain a significant concern for edge devices. We propose a sustainable model for collaborative inference on interconnected, battery-powered edge devices with energy harvesting. A semi-Markov model is developed to describe the states of the devices, considering processing parameters and average green energy arrivals. This informs the design of scheduling algorithms that aim to minimize device downtimes and maximize network throughput. Through empirical evaluations and simulated runs, we validate the effectiveness of our approach, paving the way for energy-efficient decentralized inference over edge networks.
+---
+paper_title: PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing
+
+publish_date: 2025-01-01
+
+paper_content:
+
+While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.
+---
+paper_title: A Systematic Characterization of LLM Inference on GPUs
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This work presents a systematic characterization of Large Language Model (LLM) inference to address fragmented understanding. Through comprehensive experiments, we establish a four-dimensional analytical framework: (1) Two-Phase Heterogeneity Observation; (2) Microarchitectural Root Cause Analysis; (3) System Scaling Principles; and (4) Emerging Paradigm Boundaries. Our investigation progresses systematically from observation to foresight: identifying performance phenomena, revealing hardware causes, validating system behavior, and exploring new paradigms. This study not only consolidates a reliable empirical foundation for existing research but also provides new discoveries and practical optimization guidance for LLM inference.
+---
+paper_title: Beyond Text: A Deep Dive into Large Language Models' Ability on Understanding Graph Data
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Large language models (LLMs) have achieved impressive performance on many natural language processing tasks. However, their capabilities on graph-structured data remain relatively unexplored. In this paper, we conduct a series of experiments benchmarking leading LLMs on diverse graph prediction tasks spanning node, edge, and graph levels. We aim to assess whether LLMs can effectively process graph data and leverage topological structures to enhance performance, compared to specialized graph neural networks. Through varied prompt formatting and task/dataset selection, we analyze how well LLMs can interpret and utilize graph structures. By comparing LLMs' performance with specialized graph models, we offer insights into the strengths and limitations of employing LLMs for graph analytics. Our findings provide insights into LLMs' capabilities and suggest avenues for further exploration in applying them to graph analytics.
+---
+paper_title: Large Language Model Routing with Benchmark Datasets
+
+publish_date: 2023-01-01
+
+paper_content:
+
+There is a rapidly growing number of open-source Large Language Models (LLMs) and benchmark datasets to compare them. While some models dominate these benchmarks, no single model typically achieves the best accuracy in all tasks and use cases. In this work, we address the challenge of selecting the best LLM out of a collection of models for new tasks. We propose a new formulation for the problem, in which benchmark datasets are repurposed to learn a "router" model for this LLM selection, and we show that this problem can be reduced to a collection of binary classification tasks. We demonstrate the utility and limitations of learning model routers from various benchmark datasets, where we consistently improve performance upon using any single model for all tasks.
+---
+paper_title: Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Multimodal Large Language Models (MLLMs) are distinguished by their multimodal comprehensive ability and widely used in many real-world applications including GPT-4o, autonomous driving and robotics. Despite their impressive performance, the multimodal inputs always incur long context. The inference under long context requires caching massive Key and Value states (KV cache) of previous tokens, which introduces high latency and excessive memory consumption. Due to this reason, it is challenging to deploy streaming inference of MLLMs on edge devices, which largely constrains the power and usage of MLLMs in real-world applications. In this paper, we introduce Inf-MLLM, an efficient inference framework for MLLMs, which enable streaming inference of MLLM on a single GPU with infinite context. Inf-MLLM is based on our key observation of the attention pattern in both LLMs and MLLMs called "attention saddles". Thanks to the newly discovered attention pattern, Inf-MLLM maintains a size-constrained KV cache by dynamically caching recent tokens and relevant tokens. Furthermore, Inf-MLLM proposes attention bias, a novel approach to enable MLLMs to capture long-term dependency. We show that Inf-MLLM enables multiple LLMs and MLLMs to achieve stable performance over 4M-token long texts and multi-round conversations with 1-hour-long videos on a single GPU. In addition, Inf-MLLM exhibits superior streaming reasoning quality than existing methods such as StreamingLLM and 2x speedup than H2O.
+---
+paper_title: PRISM: Privacy-Aware Routing for Adaptive Cloud-Edge LLM Inference via Semantic Sketch Collaboration
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large Language Models (LLMs) demonstrate impressive capabilities in natural language understanding and generation, but incur high communication overhead and privacy risks in cloud deployments, while facing compute and memory constraints when confined to edge devices. Cloud-edge inference has emerged as a promising paradigm for improving privacy in LLM services by retaining sensitive computations on local devices. However, existing cloud-edge inference approaches apply uniform privacy protection without considering input sensitivity, resulting in unnecessary perturbation and degraded utility even for non-sensitive tokens. To address this limitation, we propose Privacy-aware Routing for Inference with Semantic Modulation (PRISM), a context-aware framework that dynamically balances privacy and inference quality. PRISM executes in four stages: (1) the edge device profiles entity-level sensitivity; (2) a soft gating module on the edge selects an execution mode - cloud, edge, or collaboration; (3) for collaborative paths, the edge applies adaptive two-layer local differential privacy based on entity risks; and (4) the cloud LLM generates a semantic sketch from the perturbed prompt, which is then refined by the edge-side small language model (SLM) using local context. Our results show that PRISM consistently achieves superior privacy-utility trade-offs across various scenarios, reducing energy consumption and latency to 40-50% of baseline methods such as Uniform and Selective LDP, while maintaining high output quality under strong privacy constraints. These findings are validated through comprehensive evaluations involving realistic prompts, actual energy measurements, and heterogeneous cloud-edge model deployments.
+---
+paper_title: Large Language Models for Graphs: Progresses and Directions
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Graph neural networks (GNNs) have emerged as fundamental methods for handling structured graph data in various domains, including citation networks, molecule prediction, and recommender systems. They enable the learning of informative node or graph representations, which are crucial for tasks such as link prediction and node classification in the context of graphs. To achieve high-quality graph representation learning, certain essential factors come into play: clean labels, accurate graph structures, and sufficient initial node features. However, real-world graph data often suffer from noise and sparse labels, while different datasets have unique feature constructions. These factors significantly impact the generalization capabilities of graph neural networks, particularly when faced with unseen tasks. Recently, due to the efficent text processing and task generalization capability of large language models (LLMs), there has been a promising approach to address the challenges mentioned above by combining large language models with graph data.
+---
+paper_title: Constraint-Compliant Network Optimization through Large Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This work develops an LLM-based optimization framework ensuring strict constraint satisfaction in network optimization. While LLMs possess contextual reasoning capabilities, existing approaches often fail to enforce constraints, causing infeasible solutions. Unlike conventional methods that address average constraints, the proposed framework integrates a natural language-based input encoding strategy to restrict the solution space and guarantee feasibility. For multi-access edge computing networks, task allocation is optimized while minimizing worst-case latency. Numerical evaluations demonstrate LLMs as a promising tool for constraint-aware network optimization, offering insights into their inference capabilities.
+---
+paper_title: Scale-Free Graph-Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Graph-language models (GLMs) have demonstrated great potential in graph-based semi-supervised learning. A typical GLM consists of two key stages: graph generation and text embedding, which are usually implemented by inferring a latent graph and finetuning a language model (LM), respectively. However, the former often relies on artificial assumptions about the underlying edge distribution, while the latter requires extensive data annotations. To tackle these challenges, this paper introduces a novel GLM that integrates graph generation and text embedding within a unified framework. Specifically, for graph generation, we leverage an inherent characteristic of real edge distribution--the scale-free property--as a structural prior. We unexpectedly find that this natural property can be effectively approximated by a simple k-nearest neighbor (KNN) graph. For text embedding, we develop a graph-based pseudo-labeler that utilizes scale-free graphs to provide complementary supervision for improved LM finetuning. Extensive experiments on representative datasets validate our findings on the scale-free structural approximation of KNN graphs and demonstrate the effectiveness of integrating graph generation and text embedding with a real structural prior. Our code is available at https://github.com/Jianglin954/SFGL.
+---
+paper_title: PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services
+
+publish_date: 2024-01-01
+
+paper_content:
+
+With the rapid growth in the number of large language model (LLM) users, it is difficult for bandwidth-constrained cloud servers to simultaneously process massive LLM services in real-time. Recently, edge-cloud infrastructures have been used to improve the processing efficiency of large-scale LLM services. However, the diversity of task requirements and the dynamics of resources pose great challenges to inference scheduling, leading to the wastage of many resources. In this paper, we present PerLLM, a personalized inference scheduling framework with edge-cloud collaboration designed for diverse LLM services. For the complexity of multiple constraints and the decision-making process of edge-cloud collaboration, we integrate the upper confidence bound algorithm based on the constraint satisfaction mechanism in PerLLM. For diverse LLM services, PerLLM can optimize service scheduling and resource allocation solutions within the edge-cloud infrastructure to meet processing time requirements while minimizing energy costs. Experimental results from different model deployments show that PerLLM can effectively meet the processing time requirements of personalized services. Compared to other methods, PerLLM achieves 2.2x, 2.1x, and 1.6x throughput and reduces the energy cost by more than 50%.
+---
+paper_title: Argus: Token Aware Distributed LLM Inference Optimization
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large Language Models (LLMs) are rapidly being integrated into real-world applications, yet their autoregressive architectures introduce significant inference time variability, especially when deployed across heterogeneous edge-cloud systems. Existing solutions largely neglect the dynamic, stochastic, and heterogeneous nature of such environments, often ignoring the impact of variable output token lengths and device diversity. In this work, we present Argus, the first token-aware distributed edge-cloud LLM inference framework that conducts efficient task offloading. Argus features a Length-Aware Semantics (LAS) module, which predicts output token lengths for incoming prompts using a fine-tuned language model with token-length-sensitive feature modulation, enabling precise estimation. Building on this, our Lyapunov-guided Offloading Optimization (LOO) module formulates long-term Quality-of-Experience optimization that explicitly considers both LLM prefilling and decoding costs. We introduce a novel Iterative Offloading Algorithm with Damping and Congestion Control (IODCC) to effectively solve the resulting integer nonlinear programming problem under time-varying constraints. Extensive theoretical and empirical evaluations demonstrate that Argus achieves robust performance and superior efficiency in highly dynamic, heterogeneous settings.
+---
+paper_title: Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The growing demand for on-device large language model (LLM) inference highlights the need for efficient mobile edge computing (MEC) solutions, especially in resource-constrained settings. Speculative decoding offers a promising solution by partitioning token generation between a lightweight draft model on mobile devices and a powerful target model on edge servers, but suffers from communication overhead and asynchronous delays. This paper is the first to propose a unified framework that jointly optimizes user association and resource allocation (UARA) to support efficient parallel speculative decoding. We solve the UARA problem using a multi-agent deep reinforcement learning algorithm. To evaluate our approach under realistic conditions, we conduct experiments using the Sionna simulator. Results show that our method achieves up to 28.0% and an average of 23.7% reduction in end-to-end latency without compromising inference accuracy, enabling scalable and low-latency LLM services in MEC systems.
+---
+paper_title: EmbedLLM: Learning Compact Representations of Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+With hundreds of thousands of language models available on Huggingface today, efficiently evaluating and utilizing these models across various downstream, tasks has become increasingly critical. Many existing methods repeatedly learn task-specific representations of Large Language Models (LLMs), which leads to inefficiencies in both time and computational resources. To address this, we propose EmbedLLM, a framework designed to learn compact vector representations, of LLMs that facilitate downstream applications involving many models, such as model routing. We introduce an encoder-decoder approach for learning such embeddings, along with a systematic framework to evaluate their effectiveness. Empirical results show that EmbedLLM outperforms prior methods in model routing both in accuracy and latency. Additionally, we demonstrate that our method can forecast a model's performance on multiple benchmarks, without incurring additional inference cost. Extensive probing experiments validate that the learned embeddings capture key model characteristics, e.g. whether the model is specialized for coding tasks, even without being explicitly trained on them. We open source our dataset, code and embedder to facilitate further research and application.
+---
+paper_title: Communication-Efficient Distributed On-Device LLM Inference Over Wireless Networks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<p>Large language models (LLMs) have demonstrated remarkable success across various application domains, but their enormous sizes and computational demands pose significant challenges for deployment on resource-constrained edge devices. To address this issue, we propose a novel distributed on-device LLM inference framework that leverages tensor parallelism to partition the neural network tensors (e.g., weight matrices) of one LLM across multiple edge devices for collaborative inference. A key challenge in tensor parallelism is the frequent all-reduce operations for aggregating intermediate layer outputs across participating devices, which incurs significant communication overhead. To alleviate this bottleneck, we propose an over-the-air computation (AirComp) approach that harnesses the analog superposition property of wireless multiple-access channels to perform fast all-reduce steps. To utilize the heterogeneous computational capabilities of edge devices and mitigate communication distortions, we investigate a joint model assignment and transceiver optimization problem to minimize the average transmission error. The resulting mixed-timescale stochastic non-convex optimization problem is intractable, and we propose an efficient two-stage algorithm to solve it. Moreover, we prove that the proposed algorithm converges almost surely to a stationary point of the original problem. Comprehensive simulation results will show that the proposed framework outperforms existing benchmark schemes, achieving up to 5x inference speed acceleration and improving inference accuracy.</p>
+---
+paper_title: Collaborative Edge-to-Server Inference for Vision-Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+We propose a collaborative edge-to-server inference framework for vision-language models (VLMs) that reduces the communication cost while maintaining inference accuracy. In typical deployments, visual data captured at edge devices (clients) is transmitted to the server for VLM inference. However, resizing the original image (global image) to match the vision encoder's input resolution often discards fine-grained details, leading to accuracy degradation. To overcome this limitation, we design a two-stage framework. In the first stage, the server performs inference on the global image and identifies a region of interest (RoI) using the VLM's internal attention. The min-entropy of the output tokens is then computed as a confidence measure to determine whether retransmission is required. If the min-entropy exceeds a predefined threshold, the server requests the edge device to send a detail-preserved local image of the RoI. The server then refines its inference by jointly leveraging the global and local images. This selective retransmission strategy ensures that only essential visual content is transmitted. Experiments across multiple VLM architectures show that the proposed framework significantly reduces communication cost while maintaining inference accuracy.
+---
+paper_title: Large Language Models for Networking: Applications, Enabling Techniques, and Challenges
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The rapid evolution of network technologies and the growing complexity of network tasks necessitate a paradigm shift in how networks are designed, configured, and managed. With a wealth of knowledge and expertise, large language models (LLMs) are one of the most promising candidates. This paper aims to pave the way for constructing domain-adapted LLMs for networking. Firstly, we present potential LLM applications for vertical network fields and showcase the mapping from natural language to network language. Then, several enabling technologies are investigated, including parameter-efficient finetuning and prompt engineering. The insight is that language understanding and tool usage are both required for network LLMs. Driven by the idea of embodied intelligence, we propose the ChatNet, a domain-adapted network LLM framework with access to various external network tools. ChatNet can reduce the time required for burdensome network planning tasks significantly, leading to a substantial improvement in processing efficiency. Finally, key challenges and future research directions are highlighted.
+---
+paper_title: DILEMMA: Joint LLM Quantization and Distributed LLM Inference Over Edge Computing Systems
+
+publish_date: 2025-01-01
+
+paper_content:
+
+With a recent trend of using Large Language Models (LLMs) for different applications within smart cities, there is a need for pushing these models toward the edge of network while still preserving their performance. Edge Computing (EC) as a physically closer computing resource to the end users can help to reduce the communication delay for serving end users' tasks for LLM-dependent services. However, EC servers have limited capacity in terms of communication, computation, and storage capacity. This paper introduces DILEMMA, a novel framework addressing the challenges of deploying LLMs in EC systems by jointly optimizing layer placement and layer quantization in EC systems. DILEMMA formulates an Integer Linear Programming problem to minimize total inference delay while ensuring acceptable LLM performance levels, leveraging layer-wise quantization and knowledge distillation for LLM performance control. Experimental evaluations on OPT-350 model using the SQuAD dataset demonstrate that DILEMMA achieves a quantization ratio of up to 12.75% while preserving model loss, highlighting its effectiveness in resource-constrained environments.
+---
+paper_title: Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Edge Intelligence (EI) has been instrumental in delivering real-time, localized services by leveraging the computational capabilities of edge networks. The integration of Large Language Models (LLMs) empowers EI to evolve into the next stage: Edge General Intelligence (EGI), enabling more adaptive and versatile applications that require advanced understanding and reasoning capabilities. However, systematic exploration in this area remains insufficient. This survey delineates the distinctions between EGI and traditional EI, categorizing LLM-empowered EGI into three conceptual systems: centralized, hybrid, and decentralized. For each system, we detail the framework designs and review existing implementations. Furthermore, we evaluate the performance and throughput of various Small Language Models (SLMs) that are more suitable for deployment on edge devices. This survey provides researchers with a comprehensive vision of EGI, offering insights into its vast potential and establishing a foundation for future advancements in this rapidly evolving field.
+---
+paper_title: Introducing Large Language Models as the Next Challenging Internet Traffic Source
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This article explores the growing impact of large language models (LLMs) and Generative AI (GenAI) tools on Internet traffic, focusing on their role as a new and significant source of network load. As these AI tools continue to gain importance in applications ranging from virtual assistants to content generation, the volume of traffic they generate is expected to increase massively. These models use the Internet as the global infrastructure for delivering multimedia messages (text, voice, images, video, etc.) to users, by interconnecting users and devices with AI agents typically deployed in the cloud. We believe this represents a new paradigm that will lead to a considerable increase in network traffic, and network operators must be prepared to address the resulting demands. To support this claim, we provide a proof-of-concept and source code for measuring traffic in remote user-agent interactions, estimating the traffic generated per prompt for some of the most popular open-source LLMs in 2025. The average size of each prompt query and response is 7,593 bytes, with a standard deviation of 369 bytes. These numbers are comparable with email and web browsing traffic. However, we envision AI as the next "killer application" that will saturate networks with traffic, such as Peer-to-Peer traffic and Video-on-demand dominated in previous decades.
+---
+paper_title: Edgeformers: Graph-Empowered Transformers for Representation Learning on Textual-Edge Networks
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Edges in many real-world social/information networks are associated with rich text information (e.g., user-user communications or user-product reviews). However, mainstream network representation learning models focus on propagating and aggregating node attributes, lacking specific designs to utilize text semantics on edges. While there exist edge-aware graph neural networks, they directly initialize edge attributes as a feature vector, which cannot fully capture the contextualized text semantics of edges. In this paper, we propose Edgeformers, a framework built upon graph-enhanced Transformers, to perform edge and node representation learning by modeling texts on edges in a contextualized way. Specifically, in edge representation learning, we inject network information into each Transformer layer when encoding edge texts; in node representation learning, we aggregate edge representations through an attention mechanism within each node's ego-graph. On five public datasets from three different domains, Edgeformers consistently outperform state-of-the-art baselines in edge classification and link prediction, demonstrating the efficacy in learning edge and node representations, respectively.
+---
+paper_title: WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching
+
+publish_date: 2026-01-01
+
+paper_content:
+
+As Large Language Models (LLMs) become increasingly accessible to end users, an ever-growing number of inference requests are initiated from edge devices and computed on centralized GPU clusters. However, the resulting exponential growth in computation workload is placing significant strain on data centers, while edge devices remain largely underutilized, leading to imbalanced workloads and resource inefficiency across the network. Integrating edge devices into the LLM inference process via speculative decoding helps balance the workload between the edge and the cloud, while maintaining lossless prediction accuracy. In this paper, we identify and formalize two critical bottlenecks that limit the efficiency and scalability of distributed speculative LLM serving: Wasted Drafting Time and Verification Interference. To address these challenges, we propose WISP, an efficient and SLO-aware distributed LLM inference system that consists of an intelligent speculation controller, a verification time estimator, and a verification batch scheduler. These components collaboratively enhance drafting efficiency and optimize verification request scheduling on the server. Extensive numerical results show that WISP improves system capacity by up to 2.1x and 4.1x, and increases system goodput by up to 1.94x and 3.7x, compared to centralized serving and SLED, respectively.
+---
+paper_title: INFERENCEDYNAMICS: Efficient Routing Across LLMs through Structured Capability and Knowledge Profiling
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large Language Model (LLM) routing is a pivotal technique for navigating a diverse landscape of LLMs, aiming to select the best-performing LLMs tailored to the domains of user queries, while managing computational resources. However, current routing approaches often face limitations in scalability when dealing with a large pool of specialized LLMs, or in their adaptability to extending model scope and evolving capability domains. To overcome those challenges, we propose InferenceDynamics, a flexible and scalable multi-dimensional routing framework by modeling the capability and knowledge of models. We operate it on our comprehensive dataset RouteMix, and demonstrate its effectiveness and generalizability in group-level routing using modern benchmarks including MMLU-Pro, GPQA, BigGenBench, and LiveBench, showcasing its ability to identify and leverage top-performing models for given tasks, leading to superior outcomes with efficient resource utilization. The broader adoption of Inference Dynamics can empower users to harness the full specialized potential of the LLM ecosystem, and our code will be made publicly available to encourage further research.
+---
+paper_title: Adaptive Layer Splitting for Wireless LLM Inference in Edge Computing: A Model-Based Reinforcement Learning Approach
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Optimizing the deployment of large language models (LLMs) in edge computing environments is critical for enhancing privacy and computational efficiency. Toward efficient wireless LLM inference in edge computing, this study comprehensively analyzes the impact of different splitting points in mainstream open-source LLMs. On this basis, this study introduces a framework taking inspiration from model-based reinforcement learning (MBRL) to determine the optimal splitting point across the edge and user equipment (UE). By incorporating a reward surrogate model, our approach significantly reduces the computational cost of frequent performance evaluations. Extensive simulations demonstrate that this method effectively balances inference performance and computational load under varying network conditions, providing a robust solution for LLM deployment in decentralized settings.
+---
+paper_title: Toward Sustainability-Aware LLM Inference on Edge Clusters
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large language models (LLMs) require substantial computational resources, leading to significant carbon emissions and operational costs. Although training is energy-intensive, the long-term environmental burden arises from inference, amplified by the massive global query volume. Cloud-based inference offers scalability but suffers from latency and bandwidth constraints due to centralized processing and continuous data transfer. Edge clusters instead can mitigate these limitations by enabling localized execution, yet they face trade-offs between performance, energy efficiency, and device constraints. This short paper presents a sustainability-aware LLM inference for edge clusters comprising NVIDIA Jetson Orin NX (8GB) and Nvidia Ada 2000 (16GB) devices. It aims to balance inference latency and carbon footprint through carbon- and latency-aware routing strategies, guided by empirical benchmarking of energy consumption and execution time across diverse prompts and batch (i.e., group of prompts) configurations. We compared baseline greedy strategies to carbon-aware and latency-aware strategies in prompt routing to specific hardware based on benchmarking information. Experimental evaluation shows that a batch size of four prompts achieves a trade-off between throughput, energy efficiency, while larger batches risk GPU memory saturation.
+---
+paper_title: Sentinels of the Stream: Unleashing Large Language Models for Dynamic Packet Classification in Software Defined Networks - Position Paper
+
+publish_date: 2024-01-01
+
+paper_content:
+
+With the release of OpenAI's ChatGPT, the field of large language models (LLM) saw an increase of academic interest in GPT based chat assistants. In the next few months multiple accesible large language models were released that included Meta's LLama models and Mistral AI's Mistral and Mixtral MoE models. These models are available openly for a wide array of purposes with a wide spectrum of licenses. These LLMs have found their use in a different number of fields like code development, SQL generation etc. In this work we propose our plan to explore the applicability of large language model in the domain of network security. We plan to create Sentinel, a LLM, to analyse network packet contents and pass a judgment on it's threat level. This work is a preliminary report that will lay our plan for our future endeavors.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Network Edge Inference for Large Language Models.
+   ---
+   ---
+paper_title: Efficient Multimodal Large Language Models: A Survey
+
+publish_date: 2024-08-09
+
+paper_abstract:
+
+In the past year, Multimodal Large Language Models (MLLMs) have demonstrated
+remarkable performance in tasks such as visual question answering, visual
+understanding and reasoning. However, the extensive model size and high
+training and inference costs have hindered the widespread application of MLLMs
+in academia and industry. Thus, studying efficient and lightweight MLLMs has
+enormous potential, especially in edge computing scenarios. In this survey, we
+provide a comprehensive and systematic review of the current state of efficient
+MLLMs. Specifically, we summarize the timeline of representative efficient
+MLLMs, research state of efficient structures and strategies, and the
+applications. Finally, we discuss the limitations of current efficient MLLM
+research and promising future directions. Please refer to our GitHub repository
+for more details:
+https://github.com/lijiannuist/Efficient-Multimodal-LLMs-Survey.
+
+paper_outline:
+
+1 Introduction  
+2 Architecture  
+2.1 Vision Encoder  
+2.2 Vision-Language Projector  
+2.3 Small Language Model  
+2.4 Vision Token Compression  
+2.5 Efficient Structures  
+3 Efficient Vision  
+4 Efficient LLMs  
+5 Training  
+6 Data and Benchmarks  
+7 Applications  
+8 Discussion and Conclusion  
+8.1 Limitations and Future Work  
+8.2 Conclusion
+---
+paper_title: A Survey on Efficient Inference for Large Language Models
+
+publish_date: 2024-07-19
+
+paper_abstract:
+
+Large Language Models (LLMs) have attracted extensive attention due to their
+remarkable performance across various tasks. However, the substantial
+computational and memory requirements of LLM inference pose challenges for
+deployment in resource-constrained scenarios. Efforts within the field have
+been directed towards developing techniques aimed at enhancing the efficiency
+of LLM inference. This paper presents a comprehensive survey of the existing
+literature on efficient LLM inference. We start by analyzing the primary causes
+of the inefficient LLM inference, i.e., the large model size, the
+quadratic-complexity attention operation, and the auto-regressive decoding
+approach. Then, we introduce a comprehensive taxonomy that organizes the
+current literature into data-level, model-level, and system-level optimization.
+Moreover, the paper includes comparative experiments on representative methods
+within critical sub-fields to provide quantitative insights. Last but not
+least, we provide some knowledge summary and discuss future research
+directions.
+
+paper_outline:
+
+1. Introduction
+
+2. Preliminaries  
+2.1 Transformer-Style LLMs  
+2.2 Inference Process of LLMs  
+2.3 Efficiency Analysis  
+
+3. Taxonomy
+
+4. Data-Level Optimization  
+4.1 Input Compression  
+4.2 Output Organization  
+4.3 Knowledge, Suggestions, and Future Direction  
+
+5. Model-Level Optimization  
+5.1 Efficient Structure Design  
+5.2 Model Compression  
+5.3 Knowledge, Suggestions, and Future Direction  
+
+6. System-Level Optimization  
+6.1 Inference Engine  
+6.2 Serving System  
+6.3 Hardware Accelerator Design  
+6.4 Comparison of LLM Frameworks  
+6.5 Knowledge, Suggestions, and Future Direction  
+
+7. Discussions of Key Application Scenarios
+
+8. Conclusion
+---
+paper_title: Mobile Edge Intelligence for Large Language Models: A Contemporary Survey
+
+publish_date: 2024-07-09
+
+paper_abstract:
+
+On-device large language models (LLMs), referring to running LLMs on edge
+devices, have raised considerable interest owing to their superior privacy,
+reduced latency, and bandwidth saving. Nonetheless, the capabilities of
+on-device LLMs are intrinsically constrained by the limited capacity of edge
+devices compared to the much more powerful cloud centers. To bridge the gap
+between cloud-based and on-device AI, mobile edge intelligence (MEI) presents a
+viable solution to this problem by provisioning AI capabilities within the edge
+of mobile networks with improved privacy and latency relative to cloud
+computing. MEI sits between on-device AI and cloud-based AI, featuring wireless
+communications and more powerful computing resources than end devices. This
+article provides a contemporary survey on harnessing MEI for LLMs. We first
+cover the preliminaries of LLMs, starting with LLMs and MEI, followed by
+resource-efficient LLM techniques. We then illustrate several killer
+applications to demonstrate the need for deploying LLMs at the network edge and
+present an architectural overview of MEI for LLMs (MEI4LLM). Subsequently, we
+delve into various aspects of MEI4LLM, extensively covering edge LLM caching
+and delivery, edge LLM training, and edge LLM inference. Finally, we identify
+future research opportunities. We aim to inspire researchers in the field to
+leverage mobile edge computing to facilitate LLM deployment in close proximity
+to users, thereby unleashing the potential of LLMs across various privacy- and
+delay-sensitive applications.
+
+paper_outline:
+
+I. INTRODUCTION  
+A. Background  
+B. Motivation: From Cloud LLMs to On-device LLMs to MEI LLMs  
+C. Comparisons with Prior Surveys and Our Contributions  
+
+II. PRELIMINARIES I: AN OVERVIEW OF LLMS AND MEI  
+A. Large Language Models  
+B. Mobile Edge Intelligence  
+C. Lessons Learned for MEI4LLM  
+
+III. PRELIMINARIES II: RESOURCE-EFFICIENT LLM TECHNIQUES  
+A. Resource-efficient Inference  
+B. Resource-efficient Fine-tuning  
+
+IV. APPLICATION SCENARIOS  
+
+V. AN OVERVIEW OF MEI4LLM  
+A. AI-native Architecture  
+B. Parameter-sharing LLM Caching and Delivery  
+C. Distributed LLM Training (Fine-tuning)  
+D. Distributed LLM Inference  
+
+VI. EDGE CACHING AND DELIVERY FOR LLMS  
+A. Edge LLM Caching  
+B. Edge LLM Delivery  
+C. Lessons Learned  
+
+VII. EDGE TRAINING FOR LLMS  
+A. Centralized Edge Learning  
+B. Federated Edge Learning  
+C. Split Learning  
+D. Hierarchical Collaborative Learning  
+E. Lessons Learned  
+
+VIII. EDGE INFERENCE FOR LLMS  
+A. Centralized Edge Inference  
+B. Split inference  
+C. Collaborative inference  
+D. Lessons Learned  
+
+IX. FURTHER RESEARCH OPPORTUNITIES  
+A. Green Edge LLM  
+B. Secure Edge LLM  
+
+X. CONCLUSIONS
+---
+paper_title: Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
+
+publish_date: 2024-06-04
+
+paper_abstract:
+
+To mitigate the high inference latency stemming from autoregressive decoding
+in Large Language Models (LLMs), Speculative Decoding has emerged as a novel
+decoding paradigm for LLM inference. In each decoding step, this method first
+drafts several future tokens efficiently and then verifies them in parallel.
+Unlike autoregressive decoding, Speculative Decoding facilitates the
+simultaneous decoding of multiple tokens per step, thereby accelerating
+inference. This paper presents a comprehensive overview and analysis of this
+promising decoding paradigm. We begin by providing a formal definition and
+formulation of Speculative Decoding. Then, we organize in-depth discussions on
+its key facets, such as drafter selection and verification strategies.
+Furthermore, we present a comparative analysis of leading methods under
+third-party testing environments. We aim for this work to serve as a catalyst
+for further research on Speculative Decoding, ultimately contributing to more
+efficient LLM inference.
+
+paper_outline:
+
+1 Introduction  
+2 Overview  
+3 Evolution of Speculative Decoding  
+4 Formulation and Definition  
+5 Drafting  
+6 Verification  
+7 Alignment  
+8 Spec-Bench  
+9 Challenges and Future Directions  
+10 Conclusion
+---
+paper_title: LLM Inference Unveiled: Survey and Roofline Model Insights
+
+publish_date: 2024-05-01
+
+paper_abstract:
+
+The field of efficient Large Language Model (LLM) inference is rapidly
+evolving, presenting a unique blend of opportunities and challenges. Although
+the field has expanded and is vibrant, there hasn't been a concise framework
+that analyzes the various methods of LLM Inference to provide a clear
+understanding of this domain. Our survey stands out from traditional literature
+reviews by not only summarizing the current state of research but also by
+introducing a framework based on roofline model for systematic analysis of LLM
+inference techniques. This framework identifies the bottlenecks when deploying
+LLMs on hardware devices and provides a clear understanding of practical
+problems, such as why LLMs are memory-bound, how much memory and computation
+they need, and how to choose the right hardware. We systematically collate the
+latest advancements in efficient LLM inference, covering crucial areas such as
+model compression (e.g., Knowledge Distillation and Quantization), algorithm
+improvements (e.g., Early Exit and Mixture-of-Expert), and both hardware and
+system-level enhancements. Our survey stands out by analyzing these methods
+with roofline model, helping us understand their impact on memory access and
+computation. This distinctive approach not only showcases the current research
+landscape but also delivers valuable insights for practical implementation,
+positioning our work as an indispensable resource for researchers new to the
+field as well as for those seeking to deepen their understanding of efficient
+LLM deployment. The analyze tool, LLM-Viewer, is open-sourced.
+
+paper_outline:
+
+1. Introduction
+2. Delve into LLM Inference and Deployment
+2.1. LLM Inference
+2.2. Roofline Model
+2.3. LLM-Viewer
+3. Model Compression
+3.1. Quantization
+3.2. Pruning
+3.3. Knowledge Distillation
+3.4. Factorization
+4. Algorithmic Methods for Fast Decoding
+4.1. Minimum Parameter Used Per Token Decoded
+4.2. Maximum Tokens Decoded Per LLM Forward Propagation
+5. Compiler/System Optimization
+5.1. Operator Fusion
+5.2. Memory Management and Workload Offloading
+5.3. Parallel Serving
+6. Hardware Optimization
+6.1. Spatial Architecture
+6.2. Processing in Memory
+6.3. New Data Format
+6.4. New Processing Element
+7. Discussion
+7.1. Reliability
+7.2. Safety Alignment
+7.3. OOD Generalization
+7.4. Efficient Large Multimodal Models
+7.5. Long Context Modeling
+8. Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Network Edge Inference for Large Language Models**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Applications and Use Cases**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Network Edge Inference for Large Language Models** and **Applications and Use Cases**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Applications and Use Cases** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Applications and Use Cases**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Applications and Use Cases**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

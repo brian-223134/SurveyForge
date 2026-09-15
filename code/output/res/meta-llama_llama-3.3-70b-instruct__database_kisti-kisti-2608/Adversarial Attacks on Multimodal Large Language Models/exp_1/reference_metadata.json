@@ -1,0 +1,1082 @@
+{
+ "10.1007/s11633-022-1410-8": {
+  "id": "10.1007/s11633-022-1410-8",
+  "title": "Large-scale Multi-modal Pre-trained Models: A Comprehensive Survey",
+  "url": "https://doi.org/10.1007/s11633-022-1410-8",
+  "date": "2023-01-01",
+  "abs": "<jats:title>Abstract</jats:title><jats:p>With the urgent demand for generalized deep models, many pre-trained big models are proposed, such as bidirectional encoder representations (BERT), vision transformer (ViT), generative pre-trained transformers (GPT), etc. Inspired by the success of these models in single domains (like computer vision and natural language processing), the multi-modal pre-trained big models have also drawn more and more attention in recent years. In this work, we give a comprehensive survey of these models and hope this paper could provide new insights and helps fresh researchers to track the most cutting-edge works. Specifically, we firstly introduce the background of multi-modal pre-training by reviewing the conventional deep learning, pre-training works in natural language process, computer vision, and speech. Then, we introduce the task definition, key challenges, and advantages of multi-modal pre-training models (MM-PTMs), and discuss the MM-PTMs with a focus on data, objectives, network architectures, and knowledge enhanced pre-training. After that, we introduce the downstream tasks used for the validation of large-scale MM-PTMs, including generative, classification, and regression tasks. We also give visualization and analysis of the model parameters and results on representative downstream tasks. Finally, we point out possible research directions for this topic that may benefit future works. In addition, we maintain a continuously updated paper list for large-scale pre-trained multi-modal big models: <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"https://github.com/wangxiao5791509/MultiModal_BigModels_Survey\">https://github.com/wangxiao5791509/MultiModal_BigModels_Survey</jats:ext-link>.</jats:p>",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 170
+ },
+ "10.1007/s44267-025-00079-w": {
+  "id": "10.1007/s44267-025-00079-w",
+  "title": "SHIELD: an evaluation benchmark for face spoofing and forgery detection with multimodal large language models",
+  "url": "https://doi.org/10.1007/s44267-025-00079-w",
+  "date": "2025-01-01",
+  "abs": "<jats:title>Abstract</jats:title>\n          <jats:p>Multimodal large language models (MLLMs) have demonstrated strong capabilities in vision-related tasks, capitalizing on their visual semantic comprehension and reasoning capabilities. However, their ability to detect subtle visual spoofing and forgery clues in face attack detection tasks remains underexplored. In this paper, we introduce a benchmark, <jats:italic>SHIELD</jats:italic>, to evaluate MLLMs for face spoofing and forgery detection. Specifically, we design true/false and multiple-choice questions to assess MLLM performance on multimodal face data across two tasks. For the face anti-spoofing task, we evaluate three modalities (i.e., RGB, infrared, and depth) under six attack types. For the face forgery detection task, we evaluate GAN-based and diffusion-based data, incorporating visual and acoustic modalities. We conduct zero-shot and few-shot evaluations in standard and chain of thought (COT) settings. Additionally, we propose a novel multi-attribute chain of thought (MA-COT) paradigm for describing and judging various task-specific and task-irrelevant attributes of face images. The findings of this study demonstrate that MLLMs exhibit strong potential for addressing the challenges associated with the security of facial recognition technology applications.</jats:p>",
+  "cat": "Signal Processing",
+  "citation_count": 10
+ },
+ "10.1038/s41539-025-00301-w": {
+  "id": "10.1038/s41539-025-00301-w",
+  "title": "On opportunities and challenges of large multimodal foundation models in education",
+  "url": "https://doi.org/10.1038/s41539-025-00301-w",
+  "date": "2025-01-01",
+  "abs": "<jats:title>Abstract</jats:title>\n          <jats:p>Recently, the option to use large language models as a middleware connecting various AI tools and other large language models led to the development of so-called large multimodal foundation models, which have the power to process spoken text, music, images and videos. In this overview, we explain a new set of opportunities and challenges that arise from the integration of large multimodal foundation models in education.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 20
+ },
+ "10.1093/nsr/nwae403": {
+  "id": "10.1093/nsr/nwae403",
+  "title": "A survey on multimodal large language models",
+  "url": "https://doi.org/10.1093/nsr/nwae403",
+  "date": "2024-01-01",
+  "abs": "<jats:title>ABSTRACT</jats:title>\n               <jats:p>Recently, the multimodal large language model (MLLM) represented by GPT-4V has been a new rising research hotspot, which uses powerful large language models (LLMs) as a brain to perform multimodal tasks. The surprising emergent capabilities of the MLLM, such as writing stories based on images and optical character recognition\u2013free math reasoning, are rare in traditional multimodal methods, suggesting a potential path to artificial general intelligence. To this end, both academia and industry have endeavored to develop MLLMs that can compete with or even outperform GPT-4V, pushing the limit of research at a surprising speed. In this paper, we aim to trace and summarize the recent progress of MLLMs. First, we present the basic formulation of the MLLM and delineate its related concepts, including architecture, training strategy and data, as well as evaluation. Then, we introduce research topics about how MLLMs can be extended to support more granularity, modalities, languages and scenarios. We continue with multimodal hallucination and extended techniques, including multimodal in-context learning, multimodal chain of thought and LLM-aided visual reasoning. To conclude the paper, we discuss existing challenges and point out promising research directions.</jats:p>",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 382
+ },
+ "10.1109/bigdata59044.2023.10386743": {
+  "id": "10.1109/bigdata59044.2023.10386743",
+  "title": "Multimodal Large Language Models: A Survey",
+  "url": "https://doi.org/10.1109/bigdata59044.2023.10386743",
+  "date": "2023-01-01",
+  "abs": "The exploration of multimodal language models integrates multiple data types, such as images, text, language, audio, and other heterogeneity. While the latest large language models excel in text-based tasks, they often struggle to understand and process other data types. Multimodal models address this limitation by combining various modalities, enabling a more comprehensive understanding of diverse data. This paper begins by defining the concept of multimodal and examining the historical development of multimodal algorithms. Furthermore, we introduce a range of multimodal products, focusing on the efforts of major technology companies. A practical guide is provided, offering insights into the technical aspects of multimodal models. Moreover, we present a compilation of the latest algorithms and commonly used datasets, providing researchers with valuable resources for experimentation and evaluation. Lastly, we explore the applications of multimodal models and discuss the challenges associated with their development. By addressing these aspects, this paper aims to facilitate a deeper understanding of multimodal models and their potentiality in various domains.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 158
+ },
+ "10.1109/icassp48485.2024.10446792": {
+  "id": "10.1109/icassp48485.2024.10446792",
+  "title": "Multiway-Adapter: Adapting Multimodal Large Language Models for Scalable Image-Text Retrieval",
+  "url": "https://doi.org/10.1109/icassp48485.2024.10446792",
+  "date": "2024-01-01",
+  "abs": "As Multimodal Large Language Models (MLLMs) grow in size, adapting them to specialized tasks becomes increasingly challenging due to high computational and memory demands. Indeed, traditional fine-tuning methods are costly, due to the need for extensive, task-specific training. While efficient adaptation methods exist that aim to reduce these costs, in practice they suffer from shallow inter-modal alignment, which severely hurts model effectiveness. To tackle these computational challenges and improve inter-modal alignment, we introduce the MultiWay-Adapter (MWA), a novel framework featuring an \u2018Alignment Enhancer\u2019. This enhancer deepens inter-modal alignment, enabling high transferability with minimal tuning effort. Our experiments show that unlike prior efficient tuning approaches, MWA maintains model effectiveness, while reducing training time by up-to 57%. MWA is also lightweight, increasing model size by only 2-3% (in terms of parameters) for state-of-the-art foundation models like BEiT-3 Large. These results demonstrate that MWA provides an efficient and effective adaptation method for MLLMs, significantly broadening their applicability.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 7
+ },
+ "10.1109/iccvw60793.2023.00395": {
+  "id": "10.1109/iccvw60793.2023.00395",
+  "title": "On the Adversarial Robustness of Multi-Modal Foundation Models",
+  "url": "https://doi.org/10.1109/iccvw60793.2023.00395",
+  "date": "2023-01-01",
+  "abs": "Multi-modal foundation models combining vision and language models such as Flamingo or GPT-4 have recently gained enormous interest. Alignment of foundation models is used to prevent models from providing toxic or harmful output. While malicious users have successfully tried to jailbreak foundation models, an equally important question is if honest users could be harmed by malicious third-party content. In this paper we show that imperceivable attacks on images $\\left({{\\varepsilon _\\infty } = 1/255}\\right)$ in order to change the caption output of a multi-modal foundation model can be used by malicious content providers to harm honest users e.g. by guiding them to malicious websites or broadcast fake information. This indicates that countermeasures to adversarial attacks should be used by any deployed multi-modal foundation model. Note: This paper contains fake information to illustrate the outcome of our attacks. It does not reflect the opinion of the authors.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 50
+ },
+ "10.1109/tnnls.2025.3592935": {
+  "id": "10.1109/tnnls.2025.3592935",
+  "title": "A Survey of Attacks on Large Vision\u2013Language Models: Resources, Advances, and Future Trends",
+  "url": "https://doi.org/10.1109/tnnls.2025.3592935",
+  "date": "2025-01-01",
+  "abs": "With the significant development of large models in recent years, large vision-language models (LVLMs) have demonstrated remarkable capabilities across a wide range of multimodal understanding and reasoning tasks. Compared with traditional large language models (LLMs), LVLMs present great potential and challenges due to their closer proximity to the multiresource real-world applications and the complexity of multimodal processing. However, the vulnerability of LVLMs is relatively underexplored, posing potential security risks in the daily use of LVLM applications. In this article, we provide a comprehensive review of the various forms of existing LVLM attacks. Specifically, we first introduce the background of attacks targeting LVLMs, including the attack preliminary, attack challenges, and attack resources. Then, we systematically review the development of LVLM attack methods, such as adversarial attacks that manipulate model outputs, jailbreak attacks that exploit model vulnerabilities for unauthorized actions, prompt injection attacks that engineer the prompt type and pattern, and data poisoning that affects model training. Finally, we discuss promising future research directions in LVLM attacks. We believe that our survey provides insights into the current landscape of LVLM vulnerabilities, inspiring more researchers to explore and mitigate potential safety issues in LVLM developments.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 13
+ },
+ "10.1109/tpami.2025.3532688": {
+  "id": "10.1109/tpami.2025.3532688",
+  "title": "Uni-MoE: Scaling Unified Multimodal LLMs With Mixture of Experts",
+  "url": "https://doi.org/10.1109/tpami.2025.3532688",
+  "date": "2025-01-01",
+  "abs": "Recent advancements in Multimodal Large Language Models (MLLMs) underscore the significance of scalable models and data to boost performance, yet this often incurs substantial computational costs. Although the Mixture of Experts (MoE) architecture has been employed to scale large language or visual-language models efficiently, these efforts typically involve fewer experts and limited modalities. To address this, our work presents the pioneering attempt to develop a unified MLLM with the MoE architecture, named Uni-MoE that can handle a wide array of modalities. Specifically, it features modality-specific encoders with connectors for a unified multimodal representation. We also implement a sparse MoE architecture within the LLMs to enable efficient training and inference through modality-level data parallelism and expert-level model parallelism. To enhance the multi-expert collaboration and generalization, we present a progressive training strategy: 1) Cross-modality alignment using various connectors with different cross-modality data, 2) Training modality-specific experts with cross-modality instruction data to activate experts' preferences, and 3) Tuning the whole Uni-MoE framework utilizing Low-Rank Adaptation (LoRA) on mixed multimodal instruction data. We evaluate the instruction-tuned Uni-MoE on a comprehensive set of multimodal datasets. The extensive experimental results demonstrate Uni-MoE's principal advantage of significantly reducing performance bias in handling mixed multimodal datasets, alongside improved multi-expert collaboration and generalization.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 21
+ },
+ "10.1109/wacvw60836.2024.00106": {
+  "id": "10.1109/wacvw60836.2024.00106",
+  "title": "A Survey on Multimodal Large Language Models for Autonomous Driving",
+  "url": "https://doi.org/10.1109/wacvw60836.2024.00106",
+  "date": "2024-01-01",
+  "abs": "With the emergence of Large Language Models (LLMs) and Vision Foundation Models (VFMs), multimodal AI systems benefiting from large models have the potential to equally perceive the real world, make decisions, and control tools as humans. In recent months, LLMs have shown widespread attention in autonomous driving and map systems. Despite its immense potential, there is still a lack of a comprehensive understanding of key challenges, opportunities, and future endeavors to apply in LLM driving systems. In this paper, we present a systematic investigation in this field. We first introduce the background of Multimodal Large Language Models (MLLMs), the multimodal models development using LLMs, and the history of autonomous driving. Then, we overview existing MLLM tools for driving, transportation, and map systems together with existing datasets and benchmarks. Moreover, we summarized the works in The 1st WACV Workshop on Large Language and Vision Models for Autonomous Driving (LLVM-AD), which is the first workshop of its kind regarding LLMs in autonomous driving. To further promote the development of this field, we also discuss several important problems regarding using MLLMs in autonomous driving systems that need to be solved by both academia and industry.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 231
+ },
+ "10.1145/3712001": {
+  "id": "10.1145/3712001",
+  "title": "Security and Privacy Challenges of Large Language Models: A Survey",
+  "url": "https://doi.org/10.1145/3712001",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Large language models (LLMs) have demonstrated extraordinary capabilities and contributed to multiple fields, such as generating and summarizing text, language translation, and question-answering. Today, LLMs have become quite popular tools in natural language processing tasks, with the capability to analyze complicated linguistic patterns and provide relevant responses depending on the context. While offering significant advantages, these models are also vulnerable to security and privacy attacks, such as jailbreaking attacks, data poisoning attacks, and personally identifiable information leakage attacks. This survey provides a thorough review of the security and privacy challenges of LLMs, along with the application-based risks in various domains, such as transportation, education, and healthcare. We assess the extent of LLM vulnerabilities, investigate emerging security and privacy attacks against LLMs, and review potential defense mechanisms. Additionally, the survey outlines existing research gaps and highlights future research directions.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 156
+ },
+ "10.1145/3746027.3754561": {
+  "id": "10.1145/3746027.3754561",
+  "title": "JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering",
+  "url": "https://doi.org/10.1145/3746027.3754561",
+  "date": "2025-01-01",
+  "abs": "Jailbreak attacks against multimodal large language Models (MLLMs) are a significant research focus. Current research predominantly focuses on maximizing attack success rate (ASR), often overlooking whether the generated responses actually fulfill the attacker's malicious intent. This oversight frequently leads to low-quality outputs that bypass safety filters but lack substantial harmful content. To address this gap, we propose JPS, \\underline{J}ailbreak MLLMs with collaborative visual \\underline{P}erturbation and textual \\underline{S}teering, which achieves jailbreaks via corporation of visual image and textually steering prompt. Specifically, JPS utilizes target-guided adversarial image perturbations for effective safety bypass, complemented by \"steering prompt\" optimized via a multi-agent system to specifically guide LLM responses fulfilling the attackers' intent. These visual and textual components undergo iterative co-optimization for enhanced performance. To evaluate the quality of attack outcomes, we propose the Malicious Intent Fulfillment Rate (MIFR) metric, assessed using a Reasoning-LLM-based evaluator. Our experiments show JPS sets a new state-of-the-art in both ASR and MIFR across various MLLMs and benchmarks, with analyses confirming its efficacy. Codes are available at \\href{https://github.com/thu-coai/JPS}{https://github.com/thu-coai/JPS}. \\color{warningcolor}{Warning: This paper contains potentially sensitive contents.}",
+  "cat": "General Social Sciences",
+  "citation_count": 1
+ },
+ "10.1145/3764113": {
+  "id": "10.1145/3764113",
+  "title": "Unique Security and Privacy Threats of Large Language Models: A Comprehensive Survey",
+  "url": "https://doi.org/10.1145/3764113",
+  "date": "2025-01-01",
+  "abs": "<jats:p>With the rapid development of artificial intelligence, large language models (LLMs) have made remarkable advancements in natural language processing. These models are trained on vast datasets to exhibit powerful language understanding and generation capabilities across various applications, including chatbots and agents. However, LLMs have revealed a variety of privacy and security issues throughout their life cycle, drawing significant academic and industrial attention. Moreover, the risks faced by LLMs differ significantly from those encountered by traditional language models. Given that current surveys lack a clear taxonomy of unique threat models across diverse scenarios, we emphasize the unique privacy and security threats associated with four specific scenarios: pre-training, fine-tuning, deployment, and LLM-based agents. Addressing the characteristics of each risk, this survey outlines and analyzes potential countermeasures. Research on attack and defense situations can offer feasible research directions, enabling more areas to benefit from LLMs.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "10.1609/aaai.v38i19.30150": {
+  "id": "10.1609/aaai.v38i19.30150",
+  "title": "Visual Adversarial Examples Jailbreak Aligned Large Language Models",
+  "url": "https://doi.org/10.1609/aaai.v38i19.30150",
+  "date": "2024-01-01",
+  "abs": "<jats:p>Warning: this paper contains data, prompts, and model outputs that are offensive in nature.\n\nRecently, there has been a surge of interest in integrating vision into Large Language Models (LLMs), exemplified by Visual Language Models (VLMs) such as Flamingo and GPT-4. This paper sheds light on the security and safety implications of this trend. First, we underscore that the continuous and high-dimensional nature of the visual input makes it a weak link against adversarial attacks, representing an expanded attack surface of vision-integrated LLMs. Second, we highlight that the versatility of LLMs also presents visual attackers with a wider array of achievable adversarial objectives, extending the implications of security failures beyond mere misclassification. As an illustration, we present a case study in which we exploit visual adversarial examples to circumvent the safety guardrail of aligned LLMs with integrated vision. Intriguingly, we discover that a single visual adversarial example can universally jailbreak an aligned LLM, compelling it to heed a wide range of harmful instructions (that it otherwise would not) and generate harmful content that transcends the narrow scope of a `few-shot' derogatory corpus initially employed to optimize the adversarial example. Our study underscores the escalating adversarial risks associated with the pursuit of multimodality. Our findings also connect the long-studied adversarial vulnerabilities of neural networks to the nascent field of AI alignment. The presented attack suggests a fundamental adversarial challenge for AI alignment, especially in light of the emerging trend toward multimodality in frontier foundation models.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 76
+ },
+ "10.1609/aaai.v39i4.32396": {
+  "id": "10.1609/aaai.v39i4.32396",
+  "title": "Medical MLLM Is Vulnerable: Cross-Modality Jailbreak and Mismatched Attacks on Medical Multimodal Large Language Models",
+  "url": "https://doi.org/10.1609/aaai.v39i4.32396",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Security concerns related to Large Language Models (LLMs) have been extensively explored; however, the safety implications for Multimodal Large Language Models (MLLMs), particularly in medical contexts (MedMLLMs), remain inadequately addressed. This paper investigates the security vulnerabilities of MedMLLMs, focusing on their deployment in clinical environments where the accuracy and relevance of question-and-answer interactions are crucial for addressing complex medical challenges. We introduce and redefine two attack types: mismatched malicious attack (2M-attack) and optimized mismatched malicious attack (O2M-attack), by integrating existing clinical data with atypical natural phenomena. Using the comprehensive 3MAD dataset that we developed, which spans a diverse range of medical imaging modalities and adverse medical scenarios, we performed an in-depth analysis and proposed the MCM optimization method. This approach significantly improves the attack success rate against MedMLLMs. Our evaluations, which include white-box attacks on LLaVA-Med and transfer (black-box) attacks on four other SOTA models, reveal that even MedMLLMs designed with advanced security mechanisms remain vulnerable to breaches. This study highlights the critical need for robust security measures to enhance the safety and reliability of open-source MedMLLMs, especially in light of the potential impact of jailbreak attacks and other malicious exploits in clinical applications. Warning: Medical jailbreaking may generate content that includes unverified diagnoses and treatment recommendations. Always consult professional medical advice.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 7
+ },
+ "10.18653/v1/2021.acl-long.431": {
+  "id": "10.18653/v1/2021.acl-long.431",
+  "title": "Rethinking Stealthiness of Backdoor Attack against NLP Models",
+  "url": "https://doi.org/10.18653/v1/2021.acl-long.431",
+  "date": "2021-01-01",
+  "abs": "Wenkai Yang, Yankai Lin, Peng Li, Jie Zhou, Xu Sun. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). 2021.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 69
+ },
+ "10.18653/v1/2021.acl-short.58": {
+  "id": "10.18653/v1/2021.acl-short.58",
+  "title": "An Empirical Study on Adversarial Attack on NMT: Languages and Positions Matter",
+  "url": "https://doi.org/10.18653/v1/2021.acl-short.58",
+  "date": "2021-01-01",
+  "abs": "Zhiyuan Zeng, Deyi Xiong. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). 2021.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 6
+ },
+ "10.18653/v1/2021.naacl-main.165": {
+  "id": "10.18653/v1/2021.naacl-main.165",
+  "title": "Be Careful about Poisoned Word Embeddings: Exploring the Vulnerability of the Embedding Layers in NLP Models",
+  "url": "https://doi.org/10.18653/v1/2021.naacl-main.165",
+  "date": "2021-01-01",
+  "abs": "Wenkai Yang, Lei Li, Zhiyuan Zhang, Xuancheng Ren, Xu Sun, Bin He. Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2021.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 86
+ },
+ "10.18653/v1/2023.acl-long.411": {
+  "id": "10.18653/v1/2023.acl-long.411",
+  "title": "Large Language Models Meet NL2Code: A Survey",
+  "url": "https://doi.org/10.18653/v1/2023.acl-long.411",
+  "date": "2023-01-01",
+  "abs": "Daoguang Zan, Bei Chen, Fengji Zhang, Dianjie Lu, Bingchao Wu, Bei Guan, Wang Yongji, Jian-Guang Lou. Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2023.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 100
+ },
+ "10.18653/v1/n19-1314": {
+  "id": "10.18653/v1/n19-1314",
+  "title": "On Evaluation of Adversarial Perturbations for Sequence-to-Sequence Models",
+  "url": "https://doi.org/10.18653/v1/n19-1314",
+  "date": "2019-01-01",
+  "abs": "Paul Michel, Xian Li, Graham Neubig, Juan Pino. Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). 2019.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 115
+ },
+ "10.53941/tai.2025.100003": {
+  "id": "10.53941/tai.2025.100003",
+  "title": "A Survey on Backdoor Threats in Large Language Models (LLMs): Attacks, Defenses, and Evaluation Methods",
+  "url": "https://doi.org/10.53941/tai.2025.100003",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Review\nA Survey on Backdoor Threats in Large Language Models (LLMs): Attacks, Defenses, and Evaluation Methods\n\nYihe Zhou 1, Tao Ni 1, Wei-Bin Lee 2,3 and Qingchuan Zhao 1,*\n\n\n1 Department of Computer Science, City University of Hong Kong, Hong Kong SAR, China\n2 Information Security Center, Hon Hai Research Institute, New Taipei City 236, Taiwan\n3 Department of Information Engineering and Computer Science, Feng Chia University, Taichung 407, Taiwan\n* Correspondence: qizhao@cityu.edu.hk\n\n\nReceived: 3 Feb 2025; Revised: 15 April 2025; Accepted: 18 April 2025; Published: 6 May 2025\n\nAbstract:\u00a0Large Language Models (LLMs) have achieved significantly advanced capabilities in understanding and generating human language text, which have gained increasing popularity over recent years. Apart from their state-of-the-art natural language processing (NLP) performance, considering their widespread usage in many industries, including medicine, finance, education, etc., security concerns over their usage grow simultaneously. In recent years, the evolution of backdoor attacks has progressed with the advancement of defense mechanisms against them and more well-developed features in the LLMs. In this paper, we adapt the general taxonomy for classifying machine learning attacks on one of the subdivisions - training-time white-box backdoor attacks. Besides systematically classifying attack methods, we also consider the corresponding defense methods against backdoor attacks. By providing an extensive summary of existing works, we hope this survey can serve as a guideline for inspiring future research that further extends the attack scenarios and creates a stronger defense against them for more robust LLMs.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 10
+ },
+ "1411.2539": {
+  "id": "1411.2539",
+  "title": "Unifying Visual-Semantic Embeddings with Multimodal Neural Language\n  Models",
+  "url": "http://arxiv.org/abs/1411.2539",
+  "date": "2014-01-01",
+  "abs": "Inspired by recent advances in multimodal learning and machine translation, we introduce an encoder-decoder pipeline that learns (a): a multimodal joint embedding space with images and text and (b): a novel language model for decoding distributed representations from our space. Our pipeline effectively unifies joint image-text embedding models with multimodal neural language models. We introduce the structure-content neural language model that disentangles the structure of a sentence to its content, conditioned on representations produced by the encoder. The encoder allows one to rank images and sentences while the decoder can generate novel descriptions from scratch. Using LSTM to encode sentences, we match the state-of-the-art performance on Flickr8K and Flickr30K without using object detections. We also set new best results when using the 19-layer Oxford convolutional network. Furthermore we show that with linear encoders, the learned embedding space captures multimodal regularities in terms of vector space arithmetic e.g. *image of a blue car* - \"blue\" + \"red\" is near images of red cars. Sample captions generated for 800 images are made available for comparison.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1317
+ },
+ "1611.08321": {
+  "id": "1611.08321",
+  "title": "Training and Evaluating Multimodal Word Embeddings with Large-scale Web\n  Annotated Images",
+  "url": "http://arxiv.org/abs/1611.08321",
+  "date": "2016-01-01",
+  "abs": "  In this paper, we focus on training and evaluating effective word embeddings\\nwith both text and visual information. More specifically, we introduce a\\nlarge-scale dataset with 300 million sentences describing over 40 million\\nimages crawled and downloaded from publicly available Pins (i.e. an image with\\nsentence descriptions uploaded by users) on Pinterest. This dataset is more\\nthan 200 times larger than MS COCO, the standard large-scale image dataset with\\nsentence descriptions. In addition, we construct an evaluation dataset to\\ndirectly assess the effectiveness of word embeddings in terms of finding\\nsemantically similar or related words and phrases. The word/phrase pairs in\\nthis evaluation dataset are collected from the click data with millions of\\nusers in an image search system, thus contain rich semantic relationships.\\nBased on these datasets, we propose and compare several Recurrent Neural\\nNetworks (RNNs) based multimodal (text and image) models. Experiments show that\\nour model benefits from incorporating the visual information into the word\\nembeddings, and a weight sharing strategy is crucial for learning such\\nmultimodal embeddings. The project page is:\\nhttp://www.stat.ucla.edu/~junhua.mao/multimodal_embedding.html\\n",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 36
+ },
+ "1903.02930": {
+  "id": "1903.02930",
+  "title": "Neural Language Modeling with Visual Features",
+  "url": "http://arxiv.org/abs/1903.02930",
+  "date": "2019-01-01",
+  "abs": "Multimodal language models attempt to incorporate non-linguistic features for the language modeling task. In this work, we extend a standard recurrent neural network (RNN) language model with features derived from videos. We train our models on data that is two orders-of-magnitude bigger than datasets used in prior work. We perform a thorough exploration of model architectures for combining visual and text features. Our experiments on two corpora (YouCookII and 20bn-something-something-v2) show that the best performing architecture consists of middle fusion of visual and text features, yielding over 25% relative improvement in perplexity. We report analysis that provides insights into why our multimodal language model improves upon a standard RNN language model.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 23
+ },
+ "2103.00265": {
+  "id": "2103.00265",
+  "title": "A Brief Introduction to Generative Models",
+  "url": "http://arxiv.org/abs/2103.00265",
+  "date": "2021-01-01",
+  "abs": "We introduce and motivate generative modeling as a central task for machine learning and provide a critical view of the algorithms which have been proposed for solving this task. We overview how generative modeling can be defined mathematically as trying to make an estimating distribution the same as an unknown ground truth distribution. This can then be quantified in terms of the value of a statistical divergence between the two distributions. We outline the maximum likelihood approach and how it can be interpreted as minimizing KL-divergence. We explore a number of approaches in the maximum likelihood family, while discussing their limitations. Finally, we explore the alternative adversarial approach which involves studying the differences between an estimating distribution and a real data distribution. We discuss how this approach can give rise to new divergences and methods that are necessary to make adversarial learning successful. We also discuss new evaluation metrics which are required by the adversarial approach.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2109.12178": {
+  "id": "2109.12178",
+  "title": "MLIM: Vision-and-Language Model Pre-training with Masked Language and\n  Image Modeling",
+  "url": "http://arxiv.org/abs/2109.12178",
+  "date": "2021-01-01",
+  "abs": "Vision-and-Language Pre-training (VLP) improves model performance for downstream tasks that require image and text inputs. Current VLP approaches differ on (i) model architecture (especially image embedders), (ii) loss functions, and (iii) masking policies. Image embedders are either deep models like ResNet or linear projections that directly feed image-pixels into the transformer. Typically, in addition to the Masked Language Modeling (MLM) loss, alignment-based objectives are used for cross-modality interaction, and RoI feature regression and classification tasks for Masked Image-Region Modeling (MIRM). Both alignment and MIRM objectives mostly do not have ground truth. Alignment-based objectives require pairings of image and text and heuristic objective functions. MIRM relies on object detectors. Masking policies either do not take advantage of multi-modality or are strictly coupled with alignments generated by other models. In this paper, we present Masked Language and Image Modeling (MLIM) for VLP. MLIM uses two loss functions: Masked Language Modeling (MLM) loss and image reconstruction (RECON) loss. We propose Modality Aware Masking (MAM) to boost cross-modality interaction and take advantage of MLM and RECON losses that separately capture text and image reconstruction quality. Using MLM + RECON tasks coupled with MAM, we present a simplified VLP methodology and show that it has better downstream task performance on a proprietary e-commerce multi-modal dataset.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2212.08044": {
+  "id": "2212.08044",
+  "title": "Are Multimodal Models Robust to Image and Text Perturbations?",
+  "url": "http://arxiv.org/abs/2212.08044",
+  "date": "2022-01-01",
+  "abs": "Multimodal image-text models have shown remarkable performance in the past few years. However, evaluating robustness against distribution shifts is crucial before adopting them in real-world applications. In this work, we investigate the robustness of 12 popular open-sourced image-text models under common perturbations on five tasks (image-text retrieval, visual reasoning, visual entailment, image captioning, and text-to-image generation). In particular, we propose several new multimodal robustness benchmarks by applying 17 image perturbation and 16 text perturbation techniques on top of existing datasets. We observe that multimodal models are not robust to image and text perturbations, especially to image perturbations. Among the tested perturbation methods, character-level perturbations constitute the most severe distribution shift for text, and zoom blur is the most severe shift for image data. We also introduce two new robustness metrics (\\textbf{MMI} for MultiModal Impact score and \\textbf{MOR} for Missing Object Rate) for proper evaluations of multimodal models. We hope our extensive study sheds light on new directions for the development of robust multimodal models. More details can be found on the project webpage: \\url{https://MMRobustness.github.io}.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 8
+ },
+ "2305.16103": {
+  "id": "2305.16103",
+  "title": "ChatBridge: Bridging Modalities with Large Language Model as a Language Catalyst",
+  "url": "http://arxiv.org/abs/2305.16103",
+  "date": "2023-01-01",
+  "abs": "Building general-purpose models that can perceive diverse real-world modalities and solve various tasks is an appealing target in artificial intelligence. In this paper, we present ChatBridge, a novel multimodal language model that leverages the expressive capabilities of language as the catalyst to bridge the gap between various modalities. We show that only language-paired two-modality data is sufficient to connect all modalities. ChatBridge leverages recent large language models (LLM) and extends their zero-shot capabilities to incorporate diverse multimodal inputs. ChatBridge undergoes a two-stage training. The first stage aligns each modality with language, which brings emergent multimodal correlation and collaboration abilities. The second stage instruction-finetunes ChatBridge to align it with user intent with our newly proposed multimodal instruction tuning dataset, named MULTIS, which covers a wide range of 16 multimodal tasks of text, image, video, and audio modalities. We show strong quantitative and qualitative results on zero-shot multimodal tasks covering text, image, video, and audio modalities. All codes, data, and models of ChatBridge will be open-sourced.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2305.16934": {
+  "id": "2305.16934",
+  "title": "On Evaluating Adversarial Robustness of Large Vision-Language Models",
+  "url": "http://arxiv.org/abs/2305.16934",
+  "date": "2023-01-01",
+  "abs": "Large vision-language models (VLMs) such as GPT-4 have achieved unprecedented performance in response generation, especially with visual inputs, enabling more creative and adaptable interaction than large language models such as ChatGPT. Nonetheless, multimodal generation exacerbates safety concerns, since adversaries may successfully evade the entire system by subtly manipulating the most vulnerable modality (e.g., vision). To this end, we propose evaluating the robustness of open-source large VLMs in the most realistic and high-risk setting, where adversaries have only black-box system access and seek to deceive the model into returning the targeted responses. In particular, we first craft targeted adversarial examples against pretrained models such as CLIP and BLIP, and then transfer these adversarial examples to other VLMs such as MiniGPT-4, LLaVA, UniDiffuser, BLIP-2, and Img2Prompt. In addition, we observe that black-box queries on these VLMs can further improve the effectiveness of targeted evasion, resulting in a surprisingly high success rate for generating targeted responses. Our findings provide a quantitative understanding regarding the adversarial vulnerability of large VLMs and call for a more thorough examination of their potential security flaws before deployment in practice. Code is at https://github.com/yunqing-me/AttackVLM.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 34
+ },
+ "2305.17216": {
+  "id": "2305.17216",
+  "title": "Generating Images with Multimodal Language Models",
+  "url": "http://arxiv.org/abs/2305.17216",
+  "date": "2023-01-01",
+  "abs": "We propose a method to fuse frozen text-only large language models (LLMs) with pre-trained image encoder and decoder models, by mapping between their embedding spaces. Our model demonstrates a wide suite of multimodal capabilities: image retrieval, novel image generation, and multimodal dialogue. Ours is the first approach capable of conditioning on arbitrarily interleaved image and text inputs to generate coherent image (and text) outputs. To achieve strong performance on image generation, we propose an efficient mapping network to ground the LLM to an off-the-shelf text-to-image generation model. This mapping network translates hidden representations of text into the embedding space of the visual models, enabling us to leverage the strong text representations of the LLM for visual outputs. Our approach outperforms baseline generation models on tasks with longer and more complex language. In addition to novel image generation, our model is also capable of image retrieval from a prespecified dataset, and decides whether to retrieve or generate at inference time. This is done with a learnt decision module which conditions on the hidden representations of the LLM. Our model exhibits a wider range of capabilities compared to prior multimodal language models. It can process image-and-text inputs, and produce retrieved images, generated images, and generated text -- outperforming non-LLM based generation models across several text-to-image tasks that measure context dependence.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 39
+ },
+ "2306.09093": {
+  "id": "2306.09093",
+  "title": "Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration",
+  "url": "http://arxiv.org/abs/2306.09093",
+  "date": "2023-01-01",
+  "abs": "Although instruction-tuned large language models (LLMs) have exhibited remarkable capabilities across various NLP tasks, their effectiveness on other data modalities beyond text has not been fully studied. In this work, we propose Macaw-LLM, a novel multi-modal LLM that seamlessly integrates visual, audio, and textual information. Macaw-LLM consists of three main components: a modality module for encoding multi-modal data, a cognitive module for harnessing pretrained LLMs, and an alignment module for harmonizing diverse representations. Our novel alignment module seamlessly bridges multi-modal features to textual features, simplifying the adaptation process from the modality modules to the cognitive module. In addition, we construct a large-scale multi-modal instruction dataset in terms of multi-turn dialogue, including 69K image instances and 50K video instances. We have made our data, code and model publicly available, which we hope can pave the way for future research in multi-modal LLMs and expand the capabilities of LLMs to handle diverse data modalities and address complex real-world scenarios.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 27
+ },
+ "2307.06281": {
+  "id": "2307.06281",
+  "title": "MMBench: Is Your Multi-modal Model an All-around Player?",
+  "url": "http://arxiv.org/abs/2307.06281",
+  "date": "2023-01-01",
+  "abs": "Large vision-language models (VLMs) have recently achieved remarkable progress, exhibiting impressive multimodal perception and reasoning abilities. However, effectively evaluating these large VLMs remains a major challenge, hindering future development in this domain. Traditional benchmarks like VQAv2 or COCO Caption provide quantitative performance measurements but lack fine-grained ability assessment and robust evaluation metrics. Meanwhile, subjective benchmarks, such as OwlEval, offer comprehensive evaluations of a model's abilities by incorporating human labor, which is not scalable and may display significant bias. In response to these challenges, we propose MMBench, a bilingual benchmark for assessing the multi-modal capabilities of VLMs. MMBench methodically develops a comprehensive evaluation pipeline, primarily comprised of the following key features: 1. MMBench is meticulously curated with well-designed quality control schemes, surpassing existing similar benchmarks in terms of the number and variety of evaluation questions and abilities; 2. MMBench introduces a rigorous CircularEval strategy and incorporates large language models to convert free-form predictions into pre-defined choices, which helps to yield accurate evaluation results for models with limited instruction-following capabilities. 3. MMBench incorporates multiple-choice questions in both English and Chinese versions, enabling an apples-to-apples comparison of VLMs' performance under a bilingual context. To summarize, MMBench is a systematically designed objective benchmark for a robust and holistic evaluation of vision-language models. We hope MMBench will assist the research community in better evaluating their models and facilitate future progress in this area. The evalutation code of MMBench has been integrated into VLMEvalKit: https://github.com/open-compass/VLMEvalKit.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 32
+ },
+ "2307.08041": {
+  "id": "2307.08041",
+  "title": "Planting a SEED of Vision in Large Language Model",
+  "url": "http://arxiv.org/abs/2307.08041",
+  "date": "2023-01-01",
+  "abs": "We present SEED, an elaborate image tokenizer that empowers Large Language Models (LLMs) with the emergent ability to SEE and Draw at the same time. Research on image tokenizers has previously reached an impasse, as frameworks employing quantized visual tokens have lost prominence due to subpar performance and convergence in multimodal comprehension (compared to BLIP-2, etc.) or generation (compared to Stable Diffusion, etc.). Despite the limitations, we remain confident in its natural capacity to unify visual and textual representations, facilitating scalable multimodal training with LLM's original recipe. In this study, we identify two crucial principles for the architecture and training of SEED that effectively ease subsequent alignment with LLMs. (1) Image tokens should be independent of 2D physical patch positions and instead be produced with a 1D causal dependency, exhibiting intrinsic interdependence that aligns with the left-to-right autoregressive prediction mechanism in LLMs. (2) Image tokens should capture high-level semantics consistent with the degree of semantic abstraction in words, and be optimized for both discriminativeness and reconstruction during the tokenizer training phase. As a result, the off-the-shelf LLM is able to perform both image-to-text and text-to-image generation by incorporating our SEED through efficient LoRA tuning. Comprehensive multimodal pretraining and instruction tuning, which may yield improved results, are reserved for future investigation. This version of SEED was trained in 5.7 days using only 64 V100 GPUs and 5M publicly available image-text pairs. Our preliminary study emphasizes the great potential of discrete visual tokens in versatile multimodal LLMs and the importance of proper image tokenizers in broader research.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 10
+ },
+ "2308.12833": {
+  "id": "2308.12833",
+  "title": "Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities",
+  "url": "http://arxiv.org/abs/2308.12833",
+  "date": "2023-01-01",
+  "abs": "Spurred by the recent rapid increase in the development and distribution of large language models (LLMs) across industry and academia, much recent work has drawn attention to safety- and security-related threats and vulnerabilities of LLMs, including in the context of potentially criminal activities. Specifically, it has been shown that LLMs can be misused for fraud, impersonation, and the generation of malware; while other authors have considered the more general problem of AI alignment. It is important that developers and practitioners alike are aware of security-related problems with such models. In this paper, we provide an overview of existing - predominantly scientific - efforts on identifying and mitigating threats and vulnerabilities arising from LLMs. We present a taxonomy describing the relationship between threats caused by the generative capabilities of LLMs, prevention measures intended to address such threats, and vulnerabilities arising from imperfect prevention measures. With our work, we hope to raise awareness of the limitations of LLMs in light of such security concerns, among both experienced developers and novel users of such technologies.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 29
+ },
+ "2309.00614": {
+  "id": "2309.00614",
+  "title": "Baseline Defenses for Adversarial Attacks Against Aligned Language Models",
+  "url": "http://arxiv.org/abs/2309.00614",
+  "date": "2023-01-01",
+  "abs": "As Large Language Models quickly become ubiquitous, it becomes critical to understand their security vulnerabilities. Recent work shows that text optimizers can produce jailbreaking prompts that bypass moderation and alignment. Drawing from the rich body of work on adversarial machine learning, we approach these attacks with three questions: What threat models are practically useful in this domain? How do baseline defense techniques perform in this new domain? How does LLM security differ from computer vision? We evaluate several baseline defense strategies against leading adversarial attacks on LLMs, discussing the various settings in which each is feasible and effective. Particularly, we look at three types of defenses: detection (perplexity based), input preprocessing (paraphrase and retokenization), and adversarial training. We discuss white-box and gray-box settings and discuss the robustness-performance trade-off for each of the defenses considered. We find that the weakness of existing discrete optimizers for text, combined with the relatively high costs of optimization, makes standard adaptive attacks more challenging for LLMs. Future research will be needed to uncover whether more powerful optimizers can be developed, or whether the strength of filtering and preprocessing defenses is greater in the LLMs domain than it has been in computer vision.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 33
+ },
+ "2309.11499": {
+  "id": "2309.11499",
+  "title": "DreamLLM: Synergistic Multimodal Comprehension and Creation",
+  "url": "http://arxiv.org/abs/2309.11499",
+  "date": "2023-01-01",
+  "abs": "This paper presents DreamLLM, a learning framework that first achieves versatile Multimodal Large Language Models (MLLMs) empowered with frequently overlooked synergy between multimodal comprehension and creation. DreamLLM operates on two fundamental principles. The first focuses on the generative modeling of both language and image posteriors by direct sampling in the raw multimodal space. This approach circumvents the limitations and information loss inherent to external feature extractors like CLIP, and a more thorough multimodal understanding is obtained. Second, DreamLLM fosters the generation of raw, interleaved documents, modeling both text and image contents, along with unstructured layouts. This allows DreamLLM to learn all conditional, marginal, and joint multimodal distributions effectively. As a result, DreamLLM is the first MLLM capable of generating free-form interleaved content. Comprehensive experiments highlight DreamLLM's superior performance as a zero-shot multimodal generalist, reaping from the enhanced learning synergy. Project page: https://dreamllm.github.io.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 15
+ },
+ "2310.08825": {
+  "id": "2310.08825",
+  "title": "From CLIP to DINO: Visual Encoders Shout in Multi-modal Large Language Models",
+  "url": "http://arxiv.org/abs/2310.08825",
+  "date": "2023-01-01",
+  "abs": "Multi-modal Large Language Models (MLLMs) have made significant strides in expanding the capabilities of Large Language Models (LLMs) through the incorporation of visual perception interfaces. Despite the emergence of exciting applications and the availability of diverse instruction tuning data, existing approaches often rely on CLIP or its variants as the visual branch, and merely extract features from the deep layers. However, these methods lack a comprehensive analysis of the visual encoders in MLLMs. In this paper, we conduct an extensive investigation into the effectiveness of different vision encoders within MLLMs. Our findings reveal that the shallow layer features of CLIP offer particular advantages for fine-grained tasks such as grounding and region understanding. Surprisingly, the vision-only model DINO, which is not pretrained with text-image alignment, demonstrates promising performance as a visual branch within MLLMs. By simply equipping it with an MLP layer for alignment, DINO surpasses CLIP in fine-grained related perception tasks. Building upon these observations, we propose a simple yet effective feature merging strategy, named COMM, that integrates CLIP and DINO with Multi-level features Merging, to enhance the visual capabilities of MLLMs. We evaluate COMM through comprehensive experiments on a wide range of benchmarks, including image captioning, visual question answering, visual grounding, and object hallucination. Experimental results demonstrate the superior performance of COMM compared to existing methods, showcasing its enhanced visual capabilities within MLLMs.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 12
+ },
+ "2401.02906": {
+  "id": "2401.02906",
+  "title": "MLLM-Protector: Ensuring MLLM\u2019s Safety without Hurting Performance",
+  "url": "http://arxiv.org/abs/2401.02906",
+  "date": "2024-01-01",
+  "abs": "The deployment of multimodal large language models (MLLMs) has brought forth a unique vulnerability: susceptibility to malicious attacks through visual inputs. This paper investigates the novel challenge of defending MLLMs against such attacks. Compared to large language models (LLMs), MLLMs include an additional image modality. We discover that images act as a ``foreign language\" that is not considered during safety alignment, making MLLMs more prone to producing harmful responses. Unfortunately, unlike the discrete tokens considered in text-based LLMs, the continuous nature of image signals presents significant alignment challenges, which poses difficulty to thoroughly cover all possible scenarios. This vulnerability is exacerbated by the fact that most state-of-the-art MLLMs are fine-tuned on limited image-text pairs that are much fewer than the extensive text-based pretraining corpus, which makes the MLLMs more prone to catastrophic forgetting of their original abilities during safety fine-tuning. To tackle these challenges, we introduce MLLM-Protector, a plug-and-play strategy that solves two subtasks: 1) identifying harmful responses via a lightweight harm detector, and 2) transforming harmful responses into harmless ones via a detoxifier. This approach effectively mitigates the risks posed by malicious visual inputs without compromising the original performance of MLLMs. Our results demonstrate that MLLM-Protector offers a robust solution to a previously unaddressed aspect of MLLM security.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2401.03105": {
+  "id": "2401.03105",
+  "title": "Incorporating Visual Experts to Resolve the Information Loss in Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2401.03105",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) are experiencing rapid growth, yielding a plethora of noteworthy contributions in recent months. The prevailing trend involves adopting data-driven methodologies, wherein diverse instruction-following datasets are collected. However, a prevailing challenge persists in these approaches, specifically in relation to the limited visual perception ability, as CLIP-like encoders employed for extracting visual information from inputs. Though these encoders are pre-trained on billions of image-text pairs, they still grapple with the information loss dilemma, given that textual captions only partially capture the contents depicted in images. To address this limitation, this paper proposes to improve the visual perception ability of MLLMs through a mixture-of-experts knowledge enhancement mechanism. Specifically, we introduce a novel method that incorporates multi-task encoders and visual tools into the existing MLLMs training and inference pipeline, aiming to provide a more comprehensive and accurate summarization of visual inputs. Extensive experiments have evaluated its effectiveness of advancing MLLMs, showcasing improved visual perception achieved through the integration of visual experts.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 3
+ },
+ "2401.11943": {
+  "id": "2401.11943",
+  "title": "Benchmarking Large Multimodal Models against Common Corruptions",
+  "url": "http://arxiv.org/abs/2401.11943",
+  "date": "2024-01-01",
+  "abs": "This technical report aims to fill a deficiency in the assessment of large multimodal models (LMMs) by specifically examining the self-consistency of their outputs when subjected to common corruptions. We investigate the cross-modal interactions between text, image, and speech, encompassing four essential generation tasks: text-to-image, image-to-text, text-to-speech, and speech-to-text. We create a comprehensive benchmark, named MMCBench, that covers more than 100 popular LMMs (totally over 150 model checkpoints). A thorough evaluation under common corruptions is critical for practical deployment and facilitates a better understanding of the reliability of cutting-edge LMMs. The benchmarking code is available at https://github.com/sail-sg/MMCBench",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2401.13601": {
+  "id": "2401.13601",
+  "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+  "url": "http://arxiv.org/abs/2401.13601",
+  "date": "2024-01-01",
+  "abs": "In the past year, MultiModal Large Language Models (MM-LLMs) have undergone substantial advancements, augmenting off-the-shelf LLMs to support MM inputs or outputs via cost-effective training strategies. The resulting models not only preserve the inherent reasoning and decision-making capabilities of LLMs but also empower a diverse range of MM tasks. In this paper, we provide a comprehensive survey aimed at facilitating further research of MM-LLMs. Initially, we outline general design formulations for model architecture and training pipeline. Subsequently, we introduce a taxonomy encompassing 126 MM-LLMs, each characterized by its specific formulations. Furthermore, we review the performance of selected MM-LLMs on mainstream benchmarks and summarize key training recipes to enhance the potency of MM-LLMs. Finally, we explore promising directions for MM-LLMs while concurrently maintaining a real-time tracking website for the latest developments in the field. We hope that this survey contributes to the ongoing advancement of the MM-LLMs domain.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 15
+ },
+ "2402.00357": {
+  "id": "2402.00357",
+  "title": "Safety of Multimodal Large Language Models on Images and Text",
+  "url": "http://arxiv.org/abs/2402.00357",
+  "date": "2024-01-01",
+  "abs": "Attracted by the impressive power of Multimodal Large Language Models (MLLMs), the public is increasingly utilizing them to improve the efficiency of daily work. Nonetheless, the vulnerabilities of MLLMs to unsafe instructions bring huge safety risks when these models are deployed in real-world scenarios. In this paper, we systematically survey current efforts on the evaluation, attack, and defense of MLLMs' safety on images and text. We begin with introducing the overview of MLLMs on images and text and understanding of safety, which helps researchers know the detailed scope of our survey. Then, we review the evaluation datasets and metrics for measuring the safety of MLLMs. Next, we comprehensively present attack and defense techniques related to MLLMs' safety. Finally, we analyze several unsolved issues and discuss promising research directions. The latest papers are continually collected at https://github.com/isXinLiu/MLLM-Safety-Collection.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2402.00891": {
+  "id": "2402.00891",
+  "title": "Large Language Models in Cybersecurity: State-of-the-Art",
+  "url": "http://arxiv.org/abs/2402.00891",
+  "date": "2024-01-01",
+  "abs": "The rise of Large Language Models (LLMs) has revolutionized our comprehension of intelligence bringing us closer to Artificial Intelligence. Since their introduction, researchers have actively explored the applications of LLMs across diverse fields, significantly elevating capabilities. Cybersecurity, traditionally resistant to data-driven solutions and slow to embrace machine learning, stands out as a domain. This study examines the existing literature, providing a thorough characterization of both defensive and adversarial applications of LLMs within the realm of cybersecurity. Our review not only surveys and categorizes the current landscape but also identifies critical research gaps. By evaluating both offensive and defensive applications, we aim to provide a holistic understanding of the potential risks and opportunities associated with LLM-driven cybersecurity.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "2402.02309": {
+  "id": "2402.02309",
+  "title": "Jailbreaking Attack against Multimodal Large Language Model",
+  "url": "http://arxiv.org/abs/2402.02309",
+  "date": "2024-01-01",
+  "abs": "This paper focuses on jailbreaking attacks against multi-modal large language models (MLLMs), seeking to elicit MLLMs to generate objectionable responses to harmful user queries. A maximum likelihood-based algorithm is proposed to find an \\emph{image Jailbreaking Prompt} (imgJP), enabling jailbreaks against MLLMs across multiple unseen prompts and images (i.e., data-universal property). Our approach exhibits strong model-transferability, as the generated imgJP can be transferred to jailbreak various models, including MiniGPT-v2, LLaVA, InstructBLIP, and mPLUG-Owl2, in a black-box manner. Moreover, we reveal a connection between MLLM-jailbreaks and LLM-jailbreaks. As a result, we introduce a construction-based method to harness our approach for LLM-jailbreaks, demonstrating greater efficiency than current state-of-the-art methods. The code is available here. \\textbf{Warning: some content generated by language models may be offensive to some readers.}",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2402.05935": {
+  "id": "2402.05935",
+  "title": "SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models",
+  "url": "http://arxiv.org/abs/2402.05935",
+  "date": "2024-01-01",
+  "abs": "We propose SPHINX-X, an extensive Multimodality Large Language Model (MLLM) series developed upon SPHINX. To improve the architecture and training efficiency, we modify the SPHINX framework by removing redundant visual encoders, bypassing fully-padded sub-images with skip tokens, and simplifying multi-stage training into a one-stage all-in-one paradigm. To fully unleash the potential of MLLMs, we assemble a comprehensive multi-domain and multimodal dataset covering publicly available resources in language, vision, and vision-language tasks. We further enrich this collection with our curated OCR intensive and Set-of-Mark datasets, extending the diversity and generality. By training over different base LLMs including TinyLlama1.1B, InternLM2-7B, LLaMA2-13B, and Mixtral8x7B, we obtain a spectrum of MLLMs that vary in parameter size and multilingual capabilities. Comprehensive benchmarking reveals a strong correlation between the multi-modal performance with the data and parameter scales. Code and models are released at https://github.com/Alpha-VLLM/LLaMA2-Accessory",
+  "cat": "Artificial Intelligence",
+  "citation_count": 10
+ },
+ "2402.11530": {
+  "id": "2402.11530",
+  "title": "Efficient Multimodal Learning from Data-centric Perspective",
+  "url": "http://arxiv.org/abs/2402.11530",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated notable capabilities in general visual understanding and reasoning tasks. However, their deployment is hindered by substantial computational costs in both training and inference, limiting accessibility to the broader research and user communities. A straightforward solution is to leverage smaller pre-trained vision and language models, which inevitably cause significant performance drops. In this paper, we demonstrate the possibility of training a smaller but better MLLM with high-quality training data. Specifically, we introduce Bunny, a family of lightweight MLLMs with flexible vision and language backbones for efficient multimodal learning from selected training data. Experiments show that our Bunny-4B/8B outperforms the state-of-the-art large MLLMs on multiple benchmarks. We expect that this work can provide the community with a clean and flexible open-source tool for further research and development. The code, models, and data can be found in https://github.com/BAAI-DCAI/Bunny.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2402.12750": {
+  "id": "2402.12750",
+  "title": "Model Composition for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2402.12750",
+  "date": "2024-01-01",
+  "abs": "Recent developments in Multimodal Large Language Models (MLLMs) have shown rapid progress, moving towards the goal of creating versatile MLLMs that understand inputs from various modalities. However, existing methods typically rely on joint training with paired multimodal instruction data, which is resource-intensive and challenging to extend to new modalities. In this paper, we propose a new paradigm through the model composition of existing MLLMs to create a new model that retains the modal understanding capabilities of each original model. Our basic implementation, NaiveMC, demonstrates the effectiveness of this paradigm by reusing modality encoders and merging LLM parameters. Furthermore, we introduce DAMC to address parameter interference and mismatch issues during the merging process, thereby enhancing the model performance. To facilitate research in this area, we propose MCUB, a benchmark for assessing ability of MLLMs to understand inputs from diverse modalities. Experiments on this benchmark and four other multimodal understanding tasks show significant improvements over baselines, proving that model composition can create a versatile model capable of processing inputs from multiple modalities.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2402.13607": {
+  "id": "2402.13607",
+  "title": "CODIS: Benchmarking Context-Dependent Visual Comprehension for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2402.13607",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) have demonstrated promising results in a variety of tasks that combine vision and language. As these models become more integral to research and applications, conducting comprehensive evaluations of their capabilities has grown increasingly important. However, most existing benchmarks fail to consider that, in certain situations, images need to be interpreted within a broader context. In this work, we introduce a new benchmark, named as CODIS, designed to assess the ability of models to use context provided in free-form text to enhance visual comprehension. Our findings indicate that MLLMs consistently fall short of human performance on this benchmark. Further analysis confirms that these models struggle to effectively extract and utilize contextual information to improve their understanding of images. This underscores the pressing need to enhance the ability of MLLMs to comprehend visuals in a context-dependent manner. View our project website at https://thunlp-mt.github.io/CODIS.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2402.14154": {
+  "id": "2402.14154",
+  "title": "MM-Soc: Benchmarking Multimodal Large Language Models in Social Media Platforms",
+  "url": "http://arxiv.org/abs/2402.14154",
+  "date": "2024-01-01",
+  "abs": "Social media platforms are hubs for multimodal information exchange, encompassing text, images, and videos, making it challenging for machines to comprehend the information or emotions associated with interactions in online spaces. Multimodal Large Language Models (MLLMs) have emerged as a promising solution to these challenges, yet they struggle to accurately interpret human emotions and complex content such as misinformation. This paper introduces MM-Soc, a comprehensive benchmark designed to evaluate MLLMs' understanding of multimodal social media content. MM-Soc compiles prominent multimodal datasets and incorporates a novel large-scale YouTube tagging dataset, targeting a range of tasks from misinformation detection, hate speech detection, and social context generation. Through our exhaustive evaluation on ten size-variants of four open-source MLLMs, we have identified significant performance disparities, highlighting the need for advancements in models' social understanding capabilities. Our analysis reveals that, in a zero-shot setting, various types of MLLMs generally exhibit difficulties in handling social media tasks. However, MLLMs demonstrate performance improvements post fine-tuning, suggesting potential pathways for improvement. Our code and data are available at https://github.com/claws-lab/MMSoc.git.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2402.14891": {
+  "id": "2402.14891",
+  "title": "LLMBind: A Unified Modality-Task Integration Framework",
+  "url": "http://arxiv.org/abs/2402.14891",
+  "date": "2024-01-01",
+  "abs": "Despite recent progress in Multi-Modal Large Language Models (MLLMs), it remains challenging to integrate diverse tasks ranging from pixel-level perception to high-fidelity generation. Existing approaches often suffer from either restricted task extensibility or severe performance degradation due to modality interference. n this paper, we present LLMBind, an extensible framework that unifies multimodal tasks through a dual-pathway mechanism: In-Situ semantic embeddings for localization-sensitive tasks like semantic segmentation and Ex-Situ task-prompts for generation across image, video, and audio modalities. Additionally, we employ a Mixture-of-Experts (MoE) architecture to route task-specific tokens, thereby achieving modality disentanglement and mitigating negative transfer. We also curate a 400k multi-turn interactive dataset focused on iterative visual refinement to enable human-like interaction. Extensive experiments demonstrate that LLMBind achieves excellent performance across multiple perception and generation benchmarks while maintaining superior expandability.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2403.02677": {
+  "id": "2403.02677",
+  "title": "Finetuned Multimodal Language Models Are High-Quality Image-Text Data Filters",
+  "url": "http://arxiv.org/abs/2403.02677",
+  "date": "2024-01-01",
+  "abs": "We propose a novel framework for filtering image-text data by leveraging fine-tuned Multimodal Language Models (MLMs). Our approach outperforms predominant filtering methods (e.g., CLIPScore) via integrating the recent advances in MLMs. We design four distinct yet complementary metrics to holistically measure the quality of image-text data. A new pipeline is established to construct high-quality instruction data for fine-tuning MLMs as data filters. Comparing with CLIPScore, our MLM filters produce more precise and comprehensive scores that directly improve the quality of filtered data and boost the performance of pre-trained models. We achieve significant improvements over CLIPScore on popular foundation models (i.e., CLIP and BLIP2) and various downstream tasks. Our MLM filter can generalize to different models and tasks, and be used as a drop-in replacement for CLIPScore. An additional ablation study is provided to verify our design choices for the MLM filter.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2403.03627": {
+  "id": "2403.03627",
+  "title": "Multimodal Large Language Models to Support Real-World Fact-Checking",
+  "url": "http://arxiv.org/abs/2403.03627",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) carry the potential to support humans in processing vast amounts of information. While MLLMs are already being used as a fact-checking tool, their abilities and limitations in this regard are understudied. Here is aim to bridge this gap. In particular, we propose a framework for systematically assessing the capacity of current multimodal models to facilitate real-world fact-checking. Our methodology is evidence-free, leveraging only these models' intrinsic knowledge and reasoning capabilities. By designing prompts that extract models' predictions, explanations, and confidence levels, we delve into research questions concerning model accuracy, robustness, and reasons for failure. We empirically find that (1) GPT-4V exhibits superior performance in identifying malicious and misleading multimodal claims, with the ability to explain the unreasonable aspects and underlying motives, and (2) existing open-source models exhibit strong biases and are highly sensitive to the prompt. Our study offers insights into combating false multimodal information and building secure, trustworthy multimodal models. To the best of our knowledge, we are the first to evaluate MLLMs for real-world fact-checking.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2403.13507": {
+  "id": "2403.13507",
+  "title": "FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs",
+  "url": "http://arxiv.org/abs/2403.13507",
+  "date": "2024-01-01",
+  "abs": "Despite the remarkable performance of video-based large language models (LLMs), their adversarial threat remains unexplored. To fill this gap, we propose the first adversarial attack tailored for video-based LLMs by crafting flow-based multi-modal adversarial perturbations on a small fraction of frames within a video, dubbed FMM-Attack. Extensive experiments show that our attack can effectively induce video-based LLMs to generate incorrect answers when videos are added with imperceptible adversarial perturbations. Intriguingly, our FMM-Attack can also induce garbling in the model output, prompting video-based LLMs to hallucinate. Overall, our observations inspire a further understanding of multi-modal robustness and safety-related feature alignment across different modalities, which is of great importance for various large multi-modal models. Our code is available at https://github.com/THU-Kingmin/FMM-Attack.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2403.13600": {
+  "id": "2403.13600",
+  "title": "VL-Mamba: Exploring State Space Models for Multimodal Learning",
+  "url": "http://arxiv.org/abs/2403.13600",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) have attracted widespread interest and have rich applications. However, the inherent attention mechanism in its Transformer structure requires quadratic complexity and results in expensive computational overhead. Therefore, in this work, we propose VL-Mamba, a multimodal large language model based on state space models, which have been shown to have great potential for long-sequence modeling with fast inference and linear scaling in sequence length. Specifically, we first replace the transformer-based backbone language model such as LLama or Vicuna with the pre-trained Mamba language model. Then, we empirically explore how to effectively apply the 2D vision selective scan mechanism for multimodal learning and the combinations of different vision encoders and variants of pretrained Mamba language models. The extensive experiments on diverse multimodal benchmarks with competitive performance show the effectiveness of our proposed VL-Mamba and demonstrate the great potential of applying state space models for multimodal learning tasks.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 10
+ },
+ "2403.18346": {
+  "id": "2403.18346",
+  "title": "Quantifying and Mitigating Unimodal Biases in Multimodal Large Language Models: A Causal Perspective",
+  "url": "http://arxiv.org/abs/2403.18346",
+  "date": "2024-01-01",
+  "abs": "Recent advancements in Large Language Models (LLMs) have facilitated the development of Multimodal LLMs (MLLMs). Despite their impressive capabilities, MLLMs often suffer from over-reliance on unimodal biases (e.g., language bias and vision bias), leading to incorrect answers or hallucinations in complex multimodal tasks. To investigate this issue, we propose a causal framework to interpret the biases in Visual Question Answering (VQA) problems. Within this framework, we conduct an in-depth causal analysis to assess the causal effect of these biases on MLLM predictions. Based on the analysis, we introduce 1) a novel MORE dataset with 12,000 challenging VQA instances requiring multi-hop reasoning and overcoming unimodal biases. 2) a causality-enhanced agent framework CAVE that guides models to comprehensively integrate information from different modalities and mitigate biases. Our experiments show that MLLMs perform poorly on MORE, indicating strong unimodal biases and limited semantic understanding. However, when integrated with our CAVE, promising improvements in reasoning and bias mitigation can be seen. These findings provide important insights for the development of more robust MLLMs and contribute to the broader goal of advancing multimodal AI systems capable of deeper understanding and reasoning. Our project page is at https://github.com/OpenCausaLab/MORE.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2403.20330": {
+  "id": "2403.20330",
+  "title": "Are We on the Right Way for Evaluating Large Vision-Language Models?",
+  "url": "http://arxiv.org/abs/2403.20330",
+  "date": "2024-01-01",
+  "abs": "Large vision-language models (LVLMs) have recently achieved rapid progress, sparking numerous studies to evaluate their multi-modal capabilities. However, we dig into current evaluation works and identify two primary issues: 1) Visual content is unnecessary for many samples. The answers can be directly inferred from the questions and options, or the world knowledge embedded in LLMs. This phenomenon is prevalent across current benchmarks. For instance, GeminiPro achieves 42.9% on the MMMU benchmark without any visual input, and outperforms the random choice baseline across six benchmarks over 24% on average. 2) Unintentional data leakage exists in LLM and LVLM training. LLM and LVLM could still answer some visual-necessary questions without visual content, indicating the memorizing of these samples within large-scale training data. For example, Sphinx-X-MoE gets 43.6% on MMMU without accessing images, surpassing its LLM backbone with 17.9%. Both problems lead to misjudgments of actual multi-modal gains and potentially misguide the study of LVLM. To this end, we present MMStar, an elite vision-indispensable multi-modal benchmark comprising 1,500 samples meticulously selected by humans. MMStar benchmarks 6 core capabilities and 18 detailed axes, aiming to evaluate LVLMs' multi-modal capacities with carefully balanced and purified samples. These samples are first roughly selected from current benchmarks with an automated pipeline, human review is then involved to ensure each curated sample exhibits visual dependency, minimal data leakage, and requires advanced multi-modal capabilities. Moreover, two metrics are developed to measure data leakage and actual performance gain in multi-modal training. We evaluate 16 leading LVLMs on MMStar to assess their multi-modal capabilities, and on 7 benchmarks with the proposed metrics to investigate their data leakage and actual multi-modal gain.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 9
+ },
+ "2404.07922": {
+  "id": "2404.07922",
+  "title": "LaVy: Vietnamese Multimodal Large Language Model",
+  "url": "http://arxiv.org/abs/2404.07922",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) and Multimodal Large language models (MLLMs) have taken the world by storm with impressive abilities in complex reasoning and linguistic comprehension. Meanwhile there are plethora of works related to Vietnamese Large Language Models, the lack of high-quality resources in multimodality limits the progress of Vietnamese MLLMs. In this paper, we pioneer in address this by introducing LaVy, a state-of-the-art Vietnamese MLLM, and we also introduce LaVy-Bench benchmark designated for evaluating MLLMs's understanding on Vietnamese visual language tasks. Our project is public at https://github.com/baochi0212/LaVy",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2404.11865": {
+  "id": "2404.11865",
+  "title": "From Image to Video, what do we need in multimodal LLMs?",
+  "url": "http://arxiv.org/abs/2404.11865",
+  "date": "2024-01-01",
+  "abs": "Covering from Image LLMs to the more complex Video LLMs, the Multimodal Large Language Models (MLLMs) have demonstrated profound capabilities in comprehending cross-modal information as numerous studies have illustrated. Previous methods delve into designing comprehensive Video LLMs through integrating video foundation models with primitive LLMs. Despite its effectiveness, such paradigm renders Video LLM's structure verbose and typically requires substantial video data for pre-training. Crucially, it neglects leveraging the foundational contributions of ready-made Image LLMs. In this paper, we introduce RED-VILLM, a Resource-Efficient Development pipeline which builds robust Video LLMs through leveraging the prior knowledge of Image LLMs. Specifically, since a video is naturally a combination of images along the temporal dimension, we devise a temporal adaptation plug-and-play structure, endowing the backbone Image LLM with the capability to grasp temporal information. Moreover, through applying this pipeline, we achieve the first Video LLM within the Chinese-speaking community. Extensive experiments demonstrate that Video LLMs developed through our approach surpass conventional Video LLMs, requiring minimal instructional data and training resources. Our approach highlights the potential for a more cost-effective and scalable advancement in multimodal models.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2405.02764": {
+  "id": "2405.02764",
+  "title": "Assessing Adversarial Robustness of Large Language Models: An Empirical Study",
+  "url": "http://arxiv.org/abs/2405.02764",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) have revolutionized natural language processing, but their robustness against adversarial attacks remains a critical concern. We presents a novel white-box style attack approach that exposes vulnerabilities in leading open-source LLMs, including Llama, OPT, and T5. We assess the impact of model size, structure, and fine-tuning strategies on their resistance to adversarial perturbations. Our comprehensive evaluation across five diverse text classification tasks establishes a new benchmark for LLM robustness. The findings of this study have far-reaching implications for the reliable deployment of LLMs in real-world applications and contribute to the advancement of trustworthy AI systems.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2405.07229": {
+  "id": "2405.07229",
+  "title": "MM-InstructEval: Zero-Shot Evaluation of (Multimodal) Large Language Models on Multimodal Reasoning Tasks",
+  "url": "http://arxiv.org/abs/2405.07229",
+  "date": "2024-01-01",
+  "abs": "The emergence of multimodal large language models (MLLMs) has triggered extensive research in model evaluation. While existing evaluation studies primarily focus on unimodal (vision-only) comprehension and reasoning capabilities, they overlook critical assessments of complex multimodal reasoning tasks that require integrated understanding of both visual and textual contexts. Such multimodal tasks present unique challenges, demanding sophisticated reasoning across multiple modalities and deep comprehension of multimodal contexts. In this paper, we present MM-InstructEval, a comprehensive evaluation framework that incorporates diverse metrics to assess model performance across various multimodal reasoning tasks with vision-text contexts. We conduct extensive zero-shot evaluations on 45 models (including 36 MLLMs) across 16 multimodal datasets, encompassing 6 distinct tasks using 10 different instructions. Our framework introduces multiple innovative metrics, including the 'Best Performance' metric to benchmark peak model capabilities, the 'Mean Relative Gain' metric to assess overall efficacy across models and instructions, the 'Stability' metric to measure robustness, and the 'Adaptability' metric to quantify the compatibility between models and instructions. Through comprehensive evaluation and analysis, we uncover several significant insights about model architectures, instruction formats, and their interactions in multimodal reasoning tasks. Our findings establish new benchmarks for assessing the reasoning capabilities of MLLMs and provide strategic guidance for future developments. To facilitate continued research and evaluation in this field, we release our framework and resources at https://github.com/declare-lab/MM-InstructEval, with an interactive leaderboard available at MM-InstructEval Leaderboard (https://declare-lab.github.io/MM-InstructEval/).",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2405.09981": {
+  "id": "2405.09981",
+  "title": "Adversarial Robustness for Visual Grounding of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2405.09981",
+  "date": "2024-01-01",
+  "abs": "Multi-modal Large Language Models (MLLMs) have recently achieved enhanced performance across various vision-language tasks including visual grounding capabilities. However, the adversarial robustness of visual grounding remains unexplored in MLLMs. To fill this gap, we use referring expression comprehension (REC) as an example task in visual grounding and propose three adversarial attack paradigms as follows. Firstly, untargeted adversarial attacks induce MLLMs to generate incorrect bounding boxes for each object. Besides, exclusive targeted adversarial attacks cause all generated outputs to the same target bounding box. In addition, permuted targeted adversarial attacks aim to permute all bounding boxes among different objects within a single image. Extensive experiments demonstrate that the proposed methods can successfully attack visual grounding capabilities of MLLMs. Our methods not only provide a new perspective for designing novel attacks but also serve as a strong baseline for improving the adversarial robustness for visual grounding of MLLMs.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 2
+ },
+ "2405.10140": {
+  "id": "2405.10140",
+  "title": "Libra: Building Decoupled Vision System on Large Language Models",
+  "url": "http://arxiv.org/abs/2405.10140",
+  "date": "2024-01-01",
+  "abs": "In this work, we introduce Libra, a prototype model with a decoupled vision system on a large language model (LLM). The decoupled vision system decouples inner-modal modeling and cross-modal interaction, yielding unique visual information modeling and effective cross-modal comprehension. Libra is trained through discrete auto-regressive modeling on both vision and language inputs. Specifically, we incorporate a routed visual expert with a cross-modal bridge module into a pretrained LLM to route the vision and language flows during attention computing to enable different attention patterns in inner-modal modeling and cross-modal interaction scenarios. Experimental results demonstrate that the dedicated design of Libra achieves a strong MLLM baseline that rivals existing works in the image-to-text scenario with merely 50 million training data, providing a new perspective for future multimodal foundation models. Code is available at https://github.com/YifanXu74/Libra.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2405.14129": {
+  "id": "2405.14129",
+  "title": "AlignGPT: Multi-modal Large Language Models with Adaptive Alignment Capability",
+  "url": "http://arxiv.org/abs/2405.14129",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) are widely regarded as crucial in the exploration of Artificial General Intelligence (AGI). The core of MLLMs lies in their capability to achieve cross-modal alignment. To attain this goal, current MLLMs typically follow a two-phase training paradigm: the pre-training phase and the instruction-tuning phase. Despite their success, there are shortcomings in the modeling of alignment capabilities within these models. Firstly, during the pre-training phase, the model usually assumes that all image-text pairs are uniformly aligned, but in fact the degree of alignment between different image-text pairs is inconsistent. Secondly, the instructions currently used for finetuning incorporate a variety of tasks and different tasks usually require different levels of alignment capabilities, but previous MLLMs overlook these differentiated alignment needs. To tackle these issues, we propose a new multimodal large language model AlignGPT. In the pre-training stage, instead of treating all image-text pairs equally, we divide them into different groups according to the degrees of alignment of them. Then, the model is trained to learn the representations of different alignment levels. In the instruction-tuning phase, we adaptively combine these representations of alignment levels to meet the dynamic alignment needs of different tasks. Extensive experimental results show that our model achieves competitive performance on 12 benchmarks.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2405.14612": {
+  "id": "2405.14612",
+  "title": "Explaining Multi-modal Large Language Models by Analyzing their Vision Perception",
+  "url": "http://arxiv.org/abs/2405.14612",
+  "date": "2024-01-01",
+  "abs": "Multi-modal Large Language Models (MLLMs) have demonstrated remarkable capabilities in understanding and generating content across various modalities, such as images and text. However, their interpretability remains a challenge, hindering their adoption in critical applications. This research proposes a novel approach to enhance the interpretability of MLLMs by focusing on the image embedding component. We combine an open-world localization model with a MLLM, thus creating a new architecture able to simultaneously produce text and object localization outputs from the same vision embedding. The proposed architecture greatly promotes interpretability, enabling us to design a novel saliency map to explain any output token, to identify model hallucinations, and to assess model biases through semantic adversarial perturbations.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2405.19335": {
+  "id": "2405.19335",
+  "title": "X-VILA: Cross-Modality Alignment for Large Language Model",
+  "url": "http://arxiv.org/abs/2405.19335",
+  "date": "2024-01-01",
+  "abs": "We introduce X-VILA, an omni-modality model designed to extend the capabilities of large language models (LLMs) by incorporating image, video, and audio modalities. By aligning modality-specific encoders with LLM inputs and diffusion decoders with LLM outputs, X-VILA achieves cross-modality understanding, reasoning, and generation. To facilitate this cross-modality alignment, we curate an effective interleaved any-to-any modality instruction-following dataset. Furthermore, we identify a significant problem with the current cross-modality alignment method, which results in visual information loss. To address the issue, we propose a visual alignment mechanism with a visual embedding highway module. We then introduce a resource-efficient recipe for training X-VILA, that exhibits proficiency in any-to-any modality conversation, surpassing previous approaches by large margins. X-VILA also showcases emergent properties across modalities even in the absence of similar training data. The project will be made open-source.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2405.20339": {
+  "id": "2405.20339",
+  "title": "Visual Perception by Large Language Model's Weights",
+  "url": "http://arxiv.org/abs/2405.20339",
+  "date": "2024-01-01",
+  "abs": "Existing Multimodal Large Language Models (MLLMs) follow the paradigm that perceives visual information by aligning visual features with the input space of Large Language Models (LLMs), and concatenating visual tokens with text tokens to form a unified sequence input for LLMs. These methods demonstrate promising results on various vision-language tasks but are limited by the high computational effort due to the extended input sequence resulting from the involvement of visual tokens. In this paper, instead of input space alignment, we propose a novel parameter space alignment paradigm that represents visual information as model weights. For each input image, we use a vision encoder to extract visual features, convert features into perceptual weights, and merge the perceptual weights with LLM's weights. In this way, the input of LLM does not require visual tokens, which reduces the length of the input sequence and greatly improves efficiency. Following this paradigm, we propose VLoRA with the perceptual weights generator. The perceptual weights generator is designed to convert visual features to perceptual weights with low-rank property, exhibiting a form similar to LoRA. The experimental results show that our VLoRA achieves comparable performance on various benchmarks for MLLMs, while significantly reducing the computational costs for both training and inference. The code and models will be made open-source.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1
+ },
+ "2406.00240": {
+  "id": "2406.00240",
+  "title": "Exploring Vulnerabilities and Protections in Large Language Models: A Survey",
+  "url": "http://arxiv.org/abs/2406.00240",
+  "date": "2024-01-01",
+  "abs": "As Large Language Models (LLMs) increasingly become key components in various AI applications, understanding their security vulnerabilities and the effectiveness of defense mechanisms is crucial. This survey examines the security challenges of LLMs, focusing on two main areas: Prompt Hacking and Adversarial Attacks, each with specific types of threats. Under Prompt Hacking, we explore Prompt Injection and Jailbreaking Attacks, discussing how they work, their potential impacts, and ways to mitigate them. Similarly, we analyze Adversarial Attacks, breaking them down into Data Poisoning Attacks and Backdoor Attacks. This structured examination helps us understand the relationships between these vulnerabilities and the defense strategies that can be implemented. The survey highlights these security challenges and discusses robust defensive frameworks to protect LLMs against these threats. By detailing these security issues, the survey contributes to the broader discussion on creating resilient AI systems that can resist sophisticated attacks.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2406.08394": {
+  "id": "2406.08394",
+  "title": "VisionLLM v2: An End-to-End Generalist Multimodal Large Language Model for Hundreds of Vision-Language Tasks",
+  "url": "http://arxiv.org/abs/2406.08394",
+  "date": "2024-01-01",
+  "abs": "We present VisionLLM v2, an end-to-end generalist multimodal large model (MLLM) that unifies visual perception, understanding, and generation within a single framework. Unlike traditional MLLMs limited to text output, VisionLLM v2 significantly broadens its application scope. It excels not only in conventional visual question answering (VQA) but also in open-ended, cross-domain vision tasks such as object localization, pose estimation, and image generation and editing. To this end, we propose a new information transmission mechanism termed \"super link\", as a medium to connect MLLM with task-specific decoders. It not only allows flexible transmission of task information and gradient feedback between the MLLM and multiple downstream decoders but also effectively resolves training conflicts in multi-tasking scenarios. In addition, to support the diverse range of tasks, we carefully collected and combed training data from hundreds of public vision and vision-language tasks. In this way, our model can be joint-trained end-to-end on hundreds of vision language tasks and generalize to these tasks using a set of shared parameters through different user prompts, achieving performance comparable to task-specific models. We believe VisionLLM v2 will offer a new perspective on the generalization of MLLMs.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 5
+ },
+ "2406.11230": {
+  "id": "2406.11230",
+  "title": "Multimodal Needle in a Haystack: Benchmarking Long-Context Capability of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2406.11230",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have shown significant promise in various applications, leading to broad interest from researchers and practitioners alike. However, a comprehensive evaluation of their long-context capabilities remains underexplored. To address these gaps, we introduce the MultiModal Needle-in-a-haystack (MMNeedle) benchmark, specifically designed to assess the long-context capabilities of MLLMs. Besides multi-image input, we employ image stitching to further increase the input context length, and develop a protocol to automatically generate labels for sub-image level retrieval. Essentially, MMNeedle evaluates MLLMs by stress-testing their capability to locate a target sub-image (needle) within a set of images (haystack) based on textual instructions and descriptions of image contents. This setup necessitates an advanced understanding of extensive visual contexts and effective information retrieval within long-context image inputs. With this benchmark, we evaluate state-of-the-art MLLMs, encompassing both API-based and open-source models. The findings reveal that GPT-4o consistently surpasses other models in long-context scenarios, but suffers from hallucination problems in negative samples, i.e., when needles are not in the haystacks. Our comprehensive long-context evaluation of MLLMs also sheds lights on the considerable performance gap between API-based and open-source models. All the code, data, and instructions required to reproduce the main results are available at https://github.com/Wang-ML-Lab/multimodal-needle-in-a-haystack.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2406.11839": {
+  "id": "2406.11839",
+  "title": "mDPO: Conditional Preference Optimization for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2406.11839",
+  "date": "2024-01-01",
+  "abs": "Direct preference optimization (DPO) has shown to be an effective method for large language model (LLM) alignment. Recent works have attempted to apply DPO to multimodal scenarios but have found it challenging to achieve consistent improvement. Through a comparative experiment, we identify the unconditional preference problem in multimodal preference optimization, where the model overlooks the image condition. To address this problem, we propose mDPO, a multimodal DPO objective that prevents the over-prioritization of language-only preferences by also optimizing image preference. Moreover, we introduce a reward anchor that forces the reward to be positive for chosen responses, thereby avoiding the decrease in their likelihood -- an intrinsic problem of relative preference optimization. Experiments on two multimodal LLMs of different sizes and three widely used benchmarks demonstrate that mDPO effectively addresses the unconditional preference problem in multimodal preference optimization and significantly improves model performance, particularly in reducing hallucination.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2406.18193": {
+  "id": "2406.18193",
+  "title": "MammothModa: Multi-Modal Large Language Model",
+  "url": "http://arxiv.org/abs/2406.18193",
+  "date": "2024-01-01",
+  "abs": "In this report, we introduce MammothModa, yet another multi-modal large language model (MLLM) designed to achieve state-of-the-art performance starting from an elementary baseline. We focus on three key design insights: (i) Integrating Visual Capabilities while Maintaining Complex Language Understanding: In addition to the vision encoder, we incorporated the Visual Attention Experts into the LLM to enhance its visual capabilities. (ii) Extending Context Window for High-Resolution and Long-Duration Visual Feature: We explore the Visual Merger Module to effectively reduce the token number of high-resolution images and incorporated frame position ids to avoid position interpolation. (iii) High-Quality Bilingual Datasets: We meticulously curated and filtered a high-quality bilingual multimodal dataset to reduce visual hallucinations. With above recipe we build MammothModa that consistently outperforms the state-of-the-art models, e.g., LLaVA-series, across main real-world visual language benchmarks without bells and whistles.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2407.12580": {
+  "id": "2407.12580",
+  "title": "E5-V: Universal Embeddings with Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2407.12580",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) have shown promising advancements in general visual and language understanding. However, the representation of multimodal information using MLLMs remains largely unexplored. In this work, we introduce a new framework, E5-V, designed to adapt MLLMs for achieving universal multimodal embeddings. Our findings highlight the significant potential of MLLMs in representing multimodal inputs compared to previous approaches. By leveraging MLLMs with prompts, E5-V effectively bridges the modality gap between different types of inputs, demonstrating strong performance in multimodal embeddings even without fine-tuning. We propose a single modality training approach for E5-V, where the model is trained exclusively on text pairs. This method demonstrates significant improvements over traditional multimodal training on image-text pairs, while reducing training costs by approximately 95%. Additionally, this approach eliminates the need for costly multimodal training data collection. Extensive experiments across four types of tasks demonstrate the effectiveness of E5-V. As a universal multimodal model, E5-V not only achieves but often surpasses state-of-the-art performance in each task, despite being trained on a single modality.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2407.12709": {
+  "id": "2407.12709",
+  "title": "MoME: Mixture of Multimodal Experts for Generalist Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2407.12709",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) have demonstrated impressive capabilities across various vision-language tasks. However, a generalist MLLM typically underperforms compared with a specialist MLLM on most VL tasks, which can be attributed to task interference. In this paper, we propose a mixture of multimodal experts (MoME) to mitigate task interference and obtain a generalist MLLM. Our MoME is composed of two key components, a mixture of vision experts (MoVE) and a mixture of language experts (MoLE). MoVE can adaptively modulate the features transformed from various vision encoders, and has a strong compatibility in transformation architecture. MoLE incorporates sparsely gated experts into LLMs to achieve painless improvements with roughly unchanged inference costs. In response to task interference, our MoME specializes in both vision and language modality to adapt to task discrepancies. Extensive experiments show that MoME significantly improves the performance of generalist MLLMs across various VL tasks. The source code is released at https://github.com/JiuTian-VL/MoME",
+  "cat": "Artificial Intelligence",
+  "citation_count": 4
+ },
+ "2407.15272": {
+  "id": "2407.15272",
+  "title": "MIBench: Evaluating Multimodal Large Language Models over Multiple Images",
+  "url": "http://arxiv.org/abs/2407.15272",
+  "date": "2024-01-01",
+  "abs": "Built on the power of LLMs, numerous multimodal large language models (MLLMs) have recently achieved remarkable performance on various vision-language tasks. However, most existing MLLMs and benchmarks primarily focus on single-image input scenarios, leaving the performance of MLLMs when handling realistic multiple images underexplored. Although a few benchmarks consider multiple images, their evaluation dimensions and samples are very limited. In this paper, we propose a new benchmark MIBench, to comprehensively evaluate fine-grained abilities of MLLMs in multi-image scenarios. Specifically, MIBench categorizes the multi-image abilities into three scenarios: multi-image instruction (MII), multimodal knowledge-seeking (MKS) and multimodal in-context learning (MIC), and constructs 13 tasks with a total of 13K annotated samples. During data construction, for MII and MKS, we extract correct options from manual annotations and create challenging distractors to obtain multiple-choice questions. For MIC, to enable an in-depth evaluation, we set four sub-tasks and transform the original datasets into in-context learning formats. We evaluate several open-source and closed-source MLLMs on the proposed MIBench. The results reveal that although current models excel in single-image tasks, they exhibit significant shortcomings when faced with multi-image inputs, such as limited fine-grained perception, multi-image reasoning and in-context learning abilities. The annotated data of MIBench is available at https://huggingface.co/datasets/StarBottle/MIBench.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2407.21534": {
+  "id": "2407.21534",
+  "title": "ControlMLLM: Training-Free Visual Prompt Learning for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2407.21534",
+  "date": "2024-01-01",
+  "abs": "In this work, we propose a training-free method to inject visual prompts into Multimodal Large Language Models (MLLMs) through test-time optimization of a learnable latent variable. We observe that attention, as the core module of MLLMs, connects text prompt tokens and visual tokens, ultimately determining the final results. Our approach involves adjusting visual tokens from the MLP output at test time, controlling the attention response to ensure text prompt tokens attend to visual tokens in referring regions. We optimize a learnable latent variable based on an energy function, enhancing the strength of referring regions in the attention map. This enables detailed region description and reasoning without the need for substantial training costs or model retraining. Our method offers a promising direction for integrating referring abilities into MLLMs, and supports referring with box, mask, scribble and point. The results demonstrate that our method exhibits out-of-domain generalization and interpretability.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1
+ },
+ "2408.08632": {
+  "id": "2408.08632",
+  "title": "A Survey on Benchmarks of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2408.08632",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) are gaining increasing popularity in both academia and industry due to their remarkable performance in various applications such as visual question answering, visual perception, understanding, and reasoning. Over the past few years, significant efforts have been made to examine MLLMs from multiple perspectives. This paper presents a comprehensive review of 200 benchmarks and evaluations for MLLMs, focusing on (1)perception and understanding, (2)cognition and reasoning, (3)specific domains, (4)key capabilities, and (5)other modalities. Finally, we discuss the limitations of the current evaluation methods for MLLMs and explore promising future directions. Our key argument is that evaluation should be regarded as a crucial discipline to support the development of MLLMs better. For more details, please visit our GitHub repository: https://github.com/swordlidev/Evaluation-Multimodal-LLMs-Survey.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2408.11039": {
+  "id": "2408.11039",
+  "title": "Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model",
+  "url": "http://arxiv.org/abs/2408.11039",
+  "date": "2024-01-01",
+  "abs": "We introduce Transfusion, a recipe for training a multi-modal model over discrete and continuous data. Transfusion combines the language modeling loss function (next token prediction) with diffusion to train a single transformer over mixed-modality sequences. We pretrain multiple Transfusion models up to 7B parameters from scratch on a mixture of text and image data, establishing scaling laws with respect to a variety of uni- and cross-modal benchmarks. Our experiments show that Transfusion scales significantly better than quantizing images and training a language model over discrete image tokens. By introducing modality-specific encoding and decoding layers, we can further improve the performance of Transfusion models, and even compress each image to just 16 patches. We further demonstrate that scaling our Transfusion recipe to 7B parameters and 2T multi-modal tokens produces a model that can generate images and text on a par with similar scale diffusion models and language models, reaping the benefits of both worlds.",
+  "cat": "Neurology",
+  "citation_count": 6
+ },
+ "2408.11795": {
+  "id": "2408.11795",
+  "title": "EE-MLLM: A Data-Efficient and Compute-Efficient Multimodal Large Language Model",
+  "url": "http://arxiv.org/abs/2408.11795",
+  "date": "2024-01-01",
+  "abs": "Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated satisfactory performance across various vision-language tasks. Current approaches for vision and language interaction fall into two categories: self-attention-based and cross-attention-based methods. However, both approaches present inherent limitations, forcing a trade-off between data and computational efficiency. To address this issue, we introduce the Data-$\\textbf{E}$fficient and Compute-$\\textbf{E}$fficient $\\textbf{MLLM}$ ($\\textbf{EE-MLLM}$). Specifically, we modify the original self-attention mechanism in MLLM to a composite attention mechanism. This mechanism has two key characteristics: 1) eliminating the computational overhead of self-attention among visual tokens to achieve $\\textbf{compute efficiency}$, and 2) reusing the weights from each layer of LLM to facilitate effective vision-language modality alignment for $\\textbf{data efficiency}$. As a result, EE-MLLM significantly outperforms Flamingo with limited training data, and reduces the prefilling time to 79 ms on an H800 GPU, compared to LLaVA's 277 ms. To further investigate the efficiency of EE-MLLM, we present a training-free variant named EE-MLLM-F, which reduces the computation cost of self-attention-based method without additional training. Experimental results demonstrate the effectiveness of EE-MLLM across a range of benchmarks, including general-purpose datasets like MMBench and SeedBench, as well as fine-grained tasks such as TextVQA and DocVQA.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2408.11813": {
+  "id": "2408.11813",
+  "title": "SEA: Supervised Embedding Alignment for Token-Level Visual-Textual Integration in MLLMs",
+  "url": "http://arxiv.org/abs/2408.11813",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities by integrating visual and textual inputs, yet modality alignment remains one of the most challenging aspects. Current MLLMs typically rely on simple adapter architectures and pretraining approaches to bridge vision encoders with large language models (LLM), guided by image-level supervision. We identify this paradigm often leads to suboptimal alignment between modalities, significantly constraining the LLM's ability to properly interpret and reason with visual features particularly for smaller language models. This limitation degrades overall performance-particularly for smaller language models where capacity constraints are more pronounced and adaptation capabilities are limited. To address this fundamental limitation, we propose Supervised Embedding Alignment (SEA), a token-level supervision alignment method that enables more precise visual-text alignment during pretraining. SEA introduces minimal computational overhead while preserving language capabilities and substantially improving cross-modal understanding. Our comprehensive analyses reveal critical insights into the adapter's role in multimodal integration, and extensive experiments demonstrate that SEA consistently improves performance across various model sizes, with smaller models benefiting the most (average performance gain of 7.61% for Gemma-2B). This work establishes a foundation for developing more effective alignment strategies for future multimodal systems.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2408.13257": {
+  "id": "2408.13257",
+  "title": "MME-RealWorld: Could Your Multimodal LLM Challenge High-Resolution Real-World Scenarios that are Difficult for Humans?",
+  "url": "http://arxiv.org/abs/2408.13257",
+  "date": "2024-01-01",
+  "abs": "Comprehensive evaluation of Multimodal Large Language Models (MLLMs) has recently garnered widespread attention in the research community. However, we observe that existing benchmarks present several common barriers that make it difficult to measure the significant challenges that models face in the real world, including: 1) small data scale leads to a large performance variance; 2) reliance on model-based annotations results in restricted data quality; 3) insufficient task difficulty, especially caused by the limited image resolution. To tackle these issues, we introduce MME-RealWorld. Specifically, we collect more than $300$K images from public datasets and the Internet, filtering $13,366$ high-quality images for annotation. This involves the efforts of professional $25$ annotators and $7$ experts in MLLMs, contributing to $29,429$ question-answer pairs that cover $43$ subtasks across $5$ real-world scenarios, extremely challenging even for humans. As far as we know, MME-RealWorld is the largest manually annotated benchmark to date, featuring the highest resolution and a targeted focus on real-world applications. We further conduct a thorough evaluation involving $28$ prominent MLLMs, such as GPT-4o, Gemini 1.5 Pro, and Claude 3.5 Sonnet. Our results show that even the most advanced models struggle with our benchmarks, where none of them reach $60\\%$ accuracy. The challenges of perceiving high-resolution images and understanding complex real-world scenarios remain urgent issues to be addressed. The data and evaluation code are released at https://mme-realworld.github.io/ .",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2408.13461": {
+  "id": "2408.13461",
+  "title": "Probing the Robustness of Vision-Language Pretrained Models: A Multimodal Adversarial Attack Approach",
+  "url": "http://arxiv.org/abs/2408.13461",
+  "date": "2024-01-01",
+  "abs": "Vision-language pretraining (VLP) with transformers has demonstrated exceptional performance across numerous multimodal tasks. However, the adversarial robustness of these models has not been thoroughly investigated. Existing multimodal attack methods have largely overlooked cross-modal interactions between visual and textual modalities, particularly in the context of cross-attention mechanisms. In this paper, we study the adversarial vulnerability of recent VLP transformers and design a novel Joint Multimodal Transformer Feature Attack (JMTFA) that concurrently introduces adversarial perturbations in both visual and textual modalities under white-box settings. JMTFA strategically targets attention relevance scores to disrupt important features within each modality, generating adversarial samples by fusing perturbations and leading to erroneous model predictions. Experimental results indicate that the proposed approach achieves high attack success rates on vision-language understanding and reasoning downstream tasks compared to existing baselines. Notably, our findings reveal that the textual modality significantly influences the complex fusion processes within VLP transformers. Moreover, we observe no apparent relationship between model size and adversarial robustness under our proposed attacks. These insights emphasize a new dimension of adversarial robustness and underscore potential risks in the reliable deployment of multimodal AI systems.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2408.15769": {
+  "id": "2408.15769",
+  "title": "A Survey on Evaluation of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2408.15769",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) mimic human perception and reasoning system by integrating powerful Large Language Models (LLMs) with various modality encoders (e.g., vision, audio), positioning LLMs as the \"brain\" and various modality encoders as sensory organs. This framework endows MLLMs with human-like capabilities, and suggests a potential pathway towards achieving artificial general intelligence (AGI). With the emergence of all-round MLLMs like GPT-4V and Gemini, a multitude of evaluation methods have been developed to assess their capabilities across different dimensions. This paper presents a systematic and comprehensive review of MLLM evaluation methods, covering the following key aspects: (1) the background of MLLMs and their evaluation; (2) \"what to evaluate\" that reviews and categorizes existing MLLM evaluation tasks based on the capabilities assessed, including general multimodal recognition, perception, reasoning and trustworthiness, and domain-specific applications such as socioeconomic, natural sciences and engineering, medical usage, AI agent, remote sensing, video and audio processing, 3D point cloud analysis, and others; (3) \"where to evaluate\" that summarizes MLLM evaluation benchmarks into general and specific benchmarks; (4) \"how to evaluate\" that reviews and illustrates MLLM evaluation steps and metrics; Our overarching goal is to provide valuable insights for researchers in the field of MLLM evaluation, thereby facilitating the development of more capable and reliable MLLMs. We emphasize that evaluation should be regarded as a critical discipline, essential for advancing the field of MLLMs.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2408.15998": {
+  "id": "2408.15998",
+  "title": "Eagle: Exploring The Design Space for Multimodal LLMs with Mixture of Encoders",
+  "url": "http://arxiv.org/abs/2408.15998",
+  "date": "2024-01-01",
+  "abs": "The ability to accurately interpret complex visual information is a crucial topic of multimodal large language models (MLLMs). Recent work indicates that enhanced visual perception significantly reduces hallucinations and improves performance on resolution-sensitive tasks, such as optical character recognition and document analysis. A number of recent MLLMs achieve this goal using a mixture of vision encoders. Despite their success, there is a lack of systematic comparisons and detailed ablation studies addressing critical aspects, such as expert selection and the integration of multiple vision experts. This study provides an extensive exploration of the design space for MLLMs using a mixture of vision encoders and resolutions. Our findings reveal several underlying principles common to various existing strategies, leading to a streamlined yet effective design approach. We discover that simply concatenating visual tokens from a set of complementary vision encoders is as effective as more complex mixing architectures or strategies. We additionally introduce Pre-Alignment to bridge the gap between vision-focused encoders and language tokens, enhancing model coherence. The resulting family of MLLMs, Eagle, surpasses other leading open-source models on major MLLM benchmarks.",
+  "cat": "Software",
+  "citation_count": 1
+ },
+ "2409.05840": {
+  "id": "2409.05840",
+  "title": "MMEvol: Empowering Multimodal Large Language Models with Evol-Instruct",
+  "url": "http://arxiv.org/abs/2409.05840",
+  "date": "2024-01-01",
+  "abs": "The development of Multimodal Large Language Models (MLLMs) has seen significant advancements with increasing demands in various fields (e.g., multimodal agents, embodied intelligence). While model-driven approaches attempt to enhance MLLMs capabilities through diverse architectures, the gains have become increasingly marginal. Conversely, data-driven methods, which scale up image-text instruction data, are more effective but face limited data diversity and complexity challenges. The absence of high-quality data constitutes a significant development barrier for MLLMs. To address the data quality bottleneck, we propose MMEvol, a novel multimodal instruction data evolution framework. This framework iteratively improve data quality through a refined combination of fine-grained perception, cognitive reasoning, and interaction evolution, generating a more complex and diverse image-text instruction dataset that empowers MLLMs with enhanced capabilities. Beginning with an initial set of instructions, SEED-163K, we utilize MMEvol to systematically broaden the diversity of instruction types, extend visual reasoning steps to improve cognitive reasoning abilities, and thoroughly explore fine-grained information within images to enhance visual understanding and robustness. To comprehensively evaluate the effectiveness of our approach, we conduct extensive qualitative analysis and quantitative experiments across 13 vision-language tasks. Compared to baseline models trained with the initial seed data, the results demonstrate that our method achieves an average accuracy improvement of 3.1 percentage points. Furthermore, our approach reaches state-of-the-art (SOTA) performance in nine tasks using significantly less data compared to state-of-the-art models.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2409.15310": {
+  "id": "2409.15310",
+  "title": "Visual Prompting in Multimodal Large Language Models: A Survey",
+  "url": "http://arxiv.org/abs/2409.15310",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) equip pre-trained large-language models (LLMs) with visual capabilities. While textual prompting in LLMs has been widely studied, visual prompting has emerged for more fine-grained and free-form visual instructions. This paper presents the first comprehensive survey on visual prompting methods in MLLMs, focusing on visual prompting, prompt generation, compositional reasoning, and prompt learning. We categorize existing visual prompts and discuss generative methods for automatic prompt annotations on the images. We also examine visual prompting methods that enable better alignment between visual encoders and backbone LLMs, concerning MLLM's visual grounding, object referring, and compositional reasoning abilities. In addition, we provide a summary of model training and in-context learning methods to improve MLLM's perception and understanding of visual prompts. This paper examines visual prompting methods developed in MLLMs and provides a vision of the future of these methods.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 4
+ },
+ "2409.18142": {
+  "id": "2409.18142",
+  "title": "A Survey on Multimodal Benchmarks: In the Era of Large AI Models",
+  "url": "http://arxiv.org/abs/2409.18142",
+  "date": "2024-01-01",
+  "abs": "The rapid evolution of Multimodal Large Language Models (MLLMs) has brought substantial advancements in artificial intelligence, significantly enhancing the capability to understand and generate multimodal content. While prior studies have largely concentrated on model architectures and training methodologies, a thorough analysis of the benchmarks used for evaluating these models remains underexplored. This survey addresses this gap by systematically reviewing 211 benchmarks that assess MLLMs across four core domains: understanding, reasoning, generation, and application. We provide a detailed analysis of task designs, evaluation metrics, and dataset constructions, across diverse modalities. We hope that this survey will contribute to the ongoing advancement of MLLM research by offering a comprehensive overview of benchmarking practices and identifying promising directions for future work. An associated GitHub repository collecting the latest papers is available.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2409.18991": {
+  "id": "2409.18991",
+  "title": "Surveying the MLLM Landscape: A Meta-Review of Current Surveys",
+  "url": "http://arxiv.org/abs/2409.18991",
+  "date": "2024-01-01",
+  "abs": "The rise of Multimodal Large Language Models (MLLMs) has become a transformative force in the field of artificial intelligence, enabling machines to process and generate content across multiple modalities, such as text, images, audio, and video. These models represent a significant advancement over traditional unimodal systems, opening new frontiers in diverse applications ranging from autonomous agents to medical diagnostics. By integrating multiple modalities, MLLMs achieve a more holistic understanding of information, closely mimicking human perception. As the capabilities of MLLMs expand, the need for comprehensive and accurate performance evaluation has become increasingly critical. This survey aims to provide a systematic review of benchmark tests and evaluation methods for MLLMs, covering key topics such as foundational concepts, applications, evaluation methodologies, ethical concerns, security, efficiency, and domain-specific applications. Through the classification and analysis of existing literature, we summarize the main contributions and methodologies of various surveys, conduct a detailed comparative analysis, and examine their impact within the academic community. Additionally, we identify emerging trends and underexplored areas in MLLM research, proposing potential directions for future studies. This survey is intended to offer researchers and practitioners a comprehensive understanding of the current state of MLLM evaluation, thereby facilitating further progress in this rapidly evolving field.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2410.07167": {
+  "id": "2410.07167",
+  "title": "Deciphering Cross-Modal Alignment in Large Vision-Language Models with Modality Integration Rate",
+  "url": "http://arxiv.org/abs/2410.07167",
+  "date": "2024-01-01",
+  "abs": "We present the Modality Integration Rate (MIR), an effective, robust, and generalized metric to indicate the multi-modal pre-training quality of Large Vision Language Models (LVLMs). Large-scale pre-training plays a critical role in building capable LVLMs, while evaluating its training quality without the costly supervised fine-tuning stage is under-explored. Loss, perplexity, and in-context evaluation results are commonly used pre-training metrics for Large Language Models (LLMs), while we observed that these metrics are less indicative when aligning a well-trained LLM with a new modality. Due to the lack of proper metrics, the research of LVLMs in the critical pre-training stage is hindered greatly, including the training data choice, efficient module design, etc. In this paper, we propose evaluating the pre-training quality from the inter-modal distribution distance perspective and present MIR, the Modality Integration Rate, which is 1) \\textbf{Effective} to represent the pre-training quality and show a positive relation with the benchmark performance after supervised fine-tuning. 2) \\textbf{Robust} toward different training/evaluation data. 3) \\textbf{Generalize} across training configurations and architecture choices. We conduct a series of pre-training experiments to explore the effectiveness of MIR and observe satisfactory results that MIR is indicative about training data selection, training strategy schedule, and model architecture design to get better pre-training results. We hope MIR could be a helpful metric for building capable LVLMs and inspire the following research about modality alignment in different areas. Our code is at: https://github.com/shikiw/Modality-Integration-Rate.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1
+ },
+ "2410.13859": {
+  "id": "2410.13859",
+  "title": "\u03b3-MoD: Exploring Mixture-of-Depth Adaptation for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2410.13859",
+  "date": "2024-01-01",
+  "abs": "Despite the significant progress in multimodal large language models (MLLMs), their high computational cost remains a barrier to real-world deployment. Inspired by the mixture of depths (MoDs) in natural language processing, we aim to address this limitation from the perspective of ``activated tokens''. Our key insight is that if most tokens are redundant for the layer computation, then can be skipped directly via the MoD layer. However, directly converting the dense layers of MLLMs to MoD layers leads to substantial performance degradation. To address this issue, we propose an innovative MoD adaptation strategy for existing MLLMs called $\u03b3$-MoD. In $\u03b3$-MoD, a novel metric is proposed to guide the deployment of MoDs in the MLLM, namely rank of attention maps (ARank). Through ARank, we can effectively identify which layer is redundant and should be replaced with the MoD layer. Based on ARank, we further propose two novel designs to maximize the computational sparsity of MLLM while maintaining its performance, namely shared vision-language router and masked routing learning. With these designs, more than 90% dense layers of the MLLM can be effectively converted to the MoD ones. To validate our method, we apply it to three popular MLLMs, and conduct extensive experiments on 9 benchmark datasets. Experimental results not only validate the significant efficiency benefit of $\u03b3$-MoD to existing MLLMs but also confirm its generalization ability on various MLLMs. For example, with a minor performance drop, i.e., -1.5%, $\u03b3$-MoD can reduce the training and inference time of LLaVA-HR by 31.0% and 53.2%, respectively.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2410.18325": {
+  "id": "2410.18325",
+  "title": "AVHBench: A Cross-Modal Hallucination Benchmark for Audio-Visual Large Language Models",
+  "url": "http://arxiv.org/abs/2410.18325",
+  "date": "2024-01-01",
+  "abs": "Following the success of Large Language Models (LLMs), expanding their boundaries to new modalities represents a significant paradigm shift in multimodal understanding. Human perception is inherently multimodal, relying not only on text but also on auditory and visual cues for a complete understanding of the world. In recognition of this fact, audio-visual LLMs have recently emerged. Despite promising developments, the lack of dedicated benchmarks poses challenges for understanding and evaluating models. In this work, we show that audio-visual LLMs struggle to discern subtle relationships between audio and visual signals, leading to hallucinations and highlighting the need for reliable benchmarks. To address this, we introduce AVHBench, the first comprehensive benchmark specifically designed to evaluate the perception and comprehension capabilities of audio-visual LLMs. Our benchmark includes tests for assessing hallucinations, as well as the cross-modal matching and reasoning abilities of these models. Our results reveal that most existing audio-visual LLMs struggle with hallucinations caused by cross-interactions between modalities, due to their limited capacity to perceive complex multimodal signals and their relationships. Additionally, we demonstrate that simple training with our AVHBench improves robustness of audio-visual LLMs against hallucinations. Dataset: https://github.com/kaist-ami/AVHBench",
+  "cat": "Signal Processing",
+  "citation_count": 1
+ },
+ "2410.19925": {
+  "id": "2410.19925",
+  "title": "Improving Multimodal Large Language Models Using Continual Learning",
+  "url": "http://arxiv.org/abs/2410.19925",
+  "date": "2024-01-01",
+  "abs": "Generative large language models (LLMs) exhibit impressive capabilities, which can be further augmented by integrating a pre-trained vision model into the original LLM to create a multimodal LLM (MLLM). However, this integration often significantly decreases performance on natural language understanding and generation tasks, compared to the original LLM. This study investigates this issue using the LLaVA MLLM, treating the integration as a continual learning problem. We evaluate five continual learning methods to mitigate forgetting and identify a technique that enhances visual understanding while minimizing linguistic performance loss. Our approach reduces linguistic performance degradation by up to 15% over the LLaVA recipe, while maintaining high multimodal accuracy. We also demonstrate the robustness of our method through continual learning on a sequence of vision-language tasks, effectively preserving linguistic skills while acquiring new multimodal capabilities. Project webpage: https://shikhar-srivastava.github.io/cl-for-improving-mllms",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2411.09259": {
+  "id": "2411.09259",
+  "title": "Jailbreak Attacks and Defenses against Multimodal Generative Models: A Survey",
+  "url": "http://arxiv.org/abs/2411.09259",
+  "date": "2024-01-01",
+  "abs": "The rapid evolution of multimodal foundation models has led to significant advancements in cross-modal understanding and generation across diverse modalities, including text, images, audio, and video. However, these models remain susceptible to jailbreak attacks, which can bypass built-in safety mechanisms and induce the production of potentially harmful content. Consequently, understanding the methods of jailbreak attacks and existing defense mechanisms is essential to ensure the safe deployment of multimodal generative models in real-world scenarios, particularly in security-sensitive applications. To provide comprehensive insight into this topic, this survey reviews jailbreak and defense in multimodal generative models. First, given the generalized lifecycle of multimodal jailbreak, we systematically explore attacks and corresponding defense strategies across four levels: input, encoder, generator, and output. Based on this analysis, we present a detailed taxonomy of attack methods, defense mechanisms, and evaluation frameworks specific to multimodal generative models. Additionally, we cover a wide range of input-output configurations, including modalities such as Any-to-Text, Any-to-Vision, and Any-to-Any within generative systems. Finally, we highlight current research challenges and propose potential directions for future research. The open-source repository corresponding to this work can be found at https://github.com/liuxuannan/Awesome-Multimodal-Jailbreak.",
+  "cat": "Information Systems",
+  "citation_count": 2
+ },
+ "2412.02104": {
+  "id": "2412.02104",
+  "title": "Explainable and Interpretable Multimodal Large Language Models: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/2412.02104",
+  "date": "2024-01-01",
+  "abs": "The rapid development of Artificial Intelligence (AI) has revolutionized numerous fields, with large language models (LLMs) and computer vision (CV) systems driving advancements in natural language understanding and visual processing, respectively. The convergence of these technologies has catalyzed the rise of multimodal AI, enabling richer, cross-modal understanding that spans text, vision, audio, and video modalities. Multimodal large language models (MLLMs), in particular, have emerged as a powerful framework, demonstrating impressive capabilities in tasks like image-text generation, visual question answering, and cross-modal retrieval. Despite these advancements, the complexity and scale of MLLMs introduce significant challenges in interpretability and explainability, essential for establishing transparency, trustworthiness, and reliability in high-stakes applications. This paper provides a comprehensive survey on the interpretability and explainability of MLLMs, proposing a novel framework that categorizes existing research across three perspectives: (I) Data, (II) Model, (III) Training \\&amp; Inference. We systematically analyze interpretability from token-level to embedding-level representations, assess approaches related to both architecture analysis and design, and explore training and inference strategies that enhance transparency. By comparing various methodologies, we identify their strengths and limitations and propose future research directions to address unresolved challenges in multimodal explainability. This survey offers a foundational resource for advancing interpretability and transparency in MLLMs, guiding researchers and practitioners toward developing more accountable and robust multimodal AI systems.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 9
+ },
+ "2412.05155": {
+  "id": "2412.05155",
+  "title": "Multimodal Fact-Checking with Vision Language Models: A Probing Classifier based Solution with Embedding Strategies",
+  "url": "http://arxiv.org/abs/2412.05155",
+  "date": "2024-01-01",
+  "abs": "This study evaluates the effectiveness of Vision Language Models (VLMs) in representing and utilizing multimodal content for fact-checking. To be more specific, we investigate whether incorporating multimodal content improves performance compared to text-only models and how well VLMs utilize text and image information to enhance misinformation detection. Furthermore we propose a probing classifier based solution using VLMs. Our approach extracts embeddings from the last hidden layer of selected VLMs and inputs them into a neural probing classifier for multi-class veracity classification. Through a series of experiments on two fact-checking datasets, we demonstrate that while multimodality can enhance performance, fusing separate embeddings from text and image encoders yielded superior results compared to using VLM embeddings. Furthermore, the proposed neural classifier significantly outperformed KNN and SVM baselines in leveraging extracted embeddings, highlighting its effectiveness for multimodal fact-checking.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2412.05271": {
+  "id": "2412.05271",
+  "title": "Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling",
+  "url": "http://arxiv.org/abs/2412.05271",
+  "date": "2024-01-01",
+  "abs": "We introduce InternVL 2.5, an advanced multimodal large language model (MLLM) series that builds upon InternVL 2.0, maintaining its core model architecture while introducing significant enhancements in training and testing strategies as well as data quality. In this work, we delve into the relationship between model scaling and performance, systematically exploring the performance trends in vision encoders, language models, dataset sizes, and test-time configurations. Through extensive evaluations on a wide range of benchmarks, including multi-discipline reasoning, document understanding, multi-image / video understanding, real-world comprehension, multimodal hallucination detection, visual grounding, multilingual capabilities, and pure language processing, InternVL 2.5 exhibits competitive performance, rivaling leading commercial models such as GPT-4o and Claude-3.5-Sonnet. Notably, our model is the first open-source MLLMs to surpass 70% on the MMMU benchmark, achieving a 3.7-point improvement through Chain-of-Thought (CoT) reasoning and showcasing strong potential for test-time scaling. We hope this model contributes to the open-source community by setting new standards for developing and applying multimodal AI systems. HuggingFace demo see https://huggingface.co/spaces/OpenGVLab/InternVL",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2412.14660": {
+  "id": "2412.14660",
+  "title": "Unveiling Uncertainty: A Deep Dive into Calibration and Performance of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2412.14660",
+  "date": "2024-01-01",
+  "abs": "Multimodal large language models (MLLMs) combine visual and textual data for tasks such as image captioning and visual question answering. Proper uncertainty calibration is crucial, yet challenging, for reliable use in areas like healthcare and autonomous driving. This paper investigates representative MLLMs, focusing on their calibration across various scenarios, including before and after visual fine-tuning, as well as before and after multimodal training of the base LLMs. We observed miscalibration in their performance, and at the same time, no significant differences in calibration across these scenarios. We also highlight how uncertainty differs between text and images and how their integration affects overall uncertainty. To better understand MLLMs' miscalibration and their ability to self-assess uncertainty, we construct the IDK (I don't know) dataset, which is key to evaluating how they handle unknowns. Our findings reveal that MLLMs tend to give answers rather than admit uncertainty, but this self-assessment improves with proper prompt adjustments. Finally, to calibrate MLLMs and enhance model reliability, we propose techniques such as temperature scaling and iterative prompt optimization. Our results provide insights into improving MLLMs for effective and responsible deployment in multimodal applications. Code and IDK dataset: https://github.com/hfutml/Calibration-MLLM.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2502.01576": {
+  "id": "2502.01576",
+  "title": "Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models",
+  "url": "http://arxiv.org/abs/2502.01576",
+  "date": "2025-01-01",
+  "abs": "Multi-modal Large Language Models (MLLMs) excel in vision-language tasks but remain vulnerable to visual adversarial perturbations that can induce hallucinations, manipulate responses, or bypass safety mechanisms. Existing methods seek to mitigate these risks by applying constrained adversarial fine-tuning to CLIP vision encoders on ImageNet-scale data, ensuring their generalization ability is preserved. However, this limited adversarial training restricts robustness and broader generalization. In this work, we explore an alternative approach of leveraging existing vision classification models that have been adversarially pre-trained on large-scale data. Our analysis reveals two principal contributions: (1) the extensive scale and diversity of adversarial pre-training enables these models to demonstrate superior robustness against diverse adversarial threats, ranging from imperceptible perturbations to advanced jailbreaking attempts, without requiring additional adversarial training, and (2) end-to-end MLLM integration with these robust models facilitates enhanced adaptation of language components to robust visual features, outperforming existing plug-and-play methodologies on complex reasoning tasks. Through systematic evaluation across visual question-answering, image captioning, and jail-break attacks, we demonstrate that MLLMs trained with these robust models achieve superior adversarial robustness while maintaining favorable clean performance. Our framework achieves 2x and 1.5x average robustness gains in captioning and VQA tasks, respectively, and delivers over 10% improvement against jailbreak attacks. Code and pretrained models will be available at https://github.com/HashmatShadab/Robust-LLaVA.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1
+ },
+ "2502.08079": {
+  "id": "2502.08079",
+  "title": "MAA: Meticulous Adversarial Attack against Vision-Language Pre-trained Models",
+  "url": "http://arxiv.org/abs/2502.08079",
+  "date": "2025-01-01",
+  "abs": "Current adversarial attacks for evaluating the robustness of vision-language pre-trained (VLP) models in multi-modal tasks suffer from limited transferability, where attacks crafted for a specific model often struggle to generalize effectively across different models, limiting their utility in assessing robustness more broadly. This is mainly attributed to the over-reliance on model-specific features and regions, particularly in the image modality. In this paper, we propose an elegant yet highly effective method termed Meticulous Adversarial Attack (MAA) to fully exploit model-independent characteristics and vulnerabilities of individual samples, achieving enhanced generalizability and reduced model dependence. MAA emphasizes fine-grained optimization of adversarial images by developing a novel resizing and sliding crop (RScrop) technique, incorporating a multi-granularity similarity disruption (MGSD) strategy. Extensive experiments across diverse VLP models, multiple benchmark datasets, and a variety of downstream tasks demonstrate that MAA significantly enhances the effectiveness and transferability of adversarial attacks. A large cohort of performance studies is conducted to generate insights into the effectiveness of various model configurations, guiding future advancements in this domain.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2502.11453": {
+  "id": "2502.11453",
+  "title": "Connector-S: A Survey of Connectors in Multi-modal Large Language Models",
+  "url": "http://arxiv.org/abs/2502.11453",
+  "date": "2025-01-01",
+  "abs": "With the rapid advancements in multi-modal large language models (MLLMs), connectors play a pivotal role in bridging diverse modalities and enhancing model performance. However, the design and evolution of connectors have not been comprehensively analyzed, leaving gaps in understanding how these components function and hindering the development of more powerful connectors. In this survey, we systematically review the current progress of connectors in MLLMs and present a structured taxonomy that categorizes connectors into atomic operations (mapping, compression, mixture of experts) and holistic designs (multi-layer, multi-encoder, multi-modal scenarios), highlighting their technical contributions and advancements. Furthermore, we discuss several promising research frontiers and challenges, including high-resolution input, dynamic compression, guide information selection, combination strategy, and interpretability. This survey is intended to serve as a foundational reference and a clear roadmap for researchers, providing valuable insights into the design and optimization of next-generation connectors to enhance the performance and adaptability of MLLMs.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2502.16586": {
+  "id": "2502.16586",
+  "title": "Multimodal Large Language Models for Text-rich Image Understanding: A Comprehensive Review",
+  "url": "http://arxiv.org/abs/2502.16586",
+  "date": "2025-01-01",
+  "abs": "The recent emergence of Multi-modal Large Language Models (MLLMs) has introduced a new dimension to the Text-rich Image Understanding (TIU) field, with models demonstrating impressive and inspiring performance. However, their rapid evolution and widespread adoption have made it increasingly challenging to keep up with the latest advancements. To address this, we present a systematic and comprehensive survey to facilitate further research on TIU MLLMs. Initially, we outline the timeline, architecture, and pipeline of nearly all TIU MLLMs. Then, we review the performance of selected models on mainstream benchmarks. Finally, we explore promising directions, challenges, and limitations within the field.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2503.02597": {
+  "id": "2503.02597",
+  "title": "Seeing is Understanding: Unlocking Causal Attention into Modality-Mutual Attention for Multimodal LLMs",
+  "url": "http://arxiv.org/abs/2503.02597",
+  "date": "2025-01-01",
+  "abs": "Recent Multimodal Large Language Models (MLLMs) have demonstrated significant progress in perceiving and reasoning over multimodal inquiries, ushering in a new research era for foundation models. However, vision-language misalignment in MLLMs has emerged as a critical challenge, where the textual responses generated by these models are not factually aligned with the given text-image inputs. Existing efforts to address vision-language misalignment have focused on developing specialized vision-language connectors or leveraging visual instruction tuning from diverse domains. In this paper, we tackle this issue from a fundamental yet unexplored perspective by revisiting the core architecture of MLLMs. Most MLLMs are typically built on decoder-only LLMs consisting of a causal attention mechanism, which limits the ability of the earlier modalities (e.g., images) to incorporate information from the latter modalities (e.g., text). To address this problem, we propose \\MapleLeaf AKI, a novel MLLM that unlocks causal attention into modality-mutual attention (MMA) to enable image tokens to attend to text tokens. This simple yet effective design allows AKI to achieve superior performance in 12 multimodal understanding benchmarks (+7.2% on average) without introducing additional parameters and increasing training time. Our MMA design is intended to be generic, allowing for application across various modalities, and scalable to accommodate diverse multimodal scenarios. The code and model are publicly available at https://github.com/sony/aki to encourage further advancements in MLLMs across various directions.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2503.13962": {
+  "id": "2503.13962",
+  "title": "Survey of Adversarial Robustness in Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2503.13962",
+  "date": "2025-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated exceptional performance in artificial intelligence by facilitating integrated understanding across diverse modalities, including text, images, video, audio, and speech. However, their deployment in real-world applications raises significant concerns about adversarial vulnerabilities that could compromise their safety and reliability. Unlike unimodal models, MLLMs face unique challenges due to the interdependencies among modalities, making them susceptible to modality-specific threats and cross-modal adversarial manipulations. This paper reviews the adversarial robustness of MLLMs, covering different modalities. We begin with an overview of MLLMs and a taxonomy of adversarial attacks tailored to each modality. Next, we review key datasets and evaluation metrics used to assess the robustness of MLLMs. After that, we provide an in-depth review of attacks targeting MLLMs across different modalities. Our survey also identifies critical challenges and suggests promising future research directions.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2505.15616": {
+  "id": "2505.15616",
+  "title": "LENS: Multi-level Evaluation of Multimodal Reasoning with Large Language Models",
+  "url": "http://arxiv.org/abs/2505.15616",
+  "date": "2025-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have achieved significant advances in integrating visual and linguistic information, yet their ability to reason about complex and real-world scenarios remains limited. The existing benchmarks are usually constructed in the task-oriented manner without guarantee that different task samples come from the same data distribution, thus they often fall short in evaluating the synergistic effects of lower-level perceptual capabilities on higher-order reasoning. To lift this limitation, we contribute Lens, a multi-level benchmark with 3.4K contemporary images and 60K+ human-authored questions covering eight tasks and 12 daily scenarios, forming three progressive task tiers, i.e., perception, understanding, and reasoning. One feature is that each image is equipped with rich annotations for all tasks. Thus, this dataset intrinsically supports to evaluate MLLMs to handle image-invariable prompts, from basic perception to compositional reasoning. In addition, our images are manully collected from the social media, in which 53% were published later than Jan. 2025. We evaluate 15+ frontier MLLMs such as Qwen2.5-VL-72B, InternVL3-78B, GPT-4o and two reasoning models QVQ-72B-preview and Kimi-VL. These models are released later than Dec. 2024, and none of them achieve an accuracy greater than 60% in the reasoning tasks. Project page: https://github.com/Lens4MLLMs/lens. ICCV 2025 workshop page: https://lens4mllms.github.io/mars2-workshop-iccv2025/",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2506.04788": {
+  "id": "2506.04788",
+  "title": "Towards LLM-Centric Multimodal Fusion: A Survey on Integration Strategies and Techniques",
+  "url": "http://arxiv.org/abs/2506.04788",
+  "date": "2025-01-01",
+  "abs": "The rapid progress of Multimodal Large Language Models(MLLMs) has transformed the AI landscape. These models combine pre-trained LLMs with various modality encoders. This integration requires a systematic understanding of how different modalities connect to the language backbone. Our survey presents an LLM-centric analysis of current approaches. We examine methods for transforming and aligning diverse modal inputs into the language embedding space. This addresses a significant gap in existing literature. We propose a classification framework for MLLMs based on three key dimensions. First, we examine architectural strategies for modality integration. This includes both the specific integration mechanisms and the fusion level. Second, we categorize representation learning techniques as either joint or coordinate representations. Third, we analyze training paradigms, including training strategies and objective functions. By examining 125 MLLMs developed between 2021 and 2025, we identify emerging patterns in the field. Our taxonomy provides researchers with a structured overview of current integration techniques. These insights aim to guide the development of more robust multimodal integration strategies for future models built on pre-trained foundations.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2506.11976": {
+  "id": "2506.11976",
+  "title": "How Visual Representations Map to Language Feature Space in Multimodal LLMs",
+  "url": "http://arxiv.org/abs/2506.11976",
+  "date": "2025-01-01",
+  "abs": "Effective multimodal reasoning depends on the alignment of visual and linguistic representations, yet the mechanisms by which vision-language models (VLMs) achieve this alignment remain poorly understood. Following the LiMBeR framework, we deliberately maintain a frozen large language model (LLM) and a frozen vision transformer (ViT), connected solely by training a linear adapter during visual instruction tuning. By keeping the language model frozen, we ensure it maintains its original language representations without adaptation to visual data. Consequently, the linear adapter must map visual features directly into the LLM's existing representational space rather than allowing the language model to develop specialized visual understanding through fine-tuning. Our experimental design uniquely enables the use of pre-trained sparse autoencoders (SAEs) of the LLM as analytical probes. These SAEs remain perfectly aligned with the unchanged language model and serve as a snapshot of the learned language feature-representations. Through systematic analysis of SAE reconstruction error, sparsity patterns, and feature SAE descriptions, we reveal the layer-wise progression through which visual representations gradually align with language feature representations, converging in middle-to-later layers. This suggests a fundamental misalignment between ViT outputs and early LLM layers, raising important questions about whether current adapter-based architectures optimally facilitate cross-modal representation learning.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2506.16691": {
+  "id": "2506.16691",
+  "title": "LaVi: Efficient Large Vision-Language Models via Internal Feature Modulation",
+  "url": "http://arxiv.org/abs/2506.16691",
+  "date": "2025-01-01",
+  "abs": "Despite the impressive advancements of Large Vision-Language Models (LVLMs), existing approaches suffer from a fundamental bottleneck: inefficient visual-language integration. Current methods either disrupt the model's inherent structure or introduce severe long-context computational burden, severely limiting scalability and efficiency. In this paper, we rethink multimodal integration and present LaVi, a novel LVLM that enables seamless and efficient vision-language fusion through internal feature modulation within the Large Language Models (LLMs). Unlike dominant LVLMs that rely on visual token concatenation, LaVi bypasses long-context expansion by introducing a lightweight and adaptive transformation, which incorporates visual context by injecting token-wise vision-conditioned deltas into the affine parameters of layer normalization. This mechanism directly modulates linguistic hidden states based on visual input, ensuring precise vision-language alignment while preserving the LLM's linguistic priors and drastically reducing computational costs. Extensive evaluations across 15 image and video benchmarks demonstrate that LaVi not only achieves state-of-the-art multimodal performance but also dramatically enhances efficiency. Compared to LLaVA-OV-7B, LaVi reduces FLOPs by 94.0%, improves inference speed by 3.1 times, and cuts memory usage in half - establishing LaVi as a scalable and practical solution for real-time multimodal reasoning. The code and models will be released soon.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2508.05602": {
+  "id": "2508.05602",
+  "title": "LLaVA-RE: Binary Image-Text Relevancy Evaluation with Multimodal Large Language Model",
+  "url": "http://arxiv.org/abs/2508.05602",
+  "date": "2025-01-01",
+  "abs": "Multimodal generative AI usually involves generating image or text responses given inputs in another modality. The evaluation of image-text relevancy is essential for measuring response quality or ranking candidate responses. In particular, binary relevancy evaluation, i.e., ``Relevant'' vs. ``Not Relevant'', is a fundamental problem. However, this is a challenging task considering that texts have diverse formats and the definition of relevancy varies in different scenarios. We find that Multimodal Large Language Models (MLLMs) are an ideal choice to build such evaluators, as they can flexibly handle complex text formats and take in additional task information. In this paper, we present LLaVA-RE, a first attempt for binary image-text relevancy evaluation with MLLM. It follows the LLaVA architecture and adopts detailed task instructions and multimodal in-context samples. In addition, we propose a novel binary relevancy data set that covers various tasks. Experimental results validate the effectiveness of our framework.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2508.10552": {
+  "id": "2508.10552",
+  "title": "When Language Overrules: Revealing Text Dominance in Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2508.10552",
+  "date": "2025-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities across a diverse range of multimodal tasks. However, these models suffer from a core problem known as text dominance: they depend heavily on text for their inference, while underutilizing other modalities. While prior work has acknowledged this phenomenon in vision-language tasks, often attributing it to data biases or model architectures. In this paper, we conduct the first systematic investigation of text dominance across diverse data modalities, including images, videos, audio, time-series, and graphs. To measure this imbalance, we propose two evaluation metrics: the Modality Dominance Index (MDI) and the Attention Efficiency Index (AEI). Our comprehensive analysis reveals that text dominance is both significant and pervasive across all tested modalities. Our in-depth analysis identifies three underlying causes: attention dilution from severe token redundancy in non-textual modalities, the influence of fusion architecture design, and task formulations that implicitly favor textual inputs. Furthermore, we propose a simple token compression method that effectively rebalances model attention. Applying this method to LLaVA-7B, for instance, drastically reduces its MDI from 10.23 to a well-balanced value of 0.86. Our analysis and methodological framework offer a foundation for the development of more equitable and comprehensive multimodal language models.",
+  "cat": "Genetics",
+  "citation_count": 0
+ },
+ "2508.14264": {
+  "id": "2508.14264",
+  "title": "Directed-Tokens: A Robust Multi-Modality Alignment Approach to Large Language-Vision Models",
+  "url": "http://arxiv.org/abs/2508.14264",
+  "date": "2025-01-01",
+  "abs": "Large multimodal models (LMMs) have gained impressive performance due to their outstanding capability in various understanding tasks. However, these models still suffer from some fundamental limitations related to robustness and generalization due to the alignment and correlation between visual and textual features. In this paper, we introduce a simple but efficient learning mechanism for improving the robust alignment between visual and textual modalities by solving shuffling problems. In particular, the proposed approach can improve reasoning capability, visual understanding, and cross-modality alignment by introducing two new tasks: reconstructing the image order and the text order into the LMM's pre-training and fine-tuning phases. In addition, we propose a new directed-token approach to capture visual and textual knowledge, enabling the capability to reconstruct the correct order of visual inputs. Then, we introduce a new Image-to-Response Guided loss to further improve the visual understanding of the LMM in its responses. The proposed approach consistently achieves state-of-the-art (SoTA) performance compared with prior LMMs on academic task-oriented and instruction-following LMM benchmarks.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2508.20279": {
+  "id": "2508.20279",
+  "title": "How Multimodal LLMs Solve Image Tasks: A Lens on Visual Grounding, Task Reasoning, and Answer Decoding",
+  "url": "http://arxiv.org/abs/2508.20279",
+  "date": "2025-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated strong performance across a wide range of vision-language tasks, yet their internal processing dynamics remain underexplored. In this work, we introduce a probing framework to systematically analyze how MLLMs process visual and textual inputs across layers. We train linear classifiers to predict fine-grained visual categories (e.g., dog breeds) from token embeddings extracted at each layer, using a standardized anchor question. To uncover the functional roles of different layers, we evaluate these probes under three types of controlled prompt variations: (1) lexical variants that test sensitivity to surface-level changes, (2) semantic negation variants that flip the expected answer by modifying the visual concept in the prompt, and (3) output format variants that preserve reasoning but alter the answer format. Applying our framework to LLaVA-1.5, LLaVA-Next-LLaMA-3, and Qwen2-VL, we identify a consistent stage-wise structure in which early layers perform visual grounding, middle layers support lexical integration and semantic reasoning, and final layers prepare task-specific outputs. We further show that while the overall stage-wise structure remains stable across variations in visual tokenization, instruction tuning data, and pretraining corpus, the specific layer allocation to each stage shifts notably with changes in the base LLM architecture. Our findings provide a unified perspective on the layer-wise organization of MLLMs and offer a lightweight, model-agnostic approach for analyzing multimodal representation dynamics.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1
+ },
+ "2509.07979": {
+  "id": "2509.07979",
+  "title": "Visual Representation Alignment for Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2509.07979",
+  "date": "2025-01-01",
+  "abs": "Multimodal large language models (MLLMs) trained with visual instruction tuning have achieved strong performance across diverse tasks, yet they remain limited in vision-centric tasks such as object counting or spatial reasoning. We attribute this gap to the prevailing text-only supervision paradigm, which provides only indirect guidance for the visual pathway and often leads MLLMs to discard fine-grained visual details during training. In this paper, we present VIsual Representation ALignment (VIRAL), a simple yet effective regularization strategy that aligns the internal visual representations of MLLMs with those of pre-trained vision foundation models (VFMs). By explicitly enforcing this alignment, VIRAL enables the model not only to retain critical visual details from the input vision encoder but also to complement additional visual knowledge from VFMs, thereby enhancing its ability to reason over complex visual inputs. Our experiments demonstrate consistent improvements across all tasks on widely adopted multimodal benchmarks. Furthermore, we conduct comprehensive ablation studies to validate the key design choices underlying our framework. We believe this simple finding opens up an important direction for the effective integration of visual information in training MLLMs.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2511.20494": {
+  "id": "2511.20494",
+  "title": "Adversarial Confusion Attack: Disrupting Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2511.20494",
+  "date": "2025-01-01",
+  "abs": "We introduce the Adversarial Confusion Attack, a new class of threats against multimodal large language models (MLLMs). Unlike jailbreaks or targeted misclassification, the goal is to induce systematic disruption that makes the model generate incoherent or confidently incorrect outputs. Practical applications include embedding such adversarial images into websites to prevent MLLM-powered AI Agents from operating reliably. The proposed attack maximizes next-token entropy using a small ensemble of open-source MLLMs. In the white-box setting, we show that a single adversarial image can disrupt all models in the ensemble, both in the full-image and Adversarial CAPTCHA settings. Despite relying on a basic adversarial technique (PGD), the attack generates perturbations that transfer to both unseen open-source (e.g., Qwen3-VL) and proprietary (e.g., GPT-5.1) models.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2511.23375": {
+  "id": "2511.23375",
+  "title": "Optimizing Multimodal Language Models through Attention-based Interpretability",
+  "url": "http://arxiv.org/abs/2511.23375",
+  "date": "2025-01-01",
+  "abs": "Modern large language models become multimodal, analyzing various data formats like text and images. While fine-tuning is effective for adapting these multimodal language models (MLMs) to downstream tasks, full fine-tuning is computationally expensive. Parameter-Efficient Fine-Tuning (PEFT) methods address this by training only a small portion of model weights. However, MLMs are difficult to interpret, making it challenging to identify which components are most effective for training to balance efficiency and performance. We propose an attention-based interpretability method for MLMs by analyzing attention scores relative to image tokens. The core idea is to identify attention heads that focus on image key objects. We utilize this information to select optimal model components for PEFT in multimodal models. Our contributions include a method for identifying attention heads associated with image key objects, its application to PEFT for image captioning, and the creation of a new dataset containing images, key object masks, and their textual descriptions. We conducted experiments on MLMs with 2-3 billion parameters to validate the method's effectiveness. By calculating Head Impact (HI) scores we quantify an attention head's focus on key objects, indicating its significance in image understanding. Our fine-tuning experiments demonstrate that adapting layers with the highest HI scores leads to the most significant shifts in metrics compared to pre-trained, randomly selected, or lowest-HI-score layers. This indicates that fine-tuning a small percentage (around 0.01%) of parameters in these crucial layers can substantially influence image understanding capabilities.",
+  "cat": null,
+  "citation_count": 0
+ },
+ "2512.06281": {
+  "id": "2512.06281",
+  "title": "Unleashing the Intrinsic Visual Representation Capability of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2512.06281",
+  "date": "2025-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in multimodal tasks. Despite their impressive performance, MLLMs suffer from the modality imbalance issue, where visual information is often underutilized compared to textual representations in deeper layers, leading to degraded visual performance or hallucinations. This issue stems from the predominant reliance on next-text-token-prediction during training, which fails to provide direct visual supervisory signals, resulting in progressive homogenization of visual representations throughout the layers. To this end, we propose Latent Visual Reconstruction (LaVer), a novel training framework that facilitates MLLMs in learning more discriminative visual representations via masked image modeling in the joint latent semantic space of LLM. Our method offers direct visual activation to MLLMs, which exhibit increased visual attention allocation, indicating enhanced utilization of visual information. Extensive experiments across diverse benchmarks prove the superiority of our approach in various scenarios, especially those requiring dense visual capabilities. Code of LaVer is available at https://github.com/Fir-lat/LaVer.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "10.1109/jstsp.2026.3653157": {
+  "id": "10.1109/jstsp.2026.3653157",
+  "title": "SLAM-LLM: A Modular, Open-Source Multimodal Large Language Model Framework and Best Practice for Speech, Language, Audio and Music Processing",
+  "url": "https://doi.org/10.1109/jstsp.2026.3653157",
+  "date": "2026-01-01",
+  "abs": "The recent surge in open-source Multimodal Large Language Models (MLLM) frameworks, such as LLaVA, provides a convenient kickoff for artificial intelligence developers and researchers. However, most of the MLLM frameworks take vision as the main input modality, and provide limited in-depth support for the modality of speech, audio, and music. This situation hinders the development of audio-language models, and forces researchers to spend a lot of effort on code writing and hyperparameter tuning. We present SLAM-LLM, an open-source deep learning framework designed to train customized MLLMs, focused on speech, language, audio, and music processing. SLAM-LLM provides a modular configuration of different encoders, projectors, LLMs, and parameter-efficient fine-tuning plugins. SLAM-LLM also includes detailed training and inference recipes for mainstream tasks, along with high-performance checkpoints like LLM-based Automatic Speech Recognition (ASR), Automated Audio Captioning (AAC), and Music Captioning (MC). Some of these recipes have already reached or are nearing state-of-the-art performance, and some relevant techniques have also been accepted by academic papers. We hope SLAM-LLM will accelerate iteration, development, data engineering, and model training for researchers. We are committed to continually pushing forward audio-based MLLMs through this open-source framework, and call on the community to contribute to the LLM-based speech, audio and music processing.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2601.03594": {
+  "id": "2601.03594",
+  "title": "Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense",
+  "url": "http://arxiv.org/abs/2601.03594",
+  "date": "2026-01-01",
+  "abs": "This paper provides a systematic survey of jailbreak attacks and defenses on Large Language Models (LLMs) and Vision-Language Models (VLMs), emphasizing that jailbreak vulnerabilities stem from structural factors such as incomplete training data, linguistic ambiguity, and generative uncertainty. It further differentiates between hallucinations and jailbreaks in terms of intent and triggering mechanisms. We propose a three-dimensional survey framework: (1) Attack dimension-including template/encoding-based, in-context learning manipulation, reinforcement/adversarial learning, LLM-assisted and fine-tuned attacks, as well as prompt- and image-level perturbations and agent-based transfer in VLMs; (2) Defense dimension-encompassing prompt-level obfuscation, output evaluation, and model-level alignment or fine-tuning; and (3) Evaluation dimension-covering metrics such as Attack Success Rate (ASR), toxicity score, query/time cost, and multimodal Clean Accuracy and Attribute Success Rate. Compared with prior works, this survey spans the full spectrum from text-only to multimodal settings, consolidating shared mechanisms and proposing unified defense principles: variant-consistency and gradient-sensitivity detection at the perception layer, safety-aware decoding and output review at the generation layer, and adversarially augmented preference alignment at the parameter layer. Additionally, we summarize existing multimodal safety benchmarks and discuss future directions, including automated red teaming, cross-modal collaborative defense, and standardized evaluation.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2601.10313": {
+  "id": "2601.10313",
+  "title": "Hierarchical Refinement of Universal Multimodal Attacks on Vision-Language Models",
+  "url": "http://arxiv.org/abs/2601.10313",
+  "date": "2026-01-01",
+  "abs": "Existing adversarial attacks for VLP models are mostly sample-specific, resulting in substantial computational overhead when scaled to large datasets or new scenarios. To overcome this limitation, we propose Hierarchical Refinement Attack (HRA), a multimodal universal attack framework for VLP models. HRA refines universal adversarial perturbations (UAPs) at both the sample level and the optimization level. For the image modality, we disentangle adversarial examples into clean images and perturbations, allowing each component to be handled independently for more effective disruption of cross-modal alignment. We further introduce a ScMix augmentation strategy that diversifies visual contexts and strengthens both global and local utility of UAPs, thereby reducing reliance on spurious features. In addition, we refine the optimization path by leveraging a temporal hierarchy of historical and estimated future gradients to avoid local minima and stabilize universal perturbation learning. For the text modality, HRA identifies globally influential words by combining intra-sentence and inter-sentence importance measures, and subsequently utilizes these words as universal text perturbations. Extensive experiments across various downstream tasks, VLP models, and datasets demonstrate the superiority of the proposed universal multimodal attacks.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2601.10710": {
+  "id": "2601.10710",
+  "title": "From One-to-One to Many-to-Many: Dynamic Cross-Layer Injection for Deep Vision-Language Fusion",
+  "url": "http://arxiv.org/abs/2601.10710",
+  "date": "2026-01-01",
+  "abs": "Vision-Language Models (VLMs) create a severe visual feature bottleneck by using a crude, asymmetric connection that links only the output of the vision encoder to the input of the large language model (LLM). This static architecture fundamentally limits the ability of LLMs to achieve comprehensive alignment with hierarchical visual knowledge, compromising their capacity to accurately integrate local details with global semantics into coherent reasoning. To resolve this, we introduce Cross-Layer Injection (CLI), a novel and lightweight framework that forges a dynamic many-to-many bridge between the two modalities. CLI consists of two synergistic, parameter-efficient components: an Adaptive Multi-Projection (AMP) module that harmonizes features from diverse vision layers, and an Adaptive Gating Fusion (AGF) mechanism that empowers the LLM to selectively inject the most relevant visual information based on its real-time decoding context. We validate the effectiveness and versatility of CLI by integrating it into LLaVA-OneVision and LLaVA-1.5. Extensive experiments on 18 diverse benchmarks demonstrate significant performance improvements, establishing CLI as a scalable paradigm that unlocks deeper multimodal understanding by granting LLMs on-demand access to the full visual hierarchy.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2601.11464": {
+  "id": "2601.11464",
+  "title": "MHA2MLA-VLM: Enabling DeepSeek's Economical Multi-Head Latent Attention across Vision-Language Models",
+  "url": "http://arxiv.org/abs/2601.11464",
+  "date": "2026-01-01",
+  "abs": "As vision-language models (VLMs) tackle increasingly complex and multimodal tasks, the rapid growth of Key-Value (KV) cache imposes significant memory and computational bottlenecks during inference. While Multi-Head Latent Attention (MLA) offers an effective means to compress the KV cache and accelerate inference, adapting existing VLMs to the MLA architecture without costly pretraining remains largely unexplored. In this work, we present MHA2MLA-VLM, a parameter-efficient and multimodal-aware framework for converting off-the-shelf VLMs to MLA. Our approach features two core techniques: (1) a modality-adaptive partial-RoPE strategy that supports both traditional and multimodal settings by selectively masking nonessential dimensions, and (2) a modality-decoupled low-rank approximation method that independently compresses the visual and textual KV spaces. Furthermore, we introduce parameter-efficient fine-tuning to minimize adaptation cost and demonstrate that minimizing output activation error, rather than parameter distance, substantially reduces performance loss. Extensive experiments on three representative VLMs show that MHA2MLA-VLM restores original model performance with minimal supervised data, significantly reduces KV cache footprint, and integrates seamlessly with KV quantization.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ },
+ "2601.21181": {
+  "id": "2601.21181",
+  "title": "MAD: Modality-Adaptive Decoding for Mitigating Cross-Modal Hallucinations in Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2601.21181",
+  "date": "2026-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) suffer from cross-modal hallucinations, where one modality inappropriately influences generation about another, leading to fabricated output. This exposes a more fundamental deficiency in modality-interaction control. To address this, we propose Modality-Adaptive Decoding (MAD), a training-free method that adaptively weights modality-specific decoding branches based on task requirements. MAD leverages the model's inherent ability to self-assess modality relevance by querying which modalities are needed for each task. The extracted modality probabilities are then used to adaptively weight contrastive decoding branches, enabling the model to focus on relevant information while suppressing cross-modal interference. Extensive experiments on CMM and AVHBench demonstrate that MAD significantly reduces cross-modal hallucinations across multiple audio-visual language models (7.8\\% and 2.0\\% improvements for VideoLLaMA2-AV, 8.7\\% and 4.7\\% improvements for Qwen2.5-Omni). Our approach demonstrates that explicit modality awareness through self-assessment is crucial for robust multimodal reasoning, offering a principled extension to existing contrastive decoding methods. Our code is available at \\href{https://github.com/top-yun/MAD}{https://github.com/top-yun/MAD}",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 0
+ }
+}

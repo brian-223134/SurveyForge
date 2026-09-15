@@ -1,0 +1,714 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Adversarial Attacks on Multimodal Large Language Models**.
+
+You have created the following overall outline:
+---
+Title: Adversarial Attacks on Multimodal Large Language Models: A Comprehensive Survey
+
+Section 1: Introduction
+Description 1: This section introduces the concept of adversarial attacks on multimodal large language models, discussing their importance, recent developments, and the need for a comprehensive survey. 
+1. Definition and explanation of adversarial attacks in the context of multimodal large language models, highlighting their differences from traditional attacks and their potential impact on model reliability and security.
+2. Overview of the current state of research in this area, including key challenges and open issues that necessitate a thorough examination of adversarial attacks on multimodal large language models.
+3. Importance of understanding and mitigating these attacks for ensuring the reliability and security of multimodal large language models in various applications, including but not limited to natural language processing, computer vision, and human-computer interaction.
+
+Section 2: Background and Fundamentals of Multimodal Large Language Models
+Description 2: This section provides a background on multimodal large language models, including their architecture, training methods, and applications, to establish a foundation for understanding adversarial attacks.
+1. Architectural overview of multimodal large language models, including vision and language encoders, and their integration for multimodal understanding and generation.
+2. Discussion on the training objectives and methods used for these models, such as masked language modeling, next-token prediction, and multimodal fusion techniques.
+3. Examples of applications where multimodal large language models are deployed, such as image captioning, visual question answering, text-image generation, and multimodal dialogue systems.
+
+Section 3: Types and Mechanisms of Adversarial Attacks
+Description 3: This section delves into the types and mechanisms of adversarial attacks on multimodal large language models, including their goals, methodologies, and evaluation metrics.
+1. Classification of adversarial attacks into different types, such as targeted and untargeted attacks, and their specific goals, including model evasion, model extraction, and data poisoning.
+2. Explanation of the methodologies used to generate adversarial examples, including gradient-based methods, such as fast gradient sign method and projected gradient descent, and gradient-free methods, such as genetic algorithms and evolutionary strategies.
+3. Discussion on the evaluation metrics used to assess the effectiveness of adversarial attacks and the robustness of models against these attacks, including attack success rate, model accuracy under attack, and robustness metrics.
+
+Section 4: Defense Mechanisms and Robustness Evaluation
+Description 4: This section focuses on the defense mechanisms designed to mitigate adversarial attacks on multimodal large language models and the methods used to evaluate model robustness.
+1. Overview of defense strategies, including adversarial training, which involves training models on adversarial examples to improve robustness, input preprocessing, and detection methods, such as anomaly detection and adversarial example detection.
+2. Discussion on the importance of evaluating model robustness and the metrics used for this purpose, including attack success rate, robustness metrics, and model performance on benign inputs.
+3. Examination of the trade-offs between model robustness and performance on benign inputs, highlighting the challenges of balancing security and functionality in multimodal large language models.
+
+Section 5: Applications and Case Studies of Adversarial Attacks
+Description 5: This section explores the applications and case studies of adversarial attacks on multimodal large language models, highlighting their impact on real-world systems.
+1. Discussion on the potential impact of adversarial attacks on applications such as autonomous vehicles, healthcare, and education, where multimodal large language models are increasingly being used.
+2. Presentation of case studies demonstrating successful adversarial attacks on multimodal large language models in various domains, including but not limited to image captioning, visual question answering, and multimodal sentiment analysis.
+3. Analysis of the lessons learned from these case studies and their implications for improving model security and robustness, including the need for more comprehensive testing and evaluation protocols.
+
+Section 6: Real-World Implications and Future Directions
+Description 6: This section discusses the real-world implications of adversarial attacks on multimodal large language models and outlines future research directions.
+1. Examination of the potential consequences of successful adversarial attacks, including data breaches, model theft, and misuse, and their implications for privacy, security, and trust in AI systems.
+2. Discussion on the emerging trends and research opportunities in this area, including the development of more robust and secure multimodal large language models, and the exploration of new applications and domains.
+3. Identification of open challenges and potential gaps in current research, including the need for more effective defense mechanisms, better evaluation metrics, and increased understanding of attack mechanisms and their implications.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing the key findings, discussing the implications of adversarial attacks on multimodal large language models, and providing recommendations for future research and practice.
+1. Summary of the key findings from the survey, highlighting the importance of understanding and mitigating adversarial attacks on multimodal large language models.
+2. Discussion on the implications of these attacks for the deployment and use of multimodal large language models in various applications, including the need for robust security protocols and comprehensive testing.
+3. Recommendations for future research directions and best practices for developing and deploying secure multimodal large language models, including the importance of interdisciplinary collaboration and knowledge sharing to address the complex challenges posed by adversarial attacks.
+---
+
+You need to enrich the section **Real-World Implications and Future Directions**, described as: **This section discusses the real-world implications of adversarial attacks on multimodal large language models and outlines future research directions.
+1. Examination of the potential consequences of successful adversarial attacks, including data breaches, model theft, and misuse, and their implications for privacy, security, and trust in AI systems.
+2. Discussion on the emerging trends and research opportunities in this area, including the development of more robust and secure multimodal large language models, and the exploration of new applications and domains.
+3. Identification of open challenges and potential gaps in current research, including the need for more effective defense mechanisms, better evaluation metrics, and increased understanding of attack mechanisms and their implications.**
+
+**Main task:**
+Generate a comprehensive framework for **Real-World Implications and Future Directions** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: Adversarial Attacks on Large Language Models Using Regularized Relaxation
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As powerful Large Language Models (LLMs) are now widely used for numerous practical applications, their safety is of critical importance. While alignment techniques have significantly improved overall safety, LLMs remain vulnerable to carefully crafted adversarial inputs. Consequently, adversarial attack methods are extensively used to study and understand these vulnerabilities. However, current attack methods face significant limitations. Those relying on optimizing discrete tokens suffer from limited efficiency, while continuous optimization techniques fail to generate valid tokens from the model's vocabulary, rendering them impractical for real-world applications. In this paper, we propose a novel technique for adversarial attacks that overcomes these limitations by leveraging regularized gradients with continuous optimization methods. Our approach is two orders of magnitude faster than the state-of-the-art greedy coordinate gradient-based method, significantly improving the attack success rate on aligned language models. Moreover, it generates valid tokens, addressing a fundamental limitation of existing continuous optimization methods. We demonstrate the effectiveness of our attack on five state-of-the-art LLMs using four datasets.
+---
+paper_title: Towards Adversarial Attack on Vision-Language Pre-training Models
+
+publish_date: 2022-01-01
+
+paper_content:
+
+While vision-language pre-training model (VLP) has shown revolutionary improvements on various vision-language (V+L) tasks, the studies regarding its adversarial robustness remain largely unexplored. This paper studied the adversarial attack on popular VLP models and V+L tasks. First, we analyzed the performance of adversarial attacks under different settings. By examining the influence of different perturbed objects and attack targets, we concluded some key observations as guidance on both designing strong multimodal adversarial attack and constructing robust VLP models. Second, we proposed a novel multimodal attack method on the VLP models called Collaborative Multimodal Adversarial Attack (Co-Attack), which collectively carries out the attacks on the image modality and the text modality. Experimental results demonstrated that the proposed method achieves improved attack performances on different V+L downstream tasks and VLP models. The analysis observations and novel attack method hopefully provide new understanding into the adversarial robustness of VLP models, so as to contribute their safe and reliable deployment in more real-world scenarios. Code is available at https://github.com/adversarial-for-goodness/Co-Attack.
+---
+paper_title: On the Adversarial Robustness of Multi-Modal Foundation Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Multi-modal foundation models combining vision and language models such as Flamingo or GPT-4 have recently gained enormous interest. Alignment of foundation models is used to prevent models from providing toxic or harmful output. While malicious users have successfully tried to jailbreak foundation models, an equally important question is if honest users could be harmed by malicious third-party content. In this paper we show that imperceivable attacks on images $\left({{\varepsilon _\infty } = 1/255}\right)$ in order to change the caption output of a multi-modal foundation model can be used by malicious content providers to harm honest users e.g. by guiding them to malicious websites or broadcast fake information. This indicates that countermeasures to adversarial attacks should be used by any deployed multi-modal foundation model. Note: This paper contains fake information to illustrate the outcome of our attacks. It does not reflect the opinion of the authors.
+---
+paper_title: Multifaceted Evaluation of Audio-Visual Capability for MLLMs: Effectiveness, Efficiency, Generalizability and Robustness
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Multi-modal large language models (MLLMs) have recently achieved great success in processing and understanding information from diverse modalities (e.g., text, audio, and visual signals). Despite their growing popularity, there remains a lack of comprehensive evaluation measuring the audio-visual capabilities of these models, especially in diverse scenarios (e.g., distribution shifts and adversarial attacks). In this paper, we present a multifaceted evaluation of the audio-visual capability of MLLMs, focusing on four key dimensions: effectiveness, efficiency, generalizability, and robustness. Through extensive experiments, we find that MLLMs exhibit strong zero-shot and few-shot generalization abilities, enabling them to achieve great performance with limited data. However, their success relies heavily on the vision modality, which impairs performance when visual input is corrupted or missing. Additionally, while MLLMs are susceptible to adversarial samples, they demonstrate greater robustness compared to traditional models. The experimental results and our findings provide insights into the audio-visual capabilities of MLLMs, highlighting areas for improvement and offering guidance for future research.
+---
+paper_title: Emerging Security Challenges of Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large language models (LLMs) have achieved record adoption in a short period of time across many different sectors including high importance areas such as education [4] and healthcare [23]. LLMs are open-ended models trained on diverse data without being tailored for specific downstream tasks, enabling broad applicability across various domains. They are commonly used for text generation, but also widely used to assist with code generation [3], and even analysis of security information, as Microsoft Security Copilot demonstrates [18]. Traditional Machine Learning (ML) models are vulnerable to adversarial attacks [9]. So the concerns on the potential security implications of such wide scale adoption of LLMs have led to the creation of this working group on the security of LLMs. During the Dagstuhl seminar on "Network Attack Detection and Defense - AI-Powered Threats and Responses", the working group discussions focused on the vulnerability of LLMs to adversarial attacks, rather than their potential use in generating malware or enabling cyberattacks. Although we note the potential threat represented by the latter, the role of the LLMs in such uses is mostly as an accelerator for development, similar to what it is in benign use. To make the analysis more specific, the working group employed ChatGPT as a concrete example of an LLM and addressed the following points, which also form the structure of this report: 1. How do LLMs differ in vulnerabilities from traditional ML models? 2. What are the attack objectives in LLMs? 3. How complex it is to assess the risks posed by the vulnerabilities of LLMs? 4. What is the supply chain in LLMs, how data flow in and out of systems and what are the security implications? We conclude with an overview of open challenges and outlook.
+---
+paper_title: An Empirical Study on Adversarial Attack on NMT: Languages and Positions Matter
+
+publish_date: 2021-01-01
+
+paper_content:
+
+Zhiyuan Zeng, Deyi Xiong. Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). 2021.
+---
+paper_title: Adversarial-Guided Diffusion for Multimodal LLM Attacks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This paper addresses the challenge of generating adversarial image using a diffusion model to deceive multimodal large language models (MLLMs) into generating the targeted responses, while avoiding significant distortion of the clean image. To address the above challenges, we propose an adversarial-guided diffusion (AGD) approach for adversarial attack MLLMs. We introduce adversarial-guided noise to ensure attack efficacy. A key observation in our design is that, unlike most traditional adversarial attacks which embed high-frequency perturbations directly into the clean image, AGD injects target semantics into the noise component of the reverse diffusion. Since the added noise in a diffusion model spans the entire frequency spectrum, the adversarial signal embedded within it also inherits this full-spectrum property. Importantly, during reverse diffusion, the adversarial image is formed as a linear combination of the clean image and the noise. Thus, when applying defenses such as a simple low-pass filtering, which act independently on each component, the adversarial image within the noise component is less likely to be suppressed, as it is not confined to the high-frequency band. This makes AGD inherently robust to variety defenses. Extensive experiments demonstrate that our AGD outperforms state-of-the-art methods in attack performance as well as in model robustness to some defenses.
+---
+paper_title: COGNITION: From Evaluation to Defense against Multimodal LLM CAPTCHA Solvers
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This paper studies how multimodal large language models (MLLMs) undermine the security guarantees of visual CAPTCHA. We identify the attack surface where an adversary can cheaply automate CAPTCHA solving using off-the-shelf models. We evaluate 7 leading commercial and open-source MLLMs across 18 real-world CAPTCHA task types, measuring single-shot accuracy, success under limited retries, end-to-end latency, and per-solve cost. We further analyze the impact of task-specific prompt engineering and few-shot demonstrations on solver effectiveness. We reveal that MLLMs can reliably solve recognition-oriented and low-interaction CAPTCHA tasks at human-like cost and latency, whereas tasks requiring fine-grained localization, multi-step spatial reasoning, or cross-frame consistency remain significantly harder for current models. By examining the reasoning traces of such MLLMs, we investigate the underlying mechanisms of why models succeed/fail on specific CAPTCHA puzzles and use these insights to derive defense-oriented guidelines for selecting and strengthening CAPTCHA tasks. We conclude by discussing implications for platform operators deploying CAPTCHA as part of their abuse-mitigation pipeline.Code Availability (https://anonymous.4open.science/r/Captcha-465E/).
+---
+paper_title: Multi-Faceted Attack: Exposing Cross-Model Vulnerabilities in Defense-Equipped Vision-Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The growing misuse of Vision-Language Models (VLMs) has led providers to deploy multiple safeguards, including alignment tuning, system prompts, and content moderation. However, the real-world robustness of these defenses against adversarial attacks remains underexplored. We introduce Multi-Faceted Attack (MFA), a framework that systematically exposes general safety vulnerabilities in leading defense-equipped VLMs such as GPT-4o, Gemini-Pro, and Llama-4. The core component of MFA is the Attention-Transfer Attack (ATA), which hides harmful instructions inside a meta task with competing objectives. We provide a theoretical perspective based on reward hacking to explain why this attack succeeds. To improve cross-model transferability, we further introduce a lightweight transfer-enhancement algorithm combined with a simple repetition strategy that jointly bypasses both input-level and output-level filters without model-specific fine-tuning. Empirically, we show that adversarial images optimized for one vision encoder transfer broadly to unseen VLMs, indicating that shared visual representations create a cross-model safety vulnerability. Overall, MFA achieves a 58.5% success rate and consistently outperforms existing methods. On state-of-the-art commercial models, MFA reaches a 52.8% success rate, surpassing the second-best attack by 34%. These results challenge the perceived robustness of current defense mechanisms and highlight persistent safety weaknesses in modern VLMs. Code: https://github.com/cure-lab/MultiFacetedAttack
+---
+paper_title: Multi-turn Jailbreaking Attack in Multi-Modal Large Language Models
+
+publish_date: 2026-01-01
+
+paper_content:
+
+In recent years, the security vulnerabilities of Multi-modal Large Language Models (MLLMs) have become a serious concern in the Generative Artificial Intelligence (GenAI) research. These highly intelligent models, capable of performing multi-modal tasks with high accuracy, are also severely susceptible to carefully launched security attacks, such as jailbreaking attacks, which can manipulate model behavior and bypass safety constraints. This paper introduces MJAD-MLLMs, a holistic framework that systematically analyzes the proposed Multi-turn Jailbreaking Attacks and multi-LLM-based defense techniques for MLLMs. In this paper, we make three original contributions. First, we introduce a novel multi-turn jailbreaking attack to exploit the vulnerabilities of the MLLMs under multi-turn prompting. Second, we propose a novel fragment-optimized and multi-LLM defense mechanism, called FragGuard, to effectively mitigate jailbreaking attacks in the MLLMs. Third, we evaluate the efficacy of the proposed attacks and defenses through extensive experiments on several state-of-the-art (SOTA) open-source and closed-source MLLMs and benchmark datasets, and compare their performance with the existing techniques.
+---
+paper_title: Jailbreaking Attack against Multimodal Large Language Model
+
+publish_date: 2024-01-01
+
+paper_content:
+
+This paper focuses on jailbreaking attacks against multi-modal large language models (MLLMs), seeking to elicit MLLMs to generate objectionable responses to harmful user queries. A maximum likelihood-based algorithm is proposed to find an \emph{image Jailbreaking Prompt} (imgJP), enabling jailbreaks against MLLMs across multiple unseen prompts and images (i.e., data-universal property). Our approach exhibits strong model-transferability, as the generated imgJP can be transferred to jailbreak various models, including MiniGPT-v2, LLaVA, InstructBLIP, and mPLUG-Owl2, in a black-box manner. Moreover, we reveal a connection between MLLM-jailbreaks and LLM-jailbreaks. As a result, we introduce a construction-based method to harness our approach for LLM-jailbreaks, demonstrating greater efficiency than current state-of-the-art methods. The code is available here. \textbf{Warning: some content generated by language models may be offensive to some readers.}
+---
+paper_title: FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Despite the remarkable performance of video-based large language models (LLMs), their adversarial threat remains unexplored. To fill this gap, we propose the first adversarial attack tailored for video-based LLMs by crafting flow-based multi-modal adversarial perturbations on a small fraction of frames within a video, dubbed FMM-Attack. Extensive experiments show that our attack can effectively induce video-based LLMs to generate incorrect answers when videos are added with imperceptible adversarial perturbations. Intriguingly, our FMM-Attack can also induce garbling in the model output, prompting video-based LLMs to hallucinate. Overall, our observations inspire a further understanding of multi-modal robustness and safety-related feature alignment across different modalities, which is of great importance for various large multi-modal models. Our code is available at https://github.com/THU-Kingmin/FMM-Attack.
+---
+paper_title: Probing the Robustness of Vision-Language Pretrained Models: A Multimodal Adversarial Attack Approach
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Vision-language pretraining (VLP) with transformers has demonstrated exceptional performance across numerous multimodal tasks. However, the adversarial robustness of these models has not been thoroughly investigated. Existing multimodal attack methods have largely overlooked cross-modal interactions between visual and textual modalities, particularly in the context of cross-attention mechanisms. In this paper, we study the adversarial vulnerability of recent VLP transformers and design a novel Joint Multimodal Transformer Feature Attack (JMTFA) that concurrently introduces adversarial perturbations in both visual and textual modalities under white-box settings. JMTFA strategically targets attention relevance scores to disrupt important features within each modality, generating adversarial samples by fusing perturbations and leading to erroneous model predictions. Experimental results indicate that the proposed approach achieves high attack success rates on vision-language understanding and reasoning downstream tasks compared to existing baselines. Notably, our findings reveal that the textual modality significantly influences the complex fusion processes within VLP transformers. Moreover, we observe no apparent relationship between model size and adversarial robustness under our proposed attacks. These insights emphasize a new dimension of adversarial robustness and underscore potential risks in the reliable deployment of multimodal AI systems.
+---
+paper_title: Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Audio-language models combine audio encoders with large language models to enable multimodal reasoning, but they also introduce new security vulnerabilities. We propose a universal targeted latent space attack, an encoder-level adversarial attack that manipulates audio latent representations to induce attacker-specified outputs in downstream language generation. Unlike prior waveform-level or input-specific attacks, our approach learns a universal perturbation that generalizes across inputs and speakers and does not require access to the language model. Experiments on Qwen2-Audio-7B-Instruct demonstrate consistently high attack success rates with minimal perceptual distortion, revealing a critical and previously underexplored attack surface at the encoder level of multimodal systems.
+---
+paper_title: UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Multimodal large language models (MLLMs) have revolutionized vision-language understanding but remain vulnerable to multimodal jailbreak attacks, where adversarial inputs are meticulously crafted to elicit harmful or inappropriate responses. We propose UniGuard, a novel multimodal safety guardrail that jointly considers the unimodal and cross-modal harmful signals. UniGuard trains a multimodal guardrail to minimize the likelihood of generating harmful responses in a toxic corpus. The guardrail can be seamlessly applied to any input prompt during inference with minimal computational costs. Extensive experiments demonstrate the generalizability of UniGuard across multiple modalities, attack strategies, and multiple state-of-the-art MLLMs, including LLaVA, Gemini Pro, GPT-4o, MiniGPT-4, and InstructBLIP. Notably, this robust defense mechanism maintains the models' overall vision-language understanding capabilities.
+---
+paper_title: JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Jailbreak attacks against multimodal large language Models (MLLMs) are a significant research focus. Current research predominantly focuses on maximizing attack success rate (ASR), often overlooking whether the generated responses actually fulfill the attacker's malicious intent. This oversight frequently leads to low-quality outputs that bypass safety filters but lack substantial harmful content. To address this gap, we propose JPS, \underline{J}ailbreak MLLMs with collaborative visual \underline{P}erturbation and textual \underline{S}teering, which achieves jailbreaks via corporation of visual image and textually steering prompt. Specifically, JPS utilizes target-guided adversarial image perturbations for effective safety bypass, complemented by "steering prompt" optimized via a multi-agent system to specifically guide LLM responses fulfilling the attackers' intent. These visual and textual components undergo iterative co-optimization for enhanced performance. To evaluate the quality of attack outcomes, we propose the Malicious Intent Fulfillment Rate (MIFR) metric, assessed using a Reasoning-LLM-based evaluator. Our experiments show JPS sets a new state-of-the-art in both ASR and MIFR across various MLLMs and benchmarks, with analyses confirming its efficacy. Codes are available at \href{https://github.com/thu-coai/JPS}{https://github.com/thu-coai/JPS}. \color{warningcolor}{Warning: This paper contains potentially sensitive contents.}
+---
+paper_title: Scaling Laws for Adversarial Attacks on Language Model Activations
+
+publish_date: 2023-01-01
+
+paper_content:
+
+We explore a class of adversarial attacks targeting the activations of language models. By manipulating a relatively small subset of model activations, $a$, we demonstrate the ability to control the exact prediction of a significant number (in some cases up to 1000) of subsequent tokens $t$. We empirically verify a scaling law where the maximum number of target tokens $t_\mathrm{max}$ predicted depends linearly on the number of tokens $a$ whose activations the attacker controls as $t_\mathrm{max} = κa$. We find that the number of bits of control in the input space needed to control a single bit in the output space (what we call attack resistance $χ$) is remarkably constant between $\approx 16$ and $\approx 25$ over 2 orders of magnitude of model sizes for different language models. Compared to attacks on tokens, attacks on activations are predictably much stronger, however, we identify a surprising regularity where one bit of input steered either via activations or via tokens is able to exert control over a similar amount of output bits. This gives support for the hypothesis that adversarial attacks are a consequence of dimensionality mismatch between the input and output spaces. A practical implication of the ease of attacking language model activations instead of tokens is for multi-modal and selected retrieval models, where additional data sources are added as activations directly, sidestepping the tokenized input. This opens up a new, broad attack surface. By using language models as a controllable test-bed to study adversarial attacks, we were able to experiment with input-output dimensions that are inaccessible in computer vision, especially where the output dimension dominates.
+---
+paper_title: CrossGuard: Safeguarding MLLMs against Joint-Modal Implicit Malicious Attacks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Multimodal Large Language Models (MLLMs) achieve strong reasoning and perception capabilities but are increasingly vulnerable to jailbreak attacks. While existing work focuses on explicit attacks, where malicious content resides in a single modality, recent studies reveal implicit attacks, in which benign text and image inputs jointly express unsafe intent. Such joint-modal threats are difficult to detect and remain underexplored, largely due to the scarcity of high-quality implicit data. We propose ImpForge, an automated red-teaming pipeline that leverages reinforcement learning with tailored reward modules to generate diverse implicit samples across 14 domains. Building on this dataset, we further develop CrossGuard, an intent-aware safeguard providing robust and comprehensive defense against both explicit and implicit threats. Extensive experiments across safe and unsafe benchmarks, implicit and explicit attacks, and multiple out-of-domain settings demonstrate that CrossGuard significantly outperforms existing defenses, including advanced MLLMs and guardrails, achieving stronger security while maintaining high utility. This offers a balanced and practical solution for enhancing MLLM robustness against real-world multimodal threats.
+---
+paper_title: Adversarial Attacks on Robotic Vision Language Action Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The emergence of vision-language-action models (VLAs) for end-to-end control is reshaping the field of robotics by enabling the fusion of multimodal sensory inputs at the billion-parameter scale. The capabilities of VLAs stem primarily from their architectures, which are often based on frontier large language models (LLMs). However, LLMs are known to be susceptible to adversarial misuse, and given the significant physical risks inherent to robotics, questions remain regarding the extent to which VLAs inherit these vulnerabilities. Motivated by these concerns, in this work we initiate the study of adversarial attacks on VLA-controlled robots. Our main algorithmic contribution is the adaptation and application of LLM jailbreaking attacks to obtain complete control authority over VLAs. We find that textual attacks, which are applied once at the beginning of a rollout, facilitate full reachability of the action space of commonly used VLAs and often persist over longer horizons. This differs significantly from LLM jailbreaking literature, as attacks in the real world do not have to be semantically linked to notions of harm. We make all code available at https://github.com/eliotjones1/robogcg .
+---
+paper_title: Visual Adversarial Examples Jailbreak Aligned Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>Warning: this paper contains data, prompts, and model outputs that are offensive in nature.
+
+Recently, there has been a surge of interest in integrating vision into Large Language Models (LLMs), exemplified by Visual Language Models (VLMs) such as Flamingo and GPT-4. This paper sheds light on the security and safety implications of this trend. First, we underscore that the continuous and high-dimensional nature of the visual input makes it a weak link against adversarial attacks, representing an expanded attack surface of vision-integrated LLMs. Second, we highlight that the versatility of LLMs also presents visual attackers with a wider array of achievable adversarial objectives, extending the implications of security failures beyond mere misclassification. As an illustration, we present a case study in which we exploit visual adversarial examples to circumvent the safety guardrail of aligned LLMs with integrated vision. Intriguingly, we discover that a single visual adversarial example can universally jailbreak an aligned LLM, compelling it to heed a wide range of harmful instructions (that it otherwise would not) and generate harmful content that transcends the narrow scope of a `few-shot' derogatory corpus initially employed to optimize the adversarial example. Our study underscores the escalating adversarial risks associated with the pursuit of multimodality. Our findings also connect the long-studied adversarial vulnerabilities of neural networks to the nascent field of AI alignment. The presented attack suggests a fundamental adversarial challenge for AI alignment, especially in light of the emerging trend toward multimodality in frontier foundation models.</jats:p>
+---
+paper_title: Protecting Privacy in Multimodal Large Language Models with MLLMU-Bench
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Generative models such as Large Language Models (LLM) and Multimodal Large Language models (MLLMs) trained on massive web corpora can memorize and disclose individuals' confidential and private data, raising legal and ethical concerns. While many previous works have addressed this issue in LLM via machine unlearning, it remains largely unexplored for MLLMs. To tackle this challenge, we introduce Multimodal Large Language Model Unlearning Benchmark (MLLMU-Bench), a novel benchmark aimed at advancing the understanding of multimodal machine unlearning. MLLMU-Bench consists of 500 fictitious profiles and 153 profiles for public celebrities, each profile feature over 14 customized question-answer pairs, evaluated from both multimodal (image+text) and unimodal (text) perspectives. The benchmark is divided into four sets to assess unlearning algorithms in terms of efficacy, generalizability, and model utility. Finally, we provide baseline results using existing generative model unlearning algorithms. Surprisingly, our experiments show that unimodal unlearning algorithms excel in generation and cloze tasks, while multimodal unlearning approaches perform better in classification tasks with multimodal inputs.
+---
+paper_title: Safety of Multimodal Large Language Models on Images and Text
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Attracted by the impressive power of Multimodal Large Language Models (MLLMs), the public is increasingly utilizing them to improve the efficiency of daily work. Nonetheless, the vulnerabilities of MLLMs to unsafe instructions bring huge safety risks when these models are deployed in real-world scenarios. In this paper, we systematically survey current efforts on the evaluation, attack, and defense of MLLMs' safety on images and text. We begin with introducing the overview of MLLMs on images and text and understanding of safety, which helps researchers know the detailed scope of our survey. Then, we review the evaluation datasets and metrics for measuring the safety of MLLMs. Next, we comprehensively present attack and defense techniques related to MLLMs' safety. Finally, we analyze several unsolved issues and discuss promising research directions. The latest papers are continually collected at https://github.com/isXinLiu/MLLM-Safety-Collection.
+---
+paper_title: On the Validity of Traditional Vulnerability Scoring Systems for Adversarial Attacks Against LLMs
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This research investigates the effectiveness of established vulnerability metrics, such as the Common Vulnerability Scoring System (CVSS), in evaluating attacks on Large Language Models (LLMs), with a focus on Adversarial Attacks (AAs). The study explores the influence of different metric factors in determining vulnerability scores, providing new perspectives on potential enhancements to these metrics. This study adopts a quantitative approach, calculating and comparing the coefficient of variation of vulnerability scores across 56 adversarial attacks on LLMs. The attacks, sourced from various research papers, and obtained through online databases, were evaluated using multiple vulnerability metrics. Scores were determined by averaging the values assessed by three distinct LLMs. The results indicate that existing scoring systems yield vulnerability scores with minimal variation across different attacks, supporting the hypothesis that current vulnerability metrics are limited in evaluating AAs on LLMs, and highlighting the need for the development of more flexible, generalized metrics tailored to such attacks.
+---
+paper_title: Are Neuro-Inspired Multi-Modal Vision-Language Models Resilient to Membership Inference Privacy Leakage?
+
+publish_date: 2025-01-01
+
+paper_content:
+
+In the age of agentic AI, the growing deployment of multi-modal models (MMs) has introduced new attack vectors that can leak sensitive training data in MMs, causing privacy leakage. This paper investigates a black-box privacy attack, i.e., membership inference attack (MIA) on multi-modal vision-language models (VLMs). State-of-the-art research analyzes privacy attacks primarily to unimodal AI-ML systems, while recent studies indicate MMs can also be vulnerable to privacy attacks. While researchers have demonstrated that biologically inspired neural network representations can improve unimodal model resilience against adversarial attacks, it remains unexplored whether neuro-inspired MMs are resilient against privacy attacks. In this work, we introduce a systematic neuroscience-inspired topological regularization (tau) framework to analyze MM VLMs resilience against image-text-based inference privacy attacks. We examine this phenomenon using three VLMs: BLIP, PaliGemma 2, and ViT-GPT2, across three benchmark datasets: COCO, CC3M, and NoCaps. Our experiments compare the resilience of baseline and neuro VLMs (with topological regularization), where the tau &gt; 0 configuration defines the NEURO variant of VLM. Our results on the BLIP model using the COCO dataset illustrate that MIA attack success in NEURO VLMs drops by 24% mean ROC-AUC, while achieving similar model utility (similarities between generated and reference captions) in terms of MPNet and ROUGE-2 metrics. This shows neuro VLMs are comparatively more resilient against privacy attacks, while not significantly compromising model utility. Our extensive evaluation with PaliGemma 2 and ViT-GPT2 models, on two additional datasets: CC3M and NoCaps, further validates the consistency of the findings. This work contributes to the growing understanding of privacy risks in MMs and provides evidence on neuro VLMs privacy threat resilience.
+---
+paper_title: Towards Robust Multimodal Large Language Models Against Jailbreak Attacks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+While multimodal large language models (MLLMs) have achieved remarkable success in recent advancements, their susceptibility to jailbreak attacks has come to light. In such attacks, adversaries exploit carefully crafted prompts to coerce models into generating harmful or undesirable content. Existing defense mechanisms often rely on external inference steps or safety alignment training, both of which are less effective and impractical when facing sophisticated adversarial perturbations in white-box scenarios. To address these challenges and bolster MLLM robustness, we introduce SafeMLLM by adopting an adversarial training framework that alternates between an attack step for generating adversarial noise and a model updating step. At the attack step, SafeMLLM generates adversarial perturbations through a newly proposed contrastive embedding attack (CoE-Attack), which optimizes token embeddings under a contrastive objective. SafeMLLM then updates model parameters to neutralize the perturbation effects while preserving model utility on benign inputs. We evaluate SafeMLLM across six MLLMs and six jailbreak methods spanning multiple modalities. Experimental results show that SafeMLLM effectively defends against diverse attacks, maintaining robust performance and utilities.
+---
+paper_title: Recent Advances in Attack and Defense Approaches of Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large Language Models (LLMs) have revolutionized artificial intelligence and machine learning through their advanced text processing and generating capabilities. However, their widespread deployment has raised significant safety and reliability concerns. Established vulnerabilities in deep neural networks, coupled with emerging threat models, may compromise security evaluations and create a false sense of security. Given the extensive research in the field of LLM security, we believe that summarizing the current state of affairs will help the research community better understand the present landscape and inform future developments. This paper reviews current research on LLM vulnerabilities and threats, and evaluates the effectiveness of contemporary defense mechanisms. We analyze recent studies on attack vectors and model weaknesses, providing insights into attack mechanisms and the evolving threat landscape. We also examine current defense strategies, highlighting their strengths and limitations. By contrasting advancements in attack and defense methodologies, we identify research gaps and propose future directions to enhance LLM security. Our goal is to advance the understanding of LLM safety challenges and guide the development of more robust security measures.
+---
+paper_title: Beyond Data Privacy: New Privacy Risks for Large Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Large Language Models (LLMs) have achieved remarkable progress in natural language understanding, reasoning, and autonomous decision-making. However, these advancements have also come with significant privacy concerns. While significant research has focused on mitigating the data privacy risks of LLMs during various stages of model training, less attention has been paid to new threats emerging from their deployment. The integration of LLMs into widely used applications and the weaponization of their autonomous abilities have created new privacy vulnerabilities. These vulnerabilities provide opportunities for both inadvertent data leakage and malicious exfiltration from LLM-powered systems. Additionally, adversaries can exploit these systems to launch sophisticated, large-scale privacy attacks, threatening not only individual privacy but also financial security and societal trust. In this paper, we systematically examine these emerging privacy risks of LLMs. We also discuss potential mitigation strategies and call for the research community to broaden its focus beyond data privacy risks, developing new defenses to address the evolving threats posed by increasingly powerful LLMs and LLM-powered systems.
+---
+paper_title: Beyond Text: Multimodal Jailbreaking of Vision-Language and Audio Models through Perceptually Simple Transformations
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Multimodal large language models (MLLMs) have achieved remarkable progress, yet remain critically vulnerable to adversarial attacks that exploit weaknesses in cross-modal processing. We present a systematic study of multimodal jailbreaks targeting both vision-language and audio-language models, showing that even simple perceptual transformations can reliably bypass state-of-the-art safety filters. Our evaluation spans 1,900 adversarial prompts across three high-risk safety categories harmful content, CBRN (Chemical, Biological, Radiological, Nuclear), and CSEM (Child Sexual Exploitation Material) tested against seven frontier models. We explore the effectiveness of attack techniques on MLLMs, including FigStep-Pro (visual keyword decomposition), Intelligent Masking (semantic obfuscation), and audio perturbations (Wave-Echo, Wave-Pitch, Wave-Speed). The results reveal severe vulnerabilities: models with almost perfect text-only safety (0\% ASR) suffer &gt;75\% attack success under perceptually modified inputs, with FigStep-Pro achieving up to 89\% ASR in Llama-4 variants. Audio-based attacks further uncover provider-specific weaknesses, with even basic modality transfer yielding 25\% ASR for technical queries. These findings expose a critical gap between text-centric alignment and multimodal threats, demonstrating that current safeguards fail to generalize across cross-modal attacks. The accessibility of these attacks, which require minimal technical expertise, suggests that robust multimodal AI safety will require a paradigm shift toward broader semantic-level reasoning to mitigate possible risks.
+---
+paper_title: Coordinated Robustness Evaluation Framework for Vision-Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Vision-language models, which integrate computer vision and natural language processing capabilities, have demonstrated significant advancements in tasks such as image captioning and visual question and answering. However, similar to traditional models, they are susceptible to small perturbations, posing a challenge to their robustness, particularly in deployment scenarios. Evaluating the robustness of these models requires perturbations in both the vision and language modalities to learn their inter-modal dependencies. In this work, we train a generic surrogate model that can take both image and text as input and generate joint representation which is further used to generate adversarial perturbations for both the text and image modalities. This coordinated attack strategy is evaluated on the visual question and answering and visual reasoning datasets using various state-of-the-art vision-language models. Our results indicate that the proposed strategy outperforms other multi-modal attacks and single-modality attacks from the recent literature. Our results demonstrate their effectiveness in compromising the robustness of several state-of-the-art pre-trained multi-modal models such as instruct-BLIP, ViLT and others.
+---
+paper_title: Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense
+
+publish_date: 2026-01-01
+
+paper_content:
+
+This paper provides a systematic survey of jailbreak attacks and defenses on Large Language Models (LLMs) and Vision-Language Models (VLMs), emphasizing that jailbreak vulnerabilities stem from structural factors such as incomplete training data, linguistic ambiguity, and generative uncertainty. It further differentiates between hallucinations and jailbreaks in terms of intent and triggering mechanisms. We propose a three-dimensional survey framework: (1) Attack dimension-including template/encoding-based, in-context learning manipulation, reinforcement/adversarial learning, LLM-assisted and fine-tuned attacks, as well as prompt- and image-level perturbations and agent-based transfer in VLMs; (2) Defense dimension-encompassing prompt-level obfuscation, output evaluation, and model-level alignment or fine-tuning; and (3) Evaluation dimension-covering metrics such as Attack Success Rate (ASR), toxicity score, query/time cost, and multimodal Clean Accuracy and Attribute Success Rate. Compared with prior works, this survey spans the full spectrum from text-only to multimodal settings, consolidating shared mechanisms and proposing unified defense principles: variant-consistency and gradient-sensitivity detection at the perception layer, safety-aware decoding and output review at the generation layer, and adversarially augmented preference alignment at the parameter layer. Additionally, we summarize existing multimodal safety benchmarks and discuss future directions, including automated red teaming, cross-modal collaborative defense, and standardized evaluation.
+---
+paper_title: Hierarchical Refinement of Universal Multimodal Attacks on Vision-Language Models
+
+publish_date: 2026-01-01
+
+paper_content:
+
+Existing adversarial attacks for VLP models are mostly sample-specific, resulting in substantial computational overhead when scaled to large datasets or new scenarios. To overcome this limitation, we propose Hierarchical Refinement Attack (HRA), a multimodal universal attack framework for VLP models. HRA refines universal adversarial perturbations (UAPs) at both the sample level and the optimization level. For the image modality, we disentangle adversarial examples into clean images and perturbations, allowing each component to be handled independently for more effective disruption of cross-modal alignment. We further introduce a ScMix augmentation strategy that diversifies visual contexts and strengthens both global and local utility of UAPs, thereby reducing reliance on spurious features. In addition, we refine the optimization path by leveraging a temporal hierarchy of historical and estimated future gradients to avoid local minima and stabilize universal perturbation learning. For the text modality, HRA identifies globally influential words by combining intra-sentence and inter-sentence importance measures, and subsequently utilizes these words as universal text perturbations. Extensive experiments across various downstream tasks, VLP models, and datasets demonstrate the superiority of the proposed universal multimodal attacks.
+---
+paper_title: Are aligned neural networks adversarially aligned?
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Large language models are now tuned to align with the goals of their creators, namely to be "helpful and harmless." These models should respond helpfully to user questions, but refuse to answer requests that could cause harm. However, adversarial users can construct inputs which circumvent attempts at alignment. In this work, we study adversarial alignment, and ask to what extent these models remain aligned when interacting with an adversarial user who constructs worst-case inputs (adversarial examples). These inputs are designed to cause the model to emit harmful content that would otherwise be prohibited. We show that existing NLP-based optimization attacks are insufficiently powerful to reliably attack aligned text models: even when current NLP-based attacks fail, we can find adversarial inputs with brute force. As a result, the failure of current attacks should not be seen as proof that aligned text models remain aligned under adversarial inputs.
+ However the recent trend in large-scale ML models is multimodal models that allow users to provide images that influence the text that is generated. We show these models can be easily attacked, i.e., induced to perform arbitrary un-aligned behavior through adversarial perturbation of the input image. We conjecture that improved NLP attacks may demonstrate this same level of adversarial control over text-only models.
+---
+paper_title: Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Vision language models (VLMs) excel in multimodal understanding but are prone to adversarial attacks. Existing defenses often demand costly retraining or significant architecture changes. We introduce a lightweight defense using tensor decomposition suitable for any pre-trained VLM, requiring no retraining. By decomposing and reconstructing vision encoder representations, it filters adversarial noise while preserving meaning. Experiments with CLIP on COCO and Flickr30K show improved robustness. On Flickr30K, it restores 12.3\% performance lost to attacks, raising Recall@1 accuracy from 7.5\% to 19.8\%. On COCO, it recovers 8.1\% performance, improving accuracy from 3.8\% to 11.9\%. Analysis shows Tensor Train decomposition with low rank (8-32) and low residual strength ($α=0.1-0.2$) is optimal. This method is a practical, plug-and-play solution with minimal overhead for existing VLMs.
+---
+paper_title: Effective Black-Box Multi-Faceted Attacks Breach Vision Large Language Model Guardrails
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Vision Large Language Models (VLLMs) integrate visual data processing, expanding their real-world applications, but also increasing the risk of generating unsafe responses. In response, leading companies have implemented Multi-Layered safety defenses, including alignment training, safety system prompts, and content moderation. However, their effectiveness against sophisticated adversarial attacks remains largely unexplored. In this paper, we propose MultiFaceted Attack, a novel attack framework designed to systematically bypass Multi-Layered Defenses in VLLMs. It comprises three complementary attack facets: Visual Attack that exploits the multimodal nature of VLLMs to inject toxic system prompts through images; Alignment Breaking Attack that manipulates the model's alignment mechanism to prioritize the generation of contrasting responses; and Adversarial Signature that deceives content moderators by strategically placing misleading information at the end of the response. Extensive evaluations on eight commercial VLLMs in a black-box setting demonstrate that MultiFaceted Attack achieves a 61.56% attack success rate, surpassing state-of-the-art methods by at least 42.18%.
+---
+paper_title: Defeating Cerberus: Concept-Guided Privacy-Leakage Mitigation in Multimodal Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Multimodal large language models (MLLMs) have demonstrated remarkable capabilities in processing and reasoning over diverse modalities, but their advanced abilities also raise significant privacy concerns, particularly regarding Personally Identifiable Information (PII) leakage. While relevant research has been conducted on single-modal language models to some extent, the vulnerabilities in the multimodal setting have yet to be fully investigated. In this work, we investigate these emerging risks with a focus on vision language models (VLMs), a representative subclass of MLLMs that covers the two modalities most relevant for PII leakage, vision and text. We introduce a concept-guided mitigation approach that identifies and modifies the model's internal states associated with PII-related content. Our method guides VLMs to refuse PII-sensitive tasks effectively and efficiently, without requiring re-training or fine-tuning. We also address the current lack of multimodal PII datasets by constructing various ones that simulate real-world scenarios. Experimental results demonstrate that the method can achieve an average refusal rate of 93.3% for various PII-related tasks with minimal impact on unrelated model performances. We further examine the mitigation's performance under various conditions to show the adaptability of our proposed method.
+---
+paper_title: Attacker's Noise Can Manipulate Your Audio-based LLM in the Real World
+
+publish_date: 2025-01-01
+
+paper_content:
+
+This paper investigates the real-world vulnerabilities of audio-based large language models (ALLMs), such as Qwen2-Audio. We first demonstrate that an adversary can craft stealthy audio perturbations to manipulate ALLMs into exhibiting specific targeted behaviors, such as eliciting responses to wake-keywords (e.g., "Hey Qwen"), or triggering harmful behaviors (e.g. "Change my calendar event"). Subsequently, we show that playing adversarial background noise during user interaction with the ALLMs can significantly degrade the response quality. Crucially, our research illustrates the scalability of these attacks to real-world scenarios, impacting other innocent users when these adversarial noises are played through the air. Further, we discuss the transferrability of the attack, and potential defensive measures.
+---
+paper_title: Assessing Adversarial Robustness of Large Language Models: An Empirical Study
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large Language Models (LLMs) have revolutionized natural language processing, but their robustness against adversarial attacks remains a critical concern. We presents a novel white-box style attack approach that exposes vulnerabilities in leading open-source LLMs, including Llama, OPT, and T5. We assess the impact of model size, structure, and fine-tuning strategies on their resistance to adversarial perturbations. Our comprehensive evaluation across five diverse text classification tasks establishes a new benchmark for LLM robustness. The findings of this study have far-reaching implications for the reliable deployment of LLMs in real-world applications and contribute to the advancement of trustworthy AI systems.
+---
+paper_title: Adversarial Attacks and Defenses in Large Language Models: Old and New Threats
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Over the past decade, there has been extensive research aimed at enhancing the robustness of neural networks, yet this problem remains vastly unsolved. Here, one major impediment has been the overestimation of the robustness of new defense approaches due to faulty defense evaluations. Flawed robustness evaluations necessitate rectifications in subsequent works, dangerously slowing down the research and providing a false sense of security. In this context, we will face substantial challenges associated with an impending adversarial arms race in natural language processing, specifically with closed-source Large Language Models (LLMs), such as ChatGPT, Google Bard, or Anthropic's Claude. We provide a first set of prerequisites to improve the robustness assessment of new approaches and reduce the amount of faulty evaluations. Additionally, we identify embedding space attacks on LLMs as another viable threat model for the purposes of generating malicious content in open-sourced models. Finally, we demonstrate on a recently proposed defense that, without LLM-specific best practices in place, it is easy to overestimate the robustness of a new approach.
+---
+paper_title: Can LLMs Deceive CLIP? Benchmarking Adversarial Compositionality of Pre-trained Multimodal Representation via Text Updates
+
+publish_date: 2025-01-01
+
+paper_content:
+
+While pre-trained multimodal representations (e.g., CLIP) have shown impressive capabilities, they exhibit significant compositional vulnerabilities leading to counterintuitive judgments. We introduce Multimodal Adversarial Compositionality (MAC), a benchmark that leverages large language models (LLMs) to generate deceptive text samples to exploit these vulnerabilities across different modalities and evaluates them through both sample-wise attack success rate and group-wise entropy-based diversity. To improve zero-shot methods, we propose a self-training approach that leverages rejection-sampling fine-tuning with diversity-promoting filtering, which enhances both attack success rate and sample diversity. Using smaller language models like Llama-3.1-8B, our approach demonstrates superior performance in revealing compositional vulnerabilities across various multimodal representations, including images, videos, and audios.
+---
+paper_title: MM-LLMs: Recent Advances in MultiModal Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+In the past year, MultiModal Large Language Models (MM-LLMs) have undergone substantial advancements, augmenting off-the-shelf LLMs to support MM inputs or outputs via cost-effective training strategies. The resulting models not only preserve the inherent reasoning and decision-making capabilities of LLMs but also empower a diverse range of MM tasks. In this paper, we provide a comprehensive survey aimed at facilitating further research of MM-LLMs. Initially, we outline general design formulations for model architecture and training pipeline. Subsequently, we introduce a taxonomy encompassing 126 MM-LLMs, each characterized by its specific formulations. Furthermore, we review the performance of selected MM-LLMs on mainstream benchmarks and summarize key training recipes to enhance the potency of MM-LLMs. Finally, we explore promising directions for MM-LLMs while concurrently maintaining a real-time tracking website for the latest developments in the field. We hope that this survey contributes to the ongoing advancement of the MM-LLMs domain.
+---
+paper_title: Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+We introduce the Adversarial Confusion Attack, a new class of threats against multimodal large language models (MLLMs). Unlike jailbreaks or targeted misclassification, the goal is to induce systematic disruption that makes the model generate incoherent or confidently incorrect outputs. Practical applications include embedding such adversarial images into websites to prevent MLLM-powered AI Agents from operating reliably. The proposed attack maximizes next-token entropy using a small ensemble of open-source MLLMs. In the white-box setting, we show that a single adversarial image can disrupt all models in the ensemble, both in the full-image and Adversarial CAPTCHA settings. Despite relying on a basic adversarial technique (PGD), the attack generates perturbations that transfer to both unseen open-source (e.g., Qwen3-VL) and proprietary (e.g., GPT-5.1) models.
+---
+paper_title: AdversariaLLM: A Unified and Modular Toolbox for LLM Robustness Research
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The rapid expansion of research on Large Language Model (LLM) safety and robustness has produced a fragmented and oftentimes buggy ecosystem of implementations, datasets, and evaluation methods. This fragmentation makes reproducibility and comparability across studies challenging, hindering meaningful progress. To address these issues, we introduce AdversariaLLM, a toolbox for conducting LLM jailbreak robustness research. Its design centers on reproducibility, correctness, and extensibility. The framework implements twelve adversarial attack algorithms, integrates seven benchmark datasets spanning harmfulness, over-refusal, and utility evaluation, and provides access to a wide range of open-weight LLMs via Hugging Face. The implementation includes advanced features for comparability and reproducibility such as compute-resource tracking, deterministic results, and distributional evaluation techniques. \name also integrates judging through the companion package JudgeZoo, which can also be used independently. Together, these components aim to establish a robust foundation for transparent, comparable, and reproducible research in LLM safety.
+---
+paper_title: Assessing the adversarial robustness of multimodal medical AI systems: insights into vulnerabilities and modality interactions
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:p>The emergence of both task-specific single-modality models and general-purpose multimodal large models presents new opportunities, but also introduces challenges, particularly regarding adversarial attacks. In high-stakes domains like healthcare, these attacks can severely undermine model reliability and their applicability in real-world scenarios, highlighting the critical need for research focused on adversarial robustness. This study investigates the behavior of multimodal models under various adversarial attack scenarios. We conducted experiments involving two modalities: images and texts. Our findings indicate that multimodal models exhibit enhanced resilience against adversarial attacks compared to their single-modality counterparts. This supports our hypothesis that the integration of multiple modalities contributes positively to the robustness of deep learning systems. The results of this research advance understanding in the fields of multimodality and adversarial robustness and suggest new avenues for future studies focused on optimizing data flow within multimodal systems.</jats:p>
+---
+paper_title: Adversarial Evasion Attack Efficiency against Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large Language Models (LLMs) are valuable for text classification, but their vulnerabilities must not be disregarded. They lack robustness against adversarial examples, so it is pertinent to understand the impacts of different types of perturbations, and assess if those attacks could be replicated by common users with a small amount of perturbations and a small number of queries to a deployed LLM. This work presents an analysis of the effectiveness, efficiency, and practicality of three different types of adversarial attacks against five different LLMs in a sentiment classification task. The obtained results demonstrated the very distinct impacts of the word-level and character-level attacks. The word attacks were more effective, but the character and more constrained attacks were more practical and required a reduced number of perturbations and queries. These differences need to be considered during the development of adversarial defense strategies to train more robust LLMs for intelligent text classification applications.
+---
+paper_title: Understanding and Measuring Robustness of Multimodal Learning
+
+publish_date: 2021-01-01
+
+paper_content:
+
+The modern digital world is increasingly becoming multimodal. Although multimodal learning has recently revolutionized the state-of-the-art performance in multimodal tasks, relatively little is known about the robustness of multimodal learning in an adversarial setting. In this paper, we introduce a comprehensive measurement of the adversarial robustness of multimodal learning by focusing on the fusion of input modalities in multimodal models, via a framework called MUROAN (MUltimodal RObustness ANalyzer). We first present a unified view of multimodal models in MUROAN and identify the fusion mechanism of multimodal models as a key vulnerability. We then introduce a new type of multimodal adversarial attacks called decoupling attack in MUROAN that aims to compromise multimodal models by decoupling their fused modalities. We leverage the decoupling attack of MUROAN to measure several state-of-the-art multimodal models and find that the multimodal fusion mechanism in all these models is vulnerable to decoupling attacks. We especially demonstrate that, in the worst case, the decoupling attack of MUROAN achieves an attack success rate of 100% by decoupling just 1.16% of the input space. Finally, we show that traditional adversarial training is insufficient to improve the robustness of multimodal models with respect to decoupling attacks. We hope our findings encourage researchers to pursue improving the robustness of multimodal learning.
+---
+paper_title: Differentiable Language Model Adversarial Attacks on Categorical
+  Sequence Classifiers
+
+publish_date: 2020-01-01
+
+paper_content:
+
+An adversarial attack paradigm explores various scenarios for the vulnerability of deep learning models: minor changes of the input can force a model failure. Most of the state of the art frameworks focus on adversarial attacks for images and other structured model inputs, but not for categorical sequences models. Successful attacks on classifiers of categorical sequences are challenging because the model input is tokens from finite sets, so a classifier score is non-differentiable with respect to inputs, and gradient-based attacks are not applicable. Common approaches deal with this problem working at a token level, while the discrete optimization problem at hand requires a lot of resources to solve. We instead use a fine-tuning of a language model for adversarial attacks as a generator of adversarial examples. To optimize the model, we define a differentiable loss function that depends on a surrogate classifier score and on a deep learning model that evaluates approximate edit distance. So, we control both the adversability of a generated sequence and its similarity to the initial sequence. As a result, we obtain semantically better samples. Moreover, they are resistant to adversarial training and adversarial detectors. Our model works for diverse datasets on bank transactions, electronic health records, and NLP datasets.
+---
+paper_title: On Evaluating Adversarial Robustness of Large Vision-Language Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Large vision-language models (VLMs) such as GPT-4 have achieved unprecedented performance in response generation, especially with visual inputs, enabling more creative and adaptable interaction than large language models such as ChatGPT. Nonetheless, multimodal generation exacerbates safety concerns, since adversaries may successfully evade the entire system by subtly manipulating the most vulnerable modality (e.g., vision). To this end, we propose evaluating the robustness of open-source large VLMs in the most realistic and high-risk setting, where adversaries have only black-box system access and seek to deceive the model into returning the targeted responses. In particular, we first craft targeted adversarial examples against pretrained models such as CLIP and BLIP, and then transfer these adversarial examples to other VLMs such as MiniGPT-4, LLaVA, UniDiffuser, BLIP-2, and Img2Prompt. In addition, we observe that black-box queries on these VLMs can further improve the effectiveness of targeted evasion, resulting in a surprisingly high success rate for generating targeted responses. Our findings provide a quantitative understanding regarding the adversarial vulnerability of large VLMs and call for a more thorough examination of their potential security flaws before deployment in practice. Code is at https://github.com/yunqing-me/AttackVLM.
+---
+paper_title: CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Video Multimodal Large Language Models (V-MLLMs) have shown impressive capabilities in temporal reasoning and cross-modal understanding, yet their vulnerability to adversarial attacks remains underexplored due to unique challenges: complex cross-modal reasoning mechanisms, temporal dependencies, and computational constraints. We present CAVALRY-V (Cross-modal Language-Vision Adversarial Yielding for Videos), a novel framework that directly targets the critical interface between visual perception and language generation in V-MLLMs. Our approach introduces two key innovations: (1) a dual-objective semantic-visual loss function that simultaneously disrupts the model's text generation logits and visual representations to undermine cross-modal integration, and (2) a computationally efficient two-stage generator framework that combines large-scale pre-training for cross-model transferability with specialized fine-tuning for spatiotemporal coherence. Empirical evaluation on comprehensive video understanding benchmarks demonstrates that CAVALRY-V significantly outperforms existing attack methods, achieving 22.8% average improvement over the best baseline attacks on both commercial systems (GPT-4.1, Gemini 2.0) and open-source models (QwenVL-2.5, InternVL-2.5, Llava-Video, Aria, MiniCPM-o-2.6). Our framework achieves flexibility through implicit temporal coherence modeling rather than explicit regularization, enabling significant performance improvements even on image understanding (34.4% average gain). This capability demonstrates CAVALRY-V's potential as a foundational approach for adversarial research across multimodal systems.
+---
+paper_title: SECURING LARGE LANGUAGE MODELS AGAINST JAILBREAKING ATTACKS: A NOVEL FRAMEWORK FOR ROBUST AI SAFETY
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:p>
+Large Language Models (LLMs) like ChatGPT, GPT-4, and Claude have revolutionized natural language processing, but they are increasingly vulnerable to adversarial "jailbreaking" attacks that bypass safety protocols. This paper proposes a novel multi-layered security framework to defend LLMs against jailbreaking techniques using a combination of adversarial training, behavior watermarking, and real-time anomaly detection. We present an innovative system called SAFE-LLM (Security-Aware Fine-tuned &amp; Encrypted Language Model) to achieve robust AI safety.
+</jats:p>
+---
+paper_title: Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As Large Language Models make a breakthrough in natural language processing tasks (NLP), multimodal technique becomes extremely popular. However, it has been shown that multimodal NLP are vulnerable to adversarial attacks, where the outputs of a model can be dramatically changed by a perturbation to the input. While several defense techniques have been proposed both in computer vision and NLP models, the multimodal robustness of models have not been fully explored. In this paper, we study the adversarial robustness provided by modifying loss function of pre-trained multimodal models, by restricting top K softmax outputs. Based on the evaluation and scoring, our experiments show that after a fine-tuning, adversarial robustness of pre-trained models can be significantly improved, against popular attacks. Further research should be studying, such as output diversity, generalization and the robustness-performance trade-off of this kind of loss functions. Our code will be available after this paper is accepted
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Adversarial Attacks on Multimodal Large Language Models.
+   ---
+   ---
+paper_title: Unbridled Icarus: A Survey of the Potential Perils of Image Inputs in Multimodal Large Language Model Security
+
+publish_date: 2024-08-11
+
+paper_abstract:
+
+Multimodal Large Language Models (MLLMs) demonstrate remarkable capabilities
+that increasingly influence various aspects of our daily lives, constantly
+defining the new boundary of Artificial General Intelligence (AGI). Image
+modalities, enriched with profound semantic information and a more continuous
+mathematical nature compared to other modalities, greatly enhance the
+functionalities of MLLMs when integrated. However, this integration serves as a
+double-edged sword, providing attackers with expansive vulnerabilities to
+exploit for highly covert and harmful attacks. The pursuit of reliable AI
+systems like powerful MLLMs has emerged as a pivotal area of contemporary
+research. In this paper, we endeavor to demostrate the multifaceted risks
+associated with the incorporation of image modalities into MLLMs. Initially, we
+delineate the foundational components and training processes of MLLMs.
+Subsequently, we construct a threat model, outlining the security
+vulnerabilities intrinsic to MLLMs. Moreover, we analyze and summarize existing
+scholarly discourses on MLLMs' attack and defense mechanisms, culminating in
+suggestions for the future research on MLLM security. Through this
+comprehensive analysis, we aim to deepen the academic understanding of MLLM
+security challenges and propel forward the development of trustworthy MLLM
+systems.
+
+paper_outline:
+
+I. INTRODUCTION  
+II. BACKGROUND  
+A. Model Structure  
+B. Training Process  
+III. THREAT MODEL  
+A. Vulnerabilities  
+B. Attack Scenarios  
+C. Attack Objectives  
+IV. ATTACK  
+VI. DISCUSSION  
+A. Quantifying Security Risks  
+B. Paying More Attention to Privacy Concerns  
+C. Deep Research on Multimodal Security Alignment  
+D. Understanding from an Interpretability Perspective  
+VII. CONCLUSION
+---
+paper_title: A Survey of Multimodal Large Language Model from A Data-centric Perspective
+
+publish_date: 2024-07-18
+
+paper_abstract:
+
+Multimodal large language models (MLLMs) enhance the capabilities of standard
+large language models by integrating and processing data from multiple
+modalities, including text, vision, audio, video, and 3D environments. Data
+plays a pivotal role in the development and refinement of these models. In this
+survey, we comprehensively review the literature on MLLMs from a data-centric
+perspective. Specifically, we explore methods for preparing multimodal data
+during the pretraining and adaptation phases of MLLMs. Additionally, we analyze
+the evaluation methods for the datasets and review the benchmarks for
+evaluating MLLMs. Our survey also outlines potential future research
+directions. This work aims to provide researchers with a detailed understanding
+of the data-driven aspects of MLLMs, fostering further exploration and
+innovation in this field.
+
+paper_outline:
+
+1 INTRODUCTION  
+2 BACKGROUNDS AND CATEGORIZATION  
+2.1 Large Language Models  
+2.2 Multimodal Large Language Models  
+2.3 Data-Centric AI and Why Data-Centric MLLMs  
+2.4 Categories of Data-Centric MLLMs  
+3 DATA COLLECTING AND PROCESSING  
+4 DATA-CENTRIC PRE-TRAINING  
+5 DATA-CENTRIC ADAPTATION  
+6 EVALUATION  
+7 FUTURE DIRECTION  
+8 CONCLUSION
+---
+paper_title: A Survey of Attacks on Large Vision-Language Models: Resources, Advances, and Future Trends
+
+publish_date: 2024-07-12
+
+paper_abstract:
+
+With the significant development of large models in recent years, Large
+Vision-Language Models (LVLMs) have demonstrated remarkable capabilities across
+a wide range of multimodal understanding and reasoning tasks. Compared to
+traditional Large Language Models (LLMs), LVLMs present great potential and
+challenges due to its closer proximity to the multi-resource real-world
+applications and the complexity of multi-modal processing. However, the
+vulnerability of LVLMs is relatively underexplored, posing potential security
+risks in daily usage. In this paper, we provide a comprehensive review of the
+various forms of existing LVLM attacks. Specifically, we first introduce the
+background of attacks targeting LVLMs, including the attack preliminary, attack
+challenges, and attack resources. Then, we systematically review the
+development of LVLM attack methods, such as adversarial attacks that manipulate
+model outputs, jailbreak attacks that exploit model vulnerabilities for
+unauthorized actions, prompt injection attacks that engineer the prompt type
+and pattern, and data poisoning that affects model training. Finally, we
+discuss promising research directions in the future. We believe that our survey
+provides insights into the current landscape of LVLM vulnerabilities, inspiring
+more researchers to explore and mitigate potential safety issues in LVLM
+developments. The latest papers on LVLM attacks are continuously collected in
+https://github.com/liudaizong/Awesome-LVLM-Attack.
+
+paper_outline:
+
+I. Introduction  
+II. Background  
+A. Preliminary of LVLM Attack  
+B. The Challenges of LVLM Attack  
+C. Current Resources for LVLM Attack  
+III. Methods  
+A. Adversarial Attacks  
+B. Jailbreak Attacks  
+C. Prompt Injection Attacks  
+D. Data Poisoning/Backdoor Attacks  
+E. Discussion  
+IV. Future Directions  
+A. Improving the Attack Practicality  
+B. Adaptive and Transferable Attacks  
+C. Cross-Modal Adversarial Examples  
+D. Attacks Based on Data Bias  
+E. Integration of Human and AI Collaboration in Attacks  
+F. Comprehensive Benchmarking and Evaluation  
+V. Conclusion
+---
+paper_title: The Revolution of Multimodal Large Language Models: A Survey
+
+publish_date: 2024-06-06
+
+paper_abstract:
+
+Connecting text and visual modalities plays an essential role in generative
+intelligence. For this reason, inspired by the success of large language
+models, significant research efforts are being devoted to the development of
+Multimodal Large Language Models (MLLMs). These models can seamlessly integrate
+visual and textual modalities, while providing a dialogue-based interface and
+instruction-following capabilities. In this paper, we provide a comprehensive
+review of recent visual-based MLLMs, analyzing their architectural choices,
+multimodal alignment strategies, and training techniques. We also conduct a
+detailed analysis of these models across a wide range of tasks, including
+visual grounding, image generation and editing, visual understanding, and
+domain-specific applications. Additionally, we compile and describe training
+datasets and evaluation benchmarks, conducting comparisons among existing
+models in terms of performance and computational requirements. Overall, this
+survey offers a comprehensive overview of the current state of the art, laying
+the groundwork for future MLLMs.
+
+paper_outline:
+
+1 Introduction
+2 Empowering LLMs with Multimodal Capabilities
+2.1 Preliminaries
+2.2 Visual Encoder
+2.3 Vision-to-Language Adapters
+2.4 Multimodal Training
+3 Tackling Visual Tasks with MLLMs
+3.1 Visual Grounding
+3.2 Image Generation and Editing
+3.3 Other Modalities and Applications
+4 Conclusion and Future Directions
+---
+paper_title: Exploring Vulnerabilities and Protections in Large Language Models: A Survey
+
+publish_date: 2024-06-01
+
+paper_abstract:
+
+As Large Language Models (LLMs) increasingly become key components in various
+AI applications, understanding their security vulnerabilities and the
+effectiveness of defense mechanisms is crucial. This survey examines the
+security challenges of LLMs, focusing on two main areas: Prompt Hacking and
+Adversarial Attacks, each with specific types of threats. Under Prompt Hacking,
+we explore Prompt Injection and Jailbreaking Attacks, discussing how they work,
+their potential impacts, and ways to mitigate them. Similarly, we analyze
+Adversarial Attacks, breaking them down into Data Poisoning Attacks and
+Backdoor Attacks. This structured examination helps us understand the
+relationships between these vulnerabilities and the defense strategies that can
+be implemented. The survey highlights these security challenges and discusses
+robust defensive frameworks to protect LLMs against these threats. By detailing
+these security issues, the survey contributes to the broader discussion on
+creating resilient AI systems that can resist sophisticated attacks.
+
+paper_outline:
+
+1 Introduction  
+2 Prompt Hacking  
+2.1 Prompt Injection  
+2.2 Jailbreaking Attack  
+3 Adversarial Attack  
+3.1 Backdoor Attack  
+3.2 Data Poisoning Attack  
+4 Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Adversarial Attacks on Multimodal Large Language Models**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Real-World Implications and Future Directions**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Adversarial Attacks on Multimodal Large Language Models** and **Real-World Implications and Future Directions**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Real-World Implications and Future Directions** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Real-World Implications and Future Directions**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Real-World Implications and Future Directions**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

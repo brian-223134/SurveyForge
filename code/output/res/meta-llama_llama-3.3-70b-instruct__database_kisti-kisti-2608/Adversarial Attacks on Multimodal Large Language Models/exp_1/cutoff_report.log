@@ -1,0 +1,13 @@
+[policy] topic_id=mllm-adversarial-attacks cutoff<2026-03-30 (근거: arxiv:2603.27918 v1 published (gt-arxiv)) 제외 id 1개 ['2603.27918']
+[policy] sidecar 허용 1,663,703/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 1 / month 0 / year 0
+[policy] 정책 파일 /data2/chanjoong/survey-agent/AutoSurvey/data/topic_policy.kisti-2608.jsonl · sidecar /data2/chanjoong/kisti_data/data/views/kisti-2608/paper_dates.json (view kisti-2608 sha c1a0c6b3 / 2026-09-14T13:18:56+00:00)
+[cutoff/db] 1663704 papers, newest id 2601.22158 (2026-01), dates 1922-01-01..2026-01-01, 1202932 DOI ids (pass the id gate)
+[cutoff/cfg] --paper_id_cutoff=2612 --paper_date_oldest=1922-01-01 --paper_date_newest=2026-12-31
+[policy/outline] topic_id=mllm-adversarial-attacks cutoff<2026-03-30 (근거: arxiv:2603.27918 v1 published (gt-arxiv)) 제외 id 1개 ['2603.27918']
+[policy/outline] sidecar 허용 1,663,703/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 1 / month 0 / year 0
+[policy/outline] DB 허용 1,663,703/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 1; 허용 id 정렬 sha256 73576e691855dc95…
+[policy/writer] topic_id=mllm-adversarial-attacks cutoff<2026-03-30 (근거: arxiv:2603.27918 v1 published (gt-arxiv)) 제외 id 1개 ['2603.27918']
+[policy/writer] sidecar 허용 1,663,703/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 1 / month 0 / year 0
+[policy/writer] DB 허용 1,663,703/1,663,704편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 1; 허용 id 정렬 sha256 73576e691855dc95…
+[cutoff/rerank] total: 0/5576 retrieved documents discarded by the citation window [1922-01-01, 2026-12-31]
+[policy] 최종 참고문헌 120편 전부 허용 집합 안 (cutoff<2026-03-30)

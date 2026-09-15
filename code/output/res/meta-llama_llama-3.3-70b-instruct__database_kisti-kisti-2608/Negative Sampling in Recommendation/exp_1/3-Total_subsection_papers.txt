@@ -1,0 +1,538 @@
+Fundamentals of Recommendation Systems
+['Understanding the basics of recommendation systems is essential for appreciating the role and implementation of negative sampling.', '1. Overview of collaborative filtering, content-based filtering, and hybrid approaches, focusing on their strengths and weaknesses.', '2. Explanation of key concepts such as user-item interactions, rating matrices, and the cold start problem.', '3. Introduction to evaluation metrics for recommendation systems, including precision, recall, and A/B testing.']
+
+Bandits Warm-up Cold Recommender Systems
+
+DPR: An Algorithm Mitigate Bias Accumulation in Recommendation feedback loops
+
+On Sampling Top-K Recommendation Evaluation
+
+Exploiting Negative Preference in Content-based Music Recommendation with Contrastive Learning
+
+Wasserstein Collaborative Filtering for Item Cold-start Recommendation
+
+Budget-Constrained Item Cold-Start Handling in Collaborative Filtering
+  Recommenders via Optimal Design
+
+Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective
+
+Monte Carlo Estimates of Evaluation Metric Error and Bias
+
+On Sampling Collaborative Filtering Datasets
+
+A Brief Analysis of Collaborative and Content Based Filtering Algorithms used in Recommender Systems
+
+The item selection problem for user cold-start recommendation
+
+Collaborative Filtering with Low Regret
+
+Towards addressing item cold-start problem in collaborative filtering by embedding agglomerative clustering and FP-growth into the recommendation system
+
+Cold-start recommendations in Collective Matrix Factorization
+
+How to deal with negative preferences in recommender systems: a theoretical framework
+
+The Sample Complexity of Online One-Class Collaborative Filtering
+
+Promoting Cold-Start Items in Recommender Systems
+
+On Sampling Strategies for Neural Network-based Collaborative Filtering
+
+Cold-start Problem in Collaborative Recommender Systems: Efficient Methods Based on Ask-to-rate Technique
+
+SVP-CF: Selection via Proxy for Collaborative Filtering Data
+
+Negative Sampling for Hyperlink Prediction in Networks
+
+Addressing the Cold-Start Problem in Collaborative Filtering Through Positive-Unlabeled Learning and Multi-Target Prediction
+
+ZeroMat: Solving Cold-start Problem of Recommender System with No Input Data
+
+Evaluation Metrics for Personalized Recommendation Systems
+
+Trading Hard Negatives and True Negatives: A Debiased Contrastive Collaborative Filtering Approach
+
+On the Theories Behind Hard Negative Sampling for Recommendation
+
+On Sampled Metrics for Item Recommendation
+
+Negative Feedback for Music Personalization
+
+Analysis of Movie Recommendation Systems; with and without considering the low rated movies
+
+Understanding Negative Sampling in Graph Representation Learning
+
+A Theoretical Analysis of Two-Stage Recommendation for Cold-Start
+  Collaborative Filtering
+
+Normalization-based neighborhood model for cold start problem in recommendation system
+
+Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+
+Collaborative filtering and deep learning based recommendation system for cold start items
+
+Multi-behavior aware recommendation with joint contrastive learning and reinforced negative sampling
+
+A Review on Filtering Techniques used in Restaurant Recommendation System﻿
+
+Leveraging Trust and Distrust in Recommender Systems via Deep Learning
+
+HS-SocialRec: A Study on Boosting Social Recommendations with Hard Negative Sampling in LightGCN
+
+Cold-start Problems in Recommendation Systems via Contextual-bandit
+  Algorithms
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+GAN-based Recommendation with Positive-Unlabeled Sampling
+
+The Limits of Graph Samplers for Training Inductive Recommender Systems
+
+Exploring the Landscape of Recommender Systems Evaluation: Practices and Perspectives
+
+Fifty Shades of Ratings: How to Benefit from a Negative Feedback in Top-N Recommendations Tasks
+
+Negative Sampling for Recommendation
+
+DEEP VISUAL RECOMMENDATION SYSTEM
+
+UFNRec: Utilizing False Negative Samples for Sequential Recommendation
+
+A new approach for combining content-based and collaborative filters
+
+Beyond Positive Similarity Metrics: Leveraging Negative Co-Occurrence in Recommender Systems
+
+Negative Sampling Techniques
+['Various negative sampling techniques have been developed to address the challenges of recommendation systems.', '1. In-depth discussion of random sampling, popularity-based sampling, and knowledge graph-based sampling methods.', '2. Explanation of advanced techniques such as adversarial sampling, reinforcement learning-based sampling, and graph convolutional network-based sampling.', '3. Analysis of the trade-offs between different sampling strategies, including computational efficiency, sampling bias, and model performance.']
+
+Multi-behavior aware recommendation with joint contrastive learning and reinforced negative sampling
+
+TriSampler: A Better Negative Sampling Principle for Dense Retrieval
+
+Reinforced Negative Sampling over Knowledge Graph for Recommendation
+
+Towards Automated Negative Sampling in Implicit Recommendation
+
+Re-weighting Negative Samples for Model-Agnostic Matching
+
+Negative Feedback for Music Personalization
+
+Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+SamWalker: Social Recommendation with Informative Sampling Strategy
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+Personalized Negative Reservoir for Incremental Learning in Recommender Systems
+
+Efficient Non-Sampling Knowledge Graph Embedding
+
+Towards Large Scale Training Of Autoencoders For Collaborative Filtering
+
+A Metric Learning Perspective on the Implicit Feedback-Based Recommendation Data Imbalance Problem
+
+Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+Structure Aware Negative Sampling in Knowledge Graphs
+
+Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+Diversified and Adaptive Negative Sampling on Knowledge Graphs
+
+DGCN: Diversified Recommendation with Graph Convolutional Networks
+
+Analysis of the Impact of Negative Sampling on Link Prediction in
+  Knowledge Graphs
+
+Weighted Random Walk Sampling for Multi-Relational Recommendation
+
+Generating Negative Samples for Sequential Recommendation
+
+Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+
+Hard Negative Sampling Strategies for Contrastive Representation Learning
+
+Personalized Ranking with Importance Sampling
+
+Layer-diverse Negative Sampling for Graph Neural Networks
+
+Going Beyond Popularity and Positivity Bias: Correcting for Multifactorial Bias in Recommender Systems
+
+Evaluation Metrics for Item Recommendation under Sampling
+
+Cross-Batch Negative Sampling for Training Two-Tower Recommenders
+
+On Sampled Metrics for Item Recommendation
+
+Graph-Based Model-Agnostic Data Subsampling for Recommendation Systems
+
+Towards Reliable Item Sampling for Recommendation Evaluation
+
+UFNRec: Utilizing False Negative Samples for Sequential Recommendation
+
+Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective
+
+Soft BPR Loss for Dynamic Hard Negative Sampling in Recommender Systems
+
+Beyond Uniform Reverse Sampling: A Hybrid Sampling Technique for Misinformation Prevention
+
+Scaling Session-Based Transformer Recommendations using Optimized Negative Sampling and Loss Functions
+
+Bayesian Negative Sampling for Recommendation
+
+A sampling approach to Debiasing the offline evaluation of recommender systems
+
+Adversarial Training of Word2Vec for Basket Completion
+
+Efficient, Simple and Automated Negative Sampling for Knowledge Graph
+  Embedding
+
+An Improved Sampler for Bayesian Personalized Ranking by Leveraging View Data
+
+AHP: Learning to Negative Sample for Hyperedge Prediction
+
+Nonuniform Negative Sampling and Log Odds Correction with Rare Events
+  Data
+
+Leveraging Trust and Distrust in Recommender Systems via Deep Learning
+
+DSKReG: Differentiable Sampling on Knowledge Graph for Recommendation with Relational GNN
+
+Leveraging Inverse Probability Weighting Method to Missing Not at Random Problem
+
+HS-SocialRec: A Study on Boosting Social Recommendations with Hard Negative Sampling in LightGCN
+
+CoSam: An Efficient Collaborative Adaptive Sampler for Recommendation
+
+Deep Metric Learning Using Negative Sampling Probability Annealing
+
+GAN-based Recommendation with Positive-Unlabeled Sampling
+
+Deep Learning for Negative Sampling
+['Deep learning models have been increasingly applied to negative sampling due to their ability to learn complex patterns and relationships.', '1. Introduction to deep learning architectures for recommendation systems, including neural collaborative filtering and deep matrix factorization.', '2. Discussion on how deep learning can enhance negative sampling, such as learning representations from raw data and modeling complex user behaviors.', '3. Overview of recent advancements in deep learning-based negative sampling, including the use of attention mechanisms and graph neural networks.']
+
+Negative Sampling in Knowledge Graph Representation Learning: A Review
+
+Development of an offline OOH advertising recommendation system using negative sampling and deep interest network
+
+Neural architectures for faster deep learning-based collaborative filtering
+
+Deep variational models for collaborative filtering-based recommender systems
+
+An Efficient Hybrid Recommendation Model With Deep Neural Networks
+
+The Limits of Graph Samplers for Training Inductive Recommender Systems
+
+Negative Binomial Matrix Factorization for Recommender Systems
+
+Towards Automated Negative Sampling in Implicit Recommendation
+
+Reinforced Negative Sampling over Knowledge Graph for Recommendation
+
+Trading Hard Negatives and True Negatives: A Debiased Contrastive Collaborative Filtering Approach
+
+Deep Matrix Factorization for Recommender Systems with Missing Data not at Random
+
+Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+Social Recommendation for Social Networks Using Deep Learning Approach: A Systematic Review, Taxonomy, Issues, and Future Directions
+
+Deep Learning Modeling for Top-N Recommendation With Interests Exploring
+
+Deep Learning in Music Recommendation Systems
+
+Bayesian Negative Sampling for Recommendation
+
+Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
+
+Noise Contrastive Estimation for Autoencoding-based One-Class
+  Collaborative Filtering
+
+Profile and Rating Similarity Analysis for Recommendation Systems Using Deep Learning
+
+On Sampling Strategies for Neural Network-based Collaborative Filtering
+
+Cross-Batch Negative Sampling for Training Two-Tower Recommenders
+
+Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective
+
+A Tale of Two Efficient and Informative Negative Sampling Distributions
+
+Soft BPR Loss for Dynamic Hard Negative Sampling in Recommender Systems
+
+Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+Negative Feedback for Music Personalization
+
+Deep Neural Networks for YouTube Recommendations
+
+Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+
+Leveraging Trust and Distrust in Recommender Systems via Deep Learning
+
+Tag-Aware Personalized Recommendation Using a Hybrid Deep Model
+
+MixDec Sampling: A Soft Link-based Sampling Method of Graph Neural Network for Recommendation
+
+Structure Aware Negative Sampling in Knowledge Graphs
+
+GAN-based Recommendation with Positive-Unlabeled Sampling
+
+A Probabilistic Matrix Factorization Recommendation Method Based on Deep Learning
+
+Rethinking Collaborative Metric Learning: Toward an Efficient
+  Alternative without Negative Sampling
+
+Collaborative Filtering with Low Regret
+
+Scaling Session-Based Transformer Recommendations using Optimized Negative Sampling and Loss Functions
+
+Disentangling Sampling and Labeling Bias for Learning in Large-Output
+  Spaces
+
+Personalized E-commerce based recommendation systems using deep-learning techniques
+
+Addressing Class-Imbalance Problem in Personalized Ranking
+
+Neural Multi-network Diffusion towards Social Recommendation
+
+Use of Deep Learning in Modern Recommendation System: A Summary of Recent Works
+
+Layer-diverse Negative Sampling for Graph Neural Networks
+
+Deep Metric Learning Using Negative Sampling Probability Annealing
+
+Negative Interactions for Improved Collaborative Filtering: Don’t go Deeper, go Higher
+
+Re-weighting Negative Samples for Model-Agnostic Matching
+
+HS-SocialRec: A Study on Boosting Social Recommendations with Hard Negative Sampling in LightGCN
+
+Hard Negative Sampling Strategies for Contrastive Representation Learning
+
+Applications and Case Studies
+['Negative sampling has been applied in various domains and scenarios, demonstrating its versatility and effectiveness.', '1. Case studies of negative sampling in e-commerce, social media, and content streaming platforms, highlighting the challenges and solutions in each domain.', '2. Discussion on the application of negative sampling in cold start scenarios, including new user and new item problems.', '3. Examination of negative sampling in multi-modal recommendation systems, incorporating textual, visual, and auditory data.']
+
+Negative Binomial Matrix Factorization for Recommender Systems
+
+Enhanced Bayesian Personalized Ranking for Robust Hard Negative Sampling in Recommender Systems
+
+Entity Aware Negative Sampling with Auxiliary Loss of False Negative
+  Prediction for Knowledge Graph Embedding
+
+Meta-Learning with Adaptive Weighted Loss for Imbalanced Cold-Start Recommendation
+
+Addressing the Cold-Start Problem in Collaborative Filtering Through Positive-Unlabeled Learning and Multi-Target Prediction
+
+Personalized Ranking with Importance Sampling
+
+Disentangling Sampling and Labeling Bias for Learning in Large-Output
+  Spaces
+
+ZeroMat: Solving Cold-start Problem of Recommender System with No Input Data
+
+TriSampler: A Better Negative Sampling Principle for Dense Retrieval
+
+Importance of Negative Sampling in Weak Label Learning
+
+User Cold-Start Learning in Recommender Systems using Monte Carlo Tree Search
+
+Reinforced Negative Sampling over Knowledge Graph for Recommendation
+
+Exploiting Negative Preference in Content-based Music Recommendation with Contrastive Learning
+
+Negative Sampling for Contrastive Representation Learning: A Review
+
+On Popularity Bias of Multimodal-aware Recommender Systems: A Modalities-driven Analysis
+
+Negative Sampling for Recommendation
+
+Addressing the Item Cold-start Problem by Attribute-driven Active
+  Learning
+
+Understanding Negative Sampling in Graph Representation Learning
+
+Negative Sampling for Hyperlink Prediction in Networks
+
+Context-Aware Negative Sampling for Sequential Recommendation
+
+Semantically-Conditioned Negative Samples for Efficient Contrastive
+  Learning
+
+Promoting Cold-Start Items in Recommender Systems
+
+Development of an offline OOH advertising recommendation system using negative sampling and deep interest network
+
+SVP-CF: Selection via Proxy for Collaborative Filtering Data
+
+SamWalker: Social Recommendation with Informative Sampling Strategy
+
+Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+Negative Feedback for Music Personalization
+
+Scaling Session-Based Transformer Recommendations using Optimized Negative Sampling and Loss Functions
+
+Improved Estimation of Ranks for Learning Item Recommenders with Negative Sampling
+
+How to balance the bioinformatics data: pseudo-negative sampling
+
+A Case Study on Sampling Strategies for Evaluating Neural Sequential Item Recommendation Models
+
+Fifty Shades of Ratings: How to Benefit from a Negative Feedback in Top-N Recommendations Tasks
+
+Multi-behavior aware recommendation with joint contrastive learning and reinforced negative sampling
+
+Reservoir Sampling Based Streaming Method for Large Scale Collaborative Filtering
+
+Structure Aware Negative Sampling in Knowledge Graphs
+
+The item selection problem for user cold-start recommendation
+
+Towards Reliable Item Sampling for Recommendation Evaluation
+
+MMRec: Simplifying Multimodal Recommendation
+
+Learning to Learn a Cold-start Sequential Recommender
+
+Efficient Heterogeneous Collaborative Filtering without Negative Sampling for Recommendation
+
+The Sample Complexity of Online One-Class Collaborative Filtering
+
+A Metric Learning Perspective on the Implicit Feedback-Based Recommendation Data Imbalance Problem
+
+Contrastive Learning with Hard Negative Samples
+
+Alleviating Item-Side Cold-Start Problems in Recommender Systems Using Weak Supervision
+
+Analysis of the Impact of Negative Sampling on Link Prediction in
+  Knowledge Graphs
+
+Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+A collaborative filtering approach to mitigate the new user cold start problem
+
+On Sampling Collaborative Filtering Datasets
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+Personalized Negative Reservoir for Incremental Learning in Recommender Systems
+
+Challenges and Limitations
+['Despite the advancements in negative sampling, several challenges and limitations remain, requiring further research and development.', '1. Discussion on the bias-variance trade-off in negative sampling, and strategies to mitigate overfitting and underfitting.', '2. Analysis of the cold start problem in negative sampling, including the lack of training data for new users or items.', '3. Examination of the scalability and computational efficiency of negative sampling methods, particularly for large-scale recommendation systems.']
+
+gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling
+
+On Inherited Popularity Bias in Cold-Start Item Recommendation
+
+A Troubling Analysis of Reproducibility and Progress in Recommender Systems Research
+
+Unbiased Recommender Learning from Missing-Not-At-Random Implicit Feedback
+
+Representation Learning for cold-start recommendation
+
+Combating the Cold Start User Problem in Model Based Collaborative
+  Filtering
+
+Cross-Batch Negative Sampling for Training Two-Tower Recommenders
+
+Context-Aware Negative Sampling for Sequential Recommendation
+
+We're Still Doing It (All) Wrong: Recommender Systems, Fifteen Years Later
+
+Towards Reliable Item Sampling for Recommendation Evaluation
+
+A collaborative filtering approach to mitigate the new user cold start problem
+
+Efficient Heterogeneous Collaborative Filtering without Negative Sampling for Recommendation
+
+Neighborhood-based Hard Negative Mining for Sequential Recommendation
+
+SamWalker: Social Recommendation with Informative Sampling Strategy
+
+Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+Pessimistic Off-Policy Optimization for Learning to Rank
+
+Alleviating Item-Side Cold-Start Problems in Recommender Systems Using Weak Supervision
+
+On Estimating Recommendation Evaluation Metrics under Sampling
+
+Fifty Shades of Ratings: How to Benefit from a Negative Feedback in Top-N Recommendations Tasks
+
+Loss Aversion in Recommender Systems: Utilizing Negative User Preference
+  to Improve Recommendation Quality
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+Hierarchical Negative Binomial Factorization for Recommender Systems on Implicit Feedback
+
+Addressing the Extreme Cold-Start Problem in Group Recommendation
+
+Learning to Learn a Cold-start Sequential Recommender
+
+Trading Hard Negatives and True Negatives: A Debiased Contrastive Collaborative Filtering Approach
+
+TriSampler: A Better Negative Sampling Principle for Dense Retrieval
+
+User Cold-Start Learning in Recommender Systems using Monte Carlo Tree Search
+
+DPR: An Algorithm Mitigate Bias Accumulation in Recommendation feedback loops
+
+Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+Beyond Positive Similarity Metrics: Leveraging Negative Co-Occurrence in Recommender Systems
+
+Importance of Negative Sampling in Weak Label Learning
+
+Negative Sampling for Hyperlink Prediction in Networks
+
+Understanding Negative Sampling in Graph Representation Learning
+
+Negative Sampling in Knowledge Graph Representation Learning: A Review
+
+Development of an offline OOH advertising recommendation system using negative sampling and deep interest network
+
+Rethinking Collaborative Metric Learning: Toward an Efficient
+  Alternative without Negative Sampling
+
+OFF-set: one-pass factorization of feature sets for online recommendation in persistent cold start settings
+
+Efficient Non-Sampling Factorization Machines for Optimal Context-Aware Recommendation
+
+Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+Generating Negative Samples for Sequential Recommendation
+
+On the Theories Behind Hard Negative Sampling for Recommendation
+
+SVP-CF: Selection via Proxy for Collaborative Filtering Data
+
+Soft BPR Loss for Dynamic Hard Negative Sampling in Recommender Systems
+
+Structure Aware Negative Sampling in Knowledge Graphs
+
+Negative Sampling for Recommendation
+
+Addressing Item-Cold Start Problem in Recommendation Systems using Model Based Approach and Deep Learning
+
+Exploiting Negative Preference in Content-based Music Recommendation with Contrastive Learning
+
+Cold-start Problems in Recommendation Systems via Contextual-bandit
+  Algorithms
+
+Alleviating Cold-Start Problems in Recommendation through
+  Pseudo-Labelling over Knowledge Graph
+
+Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+

@@ -1,0 +1,49 @@
+{
+  "run": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/meta-llama_llama-3.3-70b-instruct__database_kisti-kisti-2608/Network Edge Inference for Large Language Models/exp_1",
+  "topic_id": "llm-edge-inference",
+  "topic": "Network Edge Inference for Large Language Models",
+  "cutoff": "2026-04-24",
+  "refs": 127,
+  "refs_doi": 55,
+  "denominator_n_gt_refs_cutoff": 85,
+  "gt_pool": 163,
+  "hits": 7,
+  "recall": 0.0824,
+  "precision": 0.0551,
+  "hit_ids": [
+    "10.1109/comst.2025.3527641",
+    "10.1145/3754448",
+    "2110.14895",
+    "2301.00774",
+    "2405.14371",
+    "2409.00088",
+    "2410.10759"
+  ],
+  "refs_after_cutoff": [],
+  "gt_id_leaks": [],
+  "gt_title_leaks": [],
+  "generated_title": "Network Edge Inference for Large Language Models: A Comprehensive Survey",
+  "generated_title_equals_gt_title": [],
+  "words_refined": 17352,
+  "manifest": {
+    "llm_stats": {
+      "completions": 113,
+      "truncated_accepted": 0,
+      "truncation_retries": 1,
+      "empty_retries": 0,
+      "error_retries": 0
+    },
+    "temperature": 0.6,
+    "max_tokens": 8192,
+    "provider": "akashml/fp8",
+    "finished_at": "2026-09-15T13:58:07"
+  },
+  "retrieval_policy": {
+    "allowed": 1663704,
+    "db_records": 1663704,
+    "allowed_fingerprint_sha256": "ab09ca72fcb7959b3aadab1680ed4c410ac24268a46892f04a0dfc963dfa84e0",
+    "reference_violations": [],
+    "view_sha256": "c1a0c6b3fe1bd46f1a7d3d14832b53933dfb0b1c021531c23df109ba453ca156",
+    "view_created_at": "2026-09-14T13:18:56+00:00"
+  }
+}

@@ -1,0 +1,39 @@
+# A Comprehensive Survey on Alignment of Diffusion Models
+## 1 Introduction
+## 2 Foundations of Alignment in Diffusion Models
+### 2.1 Mathematical Foundations of Diffusion Models
+### 2.2 Guidance Methods for Aligning Diffusion Models
+### 2.3 Theoretical Perspectives on Diffusion Model Alignment
+### 2.4 Evaluating and Comparing Alignment Methods
+### 2.5 Open Challenges and Future Directions
+## 3 Methods for Aligning Diffusion Models
+### 3.1 Classifier-Free Guidance Methods
+### 3.2 Reinforcement Learning from Human Feedback
+### 3.3 Preference-Based Optimization Methods
+### 3.4 Inference-Time Alignment Control
+### 3.5 Emerging Trends and Future Directions
+## 4 Applications of Aligned Diffusion Models
+### 4.1 Introduction to Applications of Aligned Diffusion Models
+### 4.2 Text-to-Image Synthesis with Aligned Diffusion Models
+### 4.3 Image Editing and Manipulation with Aligned Diffusion Models
+### 4.4 Text Generation with Aligned Diffusion Models
+### 4.5 Multimodal Applications of Aligned Diffusion Models
+### 4.6 Evaluation and Comparison of Aligned Diffusion Models
+## 5 Evaluation and Comparison of Alignment Methods
+### 5.1 Overview of Evaluation Metrics
+###
+### 5.2 Comparison of Guidance Methods
+###
+### 5.3 Benchmarking and Standardized Evaluation Protocols
+###
+### 5.4 Challenges and Limitations of Evaluation Metrics
+###
+### 5.5 Emerging Trends and Future Directions
+## 6 Challenges and Limitations of Alignment in Diffusion Models
+### 6.1 Introduction to Challenges in Aligning Diffusion Models
+### 6.2 Mode Collapse and Limited Diversity in Diffusion Models
+### 6.3 Training Instability and Optimization Challenges
+### 6.4 Evaluation Metrics and Alignment Assessment
+### 6.5 Recent Advances and Future Directions
+## 7 Conclusion
+

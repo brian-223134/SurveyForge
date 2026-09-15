@@ -1,0 +1,57 @@
+{
+  "run": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/meta-llama_llama-3.3-70b-instruct__database_kisti-kisti-2608/Negative Sampling in Recommendation/exp_1",
+  "topic_id": "negative-sampling-recsys",
+  "topic": "Negative Sampling in Recommendation",
+  "cutoff": "2026-01-28",
+  "refs": 152,
+  "refs_doi": 121,
+  "denominator_n_gt_refs_cutoff": 138,
+  "gt_pool": 249,
+  "hits": 15,
+  "recall": 0.1087,
+  "precision": 0.0987,
+  "hit_ids": [
+    "10.1145/2911451.2911489",
+    "10.1145/3097983.3098202",
+    "10.1145/3366423.3380187",
+    "10.1145/3366423.3380303",
+    "10.1145/3366424.3386195",
+    "10.1145/3394486.3403218",
+    "10.1145/3394486.3403226",
+    "10.1145/3460231.3475943",
+    "10.1145/3485447.3512082",
+    "10.1145/3543507.3583223",
+    "10.1145/3604915.3608783",
+    "10.1609/aaai.v34i01.5329",
+    "2009.03376",
+    "2206.00212",
+    "2208.12397"
+  ],
+  "refs_after_cutoff": [],
+  "gt_id_leaks": [],
+  "gt_title_leaks": [],
+  "generated_title": "Comprehensive Survey of Negative Sampling in Recommendation Systems",
+  "generated_title_equals_gt_title": [],
+  "words_refined": 16629,
+  "manifest": {
+    "llm_stats": {
+      "completions": 111,
+      "truncated_accepted": 0,
+      "truncation_retries": 2,
+      "empty_retries": 0,
+      "error_retries": 8
+    },
+    "temperature": 0.6,
+    "max_tokens": 8192,
+    "provider": "akashml/fp8",
+    "finished_at": "2026-09-15T13:15:48"
+  },
+  "retrieval_policy": {
+    "allowed": 1657045,
+    "db_records": 1663704,
+    "allowed_fingerprint_sha256": "d0de7531853d69a33b6e0ba7e75bad062e818773653391f702ffdfb814a4f3bd",
+    "reference_violations": [],
+    "view_sha256": "c1a0c6b3fe1bd46f1a7d3d14832b53933dfb0b1c021531c23df109ba453ca156",
+    "view_created_at": "2026-09-14T13:18:56+00:00"
+  }
+}

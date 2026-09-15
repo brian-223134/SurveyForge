@@ -1,0 +1,520 @@
+Background and Fundamentals of Multimodal Large Language Models
+['This section provides a background on multimodal large language models, including their architecture, training methods, and applications, to establish a foundation for understanding adversarial attacks.', '1. Architectural overview of multimodal large language models, including vision and language encoders, and their integration for multimodal understanding and generation.', '2. Discussion on the training objectives and methods used for these models, such as masked language modeling, next-token prediction, and multimodal fusion techniques.', '3. Examples of applications where multimodal large language models are deployed, such as image captioning, visual question answering, text-image generation, and multimodal dialogue systems.']
+
+Towards Robust Multimodal Large Language Models Against Jailbreak Attacks
+
+Unleashing the Intrinsic Visual Representation Capability of Multimodal Large Language Models
+
+Assessing the adversarial robustness of multimodal medical AI systems: insights into vulnerabilities and modality interactions
+
+MLLM-Protector: Ensuring MLLM’s Safety without Hurting Performance
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security
+
+Multimodal Large Language Models to Support Real-World Fact-Checking
+
+Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+Effectiveness assessment of recent large vision-language models
+
+TEAL: Tokenize and Embed ALL for Multi-modal Large Language Models
+
+Tit-for-Tat: Safeguarding Large Vision-Language Models Against Jailbreak Attacks via Adversarial Defense
+
+Textual Steering Vectors Can Improve Visual Understanding in Multimodal Large Language Models
+
+Multimodal Large Language Models for Text-rich Image Understanding: A Comprehensive Review
+
+Adversarial-Guided Diffusion for Multimodal LLM Attacks
+
+Generating Images with Multimodal Language Models
+
+VEAttack: Downstream-agnostic Vision Encoder Attack against Large Vision Language Models
+
+Coordinated Robustness Evaluation Framework for Vision-Language Models
+
+SEA: Low-Resource Safety Alignment for Multimodal Large Language Models via Synthetic Embeddings
+
+Understanding and Measuring Robustness of Multimodal Learning
+
+Safety of Multimodal Large Language Models on Images and Text
+
+Macaw-LLM: Multi-Modal Language Modeling with Image, Audio, Video, and Text Integration
+
+SoundBreak: A Systematic Study of Audio-Only Adversarial Attacks on Trimodal Models
+
+MirrorCheck: Efficient Adversarial Defense for Vision-Language Models
+
+Accelerating Multimodal Large Language Models via Dynamic Visual-Token Exit and the Empirical Findings
+
+On the Adversarial Robustness of Multi-Modal Foundation Models
+
+4M: Massively Multimodal Masked Modeling
+
+Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+Adversarial Attacks on Robotic Vision Language Action Models
+
+FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs
+
+Pushing the Limits of Safety: A Technical Report on the ATLAS Challenge 2025
+
+Effective Black-Box Multi-Faceted Attacks Breach Vision Large Language Model Guardrails
+
+E5-V: Universal Embeddings with Multimodal Large Language Models
+
+LMFusion: Adapting Pretrained Language Models for Multimodal Generation
+
+Visual Adversarial Examples Jailbreak Aligned Large Language Models
+
+Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+
+Can LLMs Deceive CLIP? Benchmarking Adversarial Compositionality of Pre-trained Multimodal Representation via Text Updates
+
+TF-Attack: Transferable and Fast Adversarial Attacks on Large Language Models
+
+Automating Steering for Safe Multimodal Large Language Models
+
+JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering
+
+Adversarial Attacks and Defenses in Large Language Models: Old and New Threats
+
+SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models
+
+Are aligned neural networks adversarially aligned?
+
+Beyond Visual Safety: Jailbreaking Multimodal Large Language Models for Harmful Image Generation via Semantic-Agnostic Inputs
+
+CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs
+
+Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks
+
+AlignGPT: Multi-modal Large Language Models with Adaptive Alignment Capability
+
+Adversarial Attacks on Large Language Models Using Regularized Relaxation
+
+Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks
+
+Adversarial Robustness for Visual Grounding of Multimodal Large Language Models
+
+UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models
+
+Types and Mechanisms of Adversarial Attacks
+['This section delves into the types and mechanisms of adversarial attacks on multimodal large language models, including their goals, methodologies, and evaluation metrics.', '1. Classification of adversarial attacks into different types, such as targeted and untargeted attacks, and their specific goals, including model evasion, model extraction, and data poisoning.', '2. Explanation of the methodologies used to generate adversarial examples, including gradient-based methods, such as fast gradient sign method and projected gradient descent, and gradient-free methods, such as genetic algorithms and evolutionary strategies.', '3. Discussion on the evaluation metrics used to assess the effectiveness of adversarial attacks and the robustness of models against these attacks, including attack success rate, model accuracy under attack, and robustness metrics.']
+
+Jailbreaking Attack against Multimodal Large Language Model
+
+CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs
+
+Transferable Adversarial Attacks on Black-Box Vision-Language Models
+
+Adversarial Evaluation of Multimodal Models under Realistic Gray Box
+  Assumption
+
+Pushing the Limits of Safety: A Technical Report on the ATLAS Challenge 2025
+
+On Evaluating the Adversarial Robustness of Foundation Models for Multimodal Entity Linking
+
+Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+MM-PoisonRAG: Disrupting Multimodal RAG with Local and Global Poisoning Attacks
+
+Adversarial Robustness for Visual Grounding of Multimodal Large Language Models
+
+MirrorCheck: Efficient Adversarial Defense for Vision-Language Models
+
+Multi-Faceted Attack: Exposing Cross-Model Vulnerabilities in Defense-Equipped Vision-Language Models
+
+SoundBreak: A Systematic Study of Audio-Only Adversarial Attacks on Trimodal Models
+
+Bridge the Gap Between CV and NLP! A Gradient-based Textual Adversarial
+  Attack Framework
+
+Adversarial Evasion Attack Efficiency against Large Language Models
+
+Generating Fluent Adversarial Examples for Natural Languages
+
+Misaligned Roles, Misplaced Images: Structural Input Perturbations Expose Multimodal Alignment Blind Spots
+
+Con Instruction: Universal Jailbreaking of Multimodal Large Language Models via Non-Textual Modalities
+
+TF-Attack: Transferable and Fast Adversarial Attacks on Large Language Models
+
+Retention Score: Quantifying Jailbreak Risks for Vision Language Models
+
+SEA: Low-Resource Safety Alignment for Multimodal Large Language Models via Synthetic Embeddings
+
+SGM: Safety Glasses for Multimodal Large Language Models via Neuron-Level Detoxification
+
+Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+Are aligned neural networks adversarially aligned?
+
+Effectiveness assessment of recent large vision-language models
+
+UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models
+
+Assessing Adversarial Robustness of Large Language Models: An Empirical Study
+
+Hierarchical Refinement of Universal Multimodal Attacks on Vision-Language Models
+
+Sparse vs Contiguous Adversarial Pixel Perturbations in Multimodal Models: An Empirical Analysis
+
+Robust-LLaVA: On the Effectiveness of Large-Scale Robust Image Encoders for Multi-modal Large Language Models
+
+Multi-turn Jailbreaking Attack in Multi-Modal Large Language Models
+
+Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Generating Natural Language Adversarial Examples on a Large Scale with Generative Models
+
+Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense
+
+A Geometry-Inspired Attack for Generating Natural Language Adversarial Examples
+
+SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models
+
+On Evaluating Adversarial Robustness of Large Vision-Language Models
+
+CrossGuard: Safeguarding MLLMs against Joint-Modal Implicit Malicious Attacks
+
+EigenShield: Causal Subspace Filtering via Random Matrix Theory for Adversarially Robust Vision-Language Models
+
+Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security
+
+Adversarial Attacks on Robotic Vision Language Action Models
+
+Breach in the Shield: Unveiling the Vulnerabilities of Large Language Models
+
+Coordinated Robustness Evaluation Framework for Vision-Language Models
+
+Comprehensive comparisons of gradient-based multi-label adversarial attacks
+
+A Framework for Evaluating Vision-Language Model Safety: Building Trust in AI for Public Sector Applications
+
+Probing the Robustness of Vision-Language Pretrained Models: A Multimodal Adversarial Attack Approach
+
+Unveiling Safety Vulnerabilities of Large Language Models
+
+Mutual-modality Adversarial Attack with Semantic Perturbation
+
+"I am bad": Interpreting Stealthy, Universal and Robust Audio Jailbreaks in Audio-Language Models
+
+Data Poisoning Attacks Against Multimodal Encoders
+
+Defense Mechanisms and Robustness Evaluation
+['This section focuses on the defense mechanisms designed to mitigate adversarial attacks on multimodal large language models and the methods used to evaluate model robustness.', '1. Overview of defense strategies, including adversarial training, which involves training models on adversarial examples to improve robustness, input preprocessing, and detection methods, such as anomaly detection and adversarial example detection.', '2. Discussion on the importance of evaluating model robustness and the metrics used for this purpose, including attack success rate, robustness metrics, and model performance on benign inputs.', '3. Examination of the trade-offs between model robustness and performance on benign inputs, highlighting the challenges of balancing security and functionality in multimodal large language models.']
+
+Visual Adversarial Examples Jailbreak Aligned Large Language Models
+
+Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security
+
+When Language Overrules: Revealing Text Dominance in Multimodal Large Language Models
+
+Beyond Text: Multimodal Jailbreaking of Vision-Language and Audio Models through Perceptually Simple Transformations
+
+AdaShield: Safeguarding Multimodal Large Language Models from Structure-based Attack via Adaptive Shield Prompting
+
+Probing the Robustness of Vision-Language Pretrained Models: A Multimodal Adversarial Attack Approach
+
+Hierarchical Refinement of Universal Multimodal Attacks on Vision-Language Models
+
+Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks
+
+Assessing the adversarial robustness of multimodal medical AI systems: insights into vulnerabilities and modality interactions
+
+Adversarial Attacks and Defenses in Large Language Models: Old and New Threats
+
+Towards Robust Multimodal Large Language Models Against Jailbreak Attacks
+
+Adversarial Defence without Adversarial Defence: Enhancing Language Model Robustness via Instance-level Principal Component Removal
+
+Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+MM-LLMs: Recent Advances in MultiModal Large Language Models
+
+Large Language Model Text Adversarial Defense Method Based on Disturbance Detection and Error Correction
+
+Baseline Defenses for Adversarial Attacks Against Aligned Language Models
+
+FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs
+
+Unveiling Safety Vulnerabilities of Large Language Models
+
+Adversarial Robustness for Visual Grounding of Multimodal Large Language Models
+
+Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense
+
+Data Poisoning Attacks Against Multimodal Encoders
+
+SEA: Low-Resource Safety Alignment for Multimodal Large Language Models via Synthetic Embeddings
+
+Transferable Adversarial Attacks on Black-Box Vision-Language Models
+
+Scaling Laws for Adversarial Attacks on Language Model Activations
+
+Adversarial-Guided Diffusion for Multimodal LLM Attacks
+
+Adversarial Evasion Attack Efficiency against Large Language Models
+
+Enhance the Robustness of Text-Centric Multimodal Alignments
+
+COGNITION: From Evaluation to Defense against Multimodal LLM CAPTCHA Solvers
+
+Adversarial Attacks on Large Language Models Using Regularized Relaxation
+
+Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+
+"I am bad": Interpreting Stealthy, Universal and Robust Audio Jailbreaks in Audio-Language Models
+
+Adversarial attack classification and robustness testing for large language models for code
+
+On the Validity of Traditional Vulnerability Scoring Systems for Adversarial Attacks Against LLMs
+
+Adversarial Attacks on Robotic Vision Language Action Models
+
+MLLM-Protector: Ensuring MLLM’s Safety without Hurting Performance
+
+EigenShield: Causal Subspace Filtering via Random Matrix Theory for Adversarially Robust Vision-Language Models
+
+SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models
+
+Multi-turn Jailbreaking Attack in Multi-Modal Large Language Models
+
+Safety of Multimodal Large Language Models on Images and Text
+
+Multifaceted Evaluation of Audio-Visual Capability for MLLMs: Effectiveness, Efficiency, Generalizability and Robustness
+
+Misaligned Roles, Misplaced Images: Structural Input Perturbations Expose Multimodal Alignment Blind Spots
+
+CrossGuard: Safeguarding MLLMs against Joint-Modal Implicit Malicious Attacks
+
+JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering
+
+SoundBreak: A Systematic Study of Audio-Only Adversarial Attacks on Trimodal Models
+
+A Framework for Evaluating Vision-Language Model Safety: Building Trust in AI for Public Sector Applications
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Adversarial Evaluation of Multimodal Models under Realistic Gray Box
+  Assumption
+
+Effective Black-Box Multi-Faceted Attacks Breach Vision Large Language Model Guardrails
+
+Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+Are aligned neural networks adversarially aligned?
+
+Applications and Case Studies of Adversarial Attacks
+['This section explores the applications and case studies of adversarial attacks on multimodal large language models, highlighting their impact on real-world systems.', '1. Discussion on the potential impact of adversarial attacks on applications such as autonomous vehicles, healthcare, and education, where multimodal large language models are increasingly being used.', '2. Presentation of case studies demonstrating successful adversarial attacks on multimodal large language models in various domains, including but not limited to image captioning, visual question answering, and multimodal sentiment analysis.', '3. Analysis of the lessons learned from these case studies and their implications for improving model security and robustness, including the need for more comprehensive testing and evaluation protocols.']
+
+Jailbreaking Attack against Multimodal Large Language Model
+
+CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs
+
+Assessing the adversarial robustness of multimodal medical AI systems: insights into vulnerabilities and modality interactions
+
+Multi-Faceted Attack: Exposing Cross-Model Vulnerabilities in Defense-Equipped Vision-Language Models
+
+Attacker's Noise Can Manipulate Your Audio-based LLM in the Real World
+
+Adversarial Attacks on Large Language Models Using Regularized Relaxation
+
+Are aligned neural networks adversarially aligned?
+
+BackdoorVLM: A Benchmark for Backdoor Attacks on Vision-Language Models
+
+Con Instruction: Universal Jailbreaking of Multimodal Large Language Models via Non-Textual Modalities
+
+MLLM-Protector: Ensuring MLLM’s Safety without Hurting Performance
+
+QAVA: Query-Agnostic Visual Attack to Large Vision-Language Models
+
+Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+
+UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models
+
+Safety of Multimodal Large Language Models on Images and Text
+
+Unveiling Safety Vulnerabilities of Large Language Models
+
+Effectiveness assessment of recent large vision-language models
+
+Multi-turn Jailbreaking Attack in Multi-Modal Large Language Models
+
+Visual Adversarial Examples Jailbreak Aligned Large Language Models
+
+Explaining Multi-modal Large Language Models by Analyzing their Vision Perception
+
+On the Adversarial Robustness of Multi-Modal Foundation Models
+
+Understanding the Effect of Textual Adversaries in Multimodal Machine Translation
+
+Assessing Adversarial Robustness of Large Language Models: An Empirical Study
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Multimodal Large Language Models for Enhanced Traffic Safety: A Comprehensive Review and Future Trends
+
+Beyond Text: Multimodal Jailbreaking of Vision-Language and Audio Models through Perceptually Simple Transformations
+
+Coordinated Robustness Evaluation Framework for Vision-Language Models
+
+Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+MAA: Meticulous Adversarial Attack against Vision-Language Pre-trained Models
+
+FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs
+
+VEAttack: Downstream-agnostic Vision Encoder Attack against Large Vision Language Models
+
+Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+Adversarial Robustness for Visual Grounding of Multimodal Large Language Models
+
+Improving Adversarial Transferability of Visual-Language Pre-training Models through Collaborative Multimodal Interaction
+
+Towards Transferable Attacks Against Vision-LLMs in Autonomous Driving with Typography
+
+SEA: Low-Resource Safety Alignment for Multimodal Large Language Models via Synthetic Embeddings
+
+MM-PoisonRAG: Disrupting Multimodal RAG with Local and Global Poisoning Attacks
+
+Multimodal Large Language Models to Support Real-World Fact-Checking
+
+Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks
+
+Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense
+
+Towards Robust Multimodal Large Language Models Against Jailbreak Attacks
+
+Adversarial Attacks on Robotic Vision Language Action Models
+
+On Evaluating Adversarial Robustness of Large Vision-Language Models
+
+Q-MLLM: Vector Quantization for Robust Multimodal Large Language Model Security
+
+AI Safety in Practice: Enhancing Adversarial Robustness in Multimodal Image Captioning
+
+SoundBreak: A Systematic Study of Audio-Only Adversarial Attacks on Trimodal Models
+
+Boosting adversarial transferability in vision-language models via multimodal feature heterogeneity
+
+Adversarial Attacks on Large Language Models in Medicine
+
+Differentiable Language Model Adversarial Attacks on Categorical
+  Sequence Classifiers
+
+Adversarial Attacks and Defenses in Large Language Models: Old and New Threats
+
+Understanding and Measuring Robustness of Multimodal Learning
+
+Real-World Implications and Future Directions
+['This section discusses the real-world implications of adversarial attacks on multimodal large language models and outlines future research directions.', '1. Examination of the potential consequences of successful adversarial attacks, including data breaches, model theft, and misuse, and their implications for privacy, security, and trust in AI systems.', '2. Discussion on the emerging trends and research opportunities in this area, including the development of more robust and secure multimodal large language models, and the exploration of new applications and domains.', '3. Identification of open challenges and potential gaps in current research, including the need for more effective defense mechanisms, better evaluation metrics, and increased understanding of attack mechanisms and their implications.']
+
+Adversarial Attacks on Large Language Models Using Regularized Relaxation
+
+Towards Adversarial Attack on Vision-Language Pre-training Models
+
+On the Adversarial Robustness of Multi-Modal Foundation Models
+
+Multifaceted Evaluation of Audio-Visual Capability for MLLMs: Effectiveness, Efficiency, Generalizability and Robustness
+
+Emerging Security Challenges of Large Language Models
+
+An Empirical Study on Adversarial Attack on NMT: Languages and Positions Matter
+
+Adversarial-Guided Diffusion for Multimodal LLM Attacks
+
+COGNITION: From Evaluation to Defense against Multimodal LLM CAPTCHA Solvers
+
+Multi-Faceted Attack: Exposing Cross-Model Vulnerabilities in Defense-Equipped Vision-Language Models
+
+Multi-turn Jailbreaking Attack in Multi-Modal Large Language Models
+
+Jailbreaking Attack against Multimodal Large Language Model
+
+FMM-Attack: A Flow-based Multi-modal Adversarial Attack on Video-based LLMs
+
+Probing the Robustness of Vision-Language Pretrained Models: A Multimodal Adversarial Attack Approach
+
+Breaking Audio Large Language Models by Attacking Only the Encoder: A Universal Targeted Latent-Space Audio Attack
+
+UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models
+
+JPS: Jailbreak Multimodal Large Language Models with Collaborative Visual Perturbation and Textual Steering
+
+Scaling Laws for Adversarial Attacks on Language Model Activations
+
+CrossGuard: Safeguarding MLLMs against Joint-Modal Implicit Malicious Attacks
+
+Adversarial Attacks on Robotic Vision Language Action Models
+
+Visual Adversarial Examples Jailbreak Aligned Large Language Models
+
+Protecting Privacy in Multimodal Large Language Models with MLLMU-Bench
+
+Safety of Multimodal Large Language Models on Images and Text
+
+On the Validity of Traditional Vulnerability Scoring Systems for Adversarial Attacks Against LLMs
+
+Are Neuro-Inspired Multi-Modal Vision-Language Models Resilient to Membership Inference Privacy Leakage?
+
+Towards Robust Multimodal Large Language Models Against Jailbreak Attacks
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Beyond Data Privacy: New Privacy Risks for Large Language Models
+
+Beyond Text: Multimodal Jailbreaking of Vision-Language and Audio Models through Perceptually Simple Transformations
+
+Coordinated Robustness Evaluation Framework for Vision-Language Models
+
+Jailbreaking LLMs & VLMs: Mechanisms, Evaluation, and Unified Defense
+
+Hierarchical Refinement of Universal Multimodal Attacks on Vision-Language Models
+
+Are aligned neural networks adversarially aligned?
+
+Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks
+
+Effective Black-Box Multi-Faceted Attacks Breach Vision Large Language Model Guardrails
+
+Defeating Cerberus: Concept-Guided Privacy-Leakage Mitigation in Multimodal Language Models
+
+Attacker's Noise Can Manipulate Your Audio-based LLM in the Real World
+
+Assessing Adversarial Robustness of Large Language Models: An Empirical Study
+
+Adversarial Attacks and Defenses in Large Language Models: Old and New Threats
+
+Can LLMs Deceive CLIP? Benchmarking Adversarial Compositionality of Pre-trained Multimodal Representation via Text Updates
+
+MM-LLMs: Recent Advances in MultiModal Large Language Models
+
+Adversarial Confusion Attack: Disrupting Multimodal Large Language Models
+
+AdversariaLLM: A Unified and Modular Toolbox for LLM Robustness Research
+
+Assessing the adversarial robustness of multimodal medical AI systems: insights into vulnerabilities and modality interactions
+
+Adversarial Evasion Attack Efficiency against Large Language Models
+
+Understanding and Measuring Robustness of Multimodal Learning
+
+Differentiable Language Model Adversarial Attacks on Categorical
+  Sequence Classifiers
+
+On Evaluating Adversarial Robustness of Large Vision-Language Models
+
+CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs
+
+SECURING LARGE LANGUAGE MODELS AGAINST JAILBREAKING ATTACKS: A NOVEL FRAMEWORK FOR ROBUST AI SAFETY
+
+Partially Recentralization Softmax Loss for Vision-Language Models Robustness
+

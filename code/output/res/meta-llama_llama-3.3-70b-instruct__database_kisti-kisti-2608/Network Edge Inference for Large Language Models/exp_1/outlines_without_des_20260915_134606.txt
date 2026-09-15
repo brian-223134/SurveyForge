@@ -1,0 +1,38 @@
+# Network Edge Inference for Large Language Models: A Comprehensive Survey
+## 1 Introduction
+## 2 Architectures and Models for Network Edge Inference
+### 2.1 Introduction to Network Edge Inference Architectures
+### 2.2 Mixture of Experts (MoE) Models for Edge Inference
+### 2.3 Model Compression and Optimization Techniques
+### 2.4 Edge-Cloud Collaboration and Distributed Inference
+### 2.5 Security, Privacy, and Energy Efficiency Considerations
+### 2.6 Applications and Future Directions
+## 3 Optimization Techniques for Edge Inference
+### 3.1 Quantization Techniques for Edge Inference
+### 3.2 Sparse Coding and Low-Rank Approximations
+### 3.3 Dynamic Voltage and Frequency Scaling for Edge Inference
+### 3.4 Knowledge Distillation and Model Pruning for Efficient Edge Inference
+### 3.5 Edge-Aware Inference Optimization
+### 3.6 Emerging Trends and Future Directions in Edge Inference Optimization
+## 4 Edge-Cloud Collaboration for Inference
+### 4.1 Architectures for Edge-Cloud Collaborative Inference
+### 4.2 Task Partitioning and Offloading Strategies
+### 4.3 Communication Protocols and Data Management
+### 4.4 Optimization Techniques for Edge-Cloud Inference
+### 4.5 Security and Privacy Considerations
+### 4.6 Applications and Use Cases
+## 5 Security and Privacy Considerations
+### 5.1 Threat Models and Vulnerability Analysis
+### 5.2 Encryption and Access Control Mechanisms
+### 5.3 Privacy-Preserving Inference Techniques
+### 5.4 Edge-Cloud Collaboration for Secure Inference
+### 5.5 Emerging Trends and Future Directions
+## 6 Applications and Use Cases
+### 6.1 Edge Computing Applications for Large Language Models
+### 6.2 Natural Language Processing Tasks at the Edge
+### 6.3 Enabling New Services and Applications with Edge Inference
+### 6.4 Collaborative Edge-Cloud Inference for Large Language Models
+### 6.5 Real-World Deployment and Case Studies
+### 6.6 Future Directions and Emerging Trends
+## 7 Conclusion
+

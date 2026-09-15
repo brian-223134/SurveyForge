@@ -120,6 +120,12 @@ physical-adversarial-attacks 1편, 21분 · $0.40: refs 91편(DOI 59) 전부 허
 이후 문헌이었다 — 정책이 그 40편을 검색 단계에서 없앴고 recall 은 오차(±1.7%p) 안에서 같다. 상세는 [`kisti-integration.md`](kisti-integration.md) §8.4,
 채점 `scripts/score_run.py`.
 
+### 5.2 2026년 cutoff topic 4편 (2026-09-15)
+
+diffusion-model-alignment · negative-sampling-recsys · mllm-adversarial-attacks · llm-edge-inference, 편당 20~25분 · $0.35~0.40, refs 120~152 전부 허용 안,
+누수 0, recall 8.2~11.5% / precision 4.2~11.8% (분모 52~139). 표는 [`kisti-integration.md`](kisti-integration.md) §8.5. 2026년 cutoff 라도 corpus 의
+2026년 문헌은 1월분뿐이라(§6-2) 네 topic 이 보는 corpus 는 1,657,045~1,663,704 편으로 거의 같다.
+
 ## 6. 한계·미결
 
 1. **arXiv 레코드의 판** — KISTI arXiv 레코드는 버전 없는 키라 초록이 최신판일 수 있다. 월 상한으로 v1 이 cutoff 이전임은 보장하지만 초록이 v1 것이라는 보장은 없다 (AutoSurvey 와 공통, 미착수).

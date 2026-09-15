@@ -1,0 +1,786 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Negative Sampling in Recommendation**.
+
+You have created the following overall outline:
+---
+Title: Comprehensive Survey of Negative Sampling in Recommendation Systems
+
+Section 1: Introduction
+Description 1: Negative sampling is a crucial technique in recommendation systems, aiming to improve the accuracy and efficiency of recommendations by selectively sampling negative instances. 
+1. Definition and importance of negative sampling in recommendation systems, including its role in handling large item sets and improving model performance.
+2. Historical development of negative sampling methods and their evolution over time.
+3. Overview of the challenges and opportunities in negative sampling, such as balancing exploration and exploitation, and addressing cold start problems.
+
+Section 2: Fundamentals of Recommendation Systems
+Description 2: Understanding the basics of recommendation systems is essential for appreciating the role and implementation of negative sampling. 
+1. Overview of collaborative filtering, content-based filtering, and hybrid approaches, focusing on their strengths and weaknesses.
+2. Explanation of key concepts such as user-item interactions, rating matrices, and the cold start problem.
+3. Introduction to evaluation metrics for recommendation systems, including precision, recall, and A/B testing.
+
+Section 3: Negative Sampling Techniques
+Description 3: Various negative sampling techniques have been developed to address the challenges of recommendation systems. 
+1. In-depth discussion of random sampling, popularity-based sampling, and knowledge graph-based sampling methods.
+2. Explanation of advanced techniques such as adversarial sampling, reinforcement learning-based sampling, and graph convolutional network-based sampling.
+3. Analysis of the trade-offs between different sampling strategies, including computational efficiency, sampling bias, and model performance.
+
+Section 4: Deep Learning for Negative Sampling
+Description 4: Deep learning models have been increasingly applied to negative sampling due to their ability to learn complex patterns and relationships. 
+1. Introduction to deep learning architectures for recommendation systems, including neural collaborative filtering and deep matrix factorization.
+2. Discussion on how deep learning can enhance negative sampling, such as learning representations from raw data and modeling complex user behaviors.
+3. Overview of recent advancements in deep learning-based negative sampling, including the use of attention mechanisms and graph neural networks.
+
+Section 5: Applications and Case Studies
+Description 5: Negative sampling has been applied in various domains and scenarios, demonstrating its versatility and effectiveness. 
+1. Case studies of negative sampling in e-commerce, social media, and content streaming platforms, highlighting the challenges and solutions in each domain.
+2. Discussion on the application of negative sampling in cold start scenarios, including new user and new item problems.
+3. Examination of negative sampling in multi-modal recommendation systems, incorporating textual, visual, and auditory data.
+
+Section 6: Challenges and Limitations
+Description 6: Despite the advancements in negative sampling, several challenges and limitations remain, requiring further research and development. 
+1. Discussion on the bias-variance trade-off in negative sampling, and strategies to mitigate overfitting and underfitting.
+2. Analysis of the cold start problem in negative sampling, including the lack of training data for new users or items.
+3. Examination of the scalability and computational efficiency of negative sampling methods, particularly for large-scale recommendation systems.
+
+Section 7: Conclusion
+Description 7: In conclusion, negative sampling is a crucial component of recommendation systems, and its effectiveness has a significant impact on the accuracy and diversity of recommendations. 
+1. Summary of key findings and takeaways from the survey, including the importance of negative sampling, the challenges and limitations associated with it, and recent advances and trends.
+2. Potential gaps and future research directions, including the development of more efficient and scalable negative sampling methods, the incorporation of side information, and the application of negative sampling in emerging areas.
+3. Final thoughts on the significance of negative sampling in recommendation systems and its potential to improve the performance and user experience of recommendation models.
+---
+
+You need to enrich the section **Challenges and Limitations**, described as: **Despite the advancements in negative sampling, several challenges and limitations remain, requiring further research and development.
+1. Discussion on the bias-variance trade-off in negative sampling, and strategies to mitigate overfitting and underfitting.
+2. Analysis of the cold start problem in negative sampling, including the lack of training data for new users or items.
+3. Examination of the scalability and computational efficiency of negative sampling methods, particularly for large-scale recommendation systems.**
+
+**Main task:**
+Generate a comprehensive framework for **Challenges and Limitations** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling
+
+publish_date: 2023-01-01
+
+paper_content:
+
+A large catalogue size is one of the central challenges in training recommendation models: a large number of items makes them memory and computationally inefficient to compute scores for all items during training, forcing these models to deploy negative sampling. However, negative sampling increases the proportion of positive interactions in the training data, and therefore models trained with negative sampling tend to overestimate the probabilities of positive interactions – a phenomenon we call overconfidence. While the absolute values of the predicted scores/probabilities are not important for the ranking of retrieved recommendations, overconfident models may fail to estimate nuanced differences in the top-ranked items, resulting in degraded performance. In this paper, we show that overconfidence explains why the popular SASRec model underperforms when compared to BERT4Rec. This is contrary to the BERT4Rec authors’ explanation that the difference in performance is due to the bi-directional attention mechanism. To mitigate overconfidence, we propose a novel Generalised Binary Cross-Entropy Loss function (gBCE) and theoretically prove that it can mitigate overconfidence. We further propose the gSASRec model, an improvement over SASRec that deploys an increased number of negatives and the gBCE loss. We show through detailed experiments on three datasets that gSASRec does not exhibit the overconfidence problem. As a result, gSASRec can outperform BERT4Rec (e.g. +9.47% NDCG on the MovieLens-1M dataset), while requiring less training time (e.g. -73% training time on MovieLens-1M). Moreover, in contrast to BERT4Rec, gSASRec is suitable for large datasets that contain more than 1 million items.
+---
+paper_title: On Inherited Popularity Bias in Cold-Start Item Recommendation
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Collaborative filtering (CF) recommender systems struggle with making predictions on unseen, or 'cold', items. Systems designed to address this challenge are often trained with supervision from warm CF models in order to leverage collaborative and content information from the available interaction data. However, since they learn to replicate the behavior of CF methods, cold-start models may therefore also learn to imitate their predictive biases. In this paper, we show that cold-start systems can inherit popularity bias, a common cause of recommender system unfairness arising when CF models overfit to more popular items, thereby maximizing user-oriented accuracy but neglecting rarer items. We demonstrate that cold-start recommenders not only mirror the popularity biases of warm models, but are in fact affected more severely: because they cannot infer popularity from interaction data, they instead attempt to estimate it based solely on content features. This leads to significant over-prediction of certain cold items with similar content to popular warm items, even if their ground truth popularity is very low. Through experiments on three multimedia datasets, we analyze the impact of this behavior on three generative cold-start methods. We then describe a simple post-processing bias mitigation method that, by using embedding magnitude as a proxy for predicted popularity, can produce more balanced recommendations with limited harm to user-oriented cold-start accuracy.
+---
+paper_title: A Troubling Analysis of Reproducibility and Progress in Recommender Systems Research
+
+publish_date: 2021-01-01
+
+paper_content:
+
+<jats:p>
+            The design of algorithms that generate personalized ranked item lists is a central topic of research in the field of recommender systems. In the past few years, in particular, approaches based on deep learning (neural) techniques have become dominant in the literature. For all of them, substantial progress over the state-of-the-art is claimed. However, indications exist of certain problems in today’s research practice, e.g., with respect to the choice and optimization of the baselines used for comparison, raising questions about the published claims. To obtain a better understanding of the actual progress, we have compared recent results in the area of neural recommendation approaches based on collaborative filtering against a consistent set of existing simple baselines. The worrying outcome of the analysis of these recent works—all were published at prestigious scientific conferences between 2015 and 2018—is that 11 of the 12 reproducible neural approaches can be outperformed by conceptually simple methods, e.g., based on the nearest-neighbor heuristic or linear models. None of the computationally complex neural methods was actually consistently better than already existing learning-based techniques, e.g., using matrix factorization or linear models. In our analysis, we discuss common issues in today’s research practice, which, despite the many papers that are published on the topic, have apparently led the field to a certain level of stagnation.
+            <jats:sup>1</jats:sup>
+          </jats:p>
+---
+paper_title: Unbiased Recommender Learning from Missing-Not-At-Random Implicit Feedback
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Recommender systems widely use implicit feedback such as click data because of its general availability. Although the presence of clicks signals the users' preference to some extent, the lack of such clicks does not necessarily indicate a negative response from the users, as it is possible that the users were not exposed to the items (positive-unlabeled problem). This leads to a difficulty in predicting the users' preferences from implicit feedback. Previous studies addressed the positive-unlabeled problem by uniformly upweighting the loss for the positive feedback data or estimating the confidence of each data having relevance information via the EM-algorithm. However, these methods failed to address the missing-not-at-random problem in which popular or frequently recommended items are more likely to be clicked than other items even if a user does not have a considerable interest in them. To overcome these limitations, we first define an ideal loss function to be optimized to realize recommendations that maximize the relevance and propose an unbiased estimator for the ideal loss. Subsequently, we analyze the variance of the proposed unbiased estimator and further propose a clipped estimator that includes the unbiased estimator as a special case. We demonstrate that the clipped estimator is expected to improve the performance of the recommender system, by considering the bias-variance trade-off. We conduct semi-synthetic and real-world experiments and demonstrate that the proposed method largely outperforms the baselines. In particular, the proposed method works better for less popular items that are less frequently observed in the training data. The findings indicate that the proposed method can better achieve the objective of recommending items with the highest relevance.
+---
+paper_title: Representation Learning for cold-start recommendation
+
+publish_date: 2014-01-01
+
+paper_content:
+
+A standard approach to Collaborative Filtering (CF), i.e. prediction of user ratings on items, relies on Matrix Factorization techniques. Representations for both users and items are computed from the observed ratings and used for prediction. Unfortunatly, these transductive approaches cannot handle the case of new users arriving in the system, with no known rating, a problem known as user cold-start. A common approach in this context is to ask these incoming users for a few initialization ratings. This paper presents a model to tackle this twofold problem of (i) finding good questions to ask, (ii) building efficient representations from this small amount of information. The model can also be used in a more standard (warm) context. Our approach is evaluated on the classical CF problem and on the cold-start problem on four different datasets showing its ability to improve baseline performance in both cases.
+---
+paper_title: Combating the Cold Start User Problem in Model Based Collaborative
+  Filtering
+
+publish_date: 2017-01-01
+
+paper_content:
+
+For tackling the well known cold-start user problem in model-based recommender systems, one approach is to recommend a few items to a cold-start user and use the feedback to learn a profile. The learned profile can then be used to make good recommendations to the cold user. In the absence of a good initial profile, the recommendations are like random probes, but if not chosen judiciously, both bad recommendations and too many recommendations may turn off a user. We formalize the cold-start user problem by asking what are the $b$ best items we should recommend to a cold-start user, in order to learn her profile most accurately, where $b$, a given budget, is typically a small number. We formalize the problem as an optimization problem and present multiple non-trivial results, including NP-hardness as well as hardness of approximation. We furthermore show that the objective function, i.e., the least square error of the learned profile w.r.t. the true user profile, is neither submodular nor supermodular, suggesting efficient approximations are unlikely to exist. Finally, we discuss several scalable heuristic approaches for identifying the $b$ best items to recommend to the user and experimentally evaluate their performance on 4 real datasets. Our experiments show that our proposed accelerated algorithms significantly outperform the prior art in runnning time, while achieving similar error in the learned user profile as well as in the rating predictions.
+---
+paper_title: Cross-Batch Negative Sampling for Training Two-Tower Recommenders
+
+publish_date: 2021-01-01
+
+paper_content:
+
+The two-tower architecture has been widely applied for learning item and user representations, which is important for large-scale recommender systems. Many two-tower models are trained using various in-batch negative sampling strategies, where the effects of such strategies inherently rely on the size of mini-batches. However, training two-tower models with a large batch size is inefficient, as it demands a large volume of memory for item and user contents and consumes a lot of time for feature encoding. Interestingly, we find that neural encoders can output relatively stable features for the same input after warming up in the training process. Based on such facts, we propose a simple yet effective sampling strategy called Cross-Batch Negative Sampling (CBNS), which takes advantage of the encoded item embeddings from recent mini-batches to boost the model training. Both theoretical analysis and empirical evaluations demonstrate the effectiveness and the efficiency of CBNS.
+---
+paper_title: Context-Aware Negative Sampling for Sequential Recommendation
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Recommender systems have become essential in large-scale e-commerce and content platforms. While user preferences are crucial in generating recommendations, the context in which recommendations are made&#x2014;such as time, location, and occasion&#x2014;also plays a significant role. Over the past decades, context-aware models have been developed to address this. However, the use of context information in negative sampling remains less expored, despite the well-known impact of sampling strategies on recommendation performance. In this study, we first quantitatively demonstrate that item distributions vary significantly across different contexts. Based on this observation, we propose two novel negative sampling methods: context-aware hard negative item sampling and negative context sampling. These methods enhance recommendation diversity by more accurately reflecting context-dependent item distributions during training. To validate the effectiveness of the proposed methods, we apply them to a sequential recommendation model leveraging temporal context, where time information plays a critical role. The proposed methods are designed to be easily integrated into any sampling-based sequential recommendation model in a plug-and-play manner, and extensive experimental results on 10 real-world datasets demonstrate that the proposed methods significantly improve recommendation diversity, with an average increase of 20.65%, while incurring only a minor accuracy loss of 1.89%.
+---
+paper_title: We're Still Doing It (All) Wrong: Recommender Systems, Fifteen Years Later
+
+publish_date: 2025-01-01
+
+paper_content:
+
+In 2011, Xavier Amatriain sounded the alarm: recommender systems research was "doing it all wrong" [1]. His critique, rooted in statistical misinterpretation and methodological shortcuts, remains as relevant today as it was then. But rather than correcting course, we added new layers of sophistication on top of the same broken foundations. This paper revisits Amatriain's diagnosis and argues that many of the conceptual, epistemological, and infrastructural failures he identified still persist, in more subtle or systemic forms. Drawing on recent work in reproducibility, evaluation methodology, environmental impact, and participatory design, we showcase how the field's accelerating complexity has outpaced its introspection. We highlight ongoing community-led initiatives that attempt to shift the paradigm, including workshops, evaluation frameworks, and calls for value-sensitive and participatory research. At the same time, we contend that meaningful change will require not only new metrics or better tooling, but a fundamental reframing of what recommender systems research is for, who it serves, and how knowledge is produced and validated. Our call is not just for technical reform, but for a recommender systems research agenda grounded in epistemic humility, human impact, and sustainable practice.
+---
+paper_title: Towards Reliable Item Sampling for Recommendation Evaluation
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Since Rendle and Krichene argued that commonly used sampling-based evaluation metrics are "inconsistent" with respect to the global metrics (even in expectation), there have been a few studies on the sampling-based recommender system evaluation. Existing methods try either mapping the sampling-based metrics to their global counterparts or more generally, learning the empirical rank distribution to estimate the top-$K$ metrics. However, despite existing efforts, there is still a lack of rigorous theoretical understanding of the proposed metric estimators, and the basic item sampling also suffers from the "blind spot" issue, i.e., estimation accuracy to recover the top-$K$ metrics when $K$ is small can still be rather substantial. In this paper, we provide an in-depth investigation into these problems and make two innovative contributions. First, we propose a new item-sampling estimator that explicitly optimizes the error with respect to the ground truth, and theoretically highlight its subtle difference against prior work. Second, we propose a new adaptive sampling method which aims to deal with the "blind spot" problem and also demonstrate the expectation-maximization (EM) algorithm can be generalized for such a setting. Our experimental results confirm our statistical analysis and the superiority of the proposed works. This study helps lay the theoretical foundation for adopting item sampling metrics for recommendation evaluation, and provides strong evidence towards making item sampling a powerful and reliable tool for recommendation evaluation.
+---
+paper_title: A collaborative filtering approach to mitigate the new user cold start problem
+
+publish_date: 2011-01-01
+
+paper_content:
+
+The new user cold start issue represents a serious problem in recommender systems as it can lead to the loss of new users who decide to stop using the system due to the lack of accuracy in the recommenda- tions received in that first stage in which they have not yet cast a significant number of votes with which to feed the recommender system?s collaborative filtering core. For this reason it is particularly important to design new similarity metrics which provide greater precision in the results offered to users who have cast few votes. This paper presents a new similarity measure perfected using optimization based on neu- ral learning, which exceeds the best results obtained with current metrics. The metric has been tested on the Netflix and Movielens databases, obtaining important improvements in the measures of accuracy, precision and recall when applied to new user cold start situations. The paper includes the mathematical formalization describing how to obtain the main quality measures of a recommender system using leave- one-out cross validation.
+---
+paper_title: Efficient Heterogeneous Collaborative Filtering without Negative Sampling for Recommendation
+
+publish_date: 2020-01-01
+
+paper_content:
+
+<jats:p>Recent studies on recommendation have largely focused on exploring state-of-the-art neural networks to improve the expressiveness of models, while typically apply the Negative Sampling (NS) strategy for efficient learning. Despite effectiveness, two important issues have not been well-considered in existing methods: 1) NS suffers from dramatic fluctuation, making sampling-based methods difficult to achieve the optimal ranking performance in practical applications; 2) although heterogeneous feedback (e.g., view, click, and purchase) is widespread in many online systems, most existing methods leverage only one primary type of user feedback such as purchase. In this work, we propose a novel non-sampling transfer learning solution, named Efficient Heterogeneous Collaborative Filtering (EHCF) for Top-N recommendation. It can not only model fine-grained user-item relations, but also efficiently learn model parameters from the whole heterogeneous data (including all unlabeled data) with a rather low time complexity. Extensive experiments on three real-world datasets show that EHCF significantly outperforms state-of-the-art recommendation methods in both traditional (single-behavior) and heterogeneous scenarios. Moreover, EHCF shows significant improvements in training efficiency, making it more applicable to real-world large-scale systems. Our implementation has been released 1 to facilitate further developments on efficient whole-data based neural methods.</jats:p>
+---
+paper_title: Neighborhood-based Hard Negative Mining for Sequential Recommendation
+
+publish_date: 2023-01-01
+
+paper_content:
+
+  Negative sampling plays a crucial role in training successful sequential\nrecommendation models. Instead of merely employing random negative sample\nselection, numerous strategies have been proposed to mine informative negative\nsamples to enhance training and performance. However, few of these approaches\nutilize structural information. In this work, we observe that as training\nprogresses, the distributions of node-pair similarities in different groups\nwith varying degrees of neighborhood overlap change significantly, suggesting\nthat item pairs in distinct groups may possess different negative\nrelationships. Motivated by this observation, we propose a Graph-based Negative\nsampling approach based on Neighborhood Overlap (GNNO) to exploit structural\ninformation hidden in user behaviors for negative mining. GNNO first constructs\na global weighted item transition graph using training sequences. Subsequently,\nit mines hard negative samples based on the degree of overlap with the target\nitem on the graph. Furthermore, GNNO employs curriculum learning to control the\nhardness of negative samples, progressing from easy to difficult. Extensive\nexperiments on three Amazon benchmarks demonstrate GNNO's effectiveness in\nconsistently enhancing the performance of various state-of-the-art models and\nsurpassing existing negative sampling strategies. The code will be released at\n\\url{https://github.com/floatSDSDS/GNNO}.\n
+---
+paper_title: SamWalker: Social Recommendation with Informative Sampling Strategy
+
+publish_date: 2019-01-01
+
+paper_content:
+
+Recommendation from implicit feedback is a highly challenging task due to the lack of reliable negative feedback data. Only positive feedback are observed and the unobserved feedback can be attributed to two reasons: unknow or dislike. Existing methods address this challenge by treating all the un-observed data as negative (dislike) but downweight the confidence of these data. However, this treatment causes two problems: (1) Confidence weights of the unobserved data are usually assigned manually, which lack flexible and may create empirical bias in evaluating user's preference. (2) To handle massive volume of the unobserved feedback data, most of the existing methods rely on stochastic inference and data sampling strategies. However, since users are only aware of a very small fraction of items in a large dataset, it is difficult for existing samplers to select informative training instances in which the user really dislikes the item rather than does not know it.
+---
+paper_title: Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+publish_date: 2016-01-01
+
+paper_content:
+
+With the rapid growth of social tagging systems, many efforts have been put on tag-aware personalized recommendation. However, due to uncontrolled vocabularies, social tags are usually redundant, sparse, and ambiguous. In this paper, we propose a deep neural network approach to solve this problem by mapping both the tag-based user and item profiles to an abstract deep feature space, where the deep-semantic similarities between users and their target items (resp., irrelevant items) are maximized (resp., minimized). Due to huge numbers of online items, the training of this model is usually computationally expensive in the real-world context. Therefore, we introduce negative sampling, which significantly increases the model's training efficiency (109.6 times quicker) and ensures the scalability in practice. Experimental results show that our model can significantly outperform the state-of-the-art baselines in tag-aware personalized recommendation: e.g., its mean reciprocal rank is between 5.7 and 16.5 times better than the baselines.
+---
+paper_title: Pessimistic Off-Policy Optimization for Learning to Rank
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>Off-policy learning is a framework for optimizing policies without deploying them, using data collected by another policy. In recommender systems, this is especially challenging due to the imbalance in logged data: some items are recommended and thus logged more frequently than others. This is further perpetuated when recommending a list of items, as the action space is combinatorial. To address this challenge, we study pessimistic off-policy optimization for learning to rank. The key idea is to compute lower confidence bounds on parameters of click models and then return the list with the highest pessimistic estimate of its value. This approach is computationally efficient, and we analyze it. We study its Bayesian and frequentist variants and overcome the limitation of unknown prior by incorporating empirical Bayes. To show the empirical effectiveness of our approach, we compare it to off-policy optimizers that use inverse propensity scores or neglect uncertainty. Our approach outperforms all baselines and is both robust and general.</jats:p>
+---
+paper_title: Alleviating Item-Side Cold-Start Problems in Recommender Systems Using Weak Supervision
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Recently, recommender systems have been used in various fields. However, they are still plagued by many issues, including cold-start and sparsity problems. The cold-start problem occurs when users are unable to make recommendations to other users owing to a complete lack of information about certain items. This problem can exist both at the user side and the item side. User-side cold-start problems occur when new users access the systems; item-side cold-start problems occur when new items are added to databases. In this study, we addressed the item-side cold-start problem using the concept of weak supervision. First, a new process for identifying feature based representative reviewers in a rater group was designed. Then, we developed a method to predict the expected preferences for new items by combining content-based filtering and the preferences of representative users. Through extensive experiments, we first confirmed that in comparison to existing methods, the proposed approach provided enhanced accuracy, which was evaluated by determining a mean absolute error for the average ratings. Then, we compared the proposed scheme with the collaborative filtering (CF) and neural CF approaches (NCF). The estimation by the proposed approach was 21&amp;#x0025; and 38&amp;#x0025; more accurate than CF and NCF in terms of mean absolute error (MAE), respectively. In future, the proposed framework can be applied in various recommender systems as a core function.
+---
+paper_title: On Estimating Recommendation Evaluation Metrics under Sampling
+
+publish_date: 2021-01-01
+
+paper_content:
+
+<jats:p>Since the recent studies  (KDD'20) done by Krichene and Rendle on the sampling based top-k evaluation metric for recommendation,  there have been a lot of debate on the validity of using sampling for evaluating recommendation algorithms. Though their work and the recent work done by Li et. al. (KDD'20) have proposed some basic approach for mapping the sampling based metrics to their counter-part in the global evaluation which uses the entire dataset, there is still lack of understanding how sampling should be used for recommendation evaluation, and the proposed approaches either are rather ad-hoc or can only work on simple metrics, like Recall/Hit-Ratio. In this paper, we introduce some principled approach to derive the estimators of top-k metric based on sampling. Our approaches utilize the weighted MLE and maximal entropy approach to recover the global rank distribution and then utilize that for estimation. The experimental results shows significant advantages of using our approaches for evaluating recommendation algorithms based on top-k metrics.</jats:p>
+---
+paper_title: Fifty Shades of Ratings: How to Benefit from a Negative Feedback in Top-N Recommendations Tasks
+
+publish_date: 2016-01-01
+
+paper_content:
+
+  Conventional collaborative filtering techniques treat a top-n recommendations\nproblem as a task of generating a list of the most relevant items. This\nformulation, however, disregards an opposite - avoiding recommendations with\ncompletely irrelevant items. Due to that bias, standard algorithms, as well as\ncommonly used evaluation metrics, become insensitive to negative feedback. In\norder to resolve this problem we propose to treat user feedback as a\ncategorical variable and model it with users and items in a ternary way. We\nemploy a third-order tensor factorization technique and implement a higher\norder folding-in method to support online recommendations. The method is\nequally sensitive to entire spectrum of user ratings and is able to accurately\npredict relevant items even from a negative only feedback. Our method may\npartially eliminate the need for complicated rating elicitation process as it\nprovides means for personalized recommendations from the very beginning of an\ninteraction with a recommender system. We also propose a modification of\nstandard metrics which helps to reveal unwanted biases and account for\nsensitivity to a negative feedback. Our model achieves state-of-the-art quality\nin standard recommendation tasks while significantly outperforming other\nmethods in the cold-start "no-positive-feedback" scenarios.\n
+---
+paper_title: Loss Aversion in Recommender Systems: Utilizing Negative User Preference
+  to Improve Recommendation Quality
+
+publish_date: 2018-01-01
+
+paper_content:
+
+Negative user preference is an important context that is not sufficiently utilized by many existing recommender systems. This context is especially useful in scenarios where the cost of negative items is high for the users. In this work, we describe a new recommender algorithm that explicitly models negative user preferences in order to recommend more positive items at the top of recommendation-lists. We build upon existing machine-learning model to incorporate the contextual information provided by negative user preference. With experimental evaluations on two openly available datasets, we show that our method is able to improve recommendation quality: by improving accuracy and at the same time reducing the number of negative items at the top of recommendation-lists. Our work demonstrates the value of the contextual information provided by negative feedback, and can also be extended to signed social networks and link prediction in other networks.
+---
+paper_title: Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Negative sampling has swiftly risen to prominence as a focal point of research, with wide-ranging applications spanning machine learning, computer vision, natural language processing, data mining, and recommender systems. This surge in interest prompts us to question the fundamental impact of negative sampling: Does negative sampling really matter? Is there a general framework that can incorporate all negative sampling methods? In what fields is it applied? Addressing these questions, we propose a general framework that using negative sampling. Delving into the history of negative sampling, we chart its evolution across five distinct trajectories. We dissect and categorize the strategies used to select negative sample candidates, detailing global, local, mini-batch, hop, and memory-based approaches. Our comprehensive review extends to an analysis of current negative sampling methodologies, systematically grouping them into five classifications: static, hard, GAN-based, Auxiliary-based, and In-batch. Beyond detailed categorization, we explore the practical application of negative sampling across various fields. Finally, we briefly discuss open problems and future directions for negative sampling.
+---
+paper_title: Hierarchical Negative Binomial Factorization for Recommender Systems on Implicit Feedback
+
+publish_date: 2021-01-01
+
+paper_content:
+
+<jats:p>When exposed to an item in a recommender system, a user may consume it (known as success exposure) or neglect it (known as failure exposure). The recently proposed methods that consider both success and failure exposure merely regard failure exposure as a constant prior, thus being capable of neither modeling various user behavior nor adapting to overdispersed data. In this paper, we propose a novel model, hierarchical negative binomial factorization, which models data dispersion via a hierarchical Bayesian structure, thus alleviating the effect of data overdispersion to help with performance gain for recommendation. Moreover, we factorize the dispersion of zero entries approximately into two low-rank matrices, thus reducing the updating time linear to the number of nonzero entries. The experiment shows that the proposed model outperforms state-of-the-art Poisson-based methods merely with a slight loss of inference speed.</jats:p>
+---
+paper_title: Addressing the Extreme Cold-Start Problem in Group Recommendation
+
+publish_date: 2022-01-01
+
+paper_content:
+
+The task of recommending items to a group of users, a.k.a. group recommendation, is receiving increasing attention. However, the cold-start problem inherent in recommender systems is amplified in group recommendation because interaction data between groups and items are extremely scarce in practice. Most existing work exploits associations between groups and items to mitigate the data scarcity problem. However, existing approaches inevitably fail in extreme cold-start scenarios where associations between groups and items are lacking. For this reason, we design a group recommendation model for EXreme cold-star} in group REcommendation (EXTRE) suitable for the extreme cold start scenario. The basic idea behind EXTRE is to use the limit theory of graph convolutional neural networks to establish implicit associations between groups and items, and the derivation of these associations does not require explicit interaction data, making it suitable for cold start scenarios. The training process of EXTRE depends on the newly defined and interpretable concepts of consistency and discrepancy, other than commonly used negative sampling with pairwise ranking, which can improve the performance of the group recommendation. Extensive experiments validate the efficacy of the proposed model EXTRE.
+---
+paper_title: Learning to Learn a Cold-start Sequential Recommender
+
+publish_date: 2022-01-01
+
+paper_content:
+
+<jats:p>The cold-start recommendation is an urgent problem in contemporary online applications. It aims to provide users whose behaviors are literally sparse with as accurate recommendations as possible. Many data-driven algorithms, such as the widely used matrix factorization, underperform because of data sparseness. This work adopts the idea of meta-learning to solve the user’s cold-start recommendation problem. We propose a meta-learning-based cold-start sequential recommendation framework called metaCSR, including three main components: Diffusion Representer for learning better user/item embedding through information diffusion on the interaction graph; Sequential Recommender for capturing temporal dependencies of behavior sequences; and Meta Learner for extracting and propagating transferable knowledge of prior users and learning a good initialization for new users. metaCSR holds the ability to learn the common patterns from regular users’ behaviors and optimize the initialization so that the model can quickly adapt to new users after one or a few gradient updates to achieve optimal performance. The extensive quantitative experiments on three widely used datasets show the remarkable performance of metaCSR in dealing with the user cold-start problem. Meanwhile, a series of qualitative analysis demonstrates that the proposed metaCSR has good generalization.</jats:p>
+---
+paper_title: Trading Hard Negatives and True Negatives: A Debiased Contrastive Collaborative Filtering Approach
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Collaborative filtering (CF), as a standard method for recommendation with implicit feedback, tackles a semi-supervised learning problem where most interaction data are unobserved. Such a nature makes existing approaches highly rely on mining negatives for providing correct training signals. However, mining proper negatives is not a free lunch, encountering with a tricky trade-off between mining informative hard negatives and avoiding false ones. We devise a new approach named as Hardness-Aware Debiased Contrastive Collaborative Filtering (HDCCF) to resolve the dilemma. It could sufficiently explore hard negatives from two-fold aspects: 1) adaptively sharpening the gradients of harder instances through a set-wise objective, and 2) implicitly leveraging item/user frequency information with a new sampling strategy. To circumvent false negatives, we develop a principled approach to improve the reliability of negative instances and prove that the objective is an unbiased estimation of sampling from the true negative distribution. Extensive experiments demonstrate the superiority of the proposed model over existing CF models and hard negative mining methods.
+---
+paper_title: TriSampler: A Better Negative Sampling Principle for Dense Retrieval
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Negative sampling stands as a pivotal technique in dense retrieval, essential for training effective retrieval models and significantly impacting retrieval performance. While existing negative sampling methods have made commendable progress by leveraging hard negatives, a comprehensive guiding principle for constructing negative candidates and designing negative sampling distributions is still lacking. To bridge this gap, we embark on a theoretical analysis of negative sampling in dense retrieval. This exploration culminates in the unveiling of the quasi-triangular principle, a novel framework that elucidates the triangular-like interplay between query, positive document, and negative document. Fueled by this guiding principle, we introduce TriSampler, a straightforward yet highly effective negative sampling method. The keypoint of TriSampler lies in its ability to selectively sample more informative negatives within a prescribed constrained region. Experimental evaluation show that TriSampler consistently attains superior retrieval performance across a diverse of representative retrieval models.
+---
+paper_title: User Cold-Start Learning in Recommender Systems using Monte Carlo Tree Search
+
+publish_date: 2023-01-01
+
+paper_content:
+
+<jats:p>We consider the cold-start task for new users of a recommender system, whereby a new user is asked to rate a few items with the aim of quickly discovering the user’s preferences. This is a combinatorial stochastic learning task, and so it is difficult in general. In this paper we study the use of Monte Carlo Tree Search (MCTS) to dynamically select the sequence of items presented to a new user. We find that the MCTS-based cold-start approach is able to consistently quickly identify the preferences of a user with significantly higher accuracy than with either a decision tree or a state-of-the-art bandit-based approach without incurring higher regret, i.e., the learning performance is fundamentally superior to that of the state of the art. This boost in recommender accuracy is achieved in a computationally lightweight fashion. The MCTS approach is flexible in the sense that it can be readily extended to incorporate different types of user feedback including explicit ratings, ranked comparisons and missing not at random data.</jats:p>
+---
+paper_title: DPR: An Algorithm Mitigate Bias Accumulation in Recommendation feedback loops
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Recommendation models trained on the user feedback collected from deployed recommendation systems are commonly biased. User feedback is considerably affected by the exposure mechanism, as users only provide feedback on the items exposed to them and passively ignore the unexposed items, thus producing numerous false negative samples. Inevitably, biases caused by such user feedback are inherited by new models and amplified via feedback loops. Moreover, the presence of false negative samples makes negative sampling difficult and introduces spurious information in the user preference modeling process of the model. Recent work has investigated the negative impact of feedback loops and unknown exposure mechanisms on recommendation quality and user experience, essentially treating them as independent factors and ignoring their cross-effects. To address these issues, we deeply analyze the data exposure mechanism from the perspective of data iteration and feedback loops with the Missing Not At Random (\textbf{MNAR}) assumption, theoretically demonstrating the existence of an available stabilization factor in the transformation of the exposure mechanism under the feedback loops. We further propose Dynamic Personalized Ranking (\textbf{DPR}), an unbiased algorithm that uses dynamic re-weighting to mitigate the cross-effects of exposure mechanisms and feedback loops without additional information. Furthermore, we design a plugin named Universal Anti-False Negative (\textbf{UFN}) to mitigate the negative impact of the false negative problem. We demonstrate theoretically that our approach mitigates the negative effects of feedback loops and unknown exposure mechanisms. Experimental results on real-world datasets demonstrate that models using DPR can better handle bias accumulation and the universality of UFN in mainstream loss methods.
+---
+paper_title: Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+publish_date: 2023-01-01
+
+paper_content:
+
+  Collaborative filtering (CF) is a widely employed technique that predicts\nuser preferences based on past interactions. Negative sampling plays a vital\nrole in training CF-based models with implicit feedback. In this paper, we\npropose a novel perspective based on the sampling area to revisit existing\nsampling methods. We point out that current sampling methods mainly focus on\nPoint-wise or Line-wise sampling, lacking flexibility and leaving a significant\nportion of the hard sampling area un-explored. To address this limitation, we\npropose Dimension Independent Mixup for Hard Negative Sampling (DINS), which is\nthe first Area-wise sampling method for training CF-based models. DINS\ncomprises three modules: Hard Boundary Definition, Dimension Independent Mixup,\nand Multi-hop Pooling. Experiments with real-world datasets on both matrix\nfactorization and graph-based models demonstrate that DINS outperforms other\nnegative sampling methods, establishing its effectiveness and superiority. Our\nwork contributes a new perspective, introduces Area-wise sampling, and presents\nDINS as a novel approach that achieves state-of-the-art performance for\nnegative sampling. Our implementations are available in PyTorch.\n
+---
+paper_title: Beyond Positive Similarity Metrics: Leveraging Negative Co-Occurrence in Recommender Systems
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Given the growing amount of online information and the lack of effective tools to extract relevant content for individuals, recommender systems (RSs) have emerged as highly efficient means to provide personalized recommendations to users. Collaborative filtering (CF) is a popular recommendation technique that suggests items to the target user based on the ratings provided by similar users in the system. However, the performance of CF, specifically memory-based CF, relies on choosing the convenient similarity metric. An optimal choice of the similarity metric will lead to better recommendations. Despite extensive studies on RSs in the past decade, research on similarity metrics in RSs has only recently gained attention. This study investigates 37 similarity metrics that incorporate negative co-occurrence for implicit ratings. We conduct a comparative analysis of these metrics against various real-world datasets using well-known performance measures. Our study provides insights into effective similarity metrics and their performance in relation to data characteristics. Specifically, our results reveal that while the Russel-Rao similarity metric consistently outperforms other similarity metrics across various datasets in terms of precision, there is no superior similarity metric across all datasets and performance metrics.
+---
+paper_title: Importance of Negative Sampling in Weak Label Learning
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Weak-label learning is a challenging task that requires learning from data "bags" containing positive and negative instances, but only the bag labels are known. The pool of negative instances is usually larger than positive instances, thus making selecting the most informative negative instance critical for performance. Such a selection strategy for negative instances from each bag is an open problem that has not been well studied for weak-label learning. In this paper, we study several sampling strategies that can measure the usefulness of negative instances for weak-label learning and select them accordingly. We test our method on CIFAR-10 and AudioSet datasets and show that it improves the weak-label classification performance and reduces the computational cost compared to random sampling methods. Our work reveals that negative instances are not all equally irrelevant, and selecting them wisely can benefit weak-label learning.
+---
+paper_title: Negative Sampling for Hyperlink Prediction in Networks
+
+publish_date: 2020-01-01
+
+paper_content:
+
+While graphs capture pairwise relations between entities, hypergraphs deal with higher-order ones, thereby ensuring losslessness. However, in hyperlink (i.e., higher-order link) prediction, where hyperlinks and non-hyperlinks are treated as “positive” and “negative” classes respectively, hypergraphs suffer from the problem of extreme class imbalance. Given this context, “negative sampling”—under-sampling the negative class of non-hyperlinks—becomes mandatory for performing hyperlink prediction. No prior work on hyperlink prediction deals with this problem. In this work, which is the first of its kind, we deal with this problem in the context of hyperlink prediction. More specifically, we leverage graph sampling techniques for sampling non-hyperlinks in hyperlink prediction. Our analysis clearly establishes the effect of random sampling, which is the norm in both link- as well as hyperlink-prediction. Further, we formalize the notion of “hardness” of non-hyperlinks via a measure of density, and analyze its distribution over various negative sampling techniques. We experiment with some real-world hypergraph datasets and provide both qualitative and quantitative results on the effects of negative sampling. We also establish its importance in evaluating hyperlink prediction algorithms.
+---
+paper_title: Understanding Negative Sampling in Graph Representation Learning
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Graph representation learning has been extensively studied in recent years, in which sampling is a critical point. Prior arts usually focus on sampling positive node pairs, while the strategy for negative sampling is left insufficiently explored. To bridge the gap, we systematically analyze the role of negative sampling from the perspectives of both objective and risk, theoretically demonstrating that negative sampling is as important as positive sampling in determining the optimization objective and the resulted variance. To the best of our knowledge, we are the first to derive the theory and quantify that a nice negative sampling distribution is pn(u|v) ∝ pd(u|v)α, 0 < α < 1. With the guidance of the theory, we propose MCNS, approximating the positive distribution with self-contrast approximation and accelerating negative sampling by Metropolis-Hastings. We evaluate our method on 5 datasets that cover extensive downstream graph learning tasks, including link prediction, node classification and recommendation, on a total of 19 experimental settings. These relatively comprehensive experimental results demonstrate its robustness and superiorities.
+---
+paper_title: Negative Sampling in Knowledge Graph Representation Learning: A Review
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Knowledge Graph Representation Learning (KGRL), or Knowledge Graph Embedding (KGE), is essential for AI applications such as knowledge construction and information retrieval. These models encode entities and relations into lower-dimensional vectors, supporting tasks like link prediction and recommendation systems. Training KGE models relies on both positive and negative samples for effective learning, but generating high-quality negative samples from existing knowledge graphs is challenging. The quality of these samples significantly impacts the model's accuracy. This comprehensive survey paper systematically reviews various negative sampling (NS) methods and their contributions to the success of KGRL. Their respective advantages and disadvantages are outlined by categorizing existing NS methods into six distinct categories. Moreover, this survey identifies open research questions that serve as potential directions for future investigations. By offering a generalization and alignment of fundamental NS concepts, this survey provides valuable insights for designing effective NS methods in the context of KGRL and serves as a motivating force for further advancements in the field.
+---
+paper_title: Development of an offline OOH advertising recommendation system using negative sampling and deep interest network
+
+publish_date: 2023-01-01
+
+paper_content:
+
+<jats:title>Abstract</jats:title><jats:p>The out-of-home (OOH) advertising market has been operated exclusively following the know-how of salespeople. Thus, it is difficult to make scientific decisions and systematically provide various options to advertisers. In this regard, this study develops an OOH advertising recommendation system by analyzing past OOH history data. The OOH advertising allocation problem has the characteristics that the training data are implicit feedback, and only one advertisement can be posted per offline billboard. This study proposes a recommendation system suitable for OOH history data using negative sampling and Deep Interest Network. The proposed recommendation system showed a higher performance than excisting models used for comparison purposes, and the findings of this study present implications for solving similar recommendation problems.</jats:p>
+---
+paper_title: Rethinking Collaborative Metric Learning: Toward an Efficient
+  Alternative without Negative Sampling
+
+publish_date: 2022-01-01
+
+paper_content:
+
+The recently proposed Collaborative Metric Learning (CML) paradigm has aroused wide interest in the area of recommendation systems (RS) owing to its simplicity and effectiveness. Typically, the existing literature of CML depends largely on the \textit{negative sampling} strategy to alleviate the time-consuming burden of pairwise computation. However, in this work, by taking a theoretical analysis, we find that negative sampling would lead to a biased estimation of the generalization error. Specifically, we show that the sampling-based CML would introduce a bias term in the generalization bound, which is quantified by the per-user \textit{Total Variance} (TV) between the distribution induced by negative sampling and the ground truth distribution. This suggests that optimizing the sampling-based CML loss function does not ensure a small generalization error even with sufficiently large training data. Moreover, we show that the bias term will vanish without the negative sampling strategy. Motivated by this, we propose an efficient alternative without negative sampling for CML named \textit{Sampling-Free Collaborative Metric Learning} (SFCML), to get rid of the sampling bias in a practical sense. Finally, comprehensive experiments over seven benchmark datasets speak to the superiority of the proposed algorithm.
+---
+paper_title: OFF-set: one-pass factorization of feature sets for online recommendation in persistent cold start settings
+
+publish_date: 2013-01-01
+
+paper_content:
+
+One of the most challenging recommendation tasks is recommending to a new, previously unseen user. This is known as the user cold start problem. Assuming certain features or attributes of users are known, one approach for handling new users is to initially model them based on their features.
+---
+paper_title: Efficient Non-Sampling Factorization Machines for Optimal Context-Aware Recommendation
+
+publish_date: 2020-01-01
+
+paper_content:
+
+To provide more accurate recommendation, it is a trending topic to go beyond modeling user-item interactions and take context features into account. Factorization Machines (FM) with negative sampling is a popular solution for context-aware recommendation. However, it is not robust as sampling may lost important information and usually leads to non-optimal performances in practical. Several recent efforts have enhanced FM with deep learning architectures for modelling high-order feature interactions. While they either focus on rating prediction task only, or typically adopt the negative sampling strategy for optimizing the ranking performance. Due to the dramatic fluctuation of sampling, it is reasonable to argue that these sampling-based FM methods are still suboptimal for context-aware recommendation.
+---
+paper_title: Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+publish_date: 2019-01-01
+
+paper_content:
+
+Bayesian Personalized Ranking (BPR) is a representative pairwise learning method for optimizing recommendation models. It is widely known that the performance of BPR depends largely on the quality of negative sampler. In this paper, we make two contributions with respect to BPR. First, we find that sampling negative items from the whole space is unnecessary and may even degrade the performance. Second, focusing on the purchase feedback of E-commerce, we propose a negative sampler for BPR by leveraging the additional view data. In our proposed sampler, users' viewed interactions are considered as an intermediate feedback between the purchased and unobserved interactions. We jointly learn the pairwise rankings of user preference among these three types of interactions and design a user-oriented weighting strategy during learning process, which is more effective and flexible. Compared to the vanilla BPR that applies a uniform sampler on all candidates, our view-enhanced sampler enhances BPR with a relative improvement over 36.64 and 16.40 percent on Beibei and Tmall datasets, respectively. Empirical studies demonstrate the importance of considering users' additional feedback when modeling their preference on different items, which can effectively improve the quality of sampled negative items towards learning a better personalized ranking function. Our implementation is available at https://github.com/dingjingtao/NegativeSamplerBPR.
+---
+paper_title: Generating Negative Samples for Sequential Recommendation
+
+publish_date: 2022-01-01
+
+paper_content:
+
+To make Sequential Recommendation (SR) successful, recent works focus on designing effective sequential encoders, fusing side information, and mining extra positive self-supervision signals. The strategy of sampling negative items at each time step is less explored. Due to the dynamics of users' interests and model updates during training, considering randomly sampled items from a user's non-interacted item set as negatives can be uninformative. As a result, the model will inaccurately learn user preferences toward items. Identifying informative negatives is challenging because informative negative items are tied with both dynamically changed interests and model parameters (and sampling process should also be efficient). To this end, we propose to Generate Negative Samples (items) for SR (GenNi). A negative item is sampled at each time step based on the current SR model's learned user preferences toward items. An efficient implementation is proposed to further accelerate the generation process, making it scalable to large-scale recommendation tasks. Extensive experiments on four public datasets verify the importance of providing high-quality negative samples for SR and demonstrate the effectiveness and efficiency of GenNi.
+---
+paper_title: On the Theories Behind Hard Negative Sampling for Recommendation
+
+publish_date: 2023-01-01
+
+paper_content:
+
+  Negative sampling has been heavily used to train recommender models on\nlarge-scale data, wherein sampling hard examples usually not only accelerates\nthe convergence but also improves the model accuracy. Nevertheless, the reasons\nfor the effectiveness of Hard Negative Sampling (HNS) have not been revealed\nyet. In this work, we fill the research gap by conducting thorough theoretical\nanalyses on HNS. Firstly, we prove that employing HNS on the Bayesian\nPersonalized Ranking (BPR) learner is equivalent to optimizing One-way Partial\nAUC (OPAUC). Concretely, the BPR equipped with Dynamic Negative Sampling (DNS)\nis an exact estimator, while with softmax-based sampling is a soft estimator.\nSecondly, we prove that OPAUC has a stronger connection with Top-K evaluation\nmetrics than AUC and verify it with simulation experiments. These analyses\nestablish the theoretical foundation of HNS in optimizing Top-K recommendation\nperformance for the first time. On these bases, we offer two insightful\nguidelines for effective usage of HNS: 1) the sampling hardness should be\ncontrollable, e.g., via pre-defined hyper-parameters, to adapt to different\nTop-K metrics and datasets; 2) the smaller the $K$ we emphasize in Top-K\nevaluation metrics, the harder the negative samples we should draw. Extensive\nexperiments on three real-world benchmarks verify the two guidelines.\n
+---
+paper_title: SVP-CF: Selection via Proxy for Collaborative Filtering Data
+
+publish_date: 2021-01-01
+
+paper_content:
+
+We study the practical consequences of dataset sampling strategies on the performance of recommendation algorithms. Recommender systems are generally trained and evaluated on samples of larger datasets. Samples are often taken in a naive or ad-hoc fashion: e.g. by sampling a dataset randomly or by selecting users or items with many interactions. As we demonstrate, commonly-used data sampling schemes can have significant consequences on algorithm performance -- masking performance deficiencies in algorithms or altering the relative performance of algorithms, as compared to models trained on the complete dataset. Following this observation, this paper makes the following main contributions: (1) characterizing the effect of sampling on algorithm performance, in terms of algorithm and dataset characteristics (e.g. sparsity characteristics, sequential dynamics, etc.); and (2) designing SVP-CF, which is a data-specific sampling strategy, that aims to preserve the relative performance of models after sampling, and is especially suited to long-tail interaction data. Detailed experiments show that SVP-CF is more accurate than commonly used sampling schemes in retaining the relative ranking of different recommendation algorithms.
+---
+paper_title: Soft BPR Loss for Dynamic Hard Negative Sampling in Recommender Systems
+
+publish_date: 2022-01-01
+
+paper_content:
+
+In implicit collaborative filtering (CF) task of recommender systems, recent works mainly focus on model structure design with promising techniques like graph neural networks (GNNs). Effective and efficient negative sampling methods that suit these models, however, remain underdeveloped. One challenge is that existing hard negative samplers tend to suffer from severer over-fitting in model training. In this work, we first study the reason behind the over-fitting, and illustrate it with the incorrect selection of false negative instances with the support of experiments. In addition, we empirically observe a counter-intuitive phenomenon, that is, polluting hard negative samples' embeddings with a quite large proportional of positive samples' embeddings will lead to remarkable performance gains for prediction accuracy. On top of this finding, we present a novel negative sampling strategy, i.e., positive-dominated negative synthesizing (PDNS). Moreover, we provide theoretical analysis and derive a simple equivalent algorithm of PDNS, where only a soft factor is added in the loss function. Comprehensive experiments on three real-world datasets demonstrate the superiority of our proposed method in terms of both effectiveness and robustness.
+---
+paper_title: Structure Aware Negative Sampling in Knowledge Graphs
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Learning low-dimensional representations for entities and relations in knowledge graphs using contrastive estimation represents a scalable and effective method for inferring connectivity patterns. A crucial aspect of contrastive learning approaches is the choice of corruption distribution that generates hard negative samples, which force the embedding model to learn discriminative representations and find critical characteristics of observed data. While earlier methods either employ too simple corruption distributions, i.e. uniform, yielding easy uninformative negatives or sophisticated adversarial distributions with challenging optimization schemes, they do not explicitly incorporate known graph structure resulting in suboptimal negatives. In this paper, we propose Structure Aware Negative Sampling (SANS), an inexpensive negative sampling strategy that utilizes the rich graph structure by selecting negative samples from a node's k-hop neighborhood. Empirically, we demonstrate that SANS finds semantically meaningful negatives and is competitive with SOTA approaches while requires no additional parameters nor difficult adversarial optimization.
+---
+paper_title: Negative Sampling for Recommendation
+
+publish_date: 2022-01-01
+
+paper_content:
+
+How to sample high quality negative instances from unlabeled data, i.e., negative sampling, is important for training implicit collaborative filtering and contrastive learning models. Although previous studies have proposed some approaches to sample informative instances, few has been done to discriminating false negative from true negative for unbiased negative sampling. On the basis of our order relation analysis of negatives' scores, we first derive the class conditional density of true negatives and that of false negatives. We next design a Bayesian classifier for negative classification, from which we define a model-agnostic posterior probability estimate of an instance being true negative as a quantitative negative signal measure. We also propose a Bayesian optimal sampling rule to sample high-quality negatives. The proposed Bayesian Negative Sampling (BNS) algorithm has a linear time complexity. Experimental studies validate the superiority of BNS over the peers in terms of better sampling quality and better recommendation performance.
+---
+paper_title: Addressing Item-Cold Start Problem in Recommendation Systems using Model Based Approach and Deep Learning
+
+publish_date: 2017-01-01
+
+paper_content:
+
+Traditional recommendation systems rely on past usage data in order to generate new recommendations. Those approaches fail to generate sensible recommendations for new users and items into the system due to missing information about their past interactions. In this paper, we propose a solution for successfully addressing item-cold start problem which uses model-based approach and recent advances in deep learning. In particular, we use latent factor model for recommendation, and predict the latent factors from item's descriptions using convolutional neural network when they cannot be obtained from usage data. Latent factors obtained by applying matrix factorization to the available usage data are used as ground truth to train the convolutional neural network. To create latent factor representations for the new items, the convolutional neural network uses their textual description. The results from the experiments reveal that the proposed approach significantly outperforms several baseline estimators.
+---
+paper_title: Exploiting Negative Preference in Content-based Music Recommendation with Contrastive Learning
+
+publish_date: 2022-01-01
+
+paper_content:
+
+  Advanced music recommendation systems are being introduced along with the\ndevelopment of machine learning. However, it is essential to design a music\nrecommendation system that can increase user satisfaction by understanding\nusers' music tastes, not by the complexity of models. Although several studies\nrelated to music recommendation systems exploiting negative preferences have\nshown performance improvements, there was a lack of explanation on how they led\nto better recommendations. In this work, we analyze the role of negative\npreference in users' music tastes by comparing music recommendation models with\ncontrastive learning exploiting preference (CLEP) but with three different\ntraining strategies - exploiting preferences of both positive and negative\n(CLEP-PN), positive only (CLEP-P), and negative only (CLEP-N). We evaluate the\neffectiveness of the negative preference by validating each system with a small\namount of personalized data obtained via survey and further illuminate the\npossibility of exploiting negative preference in music recommendations. Our\nexperimental results show that CLEP-N outperforms the other two in accuracy and\nfalse positive rate. Furthermore, the proposed training strategies produced a\nconsistent tendency regardless of different types of front-end musical feature\nextractors, proving the stability of the proposed method.\n
+---
+paper_title: Cold-start Problems in Recommendation Systems via Contextual-bandit
+  Algorithms
+
+publish_date: 2014-01-01
+
+paper_content:
+
+In this paper, we study a cold-start problem in recommendation systems where we have completely new users entered the systems. There is not any interaction or feedback of the new users with the systems previoustly, thus no ratings are available. Trivial approaches are to select ramdom items or the most popular ones to recommend to the new users. However, these methods perform poorly in many case. In this research, we provide a new look of this cold-start problem in recommendation systems. In fact, we cast this cold-start problem as a contextual-bandit problem. No additional information on new users and new items is needed. We consider all the past ratings of previous users as contextual information to be integrated into the recommendation framework. To solve this type of the cold-start problems, we propose a new efficient method which is based on the LinUCB algorithm for contextual-bandit problems. The experiments were conducted on three different publicly-available data sets, namely Movielens, Netflix and Yahoo!Music. The new proposed methods were also compared with other state-of-the-art techniques. Experiments showed that our new method significantly improves upon all these methods.
+---
+paper_title: Alleviating Cold-Start Problems in Recommendation through
+  Pseudo-Labelling over Knowledge Graph
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Solving cold-start problems is indispensable to provide meaningful recommendation results for new users and items. Under sparsely observed data, unobserved user-item pairs are also a vital source for distilling latent users' information needs. Most present works leverage unobserved samples for extracting negative signals. However, such an optimisation strategy can lead to biased results toward already popular items by frequently handling new items as negative instances. In this study, we tackle the cold-start problems for new users/items by appropriately leveraging unobserved samples. We propose a knowledge graph (KG)-aware recommender based on graph neural networks, which augments labelled samples through pseudo-labelling. Our approach aggressively employs unobserved samples as positive instances and brings new items into the spotlight. To avoid exhaustive label assignments to all possible pairs of users and items, we exploit a KG for selecting probably positive items for each user. We also utilise an improved negative sampling strategy and thereby suppress the exacerbation of popularity biases. Through experiments, we demonstrate that our approach achieves improvements over the state-of-the-art KG-aware recommenders in a variety of scenarios; in particular, our methodology successfully improves recommendation performance for cold-start users/items.
+---
+paper_title: Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Negative sampling approaches are prevalent in implicit collaborative filtering for obtaining negative labels from massive unlabeled data. As two major concerns in negative sampling, efficiency and effectiveness are still not fully achieved by recent works that use complicate structures and overlook risk of false negative instances. In this paper, we first provide a novel understanding of negative instances by empirically observing that only a few instances are potentially important for model learning, and false negatives tend to have stable predictions over many training iterations. Above findings motivate us to simplify the model by sampling from designed memory that only stores a few important candidates and, more importantly, tackle the untouched false negative problem by favouring high-variance samples stored in memory, which achieves efficient sampling of true negatives with high-quality. Empirical results on two synthetic datasets and three real-world datasets demonstrate both robustness and superiorities of our negative sampling method.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Negative Sampling in Recommendation.
+   ---
+   ---
+paper_title: A Survey on Causal Inference for Recommendation
+
+publish_date: 2024-07-08
+
+paper_abstract:
+
+Causal inference has recently garnered significant interest among recommender
+system (RS) researchers due to its ability to dissect cause-and-effect
+relationships and its broad applicability across multiple fields. It offers a
+framework to model the causality in recommender systems like confounding
+effects and deal with counterfactual problems such as offline policy evaluation
+and data augmentation. Although there are already some valuable surveys on
+causal recommendations, they typically classify approaches based on the
+practical issues faced in RS, a classification that may disperse and fragment
+the unified causal theories. Considering RS researchers' unfamiliarity with
+causality, it is necessary yet challenging to comprehensively review relevant
+studies from a coherent causal theoretical perspective, thereby facilitating a
+deeper integration of causal inference in RS. This survey provides a systematic
+review of up-to-date papers in this area from a causal theory standpoint and
+traces the evolutionary development of RS methods within the same causal
+strategy. Firstly, we introduce the fundamental concepts of causal inference as
+the basis of the following review. Subsequently, we propose a novel
+theory-driven taxonomy, categorizing existing methods based on the causal
+theory employed - namely, those based on the potential outcome framework, the
+structural causal model, and general counterfactuals. The review then delves
+into the technical details of how existing methods apply causal inference to
+address particular recommender issues. Finally, we highlight some promising
+directions for future research in this field. Representative papers and
+open-source resources will be progressively available at
+https://github.com/Chrissie-Law/Causal-Inference-for-Recommendation.
+
+paper_outline:
+
+CCS Concepts  
+Information systems → Recommender systems
+
+1 INTRODUCTION  
+2 RELATED FIELDS  
+3 FOUNDATION  
+3.1 Causal Inference  
+3.2 Recommender Systems  
+3.3 Existing Categorizations of Causal Recommendation  
+4 PO-BASED METHODS  
+5 SCM-BASED METHODS  
+6 GENERAL COUNTERFACTUALS-BASED METHODS  
+7 OPENING PROBLEMS AND FUTURE DIRECTIONS  
+8 CONCLUSION
+---
+paper_title: A Survey on Popularity Bias in Recommender Systems
+
+publish_date: 2024-07-02
+
+paper_abstract:
+
+Recommender systems help people find relevant content in a personalized way.
+One main promise of such systems is that they are able to increase the
+visibility of items in the long tail, i.e., the lesser-known items in a
+catalogue. Existing research, however, suggests that in many situations todays
+recommendation algorithms instead exhibit a popularity bias, meaning that they
+often focus on rather popular items in their recommendations. Such a bias may
+not only lead to the limited value of the recommendations for consumers and
+providers in the short run, but it may also cause undesired reinforcement
+effects over time. In this paper, we discuss the potential reasons for
+popularity bias and review existing approaches to detect, quantify and mitigate
+popularity bias in recommender systems. Our survey, therefore, includes both an
+overview of the computational metrics used in the literature as well as a
+review of the main technical approaches to reduce the bias. Furthermore, we
+critically discuss todays literature, where we observe that the research is
+almost entirely based on computational experiments and on certain assumptions
+regarding the practical effects of including long-tail items in the
+recommendations.
+
+paper_outline:
+
+1 Introduction  
+2 Background  
+2.1 Popularity bias as an exposure-related phenomenon  
+2.2 Sources of biases and bias amplification  
+2.3 Potential negative effects of popularity bias  
+2.4 An impact-oriented definition of popularity bias and its relationship to novelty, diversity, and fairness  
+3 Methodology  
+4 Survey results: a landscape of research  
+4.1 Publication statistics  
+4.2 Problem characterizations and research motivations  
+4.3 Application domains  
+4.4 Types of contributions  
+5 Technical approaches to deal with popularity bias  
+5.1 Bias quantification approaches  
+5.2 Bias mitigation approaches  
+5.3 Bias utilization methods  
+6 Evaluation approaches  
+6.1 Datasets  
+6.2 Evaluation approaches  
+6.3 Evaluation metrics  
+7 Discussion, research gaps, and future directions  
+7.1 Definition, applications, and datasets  
+7.2 Methodological issues  
+8 Summary
+---
+paper_title: Causal Inference in Recommender Systems: A Survey and Future Directions
+
+publish_date: 2023-12-15
+
+paper_abstract:
+
+Recommender systems have become crucial in information filtering nowadays.
+Existing recommender systems extract user preferences based on the correlation
+in data, such as behavioral correlation in collaborative filtering,
+feature-feature, or feature-behavior correlation in click-through rate
+prediction. However, unfortunately, the real world is driven by causality, not
+just correlation, and correlation does not imply causation. For instance,
+recommender systems might recommend a battery charger to a user after buying a
+phone, where the latter can serve as the cause of the former; such a causal
+relation cannot be reversed. Recently, to address this, researchers in
+recommender systems have begun utilizing causal inference to extract causality,
+thereby enhancing the recommender system. In this survey, we offer a
+comprehensive review of the literature on causal inference-based
+recommendation. Initially, we introduce the fundamental concepts of both
+recommender system and causal inference as the foundation for subsequent
+content. We then highlight the typical issues faced by non-causality
+recommender system. Following that, we thoroughly review the existing work on
+causal inference-based recommender systems, based on a taxonomy of three-aspect
+challenges that causal inference can address. Finally, we discuss the open
+problems in this critical research area and suggest important potential future
+works.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 BACKGROUND  
+2.1 Causal Inference  
+2.2 Recommender System  
+
+3 WHY CAUSAL INFERENCE IS NEEDED FOR RECOMMENDER SYSTEMS  
+
+4 TECHNICAL DETAILS OF EXISTING WORKS OF CAUSAL INFERENCE-BASED RECOMMENDER SYSTEMS  
+
+5 OPEN PROBLEMS AND FUTURE DIRECTIONS  
+
+6 CONCLUSION
+---
+paper_title: Contrastive Self-supervised Learning in Recommender Systems: A Survey
+
+publish_date: 2023-10-11
+
+paper_abstract:
+
+Deep learning-based recommender systems have achieved remarkable success in
+recent years. However, these methods usually heavily rely on labeled data
+(i.e., user-item interactions), suffering from problems such as data sparsity
+and cold-start. Self-supervised learning, an emerging paradigm that extracts
+information from unlabeled data, provides insights into addressing these
+problems. Specifically, contrastive self-supervised learning, due to its
+flexibility and promising performance, has attracted considerable interest and
+recently become a dominant branch in self-supervised learning-based
+recommendation methods. In this survey, we provide an up-to-date and
+comprehensive review of current contrastive self-supervised learning-based
+recommendation methods. Firstly, we propose a unified framework for these
+methods. We then introduce a taxonomy based on the key components of the
+framework, including view generation strategy, contrastive task, and
+contrastive objective. For each component, we provide detailed descriptions and
+discussions to guide the choice of the appropriate method. Finally, we outline
+open issues and promising directions for future research.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 BACKGROUND  
+2.1 Term Definitions  
+2.2 Contrastive Learning  
+2.3 Training Strategy  
+
+3 TAXONOMY  
+3.1 Unified Framework  
+3.2 Proposed Taxonomy  
+
+4 VIEW GENERATION  
+
+5 PRETEXT TASK  
+
+6 CONTRASTIVE OBJECTIVE  
+
+7 OPEN ISSUES AND FUTURE DIRECTIONS  
+
+8 CONCLUSION
+---
+paper_title: Self-Supervised Learning for Recommender Systems: A Survey
+
+publish_date: 2023-06-02
+
+paper_abstract:
+
+In recent years, neural architecture-based recommender systems have achieved
+tremendous success, but they still fall short of expectation when dealing with
+highly sparse data. Self-supervised learning (SSL), as an emerging technique
+for learning from unlabeled data, has attracted considerable attention as a
+potential solution to this issue. This survey paper presents a systematic and
+timely review of research efforts on self-supervised recommendation (SSR).
+Specifically, we propose an exclusive definition of SSR, on top of which we
+develop a comprehensive taxonomy to divide existing SSR methods into four
+categories: contrastive, generative, predictive, and hybrid. For each category,
+we elucidate its concept and formulation, the involved methods, as well as its
+pros and cons. Furthermore, to facilitate empirical comparison, we release an
+open-source library SELFRec (https://github.com/Coder-Yu/SELFRec), which
+incorporates a wide range of SSR models and benchmark datasets. Through
+rigorous experiments using this library, we derive and report some significant
+findings regarding the selection of self-supervised signals for enhancing
+recommendation. Finally, we shed light on the limitations in the current
+research and outline the future research directions.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 DEFINITION AND TAXONOMY  
+2.1 Preliminaries  
+2.2 Definition and Formulation  
+2.3 Taxonomy  
+2.4 Typical Training Schemes  
+
+3 DATA AUGMENTATION  
+3.1 Sequence-Based Augmentation  
+3.2 Graph-Based Augmentation  
+3.3 Feature-Based Augmentation  
+
+4 CONTRASTIVE METHODS  
+4.1 Structure-Level Contrast  
+4.2 Feature-Level Contrast  
+4.3 Model-Level Contrast  
+4.4 Contrastive Loss  
+4.5 Pros and Cons  
+
+5 GENERATIVE METHODS  
+5.1 Structure Generation  
+5.2 Feature Generation  
+5.3 Pros and Cons  
+
+6 PREDICTIVE METHODS  
+6.1 Sample Prediction  
+6.2 Pseudo-Label Prediction  
+6.3 Pros and Cons  
+
+7 HYBRID METHODS  
+7.1 Collaborative Self-Supervision  
+7.2 Parallel Self-Supervision  
+7.3 Pros and Cons  
+
+8 SELFREC: A LIBRARY FOR SELF-SUPERVISED RECOMMENDATION  
+
+9 EXPERIMENTAL FINDINGS  
+9.1 Comparison of Data Augmentations in CL  
+9.2 Comparison of SSR Models  
+
+10 DISCUSSION  
+10.1 Theory for Augmentation Selection  
+10.2 Explainable Self-Supervised Recommendation  
+10.3 Attacking and Defending Self-Supervised Recommendation Models  
+10.4 On-Device Self-Supervised Recommendation  
+10.5 Towards General-Purpose Pre-Training  
+
+11 CONCLUSION
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Negative Sampling in Recommendation**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Challenges and Limitations**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Negative Sampling in Recommendation** and **Challenges and Limitations**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Challenges and Limitations** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Challenges and Limitations**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Challenges and Limitations**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

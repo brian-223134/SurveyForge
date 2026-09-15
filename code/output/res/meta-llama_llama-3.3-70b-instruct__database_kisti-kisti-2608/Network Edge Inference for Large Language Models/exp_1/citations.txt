@@ -1,0 +1,130 @@
+Large Language Models: A Survey
+Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM
+A Survey on Model Compression and Acceleration for Pretrained Language Models
+From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference
+Mobile Edge Intelligence for Large Language Models: A Contemporary Survey
+Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges
+A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs)
+Large language models: an overview of foundational architectures, recent trends, and a new taxonomy
+Speed and Conversational Large Language Models: Not All Is About Tokens per Second
+Achieving Peak Performance for Large Language Models: A Systematic Review
+LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning
+Cloud–Edge Collaborative Inference with Network Pruning
+Pipeline Parallelism for Inference on Heterogeneous Edge Computing
+EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference
+AdapMoE: Adaptive Sensitivity-Based Expert Gating and Management for Efficient MoE Inference
+Designing Efficient LLM Accelerators for Edge Devices
+PowerInfer-2: Fast Large Language Model Inference on a Smartphone
+Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy
+MegaScale: Scaling Large Language Model Training to More Than 10, 000 GPUs
+Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer
+Efficient Large Scale Language Modeling with Mixtures of Experts
+GLaM: Efficient Scaling of Language Models with Mixture-of-Experts
+OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models
+Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training
+Mosaic: Composite Projection Pruning for Resource-efficient LLMs
+PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services
+EdgeShard: Efficient LLM Inference via Collaborative Edge Computing
+BASE Layers: Simplifying Training of Large, Sparse Models
+Predicting on the Edge: Identifying Where a Larger Model Does Better
+Mixture of Experts in Large Language Models
+EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference
+Optimal Model Placement and Online Model Splitting for Device-Edge Co-Inference
+A Study of Optimizations for Fine-tuning Large Language Models
+PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference
+Measuring and Improving the Energy Efficiency of Large Language Models Inference
+Adaptive and Resilient Model-Distributed Inference in Edge Computing Systems
+SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget
+Cache Me If You Must: Adaptive Key-Value Quantization for Large Language Models
+Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters
+FoldGPT: Simple and Effective Large Language Model Compression Scheme
+LLaMA-NAS: Efficient Neural Architecture Search for Large Language Models
+Puzzle: Distillation-Based NAS for Inference-Optimized LLMs
+Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations
+QEFT: Quantization for Efficient Fine-Tuning of LLMs
+MoQAE: Mixed-Precision Quantization for Long-Context LLM Inference via Mixture of Quantization-Aware Experts
+Radio: Rate-Distortion Optimization for Large Language Model Compression
+EdgeShard
+AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent
+SDQ: Sparse Decomposed Quantization for LLM Inference
+Distributed Threat Intelligence at the Edge Devices: A Large Language Model-Driven Approach
+Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity
+Biases in Edge Language Models: Detection, Analysis, and Mitigation
+Sometimes Painful but Promising: Feasibility and Trade-Offs of On-Device Language Model Inference
+TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers
+A Comprehensive Analysis on Edge Deployment and Optimization of Llms
+MemoriaNova: Optimizing Memory-Aware Model Inference for Edge Computing
+WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching
+User Association and Resource Allocation in Large Language Model Based Mobile Edge Computing System over 6G Wireless Communications
+Collaborative Edge-to-Server Inference for Vision-Language Models
+Toward Improving Ensemble-Based Collaborative Inference at the Edge
+UELLM: A Unified and Efficient Approach for LLM Inference Serving
+AI at Scale: The Infrastructure Revolution Enabling GPT-Class Large Language Models
+Mitigating Edge Machine Learning Inference Bottlenecks: An Empirical Study on Accelerating Google Edge Models
+Quantized Transformer Language Model Implementations on Edge Devices
+On-Device Language Models: A Comprehensive Review
+Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency
+DEFER: Distributed Edge Inference for Deep Neural Networks
+PRISM: Privacy-Aware Routing for Adaptive Cloud-Edge LLM Inference via Semantic Sketch Collaboration
+Efficient LLMs Training and Inference: An Introduction
+A Survey on Efficient Inference for Large Language Models
+Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems
+Structured Pruning of Large Language Models
+Efficient Transformer-based Large Scale Language Representations using Hardware-friendly Block Structured Pruning
+ShortGPT: Layers in Large Language Models are More Redundant Than You Expect
+SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot
+SliceGPT: Compress Large Language Models by Deleting Rows and Columns
+A Simple and Effective Pruning Approach for Large Language Models
+Shortened LLaMA: A Simple Depth Pruning for Large Language Models
+APT: Adaptive Pruning and Tuning Pretrained Language Models for Efficient Training and Inference
+HAPE: Hardware-Aware LLM Pruning For Efficient On-Device Inference Optimization
+Unlocking the Path Towards AI-Native Networks with Optimized Lightweight Large Language Models
+Distributed and Collaborative High-Speed Inference Deep Learning for Mobile Edge with Topological Dependencies
+Enabling Deep Learning for All-in EDGE paradigm
+EDGE EXCHANGEABLE MODELS FOR INTERACTION NETWORKS
+HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference
+SSD Offloading for LLM Mixture-of-Experts Weights Considered Harmful in Energy Efficiency
+FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models
+NetGPT: A Native-AI Network Architecture Beyond Provisioning Personalized Generative Services
+FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices
+Reliability Under Randomness: An Empirical Analysis of Sparse and Dense Language Models Across Decoding Temperatures
+Efficient Contextualized Representation: Language Model Pruning for Sequence Labeling
+OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models
+Low-Rank Tensor Approximation of Weights in Large Language Models via Cosine Lanczos Bidiagonalization
+DEFER: Distributed Edge inFERence
+Communication-Efficient Distributed On-Device LLM Inference Over Wireless Networks
+Adaptive Layer Splitting for Wireless LLM Inference in Edge Computing: A Model-Based Reinforcement Learning Approach
+Collaboration of Large Language Models and Small Recommendation Models for Device-Cloud Recommendation
+Efficient TinyML Architectures for On-Device Small Language Models: Privacy-Preserving Inference at the Edge
+Fast and Slow Generating: An Empirical Study on Large and Small Language Models Collaborative Decoding
+Intelligent Orchestration of Distributed Large Foundation Model Inference at the Edge
+STI: Turbocharge NLP Inference at the Edge via Elastic Pipelining
+TPI-LLM: Serving 70B-scale LLMs Efficiently on Low-resource Edge Devices
+Towards Edge General Intelligence via Large Language Models: Opportunities and Challenges
+Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling
+Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models
+ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference
+Scaling Embeddings Outperforms Scaling Experts in Language Models
+Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs
+QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models
+Prompt Inversion Attack Against Collaborative Inference of Large Language Models
+ALTO: An Efficient Network Orchestrator for Compound AI Systems
+Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains
+LLMCad: Fast and Scalable On-device Large Language Model Inference
+Scalable Mutual Information Estimation Using Dependence Graphs
+Relation Learning on Social Networks with Multi-Modal Graph Edge Variational Autoencoders
+ShortGPT: Simple and Effective Large Language Model Compression Scheme
+FP6-LLM: Efficiently Serving Large Language Models Through FP6-Centric Algorithm-System Co-Design
+CE-LoRA: Computation-Efficient LoRA Fine-Tuning for Language Models
+Token Level Routing Inference System for Edge Devices
+Large Language Models for Networking: Applications, Enabling Techniques, and Challenges
+MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router
+AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models
+Pangu Pro MoE: Mixture of Grouped Experts for Efficient Sparsity
+SplitLLM: Collaborative Inference of LLMs for Model Placement and Throughput Optimization
+Large Language Models (LLMs) for Semantic Communication in Edge-based IoT Networks
+On the Compressibility of Quantized Large Language Models
+Fast Inference for Augmented Large Language Models
+CO2-Meter: A Comprehensive Carbon Footprint Estimator for LLMs on Edge Devices
+Large Language Models Meet NL2Code: A Survey
+Road of Large Language Model: Source, Challenge, and Future Perspectives

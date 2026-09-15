@@ -1,0 +1,518 @@
+Architectures and Models for Network Edge Inference
+['This section delves into the various architectures and models designed for Network Edge Inference, including their strengths, weaknesses, and applications.', '1. Discussion on the role of mobile edge computing in supporting Large Language Model inference, including the use of edge servers and cloudlets.', '2. Examination of model pruning, quantization, and knowledge distillation techniques for reducing the computational footprint of Large Language Models.', '3. Introduction to Mixture of Experts (MoE) models and their potential for efficient inference at the edge.']
+
+CoSMoEs: Compact Sparse Mixture of Experts
+
+FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models
+
+Oh! We Freeze: Improving Quantized Knowledge Distillation via Signal Propagation Analysis for Large Language Models
+
+AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models
+
+Revisiting single-gated Mixtures of Experts
+
+Sometimes Painful but Promising: Feasibility and Trade-Offs of On-Device Language Model Inference
+
+PowerInfer-2: Fast Large Language Model Inference on a Smartphone
+
+Decentralized LLM Inference over Edge Networks with Energy Harvesting
+
+Large Language Models (LLMs) for Semantic Communication in Edge-based IoT Networks
+
+ProMoE: Fast MoE-based LLM Serving using Proactive Caching
+
+CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification
+
+Learning on Large-scale Text-attributed Graphs via Variational Inference
+
+Inference with Reference: Lossless Acceleration of Large Language Models
+
+Advancing Model Refinement: Muon-Optimized Distillation and Quantization for LLM Deployment
+
+EC2MoE: Adaptive End-Cloud Pipeline Collaboration Enabling Scalable Mixture-of-Experts Inference
+
+Structured Pruning of Large Language Models
+
+Scaling Inference-Efficient Language Models
+
+The Unseen Frontier: Pushing the Limits of LLM Sparsity with Surrogate-Free ADMM
+
+PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing
+
+Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations
+
+MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism
+
+UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs
+
+Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling
+
+Task-Specific Expert Pruning for Sparse Mixture-of-Experts
+
+E3-Pruner: Towards Efficient, Economical, and Effective Layer Pruning for Large Language Models
+
+Improved Methods for Model Pruning and Knowledge Distillation
+
+Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts
+
+DLP: Dynamic Layerwise Pruning in Large Language Models
+
+Fluctuation-based Adaptive Structured Pruning for Large Language Models
+
+Memory Augmented Language Models through Mixture of Word Experts
+
+Faster MoE LLM Inference for Extremely Large Models
+
+Pruning as a Defense: Reducing Memorization in Large Language Models
+
+Beyond Text: A Deep Dive into Large Language Models' Ability on Understanding Graph Data
+
+Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models
+
+LLM-Pruner: On the Structural Pruning of Large Language Models
+
+Efficient Tuning and Inference for Large Language Models on Textual Graphs
+
+Inferflow: an Efficient and Highly Configurable Inference Engine for Large Language Models
+
+CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing
+
+Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding
+
+GradPruner: Gradient-Guided Layer Pruning Enabling Efficient Fine-Tuning and Inference for LLMs
+
+Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency
+
+S2MoE: Robust Sparse Mixture of Experts via Stochastic Learning
+
+ShortGPT: Layers in Large Language Models are More Redundant Than You Expect
+
+A Comprehensive Analysis on Edge Deployment and Optimization of Llms
+
+Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding
+
+Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference
+
+Long-Tailed Distribution-Aware Router For Mixture-of-Experts in Large Vision-Language Model
+
+Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices
+
+L-MoE: End-to-End Training of a Lightweight Mixture of Low-Rank Adaptation Experts
+
+Shortened LLaMA: A Simple Depth Pruning for Large Language Models
+
+Optimization Techniques for Edge Inference
+['This section focuses on the optimization techniques used to enhance the performance of Network Edge Inference. It covers topics such as quantization, sparse coding, and dynamic voltage frequency scaling.', '1. Quantization methods for reducing memory footprint and improving inference speed, including weight quantization and activation quantization.', '2. Sparse coding techniques for efficient representation and computation, including sparse matrix multiplication and sparse tensor compression.', '3. Dynamic voltage frequency scaling for optimizing energy efficiency, including dynamic voltage and frequency scaling and power-aware scheduling.']
+
+An Architecture for Accelerated Large-Scale Inference of Transformer-Based Language Models
+
+Polar Sparsity: High Throughput Batched LLM Inferencing with Scalable Contextual Sparsity
+
+Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models
+
+From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference
+
+Constraint-Compliant Network Optimization through Large Language Models
+
+Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges
+
+DEFER: Distributed Edge Inference for Deep Neural Networks
+
+Search for Efficient Large Language Models
+
+Efficient Tuning and Inference for Large Language Models on Textual Graphs
+
+GuidedQuant: Large Language Model Quantization via Exploiting End Loss Guidance
+
+Dissecting the Impact of Mobile DVFS Governors on LLM Inference Performance and Energy Efficiency
+
+Towards Sustainable NLP: Insights from Benchmarking Inference Energy in Large Language Models
+
+COSPADI: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning
+
+E4: Energy-Efficient DNN Inference for Edge Video Analytics Via Early-Exit and DVFS
+
+Scaling Inference-Efficient Language Models
+
+Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations
+
+Decentralized LLM Inference over Edge Networks with Energy Harvesting
+
+Quantized Side Tuning: Fast and Memory-Efficient Tuning of Quantized Large Language Models
+
+End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost
+
+Toward Efficient SpMV in Sparse LLMs via Block Extraction and Compressed Storage
+
+A Frustratingly Easy Post-Training Quantization Scheme for LLMs
+
+On-Device Language Models: A Comprehensive Review
+
+Low-Rank Tensor Approximation of Weights in Large Language Models via Cosine Lanczos Bidiagonalization
+
+Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency
+
+GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving
+
+FP6-LLM: Efficiently Serving Large Language Models Through FP6-Centric Algorithm-System Co-Design
+
+Inference Performance Optimization for Large Language Models on CPUs
+
+Scale-Free Graph-Language Models
+
+ParoQuant: Pairwise Rotation Quantization for Efficient Reasoning LLM Inference
+
+Statistical Modeling and Uncertainty Estimation of LLM Inference Systems
+
+UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs
+
+Saten: Sparse Augmented Tensor Networks for Post-Training Compression of Large Language Models
+
+AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent
+
+Toward Sustainability-Aware LLM Inference on Edge Clusters
+
+Learning Networks from Wide-Sense Stationary Stochastic Processes
+
+Dynamic Low-Rank Sparse Adaptation for Large Language Models
+
+StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices
+
+Communication-Efficient Distributed On-Device LLM Inference Over Wireless Networks
+
+The Effects of Partitioning Strategies on Energy Consumption in Distributed CNN Inference at The Edge
+
+MoQAE: Mixed-Precision Quantization for Long-Context LLM Inference via Mixture of Quantization-Aware Experts
+
+Power-of-Two Quantization-Aware-Training (PoT-QAT) in Large Language Models (LLMs)
+
+Compressing Neural Language Models by Sparse Word Representations
+
+Efficient GPT-4V level multimodal large language model for deployment on edge devices
+
+Radio: Rate-Distortion Optimization for Large Language Model Compression
+
+Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models
+
+Training-Free Activation Sparsity in Large Language Models
+
+Foundations of Large Language Model Compression - Part 1: Weight Quantization
+
+Distributed Inference Performance Optimization for LLMs on CPUs
+
+Low-Rank Prune-And-Factorize for Language Model Compression
+
+NeuroPrune: A Neuro-inspired Topological Sparse Training Algorithm for Large Language Models
+
+Edge-Cloud Collaboration for Inference
+['This section discusses the collaboration between edge and cloud computing for Large Language Model inference, focusing on how this collaboration can offer a balance between latency and computational resources.', '1. Architectures for edge-cloud collaborative inference, including fog computing and hierarchical edge-cloud models.', '2. Task partitioning and offloading strategies for optimal resource utilization, including computation offloading and data offloading.', '3. Communication protocols and data management for seamless collaboration, including data synchronization and consistency models.']
+
+System-performance and cost modeling of Large Language Model training and inference
+
+Collaborative Edge-to-Server Inference for Vision-Language Models
+
+Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling
+
+Towards Efficient Multi-LLM Inference: Characterization and Analysis of LLM Routing and Hierarchical Techniques
+
+Memory- and Latency-Constrained Inference of Large Language Models via Adaptive Split Computing
+
+CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing
+
+Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices
+
+LiveMind: Low-latency Large Language Models with Simultaneous Inference
+
+CacheNet: A Model Caching Framework for Deep Learning Inference on the
+  Edge
+
+AppealNet: An Efficient and Highly-Accurate Edge/Cloud Collaborative Architecture for DNN Inference
+
+EdgeShard: Efficient LLM Inference via Collaborative Edge Computing
+
+Calibration-Aided Edge Inference Offloading via Adaptive Model Partitioning of Deep Neural Networks
+
+Architectural Foundations for the Large Language Model Infrastructures
+
+Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding
+
+INFERENCEDYNAMICS: Efficient Routing Across LLMs through Structured Capability and Knowledge Profiling
+
+Fast Inference of Mixture-of-Experts Language Models with Offloading
+
+Distributed and Collaborative High-Speed Inference Deep Learning for Mobile Edge with Topological Dependencies
+
+Efficient Tuning and Inference for Large Language Models on Textual Graphs
+
+Enabling Efficient Serverless Inference Serving for LLM (Large Language Model) in the Cloud
+
+STI: Turbocharge NLP Inference at the Edge via Elastic Pipelining
+
+Fast Inference for Augmented Large Language Models
+
+A Comprehensive Analysis on Edge Deployment and Optimization of Llms
+
+Multi-Task Inference: Can Large Language Models Follow Multiple Instructions at Once?
+
+On-Device Language Models: A Comprehensive Review
+
+Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges
+
+Inference with Reference: Lossless Acceleration of Large Language Models
+
+Token Level Routing Inference System for Edge Devices
+
+λScale: Enabling Fast Scaling for Serverless Large Language Model Inference
+
+DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving
+
+Communication-Efficient Distributed On-Device LLM Inference Over Wireless Networks
+
+MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models
+
+Adaptive Edge-Cloud Inference for Speech-to-Action Systems Using ASR and Large Language Models
+
+EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference
+
+Adaptive Layer Splitting for Wireless LLM Inference in Edge Computing: A Model-Based Reinforcement Learning Approach
+
+Constraint-Compliant Network Optimization through Large Language Models
+
+Large Language Models (LLMs) for Semantic Communication in Edge-based IoT Networks
+
+Pipeline Parallelism for Inference on Heterogeneous Edge Computing
+
+UELLM: A Unified and Efficient Approach for LLM Inference Serving
+
+DILEMMA: Joint LLM Quantization and Distributed LLM Inference Over Edge Computing Systems
+
+StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices
+
+PowerInfer-2: Fast Large Language Model Inference on a Smartphone
+
+Cloud Native System for LLM Inference Serving
+
+Argus: Token Aware Distributed LLM Inference Optimization
+
+Sometimes Painful but Promising: Feasibility and Trade-Offs of On-Device Language Model Inference
+
+LinguaLinked: A Distributed Large Language Model Inference System for Mobile Devices
+
+Aqua: Network-Accelerated Memory Offloading for LLMs in Scale-Up GPU Domains
+
+Unlocking the Path Towards AI-Native Networks with Optimized Lightweight Large Language Models
+
+Task Scheduling for Efficient Inference of Large Language Models on Single Moderate GPU Systems
+
+A Systematic Characterization of LLM Inference on GPUs
+
+Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency
+
+Security and Privacy Considerations
+['This section addresses the critical aspects of security and privacy in Network Edge Inference. It examines the vulnerabilities and threats associated with edge inference and discusses mitigation strategies.', '1. Threat models and vulnerability analysis for edge inference systems, including data breaches and model inversion attacks.', '2. Encryption and access control mechanisms for protecting user data, including homomorphic encryption and secure multi-party computation.', '3. Privacy-preserving inference techniques for sensitive applications, including differential privacy and federated learning.']
+
+SpecEdge: Scalable Edge-Assisted Serving Framework for Interactive LLMs
+
+Split-and-Denoise: Protect large language model inference with local differential privacy
+
+Privacy-preserving Security Inference Towards Cloud-Edge Collaborative Using Differential Privacy
+
+VeriLLM: A Lightweight Framework for Publicly Verifiable Decentralized Inference
+
+Sometimes Painful but Promising: Feasibility and Trade-Offs of On-Device Language Model Inference
+
+Excuse me, sir? Your language model is leaking (information)
+
+Leia: A Lightweight Cryptographic Neural Network Inference System at the Edge
+
+Spill The Beans: Exploiting CPU Cache Side-Channels to Leak Tokens from Large Language Models
+
+SecReEvalBench: A Multi-turned Security Resilience Evaluation Benchmark for Large Language Models
+
+Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity
+
+Tokens for Learning, Tokens for Unlearning: Mitigating Membership Inference Attacks in Large Language Models via Dual-Purpose Training
+
+Differentially Private Low-Rank Adaptation of Large Language Model Using Federated Learning
+
+SVIP: Towards Verifiable Inference of Open-source Large Language Models
+
+VERA: Variational Inference Framework for Jailbreaking Large Language Models
+
+The Phantom Menace: Unmasking Privacy Leakages in Vision-Language Models
+
+Membership Inference Attacks against Large Vision-Language Models
+
+Salted Inference: Enhancing Privacy while Maintaining Efficiency of Split Inference in Mobile Computing
+
+CryptoTensors: A Light-Weight Large Language Model File Format for Highly-Secure Model Distribution
+
+Information Leakage from Embedding in Large Language Models
+
+Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding
+
+Invisible Prompts, Visible Threats: Malicious Font Injection in External Resources for Large Language Models
+
+Harnessing Task Overload for Scalable Jailbreak Attacks on Large Language Models
+
+Recent Advances in Attack and Defense Approaches of Large Language Models
+
+Differentially Private Attention Computation
+
+SecMoE: Communication-Efficient Secure MoE Inference via Select-Then-Compute
+
+Training Production Language Models without Memorizing User Data
+
+A Differential Privacy-Based Mechanism for Preventing Data Leakage in Large Language Model Training
+
+Can Federated Learning Safeguard Private Data in LLM Training? Vulnerabilities, Attacks, and Defense Evaluation
+
+GNNBleed: Inference Attacks to Unveil Private Edges in Graphs with Realistic Access to GNN Models
+
+Quantifying Privacy Risks of Masked Language Models Using Membership Inference Attacks
+
+Exploiting the Vulnerability of Large Language Models via Defense-Aware Architectural Backdoor
+
+SLIP-SEC: Formalizing Secure Protocols for Model IP Protection
+
+nGraph-HE2: A High-Throughput Framework for Neural Network Inference on
+  Encrypted Data
+
+PRISM: Privacy-Aware Routing for Adaptive Cloud-Edge LLM Inference via Semantic Sketch Collaboration
+
+Differentially Private Decoding in Large Language Models
+
+Towards Practical Privacy-Preserving Solution for Outsourced Neural
+  Network Inference
+
+Efficient TinyML Architectures for On-Device Small Language Models: Privacy-Preserving Inference at the Edge
+
+DP-Forward: Fine-tuning and Inference on Language Models with Differential Privacy in Forward Pass
+
+Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs
+
+Enabling Homomorphically Encrypted Inference for Large DNN Models
+
+Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities
+
+PrivGNN: High-Performance Secure Inference for Cryptographic Graph Neural Networks
+
+Biases in Edge Language Models: Detection, Analysis, and Mitigation
+
+Prompt Inversion Attack Against Collaborative Inference of Large Language Models
+
+Shadow in the Cache: Unveiling and Mitigating Privacy Risks of KV-cache in LLM Inference
+
+Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding
+
+Unveiling the Misuse Potential of Base Large Language Models via In-Context Learning
+
+TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers
+
+AVEC: Bootstrapping Privacy for Local LLMs
+
+Argus: Token Aware Distributed LLM Inference Optimization
+
+Applications and Use Cases
+['This section presents various applications and use cases of Network Edge Inference for Large Language Models, highlighting their benefits and challenges.', '1. Discussion on the application of Large Language Models in edge computing scenarios, such as smart homes, autonomous vehicles, and healthcare devices.', '2. Examination of the use cases for Network Edge Inference in natural language processing tasks, such as language translation, sentiment analysis, and text summarization.', '3. Introduction to the potential of Network Edge Inference in enabling new services and applications, such as edge-based virtual assistants and augmented reality experiences.']
+
+Token Level Routing Inference System for Edge Devices
+
+TinyLLM: A Framework for Training and Deploying Language Models at the Edge Computers
+
+Poster: Could Large Language Models Perform Network Management?
+
+Distributed Inference Performance Optimization for LLMs on CPUs
+
+Distributed Inference and Fine-tuning of Large Language Models Over The Internet
+
+The Role of Large Language Models in Designing Reliable Networks for Internet of Things: A Short Review of Most Recent Developments
+
+Leveraging Uncertainty Estimation for Efficient LLM Routing
+
+Measuring and Improving the Energy Efficiency of Large Language Models Inference
+
+Joint Label Inference in Networks
+
+Unlocking the Path Towards AI-Native Networks with Optimized Lightweight Large Language Models
+
+Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling
+
+An Architecture for Accelerated Large-Scale Inference of Transformer-Based Language Models
+
+Fast and Cost-effective Speculative Edge-Cloud Decoding with Early Exits
+
+Revisiting the Graph Reasoning Ability of Large Language Models: Case Studies in Translation, Connectivity and Shortest Path
+
+On-Device Language Models: A Comprehensive Review
+
+Towards Coarse-to-Fine Evaluation of Inference Efficiency for Large Language Models
+
+StoreLLM: Energy Efficient Large Language Model Inference with Permanently Pre-stored Attention Matrices
+
+HyperVL: An Efficient and Dynamic Multimodal Large Language Model for Edge Devices
+
+Large Language Models Meet Next-Generation Networking Technologies: A Review
+
+EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference
+
+Efficient LLM Inference over Heterogeneous Edge Networks with Speculative Decoding
+
+Poster: Scaling Up Deep Neural Network optimization for Edge Inference†
+
+Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices
+
+Leveraging Large Language Models to Contextualize Network Measurements
+
+Decentralized LLM Inference over Edge Networks with Energy Harvesting
+
+PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing
+
+A Systematic Characterization of LLM Inference on GPUs
+
+Beyond Text: A Deep Dive into Large Language Models' Ability on Understanding Graph Data
+
+Large Language Model Routing with Benchmark Datasets
+
+Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU
+
+PRISM: Privacy-Aware Routing for Adaptive Cloud-Edge LLM Inference via Semantic Sketch Collaboration
+
+Large Language Models for Graphs: Progresses and Directions
+
+Constraint-Compliant Network Optimization through Large Language Models
+
+Scale-Free Graph-Language Models
+
+PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services
+
+Argus: Token Aware Distributed LLM Inference Optimization
+
+Collaborative Large Language Model Inference via Resource-Aware Parallel Speculative Decoding
+
+EmbedLLM: Learning Compact Representations of Large Language Models
+
+Communication-Efficient Distributed On-Device LLM Inference Over Wireless Networks
+
+Collaborative Edge-to-Server Inference for Vision-Language Models
+
+Large Language Models for Networking: Applications, Enabling Techniques, and Challenges
+
+DILEMMA: Joint LLM Quantization and Distributed LLM Inference Over Edge Computing Systems
+
+Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges
+
+Introducing Large Language Models as the Next Challenging Internet Traffic Source
+
+Edgeformers: Graph-Empowered Transformers for Representation Learning on Textual-Edge Networks
+
+WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching
+
+INFERENCEDYNAMICS: Efficient Routing Across LLMs through Structured Capability and Knowledge Profiling
+
+Adaptive Layer Splitting for Wireless LLM Inference in Edge Computing: A Model-Based Reinforcement Learning Approach
+
+Toward Sustainability-Aware LLM Inference on Edge Clusters
+
+Sentinels of the Stream: Unleashing Large Language Models for Dynamic Packet Classification in Software Defined Networks - Position Paper
+

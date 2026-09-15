@@ -1,0 +1,729 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **Alignment of Diffusion Models**.
+
+You have created the following overall outline:
+---
+Title: A Comprehensive Survey on Alignment of Diffusion Models
+
+Section 1: Introduction
+Description 1: This section introduces the fundamental concepts of diffusion models, their applications, and the importance of alignment in these models. It sets the stage for understanding the complexities and challenges associated with aligning diffusion models.
+1. Definition and basic principles of diffusion models, including their forward and reverse processes, and their applications in image and text generation.
+2. Overview of the challenges and limitations in achieving alignment in diffusion models, including the complexity of human preferences and the risk of misalignment.
+3. Introduction to the concept of alignment in diffusion models, including its significance for improving model performance and generating realistic outputs.
+
+Section 2: Foundations of Alignment in Diffusion Models
+Description 2: This section delves into the theoretical foundations of alignment in diffusion models, covering the mathematical formulations and key techniques used to achieve alignment.
+1. Mathematical background of diffusion models, including score-based models and denoising diffusion processes, and their role in alignment.
+2. Discussion on the importance of noise schedules and their impact on the alignment of generated samples.
+3. Introduction to guidance methods, such as classifier-free guidance, and their role in enhancing alignment.
+
+Section 3: Methods for Aligning Diffusion Models
+Description 3: This section presents various methods and techniques developed for aligning diffusion models with specific preferences or criteria, including classifier-free guidance, reinforcement learning from human feedback, and preference-based optimization.
+1. Classifier-free guidance and its variants for controlling the generation process without explicit classification.
+2. Reinforcement learning from human feedback for aligning models with human preferences and values.
+3. Preference-based optimization methods for incorporating user preferences into the generation process.
+
+Section 4: Applications of Aligned Diffusion Models
+Description 4: This section explores the various applications of aligned diffusion models, focusing on their ability to generate high-quality, realistic data that meets specific criteria or conditions.
+1. Text-to-image synthesis and the role of alignment in generating images that accurately reflect the input text.
+2. Image editing and manipulation using aligned diffusion models, including applications in graphics and design.
+3. Generation of realistic text and dialogue, leveraging alignment to ensure coherence and contextuality.
+
+Section 5: Evaluation and Comparison of Alignment Methods
+Description 5: This section focuses on the evaluation and comparison of different alignment methods for diffusion models, highlighting the strengths and weaknesses of various approaches.
+1. Overview of metrics used to evaluate alignment, including quantitative and qualitative assessments.
+2. Comparison of different guidance methods and their effectiveness in various applications.
+3. Discussion on the importance of benchmarking and the development of standardized evaluation protocols for aligned diffusion models.
+
+Section 6: Challenges and Limitations of Alignment in Diffusion Models
+Description 6: This section discusses the challenges and limitations encountered when aligning diffusion models, including issues related to mode collapse, training instability, and evaluation metrics.
+1. Mode collapse and its impact on the diversity of generated samples, along with strategies to mitigate this issue.
+2. Training instability and methods to stabilize the training process of diffusion models.
+3. Challenges in evaluating the alignment and quality of generated samples, including the development of appropriate metrics.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing the key findings and highlighting potential gaps and future research directions in the field of alignment of diffusion models.
+1. Summary of key findings and takeaways from the survey, emphasizing the importance of alignment in diffusion models.
+2. Potential gaps in current research, including the need for more theoretical foundations and ethical considerations.
+3. Future research directions and potential areas of investigation, including the development of more efficient optimization methods and the exploration of new applications.
+---
+
+You need to enrich the section **Challenges and Limitations of Alignment in Diffusion Models**, described as: **This section discusses the challenges and limitations encountered when aligning diffusion models, including issues related to mode collapse, training instability, and evaluation metrics.
+1. Mode collapse and its impact on the diversity of generated samples, along with strategies to mitigate this issue.
+2. Training instability and methods to stabilize the training process of diffusion models.
+3. Challenges in evaluating the alignment and quality of generated samples, including the development of appropriate metrics.**
+
+**Main task:**
+Generate a comprehensive framework for **Challenges and Limitations of Alignment in Diffusion Models** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: On the Equivalence of Consistency-Type Models: Consistency Models, Consistent Diffusion Models, and Fokker-Planck Regularization
+
+publish_date: 2023-01-01
+
+paper_content:
+
+The emergence of various notions of ``consistency'' in diffusion models has garnered considerable attention and helped achieve improved sample quality, likelihood estimation, and accelerated sampling. Although similar concepts have been proposed in the literature, the precise relationships among them remain unclear. In this study, we establish theoretical connections between three recent ``consistency'' notions designed to enhance diffusion models for distinct objectives. Our insights offer the potential for a more comprehensive and encompassing framework for consistency-type models.
+---
+paper_title: On the Essence and Prospect: An Investigation of Alignment Approaches for Big Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Big models have achieved revolutionary breakthroughs in the field of AI, but they might also pose potential concerns. Addressing such concerns, alignment technologies were introduced to make these models conform to human preferences and values. Despite considerable advancements in the past year, various challenges lie in establishing the optimal alignment strategy, such as data cost and scalable oversight, and how to align remains an open question. In this survey paper, we comprehensively investigate value alignment approaches. We first unpack the historical context of alignment tracing back to the 1920s (where it comes from), then delve into the mathematical essence of alignment (what it is), shedding light on the inherent challenges. Following this foundation, we provide a detailed examination of existing alignment methods, which fall into three categories: Reinforcement Learning, Supervised Fine-Tuning, and In-context Learning, and demonstrate their intrinsic connections, strengths, and limitations, helping readers better understand this research area. In addition, two emerging topics, personal alignment, and multimodal alignment, are also discussed as novel frontiers in this field. Looking forward, we discuss potential alignment paradigms and how they could handle remaining challenges, prospecting where future alignment will go.
+---
+paper_title: Learning Diffusion Models with Flexible Representation Guidance
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models can be improved with additional guidance towards more effective representations of input. Indeed, prior empirical work has already shown that aligning internal representations of the diffusion model with those of pre-trained models improves generation quality. In this paper, we present a systematic framework for incorporating representation guidance into diffusion models. We provide alternative decompositions of denoising models along with their associated training criteria, where the decompositions determine when and how the auxiliary representations are incorporated. Guided by our theoretical insights, we introduce two new strategies for enhancing representation alignment in diffusion models. First, we pair examples with target representations either derived from themselves or arisen from different synthetic modalities, and subsequently learn a joint model over the multimodal pairs. Second, we design an optimal training curriculum that balances representation learning and data generation. Our experiments across image, protein sequence, and molecule generation tasks demonstrate superior performance as well as accelerated training. In particular, on the class-conditional ImageNet $256\times 256$ benchmark, our guidance results in $23.3$ times faster training than the original SiT-XL as well as four times speedup over the state-of-the-art method REPA. The code is available at https://github.com/ChenyuWang-Monica/REED.
+---
+paper_title: An Analysis of Human Alignment of Latent Diffusion Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Diffusion models, trained on large amounts of data, showed remarkable performance for image synthesis. They have high error consistency with humans and low texture bias when used for classification. Furthermore, prior work demonstrated the decomposability of their bottleneck layer representations into semantic directions. In this work, we analyze how well such representations are aligned to human responses on a triplet odd-one-out task. We find that despite the aforementioned observations: I) The representational alignment with humans is comparable to that of models trained only on ImageNet-1k. II) The most aligned layers of the denoiser U-Net are intermediate layers and not the bottleneck. III) Text conditioning greatly improves alignment at high noise levels, hinting at the importance of abstract textual information, especially in the early stage of generation.
+---
+paper_title: Discrete State Diffusion Models: A Sample Complexity Perspective
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have demonstrated remarkable performance in generating high-dimensional samples across domains such as vision, language, and the sciences. Although continuous-state diffusion models have been extensively studied both empirically and theoretically, discrete-state diffusion models, essential for applications involving text, sequences, and combinatorial structures, remain significantly less understood from a theoretical standpoint. In particular, all existing analyses of discrete-state models assume score estimation error bounds without studying sample complexity results. In this work, we present a principled theoretical framework for discrete-state diffusion, providing the first sample complexity bound of $\widetilde{\mathcal{O}}(ε^{-2})$. Our structured decomposition of the score estimation error into statistical, approximation, optimization, and clipping components offers critical insights into how discrete-state models can be trained efficiently. This analysis addresses a fundamental gap in the literature and establishes the theoretical tractability and practical relevance of discrete-state diffusion models.
+---
+paper_title: Training-free Diffusion Model Alignment with Sampling Demons
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Aligning diffusion models with user preferences has been a key challenge. Existing methods for aligning diffusion models either require retraining or are limited to differentiable reward functions. To address these limitations, we propose a stochastic optimization approach, dubbed Demon, to guide the denoising process at inference time without backpropagation through reward functions or model retraining. Our approach works by controlling noise distribution in denoising steps to concentrate density on regions corresponding to high rewards through stochastic optimization. We provide comprehensive theoretical and empirical evidence to support and validate our approach, including experiments that use non-differentiable sources of rewards such as Visual-Language Model (VLM) APIs and human judgements. To the best of our knowledge, the proposed approach is the first inference-time, backpropagation-free preference alignment method for diffusion models. Our method can be easily integrated with existing diffusion models without further training. Our experiments show that the proposed approach significantly improves the average aesthetics scores for text-to-image generation. Implementation is available at https://github.com/aiiu-lab/DemonSampling.
+---
+paper_title: Efficient Diversity-Preserving Diffusion Alignment via Gradient-Informed GFlowNets
+
+publish_date: 2024-01-01
+
+paper_content:
+
+While one commonly trains large diffusion models by collecting datasets on target downstream tasks, it is often desired to align and finetune pretrained diffusion models with some reward functions that are either designed by experts or learned from small-scale datasets. Existing post-training methods for reward finetuning of diffusion models typically suffer from lack of diversity in generated samples, lack of prior preservation, and/or slow convergence in finetuning. In response to this challenge, we take inspiration from recent successes in generative flow networks (GFlowNets) and propose a reinforcement learning method for diffusion model finetuning, dubbed Nabla-GFlowNet (abbreviated as $\nabla$-GFlowNet), that leverages the rich signal in reward gradients for probabilistic diffusion finetuning. We show that our proposed method achieves fast yet diversity- and prior-preserving finetuning of Stable Diffusion, a large-scale text-conditioned image diffusion model, on different realistic reward functions.
+---
+paper_title: Diffusion Alignment as Variational Expectation-Maximization
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion alignment aims to optimize diffusion models for the downstream objective. While existing methods based on reinforcement learning or direct backpropagation achieve considerable success in maximizing rewards, they often suffer from reward over-optimization and mode collapse. We introduce Diffusion Alignment as Variational Expectation-Maximization (DAV), a framework that formulates diffusion alignment as an iterative process alternating between two complementary phases: the E-step and the M-step. In the E-step, we employ test-time search to generate diverse and reward-aligned samples. In the M-step, we refine the diffusion model using samples discovered by the E-step. We demonstrate that DAV can optimize reward while preserving diversity for both continuous and discrete tasks: text-to-image synthesis and DNA sequence design.
+---
+paper_title: Diagnosing and Improving Diffusion Models by Estimating the Optimal Loss Value
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have achieved remarkable success in generative modeling. Despite more stable training, the loss of diffusion models is not indicative of absolute data-fitting quality, since its optimal value is typically not zero but unknown, leading to confusion between large optimal loss and insufficient model capacity. In this work, we advocate the need to estimate the optimal loss value for diagnosing and improving diffusion models. We first derive the optimal loss in closed form under a unified formulation of diffusion models, and develop effective estimators for it, including a stochastic variant scalable to large datasets with proper control of variance and bias. With this tool, we unlock the inherent metric for diagnosing the training quality of mainstream diffusion model variants, and develop a more performant training schedule based on the optimal loss. Moreover, using models with 120M to 1.5B parameters, we find that the power law is better demonstrated after subtracting the optimal loss from the actual training loss, suggesting a more principled setting for investigating the scaling law for diffusion models.
+---
+paper_title: Diffusion Rejection Sampling
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recent advances in powerful pre-trained diffusion models encourage the development of methods to improve the sampling performance under well-trained diffusion models. This paper introduces Diffusion Rejection Sampling (DiffRS), which uses a rejection sampling scheme that aligns the sampling transition kernels with the true ones at each timestep. The proposed method can be viewed as a mechanism that evaluates the quality of samples at each intermediate timestep and refines them with varying effort depending on the sample. Theoretical analysis shows that DiffRS can achieve a tighter bound on sampling error compared to pre-trained models. Empirical results demonstrate the state-of-the-art performance of DiffRS on the benchmark datasets and the effectiveness of DiffRS for fast diffusion samplers and large-scale text-to-image diffusion models. Our code is available at https://github.com/aailabkaist/DiffRS.
+---
+paper_title: Towards Faster Training of Diffusion Models: An Inspiration of A Consistency Phenomenon
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Diffusion models (DMs) are a powerful generative framework that have attracted significant attention in recent years. However, the high computational cost of training DMs limits their practical applications. In this paper, we start with a consistency phenomenon of DMs: we observe that DMs with different initializations or even different architectures can produce very similar outputs given the same noise inputs, which is rare in other generative models. We attribute this phenomenon to two factors: (1) the learning difficulty of DMs is lower when the noise-prediction diffusion model approaches the upper bound of the timestep (the input becomes pure noise), where the structural information of the output is usually generated; and (2) the loss landscape of DMs is highly smooth, which implies that the model tends to converge to similar local minima and exhibit similar behavior patterns. This finding not only reveals the stability of DMs, but also inspires us to devise two strategies to accelerate the training of DMs. First, we propose a curriculum learning based timestep schedule, which leverages the noise rate as an explicit indicator of the learning difficulty and gradually reduces the training frequency of easier timesteps, thus improving the training efficiency. Second, we propose a momentum decay strategy, which reduces the momentum coefficient during the optimization process, as the large momentum may hinder the convergence speed and cause oscillations due to the smoothness of the loss landscape. We demonstrate the effectiveness of our proposed strategies on various models and show that they can significantly reduce the training time and improve the quality of the generated images.
+---
+paper_title: Likelihood-Based Diffusion Language Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Despite a growing interest in diffusion-based language models, existing work has not shown that these models can attain nontrivial likelihoods on standard language modeling benchmarks. In this work, we take the first steps towards closing the likelihood gap between autoregressive and diffusion-based language models, with the goal of building and releasing a diffusion model which outperforms a small but widely-known autoregressive model. We pursue this goal through algorithmic improvements, scaling laws, and increased compute. On the algorithmic front, we introduce several methodological improvements for the maximum-likelihood training of diffusion language models. We then study scaling laws for our diffusion models and find compute-optimal training regimes which differ substantially from autoregressive models. Using our methods and scaling analysis, we train and release Plaid 1B, a large diffusion language model which outperforms GPT-2 124M in likelihood on benchmark datasets and generates fluent samples in unconditional and zero-shot control settings.
+---
+paper_title: Opportunities and challenges of diffusion models for generative AI
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:title>ABSTRACT</jats:title>
+               <jats:p>Diffusion models, a powerful and universal generative artificial intelligence technology, have achieved tremendous success and opened up new possibilities in diverse applications. In these applications, diffusion models provide flexible high-dimensional data modeling, and act as a sampler for generating new samples under active control towards task-desired properties. Despite the significant empirical success, theoretical underpinnings of diffusion models are very limited, potentially slowing down principled methodological innovations for further harnessing and improving diffusion models. In this paper, we review emerging applications of diffusion models to highlight their sample generation capabilities under various control goals. At the same time, we dive into the unique working flow of diffusion models through the lens of stochastic processes. We identify theoretical challenges in analyzing diffusion models, owing to their complicated training procedure and interaction with the underlying data distribution. To address these challenges, we overview several promising advances, demonstrating diffusion models as an efficient distribution learner and a sampler. Furthermore, we introduce a new avenue in high-dimensional structured optimization through diffusion models, where searching for solutions is reformulated as a conditional sampling problem and solved by diffusion models. Lastly, we discuss future directions about diffusion models. The purpose of this paper is to provide a well-rounded exposure for stimulating forward-looking theories and methods of diffusion models.</jats:p>
+---
+paper_title: Diffusion-Sharpening: Fine-tuning Diffusion Models with Denoising Trajectory Sharpening
+
+publish_date: 2025-01-01
+
+paper_content:
+
+We propose Diffusion-Sharpening, a fine-tuning approach that enhances downstream alignment by optimizing sampling trajectories. Existing RL-based fine-tuning methods focus on single training timesteps and neglect trajectory-level alignment, while recent sampling trajectory optimization methods incur significant inference NFE costs. Diffusion-Sharpening overcomes this by using a path integral framework to select optimal trajectories during training, leveraging reward feedback, and amortizing inference costs. Our method demonstrates superior training efficiency with faster convergence, and best inference efficiency without requiring additional NFEs. Extensive experiments show that Diffusion-Sharpening outperforms RL-based fine-tuning methods (e.g., Diffusion-DPO) and sampling trajectory optimization methods (e.g., Inference Scaling) across diverse metrics including text alignment, compositional capabilities, and human preferences, offering a scalable and efficient solution for future diffusion model fine-tuning. Code: https://github.com/Gen-Verse/Diffusion-Sharpening
+---
+paper_title: Efficient Integrators for Diffusion Generative Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Diffusion models suffer from slow sample generation at inference time. Therefore, developing a principled framework for fast deterministic/stochastic sampling for a broader class of diffusion models is a promising direction. We propose two complementary frameworks for accelerating sample generation in pre-trained models: Conjugate Integrators and Splitting Integrators. Conjugate integrators generalize DDIM, mapping the reverse diffusion dynamics to a more amenable space for sampling. In contrast, splitting-based integrators, commonly used in molecular dynamics, reduce the numerical simulation error by cleverly alternating between numerical updates involving the data and auxiliary variables. After extensively studying these methods empirically and theoretically, we present a hybrid method that leads to the best-reported performance for diffusion models in augmented spaces. Applied to Phase Space Langevin Diffusion [Pandey &amp; Mandt, 2023] on CIFAR-10, our deterministic and stochastic samplers achieve FID scores of 2.11 and 2.36 in only 100 network function evaluations (NFE) as compared to 2.57 and 2.63 for the best-performing baselines, respectively. Our code and model checkpoints will be made publicly available at \url{https://github.com/mandt-lab/PSLD}.
+---
+paper_title: Understanding Diffusion Models via Code Execution
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have achieved remarkable performance in generative modeling, yet their theoretical foundations are often intricate, and the gap between mathematical formulations in papers and practical open-source implementations can be difficult to bridge. Existing tutorials primarily focus on deriving equations, offering limited guidance on how diffusion models actually operate in code. To address this, we present a concise implementation of approximately 300 lines that explains diffusion models from a code-execution perspective. Our minimal example preserves the essential components -- including forward diffusion, reverse sampling, the noise-prediction network, and the training loop -- while removing unnecessary engineering details. This technical report aims to provide researchers with a clear, implementation-first understanding of how diffusion models work in practice and how code and theory correspond. Our code and pre-trained models are available at: https://github.com/disanda/GM/tree/main/DDPM-DDIM-ClassifierFree.
+---
+paper_title: Nonlinear Dimensionality Reduction with Diffusion Maps in Practice
+
+publish_date: 2026-01-01
+
+paper_content:
+
+Diffusion Map is a spectral dimensionality reduction technique which is able to uncover nonlinear submanifolds in high-dimensional data. And, it is increasingly applied across a wide range of scientific disciplines, such as biology, engineering, and social sciences. But data preprocessing, parameter settings and component selection have a significant influence on the resulting manifold, something which has not been comprehensively discussed in the literature so far. We provide a practice oriented review of the Diffusion Map technique, illustrate pitfalls and showcase a recently introduced technique for identifying the most relevant components. Our results show that the first components are not necessarily the most relevant ones.
+---
+paper_title: Improving Long-Text Alignment for Text-to-Image Diffusion Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The rapid advancement of text-to-image (T2I) diffusion models has enabled them to generate unprecedented results from given texts. However, as text inputs become longer, existing encoding methods like CLIP face limitations, and aligning the generated images with long texts becomes challenging. To tackle these issues, we propose LongAlign, which includes a segment-level encoding method for processing long texts and a decomposed preference optimization method for effective alignment training. For segment-level encoding, long texts are divided into multiple segments and processed separately. This method overcomes the maximum input length limits of pretrained encoding models. For preference optimization, we provide decomposed CLIP-based preference models to fine-tune diffusion models. Specifically, to utilize CLIP-based preference models for T2I alignment, we delve into their scoring mechanisms and find that the preference scores can be decomposed into two components: a text-relevant part that measures T2I alignment and a text-irrelevant part that assesses other visual aspects of human preference. Additionally, we find that the text-irrelevant part contributes to a common overfitting problem during fine-tuning. To address this, we propose a reweighting strategy that assigns different weights to these two components, thereby reducing overfitting and enhancing alignment. After fine-tuning $512 \times 512$ Stable Diffusion (SD) v1.5 for about 20 hours using our method, the fine-tuned SD outperforms stronger foundation models in T2I alignment, such as PixArt-$α$ and Kandinsky v2.2. The code is available at https://github.com/luping-liu/LongAlign.
+---
+paper_title: Smoothed Preference Optimization via ReNoise Inversion for Aligning Diffusion Models with Varied Human Preferences
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Direct Preference Optimization (DPO) aligns text-to-image (T2I) generation models with human preferences using pairwise preference data. Although substantial resources are expended in collecting and labeling datasets, a critical aspect is often neglected: \textit{preferences vary across individuals and should be represented with more granularity.} To address this, we propose SmPO-Diffusion, a novel method for modeling preference distributions to improve the DPO objective, along with a numerical upper bound estimation for the diffusion optimization objective. First, we introduce a smoothed preference distribution to replace the original binary distribution. We employ a reward model to simulate human preferences and apply preference likelihood averaging to improve the DPO loss, such that the loss function approaches zero when preferences are similar. Furthermore, we utilize an inversion technique to simulate the trajectory preference distribution of the diffusion model, enabling more accurate alignment with the optimization objective. Our approach effectively mitigates issues of excessive optimization and objective misalignment present in existing methods through straightforward modifications. Our SmPO-Diffusion achieves state-of-the-art performance in preference evaluation, outperforming baselines across metrics with lower training costs. The project page is https://jaydenlyh.github.io/SmPO-project-page/.
+---
+paper_title: Inference-Time Alignment Control for Diffusion Models with Reinforcement Learning Guidance
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Denoising-based generative models, particularly diffusion and flow matching algorithms, have achieved remarkable success. However, aligning their output distributions with complex downstream objectives, such as human preferences, compositional accuracy, or data compressibility, remains challenging. While reinforcement learning (RL) fine-tuning methods, inspired by advances in RL from human feedback (RLHF) for large language models, have been adapted to these generative frameworks, current RL approaches are suboptimal for diffusion models and offer limited flexibility in controlling alignment strength after fine-tuning. In this work, we reinterpret RL fine-tuning for diffusion models through the lens of stochastic differential equations and implicit reward conditioning. We introduce Reinforcement Learning Guidance (RLG), an inference-time method that adapts Classifier-Free Guidance (CFG) by combining the outputs of the base and RL fine-tuned models via a geometric average. Our theoretical analysis shows that RLG's guidance scale is mathematically equivalent to adjusting the KL-regularization coefficient in standard RL objectives, enabling dynamic control over the alignment-quality trade-off without further training. Extensive experiments demonstrate that RLG consistently improves the performance of RL fine-tuned models across various architectures, RL algorithms, and downstream tasks, including human preferences, compositional control, compressibility, and text rendering. Furthermore, RLG supports both interpolation and extrapolation, thereby offering unprecedented flexibility in controlling generative alignment. Our approach provides a practical and theoretically sound solution for enhancing and controlling diffusion model alignment at inference. The source code for RLG is publicly available at the Github: https://github.com/jinluo12345/Reinforcement-learning-guidance.
+---
+paper_title: Loss Functions in Diffusion Models: A Comparative Study
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have emerged as powerful generative models, inspiring extensive research into their underlying mechanisms. One of the key questions in this area is the loss functions these models shall train with. Multiple formulations have been introduced in the literature over the past several years with some links and some critical differences stemming from various initial considerations. In this paper, we explore the different target objectives and corresponding loss functions in detail. We present a systematic overview of their relationships, unifying them under the framework of the variational lower bound objective. We complement this theoretical analysis with an empirical study providing insights into the conditions under which these objectives diverge in performance and the underlying factors contributing to such deviations. Additionally, we evaluate how the choice of objective impacts the model ability to achieve specific goals, such as generating high-quality samples or accurately estimating likelihoods. This study offers a unified understanding of loss functions in diffusion models, contributing to more efficient and goal-oriented model designs in future research.
+---
+paper_title: Consistency Models Made Easy
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Consistency models (CMs) offer faster sampling than traditional diffusion models, but their training is resource-intensive. For example, as of 2024, training a state-of-the-art CM on CIFAR-10 takes one week on 8 GPUs. In this work, we propose an effective scheme for training CMs that largely improves the efficiency of building such models. Specifically, by expressing CM trajectories via a particular differential equation, we argue that diffusion models can be viewed as a special case of CMs. We can thus fine-tune a consistency model starting from a pretrained diffusion model and progressively approximate the full consistency condition to stronger degrees over the training process. Our resulting method, which we term Easy Consistency Tuning (ECT), achieves vastly reduced training times while improving upon the quality of previous methods: for example, ECT achieves a 2-step FID of 2.73 on CIFAR10 within 1 hour on a single A100 GPU, matching Consistency Distillation trained for hundreds of GPU hours. Owing to this computational efficiency, we investigate the scaling laws of CMs under ECT, showing that they obey the classic power law scaling, hinting at their ability to improve efficiency and performance at larger scales. Our code (https://github.com/locuslab/ect) is publicly available, making CMs more accessible to the broader community.
+---
+paper_title: ETC: training-free diffusion models acceleration with Error-aware Trend Consistency
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have achieved remarkable generative quality but remain bottlenecked by costly iterative sampling. Recent training-free methods accelerate diffusion process by reusing model outputs. However, these methods ignore denoising trends and lack error control for model-specific tolerance, leading to trajectory deviations under multi-step reuse and exacerbating inconsistencies in the generated results. To address these issues, we introduce Error-aware Trend Consistency (ETC), a framework that (1) introduces a consistent trend predictor that leverages the smooth continuity of diffusion trajectories, projecting historical denoising patterns into stable future directions and progressively distributing them across multiple approximation steps to achieve acceleration without deviating; (2) proposes a model-specific error tolerance search mechanism that derives corrective thresholds by identifying transition points from volatile semantic planning to stable quality refinement. Experiments show that ETC achieves a 2.65x acceleration over FLUX with negligible (-0.074 SSIM score) degradation of consistency.
+---
+paper_title: Sensitivity Analysis for Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Training a diffusion model approximates a map from a data distribution $ρ$ to the optimal score function $s_t$ for that distribution. Can we differentiate this map? If we could, then we could predict how the score, and ultimately the model's samples, would change under small perturbations to the training set before committing to costly retraining. We give a closed-form procedure for computing this map's directional derivatives, relying only on black-box access to a pre-trained score model and its derivatives with respect to its inputs. We extend this result to estimate the sensitivity of a diffusion model's samples to additive perturbations of its target measure, with runtime comparable to sampling from a diffusion model and computing log-likelihoods along the sample path. Our method is robust to numerical and approximation error, and the resulting sensitivities correlate with changes in an image diffusion model's samples after retraining and fine-tuning.
+---
+paper_title: Bias Begets Bias: The Impact of Biased Embeddings on Diffusion Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+With the growing adoption of Text-to-Image (TTI) systems, the social biases of these models have come under increased scrutiny. Herein we conduct a systematic investigation of one such source of bias for diffusion models: embedding spaces. First, because traditional classifier-based fairness definitions require true labels not present in generative modeling, we propose statistical group fairness criteria based on a model's internal representation of the world. Using these definitions, we demonstrate theoretically and empirically that an unbiased text embedding space for input prompts is a necessary condition for representationally balanced diffusion models, meaning the distribution of generated images satisfy diversity requirements with respect to protected attributes. Next, we investigate the impact of biased embeddings on evaluating the alignment between generated images and prompts, a process which is commonly used to assess diffusion models. We find that biased multimodal embeddings like CLIP can result in lower alignment scores for representationally balanced TTI models, thus rewarding unfair behavior. Finally, we develop a theoretical framework through which biases in alignment evaluation can be studied and propose bias mitigation methods. By specifically adapting the perspective of embedding spaces, we establish new fairness conditions for diffusion model development and evaluation.
+---
+paper_title: Provable Statistical Rates for Consistency Diffusion Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Diffusion models have revolutionized various application domains, including computer vision and audio generation. Despite the state-of-the-art performance, diffusion models are known for their slow sample generation due to the extensive number of steps involved. In response, consistency models have been developed to merge multiple steps in the sampling process, thereby significantly boosting the speed of sample generation without compromising quality. This paper contributes towards the first statistical theory for consistency models, formulating their training as a distribution discrepancy minimization problem. Our analysis yields statistical estimation rates based on the Wasserstein distance for consistency models, matching those of vanilla diffusion models. Additionally, our results encompass the training of consistency models through both distillation and isolation methods, demystifying their underlying advantage.
+---
+paper_title: On the Role of Discreteness in Diffusion LLMs
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models offer appealing properties for language generation, such as parallel decoding and iterative refinement, but the discrete and highly structured nature of text challenges the direct application of diffusion principles. In this paper, we revisit diffusion language modeling from the view of diffusion process and language modeling, and outline five properties that separate diffusion mechanics from language-specific requirements. We first categorize existing approaches into continuous diffusion in embedding space and discrete diffusion over tokens. We then show that each satisfies only part of the five essential properties and therefore reflects a structural trade-off. Through analyses of recent large diffusion language models, we identify two central issues: (i) uniform corruption does not respect how information is distributed across positions, and (ii) token-wise marginal training cannot capture multi-token dependencies during parallel decoding. These observations motivate diffusion processes that align more closely with the structure of text, and encourage future work toward more coherent diffusion language models.
+---
+paper_title: Improving Diffusion Model Efficiency Through Patching
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Diffusion models are a powerful class of generative models that iteratively denoise samples to produce data. While many works have focused on the number of iterations in this sampling procedure, few have focused on the cost of each iteration. We find that adding a simple ViT-style patching transformation can considerably reduce a diffusion model's sampling time and memory usage. We justify our approach both through an analysis of the diffusion model objective, and through empirical experiments on LSUN Church, ImageNet 256, and FFHQ 1024. We provide implementations in Tensorflow and Pytorch.
+---
+paper_title: Align Your Tangent: Training Better Consistency Models via Manifold-Aligned Tangents
+
+publish_date: 2025-01-01
+
+paper_content:
+
+With diffusion and flow matching models achieving state-of-the-art generating performance, the interest of the community now turned to reducing the inference time without sacrificing sample quality. Consistency Models (CMs), which are trained to be consistent on diffusion or probability flow ordinary differential equation (PF-ODE) trajectories, enable one or two-step flow or diffusion sampling. However, CMs typically require prolonged training with large batch sizes to obtain competitive sample quality. In this paper, we examine the training dynamics of CMs near convergence and discover that CM tangents -- CM output update directions -- are quite oscillatory, in the sense that they move parallel to the data manifold, not towards the manifold. To mitigate oscillatory tangents, we propose a new loss function, called the manifold feature distance (MFD), which provides manifold-aligned tangents that point toward the data manifold. Consequently, our method -- dubbed Align Your Tangent (AYT) -- can accelerate CM training by orders of magnitude and even out-perform the learned perceptual image patch similarity metric (LPIPS). Furthermore, we find that our loss enables training with extremely small batch sizes without compromising sample quality. Code: https://github.com/1202kbs/AYT
+---
+paper_title: Generation of Scale-Free Assortative Networks via Newman Rewiring for Simulation of Diffusion Phenomena
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>By collecting and expanding several numerical recipes developed in previous work, we implement an object-oriented Python code, based on the networkX library, for the realization of the configuration model and Newman rewiring. The software can be applied to any kind of network and “target” correlations, but it is tested with focus on scale-free networks and assortative correlations. In order to generate the degree sequence we use the method of “random hubs”, which gives networks with minimal fluctuations. For the assortative rewiring we use the simple Vazquez-Weigt matrix as a test in the case of random networks; since it does not appear to be effective in the case of scale-free networks, we subsequently turn to another recipe which generates matrices with decreasing off-diagonal elements. The rewiring procedure is also important at the theoretical level, in order to test which types of statistically acceptable correlations can actually be realized in concrete networks. From the point of view of applications, its main use is in the construction of correlated networks for the solution of dynamical or diffusion processes through an analysis of the evolution of single nodes, i.e., beyond the Heterogeneous Mean Field approximation. As an example, we report on an application to the Bass diffusion model, with calculations of the time tmax of the diffusion peak. The same networks can additionally be exported in environments for agent-based simulations like NetLogo.</jats:p>
+---
+paper_title: Cross-Frame Representation Alignment for Fine-Tuning Video Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Fine-tuning Video Diffusion Models (VDMs) at the user level to generate videos that reflect specific attributes of training data presents notable challenges, yet remains underexplored despite its practical importance. Meanwhile, recent work such as Representation Alignment (REPA) has shown promise in improving the convergence and quality of DiT-based image diffusion models by aligning, or assimilating, its internal hidden states with external pretrained visual features, suggesting its potential for VDM fine-tuning. In this work, we first propose a straightforward adaptation of REPA for VDMs and empirically show that, while effective for convergence, it is suboptimal in preserving semantic consistency across frames. To address this limitation, we introduce Cross-frame Representation Alignment (CREPA), a novel regularization technique that aligns hidden states of a frame with external features from neighboring frames. Empirical evaluations on large-scale VDMs, including CogVideoX-5B and Hunyuan Video, demonstrate that CREPA improves both visual fidelity and cross-frame semantic coherence when fine-tuned with parameter-efficient methods such as LoRA. We further validate CREPA across diverse datasets with varying attributes, confirming its broad applicability.
+---
+paper_title: Diffusion Blend: Inference-Time Multi-Preference Alignment for Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Reinforcement learning (RL) algorithms have been used recently to align diffusion models with downstream objectives such as aesthetic quality and text-image consistency by fine-tuning them to maximize a single reward function under a fixed KL regularization. However, this approach is inherently restrictive in practice, where alignment must balance multiple, often conflicting objectives. Moreover, user preferences vary across prompts, individuals, and deployment contexts, with varying tolerances for deviation from a pre-trained base model. We address the problem of inference-time multi-preference alignment: given a set of basis reward functions and a reference KL regularization strength, can we design a fine-tuning procedure so that, at inference time, it can generate images aligned with any user-specified linear combination of rewards and regularization, without requiring additional fine-tuning? We propose Diffusion Blend, a novel approach to solve inference-time multi-preference alignment by blending backward diffusion processes associated with fine-tuned models, and we instantiate this approach with two algorithms: DB-MPA for multi-reward alignment and DB-KLA for KL regularization control. Extensive experiments show that Diffusion Blend algorithms consistently outperform relevant baselines and closely match or exceed the performance of individually fine-tuned models, enabling efficient, user-driven alignment at inference-time. The code is available at https://github.com/bluewoods127/DB-2025}{github.com/bluewoods127/DB-2025.
+---
+paper_title: Matching the Optimal Denoiser in Point Cloud Diffusion with (Improved) Rotational Alignment
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models are a popular class of generative models trained to reverse a noising process starting from a target data distribution. Training a diffusion model consists of learning how to denoise noisy samples at different noise levels. When training diffusion models for point clouds such as molecules and proteins, there is often no canonical orientation that can be assigned. To capture this symmetry, the true data samples are often augmented by transforming them with random rotations sampled uniformly over $SO(3)$. Then, the denoised predictions are often rotationally aligned via the Kabsch-Umeyama algorithm to the ground truth samples before computing the loss. However, the effect of this alignment step has not been well studied. Here, we show that the optimal denoiser can be expressed in terms of a matrix Fisher distribution over $SO(3)$. Alignment corresponds to sampling the mode of this distribution, and turns out to be the zeroth order approximation for small noise levels, explaining its effectiveness. We build on this perspective to derive better approximators to the optimal denoiser in the limit of small noise. Our experiments highlight that alignment is often a `good enough' approximation for the noise levels that matter most for training diffusion models.
+---
+paper_title: PC-Diffusion: Aligning Diffusion Models with Human Preferences via Preference Classifier
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have achieved remarkable success in conditional image generation, yet their outputs often remain misaligned with human preferences. To address this, recent work has applied Direct Preference Optimization (DPO) to diffusion models, yielding significant improvements.~However, DPO-like methods exhibit two key limitations: 1) High computational cost,due to the entire model fine-tuning; 2) Sensitivity to reference model quality}, due to its tendency to introduce instability and bias. To overcome these limitations, we propose a novel framework for human preference alignment in diffusion models (PC-Diffusion), using a lightweight, trainable Preference Classifier that directly models the relative preference between samples. By restricting preference learning to this classifier, PC-Diffusion decouples preference alignment from the generative model, eliminating the need for entire model fine-tuning and reference model reliance.~We further provide theoretical guarantees for PC-Diffusion:1) PC-Diffusion ensures that the preference-guided distributions are consistently propagated across timesteps. 2)The training objective of the preference classifier is equivalent to DPO, but does not require a reference model.3) The proposed preference-guided correction can progressively steer generation toward preference-aligned regions.~Empirical results show that PC-Diffusion achieves comparable preference consistency to DPO while significantly reducing training costs and enabling efficient and stable preference-guided generation.
+---
+paper_title: Accelerating Diffusion-based Text-to-Speech Model Training with Dual Modality Alignment
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The goal of this paper is to optimize the training process of diffusion-based text-to-speech models. While recent studies have achieved remarkable advancements, their training demands substantial time and computational costs, largely due to the implicit guidance of diffusion models in learning complex intermediate representations. To address this, we propose A-DMA, an effective strategy for Accelerating training with Dual Modality Alignment. Our method introduces a novel alignment pipeline leveraging both text and speech modalities: text-guided alignment, which incorporates contextual representations, and speech-guided alignment, which refines semantic representations. By aligning hidden states with discriminative features, our training scheme reduces the reliance on diffusion models for learning complex representations. Extensive experiments demonstrate that A-DMA doubles the convergence speed while achieving superior performance over baselines. Code and demo samples are available at: https://github.com/ZhikangNiu/A-DMA
+---
+paper_title: Bringing Stability to Diffusion: Decomposing and Reducing Variance of Training Masked Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Masked diffusion models (MDMs) are a promising alternative to autoregressive models (ARMs), but they suffer from inherently much higher training variance. High variance leads to noisier gradient estimates and unstable optimization, so even equally strong pretrained MDMs and ARMs that are competitive at initialization often diverge after task-specific training, with MDMs falling far behind. There has been no theoretical explanation or systematic solution. We derive the first decomposition of MDM training variance into three sources: (A) masking pattern noise, (B) masking rate noise, and (C) data noise, while ARMs are only affected by (C). This explains the fundamental training gap. Building on this foundation, we design six variance-reduction methods, including two core methods: (1) P-POTS, a Pareto-optimal t sampler that minimizes training variance by sampling harder t values more often with appropriately smaller update steps, and (2) MIRROR, which uses negatively correlated samples to reduce (A). Experiments show that compared to standard MDM training, our methods improve accuracy by 7-8% on complex reasoning tasks, while simultaneously reducing run-to-run variability to near ARM levels, substantially narrowing the gap with strong ARM baselines; in most settings, even the best baseline runs remain below the worst run of our method.
+---
+paper_title: Evaluation and Comparison of Diffusion Models with Motif Features
+
+publish_date: 2020-01-01
+
+paper_content:
+
+Diffusion models simulate the propagation of influence in networks. The design and evaluation of diffusion models has been subjective and empirical. When being applied to a network represented by a graph, the diffusion model generates a sequence of edges on which the influence flows, such sequence forms a temporal network. In most scenarios, the statistical properties or the characteristics of a network are inferred by analyzing the temporal networks generated by diffusion models. To analyze real temporal networks, the motif has been proposed as a reliable feature. However, it is unclear how the network topology and the diffusion model affect the motif feature of a generated temporal network. In this paper, we adopt the motif feature to evaluate the temporal graph generated by a diffusion model, thence the diffusion model itself. Two benchmarks for quantitively evaluating diffusion models with motif, stability and separability, are proposed and measured on numerous diffusion models. One motif-based metric is proposed to measure the similarity between diffusion models. The experiments suggest that the motif of a generated temporal network is dominated by the diffusion model, while the network topology is almost ignored. This result indicates that more practical and reliable diffusion models have to be designed with delicacy in order to capture the propagation patterns of real temporal networks.
+---
+paper_title: D3PO: Preference-Based Alignment of Discrete Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models have achieved state-of-the-art performance across multiple domains, with recent advancements extending their applicability to discrete data. However, aligning discrete diffusion models with task-specific preferences remains challenging, particularly in scenarios where explicit reward functions are unavailable. In this work, we introduce Discrete Diffusion DPO (D2-DPO), the first adaptation of Direct Preference Optimization (DPO) to discrete diffusion models formulated as continuous-time Markov chains. Our approach derives a novel loss function that directly fine-tunes the generative process using preference data while preserving fidelity to a reference distribution. We validate D2-DPO on a structured binary sequence generation task, demonstrating that the method effectively aligns model outputs with preferences while maintaining structural validity. Our results highlight that D2-DPO enables controlled fine-tuning without requiring explicit reward models, making it a practical alternative to reinforcement learning-based approaches. Future research will explore extending D2-DPO to more complex generative tasks, including language modeling and protein sequence generation, as well as investigating alternative noise schedules, such as uniform noising, to enhance flexibility across different applications.
+---
+paper_title: Predict-Project-Renoise: Sampling Diffusion Models under Hard Constraints
+
+publish_date: 2026-01-01
+
+paper_content:
+
+Neural emulators based on diffusion models show promise for scientific applications, but vanilla models cannot guarantee physical accuracy or constraint satisfaction. We address this by introducing a constrained sampling framework that enforces hard constraints, such as physical laws or observational consistency, at generation time. Our approach defines a constrained forward process that diffuses only over the feasible set of constraint-satisfying samples, inducing constrained marginal distributions. To reverse this, we propose Predict-Project-Renoise (PPR), an iterative algorithm that samples from the constrained marginals by alternating between denoising predictions, projecting onto the feasible set, and renoising. Experiments on 2D distributions, PDEs, and global weather forecasting demonstrate that PPR reduces constraint violations by over an order of magnitude while improving sample consistency and better matching the true constrained distribution compared to baselines.
+---
+paper_title: CFG++: Manifold-constrained Classifier Free Guidance for Diffusion Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Classifier-free guidance (CFG) is a fundamental tool in modern diffusion models for text-guided generation. Although effective, CFG has notable drawbacks. For instance, DDIM with CFG lacks invertibility, complicating image editing; furthermore, high guidance scales, essential for high-quality outputs, frequently result in issues like mode collapse. Contrary to the widespread belief that these are inherent limitations of diffusion models, this paper reveals that the problems actually stem from the off-manifold phenomenon associated with CFG, rather than the diffusion models themselves. More specifically, inspired by the recent advancements of diffusion model-based inverse problem solvers (DIS), we reformulate text-guidance as an inverse problem with a text-conditioned score matching loss and develop CFG++, a novel approach that tackles the off-manifold challenges inherent in traditional CFG. CFG++ features a surprisingly simple fix to CFG, yet it offers significant improvements, including better sample quality for text-to-image generation, invertibility, smaller guidance scales, reduced mode collapse, etc. Furthermore, CFG++ enables seamless interpolation between unconditional and conditional sampling at lower guidance scales, consistently outperforming traditional CFG at all scales. Moreover, CFG++ can be easily integrated into high-order diffusion solvers and naturally extends to distilled diffusion models. Experimental results confirm that our method significantly enhances performance in text-to-image generation, DDIM inversion, editing, and solving inverse problems, suggesting a wide-ranging impact and potential applications in various fields that utilize text guidance. Project Page: https://cfgpp-diffusion.github.io/.
+---
+paper_title: Synthetic data generation by diffusion models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+<jats:p>This paper provides a brief overview on diffusion models, which are extremely powerful on generating high-dimensional data, including images, 3D content, and videos, and provides insights for future work.</jats:p>
+---
+paper_title: Evaluating Robustness in Latent Diffusion Models via Embedding Level Augmentation
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Latent diffusion models (LDMs) achieve state-of-the-art performance across various tasks, including image generation and video synthesis. However, they generally lack robustness, a limitation that remains not fully explored in current research. In this paper, we propose several methods to address this gap. First, we hypothesize that the robustness of LDMs primarily should be measured without their text encoder, because if we take and explore the whole architecture, the problems of image generator and text encoders wll be fused. Second, we introduce novel data augmentation techniques designed to reveal robustness shortcomings in LDMs when processing diverse textual prompts. We then fine-tune Stable Diffusion 3 and Stable Diffusion XL models using Dreambooth, incorporating these proposed augmentation methods across multiple tasks. Finally, we propose a novel evaluation pipeline specifically tailored to assess the robustness of LDMs fine-tuned via Dreambooth.
+---
+paper_title: Quantifying the Ease of Reproducing Training Data in Unconditional Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Diffusion models, which have been advancing rapidly in recent years, may generate samples that closely resemble the training data. This phenomenon, known as memorization, may lead to copyright issues. In this study, we propose a method to quantify the ease of reproducing training data in unconditional diffusion models. The average of a sample population following the Langevin equation in the reverse diffusion process moves according to a first-order ordinary differential equation (ODE). This ODE establishes a 1-to-1 correspondence between images and their noisy counterparts in the latent space. Since the ODE is reversible and the initial noisy images are sampled randomly, the volume of an image's projected area represents the probability of generating those images. We examined the ODE, which projects images to latent space, and succeeded in quantifying the ease of reproducing training data by measuring the volume growth rate in this process. Given the relatively low computational complexity of this method, it allows us to enhance the quality of training data by detecting and modifying the easily memorized training samples.
+---
+paper_title: Training Data Attribution for Diffusion Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Diffusion models have become increasingly popular for synthesizing high-quality samples based on training datasets. However, given the oftentimes enormous sizes of the training datasets, it is difficult to assess how training data impact the samples produced by a trained diffusion model. The difficulty of relating diffusion model inputs and outputs poses significant challenges to model explainability and training data attribution. Here we propose a novel solution that reveals how training data influence the output of diffusion models through the use of ensembles. In our approach individual models in an encoded ensemble are trained on carefully engineered splits of the overall training data to permit the identification of influential training examples. The resulting model ensembles enable efficient ablation of training data influence, allowing us to assess the impact of training data on model outputs. We demonstrate the viability of these ensembles as generative models and the validity of our approach to assessing influence.
+---
+paper_title: Diffusion Models for Constrained Domains
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Denoising diffusion models are a novel class of generative algorithms that achieve state-of-the-art performance across a range of domains, including image generation and text-to-image tasks. Building on this success, diffusion models have recently been extended to the Riemannian manifold setting, broadening their applicability to a range of problems from the natural and engineering sciences. However, these Riemannian diffusion models are built on the assumption that their forward and backward processes are well-defined for all times, preventing them from being applied to an important set of tasks that consider manifolds defined via a set of inequality constraints. In this work, we introduce a principled framework to bridge this gap. We present two distinct noising processes based on (i) the logarithmic barrier metric and (ii) the reflected Brownian motion induced by the constraints. As existing diffusion model techniques cannot be applied in this setting, we derive new tools to define such models in our framework. We then demonstrate the practical utility of our methods on a number of synthetic and real-world tasks, including applications from robotics and protein design.
+---
+paper_title: TAlignDiff: Automatic Tooth Alignment assisted by Diffusion-based Transformation Learning
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Orthodontic treatment hinges on tooth alignment, which significantly affects occlusal function, facial aesthetics, and patients' quality of life. Current deep learning approaches predominantly concentrate on predicting transformation matrices through imposing point-to-point geometric constraints for tooth alignment. Nevertheless, these matrices are likely associated with the anatomical structure of the human oral cavity and possess particular distribution characteristics that the deterministic point-to-point geometric constraints in prior work fail to capture. To address this, we introduce a new automatic tooth alignment method named TAlignDiff, which is supported by diffusion-based transformation learning. TAlignDiff comprises two main components: a primary point cloud-based regression network (PRN) and a diffusion-based transformation matrix denoising module (DTMD). Geometry-constrained losses supervise PRN learning for point cloud-level alignment. DTMD, as an auxiliary module, learns the latent distribution of transformation matrices from clinical data. We integrate point cloud-based transformation regression and diffusion-based transformation modeling into a unified framework, allowing bidirectional feedback between geometric constraints and diffusion refinement. Extensive ablation and comparative experiments demonstrate the effectiveness and superiority of our method, highlighting its potential in orthodontic treatment.
+---
+paper_title: Towards a mathematical theory for consistency training in diffusion models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Consistency models, which were proposed to mitigate the high computational overhead during the sampling phase of diffusion models, facilitate single-step sampling while attaining state-of-the-art empirical performance. When integrated into the training phase, consistency models attempt to train a sequence of consistency functions capable of mapping any point at any time step of the diffusion process to its starting point. Despite the empirical success, a comprehensive theoretical understanding of consistency training remains elusive. This paper takes a first step towards establishing theoretical underpinnings for consistency models. We demonstrate that, in order to generate samples within $\varepsilon$ proximity to the target in distribution (measured by some Wasserstein metric), it suffices for the number of steps in consistency learning to exceed the order of $d^{5/2}/\varepsilon$, with $d$ the data dimension. Our theory offers rigorous insights into the validity and efficacy of consistency models, illuminating their utility in downstream inference tasks.
+---
+paper_title: SPQR: A Standardized Benchmark for Modern Safety Alignment Methods in Text-to-Image Diffusion Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Text-to-image diffusion models can emit copyrighted, unsafe, or private content. Safety alignment aims to suppress specific concepts, yet evaluations seldom test whether safety persists under benign downstream fine-tuning routinely applied after deployment (e.g., LoRA personalization, style/domain adapters). We study the stability of current safety methods under benign fine-tuning and observe frequent breakdowns. As true safety alignment must withstand even benign post-deployment adaptations, we introduce the SPQR benchmark (Safety-Prompt adherence-Quality-Robustness). SPQR is a single-scored metric that provides a standardized and reproducible framework to evaluate how well safety-aligned diffusion models preserve safety, utility, and robustness under benign fine-tuning, by reporting a single leaderboard score to facilitate comparisons. We conduct multilingual, domain-specific, and out-of-distribution analyses, along with category-wise breakdowns, to identify when safety alignment fails after benign fine-tuning, ultimately showcasing SPQR as a concise yet comprehensive benchmark for T2I safety alignment techniques for T2I models.
+---
+paper_title: Stable Target Field for Reduced Variance Score Estimation in Diffusion Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Diffusion models generate samples by reversing a fixed forward diffusion process. Despite already providing impressive empirical results, these diffusion models algorithms can be further improved by reducing the variance of the training targets in their denoising score-matching objective. We argue that the source of such variance lies in the handling of intermediate noise-variance scales, where multiple modes in the data affect the direction of reverse paths. We propose to remedy the problem by incorporating a reference batch which we use to calculate weighted conditional scores as more stable training targets. We show that the procedure indeed helps in the challenging intermediate regime by reducing (the trace of) the covariance of training targets. The new stable targets can be seen as trading bias for reduced variance, where the bias vanishes with increasing reference batch size. Empirically, we show that the new objective improves the image quality, stability, and training speed of various popular diffusion models across datasets with both general ODE and SDE solvers. When used in combination with EDM, our method yields a current SOTA FID of 1.90 with 35 network evaluations on the unconditional CIFAR-10 generation task. The code is available at https://github.com/Newbeeer/stf
+---
+paper_title: Top 10 Open Challenges Steering the Future of Diffusion Language Model and Its Variants
+
+publish_date: 2026-01-01
+
+paper_content:
+
+The paradigm of Large Language Models (LLMs) is currently defined by auto-regressive (AR) architectures, which generate text through a sequential ``brick-by-brick'' process. Despite their success, AR models are inherently constrained by a causal bottleneck that limits global structural foresight and iterative refinement. Diffusion Language Models (DLMs) offer a transformative alternative, conceptualizing text generation as a holistic, bidirectional denoising process akin to a sculptor refining a masterpiece. However, the potential of DLMs remains largely untapped as they are frequently confined within AR-legacy infrastructures and optimization frameworks. In this Perspective, we identify ten fundamental challenges ranging from architectural inertia and gradient sparsity to the limitations of linear reasoning that prevent DLMs from reaching their ``GPT-4 moment''. We propose a strategic roadmap organized into four pillars: foundational infrastructure, algorithmic optimization, cognitive reasoning, and unified multimodal intelligence. By shifting toward a diffusion-native ecosystem characterized by multi-scale tokenization, active remasking, and latent thinking, we can move beyond the constraints of the causal horizon. We argue that this transition is essential for developing next-generation AI capable of complex structural reasoning, dynamic self-correction, and seamless multimodal integration.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to Alignment of Diffusion Models.
+   ---
+   ---
+paper_title: Towards Scalable Automated Alignment of LLMs: A Survey
+
+publish_date: 2024-09-03
+
+paper_abstract:
+
+Alignment is the most critical step in building large language models (LLMs)
+that meet human needs. With the rapid development of LLMs gradually surpassing
+human capabilities, traditional alignment methods based on human-annotation are
+increasingly unable to meet the scalability demands. Therefore, there is an
+urgent need to explore new sources of automated alignment signals and technical
+approaches. In this paper, we systematically review the recently emerging
+methods of automated alignment, attempting to explore how to achieve effective,
+scalable, automated alignment once the capabilities of LLMs exceed those of
+humans. Specifically, we categorize existing automated alignment methods into 4
+major categories based on the sources of alignment signals and discuss the
+current status and potential development of each category. Additionally, we
+explore the underlying mechanisms that enable automated alignment and discuss
+the essential factors that make automated alignment technologies feasible and
+effective from the fundamental role of alignment.
+
+paper_outline:
+
+1 Introduction  
+2 Overview  
+2.1 Scope of Automated Alignment  
+2.2 Taxonomy  
+3 Aligning Through Inductive Bias  
+3.1 Inductive Bias from Features of LLMs  
+3.2 Inductive Bias from Organization of LLMs  
+4 Aligning Through Behavior Imitation  
+4.1 Instruction Construction  
+4.2 Strong-to-Weak Distillation  
+4.3 Weak-to-Strong Alignment  
+5 Aligning Through Model Feedback  
+5.1 Scalar Reward  
+5.2 Binary Verifier  
+5.3 Text Critic  
+6 Aligning Through Environment Feedback  
+6.1 Social Interactions  
+6.2 Human Shared-Values  
+6.3 Tool Execution Feedback  
+6.4 Embodied Environment  
+7 Underlying Mechanism of Automated Alignment  
+7.1 What is the underlying mechanism of current alignment?  
+7.2 Why does self-feedback work?  
+7.3 Why is weak-to-strong feasible?  
+8 Conclusions
+---
+paper_title: A Comprehensive Survey on Diffusion Models and Their Applications
+
+publish_date: 2024-07-01
+
+paper_abstract:
+
+Diffusion Models are probabilistic models that create realistic samples by
+simulating the diffusion process, gradually adding and removing noise from
+data. These models have gained popularity in domains such as image processing,
+speech synthesis, and natural language processing due to their ability to
+produce high-quality samples. As Diffusion Models are being adopted in various
+domains, existing literature reviews that often focus on specific areas like
+computer vision or medical imaging may not serve a broader audience across
+multiple fields. Therefore, this review presents a comprehensive overview of
+Diffusion Models, covering their theoretical foundations and algorithmic
+innovations. We highlight their applications in diverse areas such as media
+quality, authenticity, synthesis, image transformation, healthcare, and more.
+By consolidating current knowledge and identifying emerging trends, this review
+aims to facilitate a deeper understanding and broader adoption of Diffusion
+Models and provide guidelines for future researchers and practitioners across
+diverse disciplines.
+
+paper_outline:
+
+1 Introduction  
+1.1 Motivation and uniqueness of this survey  
+1.2 Search strategy  
+
+2 General Overview of DMs  
+2.1 DDPMs  
+2.2 NCSNs  
+2.3 SDEs  
+
+3 General Applications of DMs  
+
+4 Innovations and Experimental Techniques in DMs  
+
+5 Media Quality, Authenticity, and Synthesis  
+
+6 Image Transformation and Enhancement  
+
+7 Healthcare and Medical Applications  
+
+8 Applications of Diffusion Models in Other Fields  
+
+9 Discussion  
+
+10 Conclusion
+---
+paper_title: Diffusion Models: A Comprehensive Survey of Methods and Applications
+
+publish_date: 2024-06-24
+
+paper_abstract:
+
+Diffusion models have emerged as a powerful new family of deep generative
+models with record-breaking performance in many applications, including image
+synthesis, video generation, and molecule design. In this survey, we provide an
+overview of the rapidly expanding body of work on diffusion models,
+categorizing the research into three key areas: efficient sampling, improved
+likelihood estimation, and handling data with special structures. We also
+discuss the potential for combining diffusion models with other generative
+models for enhanced results. We further review the wide-ranging applications of
+diffusion models in fields spanning from computer vision, natural language
+generation, temporal data modeling, to interdisciplinary applications in other
+scientific disciplines. This survey aims to provide a contextualized, in-depth
+look at the state of diffusion models, identifying the key areas of focus and
+pointing to potential areas for further exploration. Github:
+https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy.
+
+paper_outline:
+
+1 INTRODUCTION
+
+2 FOUNDATIONS OF DIFFUSION MODELS
+
+3 DIFFUSION MODELS WITH EFFICIENT SAMPLING
+
+4 DIFFUSION MODELS WITH IMPROVED LIKELIHOOD
+
+5 DIFFUSION MODELS FOR DATA WITH SPECIAL STRUCTURES
+
+6 CONNECTIONS WITH OTHER GENERATIVE MODELS
+
+7 APPLICATIONS OF DIFFUSION MODELS
+
+8 FUTURE DIRECTIONS
+
+9 CONCLUSION
+---
+paper_title: Sifting through the Noise: A Survey of Diffusion Probabilistic Models and Their Applications to Biomolecules
+
+publish_date: 2024-05-31
+
+paper_abstract:
+
+Diffusion probabilistic models have made their way into a number of
+high-profile applications since their inception. In particular, there has been
+a wave of research into using diffusion models in the prediction and design of
+biomolecular structures and sequences. Their growing ubiquity makes it
+imperative for researchers in these fields to understand them. This paper
+serves as a general overview for the theory behind these models and the current
+state of research. We first introduce diffusion models and discuss common
+motifs used when applying them to biomolecules. We then present the significant
+outcomes achieved through the application of these models in generative and
+predictive tasks. This survey aims to provide readers with a comprehensive
+understanding of the increasingly critical role of diffusion models.
+
+paper_outline:
+
+1 Introduction
+2 Preliminaries on diffusion models
+2.1 Denoising diffusion probabilistic modeling
+2.2 Noise conditional score network
+2.3 Score-based modeling with stochastic differential equations
+3 Motifs for diffusion applied to biomolecules
+3.1 Controllable generation
+3.2 Equivariant/Invariant score networks
+3.3 Diffusion on manifolds
+3.4 Low-temperature sampling
+4 Applications
+4.1 Generative modeling
+4.2 Predictive modeling
+5 Conclusion
+---
+paper_title: Efficient Diffusion Models for Vision: A Survey
+
+publish_date: 2024-03-12
+
+paper_abstract:
+
+Diffusion Models (DMs) have demonstrated state-of-the-art performance in
+content generation without requiring adversarial training. These models are
+trained using a two-step process. First, a forward - diffusion - process
+gradually adds noise to a datum (usually an image). Then, a backward - reverse
+diffusion - process gradually removes the noise to turn it into a sample of the
+target distribution being modelled. DMs are inspired by non-equilibrium
+thermodynamics and have inherent high computational complexity. Due to the
+frequent function evaluations and gradient calculations in high-dimensional
+spaces, these models incur considerable computational overhead during both
+training and inference stages. This can not only preclude the democratization
+of diffusion-based modelling, but also hinder the adaption of diffusion models
+in real-life applications. Not to mention, the efficiency of computational
+models is fast becoming a significant concern due to excessive energy
+consumption and environmental scares. These factors have led to multiple
+contributions in the literature that focus on devising computationally
+efficient DMs. In this review, we present the most recent advances in diffusion
+models for vision, specifically focusing on the important design aspects that
+affect the computational efficiency of DMs. In particular, we emphasize the
+recently proposed design choices that have led to more efficient DMs. Unlike
+the other recent reviews, which discuss diffusion models from a broad
+perspective, this survey is aimed at pushing this research direction forward by
+highlighting the design strategies in the literature that are resulting in
+practicable models for the broader research community. We also provide a future
+outlook of diffusion models in vision from their computational efficiency
+viewpoint.
+
+paper_outline:
+
+I. Introduction  
+II. An Overview of Diffusion Models  
+III. Strategies for Efficient Diffusion Models  
+IV. Comparative Performance and Discussion  
+V. Emerging and Future Directions  
+VI. Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **Alignment of Diffusion Models**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Challenges and Limitations of Alignment in Diffusion Models**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **Alignment of Diffusion Models** and **Challenges and Limitations of Alignment in Diffusion Models**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Challenges and Limitations of Alignment in Diffusion Models** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Challenges and Limitations of Alignment in Diffusion Models**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Challenges and Limitations of Alignment in Diffusion Models**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

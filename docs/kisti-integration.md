@@ -220,3 +220,22 @@ kv-cache-serving 61). ref 목록은 `candidates/gap_to_80_refs.jsonl` 의 `tier 
   같고 precision 이 올랐다(refs 가 129 → 91 로 줄어 분자 변화보다 분모 변화가 크다).
 - 같은 topic 의 AutoSurvey 4편(§5.2 표)은 정책 없는 실행이라 비교 대상이 아니다. AutoSurvey 가 같은 정책 파일로 재실행한 뒤 비교한다.
 - PDF: `md_to_tex.py --compile` — 본문의 `∞` 가 pdflatex 에서 죽어 UNICODE_MAP 에 수학 기호를 추가한 뒤 생성.
+
+### 8.5 2026년 cutoff topic 4편 배치 (2026-09-15 12:31 → 13:58 UTC, `scripts/run_batch.sh`)
+
+사용자 선택: GT 최초 공개가 2026년인 9 topic 중 4편 (분모 큰 순 · 분야 분산 · mllm 은 GT 가 arXiv 라 cutoff 확정). 조건은 §8.4 와 같다.
+`run_batch.sh` 는 편마다 시작 전 키 잔여가 $0.55 미만이면 멈춘다(한도에 걸려 중간에 죽는 실행을 막는다) — 4편 합 **$1.52**, 키 잔여 $2.15 → **$0.63**.
+corpus 의 2026년 문헌은 1월분 12,190편뿐이라(arXiv 2602.* 이후는 KISTI 에 초록 없음) 2026년 cutoff topic 은 사실상 2026-01 까지의 corpus 를 본다.
+
+| topic_id | cutoff | 허용 | 소요 / 비용 | refs (DOI) | 적중 / 분모 | recall / precision | 잘림 재요청 · 429 | words · 서브섹션 |
+|---|---|---:|---|---|---|---|---|---|
+| physical-adversarial-attacks (§8.4) | 2022-11-03 | 1,186,466 | 21분 / $0.40 | 91 (59) | 23 / 128 | **18.0% / 25.3%** | 1 · 4 | 18,727 · 30 |
+| diffusion-model-alignment | 2026-02-10 | 1,663,703 | 19.5분 / $0.35 | 136 (46) | 16 / 139 | 11.5% / 11.8% | 0 · 1 | 18,053 · 28 |
+| negative-sampling-recsys | 2026-01-28 | 1,657,045 | 25분 / $0.39 | 152 (121) | 15 / 138 | 10.9% / 9.9% | 2 · 8 | 18,208 · 30 |
+| mllm-adversarial-attacks | 2026-03-30 | 1,663,703 | 21분 / $0.38 | 120 (22) | 5 / 52 | 9.6% / 4.2% | 1 · 1 | 17,313 · 29 |
+| llm-edge-inference | 2026-04-24 | 1,663,704 | 21분 / $0.40 | 127 (55) | 7 / 85 | 8.2% / 5.5% | 1 · 0 | 19,201 · 31 |
+
+- 5편 전부: 최종 참고문헌 허용 위반 0, GT id 누수 0, 잘린 채 수용 0, provider AkashML 단일, TRE 창 폐기 0. 채점 JSON `docs/experiments/score.<topic_id>.kisti-2608.json`, PDF 32~36쪽.
+- mllm-adversarial-attacks 는 생성 서베이의 제목이 GT 제목("…: A Comprehensive Survey")과 같다 — topic 문자열이 GT 제목의 앞부분이라 생기는 일이고 검색 누수가 아니다. `score_run.py` 는 이제 첫 `#` 제목 줄을 누수 검사에서 빼고 `generated_title_equals_gt_title` 로 따로 적는다.
+- 2026년 topic 4편의 recall(8~12%)이 physical-adversarial(18%)보다 낮다. 후보 문헌이 2023~2025 arXiv 에 몰려 검색 경쟁이 심하고(top-1500 풀이 전체의 0.1%), corpus 가 GT 참고문헌을 45~60% 만 갖고 있으며, recall 분모가 "corpus 안 GT ref" 라 커버리지가 낮은 topic 일수록 분모가 작아 적중 1건이 1~2%p 다. 단일 실행이라 방향만 읽을 것(run-to-run ±1.7%p).
+- 같은 4 topic 의 다른 agent 실행은 아직 없다. AutoSurvey 가 같은 정책 파일로 돌린 뒤 같은 표에 놓는다.

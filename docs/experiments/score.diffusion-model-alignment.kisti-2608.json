@@ -1,0 +1,58 @@
+{
+  "run": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/meta-llama_llama-3.3-70b-instruct__database_kisti-kisti-2608/Alignment of Diffusion Models/exp_1",
+  "topic_id": "diffusion-model-alignment",
+  "topic": "Alignment of Diffusion Models",
+  "cutoff": "2026-02-10",
+  "refs": 136,
+  "refs_doi": 46,
+  "denominator_n_gt_refs_cutoff": 139,
+  "gt_pool": 230,
+  "hits": 16,
+  "recall": 0.1151,
+  "precision": 0.1176,
+  "hit_ids": [
+    "10.1109/cvpr52729.2023.02154",
+    "10.1109/cvpr52734.2025.00750",
+    "10.1109/cvpr52734.2025.02198",
+    "10.1109/tkde.2024.3361474",
+    "2102.09672",
+    "2305.13301",
+    "2401.11708",
+    "2402.05749",
+    "2402.16359",
+    "2404.03653",
+    "2404.04465",
+    "2407.01648",
+    "2410.05760",
+    "2501.06848",
+    "2502.01667",
+    "2502.02954"
+  ],
+  "refs_after_cutoff": [],
+  "gt_id_leaks": [],
+  "gt_title_leaks": [],
+  "generated_title": "A Comprehensive Survey on Alignment of Diffusion Models",
+  "generated_title_equals_gt_title": [],
+  "words_refined": 16395,
+  "manifest": {
+    "llm_stats": {
+      "completions": 102,
+      "truncated_accepted": 0,
+      "truncation_retries": 0,
+      "empty_retries": 0,
+      "error_retries": 1
+    },
+    "temperature": 0.6,
+    "max_tokens": 8192,
+    "provider": "akashml/fp8",
+    "finished_at": "2026-09-15T12:50:44"
+  },
+  "retrieval_policy": {
+    "allowed": 1663703,
+    "db_records": 1663704,
+    "allowed_fingerprint_sha256": "73576e691855dc95b7e48f9b0ae2937cbbc30c1a0b99c8a4830b3a4c835d1633",
+    "reference_violations": [],
+    "view_sha256": "c1a0c6b3fe1bd46f1a7d3d14832b53933dfb0b1c021531c23df109ba453ca156",
+    "view_created_at": "2026-09-14T13:18:56+00:00"
+  }
+}

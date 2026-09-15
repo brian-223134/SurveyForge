@@ -1,0 +1,3184 @@
+Information filtering based on transferring similarity
+
+A Note on Mathematical Modelling of Practical Multicampaign Assignment
+  and Its Computational Complexity
+
+The Universal Recommender
+
+Recommender Systems, Ground Truth, and Preference Pollution
+
+Entropy and improved k‐nearest neighbor search based under‐sampling (ENU) method to handle class overlap in imbalanced datasets
+
+Trust your neighbors: A comprehensive survey of neighborhood-based methods for recommender systems
+
+Item Recommendation from Implicit Feedback
+
+A DeepWalk-Based Approach to Defend Profile Injection Attack in Recommendation System
+
+Conformative Filtering for Implicit Feedback Data
+
+RNE: A Scalable Network Embedding for Billion-Scale Recommendation
+
+Novel and Diverse Recommendations by Leveraging Linear Models with User and Item Embeddings
+
+A Multi-task Approach to Open Domain Suggestion Mining Using Language Model for Text Over-Sampling
+
+The Unfairness of Popularity Bias in Music Recommendation: A Reproducibility Study
+
+Sequential Learning over Implicit Feedback for Robust Large-Scale Recommender Systems
+
+Novel Dense Subgraph Discovery Primitives: Risk Aversion and Exclusion Queries
+
+Accurate News Recommendation Coalescing Personal and Global Temporal Preferences
+
+Negative Sampling for Hyperlink Prediction in Networks
+
+A Comparative Analysis of State-of-the-Art Recommendation Techniques in the Movie Domain
+
+Double-Wing Mixture of Experts for Streaming Recommendations
+
+Revisiting Wedge Sampling for Budgeted Maximum Inner Product Search
+
+A Zero Attentive Relevance Matching Networkfor Review Modeling in Recommendation System
+
+XDM: Improving Sequential Deep Matching with Unclicked User Behaviors for Recommender System
+
+Conditioned Variational Autoencoder for top-N item recommendation
+
+Self-Supervised Anomaly Detection by Self-Distillation and Negative Sampling
+
+Investigating the Robustness of Sequential Recommender Systems Against Training Data Perturbations: an Empirical Study
+
+Countering Mainstream Bias via End-to-End Adaptive Local Learning
+
+Hard Negative Sample Mining for Whole Slide Image Classification
+
+Reevaluation of Inductive Link Prediction
+
+Synthetic Sequence Generator for Recommender Systems - Memory Biased Random Walk on a Sequence Multilayer Network
+
+Differentially Private Neighborhood-Based Recommender Systems
+
+Addressing Item-Cold Start Problem in Recommendation Systems using Model Based Approach and Deep Learning
+
+Listwise Recommendation Approach with Non-negative Matrix Factorization
+
+Representation Learning with Depth and Breadth for Recommendation Using Multi-view Data
+
+Character-level recurrent neural networks in practice: comparing training and sampling schemes
+
+Deep learning approach to obtain collaborative filtering neighborhoods
+
+Deep variational models for collaborative filtering-based recommender systems
+
+Visually aware recommendation with aesthetic features
+
+Finding associations and computing similarity via biased pair sampling
+
+A probabilistic model to resolve diversity–accuracy challenge of recommendation systems
+
+Preference modeling by exploiting latent components of ratings
+
+Disentangling interest and conformity for eliminating popularity bias in session-based recommendation
+
+A healthy and reliable rating profile expansion approach to address data sparsity in food recommendation systems
+
+Integrating optimized item selection with active learning for continuous exploration in recommender systems
+
+Introducing a framework and a decision protocol to calibrated recommender systems
+
+DOR: a novel dual-observation-based approach for recommendation systems
+
+Guided sampling for large graphs
+
+User preference and embedding learning with implicit feedback for recommender systems
+
+Dynamic slate recommendation with gated recurrent units and Thompson sampling
+
+Exploring uplift modeling with high class imbalance
+
+Random walks with variable restarts for negative-example-informed label propagation
+
+Handling new users and items: a comparative study of inductive recommenders
+
+Negative link prediction to reduce dropout in Massive Open Online Courses
+
+Recommendations for item set completion: on the semantics of item co-occurrence with data sparsity, input size, and input modalities
+
+Ensembles of density estimators for positive-unlabeled learning
+
+A sampling approach to Debiasing the offline evaluation of recommender systems
+
+How to deal with negative preferences in recommender systems: a theoretical framework
+
+Exploring and mitigating gender bias in book recommender systems with explicit feedback
+
+Learning from positive and unlabeled data: a survey
+
+Meta-classifier free negative sampling for extreme multilabel classification
+
+Development of an offline OOH advertising recommendation system using negative sampling and deep interest network
+
+A Robust Sequential Recommendation Model Based on Multiple Feedback Behavior Denoising and Trusted Neighbors
+
+SR-MACL: Session-Based Recommendation with Multi-layer Aggregation Augmentation in Contrastive Learning
+
+Synthetic Hard Negative Samples for Contrastive Learning
+
+A TDF-WNSP-WLFM algorithm for product recommendation based on multiple types of implicit user behavior
+
+Improving cold-start recommendations using item-based stereotypes
+
+Interplay between upsampling and regularization for provider fairness in recommender systems
+
+High-level preferences as positive examples in contrastive learning for multi-interest sequential recommendation
+
+Enhancing Recommendation with Denoising Auxiliary Task
+
+Node classification in complex networks based on multi-view debiased contrastive learning
+
+Relieving popularity bias in recommendation via debiasing representation enhancement
+
+DMR: disentangled and denoised learning for multi-behavior recommendation
+
+Multi-behavior aware recommendation with joint contrastive learning and reinforced negative sampling
+
+AGTR: Adversarial Generation of Target Review for Rating Prediction
+
+A probabilistic perspective on nearest neighbor for implicit recommendation
+
+CUPCF: combining users preferences in collaborative filtering for better recommendation
+
+Neural news recommendation with negative feedback
+
+Recovering Individual Emotional States from Sparse Ratings Using Collaborative Filtering
+
+Proactive Recommendation in Social Networks: Steering user interest with causal inference
+
+An Adaptive Matrix Factorization Approach for Personalized Recommender Systems
+
+Deep Neural Review Text Interaction for Recommendation Systems
+
+Research Commentary on Recommendations with Side Information: A Survey and Research Directions
+
+Collaborative filtering and deep learning based recommendation system for cold start items
+
+Dynamic Hierarchical Attention Network for news recommendation
+
+Neighbourhood-based undersampling approach for handling imbalanced and overlapped data
+
+Weighted sampling without replacement from data streams
+
+Exact PPS sampling with bounded sample size
+
+Accuracy-diversity trade-off in recommender systems via graph convolutions
+
+Bias-Aware Hierarchical Clustering for detecting the discriminated groups of users in recommendation systems
+
+How to predict explicit recommendations in online reviews using text mining and sentiment analysis
+
+A collaborative filtering approach to mitigate the new user cold start problem
+
+Sapling Similarity: A performing and interpretable memory-based tool for recommendation
+
+Behavior analysis in social networks: Challenges, technologies, and trends
+
+Exploiting sparsity to build efficient kernel based collaborative filtering for top-N item recommendation
+
+Boolean kernels for collaborative filtering in top-N item recommendation
+
+Construct Informative Triplet with Two-stage Hard-sample Generation
+
+Balancing User Preferences by Social Networks: A Condition-Guided Social Recommendation Model for Mitigating Popularity Bias
+
+KGBoost: A Classification-based Knowledge Base Completion Method with Negative Sampling
+
+Uncovering missing links with cold ends
+
+Diffuse-like recommender with enhanced similarity of objects
+
+Computation of Recommender System Using Localized Regularization
+
+A Simple and Efficient Method to Handle Sparse Preference Data Using Domination Graphs: An Application to YouTube
+
+A survey on causal inference for recommendation
+
+Overcoming the limitations of patch-based learning to detect cancer in whole slide images
+
+Bayesian network-based over-sampling method (BOSME) with application to indirect cost-sensitive learning
+
+User preference modeling for movie recommendations based on deep learning
+
+Explicit intent enhanced contrastive learning with denoising networks for sequential recommendation
+
+Dual-level graph contrastive collaborative filtering
+
+Contrastive learning on high-order noisy graphs for collaborative recommendation
+
+Weakly supervised segment annotation via expectation kernel density estimation
+
+Recommender systems based on opinion mining and deep neural networks
+
+Solving the apparent diversity-accuracy dilemma of recommender systems
+
+A case study of empirical Bayes in a user-movie recommendation system
+
+Accurate and diverse recommendations via eliminating redundant correlations
+
+Deep Matrix Factorization for Recommender Systems with Missing Data not at Random
+
+A Survey of Deep Learning Approaches for Recommendation Systems
+
+A Probabilistic Matrix Factorization Recommendation Method Based on Deep Learning
+
+Travel Attractions Recommendation based on Max-negative the Gated Recurrent Unit trajectory mining Representation
+
+A survey of recommendation systems based on deep learning
+
+Research on Movie Recommendation Algorithm Based on Stack De-noising Auto-encoder
+
+Curriculum Learning for Debiased Recommendation with Explicit and Implicit Feedback
+
+Causal Fusion for Recommender System
+
+Leveraging Inverse Probability Weighting Method to Missing Not at Random Problem
+
+Deep Reinforcement Learning based Recommend System using stratified sampling
+
+Neural quasiprobabilistic likelihood ratio estimation with negatively weighted data
+
+Node-degree aware edge sampling mitigates inflated classification performance in biomedical random walk-based graph representation learning
+
+Topology-driven negative sampling enhances generalizability in protein–protein interaction prediction
+
+Efficient posterior sampling for high-dimensional imbalanced logistic regression.
+
+Node-degree aware edge sampling mitigates inflated classification performance in biomedical graph representation learning
+
+Solving the accuracy-diversity dilemma via directed random walks
+
+Collaborative filtering recommendation algorithm based on variational inference
+
+Joint Prediction of Rating and Popularity for Cold-Start Item by Sentinel User Selection
+
+Coupled Low Rank Approximation for Collaborative Filtering in Social Networks
+
+Collaborative Filtering Recommendation Based on All-Weighted Matrix Factorization and Fast Optimization
+
+Deep Learning Modeling for Top-N Recommendation With Interests Exploring
+
+Streaming Algorithms for News and Scientific Literature Recommendation: Monotone Submodular Maximization With a  $d$ -Knapsack Constraint
+
+A Cross-Domain Recommendation Algorithm for D2D Multimedia Application Systems
+
+Adversarial Knowledge Representation Learning Without External Model
+
+Movie Recommendation via Markovian Factorization of Matrix Processes
+
+Deep Probabilistic Matrix Factorization Framework for Online Collaborative Filtering
+
+Deep Auto Encoder Model With Convolutional Text Networks for Video Recommendation
+
+Top-N-Targets-Balanced Recommendation Based on Attentional Sequence-to-Sequence Learning
+
+A Generic Framework for Learning Explicit and Implicit User-Item Couplings in Recommendation
+
+An Improved Matrix Approximation for Recommender Systems Based on Context-Information and Transfer Learning
+
+Improved Metric-Based Recommender by Historical Interactions
+
+Image Recommendation With Reciprocal Social Influence
+
+Adversarial Training-Based Mean Bayesian Personalized Ranking for Recommender System
+
+A Pre-Filtering Approach for Incorporating Contextual Information Into Deep Learning Based Recommender Systems
+
+Improving Recommendation Diversity by Highlighting the ExTrA Fabricated Experts
+
+Context-Aware User and Item Representations Based on Unsupervised Context Extraction From Reviews
+
+Alleviating Item-Side Cold-Start Problems in Recommender Systems Using Weak Supervision
+
+ML2E: Meta-Learning Embedding Ensemble for Cold-Start Recommendation
+
+Collaborative Filtering Recommendation Algorithm Based on Attention GRU and Adversarial Learning
+
+Profile Aggregation-Based Group Recommender Systems: Moving From Item Preference Profiles to Deep Profiles
+
+A Hybrid GAN Based Approach to Solve Imbalanced Data Problem in Recommendation Systems
+
+Variational Autoencoder-based Hybrid Recommendation with Poisson Factorization for Modeling Implicit Feedback
+
+A Sampling-Based Stack Framework for Imbalanced Learning in Churn Prediction
+
+Dual Auto-Encoder Based Rating Prediction Recommendation Algorithm
+
+Addressing the Cold-Start Problem in Collaborative Filtering Through Positive-Unlabeled Learning and Multi-Target Prediction
+
+Graph Fusion in Reciprocal Recommender Systems
+
+A Comparative Analysis of Sampling Techniques for Click-Through Rate Prediction in Native Advertising
+
+Autoencoder-Based Recommender System Exploiting Natural Noise Removal
+
+Long and Short-Term Interest Contrastive Learning Under Filter-Enhanced Sequential Recommendation
+
+Rating Proportion-Aware Binomial Matrix Factorization for Collaborative Filtering
+
+Improving Cold Start Stereotype-Based Recommendation Using Deep Learning
+
+A Recommendation Method Based on Multi-Source Heterogeneous Hypergraphs and Contrastive Learning
+
+Beyond Positive Similarity Metrics: Leveraging Negative Co-Occurrence in Recommender Systems
+
+Denoising Long-Tail Augmented Contrastive Network for Multi-Behavior Recommendation
+
+A Novel Pre-Processing Technique to Combat Popularity Bias in Personality-Aware Recommender Systems
+
+Dealing With Class Imbalance in Uplift Modeling-Efficient Data Preprocessing via Oversampling and Matching
+
+SURE: Session-Based Uninteresting Item Removal for Enhanced Recommendations
+
+Context-Aware Negative Sampling for Sequential Recommendation
+
+PSR: A Dual-Level Learning Framework for Patching Sequential Recommendation to Capture Local Preference Transitions
+
+The price of privacy in untrusted recommendation engines
+
+Linear bandits in high dimension and recommendation systems
+
+Exploration. Exploitation, and Engagement in Multi-Armed Bandits with Abandonment
+
+Bounded (O(1)) Regret Recommendation Learning via Synthetic Controls Oracle
+
+Parallel matrix factorization for binary response
+
+Top-N-Rank: A Scalable List-wise Ranking Method for Recommender Systems
+
+On Variational Inference for User Modeling in Attribute-Driven Collaborative Filtering
+
+AE-smnsMLC: Multi-Label Classification with Semantic Matching and Negative Label Sampling for Product Attribute Value Extraction
+
+Debiasing Graph Transfer Learning via Item Semantic Clustering for Cross-Domain Recommendations
+
+Mitigating Frequency Bias in Next-Basket Recommendation via Deconfounders
+
+Negative Sampling in Variational Autoencoders
+
+Unreliable Multi-Armed Bandits: A Novel Approach to Recommendation Systems
+
+Characterizing and Avoiding Negative Transfer
+
+Dist-PU: Positive-Unlabeled Learning from a Label Distribution Perspective
+
+GRAPH-BASED RECOMMENDATION SYSTEM
+
+Analysis of Movie Recommendation Systems; with and without considering the low rated movies
+
+Song recommendation with non-negative matrix factorization and graph total variation
+
+Importance of Negative Sampling in Weak Label Learning
+
+On Negative Sampling for Contrastive Audio-Text Retrieval
+
+Divide and Contrast: Self-supervised Learning from Uncurated Data
+
+Sample4Geo: Hard Negative Sampling For Cross-View Geo-Localisation
+
+Using Posters to Recommend Anime and Mangas in a Cold-Start Scenario
+
+On Efficient Recommendations for Online Exchange Markets
+
+Bayesian Negative Sampling for Recommendation
+
+Contrastive Enhanced Slide Filter Mixer for Sequential Recommendation
+
+DCMT: A Direct Entire-Space Causal Multi-Task Framework for Post-Click Conversion Estimation
+
+Fusing Similarity Models with Markov Chains for Sparse Sequential Recommendation
+
+Pseudo-Implicit Feedback for Alleviating Data Sparsity in Top-K Recommendation
+
+Beyond Double Ascent via Recurrent Neural Tangent Kernel in Sequential Recommendation
+
+Mitigating Popularity Bias in Recommendation with Unbalanced Interactions: A Gradient Perspective
+
+MixDec Sampling: A Soft Link-based Sampling Method of Graph Neural Network for Recommendation
+
+CounterCLR: Counterfactual Contrastive Learning with Non-random Missing Data in Recommendation
+
+Infinite Mixed Membership Matrix Factorization
+
+A Probabilistic View of Neighborhood-Based Recommendation Methods
+
+Sample-Rank: Weak Multi-Objective Recommendations Using Rejection Sampling
+
+Alleviating Behavior Data Imbalance for Multi-Behavior Graph Collaborative Filtering
+
+ZeroMat: Solving Cold-start Problem of Recommender System with No Input Data
+
+Two is Better Than One: Dual Embeddings for Complementary Product Recommendations
+
+Active Sampling for Pairwise Comparisons via Approximate Message Passing and Information Gain Maximization
+
+TDCGL: Two-Level Debiased Contrastive Graph Learning for Recommendation
+
+Adversarial Collaborative Auto-encoder for Top-N Recommendation
+
+Hard Negative Sampling via Regularized Optimal Transport for Contrastive Representation Learning
+
+Causality-aided Recommendation Systems
+
+Predictive Blacklisting as an Implicit Recommendation System
+
+Beyond Uniform Reverse Sampling: A Hybrid Sampling Technique for Misinformation Prevention
+
+A channel coding perspective of recommendation systems
+
+Online Transfer Learning: Negative Transfer and Effect of Prior Knowledge
+
+Entry-Specific Bounds for Low-Rank Matrix Completion under Highly Non-Uniform Sampling
+
+A Survey on Negative Transfer
+
+Non-Stationary Linear Bandits With Dimensionality Reduction for Large-Scale Recommender Systems
+
+Quantum Negative Sampling Strategy for Knowledge Graph Embedding with Variational Circuit
+
+Matrix Completion with Selective Sampling
+
+Topology-Aware Debiased Self-Supervised Graph Learning for Recommendation
+
+Learning to Select External Knowledge With Multi-Scale Negative Sampling
+
+Rethinking Missing Data: Aleatoric Uncertainty-Aware Recommendation
+
+On L2-Consistency of Nearest Neighbor Matching
+
+On the Fundamental Limits of Matrix Completion: Leveraging Hierarchical Similarity Graphs
+
+Recurrent Poisson Factorization for Temporal Recommendation
+
+Entropy-based Sampling Approaches for Multi-Class Imbalanced Problems
+
+Sampler Design for Bayesian Personalized Ranking by Leveraging View Data
+
+Deep Pairwise Hashing for Cold-Start Recommendation
+
+Detect Professional Malicious User With Metric Learning in Recommender Systems
+
+SamWalker++: Recommendation With Informative Sampling Strategy
+
+Private and Utility Enhanced Recommendations With Local Differential Privacy and Gaussian Mixture Model
+
+MetaKG: Meta-Learning on Knowledge Graph for Cold-Start Recommendation
+
+Intent Disentanglement and Feature Self-Supervision for Novel Recommendation
+
+A Survey on Dropout Methods and Experimental Verification in Recommendation
+
+Popularity Bias is not Always Evil: Disentangling Benign and Harmful Bias for Recommendation
+
+Self-Supervised Learning for Recommender Systems: A Survey
+
+Hierarchical Alignment With Polar Contrastive Learning for Next-Basket Recommendation
+
+XSimGCL: Towards Extremely Simple Graph Contrastive Learning for Recommendation
+
+Causal Distillation for Alleviating Performance Heterogeneity in Recommender Systems
+
+Neighborhood-Enhanced Supervised Contrastive Learning for Collaborative Filtering
+
+Mitigating Hidden Confounding Effects for Causal Recommendation
+
+BPL: Bias-Adaptive Preference Distillation Learning For Recommender System
+
+Online Learning to Cache and Recommend in the Next Generation Cellular Networks
+
+Multisample-Based Contrastive Loss for Top-K Recommendation
+
+Learning With Imbalanced Noisy Data by Preventing Bias in Sample Selection
+
+Boosting Graph Contrastive Learning via Adaptive Sampling
+
+Graph Convolutional Neural Networks With Diverse Negative Samples via Decomposed Determinant Point Processes
+
+Affinity Uncertainty-Based Hard Negative Mining in Graph Contrastive Learning
+
+Conv4Rec: A 1-by-1 Convolutional Autoencoder for User Profiling Through Joint Analysis of Implicit and Explicit Feedback
+
+Does Negative Sampling Matter? a Review With Insights Into its Theory and Applications
+
+Hybrid Sample Synthesis-based Debiasing of Classifier in Limited Data Setting
+
+Candidate Set Sampling for Evaluating Top-N Recommendation
+
+Targeted sampling from massive block model graphs with personalized PageRank
+
+Influence Maximization in Social Networks When Negative Opinions May Emerge and Propagate
+
+Selective Transfer Learning for Cross Domain Recommendation
+
+Pipage Rounding, Pessimistic Estimators and Matrix Concentration
+
+A new system-wide diversity measure for recommendations with efficient algorithms
+
+Balancing the popularity bias of object similarities for personalised recommendation
+
+Threshold Rules for Online Sample Selection
+
+Unbiased offline evaluation of contextual-bandit-based news article recommendation algorithms
+
+Diversity in ranking using negative reinforcement
+
+The efficient imputation method for neighborhood-based collaborative filtering
+
+Evaluation of recommendations: rating-prediction and ranking
+
+OFF-set: one-pass factorization of feature sets for online recommendation in persistent cold start settings
+
+Estimation for monotone sampling: competitiveness and customization
+
+Recommending with an agenda: active learning of private attributes using matrix factorization
+
+Inverting a Steady-State
+
+ACCAMS: Additive Co-Clustering to Approximate Matrices Succinctly
+
+Recommendation Subgraphs for Web Discovery
+
+Inferring Networks of Substitutable and Complementary Products
+
+The Recommendation Game: Using a Game-with-a-Purpose to Generate Recommendation Data
+
+Modeling User Exposure in Recommendation
+
+Collaborative Filtering with Low Regret
+
+Fast Matrix Factorization for Online Recommendation with Implicit Feedback
+
+Fifty Shades of Ratings: How to Benefit from a Negative Feedback in Top-N Recommendations Tasks
+
+Tag-Aware Personalized Recommendation Using a Deep-Semantic Similarity Model with Negative Sampling
+
+Learning Personalized Preference of Strong and Weak Ties for Social Recommendation
+
+Learning to Recommend Accurate and Diverse Items
+
+Local Low-Rank Matrix Approximation with Preference Selection of Anchor Points
+
+A Single-Step Approach to Recommendation Diversification
+
+Weighted Random Walk Sampling for Multi-Relational Recommendation
+
+On Sampling Strategies for Neural Network-based Collaborative Filtering
+
+Folding: Why Good Models Sometimes Make Spurious Recommendations
+
+Prediction of Sparse User-Item Consumption Rates with Zero-Inflated Poisson Regression
+
+How to Impute Missing Ratings?: Claims, Solution, and Its Application to Collaborative Filtering
+
+Positivity Bias in Customer Satisfaction Ratings
+
+An Improved Sampler for Bayesian Personalized Ranking by Leveraging View Data
+
+User Type Affinity Estimation Using Gamma-Poisson Model
+
+A User-Centric Diversity by Design Recommender System for the Movie Application Domain
+
+Multi-Modal Adversarial Autoencoders for Recommendations of Citations and Subject Labels
+
+Unbiased Learning to Rank with Unbiased Propensity Estimation
+
+Offline Evaluation of Ranking Policies with Click Models
+
+Unbiased offline recommender evaluation for missing-not-at-random implicit feedback
+
+Generation meets recommendation: proposing novel items for groups of users
+
+Quality-aware neural complementary item recommendation
+
+Practical Diversified Recommendations on YouTube with Determinantal Point Processes
+
+Poisoning Attacks to Graph-Based Recommender Systems
+
+RecWalk: Nearly Uncoupled Random Walks for Top-N Recommendation
+
+MeLU: Meta-Learned User Preference Estimator for Cold-Start Recommendation
+
+Style conditioned recommendations
+
+Uplift-based evaluation and optimization of recommenders
+
+Relaxed softmax for PU learning
+
+Variational low rank multinomials for collaborative filtering with side-information
+
+Leveraging post-click feedback for content recommendations
+
+A simple multi-armed nearest-neighbor bandit for interactive recommendation
+
+Latent multi-criteria ratings for recommendations
+
+RRR: Rank-Regret Representative
+
+Rating Augmentation with Generative Adversarial Networks towards Accurate Collaborative Filtering
+
+Adversarial Sampling and Training for Semi-Supervised Information Retrieval
+
+Unbiased LambdaMART: An Unbiased Pairwise Learning-to-Rank Algorithm
+
+Signed Distance-based Deep Memory Recommender
+
+Exploiting Ratings, Reviews and Relationships for Item Recommendations in Topic Based Social Networks
+
+Collaborative Similarity Embedding for Recommender Systems
+
+SamWalker: Social Recommendation with Informative Sampling Strategy
+
+Dual Neural Personalized Ranking
+
+Adversarial Point-of-Interest Recommendation
+
+Policy Gradients for Contextual Recommendations
+
+Adaptive matrix completion for the users and the items in tail
+
+With a Little Help from My Friends (and Their Friends): Influence Neighborhoods for Social Recommendations
+
+Learning from Sets of Items in Recommender Systems
+
+One-Class Order Embedding for Dependency Relation Prediction
+
+Improving Collaborative Metric Learning with Efficient Negative Sampling
+
+NRPA: Neural Recommendation with Personalized Attention
+
+Unbiased Recommender Learning from Missing-Not-At-Random Implicit Feedback
+
+Improving the Estimation of Tail Ratings in Recommender System with Multi-Latent Representations
+
+User Recommendation in Content Curation Platforms
+
+RecVAE: A New Variational Autoencoder for Top-N Recommendations with Implicit Feedback
+
+Improving End-to-End Sequential Recommendations with Intent-aware Diversification
+
+Revisiting Alternative Experimental Settings for Evaluating Top-N Item Recommendation Algorithms
+
+Feedback Loop and Bias Amplification in Recommender Systems
+
+Using Stable Matching to Optimize the Balance between Accuracy and Diversity in Recommendation
+
+HAES: A New Hybrid Approach for Movie Recommendation with Elastic Serendipity
+
+Regularized Adversarial Sampling and Deep Time-aware Attention for Click-Through Rate Prediction
+
+Non-adaptive adaptive sampling on turnstile streams
+
+Hierarchical Visual-aware Minimax Ranking Based on Co-purchase Data for Personalized Recommendation
+
+Deep Rating Elicitation for New Users in Collaborative Filtering
+
+Addressing the Target Customer Distortion Problem in Recommender Systems
+
+A Generalized and Fast-converging Non-negative Latent Factor Model for Predicting User Preferences in Recommender Systems
+
+Personalized Ranking with Importance Sampling
+
+Efficient Non-Sampling Factorization Machines for Optimal Context-Aware Recommendation
+
+Hybrid Reciprocal Recommender Systems: Integrating Item-to-User Principles in Reciprocal Recommendation
+
+Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
+
+Exploring Longitudinal Effects of Session-based Recommendations
+
+Deep Bayesian Bandits: Exploring in Online Personalized Recommendations
+
+Improving One-class Recommendation with Multi-tasking on Various Preference Intensities
+
+Contextual User Browsing Bandits for Large-Scale Online Mobile Recommendation
+
+Unbiased Learning for the Causal Effect of Recommendation
+
+Exploring Data Splitting Strategies for the Evaluation of Recommendation Models
+
+The Connection Between Popularity Bias, Calibration, and Fairness in Recommendation
+
+BLOB: A Probabilistic Model for Recommendation that Combines Organic and Bandit Signals
+
+Off-policy Bandits with Deficient Support
+
+Understanding Negative Sampling in Graph Representation Learning
+
+On Sampled Metrics for Item Recommendation
+
+Counterfactual Evaluation of Slate Recommendations with Sequential Reward Interactions
+
+Scaling Choice Models of Relational Social Data
+
+Semi-supervised Collaborative Filtering by Text-enhanced Domain Adaptation
+
+Attribute-based Propensity for Unbiased Learning in Recommender Systems: Algorithm and Case Studies
+
+Accelerated Convergence for Counterfactual Learning to Rank
+
+Asymmetric Tri-training for Debiasing Missing-Not-At-Random Explicit Feedback
+
+Neural Interactive Collaborative Filtering
+
+How Useful are Reviews for Recommendation? A Critical Review and Potential Improvements
+
+Set2setRank: Collaborative Set to Set Ranking for Implicit Feedback based Recommendation
+
+Enhanced Doubly Robust Learning for Debiasing Post-Click Conversion Rate Estimation
+
+Sequential Recommendation for Cold-start Users with Meta Transitional Learning
+
+Elliot: A Comprehensive and Rigorous Framework for Reproducible Recommender Systems Evaluation
+
+Boosting Item-based Collaborative Filtering via Nearly Uncoupled Random Walks
+
+Utilizing textual reviews in latent factor models for recommender systems
+
+Density biased sampling: an improved method for data mining and clustering
+
+A Troubling Analysis of Reproducibility and Progress in Recommender Systems Research
+
+Denoising Implicit Feedback for Recommendation
+
+DGCN: Diversified Recommendation with Graph Convolutional Networks
+
+Efficient Non-Sampling Knowledge Graph Embedding
+
+Variation Control and Evaluation for Generative Slate Recommendations
+
+Adversarial and Contrastive Variational Autoencoder for Sequential Recommendation
+
+Adversarial Item Promotion: Vulnerabilities at the Core of Top-N Recommenders that Use Images to Address Cold Start
+
+Task-adaptive Neural Process for User Cold-Start Recommendation
+
+An Adversarial Imitation Click Model for Information Retrieval
+
+Density-Ratio Based Personalised Ranking from Implicit Feedback
+
+Leveraging Review Properties for Effective Recommendation
+
+Diversity on the Go! Streaming Determinantal Point Processes under a Maximum Induced Cardinality Objective
+
+Real Negatives Matter: Continuous Training with Real Negatives for Delayed Feedback Modeling
+
+Bootstrapping Recommendations at Chrome Web Store
+
+Contrastive Learning for Debiased Candidate Generation in Large-Scale Recommender Systems
+
+Towards the D-Optimal Online Experiment Design for Recommender Selection
+
+AutoLoss: Automated Loss Function Search in Recommendations
+
+Preference Amplification in Recommender Systems
+
+Needle in a Haystack: Label-Efficient Evaluation under Extreme Class Imbalance
+
+CoSam: An Efficient Collaborative Adaptive Sampler for Recommendation
+
+User-centered Evaluation of Popularity Bias in Recommender Systems
+
+DSKReG: Differentiable Sampling on Knowledge Graph for Recommendation with Relational GNN
+
+Top-N Recommendation with Counterfactual User Preference Simulation
+
+Zero Shot on the Cold-Start Problem: Model-Agnostic Interest Learning for Recommender Systems
+
+Disentangling Preference Representations for Recommendation Critiquing with ß-VAE
+
+Negative Interactions for Improved Collaborative Filtering: Don’t go Deeper, go Higher
+
+FINN.no Slates Dataset: A new Sequential Dataset Logging Interactions, all Viewed Items and Click Responses/No-Click for Recommender Systems Research
+
+A Case Study on Sampling Strategies for Evaluating Neural Sequential Item Recommendation Models
+
+Analyzing Item Popularity Bias of Music Recommender Systems: Are Different Genders Equally Affected?
+
+Investigating Overparameterization for Non-Negative Matrix Factorization in Collaborative Filtering
+
+The Stereotyping Problem in Collaboratively Filtered Recommender Systems
+
+Learning to Learn a Cold-start Sequential Recommender
+
+A Graph-Based Approach for Mitigating Multi-Sided Exposure Bias in Recommender Systems
+
+Denoising Time Cycle Modeling for Recommendation
+
+MP2: A Momentum Contrast Approach for Recommendation with Pointwise and Pairwise Learning
+
+Unlearning Protected User Attributes in Recommendations with Adversarial Training
+
+AHP: Learning to Negative Sample for Hyperedge Prediction
+
+Bilateral Self-unbiased Learning from Biased Implicit Feedback
+
+Determinantal Point Process Likelihoods for Sequential Recommendation
+
+Investigating Accuracy-Novelty Performance for Graph-based Collaborative Filtering
+
+Re-weighting Negative Samples for Model-Agnostic Matching
+
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction
+
+Fast Variational AutoEncoder with Inverted Multi-Index for Collaborative Filtering
+
+FeedRec: News Feed Recommendation with Various User Feedbacks
+
+MetaBalance: Improving Multi-Task Recommendations via Adapting Gradient Magnitudes of Auxiliary Tasks
+
+Improving Graph Collaborative Filtering with Neighborhood-enriched Contrastive Learning
+
+MCL: Mixed-Centric Loss for Collaborative Filtering
+
+Mutually-Regularized Dual Collaborative Variational Auto-encoder for Recommendation Systems
+
+Collaborative Filtering with Attribution Alignment for Review-based Non-overlapped Cross Domain Recommendation
+
+Distributionally-robust Recommendations for Improving Worst-case User Experience
+
+It Is Different When Items Are Older: Debiasing Recommendations When Selection Bias and User Preferences Are Dynamic
+
+RecGURU: Adversarial Learning of Generalized User Representations for Cross-Domain Recommendation
+
+Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation
+
+On Sampling Collaborative Filtering Datasets
+
+S-Walk: Accurate and Scalable Session-based Recommendation with Random Walks
+
+Supervised Advantage Actor-Critic for Recommender Systems
+
+DVR: Micro-Video Recommendation Optimizing Watch-Time-Gain under Duration Bias
+
+KuaiRec: A Fully-observed Dataset and Insights for Evaluating Recommender Systems
+
+Dually Enhanced Propensity Score Estimation in Sequential Recommendation
+
+Generative Adversarial Zero-Shot Learning for Cold-Start News Recommendation
+
+Unbiased Learning to Rank with Biased Continuous Feedback
+
+Debiasing Neighbor Aggregation for Graph Neural Network in Recommender Systems
+
+KuaiRand: An Unbiased Sequential Recommendation Dataset with Randomly Exposed Videos
+
+Prototypical Contrastive Learning and Adaptive Interest Selection for Candidate Generation in Recommendations
+
+See Clicks Differently: Modeling User Clicking Alternatively with Multi Classifiers for CTR Prediction
+
+Towards Confidence-aware Calibrated Recommendation
+
+Don’t recommend the obvious: estimate probability ratios
+
+Exploiting Negative Preference in Content-based Music Recommendation with Contrastive Learning
+
+Defending Substitution-Based Profile Pollution Attacks on Sequential Recommenders
+
+Learning Recommendations from User Actions in the Item-poor Insurance Domain
+
+Solving Diversity-Aware Maximum Inner Product Search Efficiently and Effectively
+
+Fast and Accurate User Cold-Start Learning Using Monte Carlo Tree Search
+
+Be Causal: De-Biasing Social Network Confounding in Recommendation
+
+Deconfounding Duration Bias in Watch-time Prediction for Video Recommendation
+
+A Generalized Doubly Robust Learning Framework for Debiasing Post-Click Conversion Rate Prediction
+
+MDP2 Forest: A Constrained Continuous Multi-dimensional Policy Optimization Approach for Short-video Recommendation
+
+Debiasing the Cloze Task in Sequential Recommendation with Bidirectional Transformers
+
+Disentangled Representation for Diversified Recommendations
+
+NGAME: Negative Mining-aware Mini-batching for Extreme Classification
+
+A Critical Reexamination of Intra-List Distance and Dispersion
+
+Alleviating Matthew Effect of Offline Reinforcement Learning in Interactive Recommendation
+
+Curse of "Low" Dimensionality in Recommender Systems
+
+Generative-Contrastive Graph Learning for Recommendation
+
+Meta-optimized Contrastive Learning for Sequential Recommendation
+
+When Newer is Not Better: Does Deep Learning Really Benefit Recommendation From Implicit Feedback?
+
+Popularity Debiasing from Exposure to Interaction in Collaborative Filtering
+
+Computational Versus Perceived Popularity Miscalibration in Recommender Systems
+
+Forget Me Now: Fast and Exact Unlearning in Neighborhood-based Recommendation
+
+Neighborhood-based Hard Negative Mining for Sequential Recommendation
+
+uCTRL: Unbiased Contrastive Representation Learning via Alignment and Uniformity for Collaborative Filtering
+
+Unbiased Pairwise Learning from Implicit Feedback for Recommender Systems without Biased Variance Control
+
+Non-popular Items for Accurate & Diverse Linear Auto-Encoding Recommenders
+
+Reaching the End of Unbiasedness: Uncovering Implicit Limitations of Click-Based Learning to Rank
+
+The Bandwagon Effect: Not Just Another Bias
+
+On the Theories Behind Hard Negative Sampling for Recommendation
+
+Bootstrap Latent Representations for Multi-modal Recommendation
+
+Dual-interest Factorization-heads Attention for Sequential Recommendation
+
+Learning with Exposure Constraints in Recommendation Systems
+
+AutoDenoise: Automatic Data Instance Denoising for Recommendations
+
+Improving Recommendation Fairness via Data Augmentation
+
+Debiased Contrastive Learning for Sequential Recommendation
+
+Cooperative Retriever and Ranker in Deep Recommenders
+
+Modeling Temporal Positive and Negative Excitation for Sequential Recommendation
+
+A Self-Correcting Sequential Recommender
+
+Balancing Unobserved Confounding with a Few Unbiased Ratings in Debiased Recommendations
+
+Reweighting Clicks with Dwell Time in Recommendation
+
+On the Effect of Low-Ranked Documents: A New Sampling Function for Selective Gradient Boosting
+
+Addressing Confounding Feature Issue for Causal Recommendation
+
+Bias and Debias in Recommender System: A Survey and Future Directions
+
+Doubly Robust Estimation for Correcting Position Bias in Click Feedback for Unbiased Learning to Rank
+
+Causal Collaborative Filtering
+
+Mitigating Mainstream Bias in Recommendation via Cost-sensitive Learning
+
+B2-Sampling: Fusing Balanced and Biased Sampling for Graph Contrastive Learning
+
+Efficient Bi-Level Optimization for Recommendation Denoising
+
+Impatient Bandits: Optimizing Recommendations for the Long-Term Without Delay
+
+Optimal Dynamic Subset Sampling: Theory and Applications
+
+Reducing Exposure to Harmful Content via Graph Rewiring
+
+CT4Rec: Simple yet Effective Consistency Training for Sequential Recommendation
+
+Graph-Based Model-Agnostic Data Subsampling for Recommendation Systems
+
+Multi-factor Sequential Re-ranking with Perception-Aware Diversification
+
+Your Negative May not Be True Negative: Boosting Image-Text Matching with False Negative Elimination
+
+Making Users Indistinguishable: Attribute-wise Unlearning in Recommender Systems
+
+Diff4Rec: Sequential Recommendation with Curriculum-scheduled Diffusion Augmentation
+
+Bounding System-Induced Biases in Recommender Systems with a Randomized Dataset
+
+A Generalized Propensity Learning Framework for Unbiased Post-Click Conversion Rate Estimation
+
+CDR: Conservative Doubly Robust Learning for Debiased Recommendation
+
+Dimension Independent Mixup for Hard Negative Sample in Collaborative Filtering
+
+Dual-Oriented Contrast for Recommendation with A Stop-Gradient Operation
+
+Meta-Learning with Adaptive Weighted Loss for Imbalanced Cold-Start Recommendation
+
+Parallel Knowledge Enhancement based Framework for Multi-behavior Recommendation
+
+Text Matching Improves Sequential Recommendation by Reducing Popularity Biases
+
+Toward a Better Understanding of Loss Functions for Collaborative Filtering
+
+Diffusion Augmentation for Sequential Recommendation
+
+Dynamic Embedding Size Search with Minimum Regret for Streaming Recommender System
+
+DPAN: Dynamic Preference-based and Attribute-aware Network for Relevant Recommendations
+
+Test-Time Embedding Normalization for Popularity Bias Mitigation
+
+Entire Space Cascade Delayed Feedback Modeling for Effective Conversion Rate Prediction
+
+Lower-Left Partial AUC: An Effective and Efficient Optimization Metric for Recommendation
+
+Debiasing Recommendation with Personal Popularity
+
+Filter Bubble or Homogenization? Disentangling the Long-Term Effects of Recommendations on User Consumption Patterns
+
+Enhancing Recommendation Accuracy and Diversity with Box Embedding: A Universal Framework
+
+Reconciling the Accuracy-Diversity Trade-off in Recommendations
+
+Uncovering the Deep Filter Bubble: Narrow Exposure in Short-Video Recommendation
+
+Cluster Anchor Regularization to Alleviate Popularity Bias in Recommender Systems
+
+On Practical Diversified Recommendation with Controllable Category Diversity Framework
+
+Is the 'Impression Log' Beneficial to Evaluating News Recommender Systems? No, it is Not!
+
+Causality-driven User Modeling for Sequential Recommendations over Time
+
+SelfCF: A Simple Framework for Self-supervised Collaborative Filtering
+
+Causal Disentangled Recommendation against User Preference Shifts
+
+CIRS: Bursting Filter Bubbles by Counterfactual Interactive Recommender System
+
+Rethinking Multi-Interest Learning for Candidate Matching in Recommender Systems
+
+A Probabilistic Position Bias Model for Short-Video Recommendation Feeds
+
+gSASRec: Reducing Overconfidence in Sequential Recommendation Trained with Negative Sampling
+
+Uncovering User Interest from Biased and Noised Watch Time in Video Recommendation
+
+Two-sided Calibration for Quality-aware Responsible Recommendation
+
+Understanding and Modeling Passive-Negative Feedback for Short-video Sequential Recommendation
+
+Bootstrapped Personalized Popularity for Cold Start Recommender Systems
+
+Scalable Approximate NonSymmetric Autoencoder for Collaborative Filtering
+
+Topic-Level Bayesian Surprise and Serendipity for Recommender Systems
+
+Deep Exploration for Recommendation Systems
+
+Ex2Vec: Characterizing Users and Items from the Mere Exposure Effect
+
+Scaling Session-Based Transformer Recommendations using Optimized Negative Sampling and Loss Functions
+
+Uncertainty-adjusted Inductive Matrix Completion with Graph Neural Networks
+
+Deconfounded Causal Collaborative Filtering
+
+On Popularity Bias of Multimodal-aware Recommender Systems: A Modalities-driven Analysis
+
+Criterion-based Heterogeneous Collaborative Filtering for Multi-behavior Implicit Recommendation
+
+Inverse Learning with Extremely Sparse Feedback for Recommendation
+
+On the Effectiveness of Unlearning in Session-Based Recommendation
+
+Towards Mitigating Dimensional Collapse of Representations in Collaborative Filtering
+
+Not All Negatives Are Worth Attending to: Meta-Bootstrapping Negative Sampling Framework for Link Prediction
+
+Debiasing Sequential Recommenders through Distributionally Robust Optimization over System Exposure
+
+Alleviating Video-length Effect for Micro-video Recommendation
+
+User Cold-Start Learning in Recommender Systems using Monte Carlo Tree Search
+
+Automatic Feature Fairness in Recommendation via Adversaries
+
+REST: Debiased Social Recommendation via Reconstructing Exposure Strategies
+
+Treatment Effect Estimation for User Interest Exploration on Recommender Systems
+
+SIGformer: Sign-aware Graph Transformer for Recommendation
+
+Going Beyond Popularity and Positivity Bias: Correcting for Multifactorial Bias in Recommender Systems
+
+Bi-Objective Negative Sampling for Sensitivity-Aware Search
+
+Negative Feedback for Music Personalization
+
+Contrastive Self-supervised Learning in Recommender Systems: A Survey
+
+Robust Collaborative Filtering to Popularity Distribution Shift
+
+Do We Really Need to Drop Items with Missing Modalities in Multimodal Recommendation?
+
+Improved Estimation of Ranks for Learning Item Recommenders with Negative Sampling
+
+Robust Training of Temporal GNNs using Nearest Neighbour based Hard Negatives
+
+On the Effectiveness of Sampled Softmax Loss for Item Recommendation
+
+GradCraft: Elevating Multi-task Recommendations through Holistic Gradient Crafting
+
+Mitigating Pooling Bias in E-commerce Search via False Negative Estimation
+
+On (Normalised) Discounted Cumulative Gain as an Off-Policy Evaluation Metric for Top-n Recommendation
+
+Double Correction Framework for Denoising Recommendation
+
+DFGNN: Dual-frequency Graph Neural Network for Sign-aware Feedback
+
+Unveiling Vulnerabilities of Contrastive Recommender Systems to Poisoning Attacks
+
+Graph Bottlenecked Social Recommendation
+
+Popularity-Aware Alignment and Contrast for Mitigating Popularity Bias
+
+Harm Mitigation in Recommender Systems under User Preference Dynamics
+
+AMBAR: A dataset for Assessing Multiple Beyond-Accuracy Recommenders
+
+Not All Videos Become Outdated: Short-Video Recommendation by Learning to Deconfound Release Interval Bias
+
+Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs
+
+Unlocking the Hidden Treasures: Enhancing Recommendations with Unlabeled Data
+
+Enhancing Sequential Music Recommendation with Negative Feedback-informed Contrastive Learning
+
+Improve the Quality of Recommender Systems based on Collaborative Filtering with Missing Data Imputation
+
+Deep Causal Reasoning for Recommendations
+
+Toward Bias-Agnostic Recommender Systems: A Universal Generative Framework
+
+Zeroshot Listwise Learning to Rank Algorithm for Recommendation
+
+Model-Agnostic Social Network Refinement with Diffusion Models for Robust Social Recommendation
+
+S-Diff: An Anisotropic Diffusion Model for Collaborative Filtering in Spectral Domain
+
+An Aspect Performance-aware Hypergraph Neural Network for Review-based Recommendation
+
+D-RDW: Diversity-Driven Random Walks for News Recommender Systems
+
+Correcting the LogQ Correction: Revisiting Sampled Softmax for Large-Scale Retrieval
+
+On Inherited Popularity Bias in Cold-Start Item Recommendation
+
+Leave No One Behind: Fairness-Aware Cross-Domain Recommender Systems for Non-Overlapping Users
+
+A Non-Parametric Choice Model That Learns How Users Choose Between Recommended Options
+
+TIM-Rec: Explicit Sparse Feedback on Multi-Item Upselling Recommendations in an Industrial Dataset of Telco Calls
+
+Exploitation Over Exploration: Unmasking the Bias in Linear Bandit Recommender Offline Evaluation
+
+Causal Inference for Recommendation: Foundations, Methods, and Applications
+
+Balancing Embedding Spectrum for Recommendation
+
+Document Similarity Enhanced IPS Estimation for Unbiased Learning to Rank
+
+Breaking Feedback Loops in Recommender Systems with Causal Inference
+
+No Bias Left Behind: Fairness Testing for Deep Recommender Systems Targeting General Disadvantaged Groups
+
+Exploring and Exploiting Data Heterogeneity in Recommendation
+
+Graph Unlearning Meets Influence-aware Negative Preference Optimization
+
+Asymmetric Diffusion Recommendation Model
+
+Accurate and Diverse Recommendations via Propensity-Weighted Linear Autoencoders
+
+Single-Branch Network Architectures to Close the Modality Gap in Multimodal Recommendation
+
+The Upside of Bias: Personalizing Long-Tail Item Recommendations with Biased Sampling
+
+A Survey of Collaborative Filtering Techniques
+
+Negative and Positive Association Rules Mining from Text Using Frequent and Infrequent Itemsets
+
+Abnormal Profiles Detection Based on Time Series and Target Item Analysis for Recommender Systems
+
+Personalized Recommendation via Suppressing Excessive Diffusion
+
+Investigating the Temporal Effect of User Preferences with Application in Movie Recommendation
+
+Novel Recommendation System for Tourist Spots Based on Hierarchical Sampling Statistics and SVD++
+
+Unsupervised Negative Link Prediction in Signed Social Networks
+
+Prediction of Drug Side Effects with a Refined Negative Sample Selection Strategy
+
+An End-to-End Review-Based Aspect-Level Neural Model for Sequential Recommendation
+
+Online Course Recommendation Using Deep Convolutional Neural Network with Negative Sequence Mining
+
+Neural Matrix Factorization Recommendation for User Preference Prediction Based on Explicit and Implicit Feedback
+
+Research on the Propagation Characteristics of Negative News Information Based on Personalized Recommendation Algorithm
+
+RecommendRift: a leap forward in user experience with transfer learning on netflix recommendations
+
+The influence of negative training set size on machine learning-based virtual screening
+
+Old drug repositioning and new drug discovery through similarity learning from drug-target joint feature spaces
+
+How to balance the bioinformatics data: pseudo-negative sampling
+
+Improved cytokine–receptor interaction prediction by exploiting the negative sample space
+
+Multiple sampling schemes and deep learning improve active learning performance in drug-drug interaction information retrieval analysis from the literature
+
+A sample decreasing threshold greedy-based algorithm for big data summarisation
+
+Tca4rec: contrastive learning with popularity-aware asymmetric augmentation for robust sequential recommendation
+
+Rating Movies and Rating the Raters Who Rate Them
+
+Information filtering via self-consistent refinement
+
+THE PIGEONHOLE BOOTSTRAP
+
+Statistical analysis of $k$-nearest neighbor collaborative recommendation
+
+Constrained User Exposure Matrix Factorization in Recommendation System
+
+Diversity Subsampling: Custom Subsamples from Large Data Sets
+
+The Power of Subsampling in Submodular Maximization
+
+Online Collaborative Filtering on Graphs
+
+Correction: Large-Scale Off-Target Identification Using Fast and Accurate Dual Regularized One-Class Collaborative Filtering and Its Application to Drug Repurposing
+
+Similarity from Multi-Dimensional Scaling: Solving the Accuracy and Diversity Dilemma in Information Filtering
+
+Predicting Positive and Negative Relationships in Large Social Networks
+
+Sample Selection for Training Cascade Detectors
+
+Empirical Study of User Preferences Based on Rating Data of Movies
+
+Information filtering based on corrected redundancy-eliminating mass diffusion
+
+Correction: An improved collaborative filtering method based on similarity
+
+High Order Profile Expansion to tackle the new user problem on recommender systems
+
+Novel online Recommendation algorithm for Massive Open Online Courses (NoR-MOOCs)
+
+Link prediction on bipartite networks using matrix factorization with negative sample selection
+
+Symmetric Collaborative Filtering Using the Noisy Sensor Model
+
+High Accuracy and Low Regret for User-Cold-Start Using Latent Bandits
+
+Semantic Sampling: Enhancing Recommendation Diversity and User Engagement in the Headspace Meditation App
+
+Learning to Sample: Counting with Complex Queries
+
+The Limits of Graph Samplers for Training Inductive Recommender Systems
+
+Context-aware Music Recommender System Based on Implicit Feedback
+
+Improving Recommendation via Inference of User Popularity Preference in Sparse Data Environment
+
+Tighter Generalization Bounds for Matrix Completion Via Factorization Into Constrained Matrices
+
+A Survey on Recommendation Methods Beyond Accuracy
+
+Negative Correlation Learning in the Estimation of Distribution Algorithms for Combinatorial Optimization
+
+Active Dual Collaborative Filtering with Both Item and Attribute Feedback
+
+Recommending Positive Links in Signed Social Networks by Optimizing a Generalized AUC
+
+On the Effectiveness of Linear Models for One-Class Collaborative Filtering
+
+Low-Rank Factorization of Determinantal Point Processes
+
+VSE-ens: Visual-Semantic Embeddings with Efficient Negative Sampling
+
+Coupled Poisson Factorization Integrated With User/Item Metadata for Modeling Popular and Sparse Ratings in Scalable Recommendation
+
+Collaborative Filtering with Social Exposure: A Modular Approach to Social Recommendation
+
+Improving One-Class Collaborative Filtering via Ranking-Based Implicit Regularizer
+
+From Zero-Shot Learning to Cold-Start Recommendation
+
+Trainable Undersampling for Class-Imbalance Learning
+
+Efficient Heterogeneous Collaborative Filtering without Negative Sampling for Recommendation
+
+Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback
+
+Class Prior Estimation with Biased Positives and Unlabeled Examples
+
+Stochastically Robust Personalized Ranking for LSH Recommendation Retrieval
+
+Symmetric Metric Learning with Adaptive Margin for Recommendation
+
+Multi-Component Graph Convolutional Collaborative Filtering
+
+Preventing Overfitting via Sample Reweighting for Recommender System Incremental Update (Student Abstract)
+
+A Hybrid Bandit Framework for Diversified Recommendation
+
+On Estimating Recommendation Evaluation Metrics under Sampling
+
+Disposable Linear Bandits for Online Recommendations
+
+Hierarchical Negative Binomial Factorization for Recommender Systems on Implicit Feedback
+
+Rejection Sampling for Weighted Jaccard Similarity Revisited
+
+Learning to Recommend from Sparse Data via Generative User Feedback
+
+A General Offline Reinforcement Learning Framework for Interactive Recommendation
+
+Tripartite Collaborative Filtering with Observability and Selection for Debiasing Rating Estimation on Missing-Not-at-Random Data
+
+Cold-start Sequential Recommendation via Meta Learner
+
+Conditional Collaborative Filtering Process for Top-K Recommender System (Student Abstract)
+
+Weakly Supervised Video Moment Localization with Contrastive Negative Sample Mining
+
+FPAdaMetric: False-Positive-Aware Adaptive Metric Learning for Session-Based Recommendation
+
+Learning from the Dark: Boosting Graph Convolutional Neural Networks with Diverse Negative Samples
+
+Sampling for Beyond-Worst-Case Online Ranking
+
+Sparse Enhanced Network: An Adversarial Generation Method for Robust Augmentation in Sequential Recommendation
+
+Review-Enhanced Hierarchical Contrastive Learning for Recommendation
+
+Preference Aware Dual Contrastive Learning for Item Cold-Start Recommendation
+
+RRL: Recommendation Reverse Learning
+
+Exploiting Fine-Grained Skip Behaviors for Micro-Video Recommendation
+
+Does GCL Need a Large Number of Negative Samples? Enhancing Graph Contrastive Learning with Effective and Efficient Negative Sampling
+
+Learning over no-Preferred and Preferred Sequence of items for Robust Recommendation
+
+A Selective Under-Sampling (SUS) Method for Imbalanced Regression
+
+Resampling methods for particle filtering: identical distribution, a new method, and comparable study
+
+Time-Bin-Based Neighbourhood Algorithm for Temporal Effects in Recommendation Systems
+
+Enhancing Recommendation Accuracy of Item-Based Collaborative Filtering under Data Sparsity
+
+Considerations on Recommendation Independence for a Find-Good-Items Task
+
+Monte Carlo Estimates of Evaluation Metric Error and Bias
+
+Reservoir Sampling Based Streaming Method for Large Scale Collaborative Filtering
+
+The Impact of Oversampling and Undersampling on Aspect-Based Sentiment Analysis of Indramayu Tourism Using Logistic Regression
+
+GCNE: Graph Convolution Networks with Explicitly Influence for Recommendation
+
+Modeling and Counteracting Exposure Bias in Recommender Systems
+
+Recommender Framework for Sentimental Analysis using l-injection
+
+SentiRec: Sentiment Diversity-aware Neural News Recommendation
+
+Unbiasing Review Ratings with Tendency Based Collaborative Filtering
+
+Short Text Topic Modeling with Topic Distribution Quantization and Negative Sampling Decoder
+
+Structure Aware Negative Sampling in Knowledge Graphs
+
+Unsupervised Extractive Summarization-Based Representations for Accurate and Explainable Collaborative Filtering
+
+Unified Interpretation of Softmax Cross-Entropy and Negative Sampling: With Case Study for Knowledge Graph Embedding
+
+On Positivity Bias in Negative Reviews
+
+Don't Miss the Potential Customers! Retrieving Similar Ads to Improve User Targeting
+
+Multi-task Learning of Negation and Speculation for Targeted Sentiment Classification
+
+DebiasGAN: Eliminating Position Bias in News Recommendation with Adversarial Learning
+
+Negative Sample is Negative in Its Own Way: Tailoring Negative Sentences for Image-Text Retrieval
+
+Don’t Mess with Mister-in-Between: Improved Negative Search for Knowledge Graph Completion
+
+Improving Knowledge Graph Completion with Generative Hard Negative Mining
+
+Noise Contrastive Estimation and Negative Sampling for Conditional Models: Consistency and Statistical Efficiency
+
+Negative Sampling Improves Hypernymy Extraction Based on Projection Learning
+
+Adversarial Contrastive Estimation
+
+Second-order Co-occurrence Sensitivity of Skip-Gram with Negative Sampling
+
+A Social Recommendation Based on Metric Learning and Users' Co-Occurrence Pattern
+
+A Scalable Recommendation Engine for New Users and Items
+
+An Extension for Bounded-SVD - A Matrix Factorization Method with Bound Constraints for Recommender Systems
+
+Data imputation using a trust network for recommendation via matrix factorization
+
+Collaborative filtering via graph signal processing
+
+PERFORMANCE OF SYNTHETIC MINORITY OVER-SAMPLING TECHNIQUE ON SUPPORT VECTOR MACHINE AND K-NEAREST NEIGHBOR FOR SENTIMENT ANALYSIS OF METAVERSE IN INDONESIA
+
+Stable Matrix Approximation for Top-N Recommendation on Implicit Feedback Data
+
+Divergence Based Non-Negative Matrix Factorization for top-N Recommendations
+
+Tag-Aware Personalized Recommendation Using a Hybrid Deep Model
+
+Quantifying Aspect Bias in Ordinal Ratings using a Bayesian Approach
+
+Sampling for Approximate Bipartite Network Projection
+
+Improving Implicit Recommender Systems with View Data
+
+Approximating Word Ranking and Negative Sampling for Word Embedding
+
+Does Every Data Instance Matter? Enhancing Sequential Recommendation by Eliminating Unreliable Data
+
+Absolute Wrong Makes Better: Boosting Weakly Supervised Object Detection via Negative Deterministic Information
+
+Towards Resolving Propensity Contradiction in Offline Recommender Learning
+
+Rethinking InfoNCE: How Many Negative Samples Do You Need?
+
+On the Opportunity of Causal Learning in Recommendation Systems: Foundation, Estimation, Prediction and Challenges
+
+Combinatorial Games with Incomplete Information
+
+Alleviating the User Cold-Start Problem in Recommendation Systems Based on Textual Reviews Using Deep Learning
+
+A Recommendation Algorithm Based on Efficient Dense Subsequence and Data Generation
+
+ANALYSIS OF RATING PREDICTION SYSTEM FROM TEXTUAL REVIEWS
+
+Recommendation Algorithm Based on Restricted Boltzmann Machine and Item Type
+
+Improving Collaborative Filtering Recommendation
+
+Modeling Implicit Feedback and Latent Visual Features for Machine-Learning Based Recommendation
+
+Collaborative Filtering Algorithm Based on Random Walk with Choice
+
+Exploration & Exploitation: A Unified Framework for Data Purification & Augmentation in Recommendation Systems
+
+Positive Unlabeled Learning for Deceptive Reviews Detection
+
+Listwise Collaborative Filtering with High-Rating-Based Similarity and Simple Missing Value Estimation
+
+DEEP VISUAL RECOMMENDATION SYSTEM
+
+An Easy Rejection Sampling Baseline via Gradient Refined Proposals
+
+Mitigating Position Bias with Regularization for Recommender Systems
+
+Pessimistic Off-Policy Optimization for Learning to Rank
+
+Top-N recommendations in the presence of sparsity: An NCD-based approach
+
+Chronic disease treatment default prediction with random sampling optimization.
+
+Capturing Preferences of New Users in Generative Tasks with Minimal Interactions Collaborative Filtering Using Siamese Networks and Soft Clustering
+
+Data Balancing Approach Using Combine Sampling on Sentiment Analysis With K-Nearest Neighbor
+
+Profile and Rating Similarity Analysis for Recommendation Systems Using Deep Learning
+
+RECOVERY OF MISSING DATA USING ENHANCED PROBABILISTIC MATRIX FACTORIZATION
+
+Collaborative filtering based on nonnegative/binary matrix factorization
+
+Medical prediction from missing data with max-minus negative regularized dropout
+
+Integrated Random Negative Sampling and Uncertainty Sampling in Active Learning Improve Clinical Drug Safety Drug–Drug Interaction Information Retrieval
+
+An Algorithm for Density Enrichment of Sparse Collaborative Filtering Datasets Using Robust Predictions as Derived Ratings
+
+Eliciting Auxiliary Information for Cold Start User Recommendation: A Survey
+
+A Two-Phase Deep Learning-Based Recommender System: Enhanced by a Data Quality Inspector
+
+Enhanced Collaborative Filtering for Personalized E-Government Recommendation
+
+DACSR: Decoupled-Aggregated End-to-End Calibrated Sequential Recommendation
+
+Improving Graph Neural Network Models in Link Prediction Task via A Policy-Based Training Method
+
+De-Selection Bias Recommendation Algorithm Based on Propensity Score Estimation
+
+Addressing Complete New Item Cold-Start Recommendation: A Niche Item-Based Collaborative Filtering via Interrelationship Mining
+
+The Influence of Herd Mentality on Rating Bias and Popularity Bias: A Bi-Process Debiasing Recommendation Model Based on Matrix Factorization
+
+Debiasing the Conversion Rate Prediction Model in the Presence of Delayed Implicit Feedback
+
+Gradient-Based Multiple Robust Learning Calibration on Data Missing-Not-at-Random via Bi-Level Optimization
+
+Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective
+
+A Metric Learning Perspective on the Implicit Feedback-Based Recommendation Data Imbalance Problem
+
+Developing a Semi-Supervised Approach Using a PU-Learning-Based Data Augmentation Strategy for Multitarget Drug Discovery
+
+On Exploiting Rating Prediction Accuracy Features in Dense Collaborative Filtering Datasets
+
+HS-SocialRec: A Study on Boosting Social Recommendations with Hard Negative Sampling in LightGCN
+
+Exploiting Rating Abstention Intervals for Addressing Concept Drift in Social Network Recommender Systems
+
+Enhanced Graph Learning for Recommendation via Causal Inference
+
+A Sampling-Based Method for Detecting Data Poisoning Attacks in Recommendation Systems
+
+A Negative Sample-Free Graph Contrastive Learning Algorithm
+
+Priors for Diversity and Novelty on Neural Recommender Systems
+
+When Diversity Met Accuracy: A Story of Recommender Systems
+
+Deep Metric Learning Using Negative Sampling Probability Annealing
+
+An Enhanced Latent Factor Recommendation Approach for Sparse Datasets of E-Commerce Platforms
+
+Normalization-based neighborhood model for cold start problem in recommendation system
+
+A Long Tail Item Recommendations for MovieLens
+
+NEGATIVE-SAMPLING WORD-EMBEDDING METHOD
+
+MFMAP: Learning to Maximize MAP with Matrix Factorization for Implicit Feedback in Recommender System
+
+Comparison Between Selective Sampling and Random Undersampling for Classification of Customer Defection Using Support Vector Machine
+
+ConvSVD++: A Hybrid Deep CF Recommender Model using Convolutional Neural Network
+
+Multi-behavioral recommendation model based on dual neural networks and contrast learning.
+
+A Web Semantic-Based Text Analysis Approach for Enhancing Named Entity Recognition Using PU-Learning and Negative Sampling
+
+NINU: An Incremental User-Based Algorithm for Data Sparsity Recommender Systems
+
+E-MsNFIS: Efficient Negative Frequent Itemsets Mining Based on Multiple Minimum Supports
+
+A Recommendation Algorithm from the Object Perspective
+
+Understanding Elapsed-time Sampling Delayed Feedback
+
+Considering Durations and Replays to Improve Music Recommender Systems
+
+Reverse Prevention Sampling for Misinformation Mitigation in Social Networks
+
+Efficient Algorithms for k-Regret Minimizing Sets
+
+Improved Collaborative Filtering Recommender System Based on Missing Values Imputation on E-Commerce
+
+PCF: Projection-based Collaborative Filtering
+
+Utilizing Imbalanced Data and Classification Cost Matrix to Predict Movie Preferences
+
+Using Collaborative Filtering to Overcome the Curse of Dimensionality when Clustering Users in a Group Recommender System
+
+Fast Item-Based Collaborative Filtering
+
+Training Models on Sparse Data and Labels in Recommendation Systems: Overcoming Supervision and Feedback Limitations
+
+Leveraging Negative Signals with Self-Attention for Sequential Music Recommendation
+
+On the challenges of studying bias in Recommender Systems: The effect of data characteristics and algorithm configuration
+
+Recommendation System in Advertising and Streaming Media: Unsupervised Data Enhancement Sequence Suggestions
+
+A hybrid multi-criteria recommendation algorithm based on autoencoders
+
+Meta-Learn to Unlearn: Enhanced Exact Machine Unlearning in Recommendation Systems with Meta-Learning
+
+Forgetting on Evolving Graphs for Accurate and Diverse Stream-Based Recommendation
+
+An Enhanced Data Sparsity Reduction Method for Effective Collaborative Filtering Recommendations
+
+Personalized movie recommendations based on deep representation learning
+
+Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption
+
+EquiRate: balanced rating injection approach for popularity bias mitigation in recommender systems
+
+Mining Negative Association Rules
+
+Analysis of a Collaborative Filter Based on Popularity Amongst Neighbors
+
+Subjective Collaborative Filtering
+
+Distributed User Profiling via Spectral Methods
+
+Information filtering via biased heat conduction
+
+Conquering the rating bound problem in neighborhood-based collaborative
+  filtering: a function recovery approach
+
+Augment-and-Conquer Negative Binomial Processes
+
+Mathematical Modeling of Product Rating: Sufficiency, Misbehavior and
+  Aggregation Rules
+
+Provable Inductive Matrix Completion
+
+Loss-Proportional Subsampling for Subsequent ERM
+
+Scalable Recommendation with Poisson Factorization
+
+Improving offline evaluation of contextual bandit algorithms via
+  bootstrapping techniques
+
+Cold-start Problems in Recommendation Systems via Contextual-bandit
+  Algorithms
+
+Budget-Constrained Item Cold-Start Handling in Collaborative Filtering
+  Recommenders via Optimal Design
+
+Reducing Offline Evaluation Bias in Recommendation Systems
+
+Bandits Warm-up Cold Recommender Systems
+
+Preference Networks: Probabilistic Models for Recommendation Systems
+
+Notes on Noise Contrastive Estimation and Negative Sampling
+
+DUM: Diversity-Weighted Utility Maximization for Recommendations
+
+PU Learning for Matrix Completion
+
+A Latent Source Model for Online Collaborative Filtering
+
+Probabilistic low-rank matrix completion on finite alphabets
+
+Negative Link Prediction in Social Media
+
+Representation Learning for cold-start recommendation
+
+Collaborative Filtering Bandits
+
+Nonnegative Multi-level Network Factorization for Latent Factor Analysis
+
+Detecting Sponsored Recommendations
+
+Thresholding for Top-k Recommendation with Temporal Dynamics
+
+Reducing offline evaluation bias of collaborative filtering algorithms
+
+Scalable Discrete Sampling as a Multi-Armed Bandit Problem
+
+Preference Completion: Large-scale Collaborative Ranking from Pairwise
+  Comparisons
+
+CONQUER: Confusion Queried Online Bandit Learning
+
+Fast Collaborative Filtering from Implicit Feedback with Provable
+  Guarantees
+
+Study of a bias in the offline evaluation of a recommendation algorithm
+
+Expressive recommender systems through normalized nonnegative models
+
+Semi-supervised Collaborative Ranking with Push at Top
+
+Top-N recommendations from expressive recommender systems
+
+A Theoretical Analysis of Two-Stage Recommendation for Cold-Start
+  Collaborative Filtering
+
+DCM Bandits: Learning to Rank with Multiple Clicks
+
+Recommendations as Treatments: Debiasing Learning and Evaluation
+
+Recovering Structured Probability Matrices
+
+Personalized Advertisement Recommendation: A Ranking Approach to Address
+  the Ubiquitous Click Sparsity Problem
+
+Theoretical Comparisons of Positive-Unlabeled Learning against
+  Positive-Negative Learning
+
+Cascading Bandits for Large-Scale Recommendation Problems
+
+Accurate and scalable social recommendation using mixed-membership
+  stochastic block models
+
+An Unbiased Data Collection and Content Exploitation/Exploration
+  Strategy for Personalization
+
+Hierarchical Compound Poisson Factorization
+
+Latent Contextual Bandits and their Application to Personalized
+  Recommendations for New Users
+
+Off-policy evaluation for slate recommendation
+
+Contextual Bandits with Latent Confounders: An NMF Approach
+
+Matrix Factorization using Window Sampling and Negative Sampling for
+  Improved Word Representations
+
+Regret Bounds for Non-decomposable Metrics with Missing Labels
+
+An Empirical Comparison of Sampling Quality Metrics: A Case Study for
+  Bayesian Nonnegative Matrix Factorization
+
+Neural Autoregressive Collaborative Filtering for Implicit Feedback
+
+One-Shot Session Recommendation Systems with Combinatorial Items
+
+The Bayesian Low-Rank Determinantal Point Process Mixture Model
+
+Unbiased Learning-to-Rank with Biased Feedback
+
+Dynamic Collaborative Filtering with Compound Poisson Factorization
+
+Collaborative Filtering with Recurrent Neural Networks
+
+Hard Negative Mining for Metric Learning Based Zero-Shot Classification
+
+LiRa: A New Likelihood-Based Similarity Score for Collaborative
+  Filtering
+
+Low-rank Bandits with Latent Mixtures
+
+Novelty Learning via Collaborative Proximity Filtering
+
+Collaborative Recurrent Autoencoder: Recommend while Learning to Fill in
+  the Blanks
+
+Task-driven sampling of attributed networks
+
+Realistic risk-mitigating recommendations via inverse classification
+
+Solving Cold-Start Problem in Large-scale Recommendation Engines: A Deep
+  Learning Approach
+
+"Influence Sketching": Finding Influential Samples In Large-Scale
+  Regressions
+
+MV-RNN: A Multi-View Recurrent Neural Network for Sequential
+  Recommendation
+
+Subsampled online matrix factorization with convergence guarantees
+
+Recommendation under Capacity Constraints
+
+Aggressive Sampling for Multi-class to Binary Reduction with
+  Applications to Text Classification
+
+A Model-based Projection Technique for Segmenting Customers
+
+Network Flow Based Post Processing for Sales Diversity
+
+Scalable Demand-Aware Recommendation
+
+Combating the Cold Start User Problem in Model Based Collaborative
+  Filtering
+
+Positive-Unlabeled Learning with Non-Negative Risk Estimator
+
+Deconvolving Feedback Loops in Recommender Systems
+
+Online Learning with Abstention
+
+Embedded Collaborative Filtering for "Cold Start" Prediction
+
+Understanding Negations in Information Processing: Learning from
+  Replicating Human Behavior
+
+Collaborative Filtering with Social Local Models
+
+Learning from Comparisons and Choices
+
+A Probabilistic Model for the Cold-Start Problem in Rating Prediction
+  using Click Data
+
+Music Playlist Continuation by Learning from Hand-Curated Examples and
+  Song Features: Alleviating the Cold-Start Problem for Rare and Out-of-Set
+  Songs
+
+Nonparametric Preference Completion
+
+Zonotope hit-and-run for efficient sampling from projection DPPs
+
+The Sample Complexity of Online One-Class Collaborative Filtering
+
+Dueling Bandits With Weak Regret
+
+Click-aware purchase prediction with push at the top
+
+Information-Guided Sampling for Low-Rank Matrix Completion
+
+Recommendation with k-anonymized Ratings
+
+Deep Learning based Recommender System: A Survey and New Perspectives
+
+Combinatorial Multi-armed Bandit with Probabilistically Triggered Arms:
+  A Case with Bounded Regret
+
+Training Deep AutoEncoders for Collaborative Filtering
+
+Collaborative Filtering using Denoising Auto-Encoders for Market Basket
+  Data
+
+Analysis of the Impact of Negative Sampling on Link Prediction in
+  Knowledge Graphs
+
+Optimal Sub-sampling with Influence Functions
+
+SweetRS: Dataset for a recommender systems of sweets
+
+Fast Greedy MAP Inference for Determinantal Point Process to Improve
+  Recommendation Diversity
+
+Sequential Matrix Completion
+
+Regret Bounds and Regimes of Optimality for User-User and Item-Item
+  Collaborative Filtering
+
+Deep density networks and uncertainty in recommender systems
+
+Mixture-of-tastes Models for Representing Users with Diverse Interests
+
+Adaptive Sampled Softmax with Kernel Based Sampling
+
+Stochastic Low-Rank Bandits
+
+Sampling for Approximate Bipartite Network Projection
+
+Leveraging Long and Short-term Information in Content-aware Movie
+  Recommendation
+
+Negative Binomial Matrix Factorization for Recommender Systems
+
+Metric Factorization: Recommendation beyond Matrix Factorization
+
+Popularity-Aware Item Weighting for Long-Tail Recommendation
+
+Learning Determinantal Point Processes by Corrective Negative Sampling
+
+Variational Autoencoders for Collaborative Filtering
+
+Recommendations with Negative Feedback via Pairwise Deep Reinforcement
+  Learning
+
+Leveraged volume sampling for linear regression
+
+Adaptive Sampling for Coarse Ranking
+
+A Generic Top-N Recommendation Framework For Trading-off Accuracy,
+  Novelty, and Coverage
+
+Beyond Greedy Ranking: Slate Optimization via List-CVAE
+
+Binary Matrix Completion Using Unobserved Entries
+
+Structured Output Learning with Abstention: Application to Accurate
+  Opinion Prediction
+
+Word2Vec applied to Recommendation: Hyperparameters Matter
+
+A Missing Information Loss function for implicit feedback datasets
+
+Positive and Unlabeled Learning through Negative Selection and
+  Imbalance-aware Classification
+
+Transduction with Matrix Completion Using Smoothed Rank Function
+
+Adversarial Training of Word2Vec for Basket Completion
+
+Addressing the Item Cold-start Problem by Attribute-driven Active
+  Learning
+
+Online Reciprocal Recommendation with Theoretical Performance Guarantees
+
+Tight Bound of Incremental Cover Trees for Dynamic Diversification
+
+Itemsets of interest for negative association rules
+
+Searching of interesting itemsets for negative association rules
+
+Scalable Recommender Systems through Recursive Evidence Chains
+
+Limits to Surprise in Recommender Systems
+
+Magnitude Bounded Matrix Factorisation for Recommender Systems
+
+Instance-Dependent PU Learning by Bayesian Optimal Relabeling
+
+Neural Collaborative Ranking
+
+A novel Empirical Bayes with Reversible Jump Markov Chain in User-Movie
+  Recommendation system
+
+Neighborhood Troubles: On the Value of User Pre-Filtering To Speed Up
+  and Enhance Recommendations
+
+The Deconfounded Recommender: A Causal Inference Approach to
+  Recommendation
+
+LRMM: Learning to Recommend with Missing Modalities
+
+Exploring Author Gender in Book Rating and Recommendation
+
+Using Taste Groups for Collaborative Filtering
+
+A novel graph-based model for hybrid recommendations in cold-start
+  scenarios
+
+Towards Large Scale Training Of Autoencoders For Collaborative Filtering
+
+Eigenvalue analogy for confidence estimation in item-based recommender
+  systems
+
+VOS: a Method for Variational Oversampling of Imbalanced Data
+
+Variational Approximation Error in Bayesian Non-negative Matrix
+  Factorization
+
+Mitigating Confirmation Bias on Twitter by Recommending Opposing Views
+
+Adversarial Recommendation: Attack of the Learned Fake Users
+
+Incorporating GAN for Negative Sampling in Knowledge Representation
+  Learning
+
+Classification from Positive, Unlabeled and Biased Negative Data
+
+Thompson Sampling Algorithms for Cascading Bandits
+
+Diversifying Music Recommendations
+
+Regret vs. Bandwidth Trade-off for Recommendation Systems
+
+Stochastic Negative Mining for Learning with Large Output Spaces
+
+Temporal Proximity induces Attributes Similarity
+
+Hybrid-MST: A Hybrid Active Sampling Strategy for Pairwise Preference
+  Aggregation
+
+Alternating Linear Bandits for Online Matrix-Factorization
+  Recommendation
+
+Noise Contrastive Estimation for Scalable Linear Models for One-Class
+  Collaborative Filtering
+
+Online Diverse Learning to Rank from Partial-Click Feedback
+
+Bias Disparity in Recommendation Systems
+
+Fast Non-Bayesian Poisson Factorization for Implicit-Feedback
+  Recommendations
+
+Collaborative Filtering with Stability
+
+Active Learning in Recommendation Systems with Multi-level User
+  Preferences
+
+Fighting Fire with Fire: Using Antidote Data to Improve Polarization and
+  Fairness of Recommender Systems
+
+NSCaching: Simple and Efficient Negative Sampling for Knowledge Graph
+  Embedding
+
+Deep Item-based Collaborative Filtering for Sparse Implicit Feedback
+
+Loss Aversion in Recommender Systems: Utilizing Negative User Preference
+  to Improve Recommendation Quality
+
+Cold-start Playlist Recommendation with Multitask Learning
+
+Managing Popularity Bias in Recommender Systems with Personalized
+  Re-ranking
+
+Thompson Sampling for a Fatigue-aware Online Recommendation System
+
+Scalable Realistic Recommendation Datasets through Fractal Expansions
+
+Revisiting Sample Selection Approach to Positive-Unlabeled Learning:
+  Turning Unlabeled Data into Positive rather than Negative
+
+DEDPUL: Difference-of-Estimated-Densities-based Positive-Unlabeled
+  Learning
+
+Diversity-Promoting Deep Reinforcement Learning for Interactive
+  Recommendation
+
+Personalized Neural Embeddings for Collaborative Filtering with Text
+
+Diverse personalized recommendations with uncertainty from implicit
+  preference data with the Bayesian Mallows Model
+
+Risk Aware Ranking for Top-$k$ Recommendations
+
+Submodular Maximization Beyond Non-negativity: Guarantees, Fast
+  Algorithms, and Applications
+
+Variational Autoencoders for Sparse and Overdispersed Discrete Data
+
+Deep Learning for Sequential Recommendation: Algorithms, Influential
+  Factors, and Evaluations
+
+Embarrassingly Shallow Autoencoders for Sparse Data
+
+Recent Advances in Diversified Recommendation
+
+Scaling Up Collaborative Filtering Data Sets through Randomized Fractal
+  Expansions
+
+Minimizing Time-to-Rank: A Learning and Recommendation Approach
+
+Recommendation from Raw Data with Adaptive Compound Poisson
+  Factorization
+
+Leveraging Trust and Distrust in Recommender Systems via Deep Learning
+
+Reducing Popularity Bias in Recommendation Over Time
+
+Embedding models for recommendation under contextual constraints
+
+Bandit Learning for Diversified Interactive Recommendation
+
+Modeling Artist Preferences of Users with Different Music Consumption
+  Patterns for Fair Music Recommendations
+
+On the Value of Bandit Feedback for Offline Recommender System
+  Evaluation
+
+The Unfairness of Popularity Bias in Recommendation
+
+Sudden Death: A New Way to Compare Recommendation Diversification
+
+Personalized Music Recommendation with Triplet Network
+
+With Malice Towards None: Assessing Uncertainty via Equalized Coverage
+
+A Bayesian Choice Model for Eliminating Feedback Loops
+
+Distributional Negative Sampling for Knowledge Base Completion
+
+Hierarchical Bayesian Personalized Recommendation: A Case Study and
+  Beyond
+
+All You Need is Ratings: A Clustering Approach to Synthetic Rating
+  Datasets Generation
+
+Wasserstein Collaborative Filtering for Item Cold-start Recommendation
+
+Crank up the volume: preference bias amplification in collaborative
+  recommendation
+
+Link Prediction Under Imperfect Detection: Collaborative Filtering for
+  Ecological Networks
+
+"Bring Your Own Greedy"+Max: Near-Optimal $1/2$-Approximations for
+  Submodular Knapsack
+
+The Impact of Popularity Bias on Fairness and Calibration in
+  Recommendation
+
+Entire Space Multi-Task Modeling via Post-Click Behavior Decomposition
+  for Conversion Rate Prediction
+
+Large-scale Causal Approaches to Debiasing Post-click Conversion Rate
+  Estimation with Multi-task Learning
+
+Improving Word Representations: A Sub-sampled Unigram Distribution for
+  Negative Sampling
+
+Markov Random Fields for Collaborative Filtering
+
+Learning to Recommend from Sparse Data via Generative User Feedback
+
+Empirical Analysis of Session-Based Recommendation Algorithms
+
+Weighted matrix completion from non-random, non-uniform sampling
+  patterns
+
+Online Learning and Optimization Under a New Linear-Threshold Model with
+  Negative Influence
+
+Negative sampling in semi-supervised learning
+
+Approximating the Permanent by Sampling from Adaptive Partitions
+
+Less Is Better: Unweighted Data Subsampling via Influence Function
+
+Evaluation Metrics for Item Recommendation under Sampling
+
+Monotone Submodular Diversity functions for Categorical Vectors with
+  Application to Diversification of Seeds for Targeted Influence Maximization
+
+Estimating Error and Bias in Offline Evaluation Results
+
+MetaSelector: Meta-Learning for Recommendation with User-Level Adaptive
+  Model Selection
+
+Correcting for Selection Bias in Learning-to-rank Systems
+
+Rethinking Class-Prior Estimation for Positive-Unlabeled Learning
+
+Extreme Classification via Adversarial Softmax Approximation
+
+Leveraging Cross Feedback of User and Item Embeddings with Attention for
+  Variational Autoencoder based Collaborative Filtering
+
+Reinforced Negative Sampling over Knowledge Graph for Recommendation
+
+Discrete-Valued Latent Preference Matrix Estimation with Graph Side
+  Information
+
+On Negative Transfer and Structure of Latent Functions in Multi-output
+  Gaussian Processes
+
+Practical Data Poisoning Attack against Next-Item Recommendation
+
+Personalized Re-ranking for Improving Diversity in Live Recommender
+  Systems
+
+Improving Positive Unlabeled Learning: Practical AUL Estimation and New
+  Training Method for Extremely Imbalanced Data Sets
+
+Online Learning with Cumulative Oversampling: Application to Budgeted
+  Influence Maximization
+
+FairMatch: A Graph-based Approach for Improving Aggregate Diversity in
+  Recommender Systems
+
+Addressing Class-Imbalance Problem in Personalized Ranking
+
+Ordinal Non-negative Matrix Factorization for Recommendation
+
+Exploration-Exploitation Motivated Variational Auto-Encoder for
+  Recommender Systems
+
+Contextual Bandits with Side-Observations
+
+Connecting User and Item Perspectives in Popularity Debiasing for
+  Collaborative Recommendation
+
+Learning the Truth From Only One Side of the Story
+
+TS-UCB: Improving on Thompson Sampling With Little to No Additional
+  Computation
+
+Nearly Linear Row Sampling Algorithm for Quantile Regression
+
+Latent Bandits Revisited
+
+Approximating a Target Distribution using Weight Queries
+
+Multi-sided Exposure Bias in Recommendation
+
+Sampling from a $k$-DPP without looking at all items
+
+Maximizing Cohesion and Separation in Graph Representation Learning: A
+  Distance-aware Negative Sampling Approach
+
+Learning from DPPs via Sampling: Beyond HKPV and symmetry
+
+Deep Retrieval: Learning A Retrievable Structure for Large-Scale
+  Recommendations
+
+Sampler Design for Implicit Feedback Data by Noisy-label Robust Learning
+
+Interpretable, Multidimensional, Multimodal Anomaly Detection with
+  Negative Sampling for Detection of Device Failure
+
+Addressing the Multistakeholder Impact of Popularity Bias in
+  Recommendation Through Calibration
+
+Recommending Podcasts for Cold-Start Users Based on Music Listening and
+  Taste
+
+Attribute-aware Diversification for Sequential Recommendations
+
+Noise Contrastive Estimation for Autoencoding-based One-Class
+  Collaborative Filtering
+
+Revisiting Adversarially Learned Injection Attacks Against Recommender
+  Systems
+
+Negative Confidence-Aware Weakly Supervised Binary Classification for
+  Effective Review Helpfulness Classification
+
+Counterfactual-based minority oversampling for imbalanced classification
+
+Collaborative Filtering under Model Uncertainty
+
+When Inverse Propensity Scoring does not Work: Affine Corrections for
+  Unbiased Learning to Rank
+
+CnGAN: Generative Adversarial Networks for Cross-network user preference
+  generation for non-overlapped users
+
+Beyond Next Item Recommendation: Recommending and Evaluating List of
+  Sequences
+
+Theoretical Modeling of the Iterative Properties of User Discovery in a
+  Collaborative Filtering Recommender System
+
+Information Theoretic Counterfactual Learning from Missing-Not-At-Random
+  Feedback
+
+Simplify and Robustify Negative Sampling for Implicit Collaborative
+  Filtering
+
+Stratified and Time-aware Sampling based Adaptive Ensemble Learning for
+  Streaming Recommendations
+
+Implicit Feedback Deep Collaborative Filtering Product Recommendation
+  System
+
+Exploration in two-stage recommender systems
+
+Clicks can be Cheating: Counterfactual Recommendation for Mitigating
+  Clickbait Issue
+
+Simultaneous Relevance and Diversity: A New Recommendation Inference
+  Approach
+
+Hard Negative Mixing for Contrastive Learning
+
+Multi-Step Adversarial Perturbations on Recommender Systems Embeddings
+
+Conditional Negative Sampling for Contrastive Learning of Visual
+  Representations
+
+Fair and Representative Subset Selection from Data Streams
+
+Contrastive Learning with Hard Negative Samples
+
+Self-supervised Graph Learning for Recommendation
+
+Regret in Online Recommendation Systems
+
+Neural Passage Retrieval with Improved Negative Contrast
+
+The item selection problem for user cold-start recommendation
+
+Efficient, Simple and Automated Negative Sampling for Knowledge Graph
+  Embedding
+
+Model-Agnostic Counterfactual Reasoning for Eliminating Popularity Bias
+  in Recommender System
+
+A Model of Two Tales: Dual Transfer Learning Framework for Improved
+  Long-tail Item Recommendation
+
+Sampling-Decomposable Generative Adversarial Recommender
+
+Efficient Online Learning of Optimal Rankings: Dimensionality Reduction
+  via Gradient Descent
+
+Alleviating Cold-Start Problems in Recommendation through
+  Pseudo-Labelling over Knowledge Graph
+
+Non-Stationary Latent Bandits
+
+Adversarial Counterfactual Learning and Evaluation for Recommender
+  System
+
+A Gumbel-based Rating Prediction Framework for Imbalanced Recommendation
+
+GAN-based Recommendation with Positive-Unlabeled Sampling
+
+Causality-Aware Neighborhood Methods for Recommender Systems
+
+New Recommendation Algorithm for Implicit Data Motivated by the
+  Multivariate Normal Distribution
+
+Personalized Adaptive Meta Learning for Cold-start User Preference
+  Prediction
+
+Towards Fair Personalization by Avoiding Feedback Loops
+
+A Tale of Two Efficient and Informative Negative Sampling Distributions
+
+Contrastive Learning for Recommender System
+
+Data Poisoning Attacks to Deep Learning Based Recommender Systems
+
+Probabilistic Metric Learning with Adaptive Margin for Top-K
+  Recommendation
+
+Meta-learning with negative learning rates
+
+Generating Artificial Core Users for Interpretable Condensed Data
+
+Negative Data Augmentation
+
+Semantically-Conditioned Negative Samples for Efficient Contrastive
+  Learning
+
+Understanding Negative Samples in Instance Discriminative
+  Self-supervised Representation Learning
+
+Distillation based Multi-task Learning: A Candidate Generation Model for
+  Improving Reading Duration
+
+UserReg: A Simple but Strong Model for Rating Prediction
+
+Random Walks with Erasure: Diversifying Personalized Recommendations on
+  Social and Information Networks
+
+A Biased Graph Neural Network Sampler with Near-Optimal Regret
+
+Accumulations of Projections--A Unified Framework for Random Sketches in
+  Kernel Ridge Regression
+
+On UMAP's true loss function
+
+Multi-Facet Recommender Networks with Spherical Optimization
+
+Optimal Sampling Gaps for Adaptive Submodular Maximization
+
+Understanding Hard Negatives in Noise Contrastive Estimation
+
+Probing Negative Sampling Strategies to Learn GraphRepresentations via
+  Unsupervised Contrastive Learning
+
+NeuSE: A Neural Snapshot Ensemble Method for Collaborative Filtering
+
+DebiasedRec: Bias-aware User Modeling and Click Prediction for
+  Personalized News Recommendation
+
+Optimizing Dense Retrieval Model Training with Hard Negatives
+
+Recommending Burgers based on Pizza Preferences: Addressing Data
+  Sparsity with a Product of Experts
+
+AutoDebias: Learning to Debias for Recommendation
+
+Scalable Personalised Item Ranking through Parametric Density Estimation
+
+Disentangling Sampling and Labeling Bias for Learning in Large-Output
+  Spaces
+
+Causal Intervention for Leveraging Popularity Bias in Recommendation
+
+Bootstrapping User and Item Representations for One-Class Collaborative
+  Filtering
+
+Zero-Shot Recommender Systems
+
+Lessons Learned Addressing Dataset Bias in Model-Based Candidate
+  Generation at Twitter
+
+Learning Robust Recommenders through Cross-Model Agreement
+
+A Load Balanced Recommendation Approach
+
+Revisiting the Negative Data of Distantly Supervised Relation Extraction
+
+Deconfounded Recommendation for Alleviating Bias Amplification
+
+Towards Deterministic Diverse Subset Sampling
+
+Rejection sampling from shape-constrained distributions in sublinear
+  time
+
+Review Polarity-wise Recommender
+
+MindReader: Recommendation over Knowledge Graph Entities with Explicit
+  User Ratings
+
+Multi-output Gaussian Processes for Uncertainty-aware Recommender
+  Systems
+
+Correcting Exposure Bias for Link Recommendation
+
+Investigating the Role of Negatives in Contrastive Representation
+  Learning
+
+On Sampling Top-K Recommendation Evaluation
+
+Data Optimisation for a Deep Learning Recommender System
+
+Unsupervised Proxy Selection for Session-based Recommender Systems
+
+SVP-CF: Selection via Proxy for Collaborative Filtering Data
+
+Contrastive Learning for Cold-Start Recommendation
+
+Combining Reward and Rank Signals for Slate Recommendation
+
+Reenvisioning Collaborative Filtering vs Matrix Factorization
+
+Understanding the Effects of Adversarial Personalized Ranking
+  Optimization Method on Recommendation Quality
+
+Uniform Sampling over Episode Difficulty
+
+A Survey on Cross-domain Recommendation: Taxonomies, Methods, and Future
+  Directions
+
+Unbiased Cascade Bandits: Mitigating Exposure Bias in Online Learning to
+  Rank Recommendation
+
+Contrastive Self-supervised Sequential Recommendation with Robust
+  Augmentation
+
+Approximating the Permanent with Deep Rejection Sampling
+
+Rethinking Negative Sampling for Handling Missing Entity Annotations
+
+Photos Are All You Need for Reciprocal Recommendation in Online Dating
+
+An Analysis Of Entire Space Multi-Task Models For Post-Click Conversion
+  Prediction
+
+CauseRec: Counterfactual User Sequence Synthesis for Sequential
+  Recommendation
+
+Existence conditions for hidden feedback loops in online recommender
+  systems
+
+Correcting the User Feedback-Loop Bias for Recommendation Systems
+
+Statistical Inference: The Missing Piece of RecSys Experiment
+  Reliability Discourse
+
+"It doesn't look good for a date": Transforming Critiques into
+  Preferences for Conversational Recommendation Systems
+
+Evaluating Music Recommendations with Binary Feedback for Multiple
+  Stakeholders
+
+SimpleX: A Simple and Strong Baseline for Collaborative Filtering
+
+ICMRec: Item Cluster-Wise Multi-Objective Optimization for Unbiased
+  Recommendation
+
+A Next Basket Recommendation Reality Check
+
+Detecting and Quantifying Malicious Activity with Simulation-based
+  Inference
+
+On the Surrogate Gap between Contrastive and Supervised Losses
+
+Simulations for novel problems in recommendation: analyzing
+  misinformation and data characteristics
+
+False Negative Distillation and Contrastive Learning for Personalized
+  Outfit Recommendation
+
+Knowledge Graph-enhanced Sampling for Conversational Recommender System
+
+Learning to Recommend Using Non-Uniform Data
+
+Rethinking Neural vs. Matrix-Factorization Collaborative Filtering: the
+  Theoretical Perspectives
+
+Nonuniform Negative Sampling and Log Odds Correction with Rare Events
+  Data
+
+Cross-Batch Negative Sampling for Training Two-Tower Recommenders
+
+Mixture Proportion Estimation and PU Learning: A Modern Approach
+
+Unbiased Pairwise Learning to Rank in Recommender Systems
+
+The Computational Drug Repositioning without Negative Sampling
+
+Recommending with Recommendations
+
+Learning Robust Recommender from Noisy Implicit Feedback
+
+Exploring and Mitigating Gender Bias in Recommender Systems with
+  Explicit Feedback
+
+Long-Tail Session-based Recommendation from Calibration
+
+Active Learning Meets Optimized Item Selection
+
+Synthetic Data and Simulators for Recommendation Systems: Current State
+  and Future Directions
+
+Robust Recommendation with Implicit Feedback via Eliminating the Effects
+  of Unexpected Behaviors
+
+Stay Positive: Knowledge Graph Embedding Without Negative Sampling
+
+Collaborative Reflection-Augmented Autoencoder Network for Recommender
+  Systems
+
+Debiased Recommendation with User Feature Balancing
+
+Learning to Rank For Push Notifications Using Pairwise Expected Regret
+
+Scalable Sampling for Nonsymmetric Determinantal Point Processes
+
+Sparsity Regularization For Cold-Start Recommendation
+
+Recency Dropout for Recurrent Recommender Systems
+
+Neural Collaborative Filtering Bandits via Meta Learning
+
+Rewiring What-to-Watch-Next Recommendations to Reduce Radicalization
+  Pathways
+
+MiDaS: Representative Sampling from Real-world Hypergraphs
+
+Learning from a Learning User for Optimal Recommendations
+
+Source data selection for out-of-domain generalization
+
+Bayesian Linear Bandits for Large-Scale Recommender Systems
+
+CausPref: Causal Preference Learning for Out-of-Distribution
+  Recommendation
+
+Contrastive Meta Learning with Behavior Multiplicity for Recommendation
+
+MixKG: Mixing for harder negative samples in knowledge graph
+
+A Semi-Synthetic Dataset Generation Framework for Causal Inference in
+  Recommender Systems
+
+Exploiting Correlation to Achieve Faster Learning Rates in Low-Rank
+  Preference Bandits
+
+Adversarial Contrastive Self-Supervised Learning
+
+Learning over No-Preferred and Preferred Sequence of Items for Robust
+  Recommendation (Extended Abstract)
+
+The Unfairness of Popularity Bias in Book Recommendation
+
+Filter-enhanced MLP is All You Need for Sequential Recommendation
+
+WSLRec: Weakly Supervised Learning for Neural Sequential Recommendation
+  Models
+
+Ordered Submodularity and its Applications to Diversifying Recommendations
+
+Popularity Bias in Collaborative Filtering-Based Multimedia Recommender
+  Systems
+
+Off-Policy Evaluation in Embedded Spaces
+
+Targeted Data Poisoning Attack on News Recommendation System by Content Perturbation
+
+LEMON: LanguagE ModeL for Negative Sampling of Knowledge Graph
+  Embeddings
+
+Classification from Positive and Biased Negative Data with Skewed
+  Labeled Posterior Probability
+
+Learning Personalized Item-to-Item Recommendation Metric via Implicit Feedback
+
+Modeling Attrition in Recommender Systems with Departing Bandits
+
+From Intervention to Domain Transportation: A Novel Perspective to Optimize Recommendation
+
+Diverse Preference Augmentation with Multiple Domains for Cold-start Recommendations
+
+End-to-end Learnable Diversity-aware News Recommendation
+
+Modeling Dynamic User Preference via Dictionary Learning for Sequential
+  Recommendation
+
+A Dynamic Meta-Learning Model for Time-Sensitive Cold-Start Recommendations
+
+Positive and Negative Critiquing for VAE-based Recommenders
+
+Denoising Neural Network for News Recommendation with Positive and Negative Implicit Feedback
+
+Generative Negative Replay for Continual Learning
+
+Negative Sampling for Recommendation
+
+Self-Guided Learning to Denoise for Robust Recommendation
+
+Causal Disentanglement with Network Information for Debiased
+  Recommendations
+
+FedCL: Federated Contrastive Learning for Privacy-Preserving Recommendation
+
+DACSR: Dual-Aggregation End-to-End Calibrated Sequential Recommendation
+
+Trading Hard Negatives and True Negatives: A Debiased Contrastive Collaborative Filtering Approach
+
+Cross Pairwise Ranking for Unbiased Item Recommendation
+
+User-controllable Recommendation Against Filter Bubbles
+
+On Negative Sampling for Audio-Visual Contrastive Learning from Movies
+
+Do More Negative Samples Necessarily Hurt in Contrastive Learning?
+
+Stabilized Doubly Robust Learning for Recommendation on Data Missing Not at Random
+
+Positive, Negative and Neutral: Modeling Implicit Feedback in
+  Session-based News Recommendation
+
+kNN-Embed: Locally Smoothed Embedding Mixtures For Multi-interest
+  Candidate Retrieval
+
+Calibration Matters: Tackling Maximization Bias in Large-scale
+  Advertising Recommendation Systems
+
+Pseudo-Mallows for Efficient Probabilistic Preference Learning
+
+Deep Deconfounded Content-based Tag Recommendation for UGC with Causal Intervention
+
+Cache-Augmented Inbatch Importance Resampling for Training Recommender
+  Retriever
+
+Unbiased Implicit Feedback via Bi-level Optimization
+
+Negative Sampling for Contrastive Representation Learning: A Review
+
+Hard Negative Sampling Strategies for Contrastive Representation Learning
+
+Contrastive learning unifies t-SNE and UMAP
+
+Infinite Recommendation Networks: A Data-Centric Approach
+
+Towards Bridging Algorithm and Theory for Unbiased Recommendation
+
+Deep Meta-learning in Recommendation Systems: A Survey
+
+Open-Sampling: Exploring Out-of-Distribution data for Re-balancing Long-tailed datasets
+
+Comprehensive Analysis of Negative Sampling in Knowledge Graph Representation Learning
+
+Rethinking Collaborative Metric Learning: Toward an Efficient
+  Alternative without Negative Sampling
+
+Efficient and Accurate Top-K Recovery from Choice Data
+
+Debiasing Learning for Membership Inference Attacks Against Recommender
+  Systems
+
+Two-Stage Neural Contextual Bandits for Personalised News Recommendation
+
+Generating Counterfactual Hard Negative Samples for Graph Contrastive
+  Learning
+
+Multi-granularity Item-based Contrastive Recommendation
+
+Recommendation Systems with Distribution-Free Reliability Guarantees
+
+Effective and Efficient Training for Sequential Recommendation using
+  Recency Sampling
+
+Evolution of Popularity Bias: Empirical Study and Debiasing
+
+Interactive Recommendations for Optimal Allocations in Markets with Constraints
+
+Submodular Dominance and Applications
+
+Efficient and Scalable Recommendation via Item-Item Graph Partitioning
+
+KG-NSF: Knowledge Graph Completion with a Negative-Sample-Free Approach
+
+Quantifying and Mitigating Popularity Bias in Conversational Recommender
+  Systems
+
+Debiased Cross-modal Matching for Content-based Micro-video Background Music Recommendation
+
+Generating Negative Samples for Sequential Recommendation
+
+UFNRec: Utilizing False Negative Samples for Sequential Recommendation
+
+A sub-sampling algorithm preventing outliers
+
+Interventional Recommendation with Contrastive Counterfactual Learning for Better Understanding User Preferences
+
+Forgetting Fast in Recommender Systems
+
+Debiased Recommendation with Neural Stratification
+
+CCL4Rec: Contrast over Contrastive Learning for Micro-video Recommendation
+
+Exploring Popularity Bias in Music Recommendation Models and Commercial Steaming Services
+
+Matrix Completion with Cross-Concentrated Sampling: Bridging Uniform
+  Sampling and CUR Sampling
+
+Dynamic collaborative filtering Thompson Sampling for cross-domain
+  advertisements recommendation
+
+Causal Inference in Recommender Systems: A Survey and Future Directions
+
+Supervised Contrastive Learning with Hard Negative Samples
+
+Hidden Author Bias in Book Recommendation
+
+Explanation Guided Contrastive Learning for Sequential Recommendation
+
+Exposure-Aware Recommendation using Contextual Bandits
+
+Learning from a Biased Sample
+
+Robust and Efficient Imbalanced Positive-Unlabeled Learning with Self-supervision
+
+A Systematical Evaluation for Next-Basket Recommendation Algorithms
+
+Online Low Rank Matrix Completion
+
+SUPER-Rec: SUrrounding Position-Enhanced Representation for Recommendation
+
+Random Isn't Always Fair: Candidate Set Imbalance and Exposure
+  Inequality in Recommender Systems
+
+Hard Negatives or False Negatives: Correcting Pooling Bias in Training
+  Neural Ranking Models
+
+Design of Negative Sampling Strategies for Distantly Supervised Skill
+  Extraction
+
+Knowledge Graph Completion with Pre-trained Multimodal Transformer and Twins Negative Sampling
+
+Mitigating Filter Bubbles within Deep Recommender Systems
+
+Dual Contrastive Network for Sequential Recommendation with User and
+  Item-Centric Perspectives
+
+RADio -- Rank-Aware Divergence Metrics to Measure Normative Diversity in
+  News Recommendations
+
+Efficient block contrastive learning via parameter-free meta-node approximation
+
+Reward Shaping for User Satisfaction in a REINFORCE Recommender
+
+SIMPLE: A Gradient Estimator for $k$-Subset Sampling
+
+Entity Aware Negative Sampling with Auxiliary Loss of False Negative
+  Prediction for Knowledge Graph Embedding
+
+Diversified Recommendations for Agents with Adaptive Preferences
+
+Off-policy evaluation for learning-to-rank via interpolating the item-position model and the position-based model
+
+Addressing the Extreme Cold-Start Problem in Group Recommendation
+
+Quick Graph Conversion for Robust Recommendation
+
+Data-Augmented Counterfactual Learning for Bundle Recommendation
+
+ResBeMF: Improving Prediction Coverage of Classification based
+  Collaborative Filtering
+
+Tenrec: A Large-scale Multipurpose Benchmark Dataset for Recommender Systems
+
+Incorporating Bias-aware Margins into Contrastive Loss for Collaborative Filtering
+
+Mathematical Justification of Hard Negative Mining via Isometric
+  Approximation Theorem
+
+SimANS: Simple Ambiguous Negatives Sampling for Dense Text Retrieval
+
+Triplet losses-based matrix factorization for robust recommendations
+
+Tail Batch Sampling: Approximating Global Contrastive Losses as
+  Optimization over Batch Assignments
+
+Empowering Long-tail Item Recommendation through Cross Decoupling
+  Network (CDN)
+
+RESUS: Warm-Up Cold Users via Meta-Learning Residual User Preferences in
+  CTR Prediction
+
+Diversely Regularized Matrix Factorization for Accurate and Aggregately Diversified Recommendation
+
+Perfect Sampling from Pairwise Comparisons
+
+Learning to Take a Break: Sustainable Optimization of Long-Term User Engagement
+
+Soft BPR Loss for Dynamic Hard Negative Sampling in Recommender Systems
+
+Towards Reliable Item Sampling for Recommendation Evaluation
+
+Causal Inference for Knowledge Graph based Recommendation
+
+Cross-Dataset Propensity Estimation for Debiasing Recommender Systems
+
+Episodes Discovery Recommendation with Multi-Source Augmentations
+
+Modeling Sequential Recommendation as Missing Information Imputation
+
+Membership Inference Attacks Against Latent Factor Model
+
+Bayesian Self-Supervised Contrastive Learning
+
+Calibrated Recommendations for Users with Decaying Attention
+
+Self-Sampling Training and Evaluation for the Accuracy-Bias Tradeoff in Recommendation
+
+Graph Signal Sampling for Inductive One-Bit Matrix Completion: a Closed-form Solution
+
+Performative Recommendation: Diversifying Content via Strategic Incentives
+
+Learning to Select Pivotal Samples for Meta Re-weighting
+
+Feature Decomposition for Reducing Negative Transfer: A Novel Multi-task Learning Method for Recommender System
+
+Recommending to Strategic Users
+
+Managing multi-facet bias in collaborative filtering recommender systems
+
+The Amplification Paradox in Recommender Systems
+
+A Study on Accuracy, Miscalibration, and Popularity Bias in Recommendations
+
+Automatic Debiased Learning from Positive, Unlabeled, and Exposure Data
+
+Limits of Predictability in Top-N Recommendation
+
+FAN: Fatigue-Aware Network for Click-Through Rate Prediction in E-commerce Recommendation
+
+Sequential Recommendation with Diffusion Models
+
+Neural Multi-network Diffusion towards Social Recommendation
+
+Selective and Collaborative Influence Function for Efficient Recommendation Unlearning
+
+ExCalibR: Expected Calibration of Recommendations
+
+Denoising Multi-modal Sequential Recommenders with Contrastive Learning
+
+Automated Data Denoising for Recommendation
+
+Better Sampling of Negatives for Distantly Supervised Named Entity Recognition
+
+Efficient Failure Pattern Identification of Predictive Algorithms
+
+PANE-GNN: Unifying Positive and Negative Edges in Graph Neural Networks for Recommendation
+
+Exploiting Observation Bias to Improve Matrix Completion
+
+RecFusion: A Binomial Diffusion Process for 1D Data for Recommendation
+
+ClusterSeq: Enhancing Sequential Recommender Systems with Clustering based Meta-Learning
+
+Density Weighting for Multi-Interest Personalized Recommendation
+
+Disentangled Counterfactual Reasoning for Unbiased Sequential Recommendation
+
+POSIT: Promotion of Semantic Item Tail via Adversarial Learning
+
+Bridging Offline-Online Evaluation with a Time-dependent and Popularity Bias-free Offline Metric for Recommenders
+
+Learning from All Sides: Diversified Positive Augmentation via Self-distillation in Recommendation
+
+A Topology-aware Analysis of Graph Collaborative Filtering
+
+DRGame: Diversified Recommendation for Multi-category Video Games with Balanced Implicit Preferences
+
+Towards Efficient Training with Negative Samples in Visual Tracking
+
+Temporal graph models fail to capture global temporal dynamics
+
+Multi-Granularity Click Confidence Learning via Self-Distillation in Recommendation
+
+Design Principles of Robust Multi-Armed Bandit Framework in Video Recommendations
+
+Potential Factors Leading to Popularity Unfairness in Recommender Systems: A User-Centered Analysis
+
+Multi-Task Learning For Reduced Popularity Bias In Multi-Territory Video Recommendations
+
+Beyond Myopia: Learning from Positive and Unlabeled Data through Holistic Predictive Trends
+
+Negative Sampling with Adaptive Denoising Mixup for Knowledge Graph Embedding
+
+Empowering Collaborative Filtering with Principled Adversarial Contrastive Loss
+
+Adversarial Batch Inverse Reinforcement Learning: Learn to Reward from Imperfect Demonstration for Interactive Recommendation
+
+Rethinking Samples Selection for Contrastive Learning: Mining of Potential Samples
+
+Improving Collaborative Filtering Recommendation via Graph Learning
+
+Towards Automated Negative Sampling in Implicit Recommendation
+
+DPR: An Algorithm Mitigate Bias Accumulation in Recommendation feedback loops
+
+(Debiased) Contrastive Learning Loss for Recommendation (Technical Report)
+
+Revisiting Recommendation Loss Functions through Contrastive Learning (Technical Report)
+
+Joint empirical risk minimization for instance-dependent positive-unlabeled data
+
+Poisoning Attacks against Recommender Systems: A Survey
+
+Unsupervised hard Negative Augmentation for contrastive learning
+
+Plug-in Diffusion Model for Sequential Recommendation
+
+The Impact of Differential Privacy on Recommendation Accuracy and Popularity Bias
+
+CREAD: A Classification-Restoration Framework with Error Adaptive Discretization for Watch Time Prediction in Video Recommender Systems
+
+Matrix Completion with Hypergraphs: Sharp Thresholds and Efficient Algorithms
+
+Contrastive Learning with Negative Sampling Correction
+
+Handling Large-scale Cardinality in building recommendation systems
+
+A Cost-Sensitive Meta-Learning Strategy for Fair Provider Exposure in Recommendation
+
+Empirical and Experimental Perspectives on Big Data in Recommendation Systems: A Comprehensive Survey
+
+Understanding and Counteracting Feature-Level Bias in Click-Through Rate Prediction
+
+TriSampler: A Better Negative Sampling Principle for Dense Retrieval
+
+Debiased Model-based Interactive Recommendation
+
+Negative Sampling in Knowledge Graph Representation Learning: A Review
+
+Causal Disentanglement for Regulating Social Influence Bias in Social Recommendation
+
+Personalized Negative Reservoir for Incremental Learning in Recommender Systems
+
+Self-supervised Contrastive Learning for Implicit Collaborative Filtering
+
+Towards Unified Modeling for Positive and Negative Preferences in Sign-Aware Recommendation
+
+Layer-diverse Negative Sampling for Graph Neural Networks
+
+One Backpropagation in Two Tower Recommendation Models
+
+Improving Out-of-Vocabulary Handling in Recommendation Systems
+
+Enhanced Bayesian Personalized Ranking for Robust Hard Negative Sampling in Recommender Systems
+
+Adaptive Sampling Policies Imply Biased Beliefs: A Generalization of the Hot Stove Effect
+
+Multi-Level Sequence Denoising with Cross-Signal Contrastive Learning for Sequential Recommendation
+
+Debiased Collaborative Filtering with Kernel-Based Causal Balancing
+
+Be Aware of the Neighborhood Effect: Modeling Selection Bias under Interference
+
+Learning Social Graph for Inactive User Recommendation
+
+Practical 0.385-Approximation for Submodular Maximization Subject to a Cardinality Constraint
+
+Advancing Cultural Inclusivity: Optimizing Embedding Spaces for Balanced Music Recommendations
+
+Mitigate Position Bias with Coupled Ranking Bias on CTR Prediction
+
+Turnstile ℓp leverage score sampling with applications
+
+Cold-start Recommendation by Personalized Embedding Region Elicitation
+
+Polyhedral Conic Classifier for CTR Prediction
+
+Greedy SLIM: A SLIM-Based Approach For Preference Elicitation
+
+Label-aware Hard Negative Sampling Strategies with Momentum Contrastive Learning for Implicit Hate Speech Detection
+
+On Softmax Direct Preference Optimization for Recommendation
+
+Decoding Matters: Addressing Amplification Bias and Homogeneity Issue in Recommendations for Large Language Models
+
+SimCE: Simplifying Cross-Entropy Loss for Collaborative Filtering
+
+Unified Interpretation of Smoothing Methods for Negative Sampling Loss Functions in Knowledge Graph Embedding
+
+ITEM: Improving Training and Evaluation of Message-Passing based GNNs for top-k recommendation
+
+Popular News Always Compete for the User's Attention! POPK: Mitigating Popularity Bias via a Temporal-Counterfactual
+
+Feedback Reciprocal Graph Collaborative Filtering
+
+Online Matrix Completion: A Collaborative Approach with Hott Items
+
+RW-NSGCN: A Robust Approach to Structural Attacks via Negative Sampling
+
+Debiased Contrastive Representation Learning for Mitigating Dual Biases in Recommender Systems
+
+Contextual Bandit with Herding Effects: Algorithms and Recommendation Applications
+
+On the challenges of studying bias in Recommender Systems: A UserKNN case study
+
+Measuring Recency Bias In Sequential Recommendation Systems
+
+Large Language Model Enhanced Hard Sample Identification for Denoising Recommendation
+
+A Best-of-Both Approach to Improve Match Predictions and Reciprocal Recommendations for Job Search
+
+The Relevance of Item-Co-Exposure For Exposure Bias Mitigation
+
+ASTRA: Accurate and Scalable ANNS-based Training of Extreme Classifiers
+
+Combining Open-box Simulation and Importance Sampling for Tuning Large-Scale Recommenders
+
+Diversified and Adaptive Negative Sampling on Knowledge Graphs
+
+Optimal Downsampling for Imbalanced Classification with Generalized Linear Models
+
+Preference Diffusion for Recommendation
+
+Beyond Positive History: Re-ranking with List-level Hybrid Feedback
+
+RecFlow: An Industrial Full Flow Recommendation Dataset
+
+Precision Profile Pollution Attack on Sequential Recommenders via Influence Function
+
+A Survey on Deep Neural Networks in Collaborative Filtering Recommendation Systems
+
+Augmenting Sequential Recommendation with Balanced Relevance and Diversity
+
+Reducing Popularity Influence by Addressing Position Bias
+
+Repeat-bias-aware Optimization of Beyond-accuracy Metrics for Next Basket Recommendation
+
+Leave No One Behind: Enhancing Diversity While Maintaining Accuracy in Social Recommendation
+
+ConFit v2: Improving Resume-Job Matching using Hypothetical Resume Embedding and Runner-Up Hard-Negative Mining
+
+Entire-Space Variational Information Exploitation for Post-Click Conversion Rate Prediction
+
+Modeling Churn in Recommender Systems with Aggregated Preferences
+
+AlignPxtr: Aligning Predicted Behavior Distributions for Bias-Free Video Recommendations
+
+Ordered Semantically Diverse Sampling for Textual Data
+
+Data Augmentation as Free Lunch: Exploring the Test-Time Augmentation for Sequential Recommendation
+
+Multi-Perspective Attention Mechanism for Bias-Aware Sequential Recommendation
+
+Explicit Uncertainty Modeling for Video Watch Time Prediction
+
+Session-based Recommender Systems: User Interest as a Stochastic Process in the Latent Space
+
+Counterfactual Inference for Eliminating Sentiment Bias in Recommender Systems
+
+A Novel Generative Model with Causality Constraint for Mitigating Biases in Recommender Systems
+
+Hard Negative Mining for Domain-Specific Retrieval in Enterprise Systems
+
+Counterfactual Multi-player Bandits for Explainable Recommendation Diversification
+
+Model-agnostic Mitigation Strategies of Data Imbalance for Regression
+
+Negative-Guided Subject Fidelity Optimization for Zero-Shot Subject-Driven Generation
+
+N2: A Unified Python Package and Test Bench for Nearest Neighbor-Based Matrix Completion
+
+Discrete Scale-invariant Metric Learning for Efficient Collaborative Filtering
+
+Hierarchical Group-wise Ranking Framework for Recommendation Models
+
+Next-User Retrieval: Enhancing Cold-Start Recommendations via Generative Next-User Modeling
+
+Bayesian-Guided Diversity in Sequential Sampling for Recommender Systems
+
+Listwise Preference Alignment Optimization for Tail Item Recommendation
+
+QuRe: Query-Relevant Retrieval through Hard Negative Sampling in Composed Image Retrieval
+
+PBiLoss: Popularity-Aware Regularization to Improve Fairness in Graph-Based Recommender Systems
+
+Failures Are the Stepping Stones to Success: Enhancing Few-Shot In-Context Learning by Leveraging Negative Samples
+
+Counterfactual Reciprocal Recommender Systems for User-to-User Matching
+
+A Metric for MLLM Alignment in Large-scale Recommendation
+
+Enhancing PyKEEN with Multiple Negative Sampling Solutions for Knowledge Graph Embedding Models
+
+G-UBS: Towards Robust Understanding of Implicit Feedback via Group-Aware User Behavior Simulation
+
+Confounding is a Pervasive Problem in Real World Recommender Systems
+
+Relative Advantage Debiasing for Watch-Time Prediction in Short-Video Recommendation
+
+DGenCTR: Towards a Universal Generative Paradigm for Click-Through Rate Prediction via Discrete Diffusion
+
+Multimodal Recommendation via Self-Corrective Preference Alignmen
+
+Curriculum Approximate Unlearning for Session-based Recommendation
+
+Recycling History: Efficient Recommendations from Contextual Dueling Bandits
+
+Rethinking Purity and Diversity in Multi-Behavior Sequential Recommendation from the Frequency Perspective
+
+Breaking the Cold-Start Barrier: Reinforcement Learning with Double and Dueling DQNs
+
+Counterfactual Risk Minimization with IPS-Weighted BPR and Self-Normalized Evaluation in Recommender Systems
+
+Calibrated Recommendations with Contextual Bandits
+
+Diversified recommendations of cultural activities with personalized determinantal point processes
+
+Sequential Data Augmentation for Generative Recommendation
+
+Core-elements Subsampling for Alternating Least Squares
+
+Understand your Users, An Ensemble Learning Framework for Natural Noise Filtering in Recommender Systems
+
+MTRec: Learning to Align with User Preferences via Mental Reward Models
+
+One-shot Conditional Sampling: MMD meets Nearest Neighbors
+
+Fading to Grow: Growing Preference Ratios via Preference Fading Discrete Diffusion for Recommendation
+
+Breaking the Likelihood Trap: Consistent Generative Recommendation with Graph-structured Model
+
+Multi-Granularity Sequence Denoising with Weakly Supervised Signal for Sequential Recommendation
+
+On Efficiency-Effectiveness Trade-off of Diffusion-based Recommenders
+
+Learning from N-Tuple Data with M Positive Instances: Unbiased Risk Estimation and Theoretical Guarantees
+
+Scalable LinUCB: Low-Rank Design Matrix Updates for Recommenders with Large Action Spaces
+
+TV-Rec: Time-Variant Convolutional Filter for Sequential Recommendation
+
+Barlow Twins for Sequential Recommendation
+
+Online Learning to Rank under Corruption: A Robust Cascading Bandits Approach
+
+Hard vs. Noise: Resolving Hard-Noisy Sample Confusion in Recommender Systems via Large Language Models
+
+Bid Farewell to Seesaw: Towards Accurate Long-tail Session-based Recommendation via Dual Constraints of Hybrid Intents
+
+When and What to Recommend: Joint Modeling of Timing and Content for Active Sequential Recommendation
+
+A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems
+
+Quantifying the Potential to Escape Filter Bubbles: A Behavior-Aware Measure via Contrastive Simulation
+
+IdealTSF: Can Non-Ideal Data Contribute to Enhancing the Performance of Time Series Forecasting Models?
+
+A Multivariate Bernoulli-Based Sampling Method for Multi-Label Data with Application to Meta-Research
+
+Diversity Recommendation via Causal Deconfounding of Co-purchase Relations and Counterfactual Exposure
+
+Seeing stars: Exploiting class relationships for sentiment
+  categorization with respect to rating scales
+
+Sampling to estimate arbitrary subset sums
+
+Sampling from a couple of negatively correlated gamma variates
+
+Calibrated Recommendations: Survey and Future Directions
+
+Recurrent Naive Bayes for Multi-Criteria Recommender Systems: A Novel Approach for Partial Preference Imputation
+
+Research on Text Mining Method for Users' Implicit Needs in Recommendation Systems under Few-Sample Conditions
+

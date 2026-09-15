@@ -38,6 +38,8 @@
   "refs_after_cutoff": [],
   "gt_id_leaks": [],
   "gt_title_leaks": [],
+  "generated_title": "Comprehensive Survey of Visual Adversarial Attacks and Defenses in the Physical World",
+  "generated_title_equals_gt_title": [],
   "words_refined": 16674,
   "manifest": {
     "llm_stats": {

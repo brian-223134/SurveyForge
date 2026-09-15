@@ -56,7 +56,13 @@ def main():
     late = sorted(r for r in refs if (lambda ub: ub is None or ub >= cutoff)(rp.upper_bound(policy.date_of(r))))
     leaks = sorted(e for e in policy.exclude_ids if e.lower() in refs_l or e.lower() in body.lower())
     twin_titles = [s['title'] for s in policy.row.get('date_sources', []) if s.get('title')]
-    title_leaks = [x for x in twin_titles if x.lower() in body.lower()]
+    # 생성 서베이의 제목 줄(첫 '# ')은 제외한다 -- topic 문자열이 GT 제목과 같으면 모델이 같은 제목을 붙이기 마련이고
+    # (mllm-adversarial-attacks: '…: A Comprehensive Survey'), 그것은 검색 누수가 아니다. 본문·참고문헌에서만 찾는다.
+    lines = body.split('\n')
+    gen_title = next((l[2:].strip() for l in lines if l.startswith('# ')), '')
+    body_wo_title = '\n'.join(l for l in lines if not l.startswith('# '))
+    title_leaks = [x for x in twin_titles if x.lower() in body_wo_title.lower()]
+    gen_title_equals_gt = [x for x in twin_titles if x.lower() == gen_title.lower()]
 
     res = {
         'run': os.path.abspath(args.run), 'topic_id': args.topic_id, 'topic': t['title'], 'cutoff': policy.cutoff,
@@ -65,6 +71,7 @@ def main():
         'hits': len(hits), 'recall': round(len(hits) / t['n_gt_refs_cutoff'], 4), 'precision': round(len(hits) / max(len(refs), 1), 4),
         'hit_ids': hits,
         'refs_after_cutoff': late, 'gt_id_leaks': leaks, 'gt_title_leaks': title_leaks,
+        'generated_title': gen_title, 'generated_title_equals_gt_title': gen_title_equals_gt,
         'words_refined': len(body.split()),
         'manifest': {k: manifest.get(k) for k in ('llm_stats', 'temperature', 'max_tokens', 'provider', 'finished_at')},
         'retrieval_policy': {k: (manifest.get('retrieval_policy') or {}).get(k) for k in
@@ -72,7 +79,7 @@ def main():
     }
     print(f"[score] {args.topic_id} cutoff<{policy.cutoff}: refs {res['refs']} (DOI {res['refs_doi']}) · hits {res['hits']}/{t['n_gt_refs_cutoff']} "
           f"→ recall {res['recall']:.1%} · precision {res['precision']:.1%} · after-cutoff refs {len(late)} · GT id 누수 {len(leaks)} · "
-          f"GT 제목 누수 {len(title_leaks)} · words {res['words_refined']:,}")
+          f"GT 제목 누수 {len(title_leaks)}{' (생성 제목 == GT 제목)' if gen_title_equals_gt else ''} · words {res['words_refined']:,}")
     if args.out:
         with open(args.out, 'w') as f:
             json.dump(res, f, ensure_ascii=False, indent=2)
