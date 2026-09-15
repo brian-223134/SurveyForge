@@ -7,7 +7,7 @@
 잘림(=반복 루프)율·출력 길이·중복 문장 비율·인용 수·소요를 비교한다. 비용 약 $0.1 (12회).
 
     SURVEYFORGE_TEMPERATURE= SURVEYFORGE_RETRY_TRUNCATED=0 CUDA_VISIBLE_DEVICES=4 \
-    .venv/bin/python scripts/probe_temperature.py --db_path $SURVEYFORGE_DATA/database_cc-bench-2512 \
+    .venv/bin/python scripts/probe_temperature.py --db_path $SURVEYFORGE_DATA/database_kisti-kisti-2608 \
         --topic "Visual Adversarial Attacks and Defenses in the Physical World" --out eval_out/probe_temperature.json
 
 재요청 가드는 끄고(RETRY_TRUNCATED=0) 잘림을 그대로 관찰한다. 전역 오버라이드도 비운다.

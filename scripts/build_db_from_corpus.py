@@ -2,9 +2,8 @@
 전체 빌드한다.
 
 `append_snapshot.py`가 '기존 스냅샷 뒤에 이어 붙이기'라면, 이 스크립트는 corpus 쪽
-exporter(현재는 kisti_data/adapter/common/export.py --format surveyforge; 처음엔
-asg-common-corpus의 export-agent-db)의 산출물을 입력으로 빈 상태에서 인덱스까지
-통째로 만든다. id 는 불투명 키다 -- KISTI view(id 규칙 B)에서는 arXiv base id 와
+exporter(kisti_data/adapter/common/export.py --format surveyforge)의 산출물을 입력으로
+빈 상태에서 인덱스까지 통째로 만든다. id 는 불투명 키다 -- KISTI view(id 규칙 B)에서는 arXiv base id 와
 DOI 가 섞여 있고, 이 스크립트는 형식을 세어 build_manifest 에 남길 뿐 가정하지 않는다. 불변식과 임베딩 규약은 append_snapshot.py
 헤더에 실측으로 문서화된 것과 동일하다:
 
@@ -16,11 +15,11 @@ DOI 가 섞여 있고, 이 스크립트는 형식을 세어 build_manifest 에 �
 ## 텍스트는 export 그대로 임베딩한다 (정규화 없음)
 
 초록 표본 10%에 리터럴 '\\n' 이스케이프가, 6%에 개행 문자가 남아 있지만 치환하지
-않는다. 이유 둘: (1) AutoSurvey가 같은 export를 바이트 그대로 복사해 임베딩했으므로
-(asg-common-corpus/docs/autosurvey-usage.md §1) agent 간 텍스트 통일이 우선이고,
-(2) 리터럴 '\\n' 블라인드 치환은 LaTeX 명령('\\nu', '\\nabla', …)을 오손한다.
-그 결과 스냅샷의 JSON은 export 파일의 **바이트 동일 사본**이고, 사이드카 manifest의
-content_sha256이 그대로 검증에 쓰인다. 논의: docs/common-corpus-integration.md 함정 7.
+않는다. 이유 둘: (1) AutoSurvey가 같은 export를 바이트 그대로 복사해 임베딩하므로
+agent 간 텍스트 통일이 우선이고, (2) 리터럴 '\\n' 블라인드 치환은 LaTeX 명령('\\nu',
+'\\nabla', …)을 오손한다. 그 결과 스냅샷의 JSON은 export 파일의 **바이트 동일 사본**이고,
+파일 sha256 이 그대로 검증에 쓰인다 (사이드카 manifest 의 content_sha256 은 레코드 청크만
+해시한 값이라 파일 대조에는 file_sha256 을 쓴다).
 
 ## 재시작 가능
 
@@ -197,8 +196,7 @@ def main():
     check_consistency(table, mapping, {'abs': abs_idx, 'title': title_idx}, 'build')
 
     view = sidecar.get('view', {}).get('name', 'unknown')
-    # 인덱스 파일명 접미사 = view 이름. (asg-common-corpus 시절 스냅샷은 'CC_' 접두사가
-    # 붙어 있다 -- database_cc-*/ 안의 파일명 참조. 지금은 view 이름만 쓴다.)
+    # 인덱스 파일명 접미사 = view 이름 (예: KISTI_2512). find_index 의 단일 glob 이 이것으로 스냅샷을 찾는다.
     tag = args.tag or ('SMOKE_%d' % n if args.limit
                        else view.upper().replace('-', '_'))
     os.makedirs(args.out, exist_ok=True)
