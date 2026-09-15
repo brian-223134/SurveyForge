@@ -7,7 +7,7 @@ from tqdm import trange,tqdm
 import torch
 from src.model import APIModel, LocalModel, MAX_THREADS, MAX_SECTION_THREADS
 import time
-from src.utils import tokenCounter, get_index_filter, get_index_filter_by_id_prefix
+from src.utils import tokenCounter, get_index_filter, get_retrieval_filter, cutoff_log
 import copy
 import json
 from src.database import database
@@ -35,9 +35,9 @@ class subsectionWriter():
 
     def write(self, topic, outline, rag_num = 30, rag_max_out = 60 ,subsection_len = 500, refining = True, reflection=True):
         # HACK: Database subset for outline generation
-        rag_outline_subset_index_filter = get_index_filter_by_id_prefix(
-            self.db["rag_outline"].id_to_index, self.args.paper_id_cutoff,
-            stage='writer', saving_path=self.args.saving_path)
+        # topic 정책(GT 최초 공개일 cutoff)이 있으면 허용 집합, 없으면 종전 id 게이트 (utils.get_retrieval_filter)
+        rag_outline_subset_index_filter = get_retrieval_filter(
+            self.db["rag_outline"].id_to_index, self.args, stage='writer')
         rag_outline_subset_ids = self.db["rag_outline"].retrieve_id([topic], 
                                                                     top_k=1500,
                                                                     **rag_outline_subset_index_filter)
@@ -362,8 +362,18 @@ class subsectionWriter():
 
     def replace_citations_with_numbers(self, citations, markdown_text):
 
+        # 인용 정합은 집필 단계에서 검색된 id 안에서만 돈다. 그 id 는 전부 정책 선택자를 거쳐 나왔지만,
+        # 허용 집합과 한 번 더 교집합을 둬 어떤 경로로도 허용 밖 id 가 참고문헌이 될 수 없게 한다.
+        lock_ids = self.writer_rag_results
+        policy = getattr(self.args, 'retrieval_policy', None)
+        if policy is not None:
+            allowed = [i for i in lock_ids if policy.is_allowed(i)]
+            if len(allowed) != len(lock_ids):
+                cutoff_log(f"[policy/citation] 인용 정합 잠금 집합에서 허용 밖 id {len(lock_ids) - len(allowed)}건 제거",
+                           self.args.saving_path)
+            lock_ids = allowed
         index_filter = get_index_filter(self.db["rag_title4citation"].id_to_index, 
-                                        self.writer_rag_results)
+                                        lock_ids)
         ids = self.db["rag_title4citation"].retrieve_id4citation(citations, 
                                                         search_type='similarity', 
                                                         top_k=1,

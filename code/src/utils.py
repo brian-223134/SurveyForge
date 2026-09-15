@@ -298,3 +298,38 @@ def get_index_filter_by_id_prefix(arxivid_to_index, id_cutoff, stage='', saving_
             f"--paper_id_cutoff={id_cutoff} excludes every paper in the database "
             f"(ids run to {max(a.split('.')[0] for a in arxivid_list)}); nothing can be retrieved.")
     return get_index_filter(arxivid_to_index, kept)
+
+
+def get_index_filter_by_policy(arxivid_to_index, policy, id_cutoff, stage='', saving_path=None):
+    """get_index_filter() restricted to the topic policy's allowed set (∩ the YYMM id gate).
+
+    허용 집합 = sidecar 공개일 상한 < cutoff ∧ exclude_ids 밖 (src/retrieval_policy.py). 그 위에 종전 id 게이트를
+    교집합으로 둔다 -- PAPER_ID_CUTOFF=2612 면 게이트는 아무것도 거르지 않고 시간 조건은 정책이 담당한다
+    (YYMM 게이트는 DOI id 를 통과시키므로 정책을 대체하지 못한다). 검색은 이 선택자(IDSelectorBatch) **안에서**
+    돈다. 사후 필터가 아니다. 로그: [policy/<stage>] cutoff · 허용 a/b편 · 제외 사유별 편수 · 허용 id sha256.
+    """
+    view = policy.db_view(arxivid_to_index)
+    gate_kept = set(filter_arxivids_by_prefix(view['kept'], id_cutoff))
+    kept = view['kept'] if len(gate_kept) == len(view['kept']) else [a for a in view['kept'] if a in gate_kept]
+    for line in policy.log_lines(view, stage=stage):
+        cutoff_log(line, saving_path)
+    n_gate = len(view['kept']) - len(kept)
+    if n_gate:
+        cutoff_log(f"[policy/{stage}] id 게이트(<= {id_cutoff})가 허용 집합에서 {n_gate}편을 더 걸렀다 "
+                   f"-- 최종 {len(kept):,}편", saving_path)
+    if not kept:
+        raise RuntimeError(f'정책 {policy.topic_id} (cutoff<{policy.cutoff}) 적용 후 검색 가능한 논문이 0편이다')
+    return get_index_filter(arxivid_to_index, kept)
+
+
+def get_retrieval_filter(arxivid_to_index, args, stage=''):
+    """단계별 검색 선택자 -- 정책(args.retrieval_policy)이 있으면 허용 집합(∩ 게이트), 없으면 종전 id 게이트만.
+
+    아웃라인 풀·집필 풀·서브아웃라인 검색이 전부 이 함수를 거친다 (outline_writer.py · writer.py).
+    """
+    policy = getattr(args, 'retrieval_policy', None)
+    if policy is not None:
+        return get_index_filter_by_policy(arxivid_to_index, policy, args.paper_id_cutoff,
+                                          stage=stage, saving_path=args.saving_path)
+    return get_index_filter_by_id_prefix(arxivid_to_index, args.paper_id_cutoff,
+                                         stage=stage, saving_path=args.saving_path)

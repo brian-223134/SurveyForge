@@ -28,6 +28,9 @@ DATA_ROOT = os.environ.get(
 DB_DIR = os.environ.get("SURVEYFORGE_DB_DIR", "database")
 
 MODEL = os.environ.get("SURVEYFORGE_MODEL", "deepseek/deepseek-v4-pro")
+# topic 정책 (2026-09-14 규약): slug 하나로 topic 을 고른다. 제목은 정책 파일의 topic (= topics.kisti.jsonl 의 title)
+# 에서 풀고, 검색은 그 행의 retrieval_cutoff_at(GT survey 최초 공개일) 이전 문헌으로 제한된다 (main.py --topic_id).
+TOPIC_ID = os.environ.get("SURVEYFORGE_TOPIC_ID", "").strip()
 # Repeats per topic. The summary line used to hardcode "/10" while the loop ran once.
 TOTAL_EXPS = int(os.environ.get("SURVEYFORGE_EXPS", 1))
 
@@ -84,6 +87,7 @@ def run_experiment(topic, exp_num, base_path):
         # interpreter would miss the venv the dependencies were installed into.
         sys.executable, "main.py",
         "--topic", topic,
+        *(["--topic_id", TOPIC_ID] if TOPIC_ID else []),
         "--gpu", "0",
         # Writes the intermediate outline chunks, retrieved titles and RAG doc
         # dumps alongside the survey. Costs nothing but disk, and without them a
@@ -195,9 +199,18 @@ def main():
     base_path = os.path.join("./output/res", slug)
     create_directory(base_path)
 
-    # Topics come from the command line when given, else topics_demo.txt.
+    # Topics: SURVEYFORGE_TOPIC_ID 가 있으면 정책 행의 topic 문자열 하나 (인자로 준 제목은 그것과 같아야 한다);
+    # 없으면 명령행 인자, 그것도 없으면 topics_demo.txt.
     topics = [t for t in sys.argv[1:] if t.strip()]
-    if not topics:
+    if TOPIC_ID and TOPIC_ID.lower() != "none":
+        from src.retrieval_policy import topic_title
+        title = topic_title(TOPIC_ID)
+        if not topics:
+            topics = [title]
+        elif topics != [title]:
+            sys.exit(f"SURVEYFORGE_TOPIC_ID={TOPIC_ID} 의 topic 은 {title!r} 인데 인자로 {topics} 를 받았다. "
+                     "slug 하나에 topic 하나다 -- 인자를 빼거나 같은 제목을 줄 것.")
+    elif not topics:
         with open("topics_demo.txt", "r") as f:
             topics = [line.strip() for line in f if line.strip()]
 
@@ -208,6 +221,7 @@ def main():
     print(f"Model: {MODEL}")
     print(f"Output: {base_path}")
     print(f"Topics: {topics}")
+    print(f"Topic policy: {'SURVEYFORGE_TOPIC_ID=' + TOPIC_ID if TOPIC_ID else 'unset -- main.py will refuse to run'}")
 
 
     start_time = datetime.now()

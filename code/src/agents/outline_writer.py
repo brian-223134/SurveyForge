@@ -6,7 +6,7 @@ import time
 import torch
 from src.model import APIModel, LocalModel
 from src.database import database
-from src.utils import tokenCounter, get_index_filter_by_id_prefix
+from src.utils import tokenCounter, get_retrieval_filter
 from src.prompt import ROUGH_OUTLINE_WITH_SURVEY_PROMPT, MERGING_OUTLINE_WITH_SURVEY_PROMPT, SUBSECTION_OUTLINE_WITH_SURVEY_PROMPT, EDIT_FINAL_OUTLINE_PROMPT_NEW
 import random
 import re
@@ -46,10 +46,14 @@ class outlineWriter():
 
     def draft_outline(self, topic, reference_num = 600, chunk_size = 30000, section_num = 6):
         # Get database
-        # Time Filter
-        rag_outline_subset_index_filter = get_index_filter_by_id_prefix(
-            self.db["rag_outline"].id_to_index, self.args.paper_id_cutoff,
-            stage='outline', saving_path=self.args.saving_path)
+        # Time Filter -- topic 정책(GT 최초 공개일 cutoff)이 있으면 허용 집합, 없으면 종전 id 게이트 (utils.get_retrieval_filter)
+        rag_outline_subset_index_filter = get_retrieval_filter(
+            self.db["rag_outline"].id_to_index, self.args, stage='outline')
+        # 서브아웃라인 검색(원 코드: 게이트도 풀 잠금도 없음)에도 정책이 있으면 같은 선택자를 건다 --
+        # 허용 집합 밖 문헌이 서브섹션 제안에 섞이면 집필 단계가 그 문헌을 못 찾는 것으로 끝나지 않고
+        # 아웃라인 자체가 cutoff 이후 지식을 담는다. 정책이 없으면 원 코드 그대로(선택자 없음).
+        self.suboutline_index_filter = (rag_outline_subset_index_filter
+                                        if getattr(self.args, 'retrieval_policy', None) is not None else {})
         rag_outline_subset_ids = self.db["rag_outline"].retrieve_id(topic, 
                                                                     top_k=reference_num,
                                                                     **rag_outline_subset_index_filter)
@@ -240,14 +244,16 @@ class outlineWriter():
                     references_ids_tmp = self.db["rag_suboutline"].retrieve_id([f"{topic}:" + des_tmp], 
                                                                         search_type='similarity', 
                                                                         rerank='raw', 
-                                                                        top_k=int(rag_num // len(section_description) * 5))
+                                                                        top_k=int(rag_num // len(section_description) * 5),
+                                                                        **getattr(self, 'suboutline_index_filter', {}))
                     references_ids.extend(references_ids_tmp)
             else:
                 section_description = [section_description]
                 references_ids = self.db["rag_suboutline"].retrieve_id(section_description, 
                                                                     search_type='similarity', 
                                                                     rerank='raw', 
-                                                                    top_k=rag_num)
+                                                                    top_k=rag_num,
+                                                                    **getattr(self, 'suboutline_index_filter', {}))
 
             references_infos = self.db["paper"].get_paper_info_from_ids(references_ids)
             

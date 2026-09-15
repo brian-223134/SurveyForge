@@ -13,6 +13,7 @@ from src.agents.writer import subsectionWriter
 from src.database import database, database_survey
 from src.rag import GeneralRAG_langchain
 from src.utils import arxiv_month, cutoff_log, find_index
+from src.retrieval_policy import NO_POLICY, default_paper_dates_path, default_policy_path, load_retrieval_policy
 from tqdm import tqdm
 import time
 import re
@@ -166,6 +167,16 @@ def paras_args():
                         help='Newest publication date the citation reranker considers. Retrieved '
                              'papers outside [oldest, newest] are discarded before ranking and '
                              'can never be cited.')
+    # ---- topic 별 retrieval cutoff (2026-09-14 규약, docs/retrieval-policy.md) ----
+    # cutoff = 정책 행의 retrieval_cutoff_at (GT survey 최초 공개일). 판정·허용 집합은 src/retrieval_policy.py.
+    # 위의 id 게이트·TRE 창은 그대로 두되(2612 / 1922-01-01 · 2026-12-31 = 아무것도 거르지 않는 값) 시간 조건은 정책이 맡는다.
+    parser.add_argument('--topic_id', default=os.environ.get('SURVEYFORGE_TOPIC_ID', ''), type=str,
+                        help="정책 파일의 topic_id (slug, 예 physical-adversarial-attacks). 그 행의 retrieval_cutoff_at "
+                             "이전 문헌만 검색된다. 'none' 이면 정책 없이(id 게이트만) 돌린다 -- 비교 실험 밖에서만.")
+    parser.add_argument('--topic_policy', default=os.environ.get('SURVEYFORGE_TOPIC_POLICY', ''), type=str,
+                        help=f'topic 정책 JSONL (AutoSurvey scripts/build_topic_policy.py 산출). 기본 {default_policy_path()}')
+    parser.add_argument('--paper_dates', default=os.environ.get('SURVEYFORGE_PAPER_DATES', ''), type=str,
+                        help=f'문헌 공개일 sidecar paper_dates.json (view 전편). 기본 {default_paper_dates_path()}')
     args = parser.parse_args()
     validate_cutoffs(args)
     return args
@@ -173,6 +184,11 @@ def paras_args():
 
 def validate_cutoffs(args):
     """Reject malformed cutoffs before the ~2 minute database load, not after."""
+    if not (args.topic_id or '').strip():
+        raise SystemExit(
+            "--topic_id (SURVEYFORGE_TOPIC_ID) 가 비었다. 2026-09-14 규약부터 모든 생성은 topic 정책(GT survey 최초 "
+            "공개일 cutoff) 아래에서 돈다 -- 정책 파일의 slug 를 줄 것 (run_demo.py 는 slug 만 주면 제목을 푼다). "
+            f"정책 없이 돌리려면 명시적으로 '{NO_POLICY}' 을 줄 것 (비교 실험 산출물이 아니게 된다).")
     if not re.fullmatch(r'\d{4}', args.paper_id_cutoff):
         raise SystemExit(
             f"--paper_id_cutoff must be a 4-digit YYMM string, got {args.paper_id_cutoff!r}. "
@@ -249,9 +265,44 @@ def report_cutoffs_vs_database(args, rag):
                    f"discarded by the citation reranker.", args.saving_path)
 
 
-def write_run_manifest(args, references):
+def resolve_retrieval_policy(args):
+    """topic 정책을 DB 로드 전에 확정한다 (정책 파일·sidecar·topic 문자열 불일치는 여기서 죽는다 -- 비용 0).
+
+    반환값은 args.retrieval_policy 에도 붙는다: outline_writer·writer 는 args 를 통해 선택자를 받고
+    (utils.get_retrieval_filter), database·database_survey 는 생성자 인자로 받는다.
+    """
+    policy = load_retrieval_policy(args.topic_id, args.topic_policy or None, args.paper_dates or None,
+                                   topic=args.topic)
+    args.retrieval_policy = policy
+    if policy is None:
+        cutoff_log(f"[policy] NONE -- topic 정책 없이 실행 (--topic_id={args.topic_id!r}; id 게이트 {args.paper_id_cutoff} 만). "
+                   "2026-09-14 규약의 비교 실험 산출물이 아니다.", args.saving_path)
+        return None
+    for line in policy.log_lines():
+        cutoff_log(line, args.saving_path)
+    cutoff_log(f"[policy] 정책 파일 {policy.policy_path} · sidecar {policy.paper_dates_path} "
+               f"(view {policy.sidecar_meta.get('view')} sha {str(policy.sidecar_meta.get('view_papers_sha256'))[:8]} "
+               f"/ {policy.sidecar_meta.get('view_created_at')})", args.saving_path)
+    return policy
+
+
+def verify_references_allowed(references, policy, saving_path):
+    """최종 참고문헌이 전부 허용 집합 안인지. 위반 id 목록을 돌려준다 (비어 있으면 정상)."""
+    ids = list(references.values()) if isinstance(references, dict) else list(references or [])
+    if policy is None:
+        return []
+    bad = sorted({str(i) for i in ids if not policy.is_allowed(i)})
+    if bad:
+        cutoff_log(f"[policy] VIOLATION: 최종 참고문헌 {len(bad)}편이 허용 집합 밖이다 (cutoff<{policy.cutoff}): {bad[:20]}",
+                   saving_path)
+    else:
+        cutoff_log(f"[policy] 최종 참고문헌 {len(set(ids))}편 전부 허용 집합 안 (cutoff<{policy.cutoff})", saving_path)
+    return bad
+
+
+def write_run_manifest(args, references, db=None, violations=()):
     """편당 실행 조건과 LLM 집계를 남긴다 -- 비교 실험의 기록 항목(모델·provider·
-    temperature·max_tokens·재요청·잘림·DB 지문·refs 수). 비용은 이 안에서 알 수 없으니
+    temperature·max_tokens·재요청·잘림·DB 지문·refs 수·retrieval_policy 블록). 비용은 이 안에서 알 수 없으니
     scripts/check_credits.py 전후 차로 잰다."""
     from src.model import MAX_TOKENS, TEMPERATURE_OVERRIDE, RETRY_TRUNCATED, LLM_STATS
     db_build = {}
@@ -262,6 +313,15 @@ def write_run_manifest(args, references):
         db_build = {k: b.get(k) for k in ('records', 'tag', 'export', 'export_file_sha256',
                                           'built_at', 'id_formats')}
         db_build['view'] = (b.get('export_manifest') or {}).get('view')
+    # append 한 스냅샷(kisti-2608 = v2 인덱스 + 추가분)은 append_manifest.json 을 갖는다 (scripts/append_snapshot.py).
+    p = os.path.join(args.db_path, 'append_manifest.json')
+    if os.path.exists(p):
+        with open(p) as f:
+            a = json.load(f)
+        db_build['append'] = {'created_at': a.get('created_at'), 'base_records': (a.get('base') or {}).get('records'),
+                              'base_view': ((a.get('base') or {}).get('view') or {}).get('name'),
+                              'added': (a.get('new') or {}).get('added'),
+                              'stored_ids': (a.get('new') or {}).get('stored_ids')}
     # view 차분(v2 이후)이 적용된 스냅샷은 view_diff_manifest.json 을 갖는다 (kisti_data adapter/index_diff.py).
     # 결과 기록에는 view 버전이 필요하다 -- created_at 과 편수로 표기한다 (AGENT-HANDOFF.md §0).
     p = os.path.join(args.db_path, 'view_diff_manifest.json')
@@ -271,8 +331,20 @@ def write_run_manifest(args, references):
         db_build['view_diff'] = {k: d.get(k) for k in ('created_at', 'v1_records', 'v2_records',
                                                        'removed_count', 'added_count')}
     ids = list(references.values()) if isinstance(references, dict) else list(references or [])
+    policy = getattr(args, 'retrieval_policy', None)
+    policy_block = None
+    if policy is not None:
+        id_map = db['rag_outline'].id_to_index if db else None
+        policy_block = policy.manifest(id_map)
+        policy_block['reference_violations'] = list(violations)
+        if db and getattr(db.get('survey'), 'policy_report', None):
+            policy_block['outline_db'] = db['survey'].policy_report
+        if db and db.get('paper') is not None:
+            policy_block['direct_lookup_dropped'] = getattr(db['paper'], 'lookup_dropped', 0)
     manifest = {
         'topic': args.topic,
+        'topic_id': args.topic_id,
+        'retrieval_policy': policy_block,
         'model': args.model,
         'api_url': args.api_url,
         'provider': os.environ.get('SURVEYFORGE_PROVIDER', ''),
@@ -306,9 +378,14 @@ def main(args):
     # of argv so `ps` cannot see it; without this the run log gives it away anyway.
     print(argparse.Namespace(**{**vars(args),
                                'api_key': f'<set, {len(args.api_key)} chars>' if args.api_key else '<empty>'}))
+    if not os.path.exists(args.saving_path):
+        os.mkdir(args.saving_path)
+    # 정책은 DB 로드(수 분) 전에 확정한다 -- 정책 파일·sidecar·topic 문자열 불일치가 여기서 죽는다.
+    policy = resolve_retrieval_policy(args)
+
     print("########### Loading database and RAG Index... ###########")
-    db_paper = database(db_path = args.db_path, embedding_model = args.embedding_model)
-    db_survey = database_survey(db_path = args.db_path, embedding_model = args.embedding_model)
+    db_paper = database(db_path = args.db_path, embedding_model = args.embedding_model, policy = policy)
+    db_survey = database_survey(db_path = args.db_path, embedding_model = args.embedding_model, policy = policy)
 
     # 파일명에 코퍼스 컷오프가 박혀 있으므로 글롭으로 찾는다 — 스냅샷을 갈아탈 때
     # --db_path 만 바꾸면 되고, 파일명은 계속 컷오프를 말해 준다.
@@ -334,9 +411,6 @@ def main(args):
                                               doc_db_path=doc_db_path,
                                               arxivid_to_index_path=arxivid_to_index_path,
                                               embedding_model=args.embedding_model)
-
-    if not os.path.exists(args.saving_path):
-        os.mkdir(args.saving_path)
 
     report_cutoffs_vs_database(args, rag_abstract4outline)
 
@@ -365,12 +439,21 @@ def main(args):
 
     with open(f'{args.saving_path}/{args.topic}.md', 'a+') as f:
         f.write(refined_survey_with_references)
+    violations = verify_references_allowed(refined_references, policy, args.saving_path)
     with open(f'{args.saving_path}/{args.topic}.json', 'a+') as f:
         save_dic = {}
         save_dic['survey'] = refined_survey_with_references
         save_dic['reference'] = refined_references
+        if policy is not None:
+            save_dic['retrieval_policy'] = {'topic_id': policy.topic_id, 'retrieval_cutoff_at': policy.cutoff,
+                                            'exclude_ids': policy.exclude_ids,
+                                            'reference_violations': violations}
         f.write(json.dumps(save_dic, indent=4))
-    write_run_manifest(args, refined_references)
+    write_run_manifest(args, refined_references, db=db, violations=violations)
+    if violations:
+        # 산출물은 남긴다(비용이 이미 들었고 원인 분석에 필요). 실행은 실패로 끝내 run_demo 가 [FAILED] 로 기록하게 한다.
+        raise RuntimeError(f'[policy] 최종 참고문헌 {len(violations)}편이 허용 집합 밖 -- 산출물을 비교 실험에 쓰면 안 된다: '
+                           f'{violations[:10]}')
 
 if __name__ == '__main__':
 
