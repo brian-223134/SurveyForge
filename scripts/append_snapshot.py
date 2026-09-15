@@ -31,12 +31,33 @@ prefix를 붙이면 cos가 0.9x로 그럴듯하게 틀린다. 둘 다 조용한 
     nvidia-smi --query-gpu=index,memory.used,utilization.gpu --format=csv,noheader
     CUDA_VISIBLE_DEVICES=2 python scripts/append_snapshot.py ...
 
+## id 는 불투명 키다 (KISTI view, 2026-09-15)
+
+KISTI export(id 규칙 B)는 arXiv base id 와 DOI 가 섞여 있고 `authors` 필드가 없다.
+중복 판정은 `base_key()` 로 한다 -- arXiv 형식이면 버전 접미사만 떼고, 그 밖의 id(DOI)는
+그대로 비교한다. 종전의 `id.split('v')[0]` 은 DOI 를 'v' 에서 잘라(`10.1002/advs.2025…`
+→ `10.1002/ad`) 서로 다른 논문을 같은 것으로 묶었다. 제목+저자 중복 제거는 `authors`
+가 있는 레코드에서만 돈다 (없으면 건너뛰고 그 사실을 찍는다 -- 제목만으로 지우면
+별개 논문 244건을 잃는다, 아래 주석).
+
+`<new>.manifest.json` 이 옆에 있으면 (kisti_data exporter 산출) `append_manifest.json`
+에 담고, `build_manifest.json` 은 병합 후 상태(편수·태그·md5·id 형식·derived_from)로
+다시 쓴다. `--corpus-export-manifest` 로 전체 export 의 manifest 를 주면 그것이
+`corpus_export_manifest.json` 이 된다 (run_manifest 가 view sha 를 여기서 읽는다).
+
 사용법:
     python scripts/append_snapshot.py \
         --base $SURVEYFORGE_DATA/database \
         --new  $SURVEYFORGE_DATA/database_2026-08/arxiv_paper_db_new_with_cc.json \
         --out  $SURVEYFORGE_DATA/database_2026-08 \
         --check-only          # 쓰지 않고 점검만
+
+    # KISTI view 증분 (kisti-2512 v2 → kisti-2608, 2026-09-15)
+    CUDA_VISIBLE_DEVICES=3 .venv/bin/python scripts/append_snapshot.py \
+        --base $SURVEYFORGE_DATA/database_kisti-kisti-2512 \
+        --new  /data2/chanjoong/kisti_data/data/exports/kisti-2608.surveyforge.minus-kisti-2512.json \
+        --corpus-export-manifest /data2/chanjoong/kisti_data/data/exports/kisti-2608.surveyforge.json.manifest.json \
+        --out  $SURVEYFORGE_DATA/database_kisti-kisti-2608 --tag KISTI_2608
 """
 
 import argparse
@@ -57,6 +78,29 @@ PAPER_DB = 'arxiv_paper_db_with_cc.json'
 PAPER_MAP = 'arxivid_to_index_abs.json'
 ABS_STEM = 'faiss_paper_title_abs_embeddings'
 TITLE_STEM = 'faiss_paper_title_embeddings'
+
+
+# build_db_from_corpus.py 와 같은 규칙: arXiv 신형 YYMM.NNNNN / 구형 archive/YYMMNNN (버전 접미사 허용).
+_ARXIV_ID = re.compile(r'^(\d{4}\.\d{4,5}|[a-zA-Z\-]+(\.[a-zA-Z]{2})?/\d{7})(v\d+)?$')
+
+
+def base_key(pid):
+    """중복 판정 키. arXiv 형식이면 버전 접미사를 뗀 base id, 그 밖(DOI)은 그대로.
+
+    DOI 에는 'v' 가 흔히 들어간다 (`10.1002/advs.…`, `10.1109/tvt.…`). 그것을 'v' 에서
+    자르면 서로 다른 논문이 한 키로 뭉친다 -- KISTI 추가분 12,217편 중 1,374편이 그렇다.
+    """
+    pid = str(pid)
+    m = _ARXIV_ID.match(pid)
+    return pid[:m.start(3)] if m and m.group(3) else pid
+
+
+def id_formats_of(ids):
+    f = {'arxiv': 0, 'doi': 0, 'other': 0}
+    for i in ids:
+        i = str(i)
+        f['doi' if i.startswith('10.') else 'arxiv' if _ARXIV_ID.match(i) else 'other'] += 1
+    return f
 
 
 def title_author_key(rec):
@@ -141,6 +185,101 @@ def embed(model, texts, batch_size, label):
     return np.concatenate(out).astype('float32')
 
 
+def _json_or_none(path):
+    if path and os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return None
+
+
+def write_manifests(args, table, mapping, fresh, n_base, n_in_file, tag, md5s, base_files,
+                    model_path, device):
+    """append_manifest.json(이번 증분의 기록) + build_manifest.json(병합 후 상태) + corpus_export_manifest.json.
+
+    main.py 의 run_manifest 는 build_manifest 의 records/tag/export/export_file_sha256/built_at/id_formats 와
+    corpus_export_manifest 의 view sha 를 읽는다 -- 병합 후 값이어야 결과 기록이 새 view 를 가리킨다.
+    """
+    now = time.strftime('%Y-%m-%dT%H:%M:%S%z')
+    base_build = _json_or_none(os.path.join(args.base, 'build_manifest.json')) or {}
+    base_export = _json_or_none(os.path.join(args.base, 'corpus_export_manifest.json'))
+    base_diff = _json_or_none(os.path.join(args.base, 'view_diff_manifest.json'))
+    new_manifest = _json_or_none(args.new + '.manifest.json')
+    full_manifest = _json_or_none(args.corpus_export_manifest) if args.corpus_export_manifest else None
+    if args.corpus_export_manifest and full_manifest is None:
+        raise SystemExit(f'--corpus-export-manifest 없음: {args.corpus_export_manifest}')
+    n = len(table)
+    dates = [r['date'] for r in table.values() if r.get('date')]
+    new_ids = [r['id'] for r in fresh]
+
+    append_manifest = {
+        'created_at': now,
+        'builder': 'scripts/append_snapshot.py',
+        'base': {'dir': os.path.abspath(args.base), 'records': n_base,
+                 'built_at': base_build.get('built_at'), 'tag': base_build.get('tag'),
+                 'md5': base_build.get('md5'),
+                 'view': (base_export or {}).get('view'),
+                 'view_diff': ({k: base_diff.get(k) for k in ('created_at', 'v1_records', 'v2_records',
+                                                             'removed_count', 'added_count')}
+                               if base_diff else None)},
+        'new': {'path': os.path.abspath(args.new), 'records_in_file': n_in_file, 'added': len(fresh),
+                'skipped_duplicate': n_in_file - len(fresh), 'manifest': new_manifest,
+                'file_sha256': _sha256(args.new), 'stored_ids': [n_base + 1, n],
+                'id_formats': id_formats_of(new_ids),
+                'date_range': [min(r['date'] for r in fresh), max(r['date'] for r in fresh)]},
+        'embedding': {'model': model_path, 'device': device, 'batch_size': args.batch_size,
+                      'text': 'title + abs (구분자 없음) / title, L2 정규화, prefix 없음'},
+        'merged': {'records': n, 'tag': tag, 'index_type': 'IndexIDMap(IndexFlatIP)',
+                   'stored_ids': '1-based 연속: base 1..%d 그대로 + 신규 %d..%d' % (n_base, n_base + 1, n),
+                   'md5': md5s, 'date_range': [min(dates), max(dates)]},
+        'corpus_export_manifest': ('--corpus-export-manifest 사본' if full_manifest else 'base 사본'),
+    }
+    with open(os.path.join(args.out, 'append_manifest.json'), 'w') as f:
+        json.dump(append_manifest, f, ensure_ascii=False, indent=2)
+
+    export_manifest = full_manifest or base_export
+    if export_manifest is not None:
+        with open(os.path.join(args.out, 'corpus_export_manifest.json'), 'w') as f:
+            json.dump(export_manifest, f, ensure_ascii=False, indent=2)
+
+    build_manifest = {
+        'built_at': now,
+        'builder': 'scripts/append_snapshot.py',
+        'derived_from': {'dir': os.path.abspath(args.base), 'built_at': base_build.get('built_at'),
+                         'records': n_base, 'md5': base_build.get('md5'), 'view_diff': base_diff,
+                         'method': f'append: 신규 {len(fresh):,}편을 gte 로 임베딩해 stored id '
+                                   f'{n_base + 1}..{n} 으로 뒤에 붙임, base 벡터·레코드는 바이트 그대로'},
+        # 병합 결과의 id 집합은 전체 export 와 같다 (base ∪ 차분). 순서는 base 접두 + 추가분이라
+        # JSON 이 export 의 바이트 사본은 아니다 -- export_file_sha256 는 그 전체 export 의 지문.
+        'export': (os.path.abspath(args.corpus_export_manifest)[:-len('.manifest.json')]
+                   if args.corpus_export_manifest and args.corpus_export_manifest.endswith('.manifest.json')
+                   else base_build.get('export')),
+        'export_file_sha256': (full_manifest or {}).get('file_sha256', base_build.get('export_file_sha256')),
+        'export_equivalence': 'id 집합 == export (순서 다름: base 접두 + 추가분)' if full_manifest else 'base 의 기록',
+        'export_manifest': export_manifest,
+        'append': {'new': os.path.abspath(args.new), 'added': len(fresh),
+                   'skipped_duplicate': n_in_file - len(fresh), 'stored_ids': [n_base + 1, n]},
+        'records': n,
+        'id_formats': id_formats_of(r['id'] for r in table.values()),
+        'tag': tag,
+        'embedding_model': model_path,
+        'batch_size': args.batch_size,
+        'text_normalization': base_build.get('text_normalization', 'none — export 원문 그대로'),
+        'date_range': [min(dates), max(dates)],
+        'md5': md5s,
+    }
+    with open(os.path.join(args.out, 'build_manifest.json'), 'w') as f:
+        json.dump(build_manifest, f, ensure_ascii=False, indent=2)
+    print('      append_manifest.json · build_manifest.json · corpus_export_manifest.json 기록')
+
+
+def _sha256(path, chunk=1 << 24):
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        for blk in iter(lambda: f.read(chunk), b''):
+            h.update(blk)
+    return h.hexdigest()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -153,7 +292,10 @@ def main():
     # 어텐션이 seq^2로 메모리를 잡아 512에서는 OOM이 난다.
     ap.add_argument('--batch-size', type=int, default=64)
     ap.add_argument('--device', default='')
-    ap.add_argument('--tag', default='', help="파일명 접미사, 예 FROM_2012_0101_TO_260803")
+    ap.add_argument('--tag', default='', help="파일명 접미사, 예 FROM_2012_0101_TO_260803 / KISTI_2608")
+    ap.add_argument('--corpus-export-manifest', default='',
+                    help='병합 결과와 id 집합이 같은 전체 export 의 manifest -- 새 스냅샷의 '
+                         'corpus_export_manifest.json 이 된다 (비우면 base 것을 복사)')
     ap.add_argument('--keep-title-dups', action='store_true',
                     help='제목+저자가 같은 논문도 그대로 넣는다 (기본은 제거)')
     ap.add_argument('--check-only', action='store_true', help='쓰지 않고 점검만')
@@ -175,18 +317,27 @@ def main():
     print(f'\n[2/6] 신규 레코드 로딩 {args.new}', flush=True)
     with open(args.new) as f:
         fresh = list(json.load(f)['cs_paper_info'].values())
-    have = {r['id'].split('v')[0] for r in table.values()}
-    fresh = [r for r in fresh if r['id'].split('v')[0] not in have]
+    n_in_file = len(fresh)
+    have = {base_key(r['id']) for r in table.values()}
+    fresh = [r for r in fresh if base_key(r['id']) not in have]
+    n_dup_base = n_in_file - len(fresh)
     # 같은 논문이 두 번 들어오면 매핑이 덮어써져 벡터 하나가 미아가 된다.
     seen, dedup = set(), []
     for r in fresh:
-        b = r['id'].split('v')[0]
+        b = base_key(r['id'])
         if b not in seen:
             seen.add(b)
             dedup.append(r)
+    n_dup_self = len(fresh) - len(dedup)
     fresh = dedup
+    if n_dup_base or n_dup_self:
+        print(f'      id 중복 제외: 기존과 겹침 {n_dup_base:,}편, 신규끼리 겹침 {n_dup_self:,}편')
 
-    if not args.keep_title_dups:
+    has_authors = bool(fresh) and all('authors' in r for r in fresh[:1000])
+    if not args.keep_title_dups and not has_authors:
+        # 저자 없이 제목만으로 지우면 별개 논문을 잃는다 (아래 실측). KISTI export 가 이 경우다.
+        print('      authors 필드 없음 (KISTI export) -- 제목+저자 중복 제거는 건너뛰고 id 로만 판정')
+    if not args.keep_title_dups and has_authors:
         # 같은 논문이 arXiv에 다른 id로 두 번 올라오는 경우가 있다. id 기준 중복 제거로는
         # 안 잡힌다. 기존 DB에서 실측하면 제목 충돌 742건 중 498건이 저자까지 같았고
         # (진짜 중복), 244건은 제목만 같은 별개 논문이었다 — 그래서 제목만으로 지우면
@@ -209,7 +360,7 @@ def main():
         if n_before != len(fresh):
             print(f'      제목+저자 중복 제거: 기존과 겹침 {dropped_base:,}편, '
                   f'신규끼리 겹침 {dropped_self:,}편 (--keep-title-dups로 끌 수 있다)')
-    need = ('id', 'title', 'url', 'date', 'abs', 'cat', 'authors', 'citation_count')
+    need = ('id', 'title', 'url', 'date', 'abs', 'cat', 'citation_count')   # authors 는 선택
     missing = {f for r in fresh[:1000] for f in need if f not in r}
     if missing:
         raise SystemExit(f'신규 레코드에 없는 필드: {sorted(missing)}')
@@ -257,8 +408,11 @@ def main():
     faiss.write_index(title_idx, out_title)
     # 우리가 다시 만든 4개를 뺀 나머지를 전부 복사한다. 서베이 자산을 이름으로 나열하면
     # 파일명이 바뀌었을 때 조용히 빠지고, 그 스냅샷은 실행 시점에야 죽는다.
+    # base 의 빌드 기록 3종은 병합 후 상태를 말하지 않으므로 복사하지 않고 아래에서 다시 쓴다
+    # (build_manifest 는 derived_from 으로, view_diff 는 그 안에 접어 넣는다).
     regenerated = {os.path.basename(p) for p in (out_db, out_map, out_abs, out_title)}
     regenerated |= {os.path.basename(abs_path), os.path.basename(title_path)}
+    regenerated |= {'build_manifest.json', 'corpus_export_manifest.json', 'view_diff_manifest.json'}
     copied = []
     for name in sorted(os.listdir(args.base)):
         if name in regenerated:
@@ -269,14 +423,17 @@ def main():
             copied.append(name)
     print(f'      나머지 자산 {len(copied)}개 복사 (서베이 DB 등): {", ".join(copied)}')
     missing = ({f for f in os.listdir(args.base) if os.path.isfile(os.path.join(args.base, f))}
-               - set(os.listdir(args.out)) - {os.path.basename(abs_path),
-                                              os.path.basename(title_path)})
+               - set(os.listdir(args.out)) - regenerated)
     if missing:
         raise SystemExit(f'새 스냅샷에 빠진 파일: {sorted(missing)}')
 
     print(f'\n[6/6] 지문 — REPRODUCTION.md 에 기록할 값', flush=True)
+    md5s = {}
     for p in (out_db, out_map, out_abs, out_title):
-        print(f'  {os.path.basename(p):<62} {os.path.getsize(p):>14,}  {md5(p)}')
+        md5s[os.path.basename(p)] = md5(p)
+        print(f'  {os.path.basename(p):<62} {os.path.getsize(p):>14,}  {md5s[os.path.basename(p)]}')
+    write_manifests(args, table, mapping, fresh, n_base, n_in_file, tag, md5s,
+                    base_files=(abs_path, title_path), model_path=model_path, device=device)
     print(f'\n  총 {len(table):,}편 (기존 {n_base:,} + 신규 {len(fresh):,})')
     print(f'  코퍼스 최신일 {max(r["date"] for r in table.values() if r.get("date"))}')
     print('\n다음: scripts/check_db.py 로 재임베딩 검증')

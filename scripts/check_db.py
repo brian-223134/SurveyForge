@@ -58,6 +58,9 @@ def main():
     ap.add_argument('--min-cos', type=float, default=0.999)
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--fingerprint', action='store_true', help='md5까지 계산 (느리다)')
+    ap.add_argument('--base-records', type=int, default=0,
+                    help='기존 구간의 편수 (append 한 스냅샷의 재임베딩 표본을 기존/신규 반씩 뽑는 경계). '
+                         '0 이면 append_manifest.json 의 base.records, 그것도 없으면 배포본 589,123')
     args = ap.parse_args()
 
     fail = []
@@ -116,8 +119,14 @@ def main():
         # 기존 구간과 신규 구간을 반씩 뽑는다. 한쪽만 보면 놓치는 오류가 있다.
         rng = random.Random(args.seed)
         half = max(1, args.verify_embeddings // 2)
-        # 배포본 589,123편이 기존 구간이다. 그보다 작으면 전체를 기존으로 본다.
-        split = min(589123, n)
+        # 기존 구간 경계: --base-records > append_manifest.json > 배포본 589,123. 그보다 작으면 전체를 기존으로 본다.
+        base_records = args.base_records
+        if not base_records:
+            am_path = os.path.join(args.db, 'append_manifest.json')
+            if os.path.exists(am_path):
+                with open(am_path) as f:
+                    base_records = int(json.load(f)['base']['records'])
+        split = min(base_records or 589123, n)
         picks = (rng.sample(range(1, split + 1), min(half, split))
                  + (rng.sample(range(split + 1, n + 1), min(half, n - split))
                     if n > split else []))
@@ -172,7 +181,8 @@ def main():
     if n_old:
         print(f'        구형 arXiv id {n_old:,}편 -- 모두 2007-04 이전이라 어떤 컷오프에도 걸리지 않는다')
     print(f'        실행 시 SURVEYFORGE_PAPER_ID_CUTOFF={new_pref[-1] if new_pref else "(YYMM 아무 값)"} '
-          f'/ SURVEYFORGE_PAPER_DATE_NEWEST={max(dates)} 이상으로 둘 것')
+          f'/ SURVEYFORGE_PAPER_DATE_NEWEST={max(dates)} 이상으로 둘 것 '
+          f'(시간 조건은 topic 정책 SURVEYFORGE_TOPIC_ID 가 담당 -- docs/retrieval-policy.md)')
 
     if args.fingerprint:
         print('\n지문 (REPRODUCTION.md에 기록):')
