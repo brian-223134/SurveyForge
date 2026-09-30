@@ -1,0 +1,13 @@
+[policy] topic_id=llm-agent-optimization cutoff<2025-03-16 (근거: arxiv:2503.12434 v1 published (twin)) 제외 id 2개 ['10.1145/3789261', '2503.12434']
+[policy] sidecar 허용 1,541,302/1,697,512편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 98,272 / month 57,909 / year 29
+[policy] 정책 파일 /data2/chanjoong/survey-agent/AutoSurvey/data/topic_policy.kisti-2608-r4.jsonl · sidecar /data2/chanjoong/kisti_data/data/views/kisti-2608-r4/paper_dates.json (view kisti-2608-r4 sha 32a77a48 / 2026-09-30T02:05:49+00:00)
+[cutoff/db] 1697512 papers, newest id 2606.17978 (2026-06), dates 1922-01-01..2026-01-01, 1203351 DOI ids (pass the id gate)
+[cutoff/cfg] --paper_id_cutoff=2606 --paper_date_oldest=1922-01-01 --paper_date_newest=2026-12-31
+[policy/outline] topic_id=llm-agent-optimization cutoff<2025-03-16 (근거: arxiv:2503.12434 v1 published (twin)) 제외 id 2개 ['10.1145/3789261', '2503.12434']
+[policy/outline] sidecar 허용 1,541,302/1,697,512편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 98,272 / month 57,909 / year 29
+[policy/outline] DB 허용 1,541,302/1,697,512편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 156,210; 허용 id 정렬 sha256 efe95869ded411e2…
+[policy/writer] topic_id=llm-agent-optimization cutoff<2025-03-16 (근거: arxiv:2503.12434 v1 published (twin)) 제외 id 2개 ['10.1145/3789261', '2503.12434']
+[policy/writer] sidecar 허용 1,541,302/1,697,512편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff day 98,272 / month 57,909 / year 29
+[policy/writer] DB 허용 1,541,302/1,697,512편 -- 제외: exclude_id 0 · no_date 0 · after_cutoff 156,210; 허용 id 정렬 sha256 efe95869ded411e2…
+[cutoff/rerank] total: 0/5117 retrieved documents discarded by the citation window [1922-01-01, 2026-12-31]
+[policy] 최종 참고문헌 109편 전부 허용 집합 안 (cutoff<2025-03-16)

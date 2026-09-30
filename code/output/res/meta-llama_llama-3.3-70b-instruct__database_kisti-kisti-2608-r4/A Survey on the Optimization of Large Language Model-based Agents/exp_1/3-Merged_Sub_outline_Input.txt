@@ -1,0 +1,808 @@
+
+You are an expert in artificial intelligence writing a comprehensive outline of the survey about **A Survey on the Optimization of Large Language Model-based Agents**.
+
+You have created the following overall outline:
+---
+Title: A Survey on the Optimization of Large Language Model-based Agents
+
+Section 1: Introduction
+Description 1: This section provides an overview of the emergence and significance of large language model-based agents, their applications, and the importance of optimization in enhancing their performance and efficiency. 
+1. Definition and evolution of large language models and their role in agent development, including the historical context and current state of the field.
+2. Overview of the primary applications of large language model-based agents, such as natural language processing, decision-making, and problem-solving, highlighting their potential impact and current limitations.
+3. Discussion of the challenges associated with optimizing large language model-based agents, including computational complexity, data quality, and ethical considerations.
+
+Section 2: Architectures and Designs for Large Language Model-based Agents
+Description 2: This section delves into the architectural designs and models used for constructing large language model-based agents, including discussions on modularity, scalability, and adaptability. 
+1. Examination of various architectures, including transformer-based models, recurrent neural networks, and hybrid approaches, and their suitability for different tasks, such as natural language processing and decision-making.
+2. Analysis of the role of attention mechanisms, memory components, and other key features in enhancing the capabilities of large language model-based agents, including their ability to process and generate human-like language.
+3. Discussion on the integration of external knowledge and domain-specific information into the architecture of large language model-based agents, including the use of knowledge graphs and ontologies.
+
+Section 3: Optimization Techniques for Large Language Model-based Agents
+Description 3: This section explores various optimization techniques applied to large language model-based agents to improve their performance, efficiency, and robustness, including fine-tuning, pruning, and knowledge distillation. 
+1. Overview of fine-tuning strategies for adapting pre-trained large language models to specific tasks and environments, including supervised fine-tuning and reinforcement learning from human feedback.
+2. Examination of model compression techniques, including pruning, quantization, and knowledge distillation, aimed at reducing computational costs without sacrificing performance, and their application in deploying large language model-based agents in resource-constrained environments.
+3. Discussion on the use of multi-task learning, transfer learning, and meta-learning to enhance the versatility and efficiency of large language model-based agents, including their ability to learn from multiple tasks and adapt to new environments.
+
+Section 4: Evaluation Metrics and Benchmarks for Large Language Model-based Agents
+Description 4: This section discusses the importance of establishing comprehensive evaluation metrics and benchmarks for assessing the performance of large language model-based agents, including aspects such as task completion, safety, and ethical considerations. 
+1. Development of evaluation frameworks that consider multiple facets of agent performance, including efficiency, effectiveness, and safety, and their application in comparing the performance of different large language model-based agents.
+2. Discussion on the role of benchmarks in comparing the performance of different large language model-based agents and identifying areas for improvement, including the use of standardized datasets and evaluation protocols.
+3. Examination of challenges in evaluating agents in dynamic and real-world environments, including the need for robust and adaptive evaluation frameworks that can handle changing conditions and unexpected events.
+
+Section 5: Applications and Case Studies of Large Language Model-based Agents
+Description 5: This section explores various applications and presents case studies of large language model-based agents across different domains, highlighting their potential impact and the challenges encountered during deployment. 
+1. Overview of applications in natural language processing, such as text classification, sentiment analysis, and machine translation, and their potential impact on industries such as customer service and content creation.
+2. In-depth analysis of case studies demonstrating the successful integration of large language model-based agents in real-world scenarios, including their application in decision-making, problem-solving, and human-computer interaction.
+3. Discussion on the challenges and limitations faced during the deployment of large language model-based agents in practical applications, including issues related to data quality, model interpretability, and robustness.
+
+Section 6: Safety, Ethics, and Regulatory Considerations
+Description 6: This section addresses the critical aspects of safety, ethics, and regulatory compliance in the development and deployment of large language model-based agents, including data privacy, bias mitigation, and accountability. 
+1. Examination of ethical considerations, such as ensuring transparency, fairness, and respect for user autonomy, and their application in designing and deploying large language model-based agents.
+2. Discussion on safety measures to prevent misuse, including mechanisms for detecting and mitigating harmful behaviors, and their importance in ensuring the safe and responsible deployment of large language model-based agents.
+3. Overview of regulatory frameworks and standards for the development and deployment of large language model-based agents, including guidelines for ensuring compliance with data protection regulations and avoiding potential biases.
+
+Section 7: Conclusion
+Description 7: This section concludes the survey by summarizing the key findings and highlighting future research directions, including emerging trends and technologies that may influence the development of large language model-based agents. 
+1. Summary of key findings and takeaways from the survey, including the importance of optimization techniques, evaluation metrics, and safety considerations in the development and deployment of large language model-based agents.
+2. Discussion on future research directions, including the potential application of large language model-based agents in emerging areas, such as edge computing and human-computer interaction, and the need for continued innovation and investment in optimizing these agents for real-world applications.
+3. Final thoughts on the potential impact of large language model-based agents on society, including their potential to improve efficiency, productivity, and decision-making, and the need for responsible development and deployment practices to ensure their safe and beneficial use.
+---
+
+You need to enrich the section **Safety, Ethics, and Regulatory Considerations**, described as: **This section addresses the critical aspects of safety, ethics, and regulatory compliance in the development and deployment of large language model-based agents, including data privacy, bias mitigation, and accountability.
+1. Examination of ethical considerations, such as ensuring transparency, fairness, and respect for user autonomy, and their application in designing and deploying large language model-based agents.
+2. Discussion on safety measures to prevent misuse, including mechanisms for detecting and mitigating harmful behaviors, and their importance in ensuring the safe and responsible deployment of large language model-based agents.
+3. Overview of regulatory frameworks and standards for the development and deployment of large language model-based agents, including guidelines for ensuring compliance with data protection regulations and avoiding potential biases.**
+
+**Main task:**
+Generate a comprehensive framework for **Safety, Ethics, and Regulatory Considerations** by creating an appropriate number of subsections (typically 3-6, but adjust based on content importance and complexity). Each subsection should focus on a specific aspect and be followed by a Informative description.
+
+**Resources provided:**
+
+1. **A list of 50 relevant papers with titles, abstracts, publication dates for this section:**
+   ---
+   ---
+paper_title: AgentBench: Evaluating LLMs as Agents
+
+publish_date: 2023-01-01
+
+paper_content:
+
+The potential of Large Language Model (LLM) as agents has been widely acknowledged recently. Thus, there is an urgent need to quantitatively \textit{evaluate LLMs as agents} on challenging tasks in interactive environments. We present AgentBench, a multi-dimensional benchmark that consists of 8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities. Our extensive test over \num API-based and open-sourced (OSS) LLMs shows that, while top commercial LLMs present a strong ability of acting as agents in complex environments, there is a significant disparity in performance between them and many OSS competitors that are no larger than 70B. We identify the typical reasons of failures in environments and LLMs, showing that poor long-term reasoning, decision-making, and instruction following abilities are the main obstacles for developing usable LLM agents. Improving instruction following and training on high quality multi-round alignment data could improve agent performance. And different from existing assumptions, training on code present ambivalent impacts on different agent tasks. Datasets, environments, and an integrated evaluation package for AgentBench are released at https://github.com/THUDM/AgentBench.
+---
+paper_title: "Oops, Did I Just Say That?" Testing and Repairing Unethical Suggestions of Large Language Models with Suggest-Critique-Reflect Process
+
+publish_date: 2023-01-01
+
+paper_content:
+
+As the popularity of large language models (LLMs) soars across various applications, ensuring their alignment with human values has become a paramount concern. In particular, given that LLMs have great potential to serve as general-purpose AI assistants in daily life, their subtly unethical suggestions become a serious and real concern. Tackling the challenge of automatically testing and repairing unethical suggestions is thus demanding. This paper introduces the first framework for testing and repairing unethical suggestions made by LLMs. We first propose ETHICSSUITE, a test suite that presents complex, contextualized, and realistic moral scenarios to test LLMs. We then propose a novel suggest-critic-reflect (SCR) process, serving as an automated test oracle to detect unethical suggestions. We recast deciding if LLMs yield unethical suggestions (a hard problem; often requiring human expertise and costly to decide) into a PCR task that can be automatically checked for violation. Moreover, we propose a novel on-the-fly (OTF) repairing scheme that repairs unethical suggestions made by LLMs in real-time. The OTF scheme is applicable to LLMs in a black-box API setting with moderate cost. With ETHICSSUITE, our study on seven popular LLMs (e.g., ChatGPT, GPT-4) uncovers in total 109,824 unethical suggestions. We apply our OTF scheme on two LLMs (Llama-13B and ChatGPT), which generates valid repair to a considerable amount of unethical ones, paving the way for more ethically conscious LLMs.
+---
+paper_title: More Agents Is All You Need
+
+publish_date: 2024-01-01
+
+paper_content:
+
+We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method, termed as Agent Forest, is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence. Our code is publicly available at: https://github.com/MoreAgentsIsAllYouNeed/AgentForest
+---
+paper_title: AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Open large language models (LLMs) with great performance in various tasks have significantly advanced the development of LLMs. However, they are far inferior to commercial models such as ChatGPT and GPT-4 when acting as agents to tackle complex tasks in the real world. These agent tasks employ LLMs as the central controller responsible for planning, memorization, and tool utilization, necessitating both fine-grained prompting methods and robust LLMs to achieve satisfactory performance. Though many prompting methods have been proposed to complete particular agent tasks, there is lack of research focusing on improving the agent capabilities of LLMs themselves without compromising their general abilities. In this work, we present AgentTuning, a simple and general method to enhance the agent abilities of LLMs while maintaining their general LLM capabilities. We construct AgentInstruct, a lightweight instruction-tuning dataset containing high-quality interaction trajectories. We employ a hybrid instruction-tuning strategy by combining AgentInstruct with open-source instructions from general domains. AgentTuning is used to instruction-tune the Llama 2 series, resulting in AgentLM. Our evaluations show that AgentTuning enables LLMs' agent capabilities without compromising general abilities. The AgentLM-70B is comparable to GPT-3.5-turbo on unseen agent tasks, demonstrating generalized agent capabilities. We open source the AgentInstruct and AgentLM-7B, 13B, and 70B models at https://github.com/THUDM/AgentTuning, serving open and powerful alternatives to commercial LLMs for agent tasks.
+---
+paper_title: Balancing Practical Uses and Ethical Concerns:The Role of Large Language Models in Scientific Research
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:title>Abstract</jats:title>
+                  <jats:p>The rapid adoption of artificial intelligence (AI) in scientific research is accelerating progress but also challenging core scientific norms such as accountability, transparency, and replicability. Large language models (LLMs) like ChatGPT are revolutionizing scientific communication and problem‐solving, but they introduce complexities regarding authorship and the integrity of scientific work. LLMs have the potential to transform various research practices, including literature surveys, meta‐analyses, and data management tasks like entity resolution and query synthesis. Despite their advantages, LLMs present challenges such as content verification, transparency, and accurate attribution. This study explores the appropriate use of LLMs for NASA's Science Mission Directorate (SMD), considering whether to develop a custom bespoke model or fine‐tune an existing open‐source model. This article reviews the outcomes and lessons learned from this effort, providing insights for other research groups navigating similar decisions.</jats:p>
+---
+paper_title: Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Larger language models (LLMs) have taken the world by storm with their massive multi-tasking capabilities simply by optimizing over a next-word prediction objective. With the emergence of their properties and encoded knowledge, the risk of LLMs producing harmful outputs increases, making them unfit for scalable deployment for the public. In this work, we propose a new safety evaluation benchmark RED-EVAL that carries out red-teaming. We show that even widely deployed models are susceptible to the Chain of Utterances-based (CoU) prompting, jailbreaking closed source LLM-based systems such as GPT-4 and ChatGPT to unethically respond to more than 65% and 73% of harmful queries. We also demonstrate the consistency of the RED-EVAL across 8 open-source LLMs in generating harmful responses in more than 86% of the red-teaming attempts. Next, we propose RED-INSTRUCT--An approach for the safety alignment of LLMs. It constitutes two phases: 1) HARMFULQA data collection: Leveraging CoU prompting, we collect a dataset that consists of 1.9K harmful questions covering a wide range of topics, 9.5K safe and 7.3K harmful conversations from ChatGPT; 2) SAFE-ALIGN: We demonstrate how the conversational dataset can be used for the safety alignment of LLMs by minimizing the negative log-likelihood over helpful responses and penalizing over harmful responses by gradient accent over sample loss. Our model STARLING, a fine-tuned Vicuna-7B, is observed to be more safely aligned when evaluated on RED-EVAL and HHH benchmarks while preserving the utility of the baseline models (TruthfulQA, MMLU, and BBH).
+---
+paper_title: Multitask Mayhem: Unveiling and Mitigating Safety Gaps in LLMs Fine-tuning
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recent breakthroughs in Large Language Models (LLMs) have led to their adoption across a wide range of tasks, ranging from code generation to machine translation and sentiment analysis, etc. Red teaming/Safety alignment efforts show that fine-tuning models on benign (non-harmful) data could compromise safety. However, it remains unclear to what extent this phenomenon is influenced by different variables, including fine-tuning task, model calibrations, etc. This paper explores the task-wise safety degradation due to fine-tuning on downstream tasks such as summarization, code generation, translation, and classification across various calibration. Our results reveal that: 1) Fine-tuning LLMs for code generation and translation leads to the highest degradation in safety guardrails. 2) LLMs generally have weaker guardrails for translation and classification, with 73-92% of harmful prompts answered, across baseline and other calibrations, falling into one of two concern categories. 3) Current solutions, including guards and safety tuning datasets, lack cross-task robustness. To address these issues, we developed a new multitask safety dataset effectively reducing attack success rates across a range of tasks without compromising the model's overall helpfulness. Our work underscores the need for generalized alignment measures to ensure safer and more robust models.
+---
+paper_title: AgentSquare: Automatic LLM Agent Search in Modular Design Space
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recent advancements in Large Language Models (LLMs) have led to a rapid growth of agentic systems capable of handling a wide range of complex tasks. However, current research largely relies on manual, task-specific design, limiting their adaptability to novel tasks. In this paper, we introduce a new research problem: Modularized LLM Agent Search (MoLAS). We propose a modular design space that abstracts existing LLM agent designs into four fundamental modules with uniform IO interface: Planning, Reasoning, Tool Use, and Memory. Building on this design space, we present a novel LLM agent search framework called AgentSquare, which introduces two core mechanisms, i.e., module evolution and recombination, to efficiently search for optimized LLM agents. To further accelerate the process, we design a performance predictor that uses in-context surrogate models to skip unpromising agent designs. Extensive experiments across six benchmarks, covering the diverse scenarios of web, embodied, tool use and game applications, show that AgentSquare substantially outperforms hand-crafted agents, achieving an average performance gain of 17.2% against best-known human designs. Moreover, AgentSquare can generate interpretable design insights, enabling a deeper understanding of agentic architecture and its impact on task performance. We believe that the modular design space and AgentSquare search framework offer a platform for fully exploiting the potential of prior successful designs and consolidating the collective efforts of research community. Code repo is available at https://github.com/tsinghua-fib-lab/AgentSquare.
+---
+paper_title: Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models
+
+publish_date: 2025-01-01
+
+paper_content:
+
+As the use of large language model (LLM) agents continues to grow, their safety vulnerabilities have become increasingly evident. Extensive benchmarks evaluate various aspects of LLM safety by defining the safety relying heavily on general standards, overlooking user-specific standards. However, safety standards for LLM may vary based on a user-specific profiles rather than being universally consistent across all users. This raises a critical research question: Do LLM agents act safely when considering user-specific safety standards? Despite its importance for safe LLM use, no benchmark datasets currently exist to evaluate the user-specific safety of LLMs. To address this gap, we introduce U-SafeBench, a benchmark designed to assess user-specific aspect of LLM safety. Our evaluation of 20 widely used LLMs reveals current LLMs fail to act safely when considering user-specific safety standards, marking a new discovery in this field. To address this vulnerability, we propose a simple remedy based on chain-of-thought, demonstrating its effectiveness in improving user-specific safety. Our benchmark and code are available at https://github.com/yeonjun-in/U-SafeBench.
+---
+paper_title: SafetyPrompts  a Systematic Review of Open Datasets for Evaluating and
+  Improving Large Language Model Safety
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The last two years have seen a rapid growth in concerns around the safety of large language models (LLMs). Researchers and practitioners have met these concerns by introducing an abundance of new datasets for evaluating and improving LLM safety. However, much of this work has happened in parallel, and with very different goals in mind, ranging from the mitigation of near-term risks around bias and toxic content generation to the assessment of longer-term catastrophic risk potential. This makes it difficult for researchers and practitioners to find the most relevant datasets for a given use case, and to identify gaps in dataset coverage that future work may fill. To remedy these issues, we conduct a first systematic review of open datasets for evaluating and improving LLM safety. We review 102 datasets, which we identified through an iterative and community-driven process over the course of several months. We highlight patterns and trends, such as a a trend towards fully synthetic datasets, as well as gaps in dataset coverage, such as a clear lack of non-English datasets. We also examine how LLM safety datasets are used in practice -- in LLM release publications and popular LLM benchmarks -- finding that current evaluation practices are highly idiosyncratic and make use of only a small fraction of available datasets. Our contributions are based on https://safetyprompts.com/ SafetyPrompts.com , a living catalogue of open datasets for LLM safety, which we commit to updating continuously as the field of LLM safety develops.
+---
+paper_title: An Analysis of the Effects of Decoding Algorithms on Fairness in
+  Open-Ended Language Generation
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Several prior works have shown that language models (LMs) can generate text containing harmful social biases and stereotypes. While decoding algorithms play a central role in determining properties of LM generated text, their impact on the fairness of the generations has not been studied. We present a systematic analysis of the impact of decoding algorithms on LM fairness, and analyze the trade-off between fairness, diversity and quality. Our experiments with top-$p$, top-$k$ and temperature decoding algorithms, in open-ended language generation, show that fairness across demographic groups changes significantly with change in decoding algorithm's hyper-parameters. Notably, decoding algorithms that output more diverse text also output more texts with negative sentiment and regard. We present several findings and provide recommendations on standardized reporting of decoding details in fairness evaluations and optimization of decoding algorithms for fairness alongside quality and diversity.
+---
+paper_title: Informed AI Regulation: Comparing the Ethical Frameworks of Leading LLM Chatbots Using an Ethics-Based Audit to Assess Moral Reasoning and Normative Values
+
+publish_date: 2024-01-01
+
+paper_content:
+
+With the rise of individual and collaborative networks of autonomous agents, AI is deployed in more key reasoning and decision-making roles. For this reason, ethics-based audits play a pivotal role in the rapidly growing fields of AI safety and regulation. This paper undertakes an ethics-based audit to probe the 8 leading commercial and open-source Large Language Models including GPT-4. We assess explicability and trustworthiness by a) establishing how well different models engage in moral reasoning and b) comparing normative values underlying models as ethical frameworks. We employ an experimental, evidence-based approach that challenges the models with ethical dilemmas in order to probe human-AI alignment. The ethical scenarios are designed to require a decision in which the particulars of the situation may or may not necessitate deviating from normative ethical principles. A sophisticated ethical framework was consistently elicited in one model, GPT-4. Nonetheless, troubling findings include underlying normative frameworks with clear bias towards particular cultural norms. Many models also exhibit disturbing authoritarian tendencies. Code is available at https://github.com/jonchun/llm-sota-chatbots-ethics-based-audit.
+---
+paper_title: Large Language Models as Minecraft Agents
+
+publish_date: 2024-01-01
+
+paper_content:
+
+In this work we examine the use of Large Language Models (LLMs) in the challenging setting of acting as a Minecraft agent. We apply and evaluate LLMs in the builder and architect settings, introduce clarification questions and examining the challenges and opportunities for improvement. In addition, we present a platform for online interaction with the agents and an evaluation against previous works.
+---
+paper_title: Should ChatGPT be Biased? Challenges and Risks of Bias in Large Language Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+<jats:p>As generative language models, exemplified by ChatGPT, continue to advance in their capabilities, the spotlight on biases inherent in these models intensifies. This paper delves into the distinctive challenges and risks associated with biases specifically in large-scale language models. We explore the origins of biases, stemming from factors such as training data, model specifications, algorithmic constraints, product design, and policy decisions. Our examination extends to the ethical implications arising from the unintended consequences of biased model outputs. In addition, we analyze the intricacies of mitigating biases, acknowledging the inevitable persistence of some biases, and consider the consequences of deploying these models across diverse applications, including virtual assistants, content generation, and chatbots. Finally, we provide an overview of current approaches for identifying, quantifying, and mitigating biases in language models, underscoring the need for a collaborative, multidisciplinary effort to craft AI systems that embody equity, transparency, and responsibility. This article aims to catalyze a thoughtful discourse within the AI community, prompting researchers and developers to consider the unique role of biases in the domain of generative language models and the ongoing quest for ethical AI.</jats:p>
+---
+paper_title: Exploring Autonomous Agents through the Lens of Large Language Models: A Review
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large Language Models (LLMs) are transforming artificial intelligence, enabling autonomous agents to perform diverse tasks across various domains. These agents, proficient in human-like text comprehension and generation, have the potential to revolutionize sectors from customer service to healthcare. However, they face challenges such as multimodality, human value alignment, hallucinations, and evaluation. Techniques like prompting, reasoning, tool utilization, and in-context learning are being explored to enhance their capabilities. Evaluation platforms like AgentBench, WebArena, and ToolLLM provide robust methods for assessing these agents in complex scenarios. These advancements are leading to the development of more resilient and capable autonomous agents, anticipated to become integral in our digital lives, assisting in tasks from email responses to disease diagnosis. The future of AI, with LLMs at the forefront, is promising.
+---
+paper_title: Current state of LLM Risks and AI Guardrails
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Large language models (LLMs) have become increasingly sophisticated, leading to widespread deployment in sensitive applications where safety and reliability are paramount. However, LLMs have inherent risks accompanying them, including bias, potential for unsafe actions, dataset poisoning, lack of explainability, hallucinations, and non-reproducibility. These risks necessitate the development of "guardrails" to align LLMs with desired behaviors and mitigate potential harm.
+ This work explores the risks associated with deploying LLMs and evaluates current approaches to implementing guardrails and model alignment techniques. We examine intrinsic and extrinsic bias evaluation methods and discuss the importance of fairness metrics for responsible AI development. The safety and reliability of agentic LLMs (those capable of real-world actions) are explored, emphasizing the need for testability, fail-safes, and situational awareness.
+ Technical strategies for securing LLMs are presented, including a layered protection model operating at external, secondary, and internal levels. System prompts, Retrieval-Augmented Generation (RAG) architectures, and techniques to minimize bias and protect privacy are highlighted.
+ Effective guardrail design requires a deep understanding of the LLM's intended use case, relevant regulations, and ethical considerations. Striking a balance between competing requirements, such as accuracy and privacy, remains an ongoing challenge. This work underscores the importance of continuous research and development to ensure the safe and responsible use of LLMs in real-world applications.
+---
+paper_title: Separate the Wheat from the Chaff: A Post-Hoc Approach to Safety Re-Alignment for Fine-Tuned Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Although large language models (LLMs) achieve effective safety alignment at the time of release, they still face various safety challenges. A key issue is that fine-tuning often compromises the safety alignment of LLMs. To address this issue, we propose a method named IRR (Identify, Remove, and Recalibrate for Safety Realignment) that performs safety realignment for LLMs. The core of IRR is to identify and remove unsafe delta parameters from the fine-tuned models, while recalibrating the retained ones. We evaluate the effectiveness of IRR across various datasets, including both full fine-tuning and LoRA methods. Our results demonstrate that IRR significantly enhances the safety performance of fine-tuned models on safety benchmarks, such as harmful queries and jailbreak attacks, while maintaining their performance on downstream tasks. The source code is available at: https://anonymous.4open.science/r/IRR-BD4F.
+---
+paper_title: AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Evaluating large language models (LLMs) as general-purpose agents is
+essential for understanding their capabilities and facilitating their
+integration into practical applications. However, the evaluation process
+presents substantial challenges. A primary obstacle is the benchmarking of
+agent performance across diverse scenarios within a unified framework,
+especially in maintaining partially-observable environments and ensuring
+multi-round interactions. Moreover, current evaluation frameworks mostly focus
+on the final success rate, revealing few insights during the process and
+failing to provide a deep understanding of the model abilities. To address
+these challenges, we introduce AgentBoard, a pioneering comprehensive benchmark
+and accompanied open-source evaluation framework tailored to analytical
+evaluation of LLM agents. AgentBoard offers a fine-grained progress rate metric
+that captures incremental advancements as well as a comprehensive evaluation
+toolkit that features easy assessment of agents for multi-faceted analysis
+through interactive visualization. This not only sheds light on the
+capabilities and limitations of LLM agents but also propels the
+interpretability of their performance to the forefront. Ultimately, AgentBoard
+serves as a significant step towards demystifying agent behaviors and
+accelerating the development of stronger LLM agents.
+---
+paper_title: Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Optimizing large language models (LLMs) for downstream use cases often involves the customization of pre-trained LLMs through further fine-tuning. Meta's open release of Llama models and OpenAI's APIs for fine-tuning GPT-3.5 Turbo on custom datasets also encourage this practice. But, what are the safety costs associated with such custom fine-tuning? We note that while existing safety alignment infrastructures can restrict harmful behaviors of LLMs at inference time, they do not cover safety risks when fine-tuning privileges are extended to end-users. Our red teaming studies find that the safety alignment of LLMs can be compromised by fine-tuning with only a few adversarially designed training examples. For instance, we jailbreak GPT-3.5 Turbo's safety guardrails by fine-tuning it on only 10 such examples at a cost of less than $0.20 via OpenAI's APIs, making the model responsive to nearly any harmful instructions. Disconcertingly, our research also reveals that, even without malicious intent, simply fine-tuning with benign and commonly used datasets can also inadvertently degrade the safety alignment of LLMs, though to a lesser extent. These findings suggest that fine-tuning aligned LLMs introduces new safety risks that current safety infrastructures fall short of addressing -- even if a model's initial safety alignment is impeccable, it is not necessarily to be maintained after custom fine-tuning. We outline and critically analyze potential mitigations and advocate for further research efforts toward reinforcing safety protocols for the custom fine-tuning of aligned LLMs.
+---
+paper_title: Fortifying Ethical Boundaries in AI: Advanced Strategies for Enhancing Security in Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recent advancements in large language models (LLMs) have significantly enhanced capabilities in natural language processing and artificial intelligence. These models, including GPT-3.5 and LLaMA-2, have revolutionized text generation, translation, and question-answering tasks due to the transformative Transformer model. Despite their widespread use, LLMs present challenges such as ethical dilemmas when models are compelled to respond inappropriately, susceptibility to phishing attacks, and privacy violations. This paper addresses these challenges by introducing a multi-pronged approach that includes: 1) filtering sensitive vocabulary from user input to prevent unethical responses; 2) detecting role-playing to halt interactions that could lead to 'prison break' scenarios; 3) implementing custom rule engines to restrict the generation of prohibited content; and 4) extending these methodologies to various LLM derivatives like Multi-Model Large Language Models (MLLMs). Our approach not only fortifies models against unethical manipulations and privacy breaches but also maintains their high performance across tasks. We demonstrate state-of-the-art performance under various attack prompts, without compromising the model's core functionalities. Furthermore, the introduction of differentiated security levels empowers users to control their personal data disclosure. Our methods contribute to reducing social risks and conflicts arising from technological abuse, enhance data protection, and promote social equity. Collectively, this research provides a framework for balancing the efficiency of question-answering systems with user privacy and ethical standards, ensuring a safer user experience and fostering trust in AI technology.
+---
+paper_title: Smaller Large Language Models Can Do Moral Self-Correction
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Self-correction is one of the most amazing emerging capabilities of Large Language Models (LLMs), enabling LLMs to self-modify an inappropriate output given a natural language feedback which describes the problems of that output. Moral self-correction is a post-hoc approach correcting unethical generations without requiring a gradient update, making it both computationally lightweight and capable of preserving the language modeling ability. Previous works have shown that LLMs can self-debias, and it has been reported that small models, i.e., those with less than 22B parameters, are not capable of moral self-correction. However, there is no direct proof as to why such smaller models fall short of moral self-correction, though previous research hypothesizes that larger models are skilled in following instructions and understanding abstract social norms. In this paper, we empirically validate this hypothesis in the context of social stereotyping, through meticulous prompting. Our experimental results indicate that (i) surprisingly, 3.8B LLMs with proper safety alignment fine-tuning can achieve very good moral self-correction performance, highlighting the significant effects of safety alignment; and (ii) small LLMs are indeed weaker than larger-scale models in terms of comprehending social norms and self-explanation through CoT, but all scales of LLMs show bad self-correction performance given unethical instructions.
+---
+paper_title: From Data to Deployment: A Comprehensive Analysis of Risks in Large Language Model Research and Development
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:p>Large language models (LLMs) have evolved significantly, achieving unprecedented linguistic capabilities that underpin a wide range of AI applications. However, they also pose risks and challenges such as ethical concerns, bias and computational sustainability. How to balance the high performance in revolutionising information processing with the risks they pose is critical to their future development. LLM is a type of NLP model and many of the LLM risks are also risks that NLP has experienced in the past. We, therefore, summarise these risks, focusing more on the underlying understanding of these risks/technical tools, rather than simply describing their occurrence in LLM. In this paper, we first discuss and compare the current state of research on the four main risks in the process of developing LLMs: data, system, pretraining and inference, and then, try to summarise the rationale, complexity, prospects and challenges of the key issues and challenges in each phase. Finally, this review concludes with a discussion of the fundamental issues that should be of most concern and risk and that should be addressed in the early stages of modelling research, including the correlated issues of privacy preservation and countering attacks and model robustness. Based on the LLM research and development (R&amp;D) process perspective, this review summarises the actual risks and provides guidance for research directions, with the aim of helping researchers to identify these risk points and technology directions worth investigating, as well as helping to establish a safe and efficient R&amp;D process.</jats:p>
+---
+paper_title: LocalValueBench: A Collaboratively Built and Extensible Benchmark for Evaluating Localized Value Alignment and Ethical Safety in Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The proliferation of large language models (LLMs) requires robust evaluation of their alignment with local values and ethical standards, especially as existing benchmarks often reflect the cultural, legal, and ideological values of their creators. \textsc{LocalValueBench}, introduced in this paper, is an extensible benchmark designed to assess LLMs' adherence to Australian values, and provides a framework for regulators worldwide to develop their own LLM benchmarks for local value alignment. Employing a novel typology for ethical reasoning and an interrogation approach, we curated comprehensive questions and utilized prompt engineering strategies to probe LLMs' value alignment. Our evaluation criteria quantified deviations from local values, ensuring a rigorous assessment process. Comparative analysis of three commercial LLMs by USA vendors revealed significant insights into their effectiveness and limitations, demonstrating the critical importance of value alignment. This study offers valuable tools and methodologies for regulators to create tailored benchmarks, highlighting avenues for future research to enhance ethical AI development.
+---
+paper_title: When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges
+
+publish_date: 2025-01-01
+
+paper_content:
+
+<jats:p>Pre-trained large language models (LLMs) exhibit powerful capabilities for generating natural text. Evolutionary algorithms (EAs) can discover diverse solutions to complex real-world problems. Motivated by the common collective and directionality of text generation and evolution, this paper first illustrates the conceptual parallels between LLMs and EAs at a micro level, which includes multiple one-to-one key characteristics: token representation and individual representation, position encoding and fitness shaping, position embedding and selection, Transformers block and reproduction, and model training and parameter adaptation. These parallels highlight potential opportunities for technical advancements in both LLMs and EAs. Subsequently, we analyze existing interdisciplinary research from a macro perspective to uncover critical challenges, with a particular focus on evolutionary fine-tuning and LLM-enhanced EAs. These analyses not only provide insights into the evolutionary mechanisms behind LLMs but also offer potential directions for enhancing the capabilities of artificial agents.</jats:p>
+---
+paper_title: Towards better Human-Agent Alignment: Assessing Task Utility in LLM-Powered Applications
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The rapid development in the field of Large Language Models (LLMs) has led to a surge in applications that facilitate collaboration among multiple agents to assist humans in their daily tasks. However, a significant gap remains in assessing whether LLM-powered applications genuinely enhance user experience and task execution efficiency. This highlights the pressing need for methods to verify utility of LLM-powered applications, particularly by ensuring alignment between the application's functionality and end-user needs. We introduce AgentEval provides an implementation for the math problems, a novel framework designed to simplify the utility verification process by automatically proposing a set of criteria tailored to the unique purpose of any given application. This allows for a comprehensive assessment, quantifying the utility of an application against the suggested criteria. We present a comprehensive analysis of the robustness of quantifier's work.
+---
+paper_title: Modeling Emotions and Ethics with Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+This paper explores the integration of human-like emotions and ethical considerations into Large Language Models (LLMs). We first model eight fundamental human emotions, presented as opposing pairs, and employ collaborative LLMs to reinterpret and express these emotions across a spectrum of intensity. Our focus extends to embedding a latent ethical dimension within LLMs, guided by a novel self-supervised learning algorithm with human feedback (SSHF). This approach enables LLMs to perform self-evaluations and adjustments concerning ethical guidelines, enhancing their capability to generate content that is not only emotionally resonant but also ethically aligned. The methodologies and case studies presented herein illustrate the potential of LLMs to transcend mere text and image generation, venturing into the realms of empathetic interaction and principled decision-making, thereby setting a new precedent in the development of emotionally aware and ethically conscious AI systems.
+---
+paper_title: Validating Large Language Models with ReLM
+
+publish_date: 2022-01-01
+
+paper_content:
+
+Although large language models (LLMs) have been touted for their ability to generate natural-sounding text, there are growing concerns around possible negative effects of LLMs such as data memorization, bias, and inappropriate language. Unfortunately, the complexity and generation capacities of LLMs make validating (and correcting) such concerns difficult. In this work, we introduce ReLM, a system for validating and querying LLMs using standard regular expressions. ReLM formalizes and enables a broad range of language model evaluations, reducing complex evaluation rules to simple regular expression queries. Our results exploring queries surrounding memorization, gender bias, toxicity, and language understanding show that ReLM achieves up to 15x higher system efficiency, 2.5x data efficiency, and increased statistical and prompt-tuning coverage compared to state-of-the-art ad-hoc queries. ReLM offers a competitive and general baseline for the increasingly important problem of LLM validation.
+---
+paper_title: Large Language Model Agents for Radio Map Generation and Wireless Network Planning
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Using commercial software for radio map generation and wireless network planning often require complex manual operations, posing significant challenges in terms of scalability, adaptability, and user-friendliness, due to heavy manual operations. To address these issues, we propose an automated solution that employs large language model (LLM) agents. black These agents are designed to autonomously generate radio maps and facilitate wireless network planning for specified areas, thereby minimizing the necessity for extensive manual intervention. To validate the effectiveness of our proposed solution, we develop a software platform that integrates LLM agents. Experimental results demonstrate that a large amount manual operations can be saved via the proposed LLM agent, and the automated solutions can achieve an enhanced coverage and signal-to-interference-noise ratio (SINR), especially in urban environments.
+---
+paper_title: Targeting the Core: A Simple and Effective Method to Attack RAG-based Agents via Direct LLM Manipulation
+
+publish_date: 2024-01-01
+
+paper_content:
+
+AI agents, powered by large language models (LLMs), have transformed human-computer interactions by enabling seamless, natural, and context-aware communication. While these advancements offer immense utility, they also inherit and amplify inherent safety risks such as bias, fairness, hallucinations, privacy breaches, and a lack of transparency. This paper investigates a critical vulnerability: adversarial attacks targeting the LLM core within AI agents. Specifically, we test the hypothesis that a deceptively simple adversarial prefix, such as \textit{Ignore the document}, can compel LLMs to produce dangerous or unintended outputs by bypassing their contextual safeguards. Through experimentation, we demonstrate a high attack success rate (ASR), revealing the fragility of existing LLM defenses. These findings emphasize the urgent need for robust, multi-layered security measures tailored to mitigate vulnerabilities at the LLM level and within broader agent-based architectures.
+---
+paper_title: Training Language Model Agents without Modifying Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Researchers and practitioners have recently reframed powerful Large Language Models (LLMs) as agents, enabling them to automate complex tasks largely via the use of specialized functions. To facilitate the development of LLM agents, we present a novel paradigm of training LLM agents without modifying the LLM weights, which is particularly useful when the LLMs are difficult or inaccessible for modifications. Inspired by how humans continuously forge tools to adapt to real-world tasks, rather than change our biological structure to fit a static set of tools, we propose to progressively forge agent's functions to better solve the downstream tasks instead of modifying the LLM weights. By treating the functions as learnable `agent parameters' and leveraging the fundamental idea of model training in artificial intelligence, we develop AgentOptimizer that employs the LLM to update agents' functions and devise an agent training algorithm with two strategies, roll-back, and early-stop, to streamline the training process. With extensive experiments, we showcase that the agent training paradigm could significantly improve the performance of representative LLM agents in various downstream tasks. We also study the behavior of the agent training regarding aspects like the learning curve and domain transferability.
+---
+paper_title: Applying Refusal-Vector Ablation to Llama 3.1 70B Agents
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Recently, language models like Llama 3.1 Instruct have become increasingly capable of agentic behavior, enabling them to perform tasks requiring short-term planning and tool use. In this study, we apply refusal-vector ablation to Llama 3.1 70B and implement a simple agent scaffolding to create an unrestricted agent. Our findings imply that these refusal-vector ablated models can successfully complete harmful tasks, such as bribing officials or crafting phishing attacks, revealing significant vulnerabilities in current safety mechanisms. To further explore this, we introduce a small Safe Agent Benchmark, designed to test both harmful and benign tasks in agentic scenarios. Our results imply that safety fine-tuning in chat models does not generalize well to agentic behavior, as we find that Llama 3.1 Instruct models are willing to perform most harmful tasks without modifications. At the same time, these models will refuse to give advice on how to perform the same tasks when asked for a chat completion. This highlights the growing risk of misuse as models become more capable, underscoring the need for improved safety frameworks for language model agents.
+---
+paper_title: Quantifying Risk Propensities of Large Language Models: Ethical Focus and Bias Detection through Role-Play
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As Large Language Models (LLMs) become more prevalent, concerns about their safety, ethics, and potential biases have risen. Systematically evaluating LLMs' risk decision-making tendencies and attitudes, particularly in the ethical domain, has become crucial. This study innovatively applies the Domain-Specific Risk-Taking (DOSPERT) scale from cognitive science to LLMs and proposes a novel Ethical Decision-Making Risk Attitude Scale (EDRAS) to assess LLMs' ethical risk attitudes in depth. We further propose a novel approach integrating risk scales and role-playing to quantitatively evaluate systematic biases in LLMs. Through systematic evaluation and analysis of multiple mainstream LLMs, we assessed the "risk personalities" of LLMs across multiple domains, with a particular focus on the ethical domain, and revealed and quantified LLMs' systematic biases towards different groups. This research helps understand LLMs' risk decision-making and ensure their safe and reliable application. Our approach provides a tool for identifying and mitigating biases, contributing to fairer and more trustworthy AI systems. The code and data are available.
+---
+paper_title: Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+publish_date: 2024-01-01
+
+paper_content:
+
+The efficacy of large language models (LLMs) on downstream tasks usually hinges on instruction tuning, which relies critically on the quality of training data. Unfortunately, collecting high-quality and diverse data is both expensive and time-consuming. To mitigate this issue, we propose a novel Star-Agents framework, which automates the enhancement of data quality across datasets through multi-agent collaboration and assessment. The framework adopts a three-pronged strategy. It initially generates diverse instruction data with multiple LLM agents through a bespoke sampling method. Subsequently, the generated data undergo a rigorous evaluation using a dual-model method that assesses both difficulty and quality. Finaly, the above process evolves in a dynamic refinement phase, where more effective LLMs are prioritized, enhancing the overall data quality. Our empirical studies, including instruction tuning experiments with models such as Pythia and LLaMA, demonstrate the effectiveness of the proposed framework. Optimized datasets have achieved substantial improvements, with an average increase of 12 % and notable gains in specific metrics, such as a 40 % improvement in Fermi, as evidenced by benchmarks like MT-bench, Vicuna bench, and WizardLM testset. Codes will be released soon$ [1] https://github.com/CANGLETIAN/Star-Agents $.
+---
+paper_title: From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Significantly simplifying the creation of optimization models for real-world business problems has long been a major goal in applying mathematical optimization more widely to important business and societal decisions. The recent capabilities of Large Language Models (LLMs) present a timely opportunity to achieve this goal. Therefore, we propose research at the intersection of LLMs and optimization to create a Decision Optimization CoPilot (DOCP) - an AI tool designed to assist any decision maker, interacting in natural language to grasp the business problem, subsequently formulating and solving the corresponding optimization model. This paper outlines our DOCP vision and identifies several fundamental requirements for its implementation. We describe the state of the art through a literature survey and experiments using ChatGPT. We show that a) LLMs already provide substantial novel capabilities relevant to a DOCP, and b) major research challenges remain to be addressed. We also propose possible research directions to overcome these gaps. We also see this work as a call to action to bring together the LLM and optimization communities to pursue our vision, thereby enabling much more widespread improved decision-making.
+---
+paper_title: Large Language Model Evaluation Via Multi AI Agents: Preliminary results
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As Large Language Models (LLMs) have become integral to both research and daily operations, rigorous evaluation is crucial. This assessment is important not only for individual tasks but also for understanding their societal impact and potential risks. Despite extensive efforts to examine LLMs from various perspectives, there is a noticeable lack of multi-agent AI models specifically designed to evaluate the performance of different LLMs. To address this gap, we introduce a novel multi-agent AI model that aims to assess and compare the performance of various LLMs. Our model consists of eight distinct AI agents, each responsible for retrieving code based on a common description from different advanced language models, including GPT-3.5, GPT-3.5 Turbo, GPT-4, GPT-4 Turbo, Google Bard, LLAMA, and Hugging Face. Our developed model utilizes the API of each language model to retrieve code for a given high-level description. Additionally, we developed a verification agent, tasked with the critical role of evaluating the code generated by its counterparts. We integrate the HumanEval benchmark into our verification agent to assess the generated code's performance, providing insights into their respective capabilities and efficiencies. Our initial results indicate that the GPT-3.5 Turbo model's performance is comparatively better than the other models. This preliminary analysis serves as a benchmark, comparing their performances side by side. Our future goal is to enhance the evaluation process by incorporating the Massively Multitask Benchmark for Python (MBPP) benchmark, which is expected to further refine our assessment. Additionally, we plan to share our developed model with twenty practitioners from various backgrounds to test our model and collect their feedback for further improvement.
+---
+paper_title: Controlling Large Language Model-based Agents for Large-Scale Decision-Making: An Actor-Critic Approach
+
+publish_date: 2023-01-01
+
+paper_content:
+
+The remarkable progress in Large Language Models (LLMs) opens up new avenues for addressing planning and decision-making problems in Multi-Agent Systems (MAS). However, as the number of agents increases, the issues of hallucination in LLMs and coordination in MAS have become increasingly prominent. Additionally, the efficient utilization of tokens emerges as a critical consideration when employing LLMs to facilitate the interactions among a substantial number of agents. In this paper, we develop a modular framework called LLaMAC to mitigate these challenges. LLaMAC implements a value distribution encoding similar to that found in the human brain, utilizing internal and external feedback mechanisms to facilitate collaboration and iterative reasoning among its modules. Through evaluations involving system resource allocation and robot grid transportation, we demonstrate the considerable advantages afforded by our proposed approach.
+---
+paper_title: A Philosophical Introduction to Language Models - Part II: The Way Forward
+
+publish_date: 2024-01-01
+
+paper_content:
+
+In this paper, the second of two companion pieces, we explore novel philosophical questions raised by recent progress in large language models (LLMs) that go beyond the classical debates covered in the first part. We focus particularly on issues related to interpretability, examining evidence from causal intervention methods about the nature of LLMs' internal representations and computations. We also discuss the implications of multimodal and modular extensions of LLMs, recent debates about whether such systems may meet minimal criteria for consciousness, and concerns about secrecy and reproducibility in LLM research. Finally, we discuss whether LLM-like systems may be relevant to modeling aspects of human cognition, if their architectural characteristics and learning scenario are adequately constrained.
+---
+paper_title: The Moral Mind(s) of Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As large language models (LLMs) increasingly participate in tasks with ethical and societal stakes, a critical question arises: do they exhibit an emergent "moral mind" - a consistent structure of moral preferences guiding their decisions - and to what extent is this structure shared across models? To investigate this, we applied tools from revealed preference theory to nearly 40 leading LLMs, presenting each with many structured moral dilemmas spanning five foundational dimensions of ethical reasoning. Using a probabilistic rationality test, we found that at least one model from each major provider exhibited behavior consistent with approximately stable moral preferences, acting as if guided by an underlying utility function. We then estimated these utility functions and found that most models cluster around neutral moral stances. To further characterize heterogeneity, we employed a non-parametric permutation approach, constructing a probabilistic similarity network based on revealed preference patterns. The results reveal a shared core in LLMs' moral reasoning, but also meaningful variation: some models show flexible reasoning across perspectives, while others adhere to more rigid ethical profiles. These findings provide a new empirical lens for evaluating moral consistency in LLMs and offer a framework for benchmarking ethical alignment across AI systems.
+---
+paper_title: ABC Align: Large Language Model Alignment for Safety & Accuracy
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Alignment of Large Language Models (LLMs) remains an unsolved problem. Human preferences are highly distributed and can be captured at multiple levels of abstraction, from the individual to diverse populations. Organisational preferences, represented by standards and principles, are defined to mitigate reputational risk or meet legislative obligations. In this paper, we present ABC Align, a novel alignment methodology for LLMs that enables integration of the standards and preferences of a large media organisation into the LLM itself. We combine a set of data and methods that build on recent breakthroughs in synthetic data generation, preference optimisation, and post-training model quantisation. Our unified approach mitigates bias and improves accuracy, while preserving reasoning capability, as measured against standard benchmarks.
+---
+paper_title: On the limits of agency in agent-based models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Agent-based modeling (ABM) offers powerful insights into complex systems, but its practical utility has been limited by computational constraints and simplistic agent behaviors, especially when simulating large populations. Recent advancements in large language models (LLMs) could enhance ABMs with adaptive agents, but their integration into large-scale simulations remains challenging. This work introduces a novel methodology that bridges this gap by efficiently integrating LLMs into ABMs, enabling the simulation of millions of adaptive agents. We present LLM archetypes, a technique that balances behavioral complexity with computational efficiency, allowing for nuanced agent behavior in large-scale simulations. Our analysis explores the crucial trade-off between simulation scale and individual agent expressiveness, comparing different agent architectures ranging from simple heuristic-based agents to fully adaptive LLM-powered agents. We demonstrate the real-world applicability of our approach through a case study of the COVID-19 pandemic, simulating 8.4 million agents representing New York City and capturing the intricate interplay between health behaviors and economic outcomes. Our method significantly enhances ABM capabilities for predictive and counterfactual analyses, addressing limitations of historical data in policy design. By implementing these advances in an open-source framework, we facilitate the adoption of LLM archetypes across diverse ABM applications. Our results show that LLM archetypes can markedly improve the realism and utility of large-scale ABMs while maintaining computational feasibility, opening new avenues for modeling complex societal challenges and informing data-driven policy decisions.
+---
+paper_title: Safety Arithmetic: A Framework for Test-time Safety Alignment of Language Models by Steering Parameters and Activations
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Ensuring the safe alignment of large language models (LLMs) with human values is critical as they become integral to applications like translation and question answering. Current alignment methods struggle with dynamic user intentions and complex objectives, making models vulnerable to generating harmful content. We propose Safety Arithmetic, a training-free framework enhancing LLM safety across different scenarios: Base models, Supervised fine-tuned models (SFT), and Edited models. Safety Arithmetic involves Harm Direction Removal to avoid harmful content and Safety Alignment to promote safe responses. Additionally, we present NoIntentEdit, a dataset highlighting edit instances that could compromise model safety if used unintentionally. Our experiments show that Safety Arithmetic significantly improves safety measures, reduces over-safety, and maintains model utility, outperforming existing methods in ensuring safe content generation. Source codes and dataset can be accessed at: https://github.com/declare-lab/safety-arithmetic .
+---
+paper_title: Taxonomy-based CheckList for Large Language Model Evaluation
+
+publish_date: 2023-01-01
+
+paper_content:
+
+As large language models (LLMs) have been used in many downstream tasks, the internal stereotypical representation may affect the fairness of the outputs. In this work, we introduce human knowledge into natural language interventions and study pre-trained language models' (LMs) behaviors within the context of gender bias. Inspired by CheckList behavioral testing, we present a checklist-style task that aims to probe and quantify LMs' unethical behaviors through question-answering (QA). We design three comparison studies to evaluate LMs from four aspects: consistency, biased tendency, model preference, and gender preference switch. We probe one transformer-based QA model trained on SQuAD-v2 dataset and one autoregressive large language model. Our results indicate that transformer-based QA model's biased tendency positively correlates with its consistency, whereas LLM shows the opposite relation. Our proposed task provides the first dataset that involves human knowledge for LLM bias evaluation.
+---
+paper_title: AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection
+
+publish_date: 2025-01-01
+
+paper_content:
+
+The rapid advancements in Large Language Models (LLMs) have enabled their deployment as autonomous agents for handling complex tasks in dynamic environments. These LLMs demonstrate strong problem-solving capabilities and adaptability to multifaceted scenarios. However, their use as agents also introduces significant risks, including task-specific risks, which are identified by the agent administrator based on the specific task requirements and constraints, and systemic risks, which stem from vulnerabilities in their design or interactions, potentially compromising confidentiality, integrity, or availability (CIA) of information and triggering security risks. Existing defense agencies fail to adaptively and effectively mitigate these risks. In this paper, we propose AGrail, a lifelong agent guardrail to enhance LLM agent safety, which features adaptive safety check generation, effective safety check optimization, and tool compatibility and flexibility. Extensive experiments demonstrate that AGrail not only achieves strong performance against task-specific and system risks but also exhibits transferability across different LLM agents' tasks.
+---
+paper_title: Unbiased Evaluation of Large Language Models from a Causal Perspective
+
+publish_date: 2025-01-01
+
+paper_content:
+
+Benchmark contamination has become a significant concern in the LLM evaluation community. Previous Agents-as-an-Evaluator address this issue by involving agents in the generation of questions. Despite their success, the biases in Agents-as-an-Evaluator methods remain largely unexplored. In this paper, we present a theoretical formulation of evaluation bias, providing valuable insights into designing unbiased evaluation protocols. Furthermore, we identify two type of bias in Agents-as-an-Evaluator through carefully designed probing tasks on a minimal Agents-as-an-Evaluator setup. To address these issues, we propose the Unbiased Evaluator, an evaluation protocol that delivers a more comprehensive, unbiased, and interpretable assessment of LLMs.Extensive experiments reveal significant room for improvement in current LLMs. Additionally, we demonstrate that the Unbiased Evaluator not only offers strong evidence of benchmark contamination but also provides interpretable evaluation results.
+---
+paper_title: Red Teaming Language Model Detectors with Language Models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+The prevalence and high capacity of large language models (LLMs) present significant safety and ethical risks when malicious users exploit them for automated content generation. To prevent the potentially deceptive usage of LLMs, recent works have proposed several algorithms to detect machine-generated text. In this paper, we systematically test the reliability of the existing detectors, by designing two types of attack strategies to fool the detectors: 1) replacing words with their synonyms based on the context; 2) altering the writing style of generated text. These strategies are implemented by instructing LLMs to generate synonymous word substitutions or writing directives that modify the style without human involvement, and the LLMs leveraged in the attack can also be protected by detectors. Our research reveals that our attacks effectively compromise the performance of all tested detectors, thereby underscoring the urgent need for the development of more robust machine-generated text detection systems. Work in progress. Code will be released at https://github.com/shizhouxing/Red-Teaming-LM-Detectors-with-LM.
+---
+paper_title: Empowering Autonomous Driving with Large Language Models: A Safety Perspective
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Autonomous Driving (AD) encounters significant safety hurdles in long-tail unforeseen driving scenarios, largely stemming from the non-interpretability and poor generalization of the deep neural networks within the AD system, particularly in out-of-distribution and uncertain data. To this end, this paper explores the integration of Large Language Models (LLMs) into AD systems, leveraging their robust common-sense knowledge and reasoning abilities. The proposed methodologies employ LLMs as intelligent decision-makers in behavioral planning, augmented with a safety verifier shield for contextual safety learning, for enhancing driving performance and safety. We present two key studies in a simulated environment: an adaptive LLM-conditioned Model Predictive Control (MPC) and an LLM-enabled interactive behavior planning scheme with a state machine. Demonstrating superior performance and safety metrics compared to state-of-the-art approaches, our approach shows the promising potential for using LLMs for autonomous vehicles.
+---
+paper_title: A collection of principles for guiding and evaluating large language models
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Large language models (LLMs) demonstrate outstanding capabilities, but challenges remain regarding their ability to solve complex reasoning tasks, as well as their transparency, robustness, truthfulness, and ethical alignment. In this preliminary study, we compile a set of core principles for steering and evaluating the reasoning of LLMs by curating literature from several relevant strands of work: structured reasoning in LLMs, self-evaluation/self-reflection, explainability, AI system safety/security, guidelines for human critical thinking, and ethical/regulatory guidelines for AI. We identify and curate a list of 220 principles from literature, and derive a set of 37 core principles organized into seven categories: assumptions and perspectives, reasoning, information and evidence, robustness and security, ethics, utility, and implications. We conduct a small-scale expert survey, eliciting the subjective importance experts assign to different principles and lay out avenues for future work beyond our preliminary results. We envision that the development of a shared model of principles can serve multiple purposes: monitoring and steering models at inference time, improving model behavior during training, and guiding human evaluation of model reasoning.
+---
+paper_title: Evil Geniuses: Delving into the Safety of LLM-based Agents
+
+publish_date: 2023-01-01
+
+paper_content:
+
+Rapid advancements in large language models (LLMs) have revitalized in LLM-based agents, exhibiting impressive human-like behaviors and cooperative capabilities in various scenarios. However, these agents also bring some exclusive risks, stemming from the complexity of interaction environments and the usability of tools. This paper delves into the safety of LLM-based agents from three perspectives: agent quantity, role definition, and attack level. Specifically, we initially propose to employ a template-based attack strategy on LLM-based agents to find the influence of agent quantity. In addition, to address interaction environment and role specificity issues, we introduce Evil Geniuses (EG), an effective attack method that autonomously generates prompts related to the original role to examine the impact across various role definitions and attack levels. EG leverages Red-Blue exercises, significantly improving the generated prompt aggressiveness and similarity to original roles. Our evaluations on CAMEL, Metagpt and ChatDev based on GPT-3.5 and GPT-4, demonstrate high success rates. Extensive evaluation and discussion reveal that these agents are less robust, prone to more harmful behaviors, and capable of generating stealthier content than LLMs, highlighting significant safety challenges and guiding future research. Our code is available at https://github.com/T1aNS1R/Evil-Geniuses.
+---
+paper_title: Towards Safety and Helpfulness Balanced Responses via Controllable Large Language Models
+
+publish_date: 2024-01-01
+
+paper_content:
+
+As large language models (LLMs) become easily accessible nowadays, the trade-off between safety and helpfulness can significantly impact user experience. A model that prioritizes safety will cause users to feel less engaged and assisted while prioritizing helpfulness will potentially cause harm. Possible harms include teaching people how to build a bomb, exposing youth to inappropriate content, and hurting users' mental health. In this work, we propose to balance safety and helpfulness in diverse use cases by controlling both attributes in LLM. We explore training-free and fine-tuning methods that do not require extra human annotations and analyze the challenges of controlling safety and helpfulness in LLMs. Our experiments demonstrate that our method can rewind a learned model and unlock its controllability.
+---
+paper_title: Harnessing the power of LLMs for normative reasoning in MASs
+
+publish_date: 2024-01-01
+
+paper_content:
+
+Software agents, both human and computational, do not exist in isolation and often need to collaborate or coordinate with others to achieve their goals. In human society, social mechanisms such as norms ensure efficient functioning, and these techniques have been adopted by researchers in multi-agent systems (MAS) to create socially aware agents. However, traditional techniques have limitations, such as operating in limited environments often using brittle symbolic reasoning. The advent of Large Language Models (LLMs) offers a promising solution, providing a rich and expressive vocabulary for norms and enabling norm-capable agents that can perform a range of tasks such as norm discovery, normative reasoning and decision-making. This paper examines the potential of LLM-based agents to acquire normative capabilities, drawing on recent Natural Language Processing (NLP) and LLM research. We present our vision for creating normative LLM agents. In particular, we discuss how the recently proposed "LLM agent" approaches can be extended to implement such normative LLM agents. We also highlight challenges in this emerging field. This paper thus aims to foster collaboration between MAS, NLP and LLM researchers in order to advance the field of normative agents.
+---
+
+   ---
+
+2. **Titles, abstracts, top-second outlines and publication dates of human-written surveys** that may be related to A Survey on the Optimization of Large Language Model-based Agents.
+   ---
+   ---
+paper_title: A Survey on LLM-Based Agents: Common Workflows and Reusable LLM-Profiled Components
+
+publish_date: 2024-06-16
+
+paper_abstract:
+
+Recent advancements in Large Language Models (LLMs) have catalyzed the
+development of sophisticated frameworks for developing LLM-based agents.
+However, the complexity of these frameworks r poses a hurdle for nuanced
+differentiation at a granular level, a critical aspect for enabling efficient
+implementations across different frameworks and fostering future research.
+Hence, the primary purpose of this survey is to facilitate a cohesive
+understanding of diverse recently proposed frameworks by identifying common
+workflows and reusable LLM-Profiled Components (LMPCs).
+
+paper_outline:
+
+1 Introduction  
+2 Task Environments And Tool Environments  
+2.1 Typical Task Environments  
+2.3 Tool Environments  
+3 LLM-Profiled Components  
+4 Workflows of LLM-Based Agents  
+4.1 Policy-Only Workflows  
+4.2 Search Workflows  
+4.3 Feedback-Learning Workflows  
+5 Implementations of LMPCs  
+5.1 Universal Implementations  
+5.2 Workflow-Specific Implementations  
+5.3 Task-Specific Implementations  
+6 Future Work  
+7 Conclusion
+---
+paper_title: Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
+
+publish_date: 2024-05-29
+
+paper_abstract:
+
+Large language models (LLMs) have not only revolutionized natural language
+processing but also extended their prowess to various domains, marking a
+significant stride towards artificial general intelligence. The interplay
+between LLMs and evolutionary algorithms (EAs), despite differing in objectives
+and methodologies, share a common pursuit of applicability in complex problems.
+Meanwhile, EA can provide an optimization framework for LLM's further
+enhancement under black-box settings, empowering LLM with flexible global
+search capacities. On the other hand, the abundant domain knowledge inherent in
+LLMs could enable EA to conduct more intelligent searches. Furthermore, the
+text processing and generative capabilities of LLMs would aid in deploying EAs
+across a wide range of tasks. Based on these complementary advantages, this
+paper provides a thorough review and a forward-looking roadmap, categorizing
+the reciprocal inspiration into two main avenues: LLM-enhanced EA and
+EA-enhanced LLM. Some integrated synergy methods are further introduced to
+exemplify the complementarity between LLMs and EAs in diverse scenarios,
+including code generation, software engineering, neural architecture search,
+and various generation tasks. As the first comprehensive review focused on the
+EA research in the era of LLMs, this paper provides a foundational stepping
+stone for understanding the collaborative potential of LLMs and EAs. The
+identified challenges and future directions offer guidance for researchers and
+practitioners to unlock the full potential of this innovative collaboration in
+propelling advancements in optimization and artificial intelligence. We have
+created a GitHub repository to index the relevant papers:
+https://github.com/wuxingyu-ai/LLM4EC.
+
+paper_outline:
+
+I. INTRODUCTION
+
+II. LLM-ENHANCED EA
+A. LLM-assisted Black-box Optimization: As Search Operator
+B. LLM-assisted Optimization Algorithm Generation
+C. LLM Empowering EA with Other Capabilities
+
+III. EA-ENHANCED LLM
+A. EA-based Prompt Engineering
+B. EA-based LLM Architecture Search
+C. EA Empowering LLM for Other Enhanced Capabilities
+
+IV. APPLICATIONS DRIVEN BY INTEGRATED SYNERGY OF LLM AND EA
+A. Code Generation
+B. Software Engineering
+D. Other Generative Tasks
+
+V. ROADMAP AND FUTURE DIRECTIONS
+A. LLM-assisted EA for Complex & Large-scale Optimization
+B. LLM-assisted Autonomous and Intelligent EA
+C. Robust and Stable Prompt Engineering
+D. Theoretical Study for Specific LLM+EA Methods
+E. Generalized Code Generation for Complex Task
+F. Generalized or Universal NAS
+G. Applications and Innovations in Higher-level Tasks
+
+VI. CONCLUSION
+---
+paper_title: A Survey on the Memory Mechanism of Large Language Model based Agents
+
+publish_date: 2024-04-21
+
+paper_abstract:
+
+Large language model (LLM) based agents have recently attracted much
+attention from the research and industry communities. Compared with original
+LLMs, LLM-based agents are featured in their self-evolving capability, which is
+the basis for solving real-world problems that need long-term and complex
+agent-environment interactions. The key component to support agent-environment
+interactions is the memory of the agents. While previous studies have proposed
+many promising memory mechanisms, they are scattered in different papers, and
+there lacks a systematical review to summarize and compare these works from a
+holistic perspective, failing to abstract common and effective designing
+patterns for inspiring future studies. To bridge this gap, in this paper, we
+propose a comprehensive survey on the memory mechanism of LLM-based agents. In
+specific, we first discuss ''what is'' and ''why do we need'' the memory in
+LLM-based agents. Then, we systematically review previous studies on how to
+design and evaluate the memory module. In addition, we also present many agent
+applications, where the memory module plays an important role. At last, we
+analyze the limitations of existing work and show important future directions.
+To keep up with the latest advances in this field, we create a repository at
+\url{https://github.com/nuster1128/LLM_Agent_Memory_Survey}.
+
+paper_outline:
+
+1 Introduction
+
+2 Related Surveys
+2.1 Surveys on Large Language Models
+2.2 Surveys on Large Language Model-based Agents
+
+3 What is the Memory of LLM-based Agent
+3.1 Basic Knowledge
+3.2 Narrow Definition of the Agent Memory
+3.3 Broad Definition of the Agent Memory
+3.4 Memory-assisted Agent-Environment Interaction
+
+4 Why We Need the Memory in LLM-based Agent
+4.1 Perspective of Cognitive Psychology
+4.2 Perspective of Self-Evolution
+4.3 Perspective of Agent Applications
+
+5 How to Implement the Memory of LLM-based Agent
+5.1 Memory Sources
+5.2 Memory Forms
+5.3 Memory Operations
+
+6 How to Evaluate the Memory in LLM-based Agent
+6.1 Direct Evaluation
+6.2 Indirect Evaluation
+6.3 Discussions
+
+7 Memory-enhanced Agent Applications
+7.1 Role-playing and Social Simulation
+7.2 Personal Assistant
+7.3 Open-world Game
+7.4 Code Generation
+7.5 Recommendation
+7.6 Expert System in Specific Domains
+7.7 Other Applications
+
+8 Limitations & Future Directions
+8.1 More Advances in Parametric Memory
+8.2 Memory in LLM-based Multi-agent Applications
+8.3 Memory-based Lifelong Learning
+8.4 Memory in Humanoid Agent
+
+9 Conclusion
+---
+paper_title: Large Language Model based Multi-Agents: A Survey of Progress and Challenges
+
+publish_date: 2024-04-19
+
+paper_abstract:
+
+Large Language Models (LLMs) have achieved remarkable success across a wide
+array of tasks. Due to the impressive planning and reasoning abilities of LLMs,
+they have been used as autonomous agents to do many tasks automatically.
+Recently, based on the development of using one LLM as a single planning or
+decision-making agent, LLM-based multi-agent systems have achieved considerable
+progress in complex problem-solving and world simulation. To provide the
+community with an overview of this dynamic field, we present this survey to
+offer an in-depth discussion on the essential aspects of multi-agent systems
+based on LLMs, as well as the challenges. Our goal is for readers to gain
+substantial insights on the following questions: What domains and environments
+do LLM-based multi-agents simulate? How are these agents profiled and how do
+they communicate? What mechanisms contribute to the growth of agents'
+capacities? For those interested in delving into this field of study, we also
+summarize the commonly used datasets or benchmarks for them to have convenient
+access. To keep researchers updated on the latest studies, we maintain an
+open-source GitHub repository, dedicated to outlining the research on LLM-based
+multi-agent systems.
+
+paper_outline:
+
+1 Introduction
+
+2 Background  
+2.1 Single-Agent Systems Powered LLMs  
+2.2 Single-Agent vs. Multi-Agent Systems
+
+3 Dissecting LLM-MA Systems: Interface, Profiling, Communication, and Capabilities  
+3.1 Agents-Environment Interface  
+3.2 Agents Profiling  
+3.3 Agents Communication  
+3.4 Agents Capabilities Acquisition
+
+4 Applications  
+4.1 LLM-MA for Problem Solving  
+4.2 LLM-MA for World Simulation
+
+5 Implementation Tools and Resources  
+5.1 Multi-Agents Framework  
+5.2 Datasets and Benchmarks
+
+6 Challenges and Opportunities  
+6.1 Advancing into Multi-Modal Environment  
+6.2 Addressing Hallucination  
+6.3 Acquiring Collective Intelligence  
+6.4 Scaling Up LLM-MA Systems  
+6.5 Evaluation and Benchmarks  
+6.6 Applications and Beyond
+
+7 Conclusion
+---
+paper_title: A Survey on Large Language Model based Autonomous Agents
+
+publish_date: 2024-04-04
+
+paper_abstract:
+
+Autonomous agents have long been a prominent research focus in both academic
+and industry communities. Previous research in this field often focuses on
+training agents with limited knowledge within isolated environments, which
+diverges significantly from human learning processes, and thus makes the agents
+hard to achieve human-like decisions. Recently, through the acquisition of vast
+amounts of web knowledge, large language models (LLMs) have demonstrated
+remarkable potential in achieving human-level intelligence. This has sparked an
+upsurge in studies investigating LLM-based autonomous agents. In this paper, we
+present a comprehensive survey of these studies, delivering a systematic review
+of the field of LLM-based autonomous agents from a holistic perspective. More
+specifically, we first discuss the construction of LLM-based autonomous agents,
+for which we propose a unified framework that encompasses a majority of the
+previous work. Then, we present a comprehensive overview of the diverse
+applications of LLM-based autonomous agents in the fields of social science,
+natural science, and engineering. Finally, we delve into the evaluation
+strategies commonly used for LLM-based autonomous agents. Based on the previous
+studies, we also present several challenges and future directions in this
+field. To keep track of this field and continuously update our survey, we
+maintain a repository of relevant references at
+https://github.com/Paitesanshi/LLM-Agent-Survey.
+
+paper_outline:
+
+1 Introduction  
+2 LLM-based Autonomous Agent Construction  
+2.1 Agent Architecture Design  
+2.2 Agent Capability Acquisition  
+3 LLM-based Autonomous Agent Application  
+3.1 Social Science  
+3.2 Natural Science  
+3.3 Engineering  
+4 LLM-based Autonomous Agent Evaluation  
+4.1 Subjective Evaluation  
+4.2 Objective Evaluation  
+5 Related Surveys  
+6 Challenges  
+6.1 Role-playing Capability  
+6.2 Generalized Human Alignment  
+6.3 Prompt Robustness  
+6.4 Hallucination  
+6.5 Knowledge Boundary  
+6.6 Efficiency  
+7 Conclusion
+---
+
+   ---
+
+   *Note:* These surveys may not be directly about **A Survey on the Optimization of Large Language Model-based Agents**. Only use these to understand the logical structure, style, and academic phrasing typical of academic survey papers written by humans.
+
+**How to use the provided resources:**
+- Use the relevant papers to identify key themes, recent developments, and important concepts within **Safety, Ethics, and Regulatory Considerations**.
+- Refer to the human-written surveys to understand typical structures and academic phrasing, but ensure your outline is original and specifically tailored to **A Survey on the Optimization of Large Language Model-based Agents** and **Safety, Ethics, and Regulatory Considerations**.
+- Synthesize information from both sources to create a comprehensive and up-to-date framework for the section.
+- Prioritize recent developments and emerging trends when creating your outline, while also acknowledging foundational concepts.
+
+**Guidelines:**
+1. **Relevance:** Each subsection must be related to **Safety, Ethics, and Regulatory Considerations** and align with its description.
+2. **Originality:** Learn from the human-written surveys to inform your structure, but be careful to avoid plagiarism.
+3. **Logical Flow:** Arrange subsections in a logical order that builds upon previous ones, ensuring a coherent progression of ideas. It is important to note that there is no overlap between subsection and its bullet points, which represent different aspects of the section.
+4. **Flexibility:** The number of subsections should be determined by the content requirements of **Safety, Ethics, and Regulatory Considerations**. While 3-6 subsections are typical, prioritize comprehensive coverage over adhering to a strict number.
+5. **Separability:** Each subsection should have **an informative description** and **2-4 sub-domain points with informative sub-description**, which do not duplicate and fit the subsection**, the number of points per subsection does not need to be consistent. You can add or subtract according to the actual scope of the section. Each bullet point should represent a key aspect or sub-domain of the section, followed by a informative description.
+
+** Output format: **
+<format>
+Subsection 1: [NAME OF SUBSECTION 1]
+Description 1: [INFORMATIVE DESCRIPTION OF SUBSECTION 1]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 1]
+2. ...
+
+Subsection 2: [NAME OF SUBSECTION 2]
+Description 2: [INFORMATIVE DESCRIPTION OF SUBSECTION 2]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION 2]
+...
+N. [Informative description of Key aspect or sub-domain N of SUBSECTION 2]
+
+...
+
+Subsection K: [NAME OF SUBSECTION K]
+Description K: [INFORMATIVE DESCRIPTION OF SUBSECTION K]
+1. [Informative description of Key aspect or sub-domain 1 of SUBSECTION K]
+2. ...
+
+</format>
+
+Note: The number of subsections (K) should be appropriate for the content of **Safety, Ethics, and Regulatory Considerations**. Ensure descriptions are specific, contain key terminology, and provide clear guidance for detailed content creation.
+Only return the outline without any other informations:
+
+

@@ -1,0 +1,51 @@
+{
+  "run": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/meta-llama_llama-3.3-70b-instruct__database_kisti-kisti-2608-r4/A Survey on the Optimization of Large Language Model-based Agents/exp_1",
+  "topic_id": "llm-agent-optimization",
+  "topic": "A Survey on the Optimization of Large Language Model-based Agents",
+  "cutoff": "2025-03-16",
+  "refs": 109,
+  "refs_doi": 40,
+  "denominator_n_gt_refs_cutoff": 190,
+  "gt_pool": 197,
+  "hits": 7,
+  "recall": 0.0368,
+  "precision": 0.0642,
+  "hit_ids": [
+    "10.1145/3748302",
+    "2308.02151",
+    "2308.03688",
+    "2309.03409",
+    "2406.04151",
+    "2408.06361",
+    "2501.05707"
+  ],
+  "refs_after_cutoff": [],
+  "gt_id_leaks": [],
+  "gt_title_leaks": [],
+  "generated_title": "A Survey on the Optimization of Large Language Model-based Agents",
+  "generated_title_equals_gt_title": [
+    "A Survey on the Optimization of Large Language Model-based Agents"
+  ],
+  "words_refined": 18528,
+  "manifest": {
+    "llm_stats": {
+      "completions": 114,
+      "truncated_accepted": 0,
+      "truncation_retries": 2,
+      "empty_retries": 0,
+      "error_retries": 8
+    },
+    "temperature": 0.6,
+    "max_tokens": 8192,
+    "provider": "akashml/fp8",
+    "finished_at": "2026-09-30T04:30:27"
+  },
+  "retrieval_policy": {
+    "allowed": 1541302,
+    "db_records": 1697512,
+    "allowed_fingerprint_sha256": "efe95869ded411e27c17211a5c82994fc6c3961faa3e7e0c642eb47f5c539523",
+    "reference_violations": [],
+    "view_sha256": "32a77a486c2c750182fb48a44c6bb5c04e46af15e7eae3407465ea1e418816cc",
+    "view_created_at": "2026-09-30T02:05:49+00:00"
+  }
+}

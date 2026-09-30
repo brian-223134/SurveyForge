@@ -1,0 +1,983 @@
+{
+ "10.1007/s10849-023-09409-x": {
+  "id": "10.1007/s10849-023-09409-x",
+  "title": "Assessing the Strengths and Weaknesses of Large Language Models",
+  "url": "https://doi.org/10.1007/s10849-023-09409-x",
+  "date": "2023-01-01",
+  "abs": "<jats:title>Abstract</jats:title><jats:p>The transformers that drive chatbots and other AI systems constitute large language models (LLMs). These are currently the focus of a lively discussion in both the scientific literature and the popular media. This discussion ranges from hyperbolic claims that attribute general intelligence and sentience to LLMs, to the skeptical view that these devices are no more than \u201cstochastic parrots\u201d. I present an overview of some of the weak arguments that have been presented against LLMs, and I consider several of the more compelling criticisms of these devices. The former significantly underestimate the capacity of transformers to achieve subtle inductive inferences required for high levels of performance on complex, cognitively significant tasks. In some instances, these arguments misconstrue the nature of deep learning. The latter criticisms identify significant limitations in the way in which transformers learn and represent patterns in data. They also point out important differences between the procedures through which deep neural networks and humans acquire knowledge of natural language. It is necessary to look carefully at both sets of arguments in order to achieve a balanced assessment of the potential and the limitations of LLMs.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 33
+ },
+ "10.1007/s11704-024-40231-1": {
+  "id": "10.1007/s11704-024-40231-1",
+  "title": "A survey on large language model based autonomous agents",
+  "url": "https://doi.org/10.1007/s11704-024-40231-1",
+  "date": "2024-01-01",
+  "abs": "<jats:title>Abstract</jats:title>\n                  <jats:p>Autonomous agents have long been a research focus in academic and industry communities. Previous research often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of Web knowledge, large language models (LLMs) have shown potential in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, delivering a systematic review of LLM-based autonomous agents from a holistic perspective. We first discuss the construction of LLM-based autonomous agents, proposing a unified framework that encompasses much of previous work. Then, we present a overview of the diverse applications of LLM-based autonomous agents in social science, natural science, and engineering. Finally, we delve into the evaluation strategies commonly used for LLM-based autonomous agents. Based on the previous studies, we also present several challenges and future directions in this field.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 770
+ },
+ "10.1007/s13042-024-02318-w": {
+  "id": "10.1007/s13042-024-02318-w",
+  "title": "Large language models for medicine: a survey",
+  "url": "https://doi.org/10.1007/s13042-024-02318-w",
+  "date": "2024-01-01",
+  "abs": "To address challenges in the digital economy's landscape of digital intelligence, large language models (LLMs) have been developed. Improvements in computational power and available resources have significantly advanced LLMs, allowing their integration into diverse domains for human life. Medical LLMs are essential application tools with potential across various medical scenarios. In this paper, we review LLM developments, focusing on the requirements and applications of medical LLMs. We provide a concise overview of existing models, aiming to explore advanced research directions and benefit researchers for future medical applications. We emphasize the advantages of medical LLMs in applications, as well as the challenges encountered during their development. Finally, we suggest directions for technical integration to mitigate challenges and potential research directions for the future of medical LLMs, aiming to meet the demands of the medical field better.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 29
+ },
+ "10.1016/j.metrad.2023.100017": {
+  "id": "10.1016/j.metrad.2023.100017",
+  "title": "Summary of ChatGPT-Related Research and Perspective Towards the Future of Large Language Models",
+  "url": "https://doi.org/10.1016/j.metrad.2023.100017",
+  "date": "2023-01-01",
+  "abs": "This paper presents a comprehensive survey of ChatGPT-related (GPT-3.5 and GPT-4) research, state-of-the-art large language models (LLM) from the GPT series, and their prospective applications across diverse domains. Indeed, key innovations such as large-scale pre-training that captures knowledge across the entire world wide web, instruction fine-tuning and Reinforcement Learning from Human Feedback (RLHF) have played significant roles in enhancing LLMs' adaptability and performance. We performed an in-depth analysis of 194 relevant papers on arXiv, encompassing trend analysis, word cloud representation, and distribution analysis across various application domains. The findings reveal a significant and increasing interest in ChatGPT-related research, predominantly centered on direct natural language processing applications, while also demonstrating considerable potential in areas ranging from education and history to mathematics, medicine, and physics. This study endeavors to furnish insights into ChatGPT's capabilities, potential implications, ethical concerns, and offer direction for future advancements in this field.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 665
+ },
+ "10.1016/j.tics.2023.08.006": {
+  "id": "10.1016/j.tics.2023.08.006",
+  "title": "What are large language models supposed to model?",
+  "url": "https://doi.org/10.1016/j.tics.2023.08.006",
+  "date": "2023-01-01",
+  "abs": "Do large language models (LLMs) constitute a computational account of how humans process language? And if so, what is the role of (psycho)linguistic theory in understanding the relationship between artificial and biological minds? The answer depends on choosing among several, fundamentally distinct ways of interpreting these models as hypotheses about humans.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 46
+ },
+ "10.1038/s41746-024-01083-y": {
+  "id": "10.1038/s41746-024-01083-y",
+  "title": "Evaluating large language models as agents in the clinic",
+  "url": "https://doi.org/10.1038/s41746-024-01083-y",
+  "date": "2024-01-01",
+  "abs": "Recent developments in large language models (LLMs) have unlocked opportunities for healthcare, from information synthesis to clinical decision support. These LLMs are not just capable of modeling language, but can also act as intelligent \u201cagents\u201d that interact with stakeholders in open-ended conversations and even influence clinical decision-making. Rather than relying on benchmarks that measure a model\u2019s ability to process clinical data or answer standardized test questions, LLM agents can be modeled in high-fidelity simulations of clinical settings and should be assessed for their impact on clinical workflows. These evaluation frameworks, which we refer to as \u201cArtificial Intelligence Structured Clinical Examinations\u201d (\u201cAI-SCE\u201d), can draw from comparable technologies where machines operate with varying degrees of self-governance, such as self-driving cars, in dynamic environments with multiple stakeholders. Developing these robust, real-world clinical evaluations will be crucial towards deploying LLM agents in medical settings.",
+  "cat": "Health Informatics",
+  "citation_count": 104
+ },
+ "10.1109/access.2024.3365742": {
+  "id": "10.1109/access.2024.3365742",
+  "title": "A Review on Large Language Models: Architectures, Applications, Taxonomies, Open Issues and Challenges",
+  "url": "https://doi.org/10.1109/access.2024.3365742",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) recently demonstrated extraordinary capability in various natural language processing (NLP) tasks including language translation, text generation, question answering, etc. Moreover, LLMs are new and essential part of computerized language processing, having the ability to understand complex verbal patterns and generate coherent and appropriate replies in a given context. Though this success of LLMs has prompted a substantial increase in research contributions, rapid growth has made it difficult to understand the overall impact of these improvements. Since a plethora of research on LLMs have been appeared within a short time, it is quite impossible to track all of these and get an overview of the current state of research in this area. Consequently, the research community would benefit from a short but thorough review of the recent changes in this area. This article thoroughly overviews LLMs, including their history, architectures, transformers, resources, training methods, applications, impacts, challenges, etc. This paper begins by discussing the fundamental concepts of LLMs with its traditional pipeline of the LLMs training phase. Then the paper provides an overview of the existing works, the history of LLMs, their evolution over time, the architecture of transformers in LLMs, the different resources of LLMs, and the different training methods that have been used to train them. The paper also demonstrates the datasets utilized in the studies. After that, the paper discusses the wide range of applications of LLMs, including biomedical and healthcare, education, social, business, and agriculture. The study also illustrates how LLMs create an impact on society and shape the future of AI and how they can be used to solve real-world problems. Finally, the paper also explores open issues and challenges to deploy LLMs in real-world scenario. Our review paper aims to help practitioners, researchers, and experts thoroughly understand the evolution of LLMs, pre-trained architectures, applications, challenges, and future goals.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 517
+ },
+ "10.1109/access.2024.3424945": {
+  "id": "10.1109/access.2024.3424945",
+  "title": "Achieving Peak Performance for Large Language Models: A Systematic Review",
+  "url": "https://doi.org/10.1109/access.2024.3424945",
+  "date": "2024-01-01",
+  "abs": "  In recent years, large language models (LLMs) have achieved remarkable\\nsuccess in natural language processing (NLP). LLMs require an extreme amount of\\nparameters to attain high performance. As models grow into the\\ntrillion-parameter range, computational and memory costs increase\\nsignificantly. This makes it difficult for many researchers to access the\\nresources needed to train or apply these models. Optimizing LLM performance\\ninvolves two main approaches: fine-tuning pre-trained models for specific tasks\\nto achieve state-of-the-art performance, and reducing costs or improving\\ntraining time while maintaining similar performance. This paper presents a\\nsystematic literature review (SLR) following the Preferred Reporting Items for\\nSystematic Reviews and Meta-Analyses (PRISMA) statement. We reviewed 65\\npublications out of 983 from 2017 to December 2023, retrieved from 5 databases.\\nThe study presents methods to optimize and accelerate LLMs while achieving\\ncutting-edge results without sacrificing accuracy. We begin with an overview of\\nthe development of language modeling, followed by a detailed explanation of\\ncommonly used frameworks and libraries, and a taxonomy for improving and\\nspeeding up LLMs based on three classes: LLM training, LLM inference, and\\nsystem serving. We then delve into recent optimization and acceleration\\nstrategies such as training optimization, hardware optimization, scalability\\nand reliability, accompanied by the taxonomy and categorization of these\\nstrategies. Finally, we provide an in-depth comparison of each class and\\nstrategy, with two case studies on optimizing model training and enhancing\\ninference efficiency. These case studies showcase practical approaches to\\naddress LLM resource limitations while maintaining performance.\\n",
+  "cat": "Artificial Intelligence",
+  "citation_count": 19
+ },
+ "10.1109/access.2024.3524176": {
+  "id": "10.1109/access.2024.3524176",
+  "title": "Metaheuristics and Large Language Models Join Forces: Toward an Integrated Optimization Approach",
+  "url": "https://doi.org/10.1109/access.2024.3524176",
+  "date": "2024-01-01",
+  "abs": "Since the rise of Large Language Models (LLMs) a couple of years ago, researchers in metaheuristics (MHs) have wondered how to use their power in a beneficial way within their algorithms. This paper introduces a novel approach that leverages LLMs as pattern recognition tools to improve MHs. The resulting hybrid method, tested in the context of a social network-based combinatorial optimization problem, outperforms existing state-of-the-art approaches that combine machine learning with MHs regarding the obtained solution quality. By carefully designing prompts, we demonstrate that the output obtained from LLMs can be used as problem knowledge, leading to improved results. Lastly, we acknowledge LLMs&#x2019; potential drawbacks and limitations and consider it essential to examine them to advance this type of research further. Our method can be reproduced using a tool available at: <uri>https://github.com/camilochs/optipattern</uri>.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 4
+ },
+ "10.1109/bigdata59044.2023.10386743": {
+  "id": "10.1109/bigdata59044.2023.10386743",
+  "title": "Multimodal Large Language Models: A Survey",
+  "url": "https://doi.org/10.1109/bigdata59044.2023.10386743",
+  "date": "2023-01-01",
+  "abs": "The exploration of multimodal language models integrates multiple data types, such as images, text, language, audio, and other heterogeneity. While the latest large language models excel in text-based tasks, they often struggle to understand and process other data types. Multimodal models address this limitation by combining various modalities, enabling a more comprehensive understanding of diverse data. This paper begins by defining the concept of multimodal and examining the historical development of multimodal algorithms. Furthermore, we introduce a range of multimodal products, focusing on the efforts of major technology companies. A practical guide is provided, offering insights into the technical aspects of multimodal models. Moreover, we present a compilation of the latest algorithms and commonly used datasets, providing researchers with valuable resources for experimentation and evaluation. Lastly, we explore the applications of multimodal models and discuss the challenges associated with their development. By addressing these aspects, this paper aims to facilitate a deeper understanding of multimodal models and their potentiality in various domains.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 158
+ },
+ "10.1109/iccv51070.2023.00788": {
+  "id": "10.1109/iccv51070.2023.00788",
+  "title": "MotionLM: Multi-Agent Motion Forecasting as Language Modeling",
+  "url": "https://doi.org/10.1109/iccv51070.2023.00788",
+  "date": "2023-01-01",
+  "abs": "Reliable forecasting of the future behavior of road agents is a critical component to safe planning in autonomous vehicles. Here, we represent continuous trajectories as sequences of discrete motion tokens and cast multi-agent motion prediction as a language modeling task over this domain. Our model, MotionLM, provides several advantages: First, it does not require anchors or explicit latent variable optimization to learn multimodal distributions. Instead, we leverage a single standard language modeling objective, maximizing the average log probability over sequence tokens. Second, our approach bypasses post-hoc interaction heuristics where individual agent trajectory generation is conducted prior to interactive scoring. Instead, MotionLM produces joint distributions over interactive agent futures in a single autoregressive decoding process. In addition, the model's sequential factorization enables temporally causal conditional rollouts. The proposed approach establishes new state-of-the-art performance for multi-agent motion prediction on the Waymo Open Motion Dataset, ranking 1 <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">st</sup> on the interactive challenge leaderboard.",
+  "cat": "Automotive Engineering",
+  "citation_count": 68
+ },
+ "10.1109/mnet.2024.3435752": {
+  "id": "10.1109/mnet.2024.3435752",
+  "title": "Large Language Models for Networking: Applications, Enabling Techniques, and Challenges",
+  "url": "https://doi.org/10.1109/mnet.2024.3435752",
+  "date": "2024-01-01",
+  "abs": "The rapid evolution of network technologies and the growing complexity of network tasks necessitate a paradigm shift in how networks are designed, configured, and managed. With a wealth of knowledge and expertise, large language models (LLMs) are one of the most promising candidates. This paper aims to pave the way for constructing domain-adapted LLMs for networking. Firstly, we present potential LLM applications for vertical network fields and showcase the mapping from natural language to network language. Then, several enabling technologies are investigated, including parameter-efficient finetuning and prompt engineering. The insight is that language understanding and tool usage are both required for network LLMs. Driven by the idea of embodied intelligence, we propose the ChatNet, a domain-adapted network LLM framework with access to various external network tools. ChatNet can reduce the time required for burdensome network planning tasks significantly, leading to a substantial improvement in processing efficiency. Finally, key challenges and future research directions are highlighted.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 54
+ },
+ "10.1109/mnet.2025.3539338": {
+  "id": "10.1109/mnet.2025.3539338",
+  "title": "Toward Edge General Intelligence via Large Language Models: Opportunities and Challenges",
+  "url": "https://doi.org/10.1109/mnet.2025.3539338",
+  "date": "2025-01-01",
+  "abs": "Edge Intelligence (EI) has been instrumental in delivering real-time, localized services by leveraging the computational capabilities of edge networks. The integration of Large Language Models (LLMs) empowers EI to evolve into the next stage: Edge General Intelligence (EGI), enabling more adaptive and versatile applications that require advanced understanding and reasoning capabilities. However, systematic exploration in this area remains insufficient. This survey delineates the distinctions between EGI and traditional EI, categorizing LLM-empowered EGI into three conceptual systems: centralized, hybrid, and decentralized. For each system, we detail the framework designs and review existing implementations. Furthermore, we evaluate the performance and throughput of various Small Language Models (SLMs) that are more suitable for deployment on edge devices. This survey provides researchers with a comprehensive vision of EGI, offering insights into its vast potential and establishing a foundation for future advancements in this rapidly evolving field.",
+  "cat": "Computer Networks and Communications",
+  "citation_count": 8
+ },
+ "10.1109/mwc.016.2300600": {
+  "id": "10.1109/mwc.016.2300600",
+  "title": "Large Language Model Enhanced Multi-Agent Systems for 6G Communications",
+  "url": "https://doi.org/10.1109/mwc.016.2300600",
+  "date": "2024-01-01",
+  "abs": "The article archived on this institutional repository is a preprint, available at arXiv:2312.07850v1 [cs.AI], https://arxiv.org/abs/2312.07850v1. It has not been certified by peer review.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 56
+ },
+ "10.1109/tkde.2025.3554028": {
+  "id": "10.1109/tkde.2025.3554028",
+  "title": "A Survey on Mixture of Experts in Large Language Models",
+  "url": "https://doi.org/10.1109/tkde.2025.3554028",
+  "date": "2025-01-01",
+  "abs": "<p>Large language models (LLMs) have garnered unprecedented advancements across diverse fields, ranging from natural language processing to computer vision and beyond. The prowess of LLMs is underpinned by their substantial model size, extensive and diverse datasets, and the vast computational power harnessed during training, all of which contribute to the emergent abilities of LLMs (e.g., in-context learning) that are not present in small models. Within this context, the mixture of experts (MoE) has emerged as an effective method for substantially scaling up model capacity with minimal computation overhead, gaining significant attention from academia and industry. Despite its growing prevalence, there lacks a systematic and comprehensive review of the literature on MoE. This survey seeks to bridge that gap, serving as an essential resource for researchers delving into the intricacies of MoE. We first briefly introduce the structure of the MoE layer, followed by proposing a new taxonomy of MoE. Next, we overview the core designs for various MoE models including both algorithmic and systemic aspects, alongside collections of available open-source implementations, hyperparameter configurations and empirical evaluations. Furthermore, we delineate the multifaceted applications of MoE in practice, and outline some potential directions for future research.</p>",
+  "cat": "Information Systems",
+  "citation_count": 42
+ },
+ "10.1145/3604237.3626869": {
+  "id": "10.1145/3604237.3626869",
+  "title": "Large Language Models in Finance: A Survey",
+  "url": "https://doi.org/10.1145/3604237.3626869",
+  "date": "2023-01-01",
+  "abs": "Recent advances in large language models (LLMs) have opened new possibilities for artificial intelligence applications in finance. In this paper, we provide a practical survey focused on two key aspects of utilizing LLMs for financial tasks: existing solutions and guidance for adoption.",
+  "cat": "Management Science and Operations Research",
+  "citation_count": 186
+ },
+ "10.1145/3605943": {
+  "id": "10.1145/3605943",
+  "title": "Recent Advances in Natural Language Processing via Large Pre-trained Language Models: A Survey",
+  "url": "https://doi.org/10.1145/3605943",
+  "date": "2023-01-01",
+  "abs": "<jats:p>Large, pre-trained language models (PLMs) such as BERT and GPT have drastically changed the Natural Language Processing (NLP) field. For numerous NLP tasks, approaches leveraging PLMs have achieved state-of-the-art performance. The key idea is to learn a generic, latent representation of language from a generic task once, then share it across disparate NLP tasks. Language modeling serves as the generic task, one with abundant self-supervised text available for extensive training. This article presents the key fundamental concepts of PLM architectures and a comprehensive view of the shift to PLM-driven NLP techniques. It surveys work applying the pre-training then fine-tuning, prompting, and text generation approaches. In addition, it discusses PLM limitations and suggested directions for future research.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1031
+ },
+ "10.1145/3624724": {
+  "id": "10.1145/3624724",
+  "title": "Talking about Large Language Models",
+  "url": "https://doi.org/10.1145/3624724",
+  "date": "2024-01-01",
+  "abs": "<jats:p>Interacting with a contemporary LLM-based conversational agent can create an illusion of being in the presence of a thinking creature. Yet, in their very nature, such systems are fundamentally not like us.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 227
+ },
+ "10.1145/3637528.3671650": {
+  "id": "10.1145/3637528.3671650",
+  "title": "Understanding the Weakness of Large Language Model Agents within a Complex Android Environment",
+  "url": "https://doi.org/10.1145/3637528.3671650",
+  "date": "2024-01-01",
+  "abs": "Large language models (LLMs) have empowered intelligent agents to execute intricate tasks within domain-specific software such as browsers and games. However, when applied to general-purpose software systems like operating systems, LLM agents face three primary challenges. Firstly, the action space is vast and dynamic, posing difficulties for LLM agents to maintain an up-to-date understanding and deliver accurate responses. Secondly, real-world tasks often require inter-application cooperation, demanding farsighted planning from LLM agents. Thirdly, agents need to identify optimal solutions aligning with user constraints, such as security concerns and preferences. These challenges motivate AndroidArena, an environment and benchmark designed to evaluate LLM agents on a modern operating system. To address high-cost of manpower, we design a scalable and semi-automated method to construct the benchmark. In the task evaluation, AndroidArena incorporates accurate and adaptive metrics to address the issue of non-unique solutions. Our findings reveal that even state-of-the-art LLM agents struggle in cross-APP scenarios and adhering to specific constraints. Additionally, we identify a lack of four key capabilities, i.e. understanding, reasoning, exploration, and reflection, as primary reasons for the failure of LLM agents. Furthermore, we provide empirical analysis on the failure of reflection, and improve the success rate by 27% with our proposed exploration strategy. This work is the first to present valuable insights in understanding fine-grained weakness of LLM agents, and offers a path forward for future research in this area. Environment, benchmark, prompt, and evaluation code for AndroidArena are released at https://github.com/AndroidArenaAgent/AndroidArena.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "10.1145/3641289": {
+  "id": "10.1145/3641289",
+  "title": "A Survey on Evaluation of Large Language Models",
+  "url": "https://doi.org/10.1145/3641289",
+  "date": "2024-01-01",
+  "abs": "<jats:p>\n            Large language models (LLMs) are gaining increasing popularity in both academia and industry, owing to their unprecedented performance in various applications. As LLMs continue to play a vital role in both research and daily use, their evaluation becomes increasingly critical, not only at the task level, but also at the society level for better understanding of their potential risks. Over the past years, significant efforts have been made to examine LLMs from various perspectives. This paper presents a comprehensive review of these evaluation methods for LLMs, focusing on three key dimensions:\n            <jats:italic>what to evaluate</jats:italic>\n            ,\n            <jats:italic>where to evaluate</jats:italic>\n            , and\n            <jats:italic>how to evaluate</jats:italic>\n            . Firstly, we provide an overview from the perspective of evaluation tasks, encompassing general natural language processing tasks, reasoning, medical usage, ethics, education, natural and social sciences, agent applications, and other areas. Secondly, we answer the \u2018where\u2019 and \u2018how\u2019 questions by diving into the evaluation methods and benchmarks, which serve as crucial components in assessing the performance of LLMs. Then, we summarize the success and failure cases of LLMs in different tasks. Finally, we shed light on several future challenges that lie ahead in LLMs evaluation. Our aim is to offer invaluable insights to researchers in the realm of LLMs evaluation, thereby aiding the development of more proficient LLMs. Our key point is that evaluation should be treated as an essential discipline to better assist the development of LLMs. We consistently maintain the related open-source materials at:\n            <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"url\" xlink:href=\"https://github.com/MLGroupJLU/LLM-eval-survey\">https://github.com/MLGroupJLU/LLM-eval-survey</jats:ext-link>\n          </jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1960
+ },
+ "10.1145/3649506": {
+  "id": "10.1145/3649506",
+  "title": "Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond",
+  "url": "https://doi.org/10.1145/3649506",
+  "date": "2024-01-01",
+  "abs": "<jats:p>\n            This article presents a comprehensive and practical guide for practitioners and end-users working with Large Language Models (LLMs) in their downstream Natural Language Processing (NLP) tasks. We provide discussions and insights into the usage of LLMs from the perspectives of models, data, and downstream tasks. First, we offer an introduction and brief summary of current language models. Then, we discuss the influence of pre-training data, training data, and test data. Most importantly, we provide a detailed discussion about the use and non-use cases of large language models for various natural language processing tasks, such as knowledge-intensive tasks, traditional natural language understanding tasks, generation tasks, emergent abilities, and considerations for specific tasks. We present various use cases and non-use cases to illustrate the practical applications and limitations of LLMs in real-world scenarios. We also try to understand the importance of data and the specific challenges associated with each NLP task. Furthermore, we explore the impact of spurious biases on LLMs and delve into other essential considerations, such as efficiency, cost, and latency, to ensure a comprehensive understanding of deploying LLMs in practice. This comprehensive guide aims to provide researchers and practitioners with valuable insights and best practices for working with LLMs, thereby enabling the successful implementation of these models in a wide range of NLP tasks. A curated list of practical guide resources of LLMs, regularly updated, can be found at\n            <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"https://github.com/Mooler0410/LLMsPracticalGuide\">https://github.com/Mooler0410/LLMsPracticalGuide</jats:ext-link>\n            . An LLMs evolutionary tree, editable yet regularly updated, can be found at\n            <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"llmtree.ai\">llmtree.ai</jats:ext-link>\n            .\n          </jats:p>",
+  "cat": "Health Informatics",
+  "citation_count": 401
+ },
+ "10.1145/3712003": {
+  "id": "10.1145/3712003",
+  "title": "LLM-Based Multi-Agent Systems for Software Engineering: Literature Review, Vision, and the Road Ahead",
+  "url": "https://doi.org/10.1145/3712003",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Integrating Large Language Models (LLMs) into autonomous agents marks a significant shift in the research landscape by offering cognitive abilities that are competitive with human planning and reasoning. This article explores the transformative potential of integrating Large Language Models into Multi-Agent (LMA) systems for addressing complex challenges in software engineering (SE). By leveraging the collaborative and specialized abilities of multiple agents, LMA systems enable autonomous problem-solving, improve robustness, and provide scalable solutions for managing the complexity of real-world software projects. In this article, we conduct a systematic review of recent primary studies to map the current landscape of LMA applications across various stages of the software development lifecycle (SDLC). To illustrate current capabilities and limitations, we perform two case studies to demonstrate the effectiveness of state-of-the-art LMA frameworks. Additionally, we identify critical research gaps and propose a comprehensive research agenda focused on enhancing individual agent capabilities and optimizing agent synergy. Our work outlines a forward-looking vision for developing fully autonomous, scalable, and trustworthy LMA systems, laying the foundation for the evolution of Software Engineering 2.0.</jats:p>",
+  "cat": "Information Systems",
+  "citation_count": 64
+ },
+ "10.1145/3748302": {
+  "id": "10.1145/3748302",
+  "title": "A Survey on the Memory Mechanism of Large Language Model-based Agents",
+  "url": "https://doi.org/10.1145/3748302",
+  "date": "2025-01-01",
+  "abs": "<jats:p>\n            Large language model (LLM)-based agents have recently attracted much attention from the research and industry communities. Compared with original LLMs, LLM-based agents are featured in their self-evolving capability, which is the basis for solving real-world problems that need long-term and complex agent-environment interactions. The key component to support agent-environment interactions is the memory of the agents. While previous studies have proposed many promising memory mechanisms, they are scattered in different papers, and there lacks a systematical review to summarize and compare these works from a holistic perspective, failing to abstract common and effective designing patterns for inspiring future studies. To bridge this gap, in this article, we propose a comprehensive survey on the memory mechanism of LLM-based agents. In specific, we first discuss \u201cwhat is\u201d and \u201cwhy do we need\u201d the memory in LLM-based agents. Then, we systematically review previous studies on how to design and evaluate the memory module. In addition, we also present many agent applications, where the memory module plays an important role. At last, we analyze the limitations of existing work and show important future directions. To keep up with the latest advances in this field, we create a repository at\n            <jats:ext-link xmlns:xlink=\"http://www.w3.org/1999/xlink\" ext-link-type=\"uri\" xlink:href=\"https://github.com/nuster1128/LLM_Agent_Memory_Survey\">https://github.com/nuster1128/LLM_Agent_Memory_Survey</jats:ext-link>\n            .\n          </jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 29
+ },
+ "10.1145/3754448": {
+  "id": "10.1145/3754448",
+  "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+  "url": "https://doi.org/10.1145/3754448",
+  "date": "2025-01-01",
+  "abs": "<jats:p>In the rapidly evolving landscape of artificial intelligence (AI), generative large language models (LLMs) stand at the forefront, revolutionizing how we interact with our data. However, the computational intensity and memory consumption of deploying these models present substantial challenges in terms of serving efficiency, particularly in scenarios demanding low latency and high throughput. This survey addresses the imperative need for efficient LLM serving methodologies from a machine learning system (MLSys) research perspective, standing at the crux of advanced AI innovations and practical system optimizations. We provide in-depth analysis, covering a spectrum of solutions, ranging from cutting-edge algorithmic modifications to groundbreaking changes in system designs. The survey aims to provide a comprehensive understanding of the current state and future directions in efficient LLM serving, offering valuable insights for researchers and practitioners in overcoming the barriers of effective LLM deployment, thereby reshaping the future of AI.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 8
+ },
+ "10.1162/coli_a_00107": {
+  "id": "10.1162/coli_a_00107",
+  "title": "A Scalable Distributed Syntactic, Semantic, and Lexical Language Model",
+  "url": "https://doi.org/10.1162/coli_a_00107",
+  "date": "2012-01-01",
+  "abs": "<jats:p>This paper presents an attempt at building a large scale distributed composite language model that is formed by seamlessly integrating an n-gram model, a structured language model, and probabilistic latent semantic analysis under a directed Markov random field paradigm to simultaneously account for local word lexical information, mid-range sentence syntactic structure, and long-span document semantic content. The composite language model has been trained by performing a convergent N-best list approximate EM algorithm and a follow-up EM algorithm to improve word prediction power on corpora with up to a billion tokens and stored on a supercomputer. The large scale distributed composite language model gives drastic perplexity reduction over n-grams and achieves significantly better translation quality measured by the Bleu score and \u201creadability\u201d of translations when applied to the task of re-ranking the N-best list from a state-of-the-art parsing-based machine translation system.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 18
+ },
+ "10.1609/aaaiss.v2i1.27688": {
+  "id": "10.1609/aaaiss.v2i1.27688",
+  "title": "Memory Matters: The Need to Improve Long-Term Memory in LLM-Agents",
+  "url": "https://doi.org/10.1609/aaaiss.v2i1.27688",
+  "date": "2024-01-01",
+  "abs": "<jats:p>In this paper, we provide a review of the current efforts to develop LLM agents, which are autonomous agents that leverage large language models. We examine the memory management approaches used in these agents. One crucial aspect of these agents is their long-term memory, which is often implemented using vector databases. We describe how vector databases are utilized to store and retrieve information in LLM agents. Moreover we highlight open problems, such as the separation of different types of memories and the management of memory over the agent's lifetime. Lastly, we propose several topics for future research to address these challenges and further enhance the capabilities of LLM agents, including the use of metadata in procedural and semantic memory and the integration of external knowledge sources with vector databases.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 21
+ },
+ "10.1609/aaaiss.v2i1.27691": {
+  "id": "10.1609/aaaiss.v2i1.27691",
+  "title": "A Proposal for a Language Model Based Cognitive Architecture",
+  "url": "https://doi.org/10.1609/aaaiss.v2i1.27691",
+  "date": "2024-01-01",
+  "abs": "<jats:p>Large Language Models (LLMs) have shown impressive performance on a wide variety of tasks. However, apparent limitations hinder their performance, especially on tasks that require multiple steps of reasoning or compositionality. Arguably, the primary sources of these limitations are the decoding strategy and how the models are trained. We propose, and provide a general description of, an architecture that combines LLMs and cognitive architectures, called Language Model based Cognitive Architecture (LMCA), to overcome these limitations. We draw an analogy between this architecture and \"fast\" and \"slow\" thinking in human cognition.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 19
+ },
+ "10.18653/v1/2021.naacl-main.341": {
+  "id": "10.18653/v1/2021.naacl-main.341",
+  "title": "Progressive Generation of Long Text with Pretrained Language Models",
+  "url": "https://doi.org/10.18653/v1/2021.naacl-main.341",
+  "date": "2021-01-01",
+  "abs": "Bowen Tan, Zichao Yang, Maruan Al-Shedivat, Eric Xing, Zhiting Hu. Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2021.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 64
+ },
+ "10.18653/v1/2022.bigscience-1.1": {
+  "id": "10.18653/v1/2022.bigscience-1.1",
+  "title": "Lifelong Pretraining: Continually Adapting Language Models to Emerging Corpora",
+  "url": "https://doi.org/10.18653/v1/2022.bigscience-1.1",
+  "date": "2022-01-01",
+  "abs": "Xisen Jin, Dejiao Zhang, Henghui Zhu, Wei Xiao, Shang-Wen Li, Xiaokai Wei, Andrew Arnold, Xiang Ren. Proceedings of BigScience Episode #5 -- Workshop on Challenges & Perspectives in Creating Large Language Models. 2022.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 24
+ },
+ "10.18653/v1/2023.acl-long.411": {
+  "id": "10.18653/v1/2023.acl-long.411",
+  "title": "Large Language Models Meet NL2Code: A Survey",
+  "url": "https://doi.org/10.18653/v1/2023.acl-long.411",
+  "date": "2023-01-01",
+  "abs": "Daoguang Zan, Bei Chen, Fengji Zhang, Dianjie Lu, Bingchao Wu, Bei Guan, Wang Yongji, Jian-Guang Lou. Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2023.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 100
+ },
+ "10.18653/v1/2023.findings-emnlp.128": {
+  "id": "10.18653/v1/2023.findings-emnlp.128",
+  "title": "Transformer-Based Language Model Surprisal Predicts Human Reading Times Best with About Two Billion Training Tokens",
+  "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.128",
+  "date": "2023-01-01",
+  "abs": "Recent psycholinguistic studies have drawn conflicting conclusions about the relationship between the quality of a language model and the ability of its surprisal estimates to predict human reading times, which has been speculated to be due to the large gap in both the amount of training data and model capacity across studies. The current work aims to consolidate these findings by evaluating surprisal estimates from Transformer-based language model variants that vary systematically in the amount of training data and model capacity on their ability to predict human reading times. The results show that surprisal estimates from most variants with contemporary model capacities provide the best fit after seeing about two billion training tokens, after which they begin to diverge from humanlike expectations. Additionally, newly-trained smaller model variants reveal a 'tipping point' at convergence, after which the decrease in language model perplexity begins to result in poorer fits to human reading times. These results suggest that the massive amount of training data is mainly responsible for the poorer fit achieved by surprisal from larger pre-trained language models, and that a certain degree of model capacity is necessary for Transformer-based language models to capture humanlike expectations.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 10
+ },
+ "10.18653/v1/2023.findings-emnlp.461": {
+  "id": "10.18653/v1/2023.findings-emnlp.461",
+  "title": "Towards large language model-based personal agents in the enterprise: Current trends and open problems",
+  "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.461",
+  "date": "2023-01-01",
+  "abs": "There is an emerging trend to use large language models (LLMs) to reason about complex goals and orchestrate a set of pluggable tools or APIs to accomplish a goal. This functionality could, among other use cases, be used to build personal assistants for knowledge workers. While there are impressive demos of LLMs being used as autonomous agents or for tool composition, these solutions are not ready mission-critical enterprise settings. For example, they are brittle to input changes, and can produce inconsistent results for the same inputs. These use cases have many open problems in an exciting area of NLP research, such as trust and explainability, consistency and reproducibility, adherence to guardrails and policies, best practices for composable tool design, and the need for new metrics and benchmarks. This vision paper illustrates some examples of LLM-based autonomous agents that reason and compose tools, highlights cases where they fail, surveys some of the recent efforts in this space, and lays out the research challenges to make these solutions viable for enterprises.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 8
+ },
+ "10.22214/ijraset.2023.54677": {
+  "id": "10.22214/ijraset.2023.54677",
+  "title": "Several categories of Large Language Models (LLMs): A Short Survey",
+  "url": "https://doi.org/10.22214/ijraset.2023.54677",
+  "date": "2023-01-01",
+  "abs": "<jats:p>Abstract: Large Language Models (LLMs) have become effective tools for natural language process-ing and have been used in many different fields. This essay offers a succinct summary of various LLM subcategories. The survey emphasizes recent developments and efforts made for various LLM kinds, including task-based financial LLMs, multilingual language LLMs, biomedical and clinical LLMs, vision language LLMs, and code language models. The survey gives a general summary of the methods, attributes, datasets, transformer models, and comparison metrics applied in each category of LLMs. Furthermore, it highlights unresolved problems in the field of developing chatbots and virtual assistants, such as boosting natural language processing, enhancing chatbot intelligence, and resolving moral and legal dilemmas. The purpose of this study is to provide readers, developers, academics, and users interested in LLM-based chatbots and virtual intelligent assistant technologies with use full information and future directions.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 27
+ },
+ "10.3348/kjr.2023.0997": {
+  "id": "10.3348/kjr.2023.0997",
+  "title": "Large Language Models: A Guide for Radiologists",
+  "url": "https://doi.org/10.3348/kjr.2023.0997",
+  "date": "2024-01-01",
+  "abs": "Large language models (LLMs) have revolutionized the global landscape of technology beyond natural language processing. Owing to their extensive pre-training on vast datasets, contemporary LLMs can handle tasks ranging from general functionalities to domain-specific areas, such as radiology, without additional fine-tuning. General-purpose chatbots based on LLMs can optimize the efficiency of radiologists in terms of their professional work and research endeavors. Importantly, these LLMs are on a trajectory of rapid evolution, wherein challenges such as \"hallucination,\" high training cost, and efficiency issues are addressed, along with the inclusion of multimodal inputs. In this review, we aim to offer conceptual knowledge and actionable guidance to radiologists interested in utilizing LLMs through a succinct overview of the topic and a summary of radiology-specific aspects, from the beginning to potential future directions.",
+  "cat": "Health Informatics",
+  "citation_count": 61
+ },
+ "10.3390/app14052074": {
+  "id": "10.3390/app14052074",
+  "title": "A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs)",
+  "url": "https://doi.org/10.3390/app14052074",
+  "date": "2024-01-01",
+  "abs": "<jats:p>Natural language processing (NLP) has significantly transformed in the last decade, especially in the field of language modeling. Large language models (LLMs) have achieved SOTA performances on natural language understanding (NLU) and natural language generation (NLG) tasks by learning language representation in self-supervised ways. This paper provides a comprehensive survey to capture the progression of advances in language models. In this paper, we examine the different aspects of language models, which started with a few million parameters but have reached the size of a trillion in a very short time. We also look at how these LLMs transitioned from task-specific to task-independent to task-and-language-independent architectures. This paper extensively discusses different pretraining objectives, benchmarks, and transfer learning methods used in LLMs. It also examines different finetuning and in-context learning techniques used in downstream tasks. Moreover, it explores how LLMs can perform well across many domains and datasets if sufficiently trained on a large and diverse dataset. Next, it discusses how, over time, the availability of cheap computational power and large datasets have improved LLM\u2019s capabilities and raised new challenges. As part of our study, we also inspect LLMs from the perspective of scalability to see how their performance is affected by the model\u2019s depth, width, and data size. Lastly, we provide an empirical comparison of existing trends and techniques and a comprehensive analysis of where the field of LLM currently stands.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 158
+ },
+ "10.34133/research.0646": {
+  "id": "10.34133/research.0646",
+  "title": "When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges",
+  "url": "https://doi.org/10.34133/research.0646",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Pre-trained large language models (LLMs) exhibit powerful capabilities for generating natural text. Evolutionary algorithms (EAs) can discover diverse solutions to complex real-world problems. Motivated by the common collective and directionality of text generation and evolution, this paper first illustrates the conceptual parallels between LLMs and EAs at a micro level, which includes multiple one-to-one key characteristics: token representation and individual representation, position encoding and fitness shaping, position embedding and selection, Transformers block and reproduction, and model training and parameter adaptation. These parallels highlight potential opportunities for technical advancements in both LLMs and EAs. Subsequently, we analyze existing interdisciplinary research from a macro perspective to uncover critical challenges, with a particular focus on evolutionary fine-tuning and LLM-enhanced EAs. These analyses not only provide insights into the evolutionary mechanisms behind LLMs but also offer potential directions for enhancing the capabilities of artificial agents.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 4
+ },
+ "10.34133/research.0655": {
+  "id": "10.34133/research.0655",
+  "title": "Road of Large Language Model: Source, Challenge, and Future Perspectives",
+  "url": "https://doi.org/10.34133/research.0655",
+  "date": "2025-01-01",
+  "abs": "<jats:p>Language model (LM), a foundational algorithm in the development of capable artificial intelligence, has been widely explored, achieving remarkable attainment. As research advances, large language models (LLMs) have emerged by pretraining transformer-based models on large-scale corpora. These models showed great zero-shot and few-shot learning capabilities across a variety of tasks, attracting widespread attention from both academia and industry. Despite impressive performance, LLMs still tackle challenges in addressing complex real-world scenarios. Recently, the advent of DeepSeek has reignited intense interest among researchers. In this paper, we provide a concise development history of LLM and discuss current challenges and future perspective. In practice, we focus on 4 crucial aspects of LLMs, including emergent abilities, human alignment, retrieval augmented generation, and applications in specific domains.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 4
+ },
+ "10.54254/2755-2721/35/20230399": {
+  "id": "10.54254/2755-2721/35/20230399",
+  "title": "The evolution, applications, and future prospects of large language models: An in-depth overview",
+  "url": "https://doi.org/10.54254/2755-2721/35/20230399",
+  "date": "2024-01-01",
+  "abs": "<jats:p>The evolution of natural language processing has transpired through three primary phases, with large-scale language models significantly transforming the field. These models have heightened the machine's capability to understand, produce, and interact with human language in unprecedented ways. Progressing from RNNs to transformer models, transitioning from encoder-decoder frameworks to decoder-centric designs, and the journey from BERT to the Chat-GPT series have marked significant shifts in the academic discourse. Impressively, these sophisticated models have infiltrated a range of sectors, including finance, healthcare, biology, and education, revolutionizing both traditional and emerging domains. However, as these advancements are celebrated, the ethical and economic challenges they introduce must also be addressed. Confronting these pivotal issues and harnessing technology for societal betterment has become a priority for academia and industry alike, sparking intense research endeavors in recent times. This review dives into the history of natural language processing, highlighting the pivotal developments and core principles of large language models. It provides a comprehensive perspective on their adoption and influence within the financial sector, crafting a detailed narrative of their deployment. In conclusion, the analysis reflects on the current challenges posed by these models and presents potential solutions. This study stands as a definitive guide, offering readers an in-depth understanding of the development, application, and future trajectories of large-scale language models.</jats:p>",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "1412.6980": {
+  "id": "1412.6980",
+  "title": "Adam: A Method for Stochastic Optimization",
+  "url": "http://arxiv.org/abs/1412.6980",
+  "date": "2014-01-01",
+  "abs": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 84453
+ },
+ "1906.09379": {
+  "id": "1906.09379",
+  "title": "Evaluating Computational Language Models with Scaling Properties of\n  Natural Language",
+  "url": "http://arxiv.org/abs/1906.09379",
+  "date": "2019-01-01",
+  "abs": "In this article, we evaluate computational models of natural language with respect to the universal statistical behaviors of natural language. Statistical mechanical analyses have revealed that natural language text is characterized by scaling properties, which quantify the global structure in the vocabulary population and the long memory of a text. We study whether five scaling properties (given by Zipf's law, Heaps' law, Ebeling's method, Taylor's law, and long-range correlation analysis) can serve for evaluation of computational models. Specifically, we test $n$-gram language models, a probabilistic context-free grammar (PCFG), language models based on Simon/Pitman-Yor processes, neural language models, and generative adversarial networks (GANs) for text generation. Our analysis reveals that language models based on recurrent neural networks (RNNs) with a gating mechanism (i.e., long short-term memory, LSTM; a gated recurrent unit, GRU; and quasi-recurrent neural networks, QRNNs) are the only computational models that can reproduce the long memory behavior of natural language. Furthermore, through comparison with recently proposed model-based evaluation methods, we find that the exponent of Taylor's law is a good indicator of model quality.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2112.11446": {
+  "id": "2112.11446",
+  "title": "Scaling Language Models: Methods, Analysis & Insights from Training\n  Gopher",
+  "url": "http://arxiv.org/abs/2112.11446",
+  "date": "2021-01-01",
+  "abs": "Language modelling provides a step towards intelligent communication systems by harnessing large repositories of written human knowledge to better predict and understand the world. In this paper, we present an analysis of Transformer-based language model performance across a wide range of model scales -- from models with tens of millions of parameters up to a 280 billion parameter model called Gopher. These models are evaluated on 152 diverse tasks, achieving state-of-the-art performance across the majority. Gains from scale are largest in areas such as reading comprehension, fact-checking, and the identification of toxic language, but logical and mathematical reasoning see less benefit. We provide a holistic analysis of the training dataset and model's behaviour, covering the intersection of model scale with bias and toxicity. Finally we discuss the application of language models to AI safety and the mitigation of downstream harms.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 241
+ },
+ "2205.05718": {
+  "id": "2205.05718",
+  "title": "Structured, flexible, and robust: benchmarking and improving large language models towards more human-like behavior in out-of-distribution reasoning tasks",
+  "url": "http://arxiv.org/abs/2205.05718",
+  "date": "2022-01-01",
+  "abs": "Human language offers a powerful window into our thoughts -- we tell stories, give explanations, and express our beliefs and goals through words. Abundant evidence also suggests that language plays a developmental role in structuring our learning. Here, we ask: how much of human-like thinking can be captured by learning statistical patterns in language alone? We first contribute a new challenge benchmark for comparing humans and distributional large language models (LLMs). Our benchmark contains two problem-solving domains (planning and explanation generation) and is designed to require generalization to new, out-of-distribution problems expressed in language. We find that humans are far more robust than LLMs on this benchmark. Next, we propose a hybrid Parse-and-Solve model, which augments distributional LLMs with a structured symbolic reasoning module. We find that this model shows more robust adaptation to out-of-distribution planning problems, demonstrating the promise of hybrid AI models for more human-like reasoning.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 14
+ },
+ "2206.07682": {
+  "id": "2206.07682",
+  "title": "Emergent Abilities of Large Language Models",
+  "url": "http://arxiv.org/abs/2206.07682",
+  "date": "2022-01-01",
+  "abs": "Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence implies that additional scaling could further expand the range of capabilities of language models.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 1009
+ },
+ "2212.09251": {
+  "id": "2212.09251",
+  "title": "Discovering Language Model Behaviors with Model-Written Evaluations",
+  "url": "http://arxiv.org/abs/2212.09251",
+  "date": "2022-01-01",
+  "abs": "As language models (LMs) scale, they develop many novel behaviors, good and bad, exacerbating the need to evaluate how they behave. Prior work creates evaluations with crowdwork (which is time-consuming and expensive) or existing data sources (which are not always available). Here, we automatically generate evaluations with LMs. We explore approaches with varying amounts of human effort, from instructing LMs to write yes/no questions to making complex Winogender schemas with multiple stages of LM-based generation and filtering. Crowdworkers rate the examples as highly relevant and agree with 90-100% of labels, sometimes more so than corresponding human-written datasets. We generate 154 datasets and discover new cases of inverse scaling where LMs get worse with size. Larger LMs repeat back a dialog user's preferred answer (\"sycophancy\") and express greater desire to pursue concerning goals like resource acquisition and goal preservation. We also find some of the first examples of inverse scaling in RL from Human Feedback (RLHF), where more RLHF makes LMs worse. For example, RLHF makes LMs express stronger political views (on gun rights and immigration) and a greater desire to avoid shut down. Overall, LM-written evaluations are high-quality and let us quickly discover many novel LM behaviors.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 38
+ },
+ "2301.04589": {
+  "id": "2301.04589",
+  "title": "Memory Augmented Large Language Models are Computationally Universal",
+  "url": "http://arxiv.org/abs/2301.04589",
+  "date": "2023-01-01",
+  "abs": "We show that transformer-based large language models are computationally universal when augmented with an external memory. Any deterministic language model that conditions on strings of bounded length is equivalent to a finite automaton, hence computationally limited. However, augmenting such models with a read-write memory creates the possibility of processing arbitrarily large inputs and, potentially, simulating any algorithm. We establish that an existing large language model, Flan-U-PaLM 540B, can be combined with an associative read-write memory to exactly simulate the execution of a universal Turing machine, $U_{15,2}$. A key aspect of the finding is that it does not require any modification of the language model weights. Instead, the construction relies solely on designing a form of stored instruction computer that can subsequently be programmed with a specific set of prompts.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 9
+ },
+ "2304.05332": {
+  "id": "2304.05332",
+  "title": "Emergent autonomous scientific research capabilities of large language models",
+  "url": "http://arxiv.org/abs/2304.05332",
+  "date": "2023-01-01",
+  "abs": "Transformer-based large language models are rapidly advancing in the field of machine learning research, with applications spanning natural language, biology, chemistry, and computer programming. Extreme scaling and reinforcement learning from human feedback have significantly improved the quality of generated text, enabling these models to perform various tasks and reason about their choices. In this paper, we present an Intelligent Agent system that combines multiple large language models for autonomous design, planning, and execution of scientific experiments. We showcase the Agent's scientific research capabilities with three distinct examples, with the most complex being the successful performance of catalyzed cross-coupling reactions. Finally, we discuss the safety implications of such systems and propose measures to prevent their misuse.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 73
+ },
+ "2305.16264": {
+  "id": "2305.16264",
+  "title": "Scaling Data-Constrained Language Models",
+  "url": "http://arxiv.org/abs/2305.16264",
+  "date": "2023-01-01",
+  "abs": "The current trend of scaling language models involves increasing both parameter count and training dataset size. Extrapolating this trend suggests that training dataset size may soon be limited by the amount of text data available on the internet. Motivated by this limit, we investigate scaling language models in data-constrained regimes. Specifically, we run a large set of experiments varying the extent of data repetition and compute budget, ranging up to 900 billion training tokens and 9 billion parameter models. We find that with constrained data for a fixed compute budget, training with up to 4 epochs of repeated data yields negligible changes to loss compared to having unique data. However, with more repetition, the value of adding compute eventually decays to zero. We propose and empirically validate a scaling law for compute optimality that accounts for the decreasing value of repeated tokens and excess parameters. Finally, we experiment with approaches mitigating data scarcity, including augmenting the training dataset with code data or removing commonly used filters. Models and datasets from our 400 training runs are freely available at https://github.com/huggingface/datablations.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 32
+ },
+ "2305.17144": {
+  "id": "2305.17144",
+  "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory",
+  "url": "http://arxiv.org/abs/2305.17144",
+  "date": "2023-01-01",
+  "abs": "The captivating realm of Minecraft has attracted substantial research interest in recent years, serving as a rich platform for developing intelligent agents capable of functioning in open-world environments. However, the current research landscape predominantly focuses on specific objectives, such as the popular \"ObtainDiamond\" task, and has not yet shown effective generalization to a broader spectrum of tasks. Furthermore, the current leading success rate for the \"ObtainDiamond\" task stands at around 20%, highlighting the limitations of Reinforcement Learning (RL) based controllers used in existing methods. To tackle these challenges, we introduce Ghost in the Minecraft (GITM), a novel framework integrates Large Language Models (LLMs) with text-based knowledge and memory, aiming to create Generally Capable Agents (GCAs) in Minecraft. These agents, equipped with the logic and common sense capabilities of LLMs, can skillfully navigate complex, sparse-reward environments with text-based interactions. We develop a set of structured actions and leverage LLMs to generate action plans for the agents to execute. The resulting LLM-based agent markedly surpasses previous methods, achieving a remarkable improvement of +47.5% in success rate on the \"ObtainDiamond\" task, demonstrating superior robustness compared to traditional RL-based controllers. Notably, our agent is the first to procure all items in the Minecraft Overworld technology tree, demonstrating its extensive capabilities. GITM does not need any GPU for training, but a single CPU node with 32 CPU cores is enough. This research shows the potential of LLMs in developing capable agents for handling long-horizon, complex tasks and adapting to uncertainties in open-world environments. See the project website at https://github.com/OpenGVLab/GITM.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 24
+ },
+ "2306.03917": {
+  "id": "2306.03917",
+  "title": "Turning large language models into cognitive models",
+  "url": "http://arxiv.org/abs/2306.03917",
+  "date": "2023-01-01",
+  "abs": "Large language models are powerful systems that excel at many tasks, ranging from translation to mathematical reasoning. Yet, at the same time, these models often show unhuman-like characteristics. In the present paper, we address this gap and ask whether large language models can be turned into cognitive models. We find that -- after finetuning them on data from psychological experiments -- these models offer accurate representations of human behavior, even outperforming traditional cognitive models in two decision-making domains. In addition, we show that their representations contain the information necessary to model behavior on the level of individual subjects. Finally, we demonstrate that finetuning on multiple tasks enables large language models to predict human behavior in a previously unseen task. Taken together, these results suggest that large, pre-trained models can be adapted to become generalist cognitive models, thereby opening up new research directions that could transform cognitive psychology and the behavioral sciences as a whole.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 21
+ },
+ "2308.02151": {
+  "id": "2308.02151",
+  "title": "Retroformer: Retrospective Large Language Agents with Policy Gradient Optimization",
+  "url": "http://arxiv.org/abs/2308.02151",
+  "date": "2023-01-01",
+  "abs": "Recent months have seen the emergence of a powerful new trend in which large language models (LLMs) are augmented to become autonomous language agents capable of performing objective oriented multi-step tasks on their own, rather than merely responding to queries from human users. Most existing language agents, however, are not optimized using environment-specific rewards. Although some agents enable iterative refinement through verbal feedback, they do not reason and plan in ways that are compatible with gradient-based learning from rewards. This paper introduces a principled framework for reinforcing large language agents by learning a retrospective model, which automatically tunes the language agent prompts from environment feedback through policy gradient. Specifically, our proposed agent architecture learns from rewards across multiple environments and tasks, for fine-tuning a pre-trained language model which refines the language agent prompt by summarizing the root cause of prior failed attempts and proposing action plans. Experimental results on various tasks demonstrate that the language agents improve over time and that our approach considerably outperforms baselines that do not properly leverage gradients from the environment. This demonstrates that using policy gradient optimization to improve language agents, for which we believe our work is one of the first, seems promising and can be applied to optimize other models in the agent architecture to enhance agent performances over time.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 4
+ },
+ "2308.03688": {
+  "id": "2308.03688",
+  "title": "AgentBench: Evaluating LLMs as Agents",
+  "url": "http://arxiv.org/abs/2308.03688",
+  "date": "2023-01-01",
+  "abs": "The potential of Large Language Model (LLM) as agents has been widely acknowledged recently. Thus, there is an urgent need to quantitatively \\textit{evaluate LLMs as agents} on challenging tasks in interactive environments. We present AgentBench, a multi-dimensional benchmark that consists of 8 distinct environments to assess LLM-as-Agent's reasoning and decision-making abilities. Our extensive test over \\num API-based and open-sourced (OSS) LLMs shows that, while top commercial LLMs present a strong ability of acting as agents in complex environments, there is a significant disparity in performance between them and many OSS competitors that are no larger than 70B. We identify the typical reasons of failures in environments and LLMs, showing that poor long-term reasoning, decision-making, and instruction following abilities are the main obstacles for developing usable LLM agents. Improving instruction following and training on high quality multi-round alignment data could improve agent performance. And different from existing assumptions, training on code present ambivalent impacts on different agent tasks. Datasets, environments, and an integrated evaluation package for AgentBench are released at https://github.com/THUDM/AgentBench.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 40
+ },
+ "2308.04026": {
+  "id": "2308.04026",
+  "title": "AgentSims: An Open-Source Sandbox for Large Language Model Evaluation",
+  "url": "http://arxiv.org/abs/2308.04026",
+  "date": "2023-01-01",
+  "abs": "With ChatGPT-like large language models (LLM) prevailing in the community, how to evaluate the ability of LLMs is an open question. Existing evaluation methods suffer from following shortcomings: (1) constrained evaluation abilities, (2) vulnerable benchmarks, (3) unobjective metrics. We suggest that task-based evaluation, where LLM agents complete tasks in a simulated environment, is a one-for-all solution to solve above problems. We present AgentSims, an easy-to-use infrastructure for researchers from all disciplines to test the specific capacities they are interested in. Researchers can build their evaluation tasks by adding agents and buildings on an interactive GUI or deploy and test new support mechanisms, i.e. memory, planning and tool-use systems, by a few lines of codes. Our demo is available at https://agentsims.com .",
+  "cat": "Artificial Intelligence",
+  "citation_count": 12
+ },
+ "2308.04030": {
+  "id": "2308.04030",
+  "title": "Gentopia: A Collaborative Platform for Tool-Augmented LLMs",
+  "url": "http://arxiv.org/abs/2308.04030",
+  "date": "2023-01-01",
+  "abs": "Augmented Language Models (ALMs) empower large language models with the ability to use tools, transforming them into intelligent agents for real-world interactions. However, most existing frameworks for ALMs, to varying degrees, are deficient in the following critical features: flexible customization, collaborative democratization, and holistic evaluation. We present gentopia, an ALM framework enabling flexible customization of agents through simple configurations, seamlessly integrating various language models, task formats, prompting modules, and plugins into a unified paradigm. Furthermore, we establish gentpool, a public platform enabling the registration and sharing of user-customized agents. Agents registered in gentpool are composable such that they can be assembled together for agent collaboration, advancing the democratization of artificial intelligence. To ensure high-quality agents, gentbench, an integral component of gentpool, is designed to thoroughly evaluate user-customized agents across diverse aspects such as safety, robustness, efficiency, etc. We release gentopia on Github and will continuously move forward.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 6
+ },
+ "2308.05960": {
+  "id": "2308.05960",
+  "title": "BOLAA: Benchmarking and Orchestrating LLM-augmented Autonomous Agents",
+  "url": "http://arxiv.org/abs/2308.05960",
+  "date": "2023-01-01",
+  "abs": "The massive successes of large language models (LLMs) encourage the emerging exploration of LLM-augmented Autonomous Agents (LAAs). An LAA is able to generate actions with its core LLM and interact with environments, which facilitates the ability to resolve complex tasks by conditioning on past interactions such as observations and actions. Since the investigation of LAA is still very recent, limited explorations are available. Therefore, we provide a comprehensive comparison of LAA in terms of both agent architectures and LLM backbones. Additionally, we propose a new strategy to orchestrate multiple LAAs such that each labor LAA focuses on one type of action, \\textit{i.e.} BOLAA, where a controller manages the communication among multiple agents. We conduct simulations on both decision-making and multi-step reasoning environments, which comprehensively justify the capacity of LAAs. Our performance results provide quantitative suggestions for designing LAA architectures and the optimal choice of LLMs, as well as the compatibility of both. We release our implementation code of LAAs to the public at \\url{https://github.com/salesforce/BOLAA}.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 9
+ },
+ "2309.02427": {
+  "id": "2309.02427",
+  "title": "Cognitive Architectures for Language Agents",
+  "url": "http://arxiv.org/abs/2309.02427",
+  "date": "2023-01-01",
+  "abs": "Recent efforts have augmented large language models (LLMs) with external resources (e.g., the Internet) or internal control flows (e.g., prompt chaining) for tasks requiring grounding or reasoning, leading to a new class of language agents. While these agents have achieved substantial empirical success, we lack a systematic framework to organize existing agents and plan future developments. In this paper, we draw on the rich history of cognitive science and symbolic artificial intelligence to propose Cognitive Architectures for Language Agents (CoALA). CoALA describes a language agent with modular memory components, a structured action space to interact with internal memory and external environments, and a generalized decision-making process to choose actions. We use CoALA to retrospectively survey and organize a large body of recent work, and prospectively identify actionable directions towards more capable agents. Taken together, CoALA contextualizes today's language agents within the broader history of AI and outlines a path towards language-based general intelligence.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 55
+ },
+ "2309.03409": {
+  "id": "2309.03409",
+  "title": "Large Language Models as Optimizers",
+  "url": "http://arxiv.org/abs/2309.03409",
+  "date": "2023-01-01",
+  "abs": "Optimization is ubiquitous. While derivative-based algorithms have been powerful tools for various problems, the absence of gradient imposes challenges on many real-world applications. In this work, we propose Optimization by PROmpting (OPRO), a simple and effective approach to leverage large language models (LLMs) as optimizers, where the optimization task is described in natural language. In each optimization step, the LLM generates new solutions from the prompt that contains previously generated solutions with their values, then the new solutions are evaluated and added to the prompt for the next optimization step. We first showcase OPRO on linear regression and traveling salesman problems, then move on to our main application in prompt optimization, where the goal is to find instructions that maximize the task accuracy. With a variety of LLMs, we demonstrate that the best prompts optimized by OPRO outperform human-designed prompts by up to 8% on GSM8K, and by up to 50% on Big-Bench Hard tasks. Code at https://github.com/google-deepmind/opro.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 85
+ },
+ "2309.07870": {
+  "id": "2309.07870",
+  "title": "Agents: An Open-source Framework for Autonomous Language Agents",
+  "url": "http://arxiv.org/abs/2309.07870",
+  "date": "2023-01-01",
+  "abs": "Recent advances on large language models (LLMs) enable researchers and developers to build autonomous language agents that can automatically solve various tasks and interact with environments, humans, and other agents using natural language interfaces. We consider language agents as a promising direction towards artificial general intelligence and release Agents, an open-source library with the goal of opening up these advances to a wider non-specialist audience. Agents is carefully engineered to support important features including planning, memory, tool usage, multi-agent communication, and fine-grained symbolic control. Agents is user-friendly as it enables non-specialists to build, customize, test, tune, and deploy state-of-the-art autonomous language agents without much coding. The library is also research-friendly as its modularized design makes it easily extensible for researchers. Agents is available at https://github.com/aiwaves-cn/agents.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 19
+ },
+ "2309.14365": {
+  "id": "2309.14365",
+  "title": "An In-depth Survey of Large Language Model-based Artificial Intelligence Agents",
+  "url": "http://arxiv.org/abs/2309.14365",
+  "date": "2023-01-01",
+  "abs": "Due to the powerful capabilities demonstrated by large language model (LLM), there has been a recent surge in efforts to integrate them with AI agents to enhance their performance. In this paper, we have explored the core differences and characteristics between LLM-based AI agents and traditional AI agents. Specifically, we first compare the fundamental characteristics of these two types of agents, clarifying the significant advantages of LLM-based agents in handling natural language, knowledge storage, and reasoning capabilities. Subsequently, we conducted an in-depth analysis of the key components of AI agents, including planning, memory, and tool use. Particularly, for the crucial component of memory, this paper introduced an innovative classification scheme, not only departing from traditional classification methods but also providing a fresh perspective on the design of an AI agent's memory system. We firmly believe that in-depth research and understanding of these core components will lay a solid foundation for the future advancement of AI agent technology. At the end of the paper, we provide directional suggestions for further research in this field, with the hope of offering valuable insights to scholars and researchers in the field.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 5
+ },
+ "2310.20151": {
+  "id": "2310.20151",
+  "title": "Multi-Agent Consensus Seeking via Large Language Models",
+  "url": "http://arxiv.org/abs/2310.20151",
+  "date": "2023-01-01",
+  "abs": "Multi-agent systems driven by large language models (LLMs) have shown promising abilities for solving complex tasks in a collaborative manner. This work considers a fundamental problem in multi-agent collaboration: consensus seeking. When multiple agents work together, we are interested in how they can reach a consensus through inter-agent negotiation. To that end, this work studies a consensus-seeking task where the state of each agent is a numerical value and they negotiate with each other to reach a consensus value. It is revealed that when not explicitly directed on which strategy should be adopted, the LLM-driven agents primarily use the average strategy for consensus seeking although they may occasionally use some other strategies. Moreover, this work analyzes the impact of the agent number, agent personality, and network topology on the negotiation process. The findings reported in this work can potentially lay the foundations for understanding the behaviors of LLM-driven multi-agent systems for solving more complex tasks. Furthermore, LLM-driven consensus seeking is applied to a multi-robot aggregation task. This application demonstrates the potential of LLM-driven agents to achieve zero-shot autonomous planning for multi-robot collaboration tasks. Project website: windylab.github.io/ConsensusLLM/.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2311.06622": {
+  "id": "2311.06622",
+  "title": "TrainerAgent: Customizable and Efficient Model Training through LLM-Powered Multi-Agent System",
+  "url": "http://arxiv.org/abs/2311.06622",
+  "date": "2023-01-01",
+  "abs": "Training AI models has always been challenging, especially when there is a need for custom models to provide personalized services. Algorithm engineers often face a lengthy process to iteratively develop models tailored to specific business requirements, making it even more difficult for non-experts. The quest for high-quality and efficient model development, along with the emergence of Large Language Model (LLM) Agents, has become a key focus in the industry. Leveraging the powerful analytical, planning, and decision-making capabilities of LLM, we propose a TrainerAgent system comprising a multi-agent framework including Task, Data, Model and Server agents. These agents analyze user-defined tasks, input data, and requirements (e.g., accuracy, speed), optimizing them comprehensively from both data and model perspectives to obtain satisfactory models, and finally deploy these models as online service. Experimental evaluations on classical discriminative and generative tasks in computer vision and natural language processing domains demonstrate that our system consistently produces models that meet the desired criteria. Furthermore, the system exhibits the ability to critically identify and reject unattainable tasks, such as fantastical scenarios or unethical requests, ensuring robustness and safety. This research presents a significant advancement in achieving desired models with increased efficiency and quality as compared to traditional model development, facilitated by the integration of LLM-powered analysis, decision-making, and execution capabilities, as well as the collaboration among four agents. We anticipate that our work will contribute to the advancement of research on TrainerAgent in both academic and industry communities, potentially establishing it as a new paradigm for model development in the field of AI.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2311.07226": {
+  "id": "2311.07226",
+  "title": "Large Language Models for Robotics: A Survey",
+  "url": "http://arxiv.org/abs/2311.07226",
+  "date": "2023-01-01",
+  "abs": "The human ability to learn, generalize, and control complex manipulation tasks through multi-modality feedback suggests a unique capability, which we refer to as dexterity intelligence. Understanding and assessing this intelligence is a complex task. Amidst the swift progress and extensive proliferation of large language models (LLMs), their applications in the field of robotics have garnered increasing attention. LLMs possess the ability to process and generate natural language, facilitating efficient interaction and collaboration with robots. Researchers and engineers in the field of robotics have recognized the immense potential of LLMs in enhancing robot intelligence, human-robot interaction, and autonomy. Therefore, this comprehensive review aims to summarize the applications of LLMs in robotics, delving into their impact and contributions to key areas such as robot control, perception, decision-making, and planning. This survey first provides an overview of the background and development of LLMs for robotics, followed by a discussion of their benefits and recent advancements in LLM-based robotic models. It then explores various techniques, employed in perception, decision-making, control, and interaction, as well as cross-module coordination in practical tasks. Finally, we review current applications of LLMs in robotics and outline potential challenges they may face in the near future. Embodied intelligence represents the future of intelligent systems, and LLM-based robotics is one of the most promising yet challenging paths toward achieving it.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 35
+ },
+ "2311.07621": {
+  "id": "2311.07621",
+  "title": "To Transformers and Beyond: Large Language Models for the Genome",
+  "url": "http://arxiv.org/abs/2311.07621",
+  "date": "2023-01-01",
+  "abs": "In the rapidly evolving landscape of genomics, deep learning has emerged as a useful tool for tackling complex computational challenges. This review focuses on the transformative role of Large Language Models (LLMs), which are mostly based on the transformer architecture, in genomics. Building on the foundation of traditional convolutional neural networks and recurrent neural networks, we explore both the strengths and limitations of transformers and other LLMs for genomics. Additionally, we contemplate the future of genomic modeling beyond the transformer architecture based on current trends in research. The paper aims to serve as a guide for computational biologists and computer scientists interested in LLMs for genomic data. We hope the paper can also serve as an educational introduction and discussion for biologists to a fundamental shift in how we will be analyzing genomic data in the future.",
+  "cat": "Molecular Biology",
+  "citation_count": 31
+ },
+ "2311.13884": {
+  "id": "2311.13884",
+  "title": "Controlling Large Language Model-based Agents for Large-Scale Decision-Making: An Actor-Critic Approach",
+  "url": "http://arxiv.org/abs/2311.13884",
+  "date": "2023-01-01",
+  "abs": "The remarkable progress in Large Language Models (LLMs) opens up new avenues for addressing planning and decision-making problems in Multi-Agent Systems (MAS). However, as the number of agents increases, the issues of hallucination in LLMs and coordination in MAS have become increasingly prominent. Additionally, the efficient utilization of tokens emerges as a critical consideration when employing LLMs to facilitate the interactions among a substantial number of agents. In this paper, we develop a modular framework called LLaMAC to mitigate these challenges. LLaMAC implements a value distribution encoding similar to that found in the human brain, utilizing internal and external feedback mechanisms to facilitate collaboration and iterative reasoning among its modules. Through evaluations involving system resource allocation and robot grid transportation, we demonstrate the considerable advantages afforded by our proposed approach.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2312.00678": {
+  "id": "2312.00678",
+  "title": "The Efficiency Spectrum of Large Language Models: An Algorithmic Survey",
+  "url": "http://arxiv.org/abs/2312.00678",
+  "date": "2023-01-01",
+  "abs": "The rapid growth of Large Language Models (LLMs) has been a driving force in transforming various domains, reshaping the artificial general intelligence landscape. However, the increasing computational and memory demands of these models present substantial challenges, hindering both academic research and practical applications. To address these issues, a wide array of methods, including both algorithmic and hardware solutions, have been developed to enhance the efficiency of LLMs. This survey delivers a comprehensive review of algorithmic advancements aimed at improving LLM efficiency. Unlike other surveys that typically focus on specific areas such as training or model compression, this paper examines the multi-faceted dimensions of efficiency essential for the end-to-end algorithmic development of LLMs. Specifically, it covers various topics related to efficiency, including scaling laws, data utilization, architectural innovations, training and tuning strategies, and inference techniques. This paper aims to serve as a valuable resource for researchers and practitioners, laying the groundwork for future innovations in this critical research area. Our repository of relevant references is maintained at url{https://github.com/tding1/Efficient-LLM-Survey}.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 11
+ },
+ "2401.02777": {
+  "id": "2401.02777",
+  "title": "From LLM to Conversational Agent: A Memory Enhanced Architecture with Fine-Tuning of Large Language Models",
+  "url": "http://arxiv.org/abs/2401.02777",
+  "date": "2024-01-01",
+  "abs": "This paper introduces RAISE (Reasoning and Acting through Scratchpad and Examples), an advanced architecture enhancing the integration of Large Language Models (LLMs) like GPT-4 into conversational agents. RAISE, an enhancement of the ReAct framework, incorporates a dual-component memory system, mirroring human short-term and long-term memory, to maintain context and continuity in conversations. It entails a comprehensive agent construction scenario, including phases like Conversation Selection, Scene Extraction, CoT Completion, and Scene Augmentation, leading to the LLMs Training phase. This approach appears to enhance agent controllability and adaptability in complex, multi-turn dialogues. Our preliminary evaluations in a real estate sales context suggest that RAISE has some advantages over traditional agents, indicating its potential for broader applications. This work contributes to the AI field by providing a robust framework for developing more context-aware and versatile conversational agents.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 6
+ },
+ "2401.06201": {
+  "id": "2401.06201",
+  "title": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction",
+  "url": "http://arxiv.org/abs/2401.06201",
+  "date": "2024-01-01",
+  "abs": "To address intricate real-world tasks, there has been a rising interest in tool utilization in applications of large language models (LLMs). To develop LLM-based agents, it usually requires LLMs to understand many tool functions from different tool documentation. But these documentations could be diverse, redundant or incomplete, which immensely affects the capability of LLMs in using tools. To solve this, we introduce EASYTOOL, a framework transforming diverse and lengthy tool documentation into a unified and concise tool instruction for easier tool usage. EasyTool purifies essential information from extensive tool documentation of different sources, and elaborates a unified interface (i.e., tool instruction) to offer standardized tool descriptions and functionalities for LLM-based agents. Extensive experiments on multiple different tasks demonstrate that EasyTool can significantly reduce token consumption and improve the performance of tool utilization in real-world scenarios. Our code will be available at \\url{https://github.com/microsoft/JARVIS/} in the future.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2401.10910": {
+  "id": "2401.10910",
+  "title": "Metacognition is all you need? Using Introspection in Generative Agents to Improve Goal-directed Behavior",
+  "url": "http://arxiv.org/abs/2401.10910",
+  "date": "2024-01-01",
+  "abs": "Recent advances in Large Language Models (LLMs) have shown impressive capabilities in various applications, yet LLMs face challenges such as limited context windows and difficulties in generalization. In this paper, we introduce a metacognition module for generative agents, enabling them to observe their own thought processes and actions. This metacognitive approach, designed to emulate System 1 and System 2 cognitive processes, allows agents to significantly enhance their performance by modifying their strategy. We tested the metacognition module on a variety of scenarios, including a situation where generative agents must survive a zombie apocalypse, and observe that our system outperform others, while agents adapt and improve their strategies to complete tasks over time.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2401.13601": {
+  "id": "2401.13601",
+  "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+  "url": "http://arxiv.org/abs/2401.13601",
+  "date": "2024-01-01",
+  "abs": "In the past year, MultiModal Large Language Models (MM-LLMs) have undergone substantial advancements, augmenting off-the-shelf LLMs to support MM inputs or outputs via cost-effective training strategies. The resulting models not only preserve the inherent reasoning and decision-making capabilities of LLMs but also empower a diverse range of MM tasks. In this paper, we provide a comprehensive survey aimed at facilitating further research of MM-LLMs. Initially, we outline general design formulations for model architecture and training pipeline. Subsequently, we introduce a taxonomy encompassing 126 MM-LLMs, each characterized by its specific formulations. Furthermore, we review the performance of selected MM-LLMs on mainstream benchmarks and summarize key training recipes to enhance the potency of MM-LLMs. Finally, we explore promising directions for MM-LLMs while concurrently maintaining a real-time tracking website for the latest developments in the field. We hope that this survey contributes to the ongoing advancement of the MM-LLMs domain.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 15
+ },
+ "2402.00798": {
+  "id": "2402.00798",
+  "title": "Formal-LLM: Integrating Formal Language and Natural Language for Controllable LLM-based Agents",
+  "url": "http://arxiv.org/abs/2402.00798",
+  "date": "2024-01-01",
+  "abs": "Recent advancements on Large Language Models (LLMs) enable AI Agents to automatically generate and execute multi-step plans to solve complex tasks. However, since LLM's content generation process is hardly controllable, current LLM-based agents frequently generate invalid or non-executable plans, which jeopardizes the performance of the generated plans and corrupts users' trust in LLM-based agents. In response, this paper proposes a novel \"Formal-LLM\" framework for LLM-based agents by integrating the expressiveness of natural language and the precision of formal language. Specifically, the framework allows agent developers to express their requirements or constraints for the planning process as an automaton. A stack-based LLM plan generation process is then conducted under the supervision of the automaton to ensure that the generated plan satisfies the constraints, making the planning process controllable. We conduct experiments on both benchmark tasks and practical real-life tasks, and our framework achieves over 50% overall performance increase, which validates the feasibility and effectiveness of employing Formal-LLM to guide the plan generation of agents, preventing the agents from generating invalid and unsuccessful plans. Further, more controllable LLM-based agents can facilitate the broader utilization of LLM in application scenarios where high validity of planning is essential. The source code of this work is available at https://github.com/agiresearch/Formal-LLM.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2402.01108": {
+  "id": "2402.01108",
+  "title": "Reasoning Capacity in Multi-Agent Systems: Limitations, Challenges and Human-Centered Solutions",
+  "url": "http://arxiv.org/abs/2402.01108",
+  "date": "2024-01-01",
+  "abs": "Remarkable performance of large language models (LLMs) in a variety of tasks brings forth many opportunities as well as challenges of utilizing them in production settings. Towards practical adoption of LLMs, multi-agent systems hold great promise to augment, integrate, and orchestrate LLMs in the larger context of enterprise platforms that use existing proprietary data and models to tackle complex real-world tasks. Despite the tremendous success of these systems, current approaches rely on narrow, single-focus objectives for optimization and evaluation, often overlooking potential constraints in real-world scenarios, including restricted budgets, resources and time. Furthermore, interpreting, analyzing, and debugging these systems requires different components to be evaluated in relation to one another. This demand is currently not feasible with existing methodologies. In this postion paper, we introduce the concept of reasoning capacity as a unifying criterion to enable integration of constraints during optimization and establish connections among different components within the system, which also enable a more holistic and comprehensive approach to evaluation. We present a formal definition of reasoning capacity and illustrate its utility in identifying limitations within each component of the system. We then argue how these limitations can be addressed with a self-reflective process wherein human-feedback is used to alleviate shortcomings in reasoning and enhance overall consistency of the system.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2402.01364": {
+  "id": "2402.01364",
+  "title": "Continual Learning for Large Language Models: A Survey",
+  "url": "http://arxiv.org/abs/2402.01364",
+  "date": "2024-01-01",
+  "abs": "Large language models (LLMs) are not amenable to frequent re-training, due to high training costs arising from their massive scale. However, updates are necessary to endow LLMs with new skills and keep them up-to-date with rapidly evolving human knowledge. This paper surveys recent works on continual learning for LLMs. Due to the unique nature of LLMs, we catalog continue learning techniques in a novel multi-staged categorization scheme, involving continual pretraining, instruction tuning, and alignment. We contrast continual learning for LLMs with simpler adaptation methods used in smaller models, as well as with other enhancement strategies like retrieval-augmented generation and model editing. Moreover, informed by a discussion of benchmarks and evaluation, we identify several challenges and future work directions for this crucial task.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 22
+ },
+ "2402.01680": {
+  "id": "2402.01680",
+  "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges",
+  "url": "http://arxiv.org/abs/2402.01680",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) have achieved remarkable success across a wide array of tasks. Due to the impressive planning and reasoning abilities of LLMs, they have been used as autonomous agents to do many tasks automatically. Recently, based on the development of using one LLM as a single planning or decision-making agent, LLM-based multi-agent systems have achieved considerable progress in complex problem-solving and world simulation. To provide the community with an overview of this dynamic field, we present this survey to offer an in-depth discussion on the essential aspects of multi-agent systems based on LLMs, as well as the challenges. Our goal is for readers to gain substantial insights on the following questions: What domains and environments do LLM-based multi-agents simulate? How are these agents profiled and how do they communicate? What mechanisms contribute to the growth of agents' capacities? For those interested in delving into this field of study, we also summarize the commonly used datasets or benchmarks for them to have convenient access. To keep researchers updated on the latest studies, we maintain an open-source GitHub repository, dedicated to outlining the research on LLM-based multi-agent systems.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 49
+ },
+ "2402.01881": {
+  "id": "2402.01881",
+  "title": "Large Language Model Agent for Hyper-Parameter Optimization",
+  "url": "http://arxiv.org/abs/2402.01881",
+  "date": "2024-01-01",
+  "abs": "Hyperparameter optimization is critical in modern machine learning, requiring expert knowledge, numerous trials, and high computational and human resources. Despite the advancements in Automated Machine Learning (AutoML), challenges in terms of trial efficiency, setup complexity, and interoperability still persist. To address these issues, we introduce a novel paradigm leveraging Large Language Models (LLMs) to automate hyperparameter optimization across diverse machine learning tasks, which is named AgentHPO (short for LLM Agent-based Hyperparameter Optimization). Specifically, AgentHPO processes the task information autonomously, conducts experiments with specific hyperparameters (HPs), and iteratively optimizes them based on historical trials. This human-like optimization process largely reduces the number of required trials, simplifies the setup process, and enhances interpretability and user trust, compared to traditional AutoML methods. Extensive empirical experiments conducted on 12 representative machine-learning tasks indicate that AgentHPO not only matches but also often surpasses the best human trials in terms of performance while simultaneously providing explainable results. Further analysis sheds light on the strategies employed by the LLM in optimizing these tasks, highlighting its effectiveness and adaptability in various scenarios.",
+  "cat": "Management Information Systems",
+  "citation_count": 3
+ },
+ "2402.05120": {
+  "id": "2402.05120",
+  "title": "More Agents Is All You Need",
+  "url": "http://arxiv.org/abs/2402.05120",
+  "date": "2024-01-01",
+  "abs": "We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method, termed as Agent Forest, is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence. Our code is publicly available at: https://github.com/MoreAgentsIsAllYouNeed/AgentForest",
+  "cat": null,
+  "citation_count": 17
+ },
+ "2402.06196": {
+  "id": "2402.06196",
+  "title": "Large Language Models: A Survey",
+  "url": "http://arxiv.org/abs/2402.06196",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) have drawn a lot of attention due to their strong performance on a wide range of natural language tasks, since the release of ChatGPT in November 2022. LLMs' ability of general-purpose language understanding and generation is acquired by training billions of model's parameters on massive amounts of text data, as predicted by scaling laws \\cite{kaplan2020scaling,hoffmann2022training}. The research area of LLMs, while very recent, is evolving rapidly in many different ways. In this paper, we review some of the most prominent LLMs, including three popular LLM families (GPT, LLaMA, PaLM), and discuss their characteristics, contributions and limitations. We also give an overview of techniques developed to build, and augment LLMs. We then survey popular datasets prepared for LLM training, fine-tuning, and evaluation, review widely used LLM evaluation metrics, and compare the performance of several popular LLMs on a set of representative benchmarks. Finally, we conclude the paper by discussing open challenges and future research directions.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 202
+ },
+ "2402.10172": {
+  "id": "2402.10172",
+  "title": "OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models",
+  "url": "http://arxiv.org/abs/2402.10172",
+  "date": "2024-01-01",
+  "abs": "Optimization problems are pervasive in sectors from manufacturing and distribution to healthcare. However, most such problems are still solved heuristically by hand rather than optimally by state-of-the-art solvers because the expertise required to formulate and solve these problems limits the widespread adoption of optimization tools and techniques. This paper introduces OptiMUS, a Large Language Model (LLM)-based agent designed to formulate and solve (mixed integer) linear programming problems from their natural language descriptions. OptiMUS can develop mathematical models, write and debug solver code, evaluate the generated solutions, and improve its model and code based on these evaluations. OptiMUS utilizes a modular structure to process problems, allowing it to handle problems with long descriptions and complex data without long prompts. Experiments demonstrate that OptiMUS outperforms existing state-of-the-art methods on easy datasets by more than $20\\%$ and on hard datasets (including a new dataset, NLP4LP, released with this paper that features long and complex problems) by more than $30\\%$.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 6
+ },
+ "2402.11208": {
+  "id": "2402.11208",
+  "title": "Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents",
+  "url": "http://arxiv.org/abs/2402.11208",
+  "date": "2024-01-01",
+  "abs": "Driven by the rapid development of Large Language Models (LLMs), LLM-based agents have been developed to handle various real-world applications, including finance, healthcare, and shopping, etc. It is crucial to ensure the reliability and security of LLM-based agents during applications. However, the safety issues of LLM-based agents are currently under-explored. In this work, we take the first step to investigate one of the typical safety threats, backdoor attack, to LLM-based agents. We first formulate a general framework of agent backdoor attacks, then we present a thorough analysis of different forms of agent backdoor attacks. Specifically, compared with traditional backdoor attacks on LLMs that are only able to manipulate the user inputs and model outputs, agent backdoor attacks exhibit more diverse and covert forms: (1) From the perspective of the final attacking outcomes, the agent backdoor attacker can not only choose to manipulate the final output distribution, but also introduce the malicious behavior in an intermediate reasoning step only, while keeping the final output correct. (2) Furthermore, the former category can be divided into two subcategories based on trigger locations, in which the backdoor trigger can either be hidden in the user query or appear in an intermediate observation returned by the external environment. We implement the above variations of agent backdoor attacks on two typical agent tasks including web shopping and tool utilization. Extensive experiments show that LLM-based agents suffer severely from backdoor attacks and such backdoor vulnerability cannot be easily mitigated by current textual backdoor defense algorithms. This indicates an urgent need for further research on the development of targeted defenses against backdoor attacks on LLM-based agents. Warning: This paper may contain biased content.",
+  "cat": "Signal Processing",
+  "citation_count": 7
+ },
+ "2402.11443": {
+  "id": "2402.11443",
+  "title": "Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation",
+  "url": "http://arxiv.org/abs/2402.11443",
+  "date": "2024-01-01",
+  "abs": "This paper presents a benchmark self-evolving framework to dynamically evaluate rapidly advancing Large Language Models (LLMs), aiming for a more accurate assessment of their capabilities and limitations. We utilize a multi-agent system to manipulate the context or question of original instances, reframing new evolving instances with high confidence that dynamically extend existing benchmarks. Towards a more scalable, robust and fine-grained evaluation, we implement six reframing operations to construct evolving instances testing LLMs against diverse queries, data noise and probing their problem-solving sub-abilities. With this framework, we extend benchmark datasets of four tasks. Experimental results show a general performance decline in most LLMs against their original results. This decline under our scalable and robust evaluations, alongside our fine-grained evaluation, more accurately reflect models' capabilities. Besides, our framework widens performance discrepancies both between different models and within the same model across various tasks, facilitating more informed model selection for specific tasks (Code and data are available at https://github.com/NanshineLoong/Self-Evolving-Benchmark).",
+  "cat": "Management Information Systems",
+  "citation_count": 2
+ },
+ "2402.12914": {
+  "id": "2402.12914",
+  "title": "Large Language Model-based Human-Agent Collaboration for Complex Task Solving",
+  "url": "http://arxiv.org/abs/2402.12914",
+  "date": "2024-01-01",
+  "abs": "In recent developments within the research community, the integration of Large Language Models (LLMs) in creating fully autonomous agents has garnered significant interest. Despite this, LLM-based agents frequently demonstrate notable shortcomings in adjusting to dynamic environments and fully grasping human needs. In this work, we introduce the problem of LLM-based human-agent collaboration for complex task-solving, exploring their synergistic potential. In addition, we propose a Reinforcement Learning-based Human-Agent Collaboration method, ReHAC. This approach includes a policy model designed to determine the most opportune stages for human intervention within the task-solving process. We construct a human-agent collaboration dataset to train this policy model in an offline reinforcement learning environment. Our validation tests confirm the model's effectiveness. The results demonstrate that the synergistic efforts of humans and LLM-based agents significantly improve performance in complex tasks, primarily through well-planned, limited human intervention. Datasets and code are available at: https://github.com/XueyangFeng/ReHAC.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2402.14744": {
+  "id": "2402.14744",
+  "title": "Large Language Models as Urban Residents: An LLM Agent Framework for Personal Mobility Generation",
+  "url": "http://arxiv.org/abs/2402.14744",
+  "date": "2024-01-01",
+  "abs": "This paper introduces a novel approach using Large Language Models (LLMs) integrated into an agent framework for flexible and effective personal mobility generation. LLMs overcome the limitations of previous models by effectively processing semantic data and offering versatility in modeling various tasks. Our approach addresses three research questions: aligning LLMs with real-world urban mobility data, developing reliable activity generation strategies, and exploring LLM applications in urban mobility. The key technical contribution is a novel LLM agent framework that accounts for individual activity patterns and motivations, including a self-consistency approach to align LLMs with real-world activity data and a retrieval-augmented strategy for interpretable activity generation. We evaluate our LLM agent framework and compare it with state-of-the-art personal mobility generation approaches, demonstrating the effectiveness of our approach and its potential applications in urban mobility. Overall, this study marks the pioneering work of designing an LLM agent framework for activity generation based on real-world human activity data, offering a promising tool for urban mobility analysis.",
+  "cat": "Automotive Engineering",
+  "citation_count": 10
+ },
+ "2402.15627": {
+  "id": "2402.15627",
+  "title": "MegaScale: Scaling Large Language Model Training to More Than 10, 000 GPUs",
+  "url": "http://arxiv.org/abs/2402.15627",
+  "date": "2024-01-01",
+  "abs": "We present the design, implementation and engineering experience in building and deploying MegaScale, a production system for training large language models (LLMs) at the scale of more than 10,000 GPUs. Training LLMs at this scale brings unprecedented challenges to training efficiency and stability. We take a full-stack approach that co-designs the algorithmic and system components across model block and optimizer design, computation and communication overlapping, operator optimization, data pipeline, and network performance tuning. Maintaining high efficiency throughout the training process (i.e., stability) is an important consideration in production given the long extent of LLM training jobs. Many hard stability issues only emerge at large scale, and in-depth observability is the key to address them. We develop a set of diagnosis tools to monitor system components and events deep in the stack, identify root causes, and derive effective techniques to achieve fault tolerance and mitigate stragglers. MegaScale achieves 55.2% Model FLOPs Utilization (MFU) when training a 175B LLM model on 12,288 GPUs, improving the MFU by 1.34x compared to Megatron-LM. We share our operational experience in identifying and fixing failures and stragglers. We hope by articulating the problems and sharing our experience from a systems perspective, this work can inspire future LLM systems research.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 24
+ },
+ "2402.16142": {
+  "id": "2402.16142",
+  "title": "From Text to Transformation: A Comprehensive Review of Large Language Models' Versatility",
+  "url": "http://arxiv.org/abs/2402.16142",
+  "date": "2024-01-01",
+  "abs": "This groundbreaking study explores the expanse of Large Language Models (LLMs), such as Generative Pre-Trained Transformer (GPT) and Bidirectional Encoder Representations from Transformers (BERT) across varied domains ranging from technology, finance, healthcare to education. Despite their established prowess in Natural Language Processing (NLP), these LLMs have not been systematically examined for their impact on domains such as fitness, and holistic well-being, urban planning, climate modelling as well as disaster management. This review paper, in addition to furnishing a comprehensive analysis of the vast expanse and extent of LLMs' utility in diverse domains, recognizes the research gaps and realms where the potential of LLMs is yet to be harnessed. This study uncovers innovative ways in which LLMs can leave a mark in the fields like fitness and wellbeing, urban planning, climate modelling and disaster response which could inspire future researches and applications in the said avenues.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 41
+ },
+ "2402.16823": {
+  "id": "2402.16823",
+  "title": "Language Agents as Optimizable Graphs",
+  "url": "http://arxiv.org/abs/2402.16823",
+  "date": "2024-01-01",
+  "abs": "Various human-designed prompt engineering techniques have been proposed to improve problem solvers based on Large Language Models (LLMs), yielding many disparate code bases. We unify these approaches by describing LLM-based agents as computational graphs. The nodes implement functions to process multimodal data or query LLMs, and the edges describe the information flow between operations. Graphs can be recursively combined into larger composite graphs representing hierarchies of inter-agent collaboration (where edges connect operations of different agents). Our novel automatic graph optimizers (1) refine node-level LLM prompts (node optimization) and (2) improve agent orchestration by changing graph connectivity (edge optimization). Experiments demonstrate that our framework can be used to efficiently develop, integrate, and automatically improve various LLM agents. The code can be found at https://github.com/metauto-ai/gptswarm.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2403.14608": {
+  "id": "2403.14608",
+  "title": "Parameter-Efficient Fine-Tuning for Large Models: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/2403.14608",
+  "date": "2024-01-01",
+  "abs": "Large models represent a groundbreaking advancement in multiple application fields, enabling remarkable achievements across various tasks. However, their unprecedented scale comes with significant computational costs. These models, often consisting of billions of parameters, require vast amounts of computational resources for execution. Especially, the expansive scale and computational demands pose considerable challenges when customizing them for particular downstream tasks, particularly over the hardware platforms constrained by computational capabilities. Parameter Efficient Fine-Tuning (PEFT) provides a practical solution by efficiently adjusting the large models over the various downstream tasks. In particular, PEFT refers to the process of adjusting the parameters of a pre-trained large model to adapt it to a specific task or domain while minimizing the number of additional parameters introduced or computational resources required. This approach is particularly important when dealing with large-scale language models with high parameter counts, as fine-tuning these models from scratch can be computationally expensive and resource-intensive, posing considerable challenges in the supporting system platform design. In this survey, we present comprehensive studies of various PEFT algorithms, examining their performance and computational overhead. Moreover, we provide an overview of applications developed using different PEFT algorithms and discuss common techniques employed to mitigate computation costs for PEFT. In addition to providing an extensive survey from an algorithmic standpoint, we also examine various real-world system designs to investigate the implementation costs associated with different PEFT approaches. This survey serves as a valuable resource for researchers aiming to understand both the PEFT algorithm and its system implementation, offering detailed ......",
+  "cat": "Hardware and Architecture",
+  "citation_count": 88
+ },
+ "2403.19887": {
+  "id": "2403.19887",
+  "title": "Jamba: A Hybrid Transformer-Mamba Language Model",
+  "url": "http://arxiv.org/abs/2403.19887",
+  "date": "2024-01-01",
+  "abs": "We present Jamba, a new base large language model based on a novel hybrid Transformer-Mamba mixture-of-experts (MoE) architecture. Specifically, Jamba interleaves blocks of Transformer and Mamba layers, enjoying the benefits of both model families. MoE is added in some of these layers to increase model capacity while keeping active parameter usage manageable. This flexible architecture allows resource- and objective-specific configurations. In the particular configuration we have implemented, we end up with a powerful model that fits in a single 80GB GPU. Built at large scale, Jamba provides high throughput and small memory footprint compared to vanilla Transformers, and at the same time state-of-the-art performance on standard language model benchmarks and long-context evaluations. Remarkably, the model presents strong results for up to 256K tokens context length. We study various architectural decisions, such as how to combine Transformer and Mamba layers, and how to mix experts, and show that some of them are crucial in large scale modeling. We also describe several interesting properties of these architectures which the training and evaluation of Jamba have revealed, and plan to release checkpoints from various ablation runs, to encourage further exploration of this novel architecture. We make the weights of our implementation of Jamba publicly available under a permissive license.",
+  "cat": "Language and Linguistics",
+  "citation_count": 40
+ },
+ "2404.01023": {
+  "id": "2404.01023",
+  "title": "Large Language Model Evaluation Via Multi AI Agents: Preliminary results",
+  "url": "http://arxiv.org/abs/2404.01023",
+  "date": "2024-01-01",
+  "abs": "As Large Language Models (LLMs) have become integral to both research and daily operations, rigorous evaluation is crucial. This assessment is important not only for individual tasks but also for understanding their societal impact and potential risks. Despite extensive efforts to examine LLMs from various perspectives, there is a noticeable lack of multi-agent AI models specifically designed to evaluate the performance of different LLMs. To address this gap, we introduce a novel multi-agent AI model that aims to assess and compare the performance of various LLMs. Our model consists of eight distinct AI agents, each responsible for retrieving code based on a common description from different advanced language models, including GPT-3.5, GPT-3.5 Turbo, GPT-4, GPT-4 Turbo, Google Bard, LLAMA, and Hugging Face. Our developed model utilizes the API of each language model to retrieve code for a given high-level description. Additionally, we developed a verification agent, tasked with the critical role of evaluating the code generated by its counterparts. We integrate the HumanEval benchmark into our verification agent to assess the generated code's performance, providing insights into their respective capabilities and efficiencies. Our initial results indicate that the GPT-3.5 Turbo model's performance is comparatively better than the other models. This preliminary analysis serves as a benchmark, comparing their performances side by side. Our future goal is to enhance the evaluation process by incorporating the Massively Multitask Benchmark for Python (MBPP) benchmark, which is expected to further refine our assessment. Additionally, we plan to share our developed model with twenty practitioners from various backgrounds to test our model and collect their feedback for further improvement.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2404.06411": {
+  "id": "2404.06411",
+  "title": "AgentQuest: A Modular Benchmark Framework to Measure Progress and Improve LLM Agents",
+  "url": "http://arxiv.org/abs/2404.06411",
+  "date": "2024-01-01",
+  "abs": "The advances made by Large Language Models (LLMs) have led to the pursuit of LLM agents that can solve intricate, multi-step reasoning tasks. As with any research pursuit, benchmarking and evaluation are key corner stones to efficient and reliable progress. However, existing benchmarks are often narrow and simply compute overall task success. To face these issues, we propose AgentQuest -- a framework where (i) both benchmarks and metrics are modular and easily extensible through well documented and easy-to-use APIs; (ii) we offer two new evaluation metrics that can reliably track LLM agent progress while solving a task. We exemplify the utility of the metrics on two use cases wherein we identify common failure points and refine the agent architecture to obtain a significant performance increase. Together with the research community, we hope to extend AgentQuest further and therefore we make it available under https://github.com/nec-research/agentquest.",
+  "cat": "Management Information Systems",
+  "citation_count": 2
+ },
+ "2404.09022": {
+  "id": "2404.09022",
+  "title": "Navigating the Landscape of Large Language Models: A Comprehensive Review and Analysis of Paradigms and Fine-Tuning Strategies",
+  "url": "http://arxiv.org/abs/2404.09022",
+  "date": "2024-01-01",
+  "abs": "With the surge of ChatGPT,the use of large models has significantly increased,rapidly rising to prominence across the industry and sweeping across the internet. This article is a comprehensive review of fine-tuning methods for large models. This paper investigates the latest technological advancements and the application of advanced methods in aspects such as task-adaptive fine-tuning,domain-adaptive fine-tuning,few-shot learning,knowledge distillation,multi-task learning,parameter-efficient fine-tuning,and dynamic fine-tuning.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 7
+ },
+ "2404.09135": {
+  "id": "2404.09135",
+  "title": "Unveiling LLM Evaluation Focused on Metrics: Challenges and Solutions",
+  "url": "http://arxiv.org/abs/2404.09135",
+  "date": "2024-01-01",
+  "abs": "Natural Language Processing (NLP) is witnessing a remarkable breakthrough driven by the success of Large Language Models (LLMs). LLMs have gained significant attention across academia and industry for their versatile applications in text generation, question answering, and text summarization. As the landscape of NLP evolves with an increasing number of domain-specific LLMs employing diverse techniques and trained on various corpus, evaluating performance of these models becomes paramount. To quantify the performance, it's crucial to have a comprehensive grasp of existing metrics. Among the evaluation, metrics which quantifying the performance of LLMs play a pivotal role. This paper offers a comprehensive exploration of LLM evaluation from a metrics perspective, providing insights into the selection and interpretation of metrics currently in use. Our main goal is to elucidate their mathematical formulations and statistical interpretations. We shed light on the application of these metrics using recent Biomedical LLMs. Additionally, we offer a succinct comparison of these metrics, aiding researchers in selecting appropriate metrics for diverse tasks. The overarching goal is to furnish researchers with a pragmatic guide for effective LLM evaluation and metric selection, thereby advancing the understanding and application of these large language models.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 19
+ },
+ "2405.03207": {
+  "id": "2405.03207",
+  "title": "A Philosophical Introduction to Language Models - Part II: The Way Forward",
+  "url": "http://arxiv.org/abs/2405.03207",
+  "date": "2024-01-01",
+  "abs": "In this paper, the second of two companion pieces, we explore novel philosophical questions raised by recent progress in large language models (LLMs) that go beyond the classical debates covered in the first part. We focus particularly on issues related to interpretability, examining evidence from causal intervention methods about the nature of LLMs' internal representations and computations. We also discuss the implications of multimodal and modular extensions of LLMs, recent debates about whether such systems may meet minimal criteria for consciousness, and concerns about secrecy and reproducibility in LLM research. Finally, we discuss whether LLM-like systems may be relevant to modeling aspects of human cognition, if their architectural characteristics and learning scenario are adequately constrained.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 7
+ },
+ "2405.11357": {
+  "id": "2405.11357",
+  "title": "Large Language Models Lack Understanding of Character Composition of Words",
+  "url": "http://arxiv.org/abs/2405.11357",
+  "date": "2024-01-01",
+  "abs": "Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs' successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simple tasks that can be handled by humans with perfection. We analyze their behaviors with comparison to token level performances, and discuss the potential directions for future research.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2405.19616": {
+  "id": "2405.19616",
+  "title": "Easy Problems That LLMs Get Wrong",
+  "url": "http://arxiv.org/abs/2405.19616",
+  "date": "2024-01-01",
+  "abs": "We introduce a comprehensive Linguistic Benchmark designed to evaluate the limitations of Large Language Models (LLMs) in domains such as logical reasoning, spatial intelligence, and linguistic understanding, among others. Through a series of straightforward questions, it uncovers the significant limitations of well-regarded models to perform tasks that humans manage with ease. It also highlights the potential of prompt engineering to mitigate some errors and underscores the necessity for better training methodologies. Our findings stress the importance of grounding LLMs with human reasoning and common sense, emphasising the need for human-in-the-loop for enterprise applications. We hope this work paves the way for future research to enhance the usefulness and reliability of new models.",
+  "cat": "Information Systems",
+  "citation_count": 2
+ },
+ "2406.04151": {
+  "id": "2406.04151",
+  "title": "AgentGym: Evolving Large Language Model-based Agents across Diverse Environments",
+  "url": "http://arxiv.org/abs/2406.04151",
+  "date": "2024-01-01",
+  "abs": "Building generalist agents that can handle diverse tasks and evolve themselves across different environments is a long-term goal in the AI community. Large language models (LLMs) are considered a promising foundation to build such agents due to their generalized capabilities. Current approaches either have LLM-based agents imitate expert-provided trajectories step-by-step, requiring human supervision, which is hard to scale and limits environmental exploration; or they let agents explore and learn in isolated environments, resulting in specialist agents with limited generalization. In this paper, we take the first step towards building generally-capable LLM-based agents with self-evolution ability. We identify a trinity of ingredients: 1) diverse environments for agent exploration and learning, 2) a trajectory set to equip agents with basic capabilities and prior knowledge, and 3) an effective and scalable evolution method. We propose AgentGym, a new framework featuring a variety of environments and tasks for broad, real-time, uni-format, and concurrent agent exploration. AgentGym also includes a database with expanded instructions, a benchmark suite, and high-quality trajectories across environments. Next, we propose a novel method, AgentEvol, to investigate the potential of agent self-evolution beyond previously seen data across tasks and environments. Experimental results show that the evolved agents can achieve results comparable to SOTA models. We release the AgentGym suite, including the platform, dataset, benchmark, checkpoints, and algorithm implementations. The AgentGym suite is available on https://github.com/WooooDyy/AgentGym.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2406.04692": {
+  "id": "2406.04692",
+  "title": "Mixture-of-Agents Enhances Large Language Model Capabilities",
+  "url": "http://arxiv.org/abs/2406.04692",
+  "date": "2024-01-01",
+  "abs": "Recent advances in large language models (LLMs) demonstrate substantial capabilities in natural language understanding and generation tasks. With the growing number of LLMs, how to harness the collective expertise of multiple LLMs is an exciting open direction. Toward this goal, we propose a new approach that leverages the collective strengths of multiple LLMs through a Mixture-of-Agents (MoA) methodology. In our approach, we construct a layered MoA architecture wherein each layer comprises multiple LLM agents. Each agent takes all the outputs from agents in the previous layer as auxiliary information in generating its response. MoA models achieves state-of-art performance on AlpacaEval 2.0, MT-Bench and FLASK, surpassing GPT-4 Omni. For example, our MoA using only open-source LLMs is the leader of AlpacaEval 2.0 by a substantial gap, achieving a score of 65.1% compared to 57.5% by GPT-4 Omni.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 22
+ },
+ "2407.07086": {
+  "id": "2407.07086",
+  "title": "Hypothetical Minds: Scaffolding Theory of Mind for Multi-Agent Tasks with Large Language Models",
+  "url": "http://arxiv.org/abs/2407.07086",
+  "date": "2024-01-01",
+  "abs": "Multi-agent reinforcement learning (MARL) methods struggle with the non-stationarity of multi-agent systems and fail to adaptively learn online when tested with novel agents. Here, we leverage large language models (LLMs) to create an autonomous agent that can handle these challenges. Our agent, Hypothetical Minds, consists of a cognitively-inspired architecture, featuring modular components for perception, memory, and hierarchical planning over two levels of abstraction. We introduce the Theory of Mind module that scaffolds the high-level planning process by generating hypotheses about other agents' strategies in natural language. It then evaluates and iteratively refines these hypotheses by reinforcing hypotheses that make correct predictions about the other agents' behavior. Hypothetical Minds significantly improves performance over previous LLM-agent and RL baselines on a range of competitive, mixed motive, and collaborative domains in the Melting Pot benchmark, including both dyadic and population-based environments. Additionally, comparisons against LLM-agent baselines and ablations reveal the importance of hypothesis evaluation and refinement for succeeding on complex scenarios.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2408.15769": {
+  "id": "2408.15769",
+  "title": "A Survey on Evaluation of Multimodal Large Language Models",
+  "url": "http://arxiv.org/abs/2408.15769",
+  "date": "2024-01-01",
+  "abs": "Multimodal Large Language Models (MLLMs) mimic human perception and reasoning system by integrating powerful Large Language Models (LLMs) with various modality encoders (e.g., vision, audio), positioning LLMs as the \"brain\" and various modality encoders as sensory organs. This framework endows MLLMs with human-like capabilities, and suggests a potential pathway towards achieving artificial general intelligence (AGI). With the emergence of all-round MLLMs like GPT-4V and Gemini, a multitude of evaluation methods have been developed to assess their capabilities across different dimensions. This paper presents a systematic and comprehensive review of MLLM evaluation methods, covering the following key aspects: (1) the background of MLLMs and their evaluation; (2) \"what to evaluate\" that reviews and categorizes existing MLLM evaluation tasks based on the capabilities assessed, including general multimodal recognition, perception, reasoning and trustworthiness, and domain-specific applications such as socioeconomic, natural sciences and engineering, medical usage, AI agent, remote sensing, video and audio processing, 3D point cloud analysis, and others; (3) \"where to evaluate\" that summarizes MLLM evaluation benchmarks into general and specific benchmarks; (4) \"how to evaluate\" that reviews and illustrates MLLM evaluation steps and metrics; Our overarching goal is to provide valuable insights for researchers in the field of MLLM evaluation, thereby facilitating the development of more capable and reliable MLLMs. We emphasize that evaluation should be regarded as a critical discipline, essential for advancing the field of MLLMs.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 3
+ },
+ "2409.06857": {
+  "id": "2409.06857",
+  "title": "What is the Role of Small Models in the LLM Era: A Survey",
+  "url": "http://arxiv.org/abs/2409.06857",
+  "date": "2024-01-01",
+  "abs": "Large Language Models (LLMs) have made significant progress in advancing artificial general intelligence (AGI), leading to the development of increasingly large models such as GPT-4 and LLaMA-405B. However, scaling up model sizes results in exponentially higher computational costs and energy consumption, making these models impractical for academic researchers and businesses with limited resources. At the same time, Small Models (SMs) are frequently used in practical settings, although their significance is currently underestimated. This raises important questions about the role of small models in the era of LLMs, a topic that has received limited attention in prior research. In this work, we systematically examine the relationship between LLMs and SMs from two key perspectives: Collaboration and Competition. We hope this survey provides valuable insights for practitioners, fostering a deeper understanding of the contribution of small models and promoting more efficient use of computational resources. The code is available at https://github.com/tigerchen52/role_of_small_models",
+  "cat": "Information Systems",
+  "citation_count": 5
+ },
+ "2410.02644": {
+  "id": "2410.02644",
+  "title": "Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents",
+  "url": "http://arxiv.org/abs/2410.02644",
+  "date": "2024-01-01",
+  "abs": "Although LLM-based agents, powered by Large Language Models (LLMs), can use external tools and memory mechanisms to solve complex real-world tasks, they may also introduce critical security vulnerabilities. However, the existing literature does not comprehensively evaluate attacks and defenses against LLM-based agents. To address this, we introduce Agent Security Bench (ASB), a comprehensive framework designed to formalize, benchmark, and evaluate the attacks and defenses of LLM-based agents, including 10 scenarios (e.g., e-commerce, autonomous driving, finance), 10 agents targeting the scenarios, over 400 tools, 27 different types of attack/defense methods, and 7 evaluation metrics. Based on ASB, we benchmark 10 prompt injection attacks, a memory poisoning attack, a novel Plan-of-Thought backdoor attack, 4 mixed attacks, and 11 corresponding defenses across 13 LLM backbones. Our benchmark results reveal critical vulnerabilities in different stages of agent operation, including system prompt, user prompt handling, tool usage, and memory retrieval, with the highest average attack success rate of 84.30\\%, but limited effectiveness shown in current defenses, unveiling important works to be done in terms of agent security for the community. We also introduce a new metric to evaluate the agents' capability to balance utility and security. Our code can be found at https://github.com/agiresearch/ASB.",
+  "cat": "Information Systems",
+  "citation_count": 4
+ },
+ "2410.06153": {
+  "id": "2410.06153",
+  "title": "AgentSquare: Automatic LLM Agent Search in Modular Design Space",
+  "url": "http://arxiv.org/abs/2410.06153",
+  "date": "2024-01-01",
+  "abs": "Recent advancements in Large Language Models (LLMs) have led to a rapid growth of agentic systems capable of handling a wide range of complex tasks. However, current research largely relies on manual, task-specific design, limiting their adaptability to novel tasks. In this paper, we introduce a new research problem: Modularized LLM Agent Search (MoLAS). We propose a modular design space that abstracts existing LLM agent designs into four fundamental modules with uniform IO interface: Planning, Reasoning, Tool Use, and Memory. Building on this design space, we present a novel LLM agent search framework called AgentSquare, which introduces two core mechanisms, i.e., module evolution and recombination, to efficiently search for optimized LLM agents. To further accelerate the process, we design a performance predictor that uses in-context surrogate models to skip unpromising agent designs. Extensive experiments across six benchmarks, covering the diverse scenarios of web, embodied, tool use and game applications, show that AgentSquare substantially outperforms hand-crafted agents, achieving an average performance gain of 17.2% against best-known human designs. Moreover, AgentSquare can generate interpretable design insights, enabling a deeper understanding of agentic architecture and its impact on task performance. We believe that the modular design space and AgentSquare search framework offer a platform for fully exploiting the potential of prior successful designs and consolidating the collective efforts of research community. Code repo is available at https://github.com/tsinghua-fib-lab/AgentSquare.",
+  "cat": "Industrial and Manufacturing Engineering",
+  "citation_count": 3
+ },
+ "2410.13825": {
+  "id": "2410.13825",
+  "title": "AgentOccam: A Simple Yet Strong Baseline for LLM-Based Web Agents",
+  "url": "http://arxiv.org/abs/2410.13825",
+  "date": "2024-01-01",
+  "abs": "Autonomy via agents using large language models (LLMs) for personalized, standardized tasks boosts human efficiency. Automating web tasks (like booking hotels within a budget) is increasingly sought after. Fulfilling practical needs, the web agent also serves as an important proof-of-concept example for various agent grounding scenarios, with its success promising advancements in many future applications. Prior research often handcrafts web agent strategies (e.g., prompting templates, multi-agent systems, search methods, etc.) and the corresponding in-context examples, which may not generalize well across all real-world scenarios. On the other hand, there has been limited study on the misalignment between a web agent's observation/action representation and the pre-training data of the LLM it's based on. This discrepancy is especially notable when LLMs are primarily trained for language completion rather than tasks involving embodied navigation actions and symbolic web elements. Our study enhances an LLM-based web agent by simply refining its observation and action space to better align with the LLM's capabilities. This approach enables our base agent to significantly outperform previous methods on a wide variety of web tasks. Specifically, on WebArena, a benchmark featuring general-purpose web interaction tasks, our agent AgentOccam surpasses the previous state-of-the-art and concurrent work by 9.8 (+29.4%) and 5.9 (+15.8%) absolute points respectively, and boosts the success rate by 26.6 points (+161%) over similar plain web agents with its observation and action space alignment. We achieve this without using in-context examples, new agent roles, online feedback or search strategies. AgentOccam's simple design highlights LLMs' impressive zero-shot performance on web tasks, and underlines the critical role of carefully tuning observation and action spaces for LLM-based agents.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2411.04890": {
+  "id": "2411.04890",
+  "title": "GUI Agents with Foundation Models: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/2411.04890",
+  "date": "2024-01-01",
+  "abs": "Recent advances in foundation models, particularly Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs), have facilitated the development of intelligent agents capable of performing complex tasks. By leveraging the ability of (M)LLMs to process and interpret Graphical User Interfaces (GUIs), these agents can autonomously execute user instructions, simulating human-like interactions such as clicking and typing. This survey consolidates recent research on (M)LLM-based GUI agents, highlighting key innovations in data resources, frameworks, and applications. We begin by reviewing representative datasets and benchmarks, followed by an overview of a generalized, unified framework that encapsulates the essential components of prior studies, supported by a detailed taxonomy. Additionally, we explore relevant commercial applications. Drawing insights from existing work, we identify key challenges and propose future research directions. We hope this survey will inspire further advancements in the field of (M)LLM-based GUI agents.",
+  "cat": "Computer Vision and Pattern Recognition",
+  "citation_count": 1
+ },
+ "2412.14470": {
+  "id": "2412.14470",
+  "title": "Agent-SafetyBench: Evaluating the Safety of LLM Agents",
+  "url": "http://arxiv.org/abs/2412.14470",
+  "date": "2024-01-01",
+  "abs": "As large language models (LLMs) are increasingly deployed as agents, their integration into interactive environments and tool use introduce new safety challenges beyond those associated with the models themselves. However, the absence of comprehensive benchmarks for evaluating agent safety presents a significant barrier to effective assessment and further improvement. In this paper, we introduce Agent-SafetyBench, a comprehensive benchmark designed to evaluate the safety of LLM agents. Agent-SafetyBench encompasses 349 interaction environments and 2,000 test cases, evaluating 8 categories of safety risks and covering 10 common failure modes frequently encountered in unsafe interactions. Our evaluation of 16 popular LLM agents reveals a concerning result: none of the agents achieves a safety score above 60%. This highlights significant safety challenges in LLM agents and underscores the considerable need for improvement. Through failure mode and helpfulness analysis, we summarize two fundamental safety defects in current LLM agents: lack of robustness and lack of risk awareness. Furthermore, our findings suggest that reliance on defense prompts alone may be insufficient to address these safety issues, emphasizing the need for more advanced and robust strategies. To drive progress in this area, Agent-SafetyBench has been released at https://github.com/thu-coai/Agent-SafetyBench/ to facilitate further research in agent safety evaluation and improvement.",
+  "cat": "Safety, Risk, Reliability and Quality",
+  "citation_count": 2
+ },
+ "2501.05707": {
+  "id": "2501.05707",
+  "title": "Multiagent Finetuning: Self Improvement with Diverse Reasoning Chains",
+  "url": "http://arxiv.org/abs/2501.05707",
+  "date": "2025-01-01",
+  "abs": "Large language models (LLMs) have achieved remarkable performance in recent years but are fundamentally limited by the underlying training data. To improve models beyond the training data, recent works have explored how LLMs can be used to generate synthetic data for autonomous self-improvement. However, successive steps of self-improvement can reach a point of diminishing returns. In this work, we propose a complementary approach towards self-improvement where finetuning is applied to a multiagent society of language models. A group of language models, all starting from the same base model, are independently specialized by updating each one using data generated through multiagent interactions among the models. By training each model on independent sets of data, we illustrate how this approach enables specialization across models and diversification over the set of models. As a result, our overall system is able to preserve diverse reasoning chains and autonomously improve over many more rounds of fine-tuning than single-agent self-improvement methods. We quantitatively illustrate the efficacy of the approach across a wide suite of reasoning tasks.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2501.11354": {
+  "id": "2501.11354",
+  "title": "Towards Advancing Code Generation with Large Language Models: A Research Roadmap",
+  "url": "http://arxiv.org/abs/2501.11354",
+  "date": "2025-01-01",
+  "abs": "Recently, we have witnessed the rapid development of large language models, which have demonstrated excellent capabilities in the downstream task of code generation. However, despite their potential, LLM-based code generation still faces numerous technical and evaluation challenges, particularly when embedded in real-world development. In this paper, we present our vision for current research directions, and provide an in-depth analysis of existing studies on this task. We propose a six-layer vision framework that categorizes code generation process into distinct phases, namely Input Phase, Orchestration Phase, Development Phase, and Validation Phase. Additionally, we outline our vision workflow, which reflects on the currently prevalent frameworks. We systematically analyse the challenges faced by large language models, including those LLM-based agent frameworks, in code generation tasks. With these, we offer various perspectives and actionable recommendations in this area. Our aim is to provide guidelines for improving the reliability, robustness and usability of LLM-based code generation systems. Ultimately, this work seeks to address persistent challenges and to provide practical suggestions for a more pragmatic LLM-based solution for future code generation endeavors.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 2
+ },
+ "2502.10708": {
+  "id": "2502.10708",
+  "title": "Injecting Domain-Specific Knowledge into Large Language Models: A Comprehensive Survey",
+  "url": "http://arxiv.org/abs/2502.10708",
+  "date": "2025-01-01",
+  "abs": "Large Language Models (LLMs) have demonstrated remarkable success in various tasks such as natural language understanding, text summarization, and machine translation. However, their general-purpose nature often limits their effectiveness in domain-specific applications that require specialized knowledge, such as healthcare, chemistry, or legal analysis. To address this, researchers have explored diverse methods to enhance LLMs by integrating domain-specific knowledge. In this survey, we provide a comprehensive overview of these methods, which we categorize into four key approaches: dynamic knowledge injection, static knowledge embedding, modular adapters, and prompt optimization. Each approach offers unique mechanisms to equip LLMs with domain expertise, balancing trade-offs between flexibility, scalability, and efficiency. We discuss how these methods enable LLMs to tackle specialized tasks, compare their advantages and disadvantages, evaluate domain-specific LLMs against general LLMs, and highlight the challenges and opportunities in this emerging field. For those interested in delving deeper into this area, we also summarize the commonly used datasets and benchmarks. To keep researchers updated on the latest studies, we maintain an open-source at: https://github.com/abilliyb/Knowledge_Injection_Survey_Papers, dedicated to documenting research in the field of specialized LLM.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 8
+ },
+ "10.1109/mwc.005.2400019": {
+  "id": "10.1109/mwc.005.2400019",
+  "title": "When Large Language Model Agents Meet 6G Networks: Perception, Grounding, and Alignment",
+  "url": "https://doi.org/10.1109/mwc.005.2400019",
+  "date": "2024-01-01",
+  "abs": "AI agents based on multimodal large language models (LLMs) are expected to revolutionize human-computer interaction, and offer more personalized assistant services across various domains like healthcare, education, manufacturing, and entertainment. Deploying LLM agents in 6G networks enables users to access previously expensive AI assistant services via mobile devices democratically, thereby reducing interaction latency and better preserving user privacy. Nevertheless, the limited capacity of mobile devices constrains the effectiveness of deploying and executing local LLMs, which necessitates offloading complex tasks to global LLMs running on edge servers during long-horizon interactions. In this article, we propose a split learning system for LLM agents in 6G networks, leveraging the collaboration between mobile devices and edge servers, where multiple LLMs with different roles are distributed across mobile devices and edge servers to perform user-agent interactive tasks collaboratively. In the proposed system, LLM agents are split into perception, grounding, and alignment modules, facilitating inter-module communications to meet extended user requirements on 6G network functions, including integrated sensing and communication, digital twins, and task-oriented communications. Furthermore, we introduce a novel model caching algorithm for LLMs within the proposed system to improve model utilization in context, thus reducing network costs of the collaborative mobile and edge LLM agents.",
+  "cat": "Control and Systems Engineering",
+  "citation_count": 52
+ },
+ "10.1109/tnnls.2024.3497992": {
+  "id": "10.1109/tnnls.2024.3497992",
+  "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods",
+  "url": "https://doi.org/10.1109/tnnls.2024.3497992",
+  "date": "2024-01-01",
+  "abs": "With extensive pretrained knowledge and high-level general capabilities, large language models (LLMs) emerge as a promising avenue to augment reinforcement learning (RL) in aspects, such as multitask learning, sample efficiency, and high-level task planning. In this survey, we provide a comprehensive review of the existing literature in LLM-enhanced RL and summarize its characteristics compared with conventional RL methods, aiming to clarify the research scope and directions for future studies. Utilizing the classical agent-environment interaction paradigm, we propose a structured taxonomy to systematically categorize LLMs' functionalities in RL, including four roles: information processor, reward designer, decision-maker, and generator. For each role, we summarize the methodologies, analyze the specific RL challenges that are mitigated and provide insights into future directions. Finally, the comparative analysis of each role, potential applications, prospective opportunities, and challenges of the LLM-enhanced RL are discussed. By proposing this taxonomy, we aim to provide a framework for researchers to effectively leverage LLMs in the RL field, potentially accelerating RL applications in complex applications, such as robotics, autonomous driving, and energy systems.",
+  "cat": "Control and Systems Engineering",
+  "citation_count": 66
+ },
+ "2303.18223": {
+  "id": "2303.18223",
+  "title": "A Survey of Large Language Models",
+  "url": "http://arxiv.org/abs/2303.18223",
+  "date": "2026-01-01",
+  "abs": "Ever since the Turing Test was proposed in the 1950s, humans have explored the mastering of language intelligence by machine. Language is essentially a complex, intricate system of human expressions governed by grammatical rules. It poses a significant challenge to develop capable artificial intelligence~(AI) algorithms for comprehending and grasping a language. As a major approach, language modeling has been widely studied for language understanding and generation in the past two decades, evolving from statistical language models to neural language models. Recently, pre-trained language models~(PLMs) have been proposed by pre-training Transformer models over large-scale corpora, showing strong capabilities in solving various natural language processing~(NLP) tasks. Since researchers have found that model scaling can lead to performance improvement, they further study the scaling effect by increasing the model size to an even larger size. Interestingly, when the parameter scale exceeds a certain level, these enlarged language models not only achieve a significant performance improvement but also show some special abilities ( in-context learning) that are not present in small-scale language models ( BERT). To discriminate the difference in parameter scale, the research community has coined the term large language models~(LLM) for the PLMs of significant size ( containing tens or hundreds of billions of parameters) . Recently, the research on LLMs has been largely advanced by both academia and industry, and a remarkable progress is the launch of ChatGPT (a powerful AI chatbot developed based on LLMs), which has attracted widespread attention from society. The technical evolution of LLMs has been making an important impact on the entire AI community, which would revolutionize the way how we develop and use AI algorithms. Considering this rapid technical progress, in this survey, we review the recent advances of LLMs by introducing the background, key findings, and mainstream techniques. In particular, we focus on four major aspects of LLMs, namely pre-training, adaptation tuning, utilization, and capacity evaluation. Besides, we also summarize the available resources for developing LLMs and discuss the remaining issues for future directions. This survey provides an up-to-date review of the literature on LLMs, which can be a useful resource for both researchers and engineers.",
+  "cat": "Artificial Intelligence",
+  "citation_count": 0
+ },
+ "2408.06361": {
+  "id": "2408.06361",
+  "title": "Large Language Model Agent in Financial Trading: A Survey",
+  "url": "http://arxiv.org/abs/2408.06361",
+  "date": "2024-01-01",
+  "abs": "Trading is a highly competitive task that requires a combination of strategy, knowledge, and psychological fortitude. With the recent success of large language models(LLMs), it is appealing to apply the emerging intelligence of LLM agents in this competitive arena and understanding if they can outperform professional traders. In this survey, we provide a comprehensive review of the current research on using LLMs as agents in financial trading. We summarize the common architecture used in the agent, the data inputs, and the performance of LLM trading agents in backtesting as well as the challenges presented in these research. This survey aims to provide insights into the current state of LLM-based financial trading agents and outline future research directions in this field.",
+  "cat": "Management Science and Operations Research",
+  "citation_count": 8
+ }
+}

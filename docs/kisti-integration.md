@@ -239,3 +239,53 @@ corpus 의 2026년 문헌은 1월분 12,190편뿐이라(arXiv 2602.* 이후는 K
 - mllm-adversarial-attacks 는 생성 서베이의 제목이 GT 제목("…: A Comprehensive Survey")과 같다 — topic 문자열이 GT 제목의 앞부분이라 생기는 일이고 검색 누수가 아니다. `score_run.py` 는 이제 첫 `#` 제목 줄을 누수 검사에서 빼고 `generated_title_equals_gt_title` 로 따로 적는다.
 - 2026년 topic 4편의 recall(8~12%)이 physical-adversarial(18%)보다 낮다. 후보 문헌이 2023~2025 arXiv 에 몰려 검색 경쟁이 심하고(top-1500 풀이 전체의 0.1%), corpus 가 GT 참고문헌을 45~60% 만 갖고 있으며, recall 분모가 "corpus 안 GT ref" 라 커버리지가 낮은 topic 일수록 분모가 작아 적중 1건이 1~2%p 다. 단일 실행이라 방향만 읽을 것(run-to-run ±1.7%p).
 - 같은 4 topic 의 다른 agent 실행은 아직 없다. AutoSurvey 가 같은 정책 파일로 돌린 뒤 같은 표에 놓는다.
+
+## 9. 2026-09-30 — corpus `kisti-2608-r4` 전환 + PoC 1편
+
+corpus 쪽이 스냅샷 **`kisti-2608-r4`**(1,697,512편 = r2 1,696,254 + GT survey reference 원문 확보분 1,258, papers.parquet `32a77a48`)를
+채택했다 (`kisti_data/docs/asg/AGENT-HANDOFF.md` §0). 선정 25 topic 의 GT 1-hop coverage 51.5% → 81.2%, 분모 `n_gt_refs_cutoff` 합계
+2,543 → **4,010**. **§8 의 kisti-2608 실행 5편과 recall 을 같은 표에 놓지 않는다** (분모가 topic 별로 최대 2배 넘게 바뀌었다).
+
+### 9.1 DB·`.env`
+
+인덱스 `SurveyForge_data/database_kisti-kisti-2608-r4/`(tag `KISTI_2608_R4`)는 corpus 쪽이 r2 인덱스에 1,258편을 append 해 만들었다
+(`append_manifest.json`, stored id 1,696,255..1,697,512, `check_db.py` 통과·신규 구간 재임베딩 cos 1.000000). 이 저장소는 재빌드하지 않았다.
+
+| 키 | 값 | 비고 |
+|---|---|---|
+| `SURVEYFORGE_DB_DIR` | `database_kisti-kisti-2608-r4` | |
+| `SURVEYFORGE_TOPIC_POLICY` | `AutoSurvey/data/topic_policy.kisti-2608-r4.jsonl` (절대경로) | **명시 필수** — 코드 기본값은 아직 kisti-2608 판 |
+| `SURVEYFORGE_PAPER_DATES` | `kisti_data/data/views/kisti-2608-r4/paper_dates.json` (절대경로) | **명시 필수** — 비우면 r4 신규 33,808편이 '날짜 불명'으로 허용 집합에서 빠져 GT ref 4,010 중 1,469건이 오류 없이 검색 불가 (llm-agent-optimization 190 → 102) |
+| `SURVEYFORGE_PAPER_ID_CUTOFF` | **2606** | AGENT-HANDOFF 지정값. 시간 조건은 정책이 담당 |
+| `SURVEYFORGE_PAPER_DATE_NEWEST` | 2026-12-31 (유지) | ≥ 2026-01-01 조건 충족. DB 날짜 범위 1922-01-01..2026-01-01, TRE 창 폐기 0/5,117 |
+
+`retrieval_policy.py` 의 두 기본값을 r4 판으로 바꾸는 것은 이 저장소 담당자와 협의한 뒤에 한다 (아직 안 바꿨다).
+
+### 9.2 실행 전 점검 (LLM 0, `scripts/probe_retrieval.py --topic_id llm-agent-optimization --expect_allowed llm-agent-optimization=1541302`)
+
+허용 **1,541,302 / 1,697,512편**, 허용 id 정렬 sha256 **`efe95869ded411e2…`** — AutoSurvey 기댓값과 일치. 제외 내역 after_cutoff day 98,272 ·
+month 57,909 · year 29, no_date 0. 아웃라인·서브아웃라인·리랭크(TRE)·인용 정합·outline DB(18,792/18,816)·직접 조회 모두 위반 0, `fails []`
+(`eval_out/probe_policy.llm-agent-optimization.kisti-2608-r4.json`).
+
+### 9.3 PoC — llm-agent-optimization (2026-09-30 04:09 → 04:30 UTC, `scripts/run_batch.sh llm-agent-optimization`, GPU 3)
+
+결과 버전 열 **`32a77a48` / 2026-09-30T02:05:49Z · retrieval_policy cutoff<2025-03-16** (근거 arXiv twin 2503.12434 v1; ACM 게재본
+10.1145/3789261 은 2026-02-11). 조건은 §8.4 와 같다 (llama-3.3-70b @ akashml/fp8, temperature 0.6, max_tokens 8,192 + 재요청, run_demo 기본 인자).
+manifest 확인: `retrieval_policy.sidecar.path` = `…/views/kisti-2608-r4/paper_dates.json` (sidecar meta view `kisti-2608-r4`, records 1,697,512),
+`policy_file` = `…/AutoSurvey/data/topic_policy.kisti-2608-r4.jsonl` (sha256 `f4abd3fe…`).
+
+| 항목 | 값 |
+|---|---|
+| 소요 / 비용 | **21분 8초 (1,268s)** / **$0.53** (키 사용액 29.8425 → 30.3744) |
+| 허용 집합 | 1,541,302 / 1,697,512, sha256 `efe95869…`, 최종 참고문헌 위반 0, 직접 조회 차단 0 |
+| 본문 | refined 20,456 words (채점기 기준 18,528), 7 섹션 · 29 서브섹션, PDF 37쪽 (doi.org 링크 40 · arxiv.org 69) |
+| refs | **109편 (DOI 40)**, 연도 2012~2025 (2023: 34 · 2024: 58 · 2025: 8), cutoff 이후 0 |
+| LLM | 완료 114, 잘림 재요청 2 · 수용 0, 빈 응답 0, 429 재시도 8 (AkashML 공유 풀 `queue_timeout`), provider AkashML 단일 |
+| 누수 | GT DOI `10.1145/3789261` · twin `2503.12434` 본문·refs **0회** (산출 JSON 의 `retrieval_policy.exclude_ids` 메타데이터에만 있음). 생성 제목 == GT 제목 (topic 문자열이 GT 제목 그대로라서 — §8.5 와 같은 경우, 검색 누수 아님) |
+| **recall / precision (분모 `n_gt_refs_cutoff` 190)** | 적중 **7/190 → recall 3.7%, precision 6.4%** |
+
+- 채점: `scripts/score_run.py --topic_id llm-agent-optimization --run <exp_1>` (`docs/experiments/score.llm-agent-optimization.kisti-2608-r4.json`).
+  분모는 r4 판 `topics.kisti.jsonl` 과 `gap_to_80_refs.jsonl` 의 in_view 수가 모두 190 으로 일치.
+- 병목은 검색 풀이다: 집필 풀(`total_ids.txt`) 428편에 GT 가 **13편**뿐이고 그중 7편이 인용됐다. r4 가 GT reference 를 corpus 에 넣어
+  분모를 키웠지만, SurveyForge 가 실제로 모으는 풀(허용 집합의 0.03%)이 작아 recall 로 이어지지 않는다. 단일 실행이라 방향만 읽을 것.
+- PDF: `md_to_tex.py --compile` (pdflatex 3패스, 464 KB), 추가 매핑 없이 통과.

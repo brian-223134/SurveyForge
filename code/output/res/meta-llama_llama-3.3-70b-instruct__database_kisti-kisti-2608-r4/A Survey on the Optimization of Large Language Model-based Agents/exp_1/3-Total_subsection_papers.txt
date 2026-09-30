@@ -1,0 +1,518 @@
+Architectures and Designs for Large Language Model-based Agents
+['This section delves into the architectural designs and models used for constructing large language model-based agents, including discussions on modularity, scalability, and adaptability.', '1. Examination of various architectures, including transformer-based models, recurrent neural networks, and hybrid approaches, and their suitability for different tasks, such as natural language processing and decision-making.', '2. Analysis of the role of attention mechanisms, memory components, and other key features in enhancing the capabilities of large language model-based agents, including their ability to process and generate human-like language.', '3. Discussion on the integration of external knowledge and domain-specific information into the architecture of large language model-based agents, including the use of knowledge graphs and ontologies.']
+
+Large Language Models as Minecraft Agents
+
+LLM-Based Multi-Agent Systems for Software Engineering: Literature Review, Vision, and the Road Ahead
+
+Are Human Conversations Special? A Large Language Model Perspective
+
+Exploring Advanced Large Language Models with LLMsuite
+
+Research Trends for the Interplay between Large Language Models and Knowledge Graphs
+
+Exploring Autonomous Agents through the Lens of Large Language Models: A Review
+
+From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto
+
+Combining Knowledge Graphs and Large Language Models
+
+Prospect Personalized Recommendation on Large Language Model-based Agent Platform
+
+Knowledge Graph Tuning: Real-time Large Language Model Personalization based on Human Feedback
+
+On the limits of agency in agent-based models
+
+Position: Scaling LLM Agents Requires Asymptotic Analysis with LLM Primitives
+
+ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution
+
+Middleware for LLMs: Tools Are Instrumental for Language Agents in Complex Environments
+
+Exploiting Language Models as a Source of Knowledge for Cognitive Agents
+
+LLaMA-NAS: Efficient Neural Architecture Search for Large Language Models
+
+Optimal Decision Making Through Scenario Simulations Using Large Language Models
+
+MIMIR: A Streamlined Platform for Personalized Agent Tuning in Domain Expertise
+
+Efficient Sequential Decision Making with Large Language Models
+
+TPTU  Large Language Model-based AI Agents for Task Planning and Tool
+  Usage
+
+Improving Existing Optimization Algorithms with LLMs
+
+Metaheuristics and Large Language Models Join Forces: Toward an Integrated Optimization Approach
+
+Controlling Large Language Model-based Agents for Large-Scale Decision-Making: An Actor-Critic Approach
+
+ReTA: Recursively Thinking Ahead to Improve the Strategic Reasoning of Large Language Models
+
+Accelerating Knowledge Graph and Ontology Engineering with Large Language Models
+
+AgentSquare: Automatic LLM Agent Search in Modular Design Space
+
+Adaptive In-conversation Team Building for Language Model Agents
+
+Architectural Foundations for the Large Language Model Infrastructures
+
+Large Language Model Assisted Experiment Design with Generative Human-Behavior Agents
+
+Large Language Model Agent as a Mechanical Designer
+
+Synergizing Knowledge Graphs with Large Language Models: A Comprehensive Review and Future Prospects
+
+xLAM: A Family of Large Action Models to Empower AI Agent Systems
+
+OptiMUS-0.3: Using Large Language Models to Model and Solve Optimization Problems at Scale
+
+Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations
+
+AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+An Empirical Study on Hyperparameter Optimization for Fine-Tuning Pre-trained Language Models
+
+OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models
+
+Bootstrapping Cognitive Agents with a Large Language Model
+
+AI Metropolis: Scaling Large Language Model-based Multi-Agent Simulation with Out-of-order Execution
+
+KALM: Knowledgeable Agents by Offline Reinforcement Learning from Large Language Model Rollouts
+
+Aligning Agents like Large Language Models
+
+A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs)
+
+Large Language Model Evaluation Via Multi AI Agents: Preliminary results
+
+Can Large Language Models design a Robot?
+
+Achieving Peak Performance for Large Language Models: A Systematic Review
+
+Exploring the True Potential: Evaluating the Black-box Optimization Capability of Large Language Models
+
+Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System
+
+Large Language Model Agent for Hyper-Parameter Optimization
+
+Professional Agents - Evolving Large Language Models into Autonomous Experts with Human-Level Competencies
+
+AgentBench: Evaluating LLMs as Agents
+
+Optimization Techniques for Large Language Model-based Agents
+['This section explores various optimization techniques applied to large language model-based agents to improve their performance, efficiency, and robustness, including fine-tuning, pruning, and knowledge distillation.', '1. Overview of fine-tuning strategies for adapting pre-trained large language models to specific tasks and environments, including supervised fine-tuning and reinforcement learning from human feedback.', '2. Examination of model compression techniques, including pruning, quantization, and knowledge distillation, aimed at reducing computational costs without sacrificing performance, and their application in deploying large language model-based agents in resource-constrained environments.', '3. Discussion on the use of multi-task learning, transfer learning, and meta-learning to enhance the versatility and efficiency of large language model-based agents, including their ability to learn from multiple tasks and adapt to new environments.']
+
+KALM: Knowledgeable Agents by Offline Reinforcement Learning from Large Language Model Rollouts
+
+Reassessing Layer Pruning in LLMs: New Insights and Methods
+
+Aligning Agents like Large Language Models
+
+Systematic Weight Evaluation for Pruning Large Language Models: Enhancing Performance and Sustainability
+
+Metaheuristics and Large Language Models Join Forces: Toward an Integrated Optimization Approach
+
+Full Parameter Fine-tuning for Large Language Models with Limited Resources
+
+Meta-Learning the Difference: Preparing Large Language Models for Efficient Adaptation
+
+Mixture-of-Skills: Learning to Optimize Data Usage for Fine-Tuning Large Language Models
+
+Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations
+
+Fine-Tuning Language Models Using Formal Methods Feedback
+
+MLLM-Tool: A Multimodal Large Language Model for Tool Agent Learning
+
+Navigating the Landscape of Large Language Models: A Comprehensive Review and Analysis of Paradigms and Fine-Tuning Strategies
+
+Foundations of Large Language Model Compression - Part 1: Weight Quantization
+
+Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+Deconstructing What Makes a Good Optimizer for Language Models
+
+TrainerAgent: Customizable and Efficient Model Training through LLM-Powered Multi-Agent System
+
+Memory-Efficient Adaptive Optimization
+
+A Self-Supervised Reinforcement Learning Approach for Fine-Tuning Large Language Models Using Cross-Attention Signals
+
+On Enhancing Fine-Tuning for Pre-trained Language Models
+
+Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System
+
+AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+MAML-en-LLM: Model Agnostic Meta-Training of LLMs for Improved In-Context Learning
+
+Fast and Scalable Expansion of Natural Language Understanding Functionality for Intelligent Agents
+
+ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution
+
+Optimization with Trained Machine Learning Models Embedded
+
+Meta Distant Transfer Learning for Pre-trained Language Models
+
+Mixture-of-Agents Enhances Large Language Model Capabilities
+
+You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning
+
+Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models
+
+Cross-model Control: Improving Multiple Large Language Models in One-time Training
+
+Efficient LLMs Training and Inference: An Introduction
+
+Enabling Lightweight Fine-tuning for Pre-trained Language Model Compression based on Matrix Product Operators
+
+ALPS: Improved Optimization for Highly Sparse One-Shot Pruning for Large Language Models
+
+A Study of Compressed Language Models in Social Media Domain
+
+Fine-Tuning Large Language Models for Specialized Use Cases
+
+Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models
+
+An exploration of the effect of quantisation on energy consumption and inference time of StarCoder2
+
+SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents
+
+Algorithm Evolution Using Large Language Model
+
+Deep Insights into Automated Optimization with Large Language Models and Evolutionary Algorithms
+
+Empirical Analysis of Efficient Fine-Tuning Methods for Large Pre-Trained Language Models
+
+Large Language Model Enhanced Multi-Agent Systems for 6G Communications
+
+MMAU: A Holistic Benchmark of Agent Capabilities Across Diverse Domains
+
+Take the essence and discard the dross: A Rethinking on Data Selection for Fine-Tuning Large Language Models
+
+Distilling Wisdom: A Review on Optimizing Learning From Massive Language Models
+
+Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization
+
+Adaptive Feature-based Low-Rank Compression of Large Language Models via Bayesian Optimization
+
+Exploring Advanced Large Language Models with LLMsuite
+
+Knowledgeable Agents by Offline Reinforcement Learning from Large Language Model Rollouts
+
+Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper
+
+Evaluation Metrics and Benchmarks for Large Language Model-based Agents
+['This section discusses the importance of establishing comprehensive evaluation metrics and benchmarks for assessing the performance of large language model-based agents, including aspects such as task completion, safety, and ethical considerations.', '1. Development of evaluation frameworks that consider multiple facets of agent performance, including efficiency, effectiveness, and safety, and their application in comparing the performance of different large language model-based agents.', '2. Discussion on the role of benchmarks in comparing the performance of different large language model-based agents and identifying areas for improvement, including the use of standardized datasets and evaluation protocols.', '3. Examination of challenges in evaluating agents in dynamic and real-world environments, including the need for robust and adaptive evaluation frameworks that can handle changing conditions and unexpected events.']
+
+DyVal 2: Dynamic Evaluation of Large Language Models by Meta Probing Agents
+
+How to Measure the Intelligence of Large Language Models?
+
+Optimizing Large Language Models for Dynamic Constraints through Human-in-the-Loop Discriminators
+
+Large Language Models can Achieve Social Balance
+
+Training Language Model Agents without Modifying Language Models
+
+Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation
+
+Large Language Model Evaluation Via Multi AI Agents: Preliminary results
+
+Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents
+
+Large Language Model Agent for Hyper-Parameter Optimization
+
+SmartPlay : A Benchmark for LLMs as Intelligent Agents
+
+xLAM: A Family of Large Action Models to Empower AI Agent Systems
+
+AgentSims: An Open-Source Sandbox for Large Language Model Evaluation
+
+On the limits of agency in agent-based models
+
+Deep Insights into Automated Optimization with Large Language Models and Evolutionary Algorithms
+
+Towards Optimizing with Large Language Models
+
+ShortcutsBench: A Large-Scale Real-world Benchmark for API-based Agents
+
+The Ability of Large Language Models to Evaluate Constraint-satisfaction in Agent Responses to Open-ended Requests
+
+Optimal Decision Making Through Scenario Simulations Using Large Language Models
+
+Controlling Large Language Model-based Agents for Large-Scale Decision-Making: An Actor-Critic Approach
+
+Achieving Peak Performance for Large Language Models: A Systematic Review
+
+Efficient Sequential Decision Making with Large Language Models
+
+More Agents Is All You Need
+
+TDAG: A Multi-Agent Framework based on Dynamic Task Decomposition and Agent Generation
+
+SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents
+
+Benchmarking Data Science Agents
+
+Calibrating LLM-Based Evaluator
+
+Aligning with Human Judgement: The Role of Pairwise Preference in Large Language Model Evaluators
+
+Discovering Language Model Behaviors with Model-Written Evaluations
+
+AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?
+
+Reasoning Capacity in Multi-Agent Systems: Limitations, Challenges and Human-Centered Solutions
+
+Adaptive-Solver Framework for Dynamic Strategy Selection in Large Language Model Reasoning
+
+Benchmarking Linguistic Diversity of Large Language Models
+
+SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation
+
+AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+Don't Make Your LLM an Evaluation Benchmark Cheater
+
+AgentQuest: A Modular Benchmark Framework to Measure Progress and Improve LLM Agents
+
+ChatEval  Towards Better LLM-based Evaluators through Multi-Agent Debate
+
+LLM-Powered Benchmark Factory: Reliable, Generic, and Efficient
+
+Evaluating the Performance of Large Language Models via Debates
+
+Large Language Models as Agents in Two-Player Games
+
+Agent-SafetyBench: Evaluating the Safety of LLM Agents
+
+Decoding Large-Language Models: A Systematic Overview of Socio-Technical Impacts, Constraints, and Emerging Questions
+
+Aligning Agents like Large Language Models
+
+AI Agents That Matter
+
+AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+AgentSquare: Automatic LLM Agent Search in Modular Design Space
+
+AgentBench: Evaluating LLMs as Agents
+
+Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification
+
+Mixture-of-Agents Enhances Large Language Model Capabilities
+
+Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations
+
+Applications and Case Studies of Large Language Model-based Agents
+['This section explores various applications and presents case studies of large language model-based agents across different domains, highlighting their potential impact and the challenges encountered during deployment.', '1. Overview of applications in natural language processing, such as text classification, sentiment analysis, and machine translation, and their potential impact on industries such as customer service and content creation.', '2. In-depth analysis of case studies demonstrating the successful integration of large language model-based agents in real-world scenarios, including their application in decision-making, problem-solving, and human-computer interaction.', '3. Discussion on the challenges and limitations faced during the deployment of large language model-based agents in practical applications, including issues related to data quality, model interpretability, and robustness.']
+
+AgentSquare: Automatic LLM Agent Search in Modular Design Space
+
+Aligning Agents like Large Language Models
+
+Exploring Autonomous Agents through the Lens of Large Language Models: A Review
+
+An Overview and Discussion on Using Large Language Models for Implementation Generation of Solutions to Open-Ended Problems
+
+Agent-SafetyBench: Evaluating the Safety of LLM Agents
+
+SMoA: Improving Multi-agent Large Language Models with Sparse Mixture-of-Agents
+
+Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System
+
+From Prediction to Prescription: Large Language Model Agent for Context-Aware Maintenance Decision Support
+
+Analysis of the Evolution of Advanced Transformer-Based Language Models: Experiments on Opinion Mining
+
+Large Language Models as Minecraft Agents
+
+Large Language Model-based Human-Agent Collaboration for Complex Task Solving
+
+A review of large language models and autonomous agents in chemistry
+
+The evolution, applications, and future prospects of large language models: An in-depth overview
+
+Large Language Model Enhanced Multi-Agent Systems for 6G Communications
+
+Adaptive In-conversation Team Building for Language Model Agents
+
+SmartPlay : A Benchmark for LLMs as Intelligent Agents
+
+AgentSims: An Open-Source Sandbox for Large Language Model Evaluation
+
+Algorithm Evolution Using Large Language Model
+
+Benchmarking Data Science Agents
+
+Large Language Models as Agents in Two-Player Games
+
+AutoFlow: Automated Workflow Generation for Large Language Model Agents
+
+Synergistic Simulations: Multi-Agent Problem Solving with Large Language Models
+
+Exploring the True Potential: Evaluating the Black-box Optimization Capability of Large Language Models
+
+Welcome to the Era of ChatGPT et al.
+
+From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto
+
+Online Advertisements with LLMs: Opportunities and Challenges
+
+Enhancing the General Agent Capabilities of Low-Parameter LLMs through Tuning and Multi-Branch Reasoning
+
+Road of Large Language Model: Source, Challenge, and Future Perspectives
+
+L3Ms - Lagrange Large Language Models
+
+Large Language Model Agents for Radio Map Generation and Wireless Network Planning
+
+Assessing the Strengths and Weaknesses of Large Language Models
+
+AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+Research on the Application and Optimization Strategies of Deep Learning in Large Language Models
+
+Decoding Large-Language Models: A Systematic Overview of Socio-Technical Impacts, Constraints, and Emerging Questions
+
+Large Language Model Agent for Hyper-Parameter Optimization
+
+A Review of Current Trends, Techniques, and Challenges in Large Language Models (LLMs)
+
+Large Language Model Evaluation Via Multi AI Agents: Preliminary results
+
+OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models
+
+Training Language Model Agents without Modifying Language Models
+
+TrainerAgent: Customizable and Efficient Model Training through LLM-Powered Multi-Agent System
+
+When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges
+
+MMAU: A Holistic Benchmark of Agent Capabilities Across Diverse Domains
+
+Towards Optimizing with Large Language Models
+
+Agents: An Open-source Framework for Autonomous Language Agents
+
+AgentBench: Evaluating LLMs as Agents
+
+Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models
+
+Optimizing Large Language Models for Dynamic Constraints through Human-in-the-Loop Discriminators
+
+AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+Benchmark Self-Evolving: A Multi-Agent Framework for Dynamic LLM Evaluation
+
+On the limits of agency in agent-based models
+
+Safety, Ethics, and Regulatory Considerations
+['This section addresses the critical aspects of safety, ethics, and regulatory compliance in the development and deployment of large language model-based agents, including data privacy, bias mitigation, and accountability.', '1. Examination of ethical considerations, such as ensuring transparency, fairness, and respect for user autonomy, and their application in designing and deploying large language model-based agents.', '2. Discussion on safety measures to prevent misuse, including mechanisms for detecting and mitigating harmful behaviors, and their importance in ensuring the safe and responsible deployment of large language model-based agents.', '3. Overview of regulatory frameworks and standards for the development and deployment of large language model-based agents, including guidelines for ensuring compliance with data protection regulations and avoiding potential biases.']
+
+AgentBench: Evaluating LLMs as Agents
+
+"Oops, Did I Just Say That?" Testing and Repairing Unethical Suggestions of Large Language Models with Suggest-Critique-Reflect Process
+
+More Agents Is All You Need
+
+AgentTuning: Enabling Generalized Agent Abilities for LLMs
+
+Balancing Practical Uses and Ethical Concerns:The Role of Large Language Models in Scientific Research
+
+Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment
+
+Multitask Mayhem: Unveiling and Mitigating Safety Gaps in LLMs Fine-tuning
+
+AgentSquare: Automatic LLM Agent Search in Modular Design Space
+
+Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models
+
+SafetyPrompts  a Systematic Review of Open Datasets for Evaluating and
+  Improving Large Language Model Safety
+
+An Analysis of the Effects of Decoding Algorithms on Fairness in
+  Open-Ended Language Generation
+
+Informed AI Regulation: Comparing the Ethical Frameworks of Leading LLM Chatbots Using an Ethics-Based Audit to Assess Moral Reasoning and Normative Values
+
+Large Language Models as Minecraft Agents
+
+Should ChatGPT be Biased? Challenges and Risks of Bias in Large Language Models
+
+Exploring Autonomous Agents through the Lens of Large Language Models: A Review
+
+Current state of LLM Risks and AI Guardrails
+
+Separate the Wheat from the Chaff: A Post-Hoc Approach to Safety Re-Alignment for Fine-Tuned Language Models
+
+AgentBoard  An Analytical Evaluation Board of Multi-turn LLM Agents
+
+Fine-tuning Aligned Language Models Compromises Safety, Even When Users Do Not Intend To!
+
+Fortifying Ethical Boundaries in AI: Advanced Strategies for Enhancing Security in Large Language Models
+
+Smaller Large Language Models Can Do Moral Self-Correction
+
+From Data to Deployment: A Comprehensive Analysis of Risks in Large Language Model Research and Development
+
+LocalValueBench: A Collaboratively Built and Extensible Benchmark for Evaluating Localized Value Alignment and Ethical Safety in Large Language Models
+
+When Large Language Models Meet Evolutionary Algorithms: Potential Enhancements and Challenges
+
+Towards better Human-Agent Alignment: Assessing Task Utility in LLM-Powered Applications
+
+Modeling Emotions and Ethics with Large Language Models
+
+Validating Large Language Models with ReLM
+
+Large Language Model Agents for Radio Map Generation and Wireless Network Planning
+
+Targeting the Core: A Simple and Effective Method to Attack RAG-based Agents via Direct LLM Manipulation
+
+Training Language Model Agents without Modifying Language Models
+
+Applying Refusal-Vector Ablation to Llama 3.1 70B Agents
+
+Quantifying Risk Propensities of Large Language Models: Ethical Focus and Bias Detection through Role-Play
+
+Star-Agents: Automatic Data Optimization with LLM Agents for Instruction Tuning
+
+From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto
+
+Large Language Model Evaluation Via Multi AI Agents: Preliminary results
+
+Controlling Large Language Model-based Agents for Large-Scale Decision-Making: An Actor-Critic Approach
+
+A Philosophical Introduction to Language Models - Part II: The Way Forward
+
+The Moral Mind(s) of Large Language Models
+
+ABC Align: Large Language Model Alignment for Safety & Accuracy
+
+On the limits of agency in agent-based models
+
+Safety Arithmetic: A Framework for Test-time Safety Alignment of Language Models by Steering Parameters and Activations
+
+Taxonomy-based CheckList for Large Language Model Evaluation
+
+AGrail: A Lifelong Agent Guardrail with Effective and Adaptive Safety Detection
+
+Unbiased Evaluation of Large Language Models from a Causal Perspective
+
+Red Teaming Language Model Detectors with Language Models
+
+Empowering Autonomous Driving with Large Language Models: A Safety Perspective
+
+A collection of principles for guiding and evaluating large language models
+
+Evil Geniuses: Delving into the Safety of LLM-based Agents
+
+Towards Safety and Helpfulness Balanced Responses via Controllable Large Language Models
+
+Harnessing the power of LLMs for normative reasoning in MASs
+
