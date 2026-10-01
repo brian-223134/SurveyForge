@@ -4,6 +4,8 @@
           = candidates/gap_to_80_refs.jsonl 의 tier == in_view (같은 slug) -- 두 값이 같아야 한다
     매칭  = 생성 refs 의 DB id 와 GT ref 의 view_id 를 대소문자 무시로 비교 (arXiv base id 또는 소문자 DOI)
     누수  = 정책 exclude_ids(GT 본체·선행판)가 refs·본문에 0회
+    보조  = recall_with_post = (hits + hits_post) / (n_gt_refs_cutoff + n_gt_refs_post) — post 는 GT 공개일 이후 인용 ∧ view 안
+            (2026-09-30 교수님 결정: 지우지 않고 보조 지표로. 검색 정책이 막으므로 hits_post 는 정상이면 0)
     위반  = refs 중 sidecar 공개일 상한 ≥ cutoff (정책이 맞다면 0)
 
 공용 채점기가 아니라 이 저장소 문서용 즉석 계산이다 (docs/kisti-integration.md §5.2 와 같은 방식, 분모만 새 규약).
@@ -38,6 +40,7 @@ def main():
     gt = [r for r in gt if r['slug'] == args.topic_id]
     in_view = {str(r['view_id']).lower(): r for r in gt if r['tier'] == 'in_view'}
     assert len(in_view) == t['n_gt_refs_cutoff'], (len(in_view), t['n_gt_refs_cutoff'])
+    post = {str(r['view_id']).lower() for r in gt if r['tier'] == 'post' and r.get('view_id')}
 
     jpath = [p for p in glob.glob(os.path.join(args.run, '*.json'))
              if os.path.basename(p) not in ('run_manifest.json', 'section_references_ids.json', 'reference_metadata.json',
@@ -47,6 +50,7 @@ def main():
     refs = {str(v) for v in out['reference'].values()}
     refs_l = {r.lower() for r in refs}
     hits = sorted(r for r in refs_l if r in in_view)
+    hits_post = sorted(r for r in refs_l if r in post)
     body = out['survey']
     manifest_p = os.path.join(args.run, 'run_manifest.json')
     manifest = json.load(open(manifest_p)) if os.path.exists(manifest_p) else {}
@@ -70,6 +74,8 @@ def main():
         'denominator_n_gt_refs_cutoff': t['n_gt_refs_cutoff'], 'gt_pool': t.get('n_gt_refs_cutoff_pool'),
         'hits': len(hits), 'recall': round(len(hits) / t['n_gt_refs_cutoff'], 4), 'precision': round(len(hits) / max(len(refs), 1), 4),
         'hit_ids': hits,
+        'n_gt_refs_post': len(post), 'hits_post': len(hits_post),
+        'recall_with_post': round((len(hits) + len(hits_post)) / max(t['n_gt_refs_cutoff'] + len(post), 1), 4),
         'refs_after_cutoff': late, 'gt_id_leaks': leaks, 'gt_title_leaks': title_leaks,
         'generated_title': gen_title, 'generated_title_equals_gt_title': gen_title_equals_gt,
         'words_refined': len(body.split()),
@@ -78,7 +84,7 @@ def main():
                              ('allowed', 'db_records', 'allowed_fingerprint_sha256', 'reference_violations', 'view_sha256', 'view_created_at')},
     }
     print(f"[score] {args.topic_id} cutoff<{policy.cutoff}: refs {res['refs']} (DOI {res['refs_doi']}) · hits {res['hits']}/{t['n_gt_refs_cutoff']} "
-          f"→ recall {res['recall']:.1%} · precision {res['precision']:.1%} · after-cutoff refs {len(late)} · GT id 누수 {len(leaks)} · "
+          f"→ recall {res['recall']:.1%} (post 포함 {res['recall_with_post']:.1%}) · precision {res['precision']:.1%} · after-cutoff refs {len(late)} · GT id 누수 {len(leaks)} · "
           f"GT 제목 누수 {len(title_leaks)}{' (생성 제목 == GT 제목)' if gen_title_equals_gt else ''} · words {res['words_refined']:,}")
     if args.out:
         with open(args.out, 'w') as f:
