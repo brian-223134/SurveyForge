@@ -44,6 +44,8 @@ def main():
     in_view = {str(r['view_id']).lower(): r for r in gt if r['tier'] == 'in_view'}
     assert len(in_view) == t['n_gt_refs_cutoff'], (len(in_view), t['n_gt_refs_cutoff'])
     post = {str(r['view_id']).lower() for r in gt if r['tier'] == 'post' and r.get('view_id')}
+    # 같은 S2 논문의 다른 판 (csur2026_gt_refs.jsonl). 어느 판을 인용해도 그 ref 한 편의 hit 다
+    alt = {str(a).lower(): str(r['view_id']).lower() for r in gt if r.get('view_id') for a in r.get('alt_view_ids') or []}
 
     jpath = [p for p in glob.glob(os.path.join(args.run, '*.json'))
              if os.path.basename(p) not in ('run_manifest.json', 'section_references_ids.json', 'reference_metadata.json',
@@ -52,8 +54,9 @@ def main():
     out = json.load(open(jpath[0]))
     refs = {str(v) for v in out['reference'].values()}
     refs_l = {r.lower() for r in refs}
-    hits = sorted(r for r in refs_l if r in in_view)
-    hits_post = sorted(r for r in refs_l if r in post)
+    refs_c = {alt.get(r, r) for r in refs_l}
+    hits = sorted(r for r in refs_c if r in in_view)
+    hits_post = sorted(r for r in refs_c if r in post)
     body = out['survey']
     manifest_p = os.path.join(args.run, 'run_manifest.json')
     manifest = json.load(open(manifest_p)) if os.path.exists(manifest_p) else {}
