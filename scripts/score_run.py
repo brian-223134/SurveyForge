@@ -34,9 +34,12 @@ def main():
     ap.add_argument('--out', default='', help='결과 JSON (선택)')
     args = ap.parse_args()
 
-    topics = {r['slug']: r for r in (json.loads(l) for l in open(os.path.join(KISTI, 'data', 'topics.kisti.jsonl')))}
+    # 파일럿처럼 다른 분모로 채점할 때 경로를 바꾼다 (kisti_data candidates/csur2026_topics.jsonl · csur2026_gt_refs.jsonl)
+    topics_file = os.environ.get('KISTI_TOPICS_FILE') or os.path.join(KISTI, 'data', 'topics.kisti.jsonl')
+    refs_file = os.environ.get('KISTI_GT_REFS_FILE') or os.path.join(KISTI, 'candidates', 'gap_to_80_refs.jsonl')
+    topics = {r['slug']: r for r in (json.loads(l) for l in open(topics_file))}
     t = topics[args.topic_id]
-    gt = [json.loads(l) for l in open(os.path.join(KISTI, 'candidates', 'gap_to_80_refs.jsonl'))]
+    gt = [json.loads(l) for l in open(refs_file)]
     gt = [r for r in gt if r['slug'] == args.topic_id]
     in_view = {str(r['view_id']).lower(): r for r in gt if r['tier'] == 'in_view'}
     assert len(in_view) == t['n_gt_refs_cutoff'], (len(in_view), t['n_gt_refs_cutoff'])
