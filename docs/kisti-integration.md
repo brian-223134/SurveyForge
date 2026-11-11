@@ -289,3 +289,60 @@ manifest 확인: `retrieval_policy.sidecar.path` = `…/views/kisti-2608-r4/pape
 - 병목은 검색 풀이다: 집필 풀(`total_ids.txt`) 428편에 GT 가 **13편**뿐이고 그중 7편이 인용됐다. r4 가 GT reference 를 corpus 에 넣어
   분모를 키웠지만, SurveyForge 가 실제로 모으는 풀(허용 집합의 0.03%)이 작아 recall 로 이어지지 않는다. 단일 실행이라 방향만 읽을 것.
 - PDF: `md_to_tex.py --compile` (pdflatex 3패스, 464 KB), 추가 매핑 없이 통과.
+
+## 10. 2026-11-11 — 파일럿 `kisti-2608-r7` (CSUR 2026 게재 GT) + 백본 qwen-plus @ DashScope
+
+정본 절차: kisti_data `docs/asg/AGENT-HANDOFF.md` 「파일럿: CSUR 2026 게재 GT」. 25 topic 벤치마크(r5)와 별개이며 `.env` 는 그대로 두고
+(DB_DIR·정책·sidecar 는 아직 r4 판) 셸 export 로 r7 을 지정한다. `scripts/run_pilot.sh` 는 쓰지 않는다(OpenRouter 잔액 조회 실패 시 생성 전에 멈춤).
+
+### 10.1 입력 (sha256 확인)
+
+| 항목 | 값 |
+|---|---|
+| view | `kisti_data/data/views/kisti-2608-r7/` 1,698,312편, papers.parquet `934adb11` |
+| 인덱스 | `SurveyForge_data/database_kisti-kisti-2608-r7/` (tag `KISTI_2608_R7`) = r6 1,697,741 + 571편 append (2026-11-10, `append_snapshot.py`). **재빌드 불필요** |
+| 정책 | `AutoSurvey/data/topic_policy.kisti-2608-r7.jsonl` `bae2d5a8…` (17행, topic = 게재본 전체 제목, cutoff = 게재일) |
+| topic · 분모 | `candidates/csur2026_topics.jsonl` `d3acc763…` · `candidates/csur2026_gt_refs.jsonl` `dae62edc…` (pilot 4편 분모 213·194·121·209) |
+| sidecar | `kisti_data/data/views/kisti-2608-r7/paper_dates.json` (1,698,312, view sha 일치) |
+
+인덱스 검증 (2026-11-11, GPU 3, `scripts/check_db.py --verify-embeddings 40`): 건수 4종 1,698,312 일치, id 1..1698312 전단사,
+재임베딩 40건(신규 구간 20건) 최저 cos title+abs·title 모두 **1.000000** → 통과.
+
+검색 점검 (2026-11-11, LLM 0, GPU 3, `scripts/probe_retrieval.py` pilot 4편, 기댓값 = kisti_data `adapter/common/retrieval_policy.allowed_summary`) → **PASS**:
+
+| slug | cutoff | 허용 (sidecar = DB = 기댓값) | 허용 id 정렬 sha256 |
+|---|---|---|---|
+| llm-function-calling | 2026-02-25 | 1,670,066 | `9b2c8e060998396e…` |
+| llm-agent-optimization | 2026-02-11 | 1,667,920 | `afb03ee5a8a08dc8…` |
+| llm-watermarking | 2026-02-04 | 1,666,650 | `675fdac8d088420a…` |
+| llm-training-data-detection | 2026-02-12 | 1,668,178 | `22211c96ab637534…` |
+
+아웃라인·서브아웃라인·리랭크·인용 정합·outline DB(18,792/18,816)·직접 조회 전 경로 위반 0. 아웃라인 풀에 2026년 문헌 60~67편.
+`PAPER_ID_CUTOFF=2606` 에 걸리는 것은 2608 id 1편뿐(모든 pilot cutoff 이후라 정책에서도 빠진다).
+
+### 10.2 DashScope 대응 (코드)
+
+- `APIModel`: base URL 이 `/v1` 로 끝나 기존 OpenAI-SDK 분기를 그대로 탄다. provider·reasoning env 가 비어 `extra_body={}` —
+  `enable_thinking` 을 보내지 않는다(기본 꺼짐). 로그 첫 부분에 `[MODEL] <model> @ <url> extra_body=… price …` 줄.
+- **청구 토큰·비용**: 응답 `usage` 를 `LLM_STATS` 에 합산(prompt·completion·cached·reasoning, 재요청으로 버린 응답 포함).
+  `usage.cost` 가 없으면 `SURVEYFORGE_PRICE_INPUT/OUTPUT`(USD/1M) 로 계산 → `run_manifest.json` 의 `llm_stats.cost_usd`·`cost_source`.
+  표준 단가만 쓰므로 입력 256K 초과 호출은 `calls_over_256k` 로 따로 센다. 실패한 실행은 `llm_usage.partial.json` 에 그때까지의 집계를 남긴다.
+- **`400 data_inspection_failed`**: 재시도하지 않고(같은 입력은 같은 판정) `DataInspectionFailed` 로 실행을 멈춘다. 입력은 고치지 않는다.
+  프롬프트 sha256·길이·앞 200자와 오류문을 `[DATA_INSPECTION_FAILED]` 로그·`data_inspection_events` 에 남긴다 — 보고 대상.
+- `scripts/score_run.py`: 실행의 `run_manifest.json` 에 적힌 정책·sidecar 로 채점한다(종전엔 env/.env → r4 판이 조용히 섞일 수 있었다).
+  정책 파일 sha 가 실행 때와 다르면 경고만 낸다.
+- 테스트: `tests/test_model_usage.py` (네트워크 없음, 6건).
+- 호출 확인 (2026-11-11): `qwen-plus-2025-12-01` 'hello' 1회 — prompt 13 · completion 1 · reasoning 0, `cost_source` 단가 계산.
+
+### 10.3 실행
+
+```bash
+scripts/run_kisti_r7.sh <slug> <유휴 GPU> --dry-run   # 점검만 (sha256 3종 · 정책 topic == $T title · view/인덱스 sha · TinyDB 소유자 · GPU · exp_1 없음)
+scripts/run_kisti_r7.sh <slug> <유휴 GPU>             # setsid 로 run_demo → score_run
+```
+- 키는 `AutoSurvey/.env` 의 `ALIBABA_CLOUD_API_KEY` 하나만 꺼내 `OPENROUTER_API_KEY` 로 env 전달(출력·argv 금지).
+- export: MODEL `qwen-plus-2025-12-01` · API_URL `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` · PROVIDER 빈 값 ·
+  TEMPERATURE 0.6 · MAX_TOKENS 8192 · RETRY_TRUNCATED 1 · PRICE 0.4/1.2 · DB_DIR·TOPIC_POLICY·PAPER_DATES r7 · TOPIC_ID. `PAPER_ID_CUTOFF=2606` 은 .env 그대로.
+- 산출: `code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/<게재본 전체 제목>/exp_1/`, 로그는 그 위 `run_kisti_r7.log`.
+- 계정 전체 120 RPM · 1M TPM — topic 하나씩. 동시 요청 최대 MAX_SECTION_THREADS×MAX_THREADS = 16.
+- 예상 비용: r4 PoC 의 tiktoken 추정 입력 ~1.6M · 출력 ~86K 토큰 기준 편당 **~$0.7–1.0** (qwen 토크나이저·재요청에 따라 변동).
