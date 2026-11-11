@@ -38,12 +38,82 @@ RETRY_TRUNCATED = (_rt not in ("0", "false", "off", "no")) if _rt else True
 # 모듈 수준에 둔다. main.py 가 run_manifest.json 에 기록한다.
 _STATS_LOCK = threading.Lock()
 LLM_STATS = {"completions": 0, "truncated_accepted": 0, "truncation_retries": 0,
-             "empty_retries": 0, "error_retries": 0}
+             "empty_retries": 0, "error_retries": 0,
+             # 청구 토큰 (응답의 usage 합; 재요청으로 버린 응답도 청구되므로 포함). tiktoken 추정치인
+             # '... Input token usage' 로그 줄과는 다른 값이다.
+             "prompt_tokens": 0, "completion_tokens": 0, "cached_tokens": 0, "reasoning_tokens": 0,
+             "max_prompt_tokens": 0, "calls_over_256k": 0,
+             # 응답 usage.cost(OpenRouter) 가 있으면 그 합, 없으면(DashScope 등) 아래 단가로 계산한 값.
+             "cost_usd": 0.0, "cost_source": None,
+             # DashScope 콘텐츠 검사 거부(400 data_inspection_failed). 재시도하지 않고 실행을 멈춘다.
+             "data_inspection_failed": 0}
+
+# 응답에 비용이 없는 API(DashScope)용 단가, USD / 1M tokens. 표준 단가로만 계산한다 -- 캐시 할인과
+# 구간 요금(qwen-plus 는 입력 256K 초과 구간이 더 비싸다)은 반영하지 않으므로, 256K 를 넘은 호출 수를
+# calls_over_256k 로 따로 센다. 비워 두면 0 (비용 미상).
+def _price(name):
+    v = os.environ.get(name, "").strip()
+    return float(v) if v else 0.0
+
+
+PRICE_INPUT = _price("SURVEYFORGE_PRICE_INPUT")
+PRICE_OUTPUT = _price("SURVEYFORGE_PRICE_OUTPUT")
+# 실패 원인 보고용. 입력 원문은 남기지 않는다(sha256·길이·앞부분만).
+DATA_INSPECTION_EVENTS = []
 
 
 def _bump(key, n=1):
     with _STATS_LOCK:
         LLM_STATS[key] += n
+
+
+def _field(obj, name, default=None):
+    """SDK 객체와 dict 양쪽에서 필드를 읽는다 (OpenAI SDK 는 모르는 필드를 model_extra 에 둔다)."""
+    if obj is None:
+        return default
+    if isinstance(obj, dict):
+        return obj.get(name, default)
+    v = getattr(obj, name, None)
+    if v is None:
+        v = (getattr(obj, "model_extra", None) or {}).get(name)
+    return default if v is None else v
+
+
+def _record_usage(usage):
+    """응답 하나의 usage 를 LLM_STATS 에 더한다."""
+    if usage is None:
+        return
+    p = int(_field(usage, "prompt_tokens", 0) or 0)
+    c = int(_field(usage, "completion_tokens", 0) or 0)
+    cached = int(_field(_field(usage, "prompt_tokens_details"), "cached_tokens", 0) or 0)
+    reasoning = int(_field(_field(usage, "completion_tokens_details"), "reasoning_tokens", 0) or 0)
+    reported = _field(usage, "cost")
+    if reported is not None:
+        cost, source = float(reported), "response usage.cost"
+    else:
+        cost = (p * PRICE_INPUT + c * PRICE_OUTPUT) / 1e6
+        source = (f"tokens x price (in ${PRICE_INPUT} / out ${PRICE_OUTPUT} per 1M)"
+                  if PRICE_INPUT or PRICE_OUTPUT else "unknown (no usage.cost, no SURVEYFORGE_PRICE_*)")
+    with _STATS_LOCK:
+        LLM_STATS["prompt_tokens"] += p
+        LLM_STATS["completion_tokens"] += c
+        LLM_STATS["cached_tokens"] += cached
+        LLM_STATS["reasoning_tokens"] += reasoning
+        LLM_STATS["max_prompt_tokens"] = max(LLM_STATS["max_prompt_tokens"], p)
+        LLM_STATS["calls_over_256k"] += int(p > 256_000)
+        LLM_STATS["cost_usd"] += cost
+        LLM_STATS["cost_source"] = source
+    if reasoning:
+        # thinking 은 기본 꺼짐이어야 한다(enable_thinking 을 보내지 않음). 켜져 있으면 비교 조건이 달라진다.
+        print(f"[REASONING] {reasoning} reasoning tokens in one response -- thinking is expected to be off")
+
+
+def _is_data_inspection(e):
+    return "data_inspection_failed" in str(e)
+
+
+class DataInspectionFailed(RuntimeError):
+    """DashScope 콘텐츠 검사 거부. 입력을 고쳐 다시 보내지 않는다 -- 보고 대상이다."""
 
 
 def _csv_env(name):
@@ -116,6 +186,16 @@ def _retry_wait(attempt, max_try):
     return min(_RETRY_CAP, _RETRY_BASE * (2 ** attempt)) * (0.5 + random.random())
 
 
+def _raise_if_inspection(n_before, where):
+    new = DATA_INSPECTION_EVENTS[n_before:]
+    if new:
+        raise DataInspectionFailed(
+            f"{where}: {len(new)} request(s) rejected by content inspection "
+            f"(400 data_inspection_failed). Input was not modified; report it. "
+            f"First: prompt sha256 {new[0]['prompt_sha256']}, {new[0]['prompt_chars']} chars, "
+            f"error {new[0]['error'][:200]}")
+
+
 class APIModel:
 
     def __init__(self, model, api_key, api_url) -> None:
@@ -128,6 +208,8 @@ class APIModel:
             print(f"[DECODING] temperature="
                   f"{TEMPERATURE_OVERRIDE if TEMPERATURE_OVERRIDE is not None else 'caller default'}"
                   f" max_tokens={MAX_TOKENS} retry_truncated={RETRY_TRUNCATED}")
+            print(f"[MODEL] {model} @ {api_url} extra_body={sorted(OPENROUTER_EXTRA) or '{}'}"
+                  f" price in/out per 1M=${PRICE_INPUT}/${PRICE_OUTPUT}")
         
     def __openai_compatible(self):
         # OpenRouter처럼 base URL(…/v1)로 설정된 엔드포인트는 모델명과 무관하게
@@ -168,6 +250,7 @@ class APIModel:
 
                     choice = completion.choices[0]
                     _bump("completions")
+                    _record_usage(getattr(completion, 'usage', None))
                     if choice.finish_reason == 'length':
                         if RETRY_TRUNCATED and _ < max_try - 1:
                             _bump("truncation_retries")
@@ -200,6 +283,19 @@ class APIModel:
                         continue
                     return content
                 except Exception as e:
+                    if _is_data_inspection(e):
+                        # 같은 입력은 몇 번을 보내도 같은 판정이다. 재시도로 RPM 을 쓰지 않고 바로 보고한다.
+                        import hashlib
+                        _bump("data_inspection_failed")
+                        ev = {"prompt_sha256": hashlib.sha256(text.encode()).hexdigest(),
+                              "prompt_chars": len(text), "prompt_head": text[:200],
+                              "error": str(e)[:500]}
+                        with _STATS_LOCK:
+                            DATA_INSPECTION_EVENTS.append(ev)
+                        print(f"[DATA_INSPECTION_FAILED] 400 data_inspection_failed -- not retrying, "
+                              f"input left unchanged (prompt sha256 {ev['prompt_sha256'][:12]}, "
+                              f"{ev['prompt_chars']} chars): {ev['error']}")
+                        return None
                     _bump("error_retries")
                     last_error = e
                     wait = _retry_wait(_, max_try)
@@ -270,10 +366,12 @@ class APIModel:
         # the batch path gets -- this path serves the late, expensive stages
         # (outline merge, LCE refinement), where losing the run costs the most --
         # then fail with a message that names the real cause.
+        n_inspect = len(DATA_INSPECTION_EVENTS)
         for round_no in range(_BATCH_RETRY_ROUNDS):
             response = self.__req(text, temperature=temperature, max_try=5)
             if response is not None:
                 return response
+            _raise_if_inspection(n_inspect, "chat")
             if round_no == _BATCH_RETRY_ROUNDS - 1:
                 break
             wait = _BATCH_RETRY_COOLDOWN * (round_no + 1)
@@ -293,6 +391,7 @@ class APIModel:
     def batch_chat(self, text_batch, temperature=0):
         max_threads = MAX_THREADS  # limit max concurrent threads using model API
         res_l = ['No response'] * len(text_batch)
+        n_inspect = len(DATA_INSPECTION_EVENTS)
 
         def chat_wrapper(text, temp, res_list, idx):
             self.__chat(text, temp, res_list, idx)
@@ -320,6 +419,10 @@ class APIModel:
         # shared-pool rate limit, so the useful move is to stop competing with
         # ourselves: one request at a time, after a cooldown. Then fail loudly
         # rather than returning a list with holes in it.
+        #
+        # A content-inspection rejection is not transient: resending the same prompt
+        # gets the same verdict, and the rule is to report it, not to rewrite the input.
+        _raise_if_inspection(n_inspect, "batch_chat")
         for round_no in range(_BATCH_RETRY_ROUNDS):
             missing = [i for i, r in enumerate(res_l) if r is None]
             if not missing:

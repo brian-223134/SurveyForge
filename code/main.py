@@ -302,9 +302,10 @@ def verify_references_allowed(references, policy, saving_path):
 
 def write_run_manifest(args, references, db=None, violations=()):
     """편당 실행 조건과 LLM 집계를 남긴다 -- 비교 실험의 기록 항목(모델·provider·
-    temperature·max_tokens·재요청·잘림·DB 지문·refs 수·retrieval_policy 블록). 비용은 이 안에서 알 수 없으니
-    scripts/check_credits.py 전후 차로 잰다."""
-    from src.model import MAX_TOKENS, TEMPERATURE_OVERRIDE, RETRY_TRUNCATED, LLM_STATS
+    temperature·max_tokens·재요청·잘림·DB 지문·refs 수·retrieval_policy 블록). 청구 토큰과 비용은
+    llm_stats 에 있다(응답 usage 합; 응답에 비용이 없는 DashScope 는 SURVEYFORGE_PRICE_INPUT/OUTPUT 단가로 계산).
+    OpenRouter 실행은 scripts/check_credits.py 전후 차로도 대조할 수 있다."""
+    from src.model import MAX_TOKENS, TEMPERATURE_OVERRIDE, RETRY_TRUNCATED, LLM_STATS, DATA_INSPECTION_EVENTS
     db_build = {}
     p = os.path.join(args.db_path, 'build_manifest.json')
     if os.path.exists(p):
@@ -352,7 +353,8 @@ def write_run_manifest(args, references, db=None, violations=()):
                        else 'caller default (1)',
         'max_tokens': MAX_TOKENS,
         'retry_truncated': RETRY_TRUNCATED,
-        'llm_stats': dict(LLM_STATS),
+        'llm_stats': {**LLM_STATS, 'cost_usd': round(LLM_STATS['cost_usd'], 6)},
+        'data_inspection_events': list(DATA_INSPECTION_EVENTS),
         'section_num': args.section_num,
         'subsection_len': args.subsection_len,
         'outline_reference_num': args.outline_reference_num,
@@ -425,13 +427,23 @@ def main(args):
     
     print("########### Writing outline... ###########")
     
-    outline_with_description, outline_wo_description = \
-        write_outline(args, args.topic, args.model, args.ckpt, args.section_num, args.outline_reference_num, db, args.api_key, args.api_url)
-    
-    print("########### Writing content... ###########")
+    try:
+        outline_with_description, outline_wo_description = \
+            write_outline(args, args.topic, args.model, args.ckpt, args.section_num, args.outline_reference_num, db, args.api_key, args.api_url)
 
-    raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = \
-        write_subsection(args, args.topic, args.model, args.ckpt, outline_with_description, args.subsection_len, args.rag_num, args.rag_max_out, db, args.api_key, args.api_url)
+        print("########### Writing content... ###########")
+
+        raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = \
+            write_subsection(args, args.topic, args.model, args.ckpt, outline_with_description, args.subsection_len, args.rag_num, args.rag_max_out, db, args.api_key, args.api_url)
+    except BaseException as e:
+        # 실패한 실행도 청구된다. 그때까지의 토큰·비용과 실패 원인(data_inspection_failed 포함)을 남긴다.
+        from src.model import LLM_STATS, DATA_INSPECTION_EVENTS
+        with open(f'{args.saving_path}/llm_usage.partial.json', 'w') as f:
+            json.dump({'model': args.model, 'api_url': args.api_url, 'error': f'{type(e).__name__}: {e}'[:2000],
+                       'llm_stats': LLM_STATS, 'data_inspection_events': DATA_INSPECTION_EVENTS,
+                       'failed_at': datetime.now().strftime('%Y-%m-%dT%H:%M:%S')}, f, ensure_ascii=False, indent=2)
+        print(f"[LLM/partial] {json.dumps(LLM_STATS)} -> {args.saving_path}/llm_usage.partial.json")
+        raise
 
     # rag_suboutline and rag_subsection alias this object, and rag_title4citation never
     # reaches _rerank, so one accumulator covers every citation-reranked call in the run.
