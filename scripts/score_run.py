@@ -60,7 +60,20 @@ def main():
     body = out['survey']
     manifest_p = os.path.join(args.run, 'run_manifest.json')
     manifest = json.load(open(manifest_p)) if os.path.exists(manifest_p) else {}
-    policy = load_retrieval_policy(args.topic_id)
+    # 그 실행이 실제로 쓴 정책·sidecar 로 채점한다. env 로 고르면 .env 의 다른 판(예 r4)이 조용히 들어와
+    # cutoff·exclude_ids 가 달라지고, 그 판 sidecar 에 없는 신규 논문은 '날짜 불명 = late' 로 잡힌다.
+    mp = manifest.get('retrieval_policy') or {}
+    pol_path = mp.get('policy_file') if mp.get('policy_file') and os.path.exists(mp['policy_file']) else None
+    dates_path = (mp.get('sidecar') or {}).get('path')
+    dates_path = dates_path if dates_path and os.path.exists(dates_path) else None
+    policy = load_retrieval_policy(args.topic_id, policy_path=pol_path, paper_dates_path=dates_path)
+    from src.retrieval_policy import _sha256_file
+    if pol_path and mp.get('policy_file_sha256') and _sha256_file(pol_path) != mp['policy_file_sha256']:
+        # 정책 파일은 분모 재생성 등으로 제자리에서 갱신된다(예 r4 c7d0fcd). 막지 않고 알린다.
+        print(f'[score] ⚠ 정책 파일 {pol_path} 이 실행 이후 바뀌었다 (run_manifest sha256 {mp["policy_file_sha256"][:12]})'
+              ' -- cutoff·exclude_ids 가 같은지 확인할 것', file=sys.stderr)
+    print(f'[score] policy {policy.policy_path} · sidecar {policy.paper_dates_path}'
+          f' ({"run_manifest" if pol_path else "env/.env"})', file=sys.stderr)
     rp = policy._rp
     cutoff = rp.parse_day(policy.cutoff)
     late = sorted(r for r in refs if (lambda ub: ub is None or ub >= cutoff)(rp.upper_bound(policy.date_of(r))))
