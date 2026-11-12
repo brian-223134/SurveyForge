@@ -1,0 +1,155 @@
+Guardrails for trust, safety, and ethical development and deployment of Large Language Models (LLM)
+Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review
+A survey on privacy risks and protection in large language models
+Large Language Model Alignment: A Survey
+Generative AI model privacy: a survey
+Copyright related risks in the creation and use of ML/AI systems
+Embedding Watermarks into Deep Neural Networks
+Auditing Data Provenance in Text-Generation Models
+Scalable watermarking for identifying large language model outputs
+Detecting LLM-generated peer reviews
+Ethical and social risks of harm from Language Models
+Medical large language models are vulnerable to data-poisoning attacks
+Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense
+How to Prove Your Model Belongs to You: A Blind-Watermark based Framework to Protect Intellectual Property of DNN
+EmMark: Robust Watermarks for IP Protection of Embedded Quantized Large Language Models
+SLIM: Stealthy Low-Coverage Black-Box Watermarking via Latent-Space Confusion Zones
+Model Provenance Testing for Large Language Models
+Undetectable Watermarks for Language Models
+PLMmark: A Secure and Robust Black-Box Watermarking Framework for Pre-trained Language Models
+Evaluating Durability: Benchmark Insights into Multimodal Watermarking
+Attacking LLM Watermarks by Exploiting Their Strengths
+Functional Invariants To Watermark Large Transformers
+Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark
+WAPITI: A Watermark for Finetuned Open-Source LLMs
+Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature
+ZKROWNN
+Cracking White-box DNN Watermarks via Invariant Neuron Transforms
+Watermark Stealing in Large Language Models
+Large Language Model Watermark Stealing With Mixed Integer Programming
+Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation
+PLMmark
+Robust Distortion-free Watermarks for Language Models
+Permute-and-Flip: An optimally robust and watermarkable decoder for LLMs
+AFA: Adversarial fingerprinting authentication for deep neural networks
+Tracing Text Provenance via Context-Aware Lexical Substitution
+WASA: WAtermark-based Source Attribution for Large Language Model-Generated Data
+Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique
+WaterPool
+Hufu
+Watermarks in the Sand
+A Watermark for Large Language Models
+On the Reliability of Watermarks for Large Language Models
+Watermarking Language Models with Error Correcting Codes
+WaterMax
+A Robust Semantics-based Watermark for Large Language Model against Paraphrasing
+Robust Multi-bit Natural Language Watermarking through Invariant Features
+Distortion-free Watermarks are not Truly Distortion-free under Watermark Key Collisions
+A Private Watermark
+SecureMark_DL
+SLIM
+Inhibitory Attacks on Backdoor-based Fingerprinting
+DITTO
+On the Weaknesses of Backdoor-based Model Watermarking: An Information-theoretic Perspective
+The hiding virtues of ambiguity
+Can Watermarks Survive Translation?
+Watermarking Degrades Alignment
+Provably Robust Multi-bit Watermarking for AI-generated Text via Error Correction Code
+Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes
+ReasonMark
+A Systematic Review on Model Watermarking for Neural Networks
+Adaptive Text Watermark for Large Language Models
+Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Large Reasoning Models
+Waterfall: Framework for Robust and Scalable Text Watermarking
+y_t \in G_k(\mathbf{h}_t)
+Robust Watermarking of Neural Network with Exponential Weighting
+Undetectable Watermarks
+n,m,d
+Learning to Watermark LLM-generated Text via Reinforcement Learning
+Learning to Watermark LLM-generated Text via Reinforcement Learning, Token-Specific Watermarking with Enhanced Detectability and Semantic Coherence for Large Language Models
+WaterMod: Modular Token-Rank Partitioning for Probability-Balanced LLM Watermarking
+CATER
+Watermarking Degrades Alignment…
+An Entropy-based Text Watermarking Detection Method
+WaterMax: breaking the LLM watermark detectability-robustness-quality trade-off
+Multimodal and Cross-Modal Watermarking Architectures
+Marking Code Without Breaking It: Code Watermarking for Detecting LLM-Generated Code
+Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks
+A Semantic Invariant Robust Watermark for Large Language Models
+Semantic Differentiation for Tackling Challenges in Watermarking Low-Entropy Constrained Generation Outputs
+IPCert
+Adaptive Text Watermark
+A Survey of Text Watermarking in the Era of Large Language Models
+WaterJudge
+Mark Your LLM
+Simulate and Eliminate: Revoke Backdoors for Generative Large Language Models
+On the Reliability of Watermarks
+EmMark
+Are You Copying My Model?
+Instructional Fingerprinting of Large Language Models
+KEY
+Watermarking Text Generated by Black-Box Language Models
+Inhibitory Attacks on Backdoor-based Fingerprinting for Large Language Models
+EverTracer
+Multi-Bit Distortion-Free Watermarking for Large Language Models
+Advancing Beyond Identification: Multi-bit Watermark for Large Language Models
+Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking
+Permute-and-Flip An optimally robust and watermarkable decoder for LLMs
+CATER: Intellectual Property Protection on Text Generation APIs via Conditional Watermarks
+paper_title
+*Can Watermarks Survive Translation?* [paper_title
+*A Survey of Text Watermarking in the Era of Large Language Models* [paper_title
+Token-Specific Watermarking with Enhanced Detectability and Semantic Coherence for Large Language Models
+*Undetectable Watermarks for Language Models*
+*Watermark Stealing in Large Language Models*
+WAPITI
+Entangled Watermarks as a Defense against Model Extraction
+Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models
+REMARK-LLM
+Universal and Transferable Adversarial Attacks on Aligned Language Models
+BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models
+Test-Time Backdoor Attacks on Multimodal Large Language Models
+Signal Watermark on Large Language Models
+SELF: A Robust Singular Value and Eigenvalue Approach for LLM Fingerprinting
+DeepSigns: A Generic Watermarking Framework for IP Protection of Deep Learning Models
+Prompt-driven statistical bias fingerprinting
+WaterBench
+Paraphrasing evades detectors of AI-generated text
+Large Language Model Alignment
+Guardrails for trust, safety, and ethical development
+DecodingTrust
+Double-I Watermark
+Enhancing Privacy and Security in Large-Language Models
+A Certified Robust Watermark
+WASA
+Bileve
+LR-DWM
+DeepTextMark: A Deep Learning-Driven Text Watermarking Approach for Identifying Large Language Model Generated Text
+A Private Watermark for Large Language Models
+A Watermark-Conditioned Diffusion Model for IP Protection
+Multi-use LLM Watermarking and the False Detection Problem
+Watermarking Degrades Alignment in Language Models
+Bits Leaked per Query: Information-Theoretic Bounds on Adversarial Attacks against LLMs
+\mathcal{D}(w(x)) = 1
+FT-Shield
+Explanation as a Watermark: Towards Harmless and Multi-bit Model Ownership Verification via Watermarking Feature Attribution
+Proving membership in LLM pretraining data via data watermarks
+Securing Rag: A Risk Assessment and Mitigation Framework
+Enhancing Privacy and Security in Large-Language Models: A Zero-Knowledge Proof Approach
+Watermarking Graph Neural Networks based on Backdoor Attacks
+ZKROWNN: Zero Knowledge Right of Ownership for Neural Networks
+MUSE
+Linguistic equity gaps in watermark robustness
+WaterJudge: Quality-Detection Trade-off when Watermarking Large Language Models
+CodeMark: Imperceptible Watermarking for Code Datasets against Neural Code Completion Models
+A Survey on Detection of LLMs-Generated Content
+EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint
+The hiding virtues of ambiguity: quantifiably resilient watermarking of natural language text through synonym substitutions
+Whispers in the Machine  Confidentiality in LLM-integrated Systems
+Excuse me, sir? Your language model is leaking
+PRIVMARK
+WaterJudge  Quality-Detection Trade-off when Watermarking Large Language Models
+HuRef
+DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models
+LLM Supply Chain Provenance: A Blockchain-based Approach
+Grounding and Evaluation for Large Language Models: Practical Challenges and Lessons Learned (Survey)

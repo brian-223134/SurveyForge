@@ -1,0 +1,152 @@
+{
+ "exact_duplicates": [
+  [
+   "S0392",
+   "S0356"
+  ],
+  [
+   "S0393",
+   "S0357"
+  ],
+  [
+   "S0394",
+   "S0358"
+  ],
+  [
+   "S0396",
+   "S0362"
+  ],
+  [
+   "S0397",
+   "S0366"
+  ],
+  [
+   "S0398",
+   "S0369"
+  ],
+  [
+   "S0400",
+   "S0377"
+  ],
+  [
+   "S0458",
+   "S0443"
+  ],
+  [
+   "S0459",
+   "S0444"
+  ],
+  [
+   "S0460",
+   "S0445"
+  ],
+  [
+   "S0461",
+   "S0447"
+  ],
+  [
+   "S0462",
+   "S0448"
+  ],
+  [
+   "S0464",
+   "S0452"
+  ],
+  [
+   "S0468",
+   "S0456"
+  ]
+ ],
+ "near_duplicates_jaccard_ge_0.8": [
+  {
+   "a": "S0372",
+   "b": "S0399",
+   "jaccard": 0.983
+  },
+  {
+   "a": "S0380",
+   "b": "S0401",
+   "jaccard": 1.0
+  },
+  {
+   "a": "S0450",
+   "b": "S0463",
+   "jaccard": 0.808
+  },
+  {
+   "a": "S0453",
+   "b": "S0465",
+   "jaccard": 0.898
+  }
+ ],
+ "leaked_generation_notes": {
+  "sids": [
+   "S0359",
+   "S0360",
+   "S0361",
+   "S0363",
+   "S0364",
+   "S0365",
+   "S0367",
+   "S0368",
+   "S0370",
+   "S0371",
+   "S0373",
+   "S0374",
+   "S0375",
+   "S0376",
+   "S0378",
+   "S0379",
+   "S0381",
+   "S0382",
+   "S0383",
+   "S0384",
+   "S0385",
+   "S0386",
+   "S0387",
+   "S0388",
+   "S0389",
+   "S0390",
+   "S0391",
+   "S0446",
+   "S0449",
+   "S0450",
+   "S0451",
+   "S0455",
+   "S0457"
+  ],
+  "n": 33,
+  "words": 817
+ },
+ "duplicate_words": 469,
+ "math_brackets_as_citations": [
+  "\\mathbb{I}[61]",
+  "using a $[63]$",
+  "‘[80]’",
+  "\\Pr[104]"
+ ],
+ "citation_number_reused_for_distinct_named_papers": {
+  "marker": "[86]",
+  "section": "4.5",
+  "named_papers": [
+   "Functional Invariants To Watermark Large Transformers",
+   "Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes",
+   "Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes",
+   "WAPITI",
+   "EmbMarker",
+   "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique",
+   "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique",
+   "PLMmark",
+   "Waterfall",
+   "Provably Robust Multi-bit Watermarking for AI-generated Text via Error Correction Code",
+   "Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques"
+  ],
+  "ref_86_actual_title": "Latent Diffusion Models for Image Watermarking: A Review of Recent Trends and Future Directions"
+ },
+ "double_bracket_markers": [
+  "[52]]",
+  "[86]]"
+ ],
+ "self_citation_of_survey_title": true,
+ "placeholders": []
+}

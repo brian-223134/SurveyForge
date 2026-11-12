@@ -1,0 +1,181 @@
+[
+ {
+  "criterion": "Objective Clarity",
+  "dimension": "Information value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "1",
+    "note": "Motivation via economic/legal/societal imperatives is given."
+   },
+   {
+    "section": "1",
+    "note": "No explicit scope, research questions, contribution list, prior-survey comparison or roadmap."
+   },
+   {
+    "section": "1",
+    "note": "Objective is implicit in the 'provenance assurance stack' thesis."
+   }
+  ],
+  "anchor_justification": "An objective is present but not specific and background lacks depth (3); level 4 needs a clear objective.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Classification-Evolution Coherence",
+  "dimension": "Information value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "2.1",
+    "note": "Locus classification is clear and used in chapters 3-5."
+   },
+   {
+    "section": "3.2, 4.4",
+    "note": "Evolution narrative is rhetorical ('evolved from heuristic to cryptographic'), with no chronology."
+   },
+   {
+    "section": "2.2/4.5/6.3",
+    "note": "Chain & Hash is placed in black-box, behaviour-space, verifiable-inference and white-box categories in different sections; HuRef appears as an attack in 5.3."
+   }
+  ],
+  "anchor_justification": "Classification somewhat clear but categories overlap and are not used consistently; evolution only partially presented (3).",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Dataset & Metric Coverage",
+  "dimension": "Information value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "6.1",
+    "note": "Metrics enumerated: TPR/FPR, AUROC, BER, perplexity, GPT-4-judge, BLEU."
+   },
+   {
+    "section": "3.5, 6.2",
+    "note": "Benchmarks named (WaterBench, WaterJudge, MUSE, contamination detection) without scope, size or protocol."
+   },
+   {
+    "section": "whole",
+    "note": "Datasets (GLUE, HumanEval, TruthfulQA, ARC-Easy/MMLU) only mentioned in passing; no summary table."
+   }
+  ],
+  "anchor_justification": "Limited set with descriptions lacking detail (3); level 4 requires fairly detailed dataset descriptions.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "In-depth Comparison",
+  "dimension": "Scholarly communication value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "2.2",
+    "note": "White/gray/black-box trade-offs compared."
+   },
+   {
+    "section": "4.2",
+    "note": "Backdoor vs weight-space vs behaviour-space operational niche compared."
+   },
+   {
+    "section": "3.4",
+    "note": "Semantic invariance vs certified (smoothing/ECC) guarantees contrasted."
+   },
+   {
+    "section": "whole",
+    "note": "No comparison table or consistent dimensions; most method mentions are sequential descriptions."
+   }
+  ],
+  "anchor_justification": "Pros/cons mentioned but scattered (3); level 4 requires a clear comparison of major advantages and disadvantages.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Critical Analysis (DeepSurvey-Bench)",
+  "dimension": "Scholarly communication value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "3.4",
+    "note": "Explains semantic anchoring survives paraphrase because signal is in meaning space — basic reasoning."
+   },
+   {
+    "section": "2.1",
+    "note": "Output-space schemes non-radioactive vs parameter-space persistence — reasoned difference."
+   },
+   {
+    "section": "2.5, 4.3",
+    "note": "Many 'why' explanations are pseudo-formal (KL over product spaces, activation entropy) without grounding."
+   }
+  ],
+  "anchor_justification": "Basic analytical comments that remain superficial (3); level 4 requires meaningful interpretation of method differences.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Research Gaps",
+  "dimension": "Research guidance value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "3.5, 5.6, 6.2, 6.5, 7.2, 7.4, 8",
+    "note": "Longitudinal decay gap stated repeatedly without analysis of why it persists."
+   },
+   {
+    "section": "5.6, 6.4",
+    "note": "Cross-lingual robustness and composite-attack gaps listed."
+   },
+   {
+    "section": "5.3",
+    "note": "Structural collusion resistance gap named with a definition."
+   }
+  ],
+  "anchor_justification": "Lists some gaps but lacks in-depth analysis (3); level 4 needs analysis that is merely 'somewhat limited', whereas here gaps are mostly restated.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Future Work",
+  "dimension": "Research guidance value",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "DeepSurvey-Bench 2026",
+  "observations": [
+   {
+    "section": "2.4",
+    "note": "Cross-axis stress testing proposed."
+   },
+   {
+    "section": "4.1",
+    "note": "SDE modelling of weight drift and persistent homology — specific but unmotivated."
+   },
+   {
+    "section": "6.2, 7.2, 4.5",
+    "note": "Version-aware decay curves, jurisdiction-aware descriptors, composable assurance contracts — broad, no feasibility discussion."
+   }
+  ],
+  "anchor_justification": "Directions are broad and lack discussion of feasibility (3); level 4 requires some discussion of feasibility.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ }
+]

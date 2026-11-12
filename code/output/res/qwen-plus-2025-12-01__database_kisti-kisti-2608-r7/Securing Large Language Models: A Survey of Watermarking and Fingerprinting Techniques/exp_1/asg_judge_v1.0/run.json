@@ -1,0 +1,52 @@
+{
+ "run_id": "surveyforge_qwen-plus_kisti-r7_llm-watermarking_2026-11",
+ "survey_file": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques.md",
+ "survey_sha256": "9b4bd9521fc5716fcb82fff7cbebd3e59911513facded596adee96efac9b0aec",
+ "survey_pdf_sha256": "74442276a62029c3066fd66e6bdfd45b6e5f5c511503376ce68c996f862430c6",
+ "topic": "Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques",
+ "topic_id": "llm-watermarking",
+ "generator": "SurveyForge (KISTI fork, kisti branch) / qwen-plus-2025-12-01 @ DashScope, temperature 0.6",
+ "judge_model": "claude-opus-5-5",
+ "judge_generator_same_family": false,
+ "prompt_version": "asg-judge v1.0",
+ "elicitation": "rationale_first",
+ "date": "2026-11-11",
+ "modules": [
+  "A1",
+  "A2",
+  "B",
+  "C",
+  "D"
+ ],
+ "module_A_repeats": 3,
+ "search_policy": "limited+fulltext",
+ "search_policy_note": "Evidence = corpus abstracts (reference_metadata.json, KISTI view kisti-2608-r7) in evidence/ref_<n>.md. Web use: arXiv API / Crossref ID lookups for C1/C3; full-text checks for Module B limited to arxiv.org/abs|html|pdf pages, budget 8 per 100 claims (~19 total, ~4 per judging subagent). No general web search.",
+ "evidence_dir": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/reference_metadata.json (abstracts per paper id)",
+ "gt_survey": {
+  "refs": "/data2/chanjoong/kisti_data/candidates/csur2026_gt_refs.jsonl (slug llm-watermarking, 211 refs, 209 before cutoff)",
+  "outline": null,
+  "gt_doi": "10.1145/3773028"
+ },
+ "allowed_set": "KISTI view kisti-2608-r7 allowed set under retrieval policy (1,666,650 ids, fingerprint 675fdac8...); run_manifest.reference_violations = []",
+ "writer_input_set": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/total_ids.txt (433 ids, writing-stage retrieval pool)",
+ "cutoff_date": "2026-02-04",
+ "uncited_sample": 150,
+ "relevance_definitions": {
+  "core": "Watermarking, fingerprinting, provenance/ownership verification or source attribution of LLMs / language models, their generated text, or their training data — including attacks on, and evaluations/benchmarks of, such schemes.",
+  "adjacent": "The broader area but not the topic: watermarking/fingerprinting of non-language models or media (DNN classifiers, diffusion/image models), non-watermark AI-text detection, general LLM security/privacy/safety/alignment/copyright/governance, membership inference, LLM trustworthiness benchmarks.",
+  "unrelated": "Not about ML security, LLMs or content provenance at all (e.g., domain applications of LLMs with no security/provenance angle)."
+ },
+ "scope_definitions_D3": {
+  "on_topic": "Sentence is about watermarking/fingerprinting/provenance of LLMs, their outputs or data (incl. attacks, evaluation, deployment, governance of such schemes).",
+  "adjacent": "About watermarking of other modalities/models, or LLM security/privacy/regulation generally, without a watermark/fingerprint link.",
+  "off_topic": "Unrelated to the topic."
+ },
+ "excluded_from_rates": "verbatim duplicates (duplicate_of != null). Leaked refinement notes (artifact=true) are judged and included in main rates; an excluding-artifacts variant is also reported.",
+ "module_B_groups": {
+  "G1": "ch1-2",
+  "G2": "ch3-4",
+  "G3": "ch5,8",
+  "G4": "ch6",
+  "G5": "ch7"
+ }
+}

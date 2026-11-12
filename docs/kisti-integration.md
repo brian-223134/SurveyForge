@@ -346,3 +346,22 @@ scripts/run_kisti_r7.sh <slug> <유휴 GPU>             # setsid 로 run_demo �
 - 산출: `code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/<게재본 전체 제목>/exp_1/`, 로그는 그 위 `run_kisti_r7.log`.
 - 계정 전체 120 RPM · 1M TPM — topic 하나씩. 동시 요청 최대 MAX_SECTION_THREADS×MAX_THREADS = 16.
 - 예상 비용: r4 PoC 의 tiktoken 추정 입력 ~1.6M · 출력 ~86K 토큰 기준 편당 **~$0.7–1.0** (qwen 토크나이저·재요청에 따라 변동).
+
+### 10.4 결과 — `llm-watermarking` (2026-11-11, GPU 3, AutoSurvey 완료 뒤 단독 실행)
+
+| 항목 | 값 |
+|---|---|
+| topic | `Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques` (정책 topic 과 일치, 경고 없음) |
+| 허용 / 전체 · 지문 | 1,666,650 / 1,698,312 · `675fdac8d088420a…` (AutoSurvey 와 같음; after_cutoff day 30,243 · month 1,416 · year 3, 인덱스 내 제외 id 0) |
+| refs | 121 (DOI 38), cutoff 이후 0, 허용 위반 0 |
+| recall / precision | **27 / 209 = 12.92%** (post 포함 12.92%) / **22.31%** |
+| 누수 | GT id 0 · GT 제목 0 |
+| 집필 풀 | `total_ids.txt` 433편 중 GT 43편 (천장 20.6%) — 인용 27편 |
+| 토큰 · 비용 | 청구 입력 2,308,004 / 출력 118,866 (cached 0, reasoning 0, 호출당 최대 입력 37,343, 256K 초과 0) → **$1.0658** |
+| 호출 | completions 119, 잘림 재요청 0 · 잘림 채택 0 · 오류 재시도 0 · 429 0 · data_inspection_failed 0 |
+| 소요 | run_demo 1,506 s (25분 06초), 채점 포함 07:00:27Z → 07:25:34Z |
+| 분량 | refined 18,686 words |
+| 산출물 | `code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/<제목>/exp_1/` (+ `.tex`·`.pdf` 42쪽), 채점 `docs/experiments/score.llm-watermarking.kisti-2608-r7.json` |
+
+- `PAPER_ID_CUTOFF=2606` 경고(2608 id 1편 접근 불가)는 예상대로이며 그 1편은 cutoff 이후라 정책에서도 빠진다.
+- PDF: `code/tools/md_to_tex.py` 가 `ℓ₂`(U+2113·U+2082)·`↓` 에서 pdflatex 실패 → `ℓ`·`↑`·`↓` 와 유니코드 위/아래 첨자 블록 전체(⁰–⁹ ⁺⁻⁼⁽⁾ⁿ, ₀–₉ ₊₋₌₍₎ ₐ…ₜ, AutoSurvey 의 `⁻`·`ₚ` 포함)를 `UNICODE_MAP` 에 추가해 해결.

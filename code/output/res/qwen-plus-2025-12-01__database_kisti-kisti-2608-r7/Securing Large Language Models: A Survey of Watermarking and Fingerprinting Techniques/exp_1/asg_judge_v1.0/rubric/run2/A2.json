@@ -1,0 +1,225 @@
+[
+  {
+    "criterion": "Objective Clarity",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "1",
+        "note": "Motivation is given as three imperatives (economic IP value, legal mandates, societal misuse)."
+      },
+      {
+        "section": "1",
+        "note": "Defines watermarking as active owner-controlled embedding vs fingerprinting as passive identification, and separates both from safety/privacy/alignment."
+      },
+      {
+        "section": "1",
+        "note": "No explicit objective statement, research questions, scope boundaries, contribution list or paper roadmap; the aim is inferred from 'As we synthesize across over 50 foundational works'."
+      },
+      {
+        "section": "1",
+        "note": "The whole introduction is two paragraphs, much of it rhetoric about a 'provenance assurance stack'."
+      }
+    ],
+    "anchor_justification": "An objective is present but implicit and not specific, and the background is compressed: level 3. Level 4 requires that the objective itself be clear.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Classification-Evolution Coherence",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1-2.2",
+        "note": "Explicit classification by embedding locus (output/parameter/behavior) and detection modality (white/gray/black-box); it drives the §3/§4 split."
+      },
+      {
+        "section": "4.4",
+        "note": "Output-level methods (WaterMod, MPAC, Permute-and-Flip, CATER) are placed under parameter-space watermarking."
+      },
+      {
+        "section": "2.1, 2.2, 3.4, 6.3",
+        "note": "Same methods placed in different categories: PLMmark as parameter-space, gray-box and black-box; Chain & Hash as black-box (2.2) and as requiring white-box access (6.3)."
+      },
+      {
+        "section": "3.2",
+        "note": "Only clear evolution narrative: statistical -> cryptographic -> ECC multi-bit -> end-to-end learned."
+      },
+      {
+        "section": "4, 5",
+        "note": "No chronological development for fingerprinting or attacks; evolution claims ('paradigm shift') are asserted rather than traced."
+      }
+    ],
+    "anchor_justification": "Categories are named and used, but they overlap and are not used consistently, and evolution is only partly shown. This is level 3's wording; level 4 requires a relatively clear classification with only a few gaps.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Dataset & Metric Coverage",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "6.1",
+        "note": "Reasoned four-dimension metric taxonomy (detection calibration, quality beyond perplexity, alignment-aware robustness, payload BER)."
+      },
+      {
+        "section": "3.5, 6.2",
+        "note": "Benchmarks named: WaterBench, WaterJudge, MUSE, MEraser, Dual Attribution Benchmark, contamination watermarking on ARC-Easy/MMLU; each in one clause without scope, size or task details."
+      },
+      {
+        "section": "3.3, 4.2, 4.4",
+        "note": "Task datasets (TruthfulQA, SafetyBench, GLUE, HumanEval) are mentioned only as places where numbers were reported."
+      },
+      {
+        "section": "6.2",
+        "note": "Standard watermark evaluation resources (e.g. C4/OpenGen-style generation sets, MarkMyWords, MarkLLM) are not discussed."
+      }
+    ],
+    "anchor_justification": "Metrics are covered reasonably, but datasets are a limited set with little description. That matches level 3; level 4 requires fairly detailed dataset descriptions.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "In-depth Comparison",
+    "dimension": "Scholarly communication value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1-2.2",
+        "note": "Paradigm-level comparison along access requirement, robustness and deployability for output/parameter/behavior loci and modalities."
+      },
+      {
+        "section": "4.2-4.3",
+        "note": "Backdoor watermarking vs behavior-space fingerprinting contrasted by training control vs query-only access."
+      },
+      {
+        "section": "3.4",
+        "note": "Semantic-invariance methods contrasted with randomized smoothing/ECC on empirical vs formal robustness."
+      },
+      {
+        "section": "6.3",
+        "note": "Ad hoc cost comparison (SynthID-Text overhead, WaterMax latency, DeepTextMark >100MB vs MPAC <1MB) with unverifiable figures."
+      },
+      {
+        "section": "throughout",
+        "note": "No comparison tables and no consistent dimensions across methods; method-level contrasts are scattered and often attach properties to the wrong paper."
+      }
+    ],
+    "anchor_justification": "There is clear paradigm-level comparison, but method-level comparison is scattered and shallow. The survey sits between 3 and 4, so it gets 3.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Critical Analysis (DeepSurvey-Bench)",
+    "dimension": "Scholarly communication value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1",
+        "note": "Explains why output-space watermarks do not survive distillation: the signal lives only in emitted text."
+      },
+      {
+        "section": "3.1, 5.1",
+        "note": "Attributes failures to mechanisms: tokenizer segmentation under round-trip translation; detectors assuming i.i.d. token sampling."
+      },
+      {
+        "section": "5.1, 5.2",
+        "note": "Gives a reason for the spoofing/removal advantage: detection needs statistical significance over many tokens, mimicry does not."
+      },
+      {
+        "section": "6.3",
+        "note": "Some causal explanations look invented (WaterMax latency 'because its zero-weight-modification design cannot exploit draft-model caching')."
+      },
+      {
+        "section": "3.2 vs 2.3",
+        "note": "Contradictory explanations of whether cryptographic schemes escape the impossibility result."
+      }
+    ],
+    "anchor_justification": "There is more than basic evaluative comment, but explanations are often high-level, unsupported or contradictory. The survey sits between 3 and 4, so it gets 3.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Research Gaps",
+    "dimension": "Research guidance value",
+    "scale": "1-5",
+    "score": 4,
+    "observations": [
+      {
+        "section": "5.6",
+        "note": "Gaps analysed with reasons: synthetic perturbations underestimate human paraphrasing; composite attacks absent from benchmarks; no low-resource-language protocol."
+      },
+      {
+        "section": "5.3",
+        "note": "Names the lack of formal models of structural collusion resistance under parameter/behavior aggregation."
+      },
+      {
+        "section": "2.2, 2.4",
+        "note": "Calls for cross-axis stress testing and cross-modality p-value calibration and detection-latency bounds."
+      },
+      {
+        "section": "4.5",
+        "note": "Formal security of model-centric schemes assumes white-box, static models; argues why that fails in deployment."
+      },
+      {
+        "section": "3.5, 5.6, 6.2, 6.5, 7.2, 7.4, 8",
+        "note": "The longitudinal-persistence gap is restated about seven times without deeper analysis, and conflicts with decay studies the survey itself cites (Mark Your LLM, MUSE, WAPITI)."
+      }
+    ],
+    "anchor_justification": "Several gaps are identified with some reasoning, but depth is limited and repetition replaces analysis: level 4. Level 5 needs comprehensive, deeply analysed gaps grounded in the reviewed work, and the grounding here is often unreliable.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Future Work",
+    "dimension": "Research guidance value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.4, 3.5, 6.2",
+        "note": "Directions tied to stated gaps: cross-axis stress testing, trajectory-aware benchmarks, version-aware decay curves."
+      },
+      {
+        "section": "3.4, 5.3",
+        "note": "Specific technical proposals: semantically invariant codes inside smoothed detectors; game-theoretic fingerprint persistence over model manifolds."
+      },
+      {
+        "section": "4.1, 8",
+        "note": "Speculative proposals with no feasibility argument (SDEs for weight drift, persistent homology, blockchain-anchored provenance)."
+      },
+      {
+        "section": "7.2, 7.4",
+        "note": "Governance directions (regulatory temporal logic, jurisdiction-aware descriptors, watermark-as-contract) are stated as slogans without discussion of how to realise them."
+      },
+      {
+        "section": "3.5",
+        "note": "The only feasibility-type discussion is of existing compromises (watermark-aware drafts, deferred verification), not of the proposed directions."
+      }
+    ],
+    "anchor_justification": "Directions are numerous and partly derived from gaps, but feasibility is essentially undiscussed, so level 4's 'some discussion of feasibility' is not fully met. Level 3's lack of feasibility discussion holds, so it gets 3.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  }
+]

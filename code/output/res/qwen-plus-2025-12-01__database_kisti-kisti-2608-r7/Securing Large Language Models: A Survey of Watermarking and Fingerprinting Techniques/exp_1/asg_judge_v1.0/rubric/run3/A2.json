@@ -1,0 +1,221 @@
+[
+  {
+    "criterion": "Objective Clarity",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "1",
+        "note": "The first paragraph separates watermarking/fingerprinting from safety, privacy and alignment as 'provenance-first primitives'."
+      },
+      {
+        "section": "1",
+        "note": "The second paragraph gives a three-part motivation (economic, legal, societal) and the active watermarking vs passive fingerprinting distinction."
+      },
+      {
+        "section": "1",
+        "note": "There is no explicit objective, research questions, scope, contribution list or roadmap. 'Over 50 foundational works' is the only scope cue."
+      },
+      {
+        "section": "1",
+        "note": "The intro is two paragraphs, and background on how the field developed is missing."
+      }
+    ],
+    "anchor_justification": "An objective is present only implicitly (title plus the 'provenance assurance stack' thesis), and background and motivation are thin. That matches 3, not 4, which requires a clear objective.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Classification-Evolution Coherence",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1 / 2.2 / 2.4",
+        "note": "Defined axes: an output/parameter/behavior locus, a white/gray/black-box modality spectrum and threat axes. Chapters 3 and 4 follow the locus split."
+      },
+      {
+        "section": "3.2 / 3.4 / 4.4",
+        "note": "Evolution appears only as abstract shifts ('from heuristic statistical modulation toward cryptographic...', 'from static to adaptive'), with no years or milestones."
+      },
+      {
+        "section": "4.4",
+        "note": "Output-space multi-bit methods are classified under parameter-space."
+      },
+      {
+        "section": "2.1 / 2.2 / 3.4 / 4.2",
+        "note": "Inconsistent placement: Bileve and Chain & Hash are called behavior-space, PLMmark is black-box in one place and gray-box in another, and Functional Invariants is called 'trigger-free neuron-level watermarking'."
+      }
+    ],
+    "anchor_justification": "This matches anchor 3: the classification is somewhat vague in use, with categories that overlap or are not applied consistently, and the evolution is only partially clear. It is not 4, because the evolution is not presented as connected stages.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Dataset & Metric Coverage",
+    "dimension": "Information value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "6.1",
+        "note": "Metric taxonomy: TPR/FPR, p-value calibration, AUROC, minimum detectable length, BER, perplexity vs LLM-as-judge, safety violation rate."
+      },
+      {
+        "section": "3.x / 5.x / 7.1",
+        "note": "Scattered metric mentions: BLEU, ROUGE-L, FID, MOS, ECE."
+      },
+      {
+        "section": "6.2 / 3.5",
+        "note": "Benchmarks named: WaterBench, WaterJudge, benchmark-contamination watermarking (ARC-Easy/MMLU), 'Dual Attribution Benchmark'. MUSE is misused as a watermark-decay benchmark."
+      },
+      {
+        "section": "throughout",
+        "note": "No dataset is described (scope, size, domain), and there is no table. Standard evaluation corpora and benchmarks (C4, MarkMyWords, MarkLLM) are absent."
+      }
+    ],
+    "anchor_justification": "Metrics are reasonably covered, but datasets are named only in passing, without detail. Anchor 4 requires fairly detailed dataset descriptions, so the score is 3: a limited set with descriptions that lack detail.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "In-depth Comparison",
+    "dimension": "Scholarly communication value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1 / 2.2",
+        "note": "Paradigm-level trade-offs: the access each locus and modality needs, deployability and robustness."
+      },
+      {
+        "section": "4.2 / 4.3",
+        "note": "Explicit contrast of operational niches for backdoor, weight-space and behavior-space methods."
+      },
+      {
+        "section": "6.3",
+        "note": "Operational comparison: DeepTextMark memory versus a lightweight multi-bit scheme, SynthID versus speculative decoding, post-hoc PostMark."
+      },
+      {
+        "section": "3.1-3.3 / 5.2-5.3",
+        "note": "Within subsections, methods are mostly described one after another. There is no comparison table and no consistent dimensions across methods."
+      },
+      {
+        "section": "3.4",
+        "note": "Semantic invariance versus certified (ECC, smoothing) robustness is contrasted, but only briefly."
+      }
+    ],
+    "anchor_justification": "Differences and pros/cons are mentioned, but method-level comparison is scattered (3). The paradigm-level contrast approaches 4, yet a clear comparison of the major methods' advantages and disadvantages is not present across the survey. Between the two levels, so the lower is chosen.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Critical Analysis (DeepSurvey-Bench)",
+    "dimension": "Scholarly communication value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "3.1",
+        "note": "Explains why: low entropy gives low green-list coverage and so weak detection; tokenizer segmentation causes round-trip translation failure."
+      },
+      {
+        "section": "3.4 / 5.2",
+        "note": "Explains why semantic anchoring survives paraphrase, and why spoofing is cheaper than detection."
+      },
+      {
+        "section": "2.1",
+        "note": "Explains why parameter-space methods cannot serve closed APIs."
+      },
+      {
+        "section": "3.2 / 4.4",
+        "note": "Some explanations are technically wrong. Rejection sampling is said to inherit robustness to Unicode normalization and 'resolve' impossibility, and Permute-and-Flip is tied to draft-model coordination."
+      },
+      {
+        "section": "5.1",
+        "note": "Many explanations stay abstract ('crack between layers', 'adversarial epistemology')."
+      }
+    ],
+    "anchor_justification": "Basic 'why' explanations are present, but their errors and contradictions mean they are not technically grounded, and many stay superficial. That is 3. Anchor 4 requires meaningful interpretation, which the inaccuracies undercut.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Research Gaps",
+    "dimension": "Research guidance value",
+    "scale": "1-5",
+    "score": 4,
+    "observations": [
+      {
+        "section": "3.5 / 5.6 / 6.2 / 6.5 / 7.4",
+        "note": "Longitudinal persistence across fine-tuning and versions is repeatedly identified as a gap."
+      },
+      {
+        "section": "5.6 / 6.4 / 7.3",
+        "note": "Gaps in cross-lingual and low-resource robustness and in human-centred evaluation are identified."
+      },
+      {
+        "section": "5.3 / 2.4",
+        "note": "No formal model of structural collusion resistance, and a need for cross-axis stress testing."
+      },
+      {
+        "section": "2.3 / 4.5",
+        "note": "A gap between formal guarantees (white-box, static models) and operational settings."
+      },
+      {
+        "section": "5.6",
+        "note": "Some reasons are given (iid-noise assumptions, attackers chaining operations), but the analysis repeats rather than deepens and some figures look unanchored."
+      }
+    ],
+    "anchor_justification": "Several distinct gaps are identified, with limited-depth analysis, which is anchor 4. Score 5 is not met: the gaps are not deeply analysed with grounded reasons, and they are mostly restated across sections.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Future Work",
+    "dimension": "Research guidance value",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.2 / 2.4 / 3.4",
+        "note": "Concrete-sounding directions are tied to gaps: lower bounds on detection latency, cross-axis stress tests, ECC codes inside smoothed detectors."
+      },
+      {
+        "section": "4.1 / 4.5 / 6.5",
+        "note": "Trajectory-aware fingerprints (SDEs, persistent homology), composable assurance contracts, version-aware evaluation datasets."
+      },
+      {
+        "section": "5.1 / 7.2 / 7.5",
+        "note": "Several directions are buzzword-level: 'adversarial epistemology', 'regulatory temporal logic', 'verifiably non-instrumentalizable'."
+      },
+      {
+        "section": "8",
+        "note": "The conclusion's future work is generic (ZKPs, blockchain-anchored trails, human-centred protocols)."
+      },
+      {
+        "section": "throughout",
+        "note": "Feasibility is essentially never discussed."
+      }
+    ],
+    "anchor_justification": "Anchor 4 requires some discussion of feasibility, which is absent. Directions are numerous and partly specific, but they lack in-depth discussion of forward-looking value or feasibility, so the score is 3.",
+    "source_protocol": "DeepSurvey-Bench 2026",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  }
+]

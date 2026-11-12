@@ -1,0 +1,10 @@
+# [97] Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression
+source_url: https://arxiv.org/abs/2403.15447
+arxiv_id: 2403.15447   doi: none
+first_public: 2024-03-18
+fetch_status: ok
+printed_title: Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression
+corpus_title: Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression
+## abstract
+Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.
+## fulltext notes (optional)

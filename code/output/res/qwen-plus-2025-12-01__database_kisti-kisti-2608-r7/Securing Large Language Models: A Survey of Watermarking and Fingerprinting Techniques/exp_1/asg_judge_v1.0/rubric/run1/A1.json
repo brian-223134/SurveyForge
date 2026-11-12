@@ -1,0 +1,154 @@
+[
+ {
+  "criterion": "Coverage",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "AutoSurvey 2024",
+  "observations": [
+   {
+    "section": "3.1-3.4",
+    "note": "Output-level watermarking families (green-list/KGW, Gumbel/EXP, distortion-free, ECC multi-bit, semantic, post-hoc substitution, certified) are all named."
+   },
+   {
+    "section": "4.1-4.4",
+    "note": "Model watermarking and fingerprinting (weight-space, backdoor/instructional, EaaS, behaviour-space) covered."
+   },
+   {
+    "section": "5.2-5.5",
+    "note": "Attack landscape (stealing/spoofing, scrubbing, inhibition, radioactivity, speculative sampling) covered."
+   },
+   {
+    "section": "7.1",
+    "note": "Multimodal/cross-modal coverage is effectively absent: the subsection is leaked citation-check notes plus an uncited paragraph."
+   },
+   {
+    "section": "whole",
+    "note": "Code watermarking, publicly verifiable/detectable schemes, dataset/data watermarking and standard benchmarks (e.g., MarkMyWords) are missing or only named."
+   }
+  ],
+  "anchor_justification": "Main pillars are present so it is generally comprehensive (3); level 4 needs only very minor omissions, but multimodal, code and data watermarking are key sub-areas that are missing or empty.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Structure",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "AutoSurvey 2024",
+  "observations": [
+   {
+    "section": "2.1/3/4/5",
+    "note": "Declared locus taxonomy is actually used to organize chapters 3-5."
+   },
+   {
+    "section": "2.4 vs 5.1",
+    "note": "Threat-model taxonomy is presented twice with the same axes (near-duplicate subsections)."
+   },
+   {
+    "section": "3.5/5.6/6.x",
+    "note": "Evaluation gaps treated in three chapters; equity in 6.4 and 7.3."
+   },
+   {
+    "section": "7.1, 7.5",
+    "note": "Leaked refinement notes and a full repeated 'corrected' version of each subsection break the flow."
+   },
+   {
+    "section": "8",
+    "note": "Conclusion begins 'This subsection synthesizes'; transitions are formulaic."
+   }
+  ],
+  "anchor_justification": "Overall ordering is reasonable and most content is orderly, matching 3 which explicitly allows repeated subsections; not 4 because transitions are rigid and two subsections are locally disordered with duplicated text.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Relevance",
+  "scale": "1-5",
+  "score": 4,
+  "source_protocol": "AutoSurvey 2024",
+  "observations": [
+   {
+    "section": "2-6",
+    "note": "Content stays on watermarking/fingerprinting of LLMs."
+   },
+   {
+    "section": "7.2, 7.5",
+    "note": "Legal/governance rhetoric (EU AI Act articles, Daubert, UNESCO) with little technical link."
+   },
+   {
+    "section": "7.1, 7.5",
+    "note": "Leaked meta-notes about the survey's own citation list are unrelated to the topic."
+   },
+   {
+    "section": "1",
+    "note": "Framing against safety/privacy/alignment is appropriate."
+   }
+  ],
+  "anchor_justification": "Mostly on topic with infrequent digressions (4); not 5 because the leaked meta-notes and governance padding do not contribute to understanding the topic.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Synthesis",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "SurveyX 2025",
+  "observations": [
+   {
+    "section": "2.1-2.5",
+    "note": "A three-axis framework (locus, detection modality, security property) is proposed and referenced in later chapters."
+   },
+   {
+    "section": "2.5",
+    "note": "'Convergence is mathematically precise' product-space KL and 'risk-proportional embedding constraint' are asserted, not derived from cited work."
+   },
+   {
+    "section": "5.4",
+    "note": "Radioactivity as both defence and attack surface is a genuine cross-study theme."
+   },
+   {
+    "section": "3.2, 4.4",
+    "note": "Lineages between methods (e.g., WaterMod refining end-to-end differentiable watermarking) are claimed without support; flagged for Module B."
+   }
+  ],
+  "anchor_justification": "Identifies thematic relationships (3) but the unifying framework is largely rhetorical; level 4 requires most studies synthesized into coherent themes, while many paragraphs are lists of methods with asserted links.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ },
+ {
+  "criterion": "Critical Analysis",
+  "scale": "1-5",
+  "score": 3,
+  "source_protocol": "SurveyX 2025",
+  "observations": [
+   {
+    "section": "2.2",
+    "note": "White-box schemes infeasible for closed APIs — reasoned limitation."
+   },
+   {
+    "section": "4.1, 4.2",
+    "note": "Spectral fingerprints vs INT4 quantization; backdoor schemes need training control and are exposed to key leakage."
+   },
+   {
+    "section": "5.6",
+    "note": "Critiques evaluation practice (synthetic perturbations, missing composite attacks) with some reasoning."
+   },
+   {
+    "section": "3.2 vs 5.4",
+    "note": "Inconsistent: rejection sampling said to 'resolve' an impossibility result that §5.4 calls information-theoretically inevitable."
+   },
+   {
+    "section": "many",
+    "note": "Same longitudinal-decay gap restated ~7 times; most 'future work must' passages are generic."
+   }
+  ],
+  "anchor_justification": "Sporadic critical evaluations, shallow or inconsistent (3); level 4 requires systematic critique of most key studies, which is absent.",
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "run": 1
+ }
+]

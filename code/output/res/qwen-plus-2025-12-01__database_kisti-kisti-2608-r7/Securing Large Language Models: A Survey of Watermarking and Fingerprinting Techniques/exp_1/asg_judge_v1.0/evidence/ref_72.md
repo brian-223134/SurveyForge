@@ -1,0 +1,10 @@
+# [72] Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining
+source_url: https://doi.org/10.1109/cvpr52733.2024.01169
+arxiv_id: none   doi: 10.1109/cvpr52733.2024.01169
+first_public: 2024-06-16
+fetch_status: ok
+printed_title: Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining
+corpus_title: Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining
+## abstract
+Ensuring the legal usage of deep models is crucial to promoting trustable accountable and responsible artificial intelligence innovation. Current passport-based methods that obfuscate model functionality for license-to-use and ownership verifications suffer from capacity and quality constraints as they require retraining the owner model for new users. They are also vulnerable to advanced Expanded Residual Block ambiguity attacks. We propose Steganographic Passport which uses an invertible steganographic network to decouple license-to-use from ownership verification by hiding the user's identity images into the owner-side passport and recovering them from their respective user-side passports. An irreversible and collision-resistant hash function is used to avoid exposing the owner-side passport from the derived user-side passports and increase the uniqueness of the model signature. To safeguard both the passport and model's weights against advanced ambiguity attacks an activation-level obfuscation is proposed for the verification branch of the owner's model. By jointly training the verification and deployment branches their weights become tightly coupled. The proposed method supports agile licensing of deep models by providing a strong ownership proof and license accountability without requiring a separate model retraining for the admission of every new user. Experiment results show that our Steganographic Passport outperforms other passport-based deep model protection methods in robustness against various known attacks.
+## fulltext notes (optional)

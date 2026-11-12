@@ -1,0 +1,1212 @@
+[
+ {
+  "ref_id": 1,
+  "printed": "Guardrails for trust, safety, and ethical development and deployment of Large Language Models (LLM)",
+  "title": "Guardrails for trust, safety, and ethical development and deployment of Large Language Models (LLM)",
+  "paper_id": "10.55662/jst.2023.4605",
+  "arxiv_id": null,
+  "doi": "10.55662/jst.2023.4605",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 2,
+  "printed": "Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review",
+  "title": "Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review",
+  "paper_id": "10.3390/info15110697",
+  "arxiv_id": null,
+  "doi": "10.3390/info15110697",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 3,
+  "printed": "A survey on privacy risks and protection in large language models",
+  "title": "A survey on privacy risks and protection in large language models",
+  "paper_id": "10.1007/s44443-025-00177-1",
+  "arxiv_id": null,
+  "doi": "10.1007/s44443-025-00177-1",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 4,
+  "printed": "Large Language Model Alignment  A Survey",
+  "title": "Large Language Model Alignment  A Survey",
+  "paper_id": "2309.15025",
+  "arxiv_id": "2309.15025",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 5,
+  "printed": "Generative AI model privacy: a survey",
+  "title": "Generative AI model privacy: a survey",
+  "paper_id": "10.1007/s10462-024-11024-6",
+  "arxiv_id": null,
+  "doi": "10.1007/s10462-024-11024-6",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 6,
+  "printed": "Copyright related risks in the creation and use of ML/AI systems",
+  "title": "Copyright related risks in the creation and use of ML/AI systems",
+  "paper_id": "2405.01560",
+  "arxiv_id": "2405.01560",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 7,
+  "printed": "Embedding Watermarks into Deep Neural Networks",
+  "title": "Embedding Watermarks into Deep Neural Networks",
+  "paper_id": "1701.04082",
+  "arxiv_id": "1701.04082",
+  "doi": null,
+  "year": "2017",
+  "db_date": "2017-01-01"
+ },
+ {
+  "ref_id": 8,
+  "printed": "Auditing Data Provenance in Text-Generation Models",
+  "title": "Auditing Data Provenance in Text-Generation Models",
+  "paper_id": "10.1145/3292500.3330885",
+  "arxiv_id": null,
+  "doi": "10.1145/3292500.3330885",
+  "year": "2019",
+  "db_date": "2019-01-01"
+ },
+ {
+  "ref_id": 9,
+  "printed": "Scalable watermarking for identifying large language model outputs",
+  "title": "Scalable watermarking for identifying large language model outputs",
+  "paper_id": "10.1038/s41586-024-08025-4",
+  "arxiv_id": null,
+  "doi": "10.1038/s41586-024-08025-4",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 10,
+  "printed": "Detecting LLM-generated peer reviews",
+  "title": "Detecting LLM-generated peer reviews",
+  "paper_id": "10.1371/journal.pone.0331871",
+  "arxiv_id": null,
+  "doi": "10.1371/journal.pone.0331871",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 11,
+  "printed": "Ethical and social risks of harm from Language Models",
+  "title": "Ethical and social risks of harm from Language Models",
+  "paper_id": "2112.04359",
+  "arxiv_id": "2112.04359",
+  "doi": null,
+  "year": "2021",
+  "db_date": "2021-01-01"
+ },
+ {
+  "ref_id": 12,
+  "printed": "Medical large language models are vulnerable to data-poisoning attacks",
+  "title": "Medical large language models are vulnerable to data-poisoning attacks",
+  "paper_id": "10.1038/s41591-024-03445-1",
+  "arxiv_id": null,
+  "doi": "10.1038/s41591-024-03445-1",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 13,
+  "printed": "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense",
+  "title": "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense",
+  "paper_id": "2303.13408",
+  "arxiv_id": "2303.13408",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 14,
+  "printed": "How to Prove Your Model Belongs to You: A Blind-Watermark based  Framework to Protect Intellectual Property of DNN",
+  "title": "How to Prove Your Model Belongs to You: A Blind-Watermark based\n  Framework to Protect Intellectual Property of DNN",
+  "paper_id": "1903.01743",
+  "arxiv_id": "1903.01743",
+  "doi": null,
+  "year": "2019",
+  "db_date": "2019-01-01"
+ },
+ {
+  "ref_id": 15,
+  "printed": "EmMark: Robust Watermarks for IP Protection of Embedded Quantized Large Language Models",
+  "title": "EmMark: Robust Watermarks for IP Protection of Embedded Quantized Large Language Models",
+  "paper_id": "10.1145/3649329.3655674",
+  "arxiv_id": null,
+  "doi": "10.1145/3649329.3655674",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 16,
+  "printed": "SLIM: Stealthy Low-Coverage Black-Box Watermarking via Latent-Space Confusion Zones",
+  "title": "SLIM: Stealthy Low-Coverage Black-Box Watermarking via Latent-Space Confusion Zones",
+  "paper_id": "2601.03242",
+  "arxiv_id": "2601.03242",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 17,
+  "printed": "Model Provenance Testing for Large Language Models",
+  "title": "Model Provenance Testing for Large Language Models",
+  "paper_id": "2502.00706",
+  "arxiv_id": "2502.00706",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 18,
+  "printed": "Undetectable Watermarks for Language Models",
+  "title": "Undetectable Watermarks for Language Models",
+  "paper_id": "2306.09194",
+  "arxiv_id": "2306.09194",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 19,
+  "printed": "PLMmark: A Secure and Robust Black-Box Watermarking Framework for Pre-trained Language Models",
+  "title": "PLMmark: A Secure and Robust Black-Box Watermarking Framework for Pre-trained Language Models",
+  "paper_id": "10.1609/aaai.v37i12.26750",
+  "arxiv_id": null,
+  "doi": "10.1609/aaai.v37i12.26750",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 20,
+  "printed": "Evaluating Durability: Benchmark Insights into Multimodal Watermarking",
+  "title": "Evaluating Durability: Benchmark Insights into Multimodal Watermarking",
+  "paper_id": "2406.03728",
+  "arxiv_id": "2406.03728",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 21,
+  "printed": "Attacking LLM Watermarks by Exploiting Their Strengths",
+  "title": "Attacking LLM Watermarks by Exploiting Their Strengths",
+  "paper_id": "2402.16187",
+  "arxiv_id": "2402.16187",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 22,
+  "printed": "Functional Invariants To Watermark Large Transformers",
+  "title": "Functional Invariants To Watermark Large Transformers",
+  "paper_id": "10.1109/icassp48485.2024.10447264",
+  "arxiv_id": null,
+  "doi": "10.1109/icassp48485.2024.10447264",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 23,
+  "printed": "Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark",
+  "title": "Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark",
+  "paper_id": "10.18653/v1/2023.acl-long.423",
+  "arxiv_id": null,
+  "doi": "10.18653/v1/2023.acl-long.423",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 24,
+  "printed": "WAPITI: A Watermark for Finetuned Open-Source LLMs",
+  "title": "WAPITI: A Watermark for Finetuned Open-Source LLMs",
+  "paper_id": "2410.06467",
+  "arxiv_id": "2410.06467",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 25,
+  "printed": "Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature",
+  "title": "Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature",
+  "paper_id": "2406.01946",
+  "arxiv_id": "2406.01946",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 26,
+  "printed": "ZKROWNN: Zero Knowledge Right of Ownership for Neural Networks",
+  "title": "ZKROWNN: Zero Knowledge Right of Ownership for Neural Networks",
+  "paper_id": "10.1109/dac56929.2023.10247798",
+  "arxiv_id": null,
+  "doi": "10.1109/dac56929.2023.10247798",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 27,
+  "printed": "Cracking White-box DNN Watermarks via Invariant Neuron Transforms",
+  "title": "Cracking White-box DNN Watermarks via Invariant Neuron Transforms",
+  "paper_id": "10.1145/3580305.3599291",
+  "arxiv_id": null,
+  "doi": "10.1145/3580305.3599291",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 28,
+  "printed": "Watermark Stealing in Large Language Models",
+  "title": "Watermark Stealing in Large Language Models",
+  "paper_id": "2402.19361",
+  "arxiv_id": "2402.19361",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 29,
+  "printed": "Large Language Model Watermark Stealing With Mixed Integer Programming",
+  "title": "Large Language Model Watermark Stealing With Mixed Integer Programming",
+  "paper_id": "2405.19677",
+  "arxiv_id": "2405.19677",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 30,
+  "printed": "Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation",
+  "title": "Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation",
+  "paper_id": "2303.09732",
+  "arxiv_id": "2303.09732",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 31,
+  "printed": "Robust Distortion-free Watermarks for Language Models",
+  "title": "Robust Distortion-free Watermarks for Language Models",
+  "paper_id": "2307.15593",
+  "arxiv_id": "2307.15593",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 32,
+  "printed": "Permute-and-Flip  An optimally robust and watermarkable decoder for LLMs",
+  "title": "Permute-and-Flip  An optimally robust and watermarkable decoder for LLMs",
+  "paper_id": "2402.05864",
+  "arxiv_id": "2402.05864",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 33,
+  "printed": "AFA: Adversarial fingerprinting authentication for deep neural networks",
+  "title": "AFA: Adversarial fingerprinting authentication for deep neural networks",
+  "paper_id": "10.1016/j.comcom.2019.12.016",
+  "arxiv_id": null,
+  "doi": "10.1016/j.comcom.2019.12.016",
+  "year": "2020",
+  "db_date": "2020-01-01"
+ },
+ {
+  "ref_id": 34,
+  "printed": "Tracing Text Provenance via Context-Aware Lexical Substitution",
+  "title": "Tracing Text Provenance via Context-Aware Lexical Substitution",
+  "paper_id": "10.1609/aaai.v36i10.21415",
+  "arxiv_id": null,
+  "doi": "10.1609/aaai.v36i10.21415",
+  "year": "2022",
+  "db_date": "2022-01-01"
+ },
+ {
+  "ref_id": 35,
+  "printed": "WASA  WAtermark-based Source Attribution for Large Language  Model-Generated Data",
+  "title": "WASA  WAtermark-based Source Attribution for Large Language\n  Model-Generated Data",
+  "paper_id": "2310.00646",
+  "arxiv_id": "2310.00646",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 36,
+  "printed": "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique",
+  "title": "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique",
+  "paper_id": "2407.10887",
+  "arxiv_id": "2407.10887",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 37,
+  "printed": "WaterPool: A Watermark Mitigating Trade-offs among Imperceptibility, Efficacy and Robustness",
+  "title": "WaterPool: A Watermark Mitigating Trade-offs among Imperceptibility, Efficacy and Robustness",
+  "paper_id": "2405.13517",
+  "arxiv_id": "2405.13517",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 38,
+  "printed": "Thieves on Sesame Street! Model Extraction of BERT-based APIs",
+  "title": "Thieves on Sesame Street! Model Extraction of BERT-based APIs",
+  "paper_id": "1910.12366",
+  "arxiv_id": "1910.12366",
+  "doi": null,
+  "year": "2019",
+  "db_date": "2019-01-01"
+ },
+ {
+  "ref_id": 39,
+  "printed": "Sandcastles in the Storm: Revisiting the (Im)possibility of Strong Watermarking",
+  "title": "Sandcastles in the Storm: Revisiting the (Im)possibility of Strong Watermarking",
+  "paper_id": "2505.06827",
+  "arxiv_id": "2505.06827",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 40,
+  "printed": "A Watermark for Large Language Models",
+  "title": "A Watermark for Large Language Models",
+  "paper_id": "2301.10226",
+  "arxiv_id": "2301.10226",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 41,
+  "printed": "On the Reliability of Watermarks for Large Language Models",
+  "title": "On the Reliability of Watermarks for Large Language Models",
+  "paper_id": "2306.04634",
+  "arxiv_id": "2306.04634",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 42,
+  "printed": "Watermarking Language Models with Error Correcting Codes",
+  "title": "Watermarking Language Models with Error Correcting Codes",
+  "paper_id": "2406.10281",
+  "arxiv_id": "2406.10281",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 43,
+  "printed": "WaterMax: breaking the LLM watermark detectability-robustness-quality trade-off",
+  "title": "WaterMax: breaking the LLM watermark detectability-robustness-quality trade-off",
+  "paper_id": "2403.04808",
+  "arxiv_id": "2403.04808",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 44,
+  "printed": "A Robust Semantics-based Watermark for Large Language Model against Paraphrasing",
+  "title": "A Robust Semantics-based Watermark for Large Language Model against Paraphrasing",
+  "paper_id": "10.18653/v1/2024.findings-naacl.40",
+  "arxiv_id": null,
+  "doi": "10.18653/v1/2024.findings-naacl.40",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 45,
+  "printed": "Robust Multi-bit Natural Language Watermarking through Invariant Features",
+  "title": "Robust Multi-bit Natural Language Watermarking through Invariant Features",
+  "paper_id": "10.18653/v1/2023.acl-long.117",
+  "arxiv_id": null,
+  "doi": "10.18653/v1/2023.acl-long.117",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 46,
+  "printed": "Distortion-free Watermarks are not Truly Distortion-free under Watermark Key Collisions",
+  "title": "Distortion-free Watermarks are not Truly Distortion-free under Watermark Key Collisions",
+  "paper_id": "2406.02603",
+  "arxiv_id": "2406.02603",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 47,
+  "printed": "Aggressive Compression Enables LLM Weight Theft",
+  "title": "Aggressive Compression Enables LLM Weight Theft",
+  "paper_id": "2601.01296",
+  "arxiv_id": "2601.01296",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 48,
+  "printed": "Inhibitory Attacks on Backdoor-based Fingerprinting for Large Language Models",
+  "title": "Inhibitory Attacks on Backdoor-based Fingerprinting for Large Language Models",
+  "paper_id": "2601.04261",
+  "arxiv_id": "2601.04261",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 49,
+  "printed": "An LLM-based Framework for Fingerprinting Internet-connected Devices",
+  "title": "An LLM-based Framework for Fingerprinting Internet-connected Devices",
+  "paper_id": "10.1145/3618257.3624845",
+  "arxiv_id": null,
+  "doi": "10.1145/3618257.3624845",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 50,
+  "printed": "On the Weaknesses of Backdoor-based Model Watermarking: An Information-theoretic Perspective",
+  "title": "On the Weaknesses of Backdoor-based Model Watermarking: An Information-theoretic Perspective",
+  "paper_id": "2409.06130",
+  "arxiv_id": "2409.06130",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 51,
+  "printed": "Unlearning vs. Obfuscation: Are We Truly Removing Knowledge?",
+  "title": "Unlearning vs. Obfuscation: Are We Truly Removing Knowledge?",
+  "paper_id": "2505.02884",
+  "arxiv_id": "2505.02884",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 52,
+  "printed": "Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models",
+  "title": "Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models",
+  "paper_id": "2402.14007",
+  "arxiv_id": "2402.14007",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 53,
+  "printed": "Character-Level Perturbations Disrupt LLM Watermarks",
+  "title": "Character-Level Perturbations Disrupt LLM Watermarks",
+  "paper_id": "10.14722/ndss.2026.230138",
+  "arxiv_id": null,
+  "doi": "10.14722/ndss.2026.230138",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 54,
+  "printed": "Provably Robust Multi-bit Watermarking for AI-generated Text via Error  Correction Code",
+  "title": "Provably Robust Multi-bit Watermarking for AI-generated Text via Error\n  Correction Code",
+  "paper_id": "2401.16820",
+  "arxiv_id": "2401.16820",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 55,
+  "printed": "Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes",
+  "title": "Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes",
+  "paper_id": "10.56553/popets-2025-0126",
+  "arxiv_id": null,
+  "doi": "10.56553/popets-2025-0126",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 56,
+  "printed": "Tracing the Data Trail: A Survey of Data Provenance, Transparency and Traceability in LLMs",
+  "title": "Tracing the Data Trail: A Survey of Data Provenance, Transparency and Traceability in LLMs",
+  "paper_id": "2601.14311",
+  "arxiv_id": "2601.14311",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 57,
+  "printed": "A Systematic Review on Model Watermarking for Neural Networks",
+  "title": "A Systematic Review on Model Watermarking for Neural Networks",
+  "paper_id": "10.3389/fdata.2021.729663",
+  "arxiv_id": null,
+  "doi": "10.3389/fdata.2021.729663",
+  "year": "2021",
+  "db_date": "2021-01-01"
+ },
+ {
+  "ref_id": 58,
+  "printed": "Adaptive Text Watermark for Large Language Models",
+  "title": "Adaptive Text Watermark for Large Language Models",
+  "paper_id": "2401.13927",
+  "arxiv_id": "2401.13927",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 59,
+  "printed": "Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Large Reasoning Models",
+  "title": "Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Large Reasoning Models",
+  "paper_id": "2601.05144",
+  "arxiv_id": "2601.05144",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 60,
+  "printed": "Waterfall: Framework for Robust and Scalable Text Watermarking",
+  "title": "Waterfall: Framework for Robust and Scalable Text Watermarking",
+  "paper_id": "2407.04411",
+  "arxiv_id": "2407.04411",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 61,
+  "printed": "TimeWak: Temporal Chained-Hashing Watermark for Time Series Data",
+  "title": "TimeWak: Temporal Chained-Hashing Watermark for Time Series Data",
+  "paper_id": "2506.06407",
+  "arxiv_id": "2506.06407",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 62,
+  "printed": "Robust Watermarking of Neural Network with Exponential Weighting",
+  "title": "Robust Watermarking of Neural Network with Exponential Weighting",
+  "paper_id": "10.1145/3321705.3329808",
+  "arxiv_id": null,
+  "doi": "10.1145/3321705.3329808",
+  "year": "2019",
+  "db_date": "2019-01-01"
+ },
+ {
+  "ref_id": 63,
+  "printed": "SELF: A Robust Singular Value and Eigenvalue Approach for LLM Fingerprinting",
+  "title": "SELF: A Robust Singular Value and Eigenvalue Approach for LLM Fingerprinting",
+  "paper_id": "2512.03620",
+  "arxiv_id": "2512.03620",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 64,
+  "printed": "Learning to Watermark LLM-generated Text via Reinforcement Learning",
+  "title": "Learning to Watermark LLM-generated Text via Reinforcement Learning",
+  "paper_id": "2403.10553",
+  "arxiv_id": "2403.10553",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 65,
+  "printed": "WaterMod: Modular Token-Rank Partitioning for Probability-Balanced LLM Watermarking",
+  "title": "WaterMod: Modular Token-Rank Partitioning for Probability-Balanced LLM Watermarking",
+  "paper_id": "2511.07863",
+  "arxiv_id": "2511.07863",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 66,
+  "printed": "LLM Supply Chain Provenance: A Blockchain-based Approach",
+  "title": "LLM Supply Chain Provenance: A Blockchain-based Approach",
+  "paper_id": "10.34190/icair.4.1.3128",
+  "arxiv_id": null,
+  "doi": "10.34190/icair.4.1.3128",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 67,
+  "printed": "An Entropy-based Text Watermarking Detection Method",
+  "title": "An Entropy-based Text Watermarking Detection Method",
+  "paper_id": "2403.13485",
+  "arxiv_id": "2403.13485",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 68,
+  "printed": "Marking Code Without Breaking It: Code Watermarking for Detecting LLM-Generated Code",
+  "title": "Marking Code Without Breaking It: Code Watermarking for Detecting LLM-Generated Code",
+  "paper_id": "2502.18851",
+  "arxiv_id": "2502.18851",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 69,
+  "printed": "Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks",
+  "title": "Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks",
+  "paper_id": "2505.05190",
+  "arxiv_id": "2505.05190",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 70,
+  "printed": "A Semantic Invariant Robust Watermark for Large Language Models",
+  "title": "A Semantic Invariant Robust Watermark for Large Language Models",
+  "paper_id": "2310.06356",
+  "arxiv_id": "2310.06356",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 71,
+  "printed": "Semantic Differentiation for Tackling Challenges in Watermarking Low-Entropy Constrained Generation Outputs",
+  "title": "Semantic Differentiation for Tackling Challenges in Watermarking Low-Entropy Constrained Generation Outputs",
+  "paper_id": "2601.11629",
+  "arxiv_id": "2601.11629",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 72,
+  "printed": "Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining",
+  "title": "Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining",
+  "paper_id": "10.1109/cvpr52733.2024.01169",
+  "arxiv_id": null,
+  "doi": "10.1109/cvpr52733.2024.01169",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 73,
+  "printed": "A Survey of Text Watermarking in the Era of Large Language Models",
+  "title": "A Survey of Text Watermarking in the Era of Large Language Models",
+  "paper_id": "10.1145/3691626",
+  "arxiv_id": null,
+  "doi": "10.1145/3691626",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 74,
+  "printed": "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?",
+  "title": "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?",
+  "paper_id": "2502.11598",
+  "arxiv_id": "2502.11598",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 75,
+  "printed": "Assessing LLMs for High Stakes Applications",
+  "title": "Assessing LLMs for High Stakes Applications",
+  "paper_id": "10.1145/3639477.3639720",
+  "arxiv_id": null,
+  "doi": "10.1145/3639477.3639720",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 76,
+  "printed": "Simulate and Eliminate: Revoke Backdoors for Generative Large Language Models",
+  "title": "Simulate and Eliminate: Revoke Backdoors for Generative Large Language Models",
+  "paper_id": "10.1609/aaai.v39i1.32018",
+  "arxiv_id": null,
+  "doi": "10.1609/aaai.v39i1.32018",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 77,
+  "printed": "Securing Rag: A Risk Assessment and Mitigation Framework",
+  "title": "Securing Rag: A Risk Assessment and Mitigation Framework",
+  "paper_id": "10.1109/sds66131.2025.00024",
+  "arxiv_id": null,
+  "doi": "10.1109/sds66131.2025.00024",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 78,
+  "printed": "Lossless Copyright Protection via Intrinsic Model Fingerprinting",
+  "title": "Lossless Copyright Protection via Intrinsic Model Fingerprinting",
+  "paper_id": "2601.21252",
+  "arxiv_id": "2601.21252",
+  "doi": null,
+  "year": "2026",
+  "db_date": "2026-01-01"
+ },
+ {
+  "ref_id": 79,
+  "printed": "Instructional Fingerprinting of Large Language Models",
+  "title": "Instructional Fingerprinting of Large Language Models",
+  "paper_id": "2401.12255",
+  "arxiv_id": "2401.12255",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 80,
+  "printed": "Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs",
+  "title": "Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs",
+  "paper_id": "2502.18518",
+  "arxiv_id": "2502.18518",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 81,
+  "printed": "Watermarking Text Generated by Black-Box Language Models",
+  "title": "Watermarking Text Generated by Black-Box Language Models",
+  "paper_id": "2305.08883",
+  "arxiv_id": "2305.08883",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 82,
+  "printed": "Multi-Bit Distortion-Free Watermarking for Large Language Models",
+  "title": "Multi-Bit Distortion-Free Watermarking for Large Language Models",
+  "paper_id": "2402.16578",
+  "arxiv_id": "2402.16578",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 83,
+  "printed": "Advancing Beyond Identification: Multi-bit Watermark for Large Language Models",
+  "title": "Advancing Beyond Identification: Multi-bit Watermark for Large Language Models",
+  "paper_id": "10.18653/v1/2024.naacl-long.224",
+  "arxiv_id": null,
+  "doi": "10.18653/v1/2024.naacl-long.224",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 84,
+  "printed": "Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking",
+  "title": "Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking",
+  "paper_id": "2505.14112",
+  "arxiv_id": "2505.14112",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 85,
+  "printed": "CATER: Intellectual Property Protection on Text Generation APIs via  Conditional Watermarks",
+  "title": "CATER: Intellectual Property Protection on Text Generation APIs via\n  Conditional Watermarks",
+  "paper_id": "2209.08773",
+  "arxiv_id": "2209.08773",
+  "doi": null,
+  "year": "2022",
+  "db_date": "2022-01-01"
+ },
+ {
+  "ref_id": 86,
+  "printed": "Latent Diffusion Models for Image Watermarking: A Review of Recent Trends and Future Directions",
+  "title": "Latent Diffusion Models for Image Watermarking: A Review of Recent Trends and Future Directions",
+  "paper_id": "10.3390/electronics14010025",
+  "arxiv_id": null,
+  "doi": "10.3390/electronics14010025",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 87,
+  "printed": "Token-Specific Watermarking with Enhanced Detectability and Semantic Coherence for Large Language Models",
+  "title": "Token-Specific Watermarking with Enhanced Detectability and Semantic Coherence for Large Language Models",
+  "paper_id": "2402.18059",
+  "arxiv_id": "2402.18059",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 88,
+  "printed": "Radioactive Watermarks in Diffusion and Autoregressive Image Generative Models",
+  "title": "Radioactive Watermarks in Diffusion and Autoregressive Image Generative Models",
+  "paper_id": "2506.23731",
+  "arxiv_id": "2506.23731",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 89,
+  "printed": "Entangled Watermarks as a Defense against Model Extraction",
+  "title": "Entangled Watermarks as a Defense against Model Extraction",
+  "paper_id": "2002.12200",
+  "arxiv_id": "2002.12200",
+  "doi": null,
+  "year": "2020",
+  "db_date": "2020-01-01"
+ },
+ {
+  "ref_id": 90,
+  "printed": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
+  "title": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
+  "paper_id": "2506.00359",
+  "arxiv_id": "2506.00359",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 91,
+  "printed": "Universal and Transferable Adversarial Attacks on Aligned Language  Models",
+  "title": "Universal and Transferable Adversarial Attacks on Aligned Language\n  Models",
+  "paper_id": "2307.15043",
+  "arxiv_id": "2307.15043",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 92,
+  "printed": "BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models",
+  "title": "BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models",
+  "paper_id": "10.1109/cvpr52734.2025.02785",
+  "arxiv_id": null,
+  "doi": "10.1109/cvpr52734.2025.02785",
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 93,
+  "printed": "Test-Time Backdoor Attacks on Multimodal Large Language Models",
+  "title": "Test-Time Backdoor Attacks on Multimodal Large Language Models",
+  "paper_id": "2402.08577",
+  "arxiv_id": "2402.08577",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 94,
+  "printed": "Signal Watermark on Large Language Models",
+  "title": "Signal Watermark on Large Language Models",
+  "paper_id": "2410.06545",
+  "arxiv_id": "2410.06545",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 95,
+  "printed": "DeepSigns: A Generic Watermarking Framework for IP Protection of Deep  Learning Models",
+  "title": "DeepSigns: A Generic Watermarking Framework for IP Protection of Deep\n  Learning Models",
+  "paper_id": "1804.00750",
+  "arxiv_id": "1804.00750",
+  "doi": null,
+  "year": "2018",
+  "db_date": "2018-01-01"
+ },
+ {
+  "ref_id": 96,
+  "printed": "Fingerprinting LLMs via Prompt Injection",
+  "title": "Fingerprinting LLMs via Prompt Injection",
+  "paper_id": "2509.25448",
+  "arxiv_id": "2509.25448",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 97,
+  "printed": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+  "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+  "paper_id": "2403.15447",
+  "arxiv_id": "2403.15447",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 98,
+  "printed": "A Framework for Cost-Effective and Self-Adaptive LLM Shaking and Recovery Mechanism",
+  "title": "A Framework for Cost-Effective and Self-Adaptive LLM Shaking and Recovery Mechanism",
+  "paper_id": "2403.07283",
+  "arxiv_id": "2403.07283",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 99,
+  "printed": "DeepTextMark: A Deep Learning-Driven Text Watermarking Approach for Identifying Large Language Model Generated Text",
+  "title": "DeepTextMark: A Deep Learning-Driven Text Watermarking Approach for Identifying Large Language Model Generated Text",
+  "paper_id": "10.1109/access.2024.3376693",
+  "arxiv_id": null,
+  "doi": "10.1109/access.2024.3376693",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 100,
+  "printed": "A Private Watermark for Large Language Models",
+  "title": "A Private Watermark for Large Language Models",
+  "paper_id": "2307.16230",
+  "arxiv_id": "2307.16230",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 101,
+  "printed": "A Watermark-Conditioned Diffusion Model for IP Protection",
+  "title": "A Watermark-Conditioned Diffusion Model for IP Protection",
+  "paper_id": "2403.10893",
+  "arxiv_id": "2403.10893",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 102,
+  "printed": "Multi-use LLM Watermarking and the False Detection Problem",
+  "title": "Multi-use LLM Watermarking and the False Detection Problem",
+  "paper_id": "2506.15975",
+  "arxiv_id": "2506.15975",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 103,
+  "printed": "Bits Leaked per Query: Information-Theoretic Bounds on Adversarial Attacks against LLMs",
+  "title": "Bits Leaked per Query: Information-Theoretic Bounds on Adversarial Attacks against LLMs",
+  "paper_id": "2510.17000",
+  "arxiv_id": "2510.17000",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 104,
+  "printed": "Autoregressive Images Watermarking through Lexical Biasing: An Approach Resistant to Regeneration Attack",
+  "title": "Autoregressive Images Watermarking through Lexical Biasing: An Approach Resistant to Regeneration Attack",
+  "paper_id": "2506.01011",
+  "arxiv_id": "2506.01011",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 105,
+  "printed": "DuFFin: A Dual-Level Fingerprinting Framework for LLMs IP Protection",
+  "title": "DuFFin: A Dual-Level Fingerprinting Framework for LLMs IP Protection",
+  "paper_id": "2505.16530",
+  "arxiv_id": "2505.16530",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 106,
+  "printed": "Explanation as a Watermark: Towards Harmless and Multi-bit Model Ownership Verification via Watermarking Feature Attribution",
+  "title": "Explanation as a Watermark: Towards Harmless and Multi-bit Model Ownership Verification via Watermarking Feature Attribution",
+  "paper_id": "2405.04825",
+  "arxiv_id": "2405.04825",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 107,
+  "printed": "Proving membership in LLM pretraining data via data watermarks",
+  "title": "Proving membership in LLM pretraining data via data watermarks",
+  "paper_id": "2402.10892",
+  "arxiv_id": "2402.10892",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 108,
+  "printed": "Enhancing Privacy and Security in Large-Language Models: A Zero-Knowledge Proof Approach",
+  "title": "Enhancing Privacy and Security in Large-Language Models: A Zero-Knowledge Proof Approach",
+  "paper_id": "10.34190/iccws.19.1.2096",
+  "arxiv_id": null,
+  "doi": "10.34190/iccws.19.1.2096",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 109,
+  "printed": "Watermarking Graph Neural Networks based on Backdoor Attacks",
+  "title": "Watermarking Graph Neural Networks based on Backdoor Attacks",
+  "paper_id": "10.1109/eurosp57164.2023.00072",
+  "arxiv_id": null,
+  "doi": "10.1109/eurosp57164.2023.00072",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 110,
+  "printed": "Audio Is the Achilles' Heel: Red Teaming Audio Large Multimodal Models",
+  "title": "Audio Is the Achilles' Heel: Red Teaming Audio Large Multimodal Models",
+  "paper_id": "2410.23861",
+  "arxiv_id": "2410.23861",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 111,
+  "printed": "WaterJudge  Quality-Detection Trade-off when Watermarking Large Language  Models",
+  "title": "WaterJudge  Quality-Detection Trade-off when Watermarking Large Language\n  Models",
+  "paper_id": "2403.19548",
+  "arxiv_id": "2403.19548",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 112,
+  "printed": "CodeMark: Imperceptible Watermarking for Code Datasets against Neural Code Completion Models",
+  "title": "CodeMark: Imperceptible Watermarking for Code Datasets against Neural Code Completion Models",
+  "paper_id": "10.1145/3611643.3616297",
+  "arxiv_id": null,
+  "doi": "10.1145/3611643.3616297",
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 113,
+  "printed": "A Survey on Detection of LLMs-Generated Content",
+  "title": "A Survey on Detection of LLMs-Generated Content",
+  "paper_id": "2310.15654",
+  "arxiv_id": "2310.15654",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 114,
+  "printed": "EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint",
+  "title": "EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint",
+  "paper_id": "2509.03058",
+  "arxiv_id": "2509.03058",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 115,
+  "printed": "The hiding virtues of ambiguity: quantifiably resilient watermarking of natural language text through synonym substitutions",
+  "title": "The hiding virtues of ambiguity: quantifiably resilient watermarking of natural language text through synonym substitutions",
+  "paper_id": "10.1145/1161366.1161397",
+  "arxiv_id": null,
+  "doi": "10.1145/1161366.1161397",
+  "year": "2006",
+  "db_date": "2006-01-01"
+ },
+ {
+  "ref_id": 116,
+  "printed": "Whispers in the Machine  Confidentiality in LLM-integrated Systems",
+  "title": "Whispers in the Machine  Confidentiality in LLM-integrated Systems",
+  "paper_id": "2402.06922",
+  "arxiv_id": "2402.06922",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 117,
+  "printed": "Stealing Part of a Production Language Model",
+  "title": "Stealing Part of a Production Language Model",
+  "paper_id": "2403.06634",
+  "arxiv_id": "2403.06634",
+  "doi": null,
+  "year": "2024",
+  "db_date": "2024-01-01"
+ },
+ {
+  "ref_id": 118,
+  "printed": "Position: LLM Watermarking Should Align Stakeholders' Incentives for Practical Adoption",
+  "title": "Position: LLM Watermarking Should Align Stakeholders' Incentives for Practical Adoption",
+  "paper_id": "2510.18333",
+  "arxiv_id": "2510.18333",
+  "doi": null,
+  "year": "2025",
+  "db_date": "2025-01-01"
+ },
+ {
+  "ref_id": 119,
+  "printed": "HuRef: HUman-REadable Fingerprint for Large Language Models",
+  "title": "HuRef: HUman-REadable Fingerprint for Large Language Models",
+  "paper_id": "2312.04828",
+  "arxiv_id": "2312.04828",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 120,
+  "printed": "DecodingTrust  A Comprehensive Assessment of Trustworthiness in GPT  Models",
+  "title": "DecodingTrust  A Comprehensive Assessment of Trustworthiness in GPT\n  Models",
+  "paper_id": "2306.11698",
+  "arxiv_id": "2306.11698",
+  "doi": null,
+  "year": "2023",
+  "db_date": "2023-01-01"
+ },
+ {
+  "ref_id": 121,
+  "printed": "Grounding and Evaluation for Large Language Models: Practical Challenges and Lessons Learned (Survey)",
+  "title": "Grounding and Evaluation for Large Language Models: Practical Challenges and Lessons Learned (Survey)",
+  "paper_id": "10.1145/3637528.3671467",
+  "arxiv_id": null,
+  "doi": "10.1145/3637528.3671467",
+  "year": "2024",
+  "db_date": "2024-01-01"
+ }
+]

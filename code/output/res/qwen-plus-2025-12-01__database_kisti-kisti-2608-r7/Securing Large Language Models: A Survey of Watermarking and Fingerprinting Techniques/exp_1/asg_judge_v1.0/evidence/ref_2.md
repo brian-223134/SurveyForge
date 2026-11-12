@@ -1,0 +1,10 @@
+# [2] Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review
+source_url: https://doi.org/10.3390/info15110697
+arxiv_id: none   doi: 10.3390/info15110697
+first_public: 2024-11-04
+fetch_status: ok
+printed_title: Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review
+corpus_title: Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review
+## abstract
+Generative AI, including large language models (LLMs), has transformed the paradigm of data generation and creative content, but this progress raises critical privacy concerns, especially when models are trained on sensitive data. This review provides a comprehensive overview of privacy-preserving techniques aimed at safeguarding data privacy in generative AI, such as differential privacy (DP), federated learning (FL), homomorphic encryption (HE), and secure multi-party computation (SMPC). These techniques mitigate risks like model inversion, data leakage, and membership inference attacks, which are particularly relevant to LLMs. Additionally, the review explores emerging solutions, including privacy-enhancing technologies and post-quantum cryptography, as future directions for enhancing privacy in generative AI systems. Recognizing that achieving absolute privacy is mathematically impossible, the review emphasizes the necessity of aligning technical safeguards with legal and regulatory frameworks to ensure compliance with data protection laws. By discussing the ethical and legal implications of privacy risks in generative AI, the review underscores the need for a balanced approach that considers performance, scalability, and privacy preservation. The findings highlight the need for ongoing research and innovation to develop privacy-preserving techniques that keep pace with the scaling of generative AI, especially in large language models, while adhering to regulatory and ethical standards.
+## fulltext notes (optional)

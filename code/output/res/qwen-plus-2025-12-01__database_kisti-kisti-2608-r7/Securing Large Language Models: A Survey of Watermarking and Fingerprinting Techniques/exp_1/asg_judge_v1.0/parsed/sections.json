@@ -1,0 +1,236 @@
+[
+ {
+  "num": "1",
+  "title": "Introduction",
+  "level": 1,
+  "words": 351
+ },
+ {
+  "num": "2",
+  "title": "Foundations and Taxonomy of Watermarking and Fingerprinting Paradigms",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "2.1",
+  "title": "Tripartite Embedding Locus Taxonomy: Output, Parameter, and Behavior Spaces",
+  "level": 2,
+  "words": 403
+ },
+ {
+  "num": "2.2",
+  "title": "Detection Modality Spectrum: From White-Box Verification to Black-Box Auditing",
+  "level": 2,
+  "words": 551
+ },
+ {
+  "num": "2.3",
+  "title": "Formal Security Properties: A Unified Information-Theoretic and Cryptographic Framework",
+  "level": 2,
+  "words": 355
+ },
+ {
+  "num": "2.4",
+  "title": "Threat Model Taxonomy: Adversary Capabilities, Goals, and Attack Surfaces",
+  "level": 2,
+  "words": 785
+ },
+ {
+  "num": "2.5",
+  "title": "Interoperability and Cross-Paradigm Convergence: Bridging Watermarking and Fingerprinting",
+  "level": 2,
+  "words": 557
+ },
+ {
+  "num": "3",
+  "title": "Technical Architectures for Output-Level Watermarking",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "3.1",
+  "title": "Statistical Sampling-Based Watermarking: Foundations, Variants, and Token-Level Trade-offs",
+  "level": 2,
+  "words": 365
+ },
+ {
+  "num": "3.2",
+  "title": "Cryptographic and Learning-Based Watermark Embedding: From Rejection Sampling to End-to-End Differentiable Decoders",
+  "level": 2,
+  "words": 512
+ },
+ {
+  "num": "3.3",
+  "title": "Context-Aware and Adaptive Watermarking: Semantic Integrity, Alignment Preservation, and Risk-Guided Modulation",
+  "level": 2,
+  "words": 395
+ },
+ {
+  "num": "3.4",
+  "title": "Robustness Engineering and Attack-Aware Design: Paraphrase Resilience, Black-Box Deployment, and Certified Guarantees",
+  "level": 2,
+  "words": 566
+ },
+ {
+  "num": "3.5",
+  "title": "Evaluation, Benchmarking, and Operational Realities: Beyond Detection Accuracy to Holistic System Assessment",
+  "level": 2,
+  "words": 344
+ },
+ {
+  "num": "4",
+  "title": "Model-Centric Fingerprinting and Parameter-Space Watermarking",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "4.1",
+  "title": "Weight-Space Fingerprinting: Intrinsic Model Identity from Parameter Geometry",
+  "level": 2,
+  "words": 422
+ },
+ {
+  "num": "4.2",
+  "title": "Backdoor-Based Parameter-Space Watermarking: Lightweight, Secret-Key–Driven Ownership Imprinting",
+  "level": 2,
+  "words": 448
+ },
+ {
+  "num": "4.3",
+  "title": "Behavior-Space Fingerprinting: Black-Box Provenance from Statistical Biases and Activation Signatures",
+  "level": 2,
+  "words": 447
+ },
+ {
+  "num": "4.4",
+  "title": "Adaptive and Multi-Layer Parameter-Space Watermarking: From Static Embedding to Dynamic Integrity Binding",
+  "level": 2,
+  "words": 485
+ },
+ {
+  "num": "4.5",
+  "title": "Formal Security, Practical Robustness, and Governance Constraints of Model-Centric Techniques",
+  "level": 2,
+  "words": 482
+ },
+ {
+  "num": "5",
+  "title": "Robustness, Adversarial Vulnerabilities, and Attack Taxonomies",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "5.1",
+  "title": "Taxonomy of Adversarial Capabilities and Threat Models",
+  "level": 2,
+  "words": 475
+ },
+ {
+  "num": "5.2",
+  "title": "Output-Space Attack Vectors: From Semantic Scrubbing to Covert Spoofing",
+  "level": 2,
+  "words": 675
+ },
+ {
+  "num": "5.3",
+  "title": "Parameter- and Behavior-Space Attacks: Erasure, Neutralization, and Collusion",
+  "level": 2,
+  "words": 427
+ },
+ {
+  "num": "5.4",
+  "title": "Radioactivity Exploitation and Knowledge Distillation–Based Attacks",
+  "level": 2,
+  "words": 583
+ },
+ {
+  "num": "5.5",
+  "title": "Systemic and Cross-Modal Attack Surfaces: From Speculative Sampling to Multimodal Consistency",
+  "level": 2,
+  "words": 375
+ },
+ {
+  "num": "5.6",
+  "title": "Evaluation Gaps and Methodological Vulnerabilities in Robustness Assessment",
+  "level": 2,
+  "words": 417
+ },
+ {
+  "num": "6",
+  "title": "Evaluation Frameworks, Benchmarks, and Real-World Deployment Constraints",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "6.1",
+  "title": "Multidimensional Evaluation Taxonomy for Watermarking and Fingerprinting",
+  "level": 2,
+  "words": 336
+ },
+ {
+  "num": "6.2",
+  "title": "Benchmark Architectures for Holistic and Adversarial Validation",
+  "level": 2,
+  "words": 578
+ },
+ {
+  "num": "6.3",
+  "title": "Operational Realities: Latency, Compatibility, and System Integration Constraints",
+  "level": 2,
+  "words": 415
+ },
+ {
+  "num": "6.4",
+  "title": "Human-Centered and Socio-Technical Evaluation Gaps",
+  "level": 2,
+  "words": 555
+ },
+ {
+  "num": "6.5",
+  "title": "Towards Verified and Standardized Evaluation Protocols",
+  "level": 2,
+  "words": 321
+ },
+ {
+  "num": "7",
+  "title": "Cross-Domain Extensions, Governance Integration, and Socio-Technical Implications",
+  "level": 1,
+  "words": 0
+ },
+ {
+  "num": "7.1",
+  "title": "Multimodal and Cross-Modal Watermarking Architectures",
+  "level": 2,
+  "words": 1353
+ },
+ {
+  "num": "7.2",
+  "title": "Regulatory-Aware Watermarking Design and Forensic Admissibility",
+  "level": 2,
+  "words": 485
+ },
+ {
+  "num": "7.3",
+  "title": "Equity, Bias, and Human-Centered Evaluation Frameworks",
+  "level": 2,
+  "words": 399
+ },
+ {
+  "num": "7.4",
+  "title": "System-Level Integration and Ecosystem Viability",
+  "level": 2,
+  "words": 517
+ },
+ {
+  "num": "7.5",
+  "title": "Ethical Governance and Dual-Use Risk Mitigation",
+  "level": 2,
+  "words": 877
+ },
+ {
+  "num": "8",
+  "title": "Conclusion",
+  "level": 1,
+  "words": 399
+ }
+]

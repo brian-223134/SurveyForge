@@ -1,0 +1,10 @@
+# [31] Robust Distortion-free Watermarks for Language Models
+source_url: https://arxiv.org/abs/2307.15593
+arxiv_id: 2307.15593   doi: none
+first_public: 2023-07-28
+fetch_status: ok
+printed_title: Robust Distortion-free Watermarks for Language Models
+corpus_title: Robust Distortion-free Watermarks for Language Models
+## abstract
+We propose a methodology for planting watermarks in text from an autoregressive language model that are robust to perturbations without changing the distribution over text up to a certain maximum generation budget. We generate watermarked text by mapping a sequence of random numbers---which we compute using a randomized watermark key---to a sample from the language model. To detect watermarked text, any party who knows the key can align the text to the random number sequence. We instantiate our watermark methodology with two sampling schemes: inverse transform sampling and exponential minimum sampling. We apply these watermarks to three language models---OPT-1.3B, LLaMA-7B and Alpaca-7B---to experimentally validate their statistical power and robustness to various paraphrasing attacks. Notably, for both the OPT-1.3B and LLaMA-7B models, we find we can reliably detect watermarked text ($p 0.01$) from $35$ tokens even after corrupting between $40$-$50$ % of the tokens via random edits (i.e., substitutions, insertions or deletions). For the Alpaca-7B model, we conduct a case study on the feasibility of watermarking responses to typical user instructions. Due to the lower entropy of the responses, detection is more difficult: around $25 %$ of the responses---whose median length is around $100$ tokens---are detectable with $p 0.01$, and the watermark is also less robust to certain automated paraphrasing attacks we implement. We release all code publicly at https://github.com/jthickstun/watermark .
+## fulltext notes (optional)

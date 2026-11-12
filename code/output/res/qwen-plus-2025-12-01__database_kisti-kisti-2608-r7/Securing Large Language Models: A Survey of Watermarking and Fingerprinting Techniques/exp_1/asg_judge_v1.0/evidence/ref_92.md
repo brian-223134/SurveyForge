@@ -1,0 +1,10 @@
+# [92] BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models
+source_url: https://doi.org/10.1109/cvpr52734.2025.02785
+arxiv_id: none   doi: 10.1109/cvpr52734.2025.02785
+first_public: 2025-06-10
+fetch_status: ok
+printed_title: BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models
+corpus_title: BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models
+## abstract
+Multi-modal large language models (MLLMs) extend large language models (LLMs) to process multi-modal information, enabling them to generate responses to image-text inputs. MLLMs have been incorporated into diverse multi-modal applications, such as autonomous driving and medical diagnosis, via plug-and-play without fine-tuning. This deployment paradigm increases the vulnerability of MLLMs to backdoor attacks. However, existing backdoor attacks against MLLMs achieve limited effectiveness and stealthiness. In this work, we propose BadToken, the first token-level backdoor attack to MLLMs. BadToken introduces two novel backdoor behaviors: Token-substitution and Token-addition, which enable flexible and stealthy attacks by making token-level modifications to the original output for backdoored inputs. We formulate a general optimization problem that considers the two backdoor behaviors to maximize the attack effectiveness. We evaluate BadToken on two open-source MLLMs and various tasks. Our results show that our attack maintains the model's utility while achieving high attack success rates and stealthiness. We also show the real-world threats of BadToken in two scenarios, i.e., autonomous driving and medical diagnosis. Furthermore, we consider defenses including fine-tuning and input purification. Our results highlight the threat of our attack.
+## fulltext notes (optional)

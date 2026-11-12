@@ -1,0 +1,10 @@
+# [89] Entangled Watermarks as a Defense against Model Extraction
+source_url: https://arxiv.org/abs/2002.12200
+arxiv_id: 2002.12200   doi: none
+first_public: 2020-02-27
+fetch_status: ok
+printed_title: Entangled Watermarks as a Defense against Model Extraction
+corpus_title: Entangled Watermarks as a Defense against Model Extraction
+## abstract
+Machine learning involves expensive data collection and training procedures. Model owners may be concerned that valuable intellectual property can be leaked if adversaries mount model extraction attacks. As it is difficult to defend against model extraction without sacrificing significant prediction accuracy, watermarking instead leverages unused model capacity to have the model overfit to outlier input-output pairs. Such pairs are watermarks, which are not sampled from the task distribution and are only known to the defender. The defender then demonstrates knowledge of the input-output pairs to claim ownership of the model at inference. The effectiveness of watermarks remains limited because they are distinct from the task distribution and can thus be easily removed through compression or other forms of knowledge transfer. We introduce Entangled Watermarking Embeddings (EWE). Our approach encourages the model to learn features for classifying data that is sampled from the task distribution and data that encodes watermarks. An adversary attempting to remove watermarks that are entangled with legitimate data is also forced to sacrifice performance on legitimate data. Experiments on MNIST, Fashion-MNIST, CIFAR-10, and Speech Commands validate that the defender can claim model ownership with 95\% confidence with less than 100 queries to the stolen copy, at a modest cost below 0.81 percentage points on average in the defended model's performance.
+## fulltext notes (optional)

@@ -1,0 +1,932 @@
+{
+ "run": {
+  "run_id": "surveyforge_qwen-plus_kisti-r7_llm-watermarking_2026-11",
+  "survey_file": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques.md",
+  "survey_sha256": "9b4bd9521fc5716fcb82fff7cbebd3e59911513facded596adee96efac9b0aec",
+  "survey_pdf_sha256": "74442276a62029c3066fd66e6bdfd45b6e5f5c511503376ce68c996f862430c6",
+  "topic": "Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques",
+  "topic_id": "llm-watermarking",
+  "generator": "SurveyForge (KISTI fork, kisti branch) / qwen-plus-2025-12-01 @ DashScope, temperature 0.6",
+  "judge_model": "claude-opus-5-5",
+  "judge_generator_same_family": false,
+  "prompt_version": "asg-judge v1.0",
+  "elicitation": "rationale_first",
+  "date": "2026-11-11",
+  "modules": [
+   "A1",
+   "A2",
+   "B",
+   "C",
+   "D"
+  ],
+  "module_A_repeats": 3,
+  "search_policy": "limited+fulltext",
+  "search_policy_note": "Evidence = corpus abstracts (reference_metadata.json, KISTI view kisti-2608-r7) in evidence/ref_<n>.md. Web use: arXiv API / Crossref ID lookups for C1/C3; full-text checks for Module B limited to arxiv.org/abs|html|pdf pages, budget 8 per 100 claims (~19 total, ~4 per judging subagent). No general web search.",
+  "evidence_dir": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/reference_metadata.json (abstracts per paper id)",
+  "gt_survey": {
+   "refs": "/data2/chanjoong/kisti_data/candidates/csur2026_gt_refs.jsonl (slug llm-watermarking, 211 refs, 209 before cutoff)",
+   "outline": null,
+   "gt_doi": "10.1145/3773028"
+  },
+  "allowed_set": "KISTI view kisti-2608-r7 allowed set under retrieval policy (1,666,650 ids, fingerprint 675fdac8...); run_manifest.reference_violations = []",
+  "writer_input_set": "/data2/chanjoong/survey-agent/SurveyForge/code/output/res/qwen-plus-2025-12-01__database_kisti-kisti-2608-r7/Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques/exp_1/total_ids.txt (433 ids, writing-stage retrieval pool)",
+  "cutoff_date": "2026-02-04",
+  "uncited_sample": 150,
+  "relevance_definitions": {
+   "core": "Watermarking, fingerprinting, provenance/ownership verification or source attribution of LLMs / language models, their generated text, or their training data — including attacks on, and evaluations/benchmarks of, such schemes.",
+   "adjacent": "The broader area but not the topic: watermarking/fingerprinting of non-language models or media (DNN classifiers, diffusion/image models), non-watermark AI-text detection, general LLM security/privacy/safety/alignment/copyright/governance, membership inference, LLM trustworthiness benchmarks.",
+   "unrelated": "Not about ML security, LLMs or content provenance at all (e.g., domain applications of LLMs with no security/provenance angle)."
+  },
+  "scope_definitions_D3": {
+   "on_topic": "Sentence is about watermarking/fingerprinting/provenance of LLMs, their outputs or data (incl. attacks, evaluation, deployment, governance of such schemes).",
+   "adjacent": "About watermarking of other modalities/models, or LLM security/privacy/regulation generally, without a watermark/fingerprint link.",
+   "off_topic": "Unrelated to the topic."
+  },
+  "excluded_from_rates": "verbatim duplicates (duplicate_of != null). Leaked refinement notes (artifact=true) are judged and included in main rates; an excluding-artifacts variant is also reported.",
+  "module_B_groups": {
+   "G1": "ch1-2",
+   "G2": "ch3-4",
+   "G3": "ch5,8",
+   "G4": "ch6",
+   "G5": "ch7"
+  }
+ },
+ "rubric": {
+  "A1": {
+   "Coverage": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Structure": {
+    "scores": [
+     3,
+     2,
+     3
+    ],
+    "mean": 2.67,
+    "range": [
+     2,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Relevance": {
+    "scores": [
+     4,
+     3,
+     3
+    ],
+    "mean": 3.33,
+    "range": [
+     3,
+     4
+    ],
+    "scale": "1-5"
+   },
+   "Synthesis": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Critical Analysis": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   }
+  },
+  "A2": {
+   "Objective Clarity": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Classification-Evolution Coherence": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Dataset & Metric Coverage": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "In-depth Comparison": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Critical Analysis (DeepSurvey-Bench)": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   },
+   "Research Gaps": {
+    "scores": [
+     3,
+     4,
+     4
+    ],
+    "mean": 3.67,
+    "range": [
+     3,
+     4
+    ],
+    "scale": "1-5"
+   },
+   "Future Work": {
+    "scores": [
+     3,
+     3,
+     3
+    ],
+    "mean": 3,
+    "range": [
+     3,
+     3
+    ],
+    "scale": "1-5"
+   }
+  },
+  "A2_dimensions": {
+   "Information value": 3,
+   "Scholarly communication value": 3,
+   "Research guidance value": 3.335
+  },
+  "A2_overall_mean": 3.096,
+  "A2_select": false,
+  "A1_mean": 3.0,
+  "judge_model": "claude-opus-5-5",
+  "prompt_version": "asg-judge v1.0",
+  "n_runs": 3
+ },
+ "citation_strict": {
+  "n_judged": 234,
+  "n_pairs": 403,
+  "recall_strict": {
+   "value": 0.0641,
+   "num": 15,
+   "den": 234
+  },
+  "recall_strict_ci": [
+   0.0392,
+   0.1031
+  ],
+  "recall_lenient": {
+   "value": 0.3889,
+   "num": 91,
+   "den": 234
+  },
+  "precision_strict": {
+   "value": 0.1315,
+   "num": 53,
+   "den": 403
+  },
+  "precision_lenient": {
+   "value": 0.3499,
+   "num": 141,
+   "den": 403
+  },
+  "major_rate": {
+   "value": 0.7607,
+   "num": 178,
+   "den": 234
+  },
+  "world_false_rate": {
+   "value": 0.2692,
+   "num": 63,
+   "den": 234
+  },
+  "contradiction_rate": {
+   "value": 0.2137,
+   "num": 50,
+   "den": 234
+  },
+  "nei_rate": {
+   "value": 0.0,
+   "num": 0,
+   "den": 234
+  },
+  "synthesis_support": {
+   "value": 0.0172,
+   "num": 1,
+   "den": 58
+  },
+  "sentence_label_counts": {
+   "SUPPORTED": 15,
+   "PARTIAL": 76,
+   "NOT_SUPPORTED": 93,
+   "CONTRADICTED": 50
+  },
+  "pair_label_counts": {
+   "SUPPORTED": 53,
+   "PARTIAL": 88,
+   "NOT_SUPPORTED": 206,
+   "CONTRADICTED": 56
+  },
+  "error_types": {
+   "baseless_addition": 76,
+   "scope_overgeneralization": 30,
+   "misattribution": 166,
+   "contradiction": 55,
+   "fabricated_relation": 15,
+   "self_structure_citation": 8
+  },
+  "by_claim_type": {
+   "comparative": {
+    "CONTRADICTED": 2,
+    "PARTIAL": 3,
+    "NOT_SUPPORTED": 2
+   },
+   "descriptive": {
+    "PARTIAL": 26,
+    "CONTRADICTED": 23,
+    "SUPPORTED": 9,
+    "NOT_SUPPORTED": 23
+   },
+   "future_or_opinion": {
+    "PARTIAL": 6,
+    "NOT_SUPPORTED": 7,
+    "SUPPORTED": 2
+   },
+   "generic_background": {
+    "SUPPORTED": 2,
+    "PARTIAL": 2,
+    "NOT_SUPPORTED": 4
+   },
+   "meta_self": {
+    "PARTIAL": 4,
+    "NOT_SUPPORTED": 9
+   },
+   "quantitative": {
+    "NOT_SUPPORTED": 26,
+    "CONTRADICTED": 17,
+    "PARTIAL": 8,
+    "SUPPORTED": 1
+   },
+   "synthesis": {
+    "CONTRADICTED": 8,
+    "PARTIAL": 27,
+    "NOT_SUPPORTED": 22,
+    "SUPPORTED": 1
+   }
+  },
+  "by_chapter": {
+   "1": {
+    "SUPPORTED": 2,
+    "PARTIAL": 4,
+    "NOT_SUPPORTED": 1,
+    "CONTRADICTED": 1
+   },
+   "2": {
+    "PARTIAL": 22,
+    "CONTRADICTED": 9,
+    "SUPPORTED": 4,
+    "NOT_SUPPORTED": 5
+   },
+   "3": {
+    "NOT_SUPPORTED": 22,
+    "PARTIAL": 8,
+    "CONTRADICTED": 3,
+    "SUPPORTED": 3
+   },
+   "4": {
+    "PARTIAL": 7,
+    "NOT_SUPPORTED": 18,
+    "CONTRADICTED": 2,
+    "SUPPORTED": 3
+   },
+   "5": {
+    "CONTRADICTED": 18,
+    "NOT_SUPPORTED": 8,
+    "PARTIAL": 11,
+    "SUPPORTED": 1
+   },
+   "6": {
+    "PARTIAL": 10,
+    "CONTRADICTED": 11,
+    "NOT_SUPPORTED": 14
+   },
+   "7": {
+    "NOT_SUPPORTED": 25,
+    "SUPPORTED": 2,
+    "CONTRADICTED": 2,
+    "PARTIAL": 10
+   },
+   "8": {
+    "PARTIAL": 4,
+    "CONTRADICTED": 4
+   }
+  },
+  "two_axis": {
+   "true|SUPPORTED": 14,
+   "unclear|PARTIAL": 44,
+   "unclear|NOT_SUPPORTED": 57,
+   "true|PARTIAL": 20,
+   "false|CONTRADICTED": 32,
+   "false|PARTIAL": 8,
+   "n/a|PARTIAL": 4,
+   "false|NOT_SUPPORTED": 23,
+   "true|NOT_SUPPORTED": 8,
+   "unclear|CONTRADICTED": 13,
+   "true|CONTRADICTED": 5,
+   "n/a|SUPPORTED": 1,
+   "n/a|NOT_SUPPORTED": 5
+  },
+  "evidence_depth_pairs": {
+   "abstract": 376,
+   "fulltext": 27
+  },
+  "misattribution_with_alt_ref": 54,
+  "excluding_artifacts": {
+   "n_judged": 223,
+   "recall_strict": {
+    "value": 0.0673,
+    "num": 15,
+    "den": 223
+   },
+   "recall_lenient": {
+    "value": 0.3991,
+    "num": 89,
+    "den": 223
+   },
+   "precision_strict": {
+    "value": 0.1321,
+    "num": 51,
+    "den": 386
+   },
+   "major_rate": {
+    "value": 0.7758,
+    "num": 173,
+    "den": 223
+   },
+   "world_false_rate": {
+    "value": 0.2601,
+    "num": 58,
+    "den": 223
+   },
+   "contradiction_rate": {
+    "value": 0.2242,
+    "num": 50,
+    "den": 223
+   }
+  }
+ },
+ "citation_autosurvey": {
+  "citation_recall_autosurvey": {
+   "value": 0.2393,
+   "num": 56,
+   "den": 234
+  },
+  "citation_precision_autosurvey": {
+   "value": 0.1762,
+   "num": 71,
+   "den": 403
+  },
+  "citation_f1": 0.203,
+  "note": "AutoSurvey Eq.2-3 definition; NLI judged by claude-opus-5-5 on corpus abstracts."
+ },
+ "citation_surge": {
+  "status": "not run (B4 optional, not in modules)"
+ },
+ "uncited": {
+  "share_uncited_body_sentences": {
+   "value": 0.4968,
+   "num": 231,
+   "den": 465
+  },
+  "citations_per_1000_words": 24.38,
+  "sample_n": 150,
+  "content_type_counts": {
+   "interpretive": 82,
+   "specific_factual": 22,
+   "general_claim": 34,
+   "filler": 12
+  },
+  "specific_factual_error_rate": {
+   "value": 0.2727,
+   "num": 6,
+   "den": 22
+  },
+  "specific_factual_error_rate_ci": [
+   0.1315,
+   0.4815
+  ],
+  "specific_factual_unclear": {
+   "value": 0.4545,
+   "num": 10,
+   "den": 22
+  },
+  "error_rate_is_lower_bound": true,
+  "needs_citation": {
+   "value": 0.1667,
+   "num": 25,
+   "den": 150
+  },
+  "overreach_among_interpretive_general": {
+   "value": 0.3534,
+   "num": 41,
+   "den": 116
+  }
+ },
+ "references": {
+  "n_refs": 121,
+  "identity": {
+   "match": {
+    "value": 1.0,
+    "num": 121,
+    "den": 121
+   },
+   "id_title_mismatch": {
+    "value": 0.0,
+    "num": 0,
+    "den": 121
+   },
+   "not_found": {
+    "value": 0.0,
+    "num": 0,
+    "den": 121
+   },
+   "unverified_budget": {
+    "value": 0.0,
+    "num": 0,
+    "den": 121
+   }
+  },
+  "hallucinated_refs_L1a": {
+   "value": 0.0,
+   "num": 0,
+   "den": 121
+  },
+  "title_quality": {
+   "ok": 121
+  },
+  "year_ok": {
+   "value": 0.9917,
+   "num": 120,
+   "den": 121
+  },
+  "after_cutoff": {
+   "value": 0.0,
+   "num": 0,
+   "den": 121
+  },
+  "cutoff_date": "2026-02-04",
+  "relevance_llm_surveyx": {
+   "value": 0.9917,
+   "num": 120,
+   "den": 121
+  },
+  "core_share": {
+   "value": 0.5537,
+   "num": 67,
+   "den": 121
+  },
+  "relevance_counts": {
+   "adjacent": 53,
+   "core": 67,
+   "unrelated": 1
+  },
+  "core_share_by_chapter_cited": {
+   "1": {
+    "value": 0.4,
+    "num": 8,
+    "den": 20
+   },
+   "2": {
+    "value": 0.7708,
+    "num": 37,
+    "den": 48
+   },
+   "3": {
+    "value": 0.7742,
+    "num": 24,
+    "den": 31
+   },
+   "4": {
+    "value": 0.7,
+    "num": 21,
+    "den": 30
+   },
+   "5": {
+    "value": 0.6923,
+    "num": 27,
+    "den": 39
+   },
+   "6": {
+    "value": 0.7297,
+    "num": 27,
+    "den": 37
+   },
+   "7": {
+    "value": 0.6098,
+    "num": 25,
+    "den": 41
+   },
+   "8": {
+    "value": 0.5,
+    "num": 7,
+    "den": 14
+   }
+  },
+  "gt_overlap": {
+   "hits": 27,
+   "gt_size_published": 211,
+   "gt_before_cutoff": 209,
+   "iou_surveyx": {
+    "value": 0.0885,
+    "num": 27,
+    "den": 305
+   },
+   "gt_recall_surge": {
+    "value": 0.128,
+    "num": 27,
+    "den": 211
+   },
+   "gt_recall_cutoff_pool": {
+    "value": 0.1292,
+    "num": 27,
+    "den": 209
+   },
+   "ref_coverage_surveyforge_single_gt": {
+    "value": 0.2231,
+    "num": 27,
+    "den": 121
+   },
+   "label": "SAM-R (single-GT): G' = all 121 refs (all dated before GT publication 2026-02-04)"
+  },
+  "input_usage": {
+   "value": 0.2794,
+   "num": 121,
+   "den": 433
+  }
+ },
+ "structure": {
+  "D1": {
+   "taxonomy_usage": {
+    "embedding_locus (§2.1)": {
+     "declared_in": "2.1",
+     "sentences_using": 48,
+     "outside_declaring_section": 40,
+     "chapters_using": {
+      "2": 15,
+      "3": 1,
+      "4": 12,
+      "5": 9,
+      "6": 1,
+      "7": 1,
+      "8": 1
+     }
+    },
+    "detection_modality (§2.2)": {
+     "declared_in": "2.2",
+     "sentences_using": 49,
+     "outside_declaring_section": 42,
+     "chapters_using": {
+      "2": 12,
+      "3": 5,
+      "4": 5,
+      "5": 13,
+      "6": 3,
+      "7": 3,
+      "8": 1
+     }
+    },
+    "security_properties (§2.3)": {
+     "declared_in": "2.3",
+     "sentences_using": 41,
+     "outside_declaring_section": 35,
+     "chapters_using": {
+      "1": 1,
+      "2": 7,
+      "3": 6,
+      "4": 5,
+      "5": 9,
+      "7": 6,
+      "8": 1
+     }
+    },
+    "threat_axes (§2.4)": {
+     "declared_in": "2.4",
+     "sentences_using": 53,
+     "outside_declaring_section": 39,
+     "chapters_using": {
+      "2": 1,
+      "4": 3,
+      "5": 24,
+      "6": 3,
+      "7": 8
+     }
+    },
+    "triaxial_adversary (§5.1)": {
+     "declared_in": "5.1",
+     "sentences_using": 5,
+     "outside_declaring_section": 3,
+     "chapters_using": {
+      "2": 1,
+      "5": 2
+     }
+    }
+   },
+   "placement_4_4_misplaced": {
+    "value": 0.875,
+    "num": 7,
+    "den": 8
+   },
+   "notes": [
+    "§2.4 declares capability × goal × surface axes; §5.1 re-declares a different 'triaxial' framework (access × intent × knowledge) for the same purpose.",
+    "Chain & Hash [36] is filed as black-box/behaviour-space (§2.2), behaviour-space ensemble (§2.5), white-box-requiring (§6.3) and verifiable inference (§7.2).",
+    "HuRef (a weight-based fingerprinting method, ref [119]) is named in §5.3 but bound to [36] and described as an attack; its own number [119] appears only inside a leaked note in §7.5."
+   ]
+  },
+  "D2": {
+   "exact_duplicates": 14,
+   "near_duplicates": 4,
+   "duplicate_words": 469,
+   "leaked_note_sentences": {
+    "value": 0.0689,
+    "num": 33,
+    "den": 479
+   },
+   "leaked_note_words": 817,
+   "math_brackets_as_citations": [
+    "\\mathbb{I}[61]",
+    "using a $[63]$",
+    "‘[80]’",
+    "\\Pr[104]"
+   ],
+   "reused_marker_86_distinct_papers": 9,
+   "double_bracket_markers": [
+    "[52]]",
+    "[86]]"
+   ],
+   "placeholders": []
+  },
+  "D3": {
+   "n_labeled": 465,
+   "on_topic": {
+    "value": 0.9054,
+    "num": 421,
+    "den": 465
+   },
+   "adjacent": {
+    "value": 0.0215,
+    "num": 10,
+    "den": 465
+   },
+   "off_topic": {
+    "value": 0.0731,
+    "num": 34,
+    "den": 465
+   },
+   "gt_category_coverage": "not computed: GT outline not available"
+  },
+  "D4": {
+   "total_words_body": 16655,
+   "words_per_chapter": {
+    "1": 351,
+    "2": 2651,
+    "3": 2182,
+    "4": 2284,
+    "5": 2952,
+    "6": 2205,
+    "7": 3631,
+    "8": 399
+   },
+   "subsection_words_mean": 513.1,
+   "subsection_words_sd": 200.3,
+   "subsection_words_cv": 0.39,
+   "n_subsections": 31,
+   "subsection_words_mean_excl_7.1": 485.1,
+   "subsection_words_sd_excl_7.1": 128.0,
+   "citation_links": 406,
+   "citations_per_1000_words": 24.38,
+   "median_citations_per_subsection": 11,
+   "citations_per_subsection": {
+    "1": 21,
+    "2.1": 16,
+    "2.2": 16,
+    "2.3": 18,
+    "2.4": 12,
+    "2.5": 14,
+    "3.1": 10,
+    "3.2": 10,
+    "3.3": 8,
+    "3.4": 9,
+    "3.5": 14,
+    "4.1": 12,
+    "4.2": 7,
+    "4.3": 9,
+    "4.4": 9,
+    "4.5": 8,
+    "5.1": 5,
+    "5.2": 13,
+    "5.3": 8,
+    "5.4": 10,
+    "5.5": 4,
+    "5.6": 16,
+    "6.1": 17,
+    "6.2": 15,
+    "6.3": 10,
+    "6.4": 15,
+    "6.5": 11,
+    "7.1": 11,
+    "7.2": 13,
+    "7.3": 15,
+    "7.4": 11,
+    "7.5": 23,
+    "8": 16
+   },
+   "config_subsection_len_target": 500,
+   "sentences": 479,
+   "words_per_sentence_mean": 34.8
+  }
+ },
+ "reliability": {
+  "n": 30,
+  "five_label": {
+   "agreement": 0.8333,
+   "kappa": 0.7717
+  },
+  "binary_supported": {
+   "agreement": 0.9667,
+   "kappa": 0.8696
+  },
+  "binary_unsupported": {
+   "agreement": 0.9,
+   "kappa": 0.8018
+  },
+  "pair_five_label": {
+   "agreement": 0.8966,
+   "kappa": 0.8506,
+   "n_pairs": 58
+  },
+  "disagreements": [
+   {
+    "sid": "S0095",
+    "first": "NOT_SUPPORTED",
+    "second": "PARTIAL",
+    "stricter": "first"
+   },
+   {
+    "sid": "S0134",
+    "first": "SUPPORTED",
+    "second": "PARTIAL",
+    "stricter": "second"
+   },
+   {
+    "sid": "S0141",
+    "first": "NOT_SUPPORTED",
+    "second": "PARTIAL",
+    "stricter": "first"
+   },
+   {
+    "sid": "S0180",
+    "first": "NOT_SUPPORTED",
+    "second": "CONTRADICTED",
+    "stricter": "second"
+   },
+   {
+    "sid": "S0194",
+    "first": "CONTRADICTED",
+    "second": "PARTIAL",
+    "stricter": "first"
+   }
+  ],
+  "stricter_counts": {
+   "first": 3,
+   "second": 2
+  },
+  "label_pairs": {
+   "NOT_SUPPORTED->PARTIAL": 2,
+   "SUPPORTED->PARTIAL": 1,
+   "NOT_SUPPORTED->CONTRADICTED": 1,
+   "CONTRADICTED->PARTIAL": 1
+  },
+  "autosurvey_joint": {
+   "agreement": 1.0,
+   "kappa": 1.0,
+   "first_yes": 7,
+   "second_yes": 7
+  },
+  "second_judge_note": "Second judge could not read §7 B2 and inferred joint/alone/without from the AutoSurvey convention; it read only Appendices B and C, the sample, evidence/ and the bibliography."
+ },
+ "reliability_moduleA": {
+  "A1": {
+   "Coverage": [
+    3,
+    3
+   ],
+   "Structure": [
+    2,
+    3
+   ],
+   "Relevance": [
+    3,
+    4
+   ],
+   "Synthesis": [
+    3,
+    3
+   ],
+   "Critical Analysis": [
+    3,
+    3
+   ]
+  },
+  "A2": {
+   "Objective Clarity": [
+    3,
+    3
+   ],
+   "Classification-Evolution Coherence": [
+    3,
+    3
+   ],
+   "Dataset & Metric Coverage": [
+    3,
+    3
+   ],
+   "In-depth Comparison": [
+    3,
+    3
+   ],
+   "Critical Analysis (DeepSurvey-Bench)": [
+    3,
+    3
+   ],
+   "Research Gaps": [
+    3,
+    4
+   ],
+   "Future Work": [
+    3,
+    3
+   ]
+  }
+ }
+}

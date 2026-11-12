@@ -1,0 +1,170 @@
+[
+  {
+    "criterion": "Coverage",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "3.1-3.4",
+        "note": "Output-space watermarking is well populated: KGW, EXP/Gumbel, SynthID-Text, distortion-free, undetectable (Christ), ECC multi-bit, RL-learned, WaterMod, semantic (SIR/SemaMark), CATER, PostMark, private watermark."
+      },
+      {
+        "section": "4.1-4.4",
+        "note": "Fingerprinting gets its own chapter: weight-space (AWM, SELF), backdoor/instructional (EmbMarker, Instructional Fingerprinting, Chain & Hash), behavior-space, WAPITI, EverTracer."
+      },
+      {
+        "section": "5.1-5.5",
+        "note": "Attacks are broad: stealing/spoofing, scrubbing, radioactivity/distillation, impossibility, cross-lingual, speculative-decoding trade-off, inhibitory attacks on fingerprints."
+      },
+      {
+        "section": "7.1",
+        "note": "Multimodal and code watermarking is hollow: the text says no cited paper supports its claims, then restates them. Code watermarking is otherwise only a passing STONE mention (3.3)."
+      },
+      {
+        "section": "6.2 / 7.1",
+        "note": "Training-data and dataset watermarking (membership proofs, contamination) gets only passing mention. Unigram, SemStamp, MarkMyWords, MarkLLM, REEF and LLMmap are absent, and HuRef appears once."
+      },
+      {
+        "section": "1",
+        "note": "The intro is two paragraphs with no scope statement, so the reader cannot tell what was deliberately excluded."
+      }
+    ],
+    "anchor_justification": "Most key areas of LLM watermarking and fingerprinting are present, but multimodal/code watermarking is effectively missing and data watermarking is thin. That is more than 'very minor topics left out' (score 4). It matches 3: generally comprehensive but missing a few key points.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Structure",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2-8",
+        "note": "The macro order is logical: taxonomy, then output-level, model-centric, attacks, evaluation, extensions/governance, conclusion. The locus taxonomy of 2.1 does organize chapters 3 and 4."
+      },
+      {
+        "section": "2.4 / 5.1",
+        "note": "Near-duplicate threat-model taxonomies: three axes of capability/goal/surface in 2.4, and a 'triaxial adversarial framework' in 5.1."
+      },
+      {
+        "section": "3.5 / 5.6 / 6.1-6.5 / 7.3 / 7.4",
+        "note": "Evaluation is spread over many subsections that repeat the same points ('no benchmark tracks longitudinal decay'; RTT 88% to <13% appears 6 times). 6.4 and 7.3 overlap on equity and human-centred evaluation."
+      },
+      {
+        "section": "4.4",
+        "note": "Titled parameter-space watermarking, but most of it covers output-space schemes (multi-bit distortion-free, WaterMod, Permute-and-Flip, CATER), so the declared taxonomy is not applied consistently."
+      },
+      {
+        "section": "7.1 / 7.5 / 8",
+        "note": "Leaked correction notes and duplicate copies of the subsections leave 7.1 and 7.5 internally incoherent. The conclusion begins 'This subsection'."
+      },
+      {
+        "section": "2.x-7.x",
+        "note": "Transitions are formulaic forward/backward pointers ('as foreshadowed in the prior subsection') rather than substantive links. The intro has no roadmap."
+      }
+    ],
+    "anchor_justification": "The overall framework is reasonable and most content is ordered, which satisfies 3, and anchor 3 explicitly names repeated subsections as its flaw. Score 4 fails because of the duplicate taxonomies, the scattered and repeated evaluation material, the 4.4 mismatch and the two incoherent leaked-note subsections. I did not go to 2 because the problems are confined to identifiable parts and the backbone is sound.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Relevance",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2-6",
+        "note": "The large majority of the text is about LLM watermarking, fingerprinting and attacks on them."
+      },
+      {
+        "section": "7.2 / 7.5",
+        "note": "The governance and forensic-admissibility material bears on the topic."
+      },
+      {
+        "section": "5.5",
+        "note": "Digressions: BadToken and AnyDoor (MLLM backdoor attacks) and universal jailbreak suffixes are presented as watermark attack vectors without a clear tie-in."
+      },
+      {
+        "section": "7.1 / 7.5",
+        "note": "Long blocks of meta-text about which citations are 'in the provided list' are not survey content. 7.1 also drifts into diffusion and audio watermarking with no LLM tie."
+      },
+      {
+        "section": "4.1 / 3.1 / refs",
+        "note": "Off-topic sources are cited in the text: 'Securing RAG' for weight-space fingerprinting [77], TimeWak (time series) inside a formula [61], device fingerprinting [49]."
+      }
+    ],
+    "anchor_justification": "Relevance holds for most of the text, but the leaked meta-text blocks and the 5.5 digressions break the 'clear focus' and 'infrequent digressions' that 4 requires. It sits between 3 and 4, so per the rule it takes the lower: generally on topic despite a few unrelated details.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Synthesis",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.2-2.4",
+        "note": "An explicit attempt to cross detection modality with embedding locus with security properties with threat axes, framed as a 'provenance assurance stack/calculus'."
+      },
+      {
+        "section": "5.2 / 5.4",
+        "note": "Real cross-study patterns: detection needs statistical deviation while spoofing needs only mimicry; radioactivity as both defence and attack surface."
+      },
+      {
+        "section": "2.5 / 3.3",
+        "note": "Many connections are asserted, not grounded. 'The convergence is mathematically precise' (KL over a product space) and a 'risk-proportional embedding constraint' formula are not stated by any study, so they do not count as synthesis."
+      },
+      {
+        "section": "3.2 vs 2.3/5.4",
+        "note": "The framework is self-contradictory: rejection sampling is said to 'resolve' the impossibility result, which elsewhere is 'information-theoretically inevitable'."
+      },
+      {
+        "section": "throughout",
+        "note": "Links between sections are mostly formulaic cross-references that restate earlier claims rather than explain patterns, and several syntheses rest on misdescribed works (Chain & Hash, PLMmark, Waterfall)."
+      }
+    ],
+    "anchor_justification": "Some thematic relationships are identified (3). Score 4 requires most studies to be synthesized into coherent themes. Here the unifying framework is mostly rhetorical, partly contradictory and often built on unsupported links, so it does not explain the significance of the studies coherently.",
+    "source_protocol": "SurveyX 2025",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  },
+  {
+    "criterion": "Critical Analysis",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "5.6",
+        "note": "Specific critique of evaluation methodology: synthetic token edits versus human paraphrase, no composite attacks, longitudinal blindness, missing low-resource testing."
+      },
+      {
+        "section": "2.1 / 2.2 / 4.1 / 4.2",
+        "note": "Limits per paradigm: output-space is non-radioactive, white-box is infeasible for APIs, spectral fingerprints degrade below INT4, backdoor schemes are exposed to key leakage."
+      },
+      {
+        "section": "5.4",
+        "note": "Reasoned critique of the radioactivity assumption as a vulnerability."
+      },
+      {
+        "section": "3.2 / 4.5",
+        "note": "The critique is inconsistent or circular: the impossibility contradiction, and 'Chain & Hash ... vulnerable to ... attacks uncovered in' Chain & Hash itself."
+      },
+      {
+        "section": "3.3 / 3.5 / 5.5 / 6.1",
+        "note": "Much of the critique rests on very specific figures with no visible grounding (-18.3% GPT-4-Judge, 42-68% latency penalty) and is repeated rather than deepened. Nine subsections end in 'Future work must...'."
+      }
+    ],
+    "anchor_justification": "The critique is more than occasional (beyond 2). It is not a systematic critique of most key studies (4): it operates mainly at paradigm level, individual key works are rarely critiqued in depth, and it is inconsistent in correctness. That matches 3: sporadic and inconsistent.",
+    "source_protocol": "SurveyX 2025",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 3
+  }
+]

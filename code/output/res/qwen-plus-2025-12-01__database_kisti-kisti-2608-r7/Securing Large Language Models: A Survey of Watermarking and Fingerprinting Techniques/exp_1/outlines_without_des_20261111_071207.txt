@@ -1,0 +1,41 @@
+# Securing Large Language Models: A Survey of Watermarking and Fingerprinting Techniques
+## 1 Introduction  
+## 2 Foundations and Taxonomy of Watermarking and Fingerprinting Paradigms  
+### 2.1 Tripartite Embedding Locus Taxonomy: Output, Parameter, and Behavior Spaces  
+### 2.2 Detection Modality Spectrum: From White-Box Verification to Black-Box Auditing  
+### 2.3 Formal Security Properties: A Unified Information-Theoretic and Cryptographic Framework  
+### 2.4 Threat Model Taxonomy: Adversary Capabilities, Goals, and Attack Surfaces  
+### 2.5 Interoperability and Cross-Paradigm Convergence: Bridging Watermarking and Fingerprinting  
+## 3 Technical Architectures for Output-Level Watermarking  
+### 3.1 Statistical Sampling-Based Watermarking: Foundations, Variants, and Token-Level Trade-offs  
+### 3.2 Cryptographic and Learning-Based Watermark Embedding: From Rejection Sampling to End-to-End Differentiable Decoders  
+### 3.3 Context-Aware and Adaptive Watermarking: Semantic Integrity, Alignment Preservation, and Risk-Guided Modulation  
+### 3.4 Robustness Engineering and Attack-Aware Design: Paraphrase Resilience, Black-Box Deployment, and Certified Guarantees  
+### 3.5 Evaluation, Benchmarking, and Operational Realities: Beyond Detection Accuracy to Holistic System Assessment  
+## 4 Model-Centric Fingerprinting and Parameter-Space Watermarking  
+### 4.1 Weight-Space Fingerprinting: Intrinsic Model Identity from Parameter Geometry  
+### 4.2 Backdoor-Based Parameter-Space Watermarking: Lightweight, Secret-Key–Driven Ownership Imprinting  
+### 4.3 Behavior-Space Fingerprinting: Black-Box Provenance from Statistical Biases and Activation Signatures  
+### 4.4 Adaptive and Multi-Layer Parameter-Space Watermarking: From Static Embedding to Dynamic Integrity Binding  
+### 4.5 Formal Security, Practical Robustness, and Governance Constraints of Model-Centric Techniques  
+## 5 Robustness, Adversarial Vulnerabilities, and Attack Taxonomies  
+### 5.1 Taxonomy of Adversarial Capabilities and Threat Models  
+### 5.2 Output-Space Attack Vectors: From Semantic Scrubbing to Covert Spoofing  
+### 5.3 Parameter- and Behavior-Space Attacks: Erasure, Neutralization, and Collusion  
+### 5.4 Radioactivity Exploitation and Knowledge Distillation–Based Attacks  
+### 5.5 Systemic and Cross-Modal Attack Surfaces: From Speculative Sampling to Multimodal Consistency  
+### 5.6 Evaluation Gaps and Methodological Vulnerabilities in Robustness Assessment  
+## 6 Evaluation Frameworks, Benchmarks, and Real-World Deployment Constraints  
+### 6.1 Multidimensional Evaluation Taxonomy for Watermarking and Fingerprinting  
+### 6.2 Benchmark Architectures for Holistic and Adversarial Validation  
+### 6.3 Operational Realities: Latency, Compatibility, and System Integration Constraints  
+### 6.4 Human-Centered and Socio-Technical Evaluation Gaps  
+### 6.5 Towards Verified and Standardized Evaluation Protocols  
+## 7 Cross-Domain Extensions, Governance Integration, and Socio-Technical Implications  
+### 7.1 Multimodal and Cross-Modal Watermarking Architectures  
+### 7.2 Regulatory-Aware Watermarking Design and Forensic Admissibility  
+### 7.3 Equity, Bias, and Human-Centered Evaluation Frameworks  
+### 7.4 System-Level Integration and Ecosystem Viability  
+### 7.5 Ethical Governance and Dual-Use Risk Mitigation  
+## 8 Conclusion  
+

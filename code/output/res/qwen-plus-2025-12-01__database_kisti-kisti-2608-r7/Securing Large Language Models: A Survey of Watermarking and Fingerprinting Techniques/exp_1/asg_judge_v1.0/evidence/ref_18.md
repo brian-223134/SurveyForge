@@ -1,0 +1,10 @@
+# [18] Undetectable Watermarks for Language Models
+source_url: https://arxiv.org/abs/2306.09194
+arxiv_id: 2306.09194   doi: none
+first_public: 2023-05-25
+fetch_status: ok
+printed_title: Undetectable Watermarks for Language Models
+corpus_title: Undetectable Watermarks for Language Models
+## abstract
+Recent advances in the capabilities of large language models such as GPT-4 have spurred increasing concern about our ability to detect AI-generated text. Prior works have suggested methods of embedding watermarks in model outputs, by noticeably altering the output distribution. We ask: Is it possible to introduce a watermark without incurring any detectable change to the output distribution? To this end we introduce a cryptographically-inspired notion of undetectable watermarks for language models. That is, watermarks can be detected only with the knowledge of a secret key; without the secret key, it is computationally intractable to distinguish watermarked outputs from those of the original model. In particular, it is impossible for a user to observe any degradation in the quality of the text. Crucially, watermarks should remain undetectable even when the user is allowed to adaptively query the model with arbitrarily chosen prompts. We construct undetectable watermarks based on the existence of one-way functions, a standard assumption in cryptography.
+## fulltext notes (optional)

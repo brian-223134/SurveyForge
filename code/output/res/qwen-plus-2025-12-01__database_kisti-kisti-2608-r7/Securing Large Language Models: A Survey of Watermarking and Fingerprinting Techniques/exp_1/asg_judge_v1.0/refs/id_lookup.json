@@ -1,0 +1,842 @@
+{
+ "2309.15025": {
+  "source": "arxiv_api",
+  "title": "Large Language Model Alignment: A Survey",
+  "first_public": "2023-09-26",
+  "first_author": "Tianhao Shen"
+ },
+ "2410.06467": {
+  "source": "arxiv_api",
+  "title": "WAPITI: A Watermark for Finetuned Open-Source LLMs",
+  "first_public": "2024-10-09",
+  "first_author": "Lingjie Chen"
+ },
+ "2402.16187": {
+  "source": "arxiv_api",
+  "title": "No Free Lunch in LLM Watermarking: Trade-offs in Watermarking Design Choices",
+  "first_public": "2024-02-25",
+  "first_author": "Qi Pang"
+ },
+ "1701.04082": {
+  "source": "arxiv_api",
+  "title": "Embedding Watermarks into Deep Neural Networks",
+  "first_public": "2017-01-15",
+  "first_author": "Yusuke Uchida"
+ },
+ "2401.13927": {
+  "source": "arxiv_api",
+  "title": "Adaptive Text Watermark for Large Language Models",
+  "first_public": "2024-01-25",
+  "first_author": "Yepeng Liu"
+ },
+ "2402.14007": {
+  "source": "arxiv_api",
+  "title": "Can Watermarks Survive Translation? On the Cross-lingual Consistency of Text Watermark for Large Language Models",
+  "first_public": "2024-02-21",
+  "first_author": "Zhiwei He"
+ },
+ "2301.10226": {
+  "source": "arxiv_api",
+  "title": "A Watermark for Large Language Models",
+  "first_public": "2023-01-24",
+  "first_author": "John Kirchenbauer"
+ },
+ "2402.19361": {
+  "source": "arxiv_api",
+  "title": "Watermark Stealing in Large Language Models",
+  "first_public": "2024-02-29",
+  "first_author": "Nikola Jovanović"
+ },
+ "2401.16820": {
+  "source": "arxiv_api",
+  "title": "Provably Robust Multi-bit Watermarking for AI-generated Text",
+  "first_public": "2024-01-30",
+  "first_author": "Wenjie Qu"
+ },
+ "2601.14311": {
+  "source": "arxiv_api",
+  "title": "Tracing the Data Trail: A Survey of Data Provenance, Transparency and Traceability in LLMs",
+  "first_public": "2026-01-19",
+  "first_author": "Richard Hohensinner"
+ },
+ "2405.01560": {
+  "source": "arxiv_api",
+  "title": "Copyright related risks in the creation and use of ML/AI systems",
+  "first_public": "2024-03-27",
+  "first_author": "Daniel M. German"
+ },
+ "2601.04261": {
+  "source": "arxiv_api",
+  "title": "Inhibitory Attacks on Backdoor-based Fingerprinting for Large Language Models",
+  "first_public": "2026-01-07",
+  "first_author": "Hang Fu"
+ },
+ "2406.10281": {
+  "source": "arxiv_api",
+  "title": "Watermarking Language Models with Error Correcting Codes",
+  "first_public": "2024-06-12",
+  "first_author": "Patrick Chao"
+ },
+ "2406.01946": {
+  "source": "arxiv_api",
+  "title": "Bileve: Securing Text Provenance in Large Language Models Against Spoofing with Bi-level Signature",
+  "first_public": "2024-06-04",
+  "first_author": "Tong Zhou"
+ },
+ "2405.19677": {
+  "source": "arxiv_api",
+  "title": "Large Language Model Watermark Stealing With Mixed Integer Programming",
+  "first_public": "2024-05-30",
+  "first_author": "Zhaoxi Zhang"
+ },
+ "2505.02884": {
+  "source": "arxiv_api",
+  "title": "Unlearning vs. Obfuscation: Are We Truly Removing Knowledge?",
+  "first_public": "2025-05-05",
+  "first_author": "Guangzhi Sun"
+ },
+ "2402.05864": {
+  "source": "arxiv_api",
+  "title": "Permute-and-Flip: An optimally stable and watermarkable decoder for LLMs",
+  "first_public": "2024-02-08",
+  "first_author": "Xuandong Zhao"
+ },
+ "2505.06827": {
+  "source": "arxiv_api",
+  "title": "Sandcastles in the Storm: Revisiting the (Im)possibility of Strong Watermarking",
+  "first_public": "2025-05-11",
+  "first_author": "Fabrice Y Harel-Canada"
+ },
+ "2506.06407": {
+  "source": "arxiv_api",
+  "title": "TimeWak: Temporal Chained-Hashing Watermark for Time Series Data",
+  "first_public": "2025-06-06",
+  "first_author": "Zhi Wen Soi"
+ },
+ "1903.01743": {
+  "source": "arxiv_api",
+  "title": "How to Prove Your Model Belongs to You: A Blind-Watermark based Framework to Protect Intellectual Property of DNN",
+  "first_public": "2019-03-05",
+  "first_author": "Zheng Li"
+ },
+ "2405.13517": {
+  "source": "arxiv_api",
+  "title": "WaterPool: A Watermark Mitigating Trade-offs among Imperceptibility, Efficacy and Robustness",
+  "first_public": "2024-05-22",
+  "first_author": "Baizhou Huang"
+ },
+ "2303.13408": {
+  "source": "arxiv_api",
+  "title": "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense",
+  "first_public": "2023-03-23",
+  "first_author": "Kalpesh Krishna"
+ },
+ "2601.01296": {
+  "source": "arxiv_api",
+  "title": "Aggressive Compression Enables LLM Weight Theft",
+  "first_public": "2026-01-03",
+  "first_author": "Davis Brown"
+ },
+ "2601.05144": {
+  "source": "arxiv_api",
+  "title": "Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Large Reasoning Models",
+  "first_public": "2026-01-08",
+  "first_author": "Shuliang Liu"
+ },
+ "2112.04359": {
+  "source": "arxiv_api",
+  "title": "Ethical and social risks of harm from Language Models",
+  "first_public": "2021-12-08",
+  "first_author": "Laura Weidinger"
+ },
+ "2409.06130": {
+  "source": "arxiv_api",
+  "title": "Revisiting Black-Box Model Ownership Verification through Information Theory",
+  "first_public": "2024-09-10",
+  "first_author": "Aoting Hu"
+ },
+ "2512.03620": {
+  "source": "arxiv_api",
+  "title": "SELF: A Robust Singular Value and Eigenvalue Approach for LLM Fingerprinting",
+  "first_public": "2025-12-03",
+  "first_author": "Hanxiu Zhang"
+ },
+ "1910.12366": {
+  "source": "arxiv_api",
+  "title": "Thieves on Sesame Street! Model Extraction of BERT-based APIs",
+  "first_public": "2019-10-27",
+  "first_author": "Kalpesh Krishna"
+ },
+ "2407.04411": {
+  "source": "arxiv_api",
+  "title": "Waterfall: Framework for Robust and Scalable Text Watermarking and Provenance for LLMs",
+  "first_public": "2024-07-05",
+  "first_author": "Gregory Kang Ruey Lau"
+ },
+ "2306.04634": {
+  "source": "arxiv_api",
+  "title": "On the Reliability of Watermarks for Large Language Models",
+  "first_public": "2023-06-07",
+  "first_author": "John Kirchenbauer"
+ },
+ "2307.15593": {
+  "source": "arxiv_api",
+  "title": "Robust Distortion-free Watermarks for Language Models",
+  "first_public": "2023-07-28",
+  "first_author": "Rohith Kuditipudi"
+ },
+ "2406.03728": {
+  "source": "arxiv_api",
+  "title": "Evaluating Durability: Benchmark Insights into Multimodal Watermarking",
+  "first_public": "2024-06-06",
+  "first_author": "Jielin Qiu"
+ },
+ "2303.09732": {
+  "source": "arxiv_api",
+  "title": "Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation",
+  "first_public": "2023-03-17",
+  "first_author": "Yifan Yan"
+ },
+ "2407.10887": {
+  "source": "arxiv_api",
+  "title": "Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique",
+  "first_public": "2024-07-15",
+  "first_author": "Mark Russinovich"
+ },
+ "2306.09194": {
+  "source": "arxiv_api",
+  "title": "Undetectable Watermarks for Language Models",
+  "first_public": "2023-05-25",
+  "first_author": "Miranda Christ"
+ },
+ "2502.00706": {
+  "source": "arxiv_api",
+  "title": "Model Provenance Testing for Large Language Models",
+  "first_public": "2025-02-02",
+  "first_author": "Ivica Nikolic"
+ },
+ "2406.02603": {
+  "source": "arxiv_api",
+  "title": "Distortion-free Watermarks are not Truly Distortion-free under Watermark Key Collisions",
+  "first_public": "2024-06-02",
+  "first_author": "Yihan Wu"
+ },
+ "2403.04808": {
+  "source": "arxiv_api",
+  "title": "WaterMax: breaking the LLM watermark detectability-robustness-quality trade-off",
+  "first_public": "2024-03-06",
+  "first_author": "Eva Giboulot"
+ },
+ "2601.03242": {
+  "source": "arxiv_api",
+  "title": "SLIM: Stealthy Low-Coverage Black-Box Watermarking via Latent-Space Confusion Zones",
+  "first_public": "2026-01-06",
+  "first_author": "Hengyu Wu"
+ },
+ "2310.00646": {
+  "source": "arxiv_api",
+  "title": "Source Attribution for Large Language Model-Generated Data",
+  "first_public": "2023-10-01",
+  "first_author": "Jingtan Wang"
+ },
+ "2403.10553": {
+  "source": "arxiv_api",
+  "title": "Learning to Watermark LLM-generated Text via Reinforcement Learning",
+  "first_public": "2024-03-13",
+  "first_author": "Xiaojun Xu"
+ },
+ "2405.04825": {
+  "source": "arxiv_api",
+  "title": "Explanation as a Watermark: Towards Harmless and Multi-bit Model Ownership Verification via Watermarking Feature Attribution",
+  "first_public": "2024-05-08",
+  "first_author": "Shuo Shao"
+ },
+ "2402.08577": {
+  "source": "arxiv_api",
+  "title": "Test-Time Backdoor Attacks on Multimodal Large Language Models",
+  "first_public": "2024-02-13",
+  "first_author": "Dong Lu"
+ },
+ "2506.23731": {
+  "source": "arxiv_api",
+  "title": "Radioactive Watermarks in Diffusion and Autoregressive Image Generative Models",
+  "first_public": "2025-06-30",
+  "first_author": "Michel Meintz"
+ },
+ "2403.19548": {
+  "source": "arxiv_api",
+  "title": "WaterJudge: Quality-Detection Trade-off when Watermarking Large Language Models",
+  "first_public": "2024-03-28",
+  "first_author": "Piotr Molenda"
+ },
+ "2307.16230": {
+  "source": "arxiv_api",
+  "title": "An Unforgeable Publicly Verifiable Watermark for Large Language Models",
+  "first_public": "2023-07-30",
+  "first_author": "Aiwei Liu"
+ },
+ "2402.06922": {
+  "source": "arxiv_api",
+  "title": "Whispers in the Machine: Confidentiality in Agentic Systems",
+  "first_public": "2024-02-10",
+  "first_author": "Jonathan Evertz"
+ },
+ "2505.14112": {
+  "source": "arxiv_api",
+  "title": "Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking",
+  "first_public": "2025-05-20",
+  "first_author": "Tianle Gu"
+ },
+ "2510.17000": {
+  "source": "arxiv_api",
+  "title": "Bits Leaked per Query: Information-Theoretic Bounds on Adversarial Attacks against LLMs",
+  "first_public": "2025-10-19",
+  "first_author": "Masahiro Kaneko"
+ },
+ "2506.01011": {
+  "source": "arxiv_api",
+  "title": "Autoregressive Images Watermarking through Lexical Biasing: An Approach Resistant to Regeneration Attack",
+  "first_public": "2025-06-01",
+  "first_author": "Siqi Hui"
+ },
+ "2511.07863": {
+  "source": "arxiv_api",
+  "title": "WaterMod: Modular Token-Rank Partitioning for Probability-Balanced LLM Watermarking",
+  "first_public": "2025-11-11",
+  "first_author": "Shinwoo Park"
+ },
+ "2601.11629": {
+  "source": "arxiv_api",
+  "title": "Semantic Differentiation for Tackling Challenges in Watermarking Low-Entropy Constrained Generation Outputs",
+  "first_public": "2026-01-14",
+  "first_author": "Nghia T. Le"
+ },
+ "2209.08773": {
+  "source": "arxiv_api",
+  "title": "CATER: Intellectual Property Protection on Text Generation APIs via Conditional Watermarks",
+  "first_public": "2022-09-19",
+  "first_author": "Xuanli He"
+ },
+ "2403.07283": {
+  "source": "arxiv_api",
+  "title": "A Framework for Cost-Effective and Self-Adaptive LLM Shaking and Recovery Mechanism",
+  "first_public": "2024-03-12",
+  "first_author": "Zhiyu Chen"
+ },
+ "2310.06356": {
+  "source": "arxiv_api",
+  "title": "A Semantic Invariant Robust Watermark for Large Language Models",
+  "first_public": "2023-10-10",
+  "first_author": "Aiwei Liu"
+ },
+ "2403.13485": {
+  "source": "arxiv_api",
+  "title": "An Entropy-based Text Watermarking Detection Method",
+  "first_public": "2024-03-20",
+  "first_author": "Yijian Lu"
+ },
+ "2410.23861": {
+  "source": "arxiv_api",
+  "title": "Audio Is the Achilles' Heel: Red Teaming Audio Large Multimodal Models",
+  "first_public": "2024-10-31",
+  "first_author": "Hao Yang"
+ },
+ "2502.18518": {
+  "source": "arxiv_api",
+  "title": "Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs",
+  "first_public": "2025-02-23",
+  "first_author": "Peng Yifeng"
+ },
+ "2505.05190": {
+  "source": "arxiv_api",
+  "title": "Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks",
+  "first_public": "2025-05-08",
+  "first_author": "Yixin Cheng"
+ },
+ "2305.08883": {
+  "source": "arxiv_api",
+  "title": "Watermarking Text Generated by Black-Box Language Models",
+  "first_public": "2023-05-14",
+  "first_author": "Xi Yang"
+ },
+ "2002.12200": {
+  "source": "arxiv_api",
+  "title": "Entangled Watermarks as a Defense against Model Extraction",
+  "first_public": "2020-02-27",
+  "first_author": "Hengrui Jia"
+ },
+ "2410.06545": {
+  "source": "arxiv_api",
+  "title": "Signal Watermark on Large Language Models",
+  "first_public": "2024-10-09",
+  "first_author": "Zhenyu Xu"
+ },
+ "2403.06634": {
+  "source": "arxiv_api",
+  "title": "Stealing Part of a Production Language Model",
+  "first_public": "2024-03-11",
+  "first_author": "Nicholas Carlini"
+ },
+ "2402.10892": {
+  "source": "arxiv_api",
+  "title": "Proving membership in LLM pretraining data via data watermarks",
+  "first_public": "2024-02-16",
+  "first_author": "Johnny Tian-Zheng Wei"
+ },
+ "2403.10893": {
+  "source": "arxiv_api",
+  "title": "A Watermark-Conditioned Diffusion Model for IP Protection",
+  "first_public": "2024-03-16",
+  "first_author": "Rui Min"
+ },
+ "2509.03058": {
+  "source": "arxiv_api",
+  "title": "EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint",
+  "first_public": "2025-09-03",
+  "first_author": "Zhenhua Xu"
+ },
+ "2310.15654": {
+  "source": "arxiv_api",
+  "title": "A Survey on Detection of LLMs-Generated Content",
+  "first_public": "2023-10-24",
+  "first_author": "Xianjun Yang"
+ },
+ "2402.16578": {
+  "source": "arxiv_api",
+  "title": "Multi-Bit Distortion-Free Watermarking for Large Language Models",
+  "first_public": "2024-02-26",
+  "first_author": "Massieh Kordi Boroujeny"
+ },
+ "1804.00750": {
+  "source": "arxiv_api",
+  "title": "DeepSigns: A Generic Watermarking Framework for IP Protection of Deep Learning Models",
+  "first_public": "2018-04-02",
+  "first_author": "Bita Darvish Rouhani"
+ },
+ "2401.12255": {
+  "source": "arxiv_api",
+  "title": "Instructional Fingerprinting of Large Language Models",
+  "first_public": "2024-01-21",
+  "first_author": "Jiashu Xu"
+ },
+ "2502.11598": {
+  "source": "arxiv_api",
+  "title": "Can LLM Watermarks Robustly Prevent Unauthorized Knowledge Distillation?",
+  "first_public": "2025-02-17",
+  "first_author": "Leyi Pan"
+ },
+ "2307.15043": {
+  "source": "arxiv_api",
+  "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+  "first_public": "2023-07-27",
+  "first_author": "Andy Zou"
+ },
+ "2506.00359": {
+  "source": "arxiv_api",
+  "title": "Keeping an Eye on LLM Unlearning: The Hidden Risk and Remedy",
+  "first_public": "2025-05-31",
+  "first_author": "Jie Ren"
+ },
+ "2506.15975": {
+  "source": "arxiv_api",
+  "title": "Multi-use LLM Watermarking and the False Detection Problem",
+  "first_public": "2025-06-19",
+  "first_author": "Zihao Fu"
+ },
+ "2601.21252": {
+  "source": "arxiv_api",
+  "title": "Lossless Copyright Protection via Intrinsic Model Fingerprinting",
+  "first_public": "2026-01-29",
+  "first_author": "Lingxiao Chen"
+ },
+ "2402.18059": {
+  "source": "arxiv_api",
+  "title": "Token-Specific Watermarking with Enhanced Detectability and Semantic Coherence for Large Language Models",
+  "first_public": "2024-02-28",
+  "first_author": "Mingjia Huo"
+ },
+ "2403.15447": {
+  "source": "arxiv_api",
+  "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+  "first_public": "2024-03-18",
+  "first_author": "Junyuan Hong"
+ },
+ "2502.18851": {
+  "source": "arxiv_api",
+  "title": "Marking Code Without Breaking It: Code Watermarking for Detecting LLM-Generated Code",
+  "first_public": "2025-02-26",
+  "first_author": "Jungin Kim"
+ },
+ "2505.16530": {
+  "source": "arxiv_api",
+  "title": "DuFFin: A Dual-Level Fingerprinting Framework for LLMs IP Protection",
+  "first_public": "2025-05-22",
+  "first_author": "Yuliang Yan"
+ },
+ "2509.25448": {
+  "source": "arxiv_api",
+  "title": "Fingerprinting LLMs via Prompt Injection",
+  "first_public": "2025-09-29",
+  "first_author": "Yuepeng Hu"
+ },
+ "2510.18333": {
+  "source": "arxiv_api",
+  "title": "Position: LLM Watermarking Should Align Stakeholders' Incentives for Practical Adoption",
+  "first_public": "2025-10-21",
+  "first_author": "Yepeng Liu"
+ },
+ "2306.11698": {
+  "source": "arxiv_api",
+  "title": "DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models",
+  "first_public": "2023-06-20",
+  "first_author": "Boxin Wang"
+ },
+ "2312.04828": {
+  "source": "arxiv_api",
+  "title": "HuRef: HUman-REadable Fingerprint for Large Language Models",
+  "first_public": "2023-12-08",
+  "first_author": "Boyi Zeng"
+ },
+ "10.55662/jst.2023.4605": {
+  "source": "crossref",
+  "title": "Guardrails for trust, safety, and ethical development and deployment of Large Language Models (LLM)",
+  "first_public": "2023-11-01",
+  "issued": "2023-11-01",
+  "type": "journal-article",
+  "container": "Journal of Science &amp; Technology",
+  "first_author": "Biswas"
+ },
+ "10.3390/info15110697": {
+  "source": "crossref",
+  "title": "Privacy-Preserving Techniques in Generative AI and Large Language Models: A Narrative Review",
+  "first_public": "2024-11-04",
+  "issued": "2024-11-04",
+  "type": "journal-article",
+  "container": "Information",
+  "first_author": "Feretzakis"
+ },
+ "10.1007/s44443-025-00177-1": {
+  "source": "crossref",
+  "title": "A survey on privacy risks and protection in large language models",
+  "first_public": "2025-08-18",
+  "issued": "2025-08-18",
+  "type": "journal-article",
+  "container": "Journal of King Saud University Computer and Information Sciences",
+  "first_author": "Chen"
+ },
+ "10.1007/s10462-024-11024-6": {
+  "source": "crossref",
+  "title": "Generative AI model privacy: a survey",
+  "first_public": "2024-12-04",
+  "issued": "2024-12-04",
+  "type": "journal-article",
+  "container": "Artificial Intelligence Review",
+  "first_author": "Liu"
+ },
+ "10.1145/3292500.3330885": {
+  "source": "crossref",
+  "title": "Auditing Data Provenance in Text-Generation Models",
+  "first_public": "2019-07-25",
+  "issued": "2019-07-25",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining",
+  "first_author": "Song"
+ },
+ "10.1038/s41586-024-08025-4": {
+  "source": "crossref",
+  "title": "Scalable watermarking for identifying large language model outputs",
+  "first_public": "2024-10-23",
+  "issued": "2024-10-23",
+  "type": "journal-article",
+  "container": "Nature",
+  "first_author": "Dathathri"
+ },
+ "10.1371/journal.pone.0331871": {
+  "source": "crossref",
+  "title": "Detecting LLM-generated peer reviews",
+  "first_public": "2025-09-22",
+  "issued": "2025-09-22",
+  "type": "journal-article",
+  "container": "PLOS One",
+  "first_author": "Rao"
+ },
+ "10.1038/s41591-024-03445-1": {
+  "source": "crossref",
+  "title": "Medical large language models are vulnerable to data-poisoning attacks",
+  "first_public": "2025-01-08",
+  "issued": "2025-01-08",
+  "type": "journal-article",
+  "container": "Nature Medicine",
+  "first_author": "Alber"
+ },
+ "10.1145/3649329.3655674": {
+  "source": "crossref",
+  "title": "EmMark: Robust Watermarks for IP Protection of Embedded Quantized Large Language Models",
+  "first_public": "2024-06-23",
+  "issued": "2024-06-23",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 61st ACM/IEEE Design Automation Conference",
+  "first_author": "Zhang"
+ },
+ "10.1609/aaai.v37i12.26750": {
+  "source": "crossref",
+  "title": "PLMmark: A Secure and Robust Black-Box Watermarking Framework for Pre-trained Language Models",
+  "first_public": "2023-06-26",
+  "issued": "2023-06-26",
+  "type": "journal-article",
+  "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "first_author": "Li"
+ },
+ "10.1109/icassp48485.2024.10447264": {
+  "source": "crossref",
+  "title": "Functional Invariants To Watermark Large Transformers",
+  "first_public": "2024-03-18",
+  "issued": "2024-04-14",
+  "type": "proceedings-article",
+  "container": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+  "first_author": "Fernandez"
+ },
+ "10.18653/v1/2023.acl-long.423": {
+  "source": "crossref",
+  "title": "Are You Copying My Model? Protecting the Copyright of Large Language Models for EaaS via Backdoor Watermark",
+  "first_public": "2023",
+  "issued": "2023",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "first_author": "Peng"
+ },
+ "10.1109/dac56929.2023.10247798": {
+  "source": "crossref",
+  "title": "ZKROWNN: Zero Knowledge Right of Ownership for Neural Networks",
+  "first_public": "2023-07-09",
+  "issued": "2023-07-09",
+  "type": "proceedings-article",
+  "container": "2023 60th ACM/IEEE Design Automation Conference (DAC)",
+  "first_author": "Sheybani"
+ },
+ "10.1145/3580305.3599291": {
+  "source": "crossref",
+  "title": "Cracking White-box DNN Watermarks via Invariant Neuron Transforms",
+  "first_public": "2023-08-04",
+  "issued": "2023-08-04",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+  "first_author": "Pan"
+ },
+ "10.1016/j.comcom.2019.12.016": {
+  "source": "crossref",
+  "title": "AFA: Adversarial fingerprinting authentication for deep neural networks",
+  "first_public": "2019-12-14",
+  "issued": "2020-01",
+  "type": "journal-article",
+  "container": "Computer Communications",
+  "first_author": "Zhao"
+ },
+ "10.1609/aaai.v36i10.21415": {
+  "source": "crossref",
+  "title": "Tracing Text Provenance via Context-Aware Lexical Substitution",
+  "first_public": "2022-06-28",
+  "issued": "2022-06-28",
+  "type": "journal-article",
+  "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "first_author": "Yang"
+ },
+ "10.18653/v1/2024.findings-naacl.40": {
+  "source": "crossref",
+  "title": "A Robust Semantics-based Watermark for Large Language Model against Paraphrasing",
+  "first_public": "2024",
+  "issued": "2024",
+  "type": "proceedings-article",
+  "container": "Findings of the Association for Computational Linguistics: NAACL 2024",
+  "first_author": "Ren"
+ },
+ "10.18653/v1/2023.acl-long.117": {
+  "source": "crossref",
+  "title": "Robust Multi-bit Natural Language Watermarking through Invariant Features",
+  "first_public": "2023",
+  "issued": "2023",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "first_author": "Yoo"
+ },
+ "10.1145/3618257.3624845": {
+  "source": "crossref",
+  "title": "An LLM-based Framework for Fingerprinting Internet-connected Devices",
+  "first_public": "2023-10-23",
+  "issued": "2023-10-24",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 2023 ACM on Internet Measurement Conference",
+  "first_author": "Sarabi"
+ },
+ "10.14722/ndss.2026.230138": {
+  "source": "crossref",
+  "title": "Character-Level Perturbations Disrupt LLM Watermarks",
+  "first_public": "2026",
+  "issued": "2026",
+  "type": "proceedings-article",
+  "container": "Proceedings 2026 Network and Distributed System Security Symposium",
+  "first_author": "Zhang"
+ },
+ "10.56553/popets-2025-0126": {
+  "source": "crossref",
+  "title": "Robust and Efficient Watermarking of Large Language Models Using Error Correction Codes",
+  "first_public": "2025-07-13",
+  "issued": "2025-10",
+  "type": "journal-article",
+  "container": "Proceedings on Privacy Enhancing Technologies",
+  "first_author": "Luan"
+ },
+ "10.3389/fdata.2021.729663": {
+  "source": "crossref",
+  "title": "A Systematic Review on Model Watermarking for Neural Networks",
+  "first_public": "2021-11-29",
+  "issued": "2021-11-29",
+  "type": "journal-article",
+  "container": "Frontiers in Big Data",
+  "first_author": "Boenisch"
+ },
+ "10.1145/3321705.3329808": {
+  "source": "crossref",
+  "title": "Robust Watermarking of Neural Network with Exponential Weighting",
+  "first_public": "2019-07-02",
+  "issued": "2019-07-02",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 2019 ACM Asia Conference on Computer and Communications Security",
+  "first_author": "Namba"
+ },
+ "10.34190/icair.4.1.3128": {
+  "source": "crossref",
+  "title": "LLM Supply Chain Provenance: A Blockchain-based Approach",
+  "first_public": "2024-12-04",
+  "issued": "2024-12-04",
+  "type": "journal-article",
+  "container": "International Conference on AI Research",
+  "first_author": "Singh"
+ },
+ "10.1109/cvpr52733.2024.01169": {
+  "source": "crossref",
+  "title": "Steganographic Passport: An Owner and User Verifiable Credential for Deep Model IP Protection Without Retraining",
+  "first_public": "2024-06-16",
+  "issued": "2024-06-16",
+  "type": "proceedings-article",
+  "container": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "first_author": "Cui"
+ },
+ "10.1145/3691626": {
+  "source": "crossref",
+  "title": "A Survey of Text Watermarking in the Era of Large Language Models",
+  "first_public": "2024-09-03",
+  "issued": "2024-11-07",
+  "type": "journal-article",
+  "container": "ACM Computing Surveys",
+  "first_author": "Liu"
+ },
+ "10.1145/3639477.3639720": {
+  "source": "crossref",
+  "title": "Assessing LLMs for High Stakes Applications",
+  "first_public": "2024-04-14",
+  "issued": "2024-04-14",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 46th International Conference on Software Engineering: Software Engineering in Practice",
+  "first_author": "Gallagher"
+ },
+ "10.1609/aaai.v39i1.32018": {
+  "source": "crossref",
+  "title": "Simulate and Eliminate: Revoke Backdoors for Generative Large Language Models",
+  "first_public": "2025-04-11",
+  "issued": "2025-04-11",
+  "type": "journal-article",
+  "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "first_author": "Li"
+ },
+ "10.1109/sds66131.2025.00024": {
+  "source": "crossref",
+  "title": "Securing RAG: A Risk Assessment and Mitigation Framework",
+  "first_public": "2025-06-26",
+  "issued": "2025-06-26",
+  "type": "proceedings-article",
+  "container": "2025 IEEE Swiss Conference on Data Science (SDS)",
+  "first_author": "Ammann"
+ },
+ "10.18653/v1/2024.naacl-long.224": {
+  "source": "crossref",
+  "title": "Advancing Beyond Identification: Multi-bit Watermark for Large Language Models",
+  "first_public": "2024",
+  "issued": "2024",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+  "first_author": "Yoo"
+ },
+ "10.3390/electronics14010025": {
+  "source": "crossref",
+  "title": "Latent Diffusion Models for Image Watermarking: A Review of Recent Trends and Future Directions",
+  "first_public": "2024-12-25",
+  "issued": "2024-12-25",
+  "type": "journal-article",
+  "container": "Electronics",
+  "first_author": "Hur"
+ },
+ "10.1109/cvpr52734.2025.02785": {
+  "source": "crossref",
+  "title": "BadToken: Token-level Backdoor Attacks to Multi-modal Large Language Models",
+  "first_public": "2025-06-10",
+  "issued": "2025-06-10",
+  "type": "proceedings-article",
+  "container": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "first_author": "Yuan"
+ },
+ "10.1109/access.2024.3376693": {
+  "source": "crossref",
+  "title": "DeepTextMark: A Deep Learning-Driven Text Watermarking Approach for Identifying Large Language Model Generated Text",
+  "first_public": "2024",
+  "issued": "2024",
+  "type": "journal-article",
+  "container": "IEEE Access",
+  "first_author": "Munyer"
+ },
+ "10.34190/iccws.19.1.2096": {
+  "source": "crossref",
+  "title": "Enhancing Privacy and Security in Large-Language Models: A Zero-Knowledge Proof Approach",
+  "first_public": "2024-03-21",
+  "issued": "2024-03-21",
+  "type": "journal-article",
+  "container": "International Conference on Cyber Warfare and Security",
+  "first_author": "Singh"
+ },
+ "10.1109/eurosp57164.2023.00072": {
+  "source": "crossref",
+  "title": "Watermarking Graph Neural Networks based on Backdoor Attacks",
+  "first_public": "2023-07",
+  "issued": "2023-07",
+  "type": "proceedings-article",
+  "container": "2023 IEEE 8th European Symposium on Security and Privacy (EuroS&amp;P)",
+  "first_author": "Xu"
+ },
+ "10.1145/3611643.3616297": {
+  "source": "crossref",
+  "title": "CodeMark: Imperceptible Watermarking for Code Datasets against Neural Code Completion Models",
+  "first_public": "2023-11-30",
+  "issued": "2023-11-30",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+  "first_author": "Sun"
+ },
+ "10.1145/1161366.1161397": {
+  "source": "crossref",
+  "title": "The hiding virtues of ambiguity",
+  "first_public": "2006-09-26",
+  "issued": "2006-09-26",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 8th workshop on Multimedia and security",
+  "first_author": "Topkara"
+ },
+ "10.1145/3637528.3671467": {
+  "source": "crossref",
+  "title": "Grounding and Evaluation for Large Language Models: Practical Challenges and Lessons Learned (Survey)",
+  "first_public": "2024-08-24",
+  "issued": "2024-08-24",
+  "type": "proceedings-article",
+  "container": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+  "first_author": "Kenthapadi"
+ }
+}

@@ -1,0 +1,10 @@
+# [84] Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking
+source_url: https://arxiv.org/abs/2505.14112
+arxiv_id: 2505.14112   doi: none
+first_public: 2025-05-20
+fetch_status: ok
+printed_title: Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking
+corpus_title: Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking
+## abstract
+Logit-based LLM watermarking traces and verifies AI-generated content by maintaining green and red token lists and increasing the likelihood of green tokens during generation. However, it fails in low-entropy scenarios, where predictable outputs make green token selection difficult without disrupting natural text flow. Existing approaches address this by assuming access to the original LLM to calculate entropy and selectively watermark high-entropy tokens. However, these methods face two major challenges: (1) high computational costs and detection delays due to reliance on the original LLM, and (2) potential risks of model leakage. To address these limitations, we propose Invisible Entropy (IE), a watermarking paradigm designed to enhance both safety and efficiency. Instead of relying on the original LLM, IE introduces a lightweight feature extractor and an entropy tagger to predict whether the entropy of the next token is high or low. Furthermore, based on theoretical analysis, we develop a threshold navigator that adaptively sets entropy thresholds. It identifies a threshold where the watermark ratio decreases as the green token count increases, enhancing the naturalness of the watermarked text and improving detection robustness. Experiments on HumanEval and MBPP datasets demonstrate that IE reduces parameter size by 99\% while achieving performance on par with state-of-the-art methods. Our work introduces a safe and efficient paradigm for low-entropy watermarking. https://github.com/Carol-gutianle/IE https://huggingface.co/datasets/Carol0110/IE-Tagger
+## fulltext notes (optional)

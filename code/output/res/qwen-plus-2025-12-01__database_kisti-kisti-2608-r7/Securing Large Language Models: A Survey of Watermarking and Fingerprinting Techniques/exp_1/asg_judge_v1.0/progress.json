@@ -1,0 +1,13 @@
+{
+ "phase0": "done",
+ "phase1_parse": "done",
+ "phase2_moduleA_run1": "done",
+ "phase2_moduleA_run2_run3": "done",
+ "phase3_evidence": "done (121 abstracts)",
+ "phase4_moduleC": "done",
+ "phase6_moduleD": "done",
+ "phase5_moduleB": "done (234 claims, 150 uncited)",
+ "phase7_reliability": "done",
+ "phase8_aggregate": "done",
+ "report": "done"
+}

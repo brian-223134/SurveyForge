@@ -1,0 +1,174 @@
+[
+  {
+    "criterion": "Coverage",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "3.1-3.5",
+        "note": "Output-level watermarking is broadly covered: green-list/KGW and variants, distortion-free and undetectable schemes, ECC multi-bit, learned/end-to-end, semantic and entropy-adaptive watermarks, post-hoc black-box schemes, certified robustness, WaterBench/WaterJudge."
+      },
+      {
+        "section": "5.1-5.6",
+        "note": "Attack landscape covered: paraphrase/translation scrubbing, watermark stealing and spoofing, radioactivity/distillation, inhibitory attacks on backdoor fingerprints, dummy-neuron erasure, speculative-sampling trade-off."
+      },
+      {
+        "section": "4.1-4.3",
+        "note": "Model fingerprinting is thinner than the topic warrants: instructional fingerprinting, Chain & Hash, AWM, EmbMarker, Hide-and-Seek appear, but other fingerprint families (e.g. representation/query-based fingerprints, merge-robust fingerprints) are absent and HuRef is only named."
+      },
+      {
+        "section": "7.1",
+        "note": "Multimodal, code and audio watermarking is in the outline but the subsection itself states none of its technical claims are supported; code watermarking and multimodal coverage are effectively hollow."
+      },
+      {
+        "section": "6.2, 7.1",
+        "note": "Training-data / dataset watermarking and data-provenance for copyright, a key part of LLM provenance, appears only incidentally (benchmark-contamination watermarking; a data-watermark paper named only inside leaked notes)."
+      },
+      {
+        "section": "7.2-7.5",
+        "note": "Peripheral governance topics (EU AI Act, NIST RMF, forensic admissibility, equity, dual use) are present."
+      }
+    ],
+    "anchor_justification": "Most central areas are present, but several key points are missing or only named (data watermarking, fingerprinting breadth, multimodal/code, deployed schemes like SynthID only mentioned). This matches 3 ('generally comprehensive ... misses a few key points'); 4 requires that only very minor topics are left out, which does not hold.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Structure",
+    "scale": "1-5",
+    "score": 2,
+    "observations": [
+      {
+        "section": "1-8 (outline)",
+        "note": "Macro-outline is logical: taxonomy -> output-level -> model-centric -> attacks -> evaluation -> governance, with explicit forward/backward transitions between subsections."
+      },
+      {
+        "section": "7.1",
+        "note": "About 850 words of leaked citation-verification notes ('Thus, the corrected subsection contains no citations') sit in the body, followed by a second full version of the subsection's paragraph."
+      },
+      {
+        "section": "7.5",
+        "note": "Draft with inline 'must be removed / is correct and retained' notes, then '**Corrected subsection with only valid citations**' and a second version; the same subsection appears twice."
+      },
+      {
+        "section": "4.4",
+        "note": "'Parameter-space watermarking' subsection discusses output-level/decoding methods (MPAC, WaterMod, Permute-and-Flip, CATER) already treated in 3.2/3.4; category boundaries not respected."
+      },
+      {
+        "section": "2.4 vs 5.1; 3.5 vs 6.1",
+        "note": "Threat-model taxonomy proposed twice with overlapping axes and examples; evaluation 'myopia' framing opens both 3.5 and 6.1; longitudinal-gap point restated in about seven places."
+      },
+      {
+        "section": "4.5, 8",
+        "note": "4.5 citations collapse to [86] including the survey's own title; conclusion opens with 'This subsection synthesizes', a generation artifact."
+      }
+    ],
+    "anchor_justification": "The skeleton would support a 3, but anchor 2's 'some content arranged in a disordered or unreasonable manner' literally holds for 7.1, 7.5, 4.4 and 4.5, beyond the 'links and transitions could be improved' of level 3. The survey sits between 2 and 3, so the lower level is chosen.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Relevance",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "1, 2.1-2.5",
+        "note": "Introduction and taxonomy are tightly about LLM watermarking/fingerprinting and distinguish them from safety, privacy and alignment."
+      },
+      {
+        "section": "3, 4, 5.1-5.4",
+        "note": "Technical chapters stay on watermarking and fingerprinting methods and attacks."
+      },
+      {
+        "section": "7.1, 7.5",
+        "note": "Large blocks of reader-visible meta-commentary about which citations are in 'the provided list' are not content about the topic."
+      },
+      {
+        "section": "5.5",
+        "note": "Digressions into universal jailbreak suffixes and MLLM backdoor attacks (BadToken, AnyDoor) that are not watermark or fingerprint attacks."
+      },
+      {
+        "section": "7.1, 7.3",
+        "note": "Tangents to RAG risk frameworks, ZKP privacy proposals and generic surveillance concerns; many statements are attached to papers about other things (e.g. lexical-substitution paper credited with Thinking/Answering phase separation in 6.3)."
+      }
+    ],
+    "anchor_justification": "Generally on topic with some unrelated material, which is level 3. Level 4 requires infrequent digressions; the ~1,500 words of leaked notes plus scattered off-topic attacks and misattributed content are more than infrequent.",
+    "source_protocol": "AutoSurvey 2024",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Synthesis",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1-2.4",
+        "note": "Explicit framework of embedding locus x detection modality x security properties x threat axes, with the axes cross-mapped to each other (e.g. modality spectrum mapped to adversary capability)."
+      },
+      {
+        "section": "5.2, 5.4",
+        "note": "Identifies a recurring asymmetry across studies (detection needs significance, spoofing/removal needs mimicry) and reframes radioactivity as an attack surface: real cross-study patterns."
+      },
+      {
+        "section": "3.4, 4.2-4.3",
+        "note": "Contrasts empirical semantic robustness with formal certificates (smoothing/ECC); positions backdoor watermarking vs behavior-space fingerprints by access condition."
+      },
+      {
+        "section": "2.5, 8",
+        "note": "The headline convergence thesis rests on misattributed descriptions (Chain & Hash fusing 'latent-space confusion zones', PLMmark embedding ZKPs in MPC, ECC papers combining 'acrostic constraints'); such connections do not count as synthesis."
+      },
+      {
+        "section": "throughout",
+        "note": "Many links are rhetorical cross-references ('directly echoing', 'foreshadowing') and the same synthesized point is repeated rather than developed."
+      }
+    ],
+    "anchor_justification": "Some thematic relationships are real (level 3). Level 4 needs most studies integrated into coherent themes or debates; here the integrating framework is declared more than demonstrated and its key links are unreliable, so the survey sits between 3 and 4 and gets 3.",
+    "source_protocol": "SurveyX 2025",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  },
+  {
+    "criterion": "Critical Analysis",
+    "scale": "1-5",
+    "score": 3,
+    "observations": [
+      {
+        "section": "2.1-2.2, 4.1",
+        "note": "States concrete paradigm limits: output-space signals not radioactive, parameter-space needs white-box access, spectral fingerprints degrade below INT4."
+      },
+      {
+        "section": "5.6",
+        "note": "Reasoned critique of robustness evaluation: synthetic token edits vs human paraphrasing, missing composite attacks, longitudinal blindness, inadequacy of BLEU/perplexity."
+      },
+      {
+        "section": "4.5",
+        "note": "Argues formal security for model-centric schemes is 'largely aspirational' because guarantees assume white-box access and static models."
+      },
+      {
+        "section": "3.2 vs 2.3",
+        "note": "Inconsistent critique: 3.2 says rejection sampling 'resolves' the 'Watermarks in the Sand' impossibility, which 2.3 and 5.4 present as a general limit."
+      },
+      {
+        "section": "3.x, 4.x, 6.3",
+        "note": "Individual studies are mostly reported with success figures rather than critiqued; limitations are often assigned to the wrong papers."
+      },
+      {
+        "section": "throughout",
+        "note": "Critique is repetitive (longitudinal gap ~7 times, RTT 88%->13% figure ~6 times) and many subsections end in generic 'future work must' statements."
+      }
+    ],
+    "anchor_justification": "Critique exists and is sometimes specific (5.6, 4.5) but is applied to paradigms rather than most key studies, and is inconsistent. This fits 3; level 4 requires systematic critique of most key studies.",
+    "source_protocol": "SurveyX 2025",
+    "judge_model": "claude-opus-5-5",
+    "prompt_version": "asg-judge v1.0",
+    "run": 2
+  }
+]

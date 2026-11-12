@@ -1,0 +1,69 @@
+{
+ "n": 30,
+ "five_label": {
+  "agreement": 0.8333,
+  "kappa": 0.7717
+ },
+ "binary_supported": {
+  "agreement": 0.9667,
+  "kappa": 0.8696
+ },
+ "binary_unsupported": {
+  "agreement": 0.9,
+  "kappa": 0.8018
+ },
+ "pair_five_label": {
+  "agreement": 0.8966,
+  "kappa": 0.8506,
+  "n_pairs": 58
+ },
+ "disagreements": [
+  {
+   "sid": "S0095",
+   "first": "NOT_SUPPORTED",
+   "second": "PARTIAL",
+   "stricter": "first"
+  },
+  {
+   "sid": "S0134",
+   "first": "SUPPORTED",
+   "second": "PARTIAL",
+   "stricter": "second"
+  },
+  {
+   "sid": "S0141",
+   "first": "NOT_SUPPORTED",
+   "second": "PARTIAL",
+   "stricter": "first"
+  },
+  {
+   "sid": "S0180",
+   "first": "NOT_SUPPORTED",
+   "second": "CONTRADICTED",
+   "stricter": "second"
+  },
+  {
+   "sid": "S0194",
+   "first": "CONTRADICTED",
+   "second": "PARTIAL",
+   "stricter": "first"
+  }
+ ],
+ "stricter_counts": {
+  "first": 3,
+  "second": 2
+ },
+ "label_pairs": {
+  "NOT_SUPPORTED->PARTIAL": 2,
+  "SUPPORTED->PARTIAL": 1,
+  "NOT_SUPPORTED->CONTRADICTED": 1,
+  "CONTRADICTED->PARTIAL": 1
+ },
+ "autosurvey_joint": {
+  "agreement": 1.0,
+  "kappa": 1.0,
+  "first_yes": 7,
+  "second_yes": 7
+ },
+ "second_judge_note": "Second judge could not read \u00a77 B2 and inferred joint/alone/without from the AutoSurvey convention; it read only Appendices B and C, the sample, evidence/ and the bibliography."
+}
