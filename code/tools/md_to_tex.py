@@ -126,7 +126,25 @@ UNICODE_MAP = {
     "\u00ad": "",              # soft hyphen -- invisible, drop it
     "\u200b": "",              # zero-width space
     "\ufeff": "",              # BOM
+    # 2026-11-11 kisti-2608-r7 llm-watermarking \uc2e4\ud589\uc758 '\u2113\u2082' \u00b7 '\u2193' \uc5d0\uc11c \ubc1c\uacac (AutoSurvey \ub294 \u207b \u00b7 \u209a).
+    "\u2113": r"$\ell$",
+    "\u2191": r"$\uparrow$",
+    "\u2193": r"$\downarrow$",
 }
+
+# Unicode super/subscripts (x\u00b2, x\u207b\u00b9, \u2113\u2082, \u03b8\u209a): pdflatex has no glyph for any of them.
+# Map the whole block instead of the ones seen so far -- the next run brings a new one.
+_SUPERSCRIPTS = {"\u00b9": "1", "\u2070": "0", "\u2071": "i", "\u207a": "+", "\u207b": "-",
+                 "\u207c": "=", "\u207d": "(", "\u207e": ")", "\u207f": "n",
+                 **{chr(0x2074 + i): str(4 + i) for i in range(6)}}
+_SUBSCRIPTS = {**{chr(0x2080 + i): str(i) for i in range(10)},
+               "\u208a": "+", "\u208b": "-", "\u208c": "=", "\u208d": "(", "\u208e": ")",
+               **dict(zip("\u2090\u2091\u2092\u2093\u2095\u2096\u2097\u2098\u2099\u209a\u209b\u209c",
+                          "aeoxhklmnpst"))}
+for _ch, _s in _SUPERSCRIPTS.items():
+    UNICODE_MAP.setdefault(_ch, r"$^{\mathrm{%s}}$" % _s)
+for _ch, _s in _SUBSCRIPTS.items():
+    UNICODE_MAP.setdefault(_ch, r"$_{\mathrm{%s}}$" % _s)
 
 # Accented letters are not enumerable in advance -- they arrive with author names
 # from the database (K\u00fchn, M\u00fcller, P\u00e9rez, ...). Decomposing to base letter plus
